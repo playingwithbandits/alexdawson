@@ -1,101 +1,89 @@
-import Image from "next/image";
+import { Section } from "@/components/Section";
+import { ProjectCard } from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
+      <section id="hero">
+        <h1>Alex Dawson</h1>
+        <p className="subtitle">Web Developer & Designer</p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <Section id="about">
+        <div className="container">
+          <h2>About Me</h2>
+          <p className="mb-4">
+            Hello! I&apos;m a web developer who loves bringing data to life with
+            clean, dynamic designs. Whether it&apos;s building websites,
+            creating interactive reports, or crafting infographics, I enjoy
+            making information easy to understand and a pleasure to look at.
+          </p>
+          <p className="mb-4">
+            I work with TypeScript, React, and Node.js to create web apps that
+            are fast, reliable, and visually appealing. I&apos;m also
+            comfortable with GraphQL and APIs, so whether it&apos;s pulling data
+            or designing custom solutions, I&apos;ve got it covered. I pay close
+            attention to UI designs, ensuring the final product looks great and
+            works even better.
+          </p>
+          <p className="mb-4">
+            Collaboration is a big part of what I do—I&apos;m experienced with
+            tools like GitHub, BitBucket, Jira, and Trello, and I love being
+            part of a team where ideas flow freely.
+          </p>
+          <p className="mb-4">
+            When I&apos;m not coding, you&apos;ll probably find me rock
+            climbing, working on my allotment, or experimenting with new project
+            ideas (my latest was a machine-learning tool for predicting horse
+            racing results!).
+          </p>
+          <p className="mb-4">
+            If you&apos;re looking for someone who&apos;s passionate about
+            turning ideas into beautiful, functional web experiences, let&apos;s
+            connect!
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </Section>
+
+      <Section id="projects">
+        <div className="container">
+          <h2>My Projects</h2>
+          <div className="project-grid">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imageUrl={project.imageUrl}
+                projectUrl={project.projectUrl}
+              />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section id="contact">
+        <div className="container">
+          <h2>Get in Touch</h2>
+          <ul className="contact-info">
+            <li>
+              <a href="mailto:ajdawson265@gmail.com" className="contact-link">
+                <i className="fas fa-envelope"></i> ajdawson265@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/alexdawson234/"
+                target="_blank"
+                className="contact-link"
+              >
+                <i className="fab fa-linkedin"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </Section>
+    </main>
   );
 }
