@@ -22,11 +22,11 @@ export const projects: Project[] = [
     imageUrl: "/project2.jpg",
     projectUrl: "/horse",
   },
-  //   {
-  //     id: 3,
-  //     title: "Project Three",
-  //     description: "Interactive dashboard with real-time data visualization",
-  //     imageUrl: "/project3.jpg",
-  //     projectUrl: "/game",
-  //   },
+  {
+    id: 3,
+    title: "Pussy - Drinking Card Game",
+    description: "A drinking card game for friends.",
+    imageUrl: "/project3.jpg",
+    projectUrl: "/gamereset",
+  },
 ];

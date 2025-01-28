@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Navigation } from "@/components/Navigation";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Aldrich } from "next/font/google";
+
+const aldrich = Aldrich({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Alex Dawson - Portfolio",
+  title: "Alex Dawson",
   description: "Personal portfolio and projects showcase",
 };
 
@@ -23,17 +27,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
       </head>
-      <body className={inter.className}>
-        <header>
-          <Navigation />
-        </header>
-        {children}
-        <footer>
-          <p>
-            &copy; {new Date().getFullYear()} Alex Dawson. All rights reserved.
-          </p>
-        </footer>
-      </body>
+      <body className={`${aldrich.className} antialiased`}>{children}</body>
     </html>
   );
 }

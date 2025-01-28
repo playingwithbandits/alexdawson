@@ -276,12 +276,12 @@ main {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 6rem 2rem;
+  padding: 2rem 1rem;
 }
 
 /* Section styles */
 section {
-  padding: 6rem 0;
+  padding: 2rem 0;
 }
 
 section:nth-child(even) {
@@ -495,7 +495,7 @@ footer {
   }
 
   .container {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
   }
 
   section {
@@ -554,7 +554,7 @@ footer {
 /* Horse Racing Dashboard */
 .dashboard-container {
   display: flex;
-  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100vh);
   position: relative;
 }
 
