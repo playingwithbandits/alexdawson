@@ -11,9 +11,18 @@ interface MeetingAccordionProps {
   meeting: Meeting;
 }
 
+function sortRacesByTime(races: Meeting["races"]) {
+  return [...races].sort((a, b) => {
+    const timeA = Number(a.time.replace(":", ""));
+    const timeB = Number(b.time.replace(":", ""));
+    return timeA - timeB;
+  });
+}
+
 export function MeetingAccordion({ meeting }: MeetingAccordionProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const { expandAll } = useExpansion();
+  const sortedRaces = sortRacesByTime(meeting.races);
 
   useEffect(() => {
     setIsExpanded(expandAll);
@@ -28,7 +37,7 @@ export function MeetingAccordion({ meeting }: MeetingAccordionProps) {
         <h3 className="meeting-name">{meeting.name}</h3>
       </AccordionButton>
       <AccordionContent isExpanded={isExpanded}>
-        {meeting.races.map((race, race_i) => (
+        {sortedRaces.map((race, race_i) => (
           <RaceAccordion key={race.time + race_i} race={race} />
         ))}
       </AccordionContent>

@@ -42,7 +42,15 @@ export function PredictionControls({
       <div className="control-group">
         <label>Rating:</label>
         <div className="button-group">
-          {[1, 2, 3, 4, 5].map((rating) => (
+          <button
+            className={`control-button ${
+              filterRating === null ? "active" : ""
+            }`}
+            onClick={() => onFilterChange(null)}
+          >
+            Off
+          </button>
+          {[3, 4].map((rating) => (
             <button
               key={rating}
               className={`control-button ${

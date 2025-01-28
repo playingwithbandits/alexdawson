@@ -2445,82 +2445,82 @@ export const cards: Card[] = [
 
   {
     category: "battle",
-    image: "Battle",
+    image: "battle",
     description:
       "Challenge the person to your left to rock-paper-scissors. Loser drinks.",
     penaltyCost: 2,
   },
   {
     category: "battle",
-    image: "Battle",
+    image: "battle",
     description:
       "Challenge the person opposite to a seductive dance-off. Loser drinks.",
     penaltyCost: 3,
   },
   {
     category: "battle",
-    image: "Battle",
+    image: "battle",
     description:
       "Staring contest with the person 3 to the left in the group while holding intense eye contact. Loser drinks.",
     penaltyCost: 2,
   },
   {
     category: "battle",
-    image: "Battle",
+    image: "battle",
     description:
       "Play two truths and a lie with the person 6 to the right. Drink if your lie is caught.",
     penaltyCost: 3,
   },
   {
     category: "battle",
-    image: "Battle",
+    image: "battle",
     description:
       "Compete with the person opposite in a moaning contest; group decides who's better.",
     penaltyCost: 4,
   },
   {
     category: "battle",
-    image: "Battle",
+    image: "battle",
     description:
       "Strip rock-paper-scissors with person wearing the most: loser removes an article of clothing.",
     penaltyCost: 4,
   },
   {
     category: "battle",
-    image: "Battle",
+    image: "battle",
     description:
       "Challenge the person to your left to a plank off. Loser drinks",
     penaltyCost: 4,
   },
   {
     category: "dare",
-    image: "Challenge",
+    image: "dare-action",
     description: "Balance a cup on your head for 15 seconds.",
     penaltyCost: 2,
   },
   {
     category: "dare",
-    image: "Challenge",
+    image: "dare-action",
     description: "Do a sexy runway walk across the room.",
     penaltyCost: 3,
   },
   {
     category: "dare",
-    image: "Challenge",
+    image: "dare-action",
     description:
       "Do an imitation of a celebrity hitting on the person 2 to the left.",
     penaltyCost: 2,
   },
   {
     category: "dare",
-    image: "Challenge",
+    image: "dare-lick",
     description:
       "Pick the person 4 to the left to give you a hickey, or take a penalty.",
     penaltyCost: 5,
   },
   {
     category: "dare",
-    image: "Challenge",
+    image: "dare-partner",
     description:
       "Recreate a steamy movie scene with the person 5 to the right for 30 seconds.",
     penaltyCost: 5,
@@ -3277,7 +3277,7 @@ export const cards: Card[] = [
     category: "dare",
     image: "dare-action",
     description:
-      "Have a staring contest with the person to your left. Loser drinks 2 sips.",
+      "Have a staring contest with the person to your left. Loser drinks.",
     penaltyCost: 2,
   },
   {
@@ -3398,8 +3398,7 @@ export const cards: Card[] = [
   {
     category: "dare",
     image: "dare-drink",
-    description:
-      "Swap drinks with the person to your left and take a sip from their cup.",
+    description: "Swap drinks with the person to your left.",
     penaltyCost: 2,
   },
   {
@@ -3439,7 +3438,7 @@ export const cards: Card[] = [
     category: "gamble",
     image: "gamble",
     description:
-      "Flip a coin. Heads: Take off an article of clothing. Tails: Drink 4 sips.",
+      "Flip a coin. Heads: Take off an article of clothing. Tails: Drink.",
     penaltyCost: 5,
   },
   {
@@ -3474,7 +3473,7 @@ export const cards: Card[] = [
     category: "gamble",
     image: "gamble",
     description:
-      "Bet on the next person's turn: If they complete their dare, you drink 4 sips. If they fail, they drink.",
+      "Bet on the next person's turn: If they complete their dare, you drink. If they fail, they drink.",
     penaltyCost: 3,
   },
   {
@@ -3488,7 +3487,7 @@ export const cards: Card[] = [
     category: "gamble",
     image: "gamble",
     description:
-      "Bet: Guess the color of the person 3 to the left's underwear. If you're right, they drink 4 sips. If wrong, you drink.",
+      "Bet: Guess the color of the person 3 to the left's underwear. If you're right, they drink. If wrong, you drink.",
     penaltyCost: 4,
   },
   {
@@ -3503,13 +3502,6 @@ export const cards: Card[] = [
     image: "gamble",
     description:
       "Flip a coin: Heads = Take a body shot off the person 2 to the left. Tails = They take one off you.",
-    penaltyCost: 5,
-  },
-  {
-    category: "gamble",
-    image: "gamble",
-    description:
-      "Bet on who has the wildest text in their phone. Winner makes the loser show it or drink 6 sips.",
     penaltyCost: 5,
   },
   {

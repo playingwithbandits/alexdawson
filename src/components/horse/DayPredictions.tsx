@@ -11,6 +11,8 @@ import { PredictionControls } from "./controls/PredictionControls";
 import { ExpansionProvider } from "./context/ExpansionContext";
 import { ExpandAllToggle } from "./controls/ExpandAllToggle";
 import { PredictionAccordion } from "./PredictionAccordion";
+import { ViewToggle } from "./controls/ViewToggle";
+import { StarRating } from "./StarRating";
 
 interface DayPredictionsProps {
   date: string;
@@ -20,7 +22,13 @@ export function DayPredictions({ date }: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [sortBy, setSortBy] = useState<SortOption>("off");
   const [filterRating, setFilterRating] = useState<FilterOption>(null);
+  const [view, setView] = useState<"list" | "table">("table");
   const data = generatePredictions(date);
+
+  const handleViewChange = (newView: "list" | "table") => {
+    console.log("Changing view to:", newView);
+    setView(newView);
+  };
 
   useEffect(() => {
     setIsMounted(true);
@@ -79,6 +87,7 @@ export function DayPredictions({ date }: DayPredictionsProps) {
               filterRating={filterRating}
               onFilterChange={setFilterRating}
             />
+            <ViewToggle view={view} onViewChange={handleViewChange} />
             <ExpandAllToggle />
           </div>
 
@@ -115,6 +124,8 @@ export function DayPredictions({ date }: DayPredictionsProps) {
     return timeA - timeB;
   });
 
+  console.log("view", view);
+
   return (
     <ExpansionProvider>
       <div className="day-predictions">
@@ -135,37 +146,89 @@ export function DayPredictions({ date }: DayPredictionsProps) {
             filterRating={filterRating}
             onFilterChange={setFilterRating}
           />
+          <ViewToggle view={view} onViewChange={handleViewChange} />
           <ExpandAllToggle />
         </div>
 
-        {/* Show flat list when sorting is active */}
         <div className="predictions-table">
-          <div className="predictions-list expanded">
-            {sortedPredictions.map((prediction, index) => (
-              <PredictionAccordion
-                key={`${prediction.meeting}-${prediction.time}-${index}`}
-                horseName={`${prediction.horseName} (${prediction.meeting} ${prediction.time})`}
-                score={prediction.score}
-                stats={{
-                  lastRaces: "1-3-2-4-1",
-                  winRate: 35,
-                  placeRate: 65,
-                  preferredGoing: ["Good to Firm", "Good"],
-                  bestDistance: "1m 2f",
-                  courseRecord: "2 wins from 3 runs",
-                  avgSpeedRating: 85,
-                  topSpeedRating: 92,
-                  weightCarried: "9-2",
-                  officialRating: 88,
-                  classRecord: "Class 2: 3 wins from 5 runs",
-                  trainer: "John Smith",
-                  jockey: "Ryan Moore",
-                  trainerForm: "23% last 14 days",
-                  jockeyForm: "18% last 14 days",
-                }}
-              />
-            ))}
-          </div>
+          <div style={{ display: "none" }}>Current view: {view}</div>
+          {view === "table" ? (
+            <div className="predictions-list expanded">
+              {sortedPredictions.map((prediction, index) => (
+                <PredictionAccordion
+                  key={`${prediction.meeting}-${prediction.time}-${index}`}
+                  horseName={`${prediction.horseName} (${prediction.meeting} ${prediction.time})`}
+                  score={prediction.score}
+                  form={prediction.form}
+                  raceStats={{
+                    avgSpeedRating: 75,
+                    avgOfficialRating: 75,
+                    raceDistance: "1m",
+                    going: "Good",
+                    avgPrize: 20,
+                    avgTotalPrize: 100,
+                  }}
+                  stats={{
+                    lastRaces: "1-3-2-4-1",
+                    winRate: {
+                      value: 35,
+                      isHighlighted: false,
+                    },
+                    placeRate: {
+                      value: 65,
+                      isHighlighted: false,
+                    },
+                    preferredGoing: {
+                      value: "Good to Firm, Good",
+                      isHighlighted: false,
+                    },
+                    bestDistance: {
+                      value: "1m 2f",
+                      isHighlighted: false,
+                    },
+                    avgSpeedRating: {
+                      value: 85,
+                      isHighlighted: false,
+                    },
+                    topSpeedRating: {
+                      value: 92,
+                      isHighlighted: false,
+                    },
+                    weightCarried: "9-2",
+                    officialRating: {
+                      value: 88,
+                      isHighlighted: false,
+                    },
+                    classRecord: "Class 2: 3 wins from 5 runs",
+                    trainer: "John Smith",
+                    jockey: "Ryan Moore",
+                    trainerForm: {
+                      value: "23% last 14 days",
+                      isHighlighted: false,
+                    },
+                    jockeyForm: {
+                      value: "18% last 14 days",
+                      isHighlighted: false,
+                    },
+                  }}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="predictions-simple-list">
+              {sortedPredictions.map((prediction, index) => (
+                <div
+                  key={`${prediction.meeting}-${prediction.time}-${index}`}
+                  className="simple-prediction-row"
+                >
+                  <span className="meeting">{prediction.meeting}</span>
+                  <span className="time">{prediction.time}</span>
+                  <span className="horse">{prediction.horseName}</span>
+                  <StarRating score={prediction.score} />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </ExpansionProvider>

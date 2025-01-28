@@ -7,10 +7,10 @@ export function ExpandAllToggle() {
     <button
       className="expand-all-button"
       onClick={toggleExpandAll}
-      aria-label={expandAll ? "Collapse all" : "Expand all"}
+      aria-label={"All"}
     >
       <i className={`fas fa-chevron-${expandAll ? "up" : "down"}`} />
-      {expandAll ? "Collapse All" : "Expand All"}
+      All
     </button>
   );
 }
