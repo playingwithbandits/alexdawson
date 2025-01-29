@@ -1,3 +1,5 @@
+import { Horse } from "@/app/rp/utils/parseMeetings";
+
 export interface FormEntry {
   date: string;
   position: number;
@@ -70,7 +72,7 @@ export interface Prediction {
 
 export interface Race {
   time: string;
-  predictions: Prediction[];
+  predictions?: Prediction[];
   distance: string; // e.g., "1m 2f"
   going: string; // e.g., "Good to Firm"
   class: number; // 1-6, where 1 is highest class
@@ -94,30 +96,32 @@ export interface DayPredictionsData {
   meetings: Meeting[];
 }
 
-export type SortOption = "time" | "rating" | "off";
-export type FilterOption = 1 | 2 | 3 | 4 | 5 | null;
+export type SortOption = "off" | "rating" | "time";
+export type FilterOption = null | 1 | 2 | 3 | 4 | 5;
 
-export function generatePredictions(date: string): DayPredictionsData {
-  const meetings = ["Ascot", "Newmarket", "York", "Cheltenham", "Goodwood"].map(
-    (name) => generateMeeting(name)
-  );
-
+export function generatePredictions(meetings: Meeting[]) {
   return {
-    date,
-    meetings,
-  };
-}
-
-function generateMeeting(name: string): Meeting {
-  const numRaces = 4 + Math.floor(Math.random() * 4); // 4-7 races
-  const races = Array.from({ length: numRaces }, (_, i) =>
-    generateRace(i, name)
-  );
-
-  console.log("generateMeeting", name, numRaces);
-  return {
-    name,
-    races,
+    meetings: meetings.map((meeting) => ({
+      venue: meeting.name,
+      going: meeting.races[0].going,
+      surface: meeting.races[0].surface,
+      races: meeting.races.map((race) => ({
+        time: race.time,
+        title: race.predictions[0].raceCourse,
+        runners: race.runners,
+        predictions: race.predictions.map((horse) => ({
+          name: horse.horseName,
+          weight: horse.weight,
+          jockey: horse.jockey,
+          trainer: horse.trainer,
+          form: horse.form,
+          lastRun: horse.stats.bestDistance,
+          score: Math.floor(Math.random() * 5) + 1,
+          odds: "5/1",
+          prediction: "Will perform well on this ground",
+        })),
+      })),
+    })),
   };
 }
 

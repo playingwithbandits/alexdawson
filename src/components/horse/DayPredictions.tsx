@@ -1,29 +1,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  generatePredictions,
-  SortOption,
-  FilterOption,
-} from "@/lib/generator/predictions";
+import { SortOption, FilterOption } from "@/lib/generator/predictions";
 import { MeetingAccordion } from "./MeetingAccordion";
 import { PredictionControls } from "./controls/PredictionControls";
 import { ExpansionProvider } from "./context/ExpansionContext";
 import { ExpandAllToggle } from "./controls/ExpandAllToggle";
-import { PredictionAccordion } from "./PredictionAccordion";
 import { ViewToggle } from "./controls/ViewToggle";
-import { StarRating } from "./StarRating";
+import { Meeting } from "@/app/rp/utils/parseMeetings";
 
 interface DayPredictionsProps {
+  meetings: Meeting[];
   date: string;
 }
 
-export function DayPredictions({ date }: DayPredictionsProps) {
+export function DayPredictions({ meetings, date }: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [sortBy, setSortBy] = useState<SortOption>("off");
   const [filterRating, setFilterRating] = useState<FilterOption>(null);
   const [view, setView] = useState<"list" | "table">("table");
-  const data = generatePredictions(date);
+  //const data = generatePredictions(meetings);
 
   const handleViewChange = (newView: "list" | "table") => {
     console.log("Changing view to:", newView);
@@ -51,19 +47,14 @@ export function DayPredictions({ date }: DayPredictionsProps) {
   }
 
   // First filter the predictions
-  const filteredMeetings = data.meetings
+  const filteredMeetings = meetings
     .map((meeting) => ({
       ...meeting,
-      races: meeting.races
-        .map((race) => ({
-          ...race,
-          predictions: race.predictions.filter(
-            (p) => !filterRating || p.score >= filterRating
-          ),
-        }))
-        .filter((race) => race.predictions.length > 0),
+      races: meeting.races.filter((race) => race.horses.length > 0),
     }))
     .filter((meeting) => meeting.races.length > 0);
+
+  console.log("filteredMeetings", filteredMeetings);
 
   // If sort is off, just filter and return meetings as is
   if (sortBy === "off") {
@@ -93,7 +84,7 @@ export function DayPredictions({ date }: DayPredictionsProps) {
 
           {filteredMeetings.map((meeting, meeting_i) => (
             <MeetingAccordion
-              key={meeting.name + meeting_i}
+              key={meeting.venue + meeting_i}
               meeting={meeting}
             />
           ))}
@@ -105,10 +96,9 @@ export function DayPredictions({ date }: DayPredictionsProps) {
   // For time/rating sort, flatten all predictions into a single list
   const allPredictions = filteredMeetings.flatMap((meeting) =>
     meeting.races.flatMap((race) =>
-      race.predictions.map((prediction) => ({
-        meeting: meeting.name,
+      race.horses.map((horse) => ({
+        ...horse,
         time: race.time,
-        ...prediction,
       }))
     )
   );
@@ -116,7 +106,7 @@ export function DayPredictions({ date }: DayPredictionsProps) {
   // Sort the flattened list
   const sortedPredictions = [...allPredictions].sort((a, b) => {
     if (sortBy === "rating") {
-      return b.score - a.score;
+      return (b.score || 0) - (a.score || 0);
     }
     // Sort by time
     const timeA = Number(a.time.replace(":", ""));
@@ -150,7 +140,7 @@ export function DayPredictions({ date }: DayPredictionsProps) {
           <ExpandAllToggle />
         </div>
 
-        <div className="predictions-table">
+        {/* <div className="predictions-table">
           <div style={{ display: "none" }}>Current view: {view}</div>
           {view === "table" ? (
             <div className="predictions-list expanded">
@@ -229,7 +219,7 @@ export function DayPredictions({ date }: DayPredictionsProps) {
               ))}
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </ExpansionProvider>
   );

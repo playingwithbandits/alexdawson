@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Meeting } from "@/lib/generator/predictions";
 import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
 import { RaceAccordion } from "./RaceAccordion";
 import { useExpansion } from "./context/ExpansionContext";
+import { Meeting } from "@/app/rp/utils/parseMeetings";
 
 interface MeetingAccordionProps {
   meeting: Meeting;
@@ -34,7 +34,7 @@ export function MeetingAccordion({ meeting }: MeetingAccordionProps) {
         isExpanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <h3 className="meeting-name">{meeting.name}</h3>
+        <h3 className="meeting-name">{meeting.venue}</h3>
       </AccordionButton>
       <AccordionContent isExpanded={isExpanded}>
         {sortedRaces.map((race, race_i) => (
