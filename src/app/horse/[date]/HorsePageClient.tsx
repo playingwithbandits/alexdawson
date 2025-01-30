@@ -1,21 +1,21 @@
 "use client";
 
+import { Meeting } from "@/types/racing";
+import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Meeting } from "./utils/parseMeetings";
-import { parseMeetings } from "./utils/parseRaceDetails";
+import { DashboardContent } from "../DashboardContent";
+import { parseMeetings } from "@/app/rp/utils/parseRaceDetails";
 
-interface RacingPostClientProps {
-  date: string; // YYYY-MM-DD format
-}
-
-export function RacingPostClient({ date }: RacingPostClientProps) {
+export function HorsePageClient({ date }: { date: string }) {
   const [meetings, setMeetings] = useState<Meeting[]>([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
   const getPageUrl = (date: string) =>
     `https://www.racingpost.com/racecards/${date}/`;
 
   useEffect(() => {
-    async function fetchData() {
+    async function loadData() {
       try {
         if (!getPageUrl(date) || getPageUrl(date).trim() === "") {
           console.error("❌ No URL provided");
@@ -70,43 +70,25 @@ export function RacingPostClient({ date }: RacingPostClientProps) {
 
         setMeetings(parsedMeetings);
       } catch (err) {
-        console.error("❌ Error fetching/parsing data:", err);
-        setError(err instanceof Error ? err.message : "Failed to fetch data");
+        console.error("Error loading data:", err);
+      } finally {
+        setLoading(false);
       }
     }
 
-    fetchData();
+    loadData();
   }, [date]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
+  }
 
   if (error) return <div>Error: {error}</div>;
   if (meetings.length === 0) return <div>Loading...</div>;
 
-  return (
-    <div>
-      <h1>Racing Post Data</h1>
-      <div>
-        {meetings.map((meeting, i) => (
-          <div key={i}>
-            <h2>{meeting.venue}</h2>
-            <p>Going: {meeting.going}</p>
-            <p>Surface: {meeting.surface}</p>
-            <p>Races: {meeting.raceCount}</p>
-            <p>
-              Times: {meeting.firstRace} - {meeting.lastRace}
-            </p>
-            <p>Type: {meeting.type}</p>
-            <ul>
-              {meeting.races.map((race, j) => (
-                <li key={j}>
-                  <a href={race.url} target="_blank" rel="noopener noreferrer">
-                    {race.time} - {race.title} ({race.runners} runners)
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  return <DashboardContent meetings={meetings} date={date} />;
 }

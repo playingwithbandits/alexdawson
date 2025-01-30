@@ -5,7 +5,7 @@ import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
 import { RaceAccordion } from "./RaceAccordion";
 import { useExpansion } from "./context/ExpansionContext";
-import { Meeting } from "@/app/rp/utils/parseMeetings";
+import { Meeting } from "@/types/racing";
 
 interface MeetingAccordionProps {
   meeting: Meeting;

@@ -17,7 +17,7 @@ export const projects: Project[] = [
   //   },
   {
     id: 2,
-    title: "Horse Racing Predictor",
+    title: "AI Horse Racing Predictor",
     description: "A machine learning tool for predicting horse racing results",
     imageUrl: "/project2.jpg",
     projectUrl: "/horse",

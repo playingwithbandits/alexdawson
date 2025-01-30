@@ -1,7 +1,7 @@
-import { Meeting } from "@/app/rp/utils/parseMeetings";
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
+import { Meeting } from "@/types/racing";
 
 const CACHE_DIR = path.join(process.cwd(), "cache", "racing");
 

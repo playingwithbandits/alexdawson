@@ -1,7 +1,7 @@
 "use client";
 
-import { Meeting } from "@/app/rp/utils/parseMeetings";
 import { DayPredictions } from "@/components/horse/DayPredictions";
+import { Meeting } from "@/types/racing";
 
 interface DashboardContentProps {
   meetings: Meeting[];

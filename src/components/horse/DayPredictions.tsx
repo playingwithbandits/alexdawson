@@ -7,7 +7,7 @@ import { PredictionControls } from "./controls/PredictionControls";
 import { ExpansionProvider } from "./context/ExpansionContext";
 import { ExpandAllToggle } from "./controls/ExpandAllToggle";
 import { ViewToggle } from "./controls/ViewToggle";
-import { Meeting } from "@/app/rp/utils/parseMeetings";
+import { Meeting } from "@/types/racing";
 
 interface DayPredictionsProps {
   meetings: Meeting[];

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { writeFile } from "fs/promises";
 import { join } from "path";
-import { parseMeetings } from "@/app/rp/utils/parseMeetings";
+import { parseMeetings } from "@/app/rp/utils/parseRaceDetails";
 
 export async function POST(request: Request) {
   try {

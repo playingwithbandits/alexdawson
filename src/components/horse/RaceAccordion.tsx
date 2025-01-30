@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
 import { useExpansion } from "./context/ExpansionContext";
-import { Race } from "@/app/rp/utils/parseMeetings";
+import { Race } from "@/types/racing";
 
 interface RaceAccordionProps {
   race: Race;
