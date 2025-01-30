@@ -1190,6 +1190,20 @@
             "form": "70518-",
             "lastRun": "33",
             "stats": {
+              "trackConfigPerformance": [
+                {
+                  "style": "left-handed",
+                  "runs": 10,
+                  "wins": 2,
+                  "winRate": 20
+                },
+                {
+                  "style": "right-handed",
+                  "runs": 2,
+                  "wins": 0,
+                  "winRate": 0
+                }
+              ],
               "daysOffTrack": 30,
               "racingFrequency": 12,
               "seasonalForm": {
@@ -7255,6 +7269,20 @@
             "form": "298-86",
             "lastRun": "8",
             "stats": {
+              "trackConfigPerformance": [
+                {
+                  "style": "left-handed",
+                  "runs": 53,
+                  "wins": 8,
+                  "winRate": 15.09433962264151
+                },
+                {
+                  "style": "right-handed",
+                  "runs": 17,
+                  "wins": 1,
+                  "winRate": 5.88235294117647
+                }
+              ],
               "daysOffTrack": 7,
               "racingFrequency": 300,
               "seasonalForm": {
@@ -8982,6 +9010,26 @@
             "form": "222-21",
             "lastRun": "17",
             "stats": {
+              "trackConfigPerformance": [
+                {
+                  "style": "left-handed",
+                  "runs": 14,
+                  "wins": 1,
+                  "winRate": 7.142857142857142
+                },
+                {
+                  "style": "right-handed",
+                  "runs": 3,
+                  "wins": 0,
+                  "winRate": 0
+                },
+                {
+                  "style": "unknown",
+                  "runs": 1,
+                  "wins": 0,
+                  "winRate": 0
+                }
+              ],
               "daysOffTrack": 7,
               "racingFrequency": 77.14285714285715,
               "seasonalForm": {
@@ -9084,8 +9132,8 @@
             "heavy": 0
           },
           "courseStats": {
-            "leftHanded": 0,
-            "rightHanded": 0,
+            "leftHanded": 42.23719676549865,
+            "rightHanded": 5.88235294117647,
             "straight": 0
           }
         }

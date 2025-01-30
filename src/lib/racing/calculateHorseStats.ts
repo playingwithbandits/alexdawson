@@ -40,9 +40,8 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
 
   // Calculate class progression
   const classProgression = form
-    .map((r) => r.raceClass || 0)
+    .map((r) => Number(r.raceClass) || 0)
     .filter(Boolean)
-    .slice(0, 6)
     .reverse();
 
   // Calculate course form

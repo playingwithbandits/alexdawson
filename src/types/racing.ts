@@ -307,7 +307,7 @@ export interface HorseStats {
     autumn: number;
     winter: number;
   };
-  classProgression: number[];
+  classProgression: Array<number>;
   avgClassLevel: number;
   preferredClass: string;
   courseForm: {
