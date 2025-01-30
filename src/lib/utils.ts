@@ -13,6 +13,6 @@ export function sum(nums: number[]): number {
   return nums.reduce((a, b) => a + b, 0);
 }
 
-export function normalize(value: number, avg: number): number {
-  return avg ? value / avg : 0;
+export function normalize(value: number, min: number, max: number): number {
+  return (value - min) / (max - min);
 }
