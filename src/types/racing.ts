@@ -81,6 +81,7 @@ export interface RaceStats {
 }
 
 export interface Race {
+  id?: string;
   time: string;
   title: string;
   runners: number;
@@ -103,10 +104,15 @@ export interface Race {
   avgRating?: number;
   stalls?: string;
   ewTerms?: string;
-  raceVerdict?: string;
+  raceVerdict?: {
+    text: string;
+    mentionedHorses: string[];
+    mainPicks: string[];
+  };
   bettingForecast?: Bet[];
   raceStats?: RaceStats;
   horses: Horse[];
+  predictions?: PredictionRunner[];
 }
 
 export interface Meeting {
@@ -372,35 +378,6 @@ export interface RaceStats {
   };
 }
 
-export interface Race {
-  time: string;
-  title: string;
-  runners: number;
-  distance: string;
-  class: string;
-  ageRestriction: string;
-  tv: string;
-  prize?: string;
-  url: string;
-  going?: string;
-  surface?: string;
-  raceType?: string;
-  trackCondition?: string;
-  weather?: string;
-  drawBias?: string;
-  avgSpeedRating?: number;
-  avgOfficialRating?: number;
-  avgPrize?: number;
-  avgTotalPrize?: number;
-  avgRating?: number;
-  stalls?: string;
-  ewTerms?: string;
-  raceVerdict?: string;
-  bettingForecast?: Bet[];
-  raceStats?: RaceStats;
-  horses: Horse[];
-}
-
 export interface Meeting {
   venue: string;
   surface: string;
@@ -415,4 +392,32 @@ export interface Meeting {
 export interface Bet {
   horseName: string;
   odds: string;
+}
+
+export interface PredictionRunner {
+  id: number;
+  name: string;
+  diffusion_name: string;
+  saddle_cloth_number: number;
+  score: number;
+  dist_to_horse_in_front: string | null;
+  dist_to_winner: string | null;
+}
+
+export interface PredictionRace {
+  id: number;
+  time: string;
+  surface: string;
+  time_before_update: number;
+  diffusion_competition_name: string;
+  diffusion_race_date: string;
+  diffusion_event_name: string;
+}
+
+export interface PredictionResponse {
+  data: {
+    race: PredictionRace;
+    runners: { [key: string]: PredictionRunner };
+  };
+  status: number;
 }

@@ -77,7 +77,7 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
               details = await fetchRaceDetails(raceUrl);
               if (details) {
                 console.log("📝 Got race details, starting parse...");
-                additionalDetails = await parseRaceDetails(details);
+                additionalDetails = await parseRaceDetails(details, raceUrl);
                 console.log(`✨ Parsed race details for ${raceUrl}:`, {
                   horsesCount: additionalDetails.horses?.length,
                   going: additionalDetails.going,
@@ -130,5 +130,3 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
     })
   );
 }
-
-export { avg, normalize, sum } from "@/lib/utils";

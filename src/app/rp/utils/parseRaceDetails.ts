@@ -1,18 +1,21 @@
-import type { Race, Bet, Meeting, Horse } from "@/types/racing";
-import { fetchRaceDetails } from "./fetchRaceDetails";
+import type { Race, Bet, Horse } from "@/types/racing";
 import { calculateHorseStats } from "@/lib/racing/calculateHorseStats";
 import { calculateRaceStats } from "@/lib/racing/calculateRaceStats";
 import { calculateHorseScore } from "@/lib/racing/calculateHorseScore";
 import { fetchHorseForm } from "@/lib/racing/fetchHorseForm";
+import { fetchPredictions } from "./fetchPredictions";
 
-export async function parseRaceDetails(html: string): Promise<Partial<Race>> {
+export async function parseRaceDetails(
+  html: string,
+  raceUrl: string
+): Promise<Partial<Race>> {
   console.log("🔄 Starting parseRaceDetails...");
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
 
   const headerBox = doc.querySelector(".RC-headerBox");
 
-  console.log("📊 Parsing betting forecast...");
+  console.log("📊 Parsing betting forecast...", html);
   // Parse betting forecast
   const bettingForecast: Bet[] = [];
   const forecastElement = doc.querySelector(".RC-bettingForecast");
@@ -121,200 +124,152 @@ export async function parseRaceDetails(html: string): Promise<Partial<Race>> {
   // Calculate relative scores for all horses in the race
   // Extract prize money from title or other elements
   const prizeMatch = doc
-    .querySelector(".RC-header__prize")
+    .querySelector(
+      `[data-test-selector="RC-headerBox__winner"] > .RC-headerBox__infoRow__content`
+    )
     ?.textContent?.match(/£([\d,]+)/);
   const prizeMoney = prizeMatch ? parseInt(prizeMatch[1].replace(/,/g, "")) : 0;
 
-  const resultPre = {
+  // First calculate base race data
+  const baseRaceData = {
     time:
-      doc.querySelector(".RC-courseHeader__time")?.textContent?.trim() || "",
+      doc
+        .querySelector(".RC-courseHeader__time")
+        ?.textContent?.replace(/\s+/g, " ")
+        .trim() || "",
+    id: raceUrl.split("/").pop() || "",
     title:
       doc
         .querySelector(`[data-test-selector="RC-header__raceInstanceTitle"]`)
-        ?.textContent?.trim() || "",
+        ?.textContent?.replace(/\s+/g, " ")
+        .trim() || "",
     runners: horses.length,
     distance:
       doc
-        .querySelector(`[data-test-selector="RC-header__raceDistance"]`)
-        ?.textContent?.trim() || "",
+        .querySelector(`[data-test-selector="RC-header__raceDistanceRound"]`)
+        ?.textContent?.replace(/\s+/g, " ")
+        .trim() || "",
     class:
       doc
         .querySelector(`[data-test-selector="RC-header__raceClass"]`)
-        ?.textContent?.trim() || "",
+        ?.textContent?.replace(/[()]/g, "")
+        .replace(/\s+/g, " ")
+        .trim() || "",
     ageRestriction:
-      doc.querySelector(".RC-courseHeader__age")?.textContent?.trim() || "",
+      doc
+        .querySelector(`[data-test-selector="RC-header__rpAges"]`)
+        ?.textContent?.replace(/\s+/g, " ")
+        .trim() || "",
     tv: doc.querySelector(".RC-courseHeader__tv")?.textContent?.trim() || "",
     url: "", // This will be set by the caller
     going: headerBox
-      ?.querySelector("[data-test-selector='RC-headerBox__going']")
-      ?.textContent?.trim(),
-    surface: doc
-      .querySelector(".RC-courseHeader__surface")
-      ?.textContent?.trim(),
-    raceType: doc
-      .querySelector(".RC-courseHeader__raceType")
-      ?.textContent?.trim(),
-    trackCondition: doc
-      .querySelector(".RC-courseHeader__condition")
-      ?.textContent?.trim(),
-    weather: doc
-      .querySelector(".RC-courseHeader__weather")
-      ?.textContent?.trim(),
-    drawBias: doc
-      .querySelector(".RC-courseHeader__drawBias")
-      ?.textContent?.trim(),
+      ?.querySelector(
+        "[data-test-selector='RC-headerBox__going'] > .RC-headerBox__infoRow__content"
+      )
+      ?.textContent?.replace(/Going:\s*/i, "")
+      .replace(/\s+/g, " ")
+      .trim(),
+    surface:
+      doc
+        .querySelector(".RC-courseHeader__surface")
+        ?.textContent?.replace(/Surface:\s*/i, "")
+        .replace(/\s+/g, " ")
+        .trim() || "",
+    raceType:
+      doc
+        .querySelector(".RC-courseHeader__raceType")
+        ?.textContent?.replace(/Type:\s*/i, "")
+        .replace(/\s+/g, " ")
+        .trim() || "",
+    trackCondition:
+      doc
+        .querySelector(".RC-courseHeader__condition")
+        ?.textContent?.replace(/Condition:\s*/i, "")
+        .replace(/\s+/g, " ")
+        .trim() || "",
+    weather:
+      doc
+        .querySelector(".RC-courseHeader__weather")
+        ?.textContent?.replace(/Weather:\s*/i, "")
+        .replace(/\s+/g, " ")
+        .trim() || "",
+    drawBias:
+      doc
+        .querySelector(".RC-courseHeader__drawBias")
+        ?.textContent?.replace(/Draw Bias:\s*/i, "")
+        .replace(/\s+/g, " ")
+        .trim() || "",
     prize: prizeMoney ? `£${prizeMoney.toLocaleString()}` : "",
-    stalls: headerBox
-      ?.querySelector("[data-test-selector='RC-headerBox__stalls']")
-      ?.textContent?.trim(),
-    ewTerms: headerBox
-      ?.querySelector("[data-test-selector='RC-headerBox__terms']")
-      ?.textContent?.trim(),
-    raceVerdict: doc.querySelector(".RC-verdict")?.textContent?.trim(),
+    stalls:
+      headerBox
+        ?.querySelector(
+          "[data-test-selector='RC-headerBox__stalls']> .RC-headerBox__infoRow__content"
+        )
+        ?.textContent?.replace(/Stalls:\s*/i, "")
+        .replace(/\s+/g, " ")
+        .trim() || "",
+    ewTerms:
+      headerBox
+        ?.querySelector(
+          "[data-test-selector='RC-headerBox__terms'] > .RC-headerBox__infoRow__content"
+        )
+        ?.textContent?.replace(/Terms:\s*/i, "")
+        .replace(/\s+/g, " ")
+        .trim() || "",
+    raceVerdict: (() => {
+      console.log("🎯 Parsing race verdict...");
+      const verdictElement = doc.querySelector(
+        `[data-test-selector="RC-raceVerdict__content"]`
+      );
+
+      // Get all bold horse names
+      console.log("Finding bold horse names in verdict...", verdictElement);
+      const boldHorses = Array.from(verdictElement?.querySelectorAll("b") || [])
+        .map((b) => {
+          const name = b.textContent?.trim() || "";
+          const cleanName = name.replace(/\s*\(nap\)\s*/i, "").trim();
+          const isMainPick = name === name.toUpperCase();
+          console.log(
+            `Found horse in verdict: ${cleanName} (main pick: ${isMainPick})`
+          );
+          return {
+            name: cleanName,
+            isMainPick,
+          };
+        })
+        .filter(Boolean);
+
+      const verdict = {
+        text: verdictElement?.textContent?.replace(/\s+/g, " ").trim() || "",
+        mentionedHorses: boldHorses.map((h) => h.name),
+        mainPicks: boldHorses.filter((h) => h.isMainPick).map((h) => h.name),
+      };
+
+      console.log("📝 Race verdict parsed:", verdict);
+      return verdict;
+    })(),
     bettingForecast,
     horses,
   };
 
-  const raceStats = calculateRaceStats(resultPre);
+  // Then calculate stats based on the horses and race data
+  const raceStats = calculateRaceStats({
+    raceData: baseRaceData,
+    horses: horses.filter((h) => h.stats), // Only include horses with stats
+  });
 
   const result: Race = {
-    ...resultPre,
+    ...baseRaceData,
     raceStats,
+    predictions: baseRaceData.id
+      ? await fetchPredictions(baseRaceData.id)
+      : undefined,
     horses: horses?.map((x) => ({
       ...x,
-      score: calculateHorseScore(x, resultPre, raceStats),
+      score: calculateHorseScore(x, baseRaceData, raceStats),
     })),
   };
 
   console.log("🏁 Completed parseRaceDetails", result);
   return result;
-}
-
-export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
-  return Promise.all(
-    elements.map(async (element) => {
-      // Get meeting venue and going
-      const venueElement = element.querySelector(".RC-accordion__courseName");
-      const surfaceElement = element.querySelector(".RC-accordion__surface");
-      const firstRaceElement = element.querySelector(
-        '[data-test-selector="RC-accordion__firstRaceTime"]'
-      );
-      const lastRaceElement = element.querySelector(
-        '[data-test-selector="RC-accordion__lastRaceTime"]'
-      );
-      const typeElement = element.querySelector(
-        '[data-test-selector="RC-accordion__meetingType"]'
-      );
-      const raceCountElement = element.querySelector(
-        '[data-test-selector="RC-accordion__raceCount"]'
-      );
-      const goingElement = element.querySelector(
-        '[data-test-selector="RC-courseDescription__info"]'
-      );
-
-      // Get all races for this meeting
-      const raceElements = element.querySelectorAll(
-        '[data-test-selector="RC-courseCards__raceRow"]'
-      );
-
-      console.log("Venue:", venueElement?.textContent);
-      console.log("Races found:", raceElements.length);
-
-      const races = await Promise.all(
-        Array.from(raceElements)
-          .slice(0, 1)
-          .map(async (raceElement): Promise<Race> => {
-            const linkElement = raceElement.querySelector(
-              ".RC-meetingItem__link"
-            ) as HTMLAnchorElement;
-            const timeElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__time"]'
-            );
-            const titleElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__info"]'
-            );
-            const runnersElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__runners"]'
-            );
-            const goingDataElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__going"]'
-            );
-            const tvElement = raceElement.querySelector(
-              '[data-test-selector="RC-meetingItem__tv"]'
-            );
-
-            // Parse going data text which contains class, age restriction and distance
-            const goingData =
-              goingDataElement?.textContent
-                ?.trim()
-                .split("\n")
-                .map((s) => s.trim()) || [];
-            const [classInfo, ageRestriction, distance] = goingData;
-
-            // Extract the path from the full URL
-            const raceUrl = linkElement?.href
-              ? "https://www.racingpost.com" +
-                new URL(linkElement.href).pathname
-              : "";
-
-            let details = "";
-            let additionalDetails: Partial<Race> = { horses: [] };
-
-            try {
-              console.log(`Processing race at ${raceUrl}`);
-              details = await fetchRaceDetails(raceUrl);
-              if (details) {
-                console.log("📝 Got race details, starting parse...");
-                additionalDetails = await parseRaceDetails(details);
-                console.log(`✨ Parsed race details for ${raceUrl}:`, {
-                  horsesCount: additionalDetails.horses?.length,
-                  going: additionalDetails.going,
-                  surface: additionalDetails.surface,
-                });
-              }
-            } catch (error) {
-              console.error(
-                `Failed to fetch/parse details for race at ${raceUrl}:`,
-                error
-              );
-            }
-
-            console.log(`📊 Race details for ${raceUrl}:`, {
-              horsesCount: additionalDetails.horses?.length,
-              hasGoing: !!additionalDetails.going,
-              hasSurface: !!additionalDetails.surface,
-              hasBettingForecast: !!additionalDetails.bettingForecast?.length,
-            });
-            return {
-              time: timeElement?.textContent?.trim() || "",
-              title: titleElement?.textContent?.trim() || "",
-              runners: parseInt(
-                runnersElement?.textContent?.trim().split(" ")[0] || "0",
-                10
-              ),
-              distance: distance || "",
-              class: classInfo || "",
-              ageRestriction: ageRestriction || "",
-              tv: tvElement?.textContent?.trim() || "",
-              url: raceUrl,
-              horses: [],
-              ...additionalDetails,
-            };
-          })
-      );
-
-      return {
-        venue: venueElement?.textContent?.trim() || "",
-        surface: surfaceElement?.textContent?.trim() || "",
-        firstRace: firstRaceElement?.textContent?.trim() || "",
-        lastRace:
-          lastRaceElement?.textContent?.trim().replace(/[&nbsp;-]*/g, "") || "",
-        type: typeElement?.textContent?.trim() || "",
-        raceCount: raceCountElement?.textContent?.trim() || "",
-        going:
-          goingElement?.textContent?.trim().replace(/^GOING\s*/i, "") || "",
-        races,
-      };
-    })
-  );
 }

@@ -1,5 +1,5 @@
 import type { FormObj, HorseStats } from "@/types/racing";
-import { avg } from "@/lib/utils";
+import { avg, sum } from "@/lib/utils";
 
 function getSeasonFromDate(dateStr?: string): string {
   if (!dateStr) return "unknown";
@@ -151,8 +151,147 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
 
   const trackConfigPerformance = Object.values(trackConfigs);
 
+  // Calculate going performance
+  const goingPerf = form.reduce((acc, run) => {
+    const going = (run.goingTypeServicesDesc || "").toLowerCase();
+    let type = "unknown";
+
+    if (going.includes("soft") || going.includes("heavy")) {
+      type = "soft";
+    } else if (going.includes("good")) {
+      type = "good";
+    } else if (going.includes("firm")) {
+      type = "firm";
+    } else if (going.includes("heavy")) {
+      type = "heavy";
+    }
+
+    if (!acc[type]) {
+      acc[type] = { type, runs: 0, wins: 0, winRate: 0 };
+    }
+
+    acc[type].runs++;
+    if (run.raceOutcomeCode === "1") {
+      acc[type].wins++;
+    }
+    acc[type].winRate = (acc[type].wins / acc[type].runs) * 100;
+
+    return acc;
+  }, {} as Record<string, { type: string; runs: number; wins: number; winRate: number }>);
+
+  const goingPerformance = Object.values(goingPerf);
+
+  // Calculate recent form trend
+  const recentResults = form
+    .slice(0, 6)
+    .map((r) => parseInt(r.raceOutcomeCode || "0"))
+    .filter((pos) => pos > 0);
+
+  let recentFormTrend: "improving" | "declining" | "consistent" = "consistent";
+
+  if (recentResults.length >= 3) {
+    const firstHalf = recentResults.slice(
+      0,
+      Math.ceil(recentResults.length / 2)
+    );
+    const secondHalf = recentResults.slice(Math.ceil(recentResults.length / 2));
+
+    const firstHalfAvg = avg(firstHalf);
+    const secondHalfAvg = avg(secondHalf);
+
+    // Lower position numbers are better
+    if (secondHalfAvg < firstHalfAvg - 1) {
+      recentFormTrend = "improving";
+    } else if (secondHalfAvg > firstHalfAvg + 1) {
+      recentFormTrend = "declining";
+    }
+  }
+
   return {
+    // Basic stats
+    totalStarts: form.length,
+    totalWins: form.filter((r) => r.raceOutcomeCode === "1").length,
+    winRate:
+      (form.filter((r) => r.raceOutcomeCode === "1").length / form.length) *
+      100,
+    placeRate:
+      (form.filter((r) => ["1", "2", "3"].includes(r.raceOutcomeCode || ""))
+        .length /
+        form.length) *
+      100,
+    avgEarningsPerRace: avg(form.map((r) => r.prizeSterling || 0)),
+    totalEarnings: sum(form.map((r) => r.prizeSterling || 0)),
+
+    // Form trends
+    recentFormTrend,
+    avgPositionLastSix: avg(recentResults),
+    finishingPositions: form
+      .slice(0, 6)
+      .map((r) => parseInt(r.raceOutcomeCode || "0"))
+      .filter(Boolean),
+
+    // Ratings
+    bestRPR: Math.max(...form.map((r) => r.rpPostmark || 0)),
+    avgRPR: avg(form.map((r) => r.rpPostmark || 0)),
+    rprProgression: form
+      .slice(0, 6)
+      .map((r) => r.rpPostmark || 0)
+      .reverse(),
+    bestTopSpeed: Math.max(...form.map((r) => r.rpTopspeed || 0)),
+    avgTopSpeed: avg(form.map((r) => r.rpTopspeed || 0)),
+    topSpeedProgression: form
+      .slice(0, 6)
+      .map((r) => r.rpTopspeed || 0)
+      .reverse(),
+
+    // Distance
+    minDistance: Math.min(...form.map((r) => r.distanceFurlong || Infinity)),
+    maxDistance: Math.max(...form.map((r) => r.distanceFurlong || 0)),
+    avgDistance: avg(form.map((r) => r.distanceFurlong || 0)),
+    distanceProgression: form
+      .slice(0, 6)
+      .map((r) => r.distanceFurlong || 0)
+      .reverse(),
+
+    // Weight
+    minWeight: Math.min(...form.map((r) => r.weightCarriedLbs || Infinity)),
+    maxWeight: Math.max(...form.map((r) => r.weightCarriedLbs || 0)),
+    avgWeight: avg(form.map((r) => r.weightCarriedLbs || 0)),
+    weightProgression: form
+      .slice(0, 6)
+      .map((r) => r.weightCarriedLbs || 0)
+      .reverse(),
+
+    // Prize money
+    highestPrize: Math.max(...form.map((r) => r.prizeSterling || 0)),
+    avgPrize: avg(form.map((r) => r.prizeSterling || 0)),
+    totalPrizeMoney: sum(form.map((r) => r.prizeSterling || 0)),
+
+    // Surface stats
+    surfaceStats: form.reduce((acc, run) => {
+      const surface = (run.courseTypeCode || "unknown").toLowerCase();
+      if (!acc[surface]) {
+        acc[surface] = { runs: 0, wins: 0, winRate: 0 };
+      }
+      acc[surface].runs++;
+      if (run.raceOutcomeCode === "1") acc[surface].wins++;
+      acc[surface].winRate = (acc[surface].wins / acc[surface].runs) * 100;
+      return acc;
+    }, {} as Record<string, { runs: number; wins: number; winRate: number }>),
+
+    // Official ratings
+    latestOR: form[0]?.officialRatingRanOff || 0,
+    bestOfficialRating: Math.max(
+      ...form.map((r) => r.officialRatingRanOff || 0)
+    ),
+    avgOfficialRating: avg(form.map((r) => r.officialRatingRanOff || 0)),
+    officialRatingProgression: form
+      .slice(0, 6)
+      .map((r) => r.officialRatingRanOff || 0)
+      .reverse(),
+
     // ... existing stats ...
+    goingPerformance,
     trackConfigPerformance,
     daysOffTrack,
     racingFrequency: (form.length / (daysOffTrack || 1)) * 30, // races per month

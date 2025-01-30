@@ -4,7 +4,7 @@ import { Meeting } from "@/types/racing";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { DashboardContent } from "../DashboardContent";
-import { parseMeetings } from "@/app/rp/utils/parseRaceDetails";
+import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 
 export function HorsePageClient({ date }: { date: string }) {
   const [meetings, setMeetings] = useState<Meeting[]>([]);

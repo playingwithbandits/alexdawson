@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Meeting } from "./utils/parseMeetings";
-import { parseMeetings } from "./utils/parseRaceDetails";
+import { Meeting, parseMeetings } from "./utils/parseMeetings";
 
 interface RacingPostClientProps {
   date: string; // YYYY-MM-DD format
