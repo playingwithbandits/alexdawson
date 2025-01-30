@@ -216,38 +216,7 @@ export async function parseRaceDetails(
         ?.textContent?.replace(/Terms:\s*/i, "")
         .replace(/\s+/g, " ")
         .trim() || "",
-    raceVerdict: (() => {
-      console.log("🎯 Parsing race verdict...");
-      const verdictElement = doc.querySelector(
-        `[data-test-selector="RC-raceVerdict__content"]`
-      );
 
-      // Get all bold horse names
-      console.log("Finding bold horse names in verdict...", verdictElement);
-      const boldHorses = Array.from(verdictElement?.querySelectorAll("b") || [])
-        .map((b) => {
-          const name = b.textContent?.trim() || "";
-          const cleanName = name.replace(/\s*\(nap\)\s*/i, "").trim();
-          const isMainPick = name === name.toUpperCase();
-          console.log(
-            `Found horse in verdict: ${cleanName} (main pick: ${isMainPick})`
-          );
-          return {
-            name: cleanName,
-            isMainPick,
-          };
-        })
-        .filter(Boolean);
-
-      const verdict = {
-        text: verdictElement?.textContent?.replace(/\s+/g, " ").trim() || "",
-        mentionedHorses: boldHorses.map((h) => h.name),
-        mainPicks: boldHorses.filter((h) => h.isMainPick).map((h) => h.name),
-      };
-
-      console.log("📝 Race verdict parsed:", verdict);
-      return verdict;
-    })(),
     bettingForecast,
     horses,
   };

@@ -104,11 +104,6 @@ export interface Race {
   avgRating?: number;
   stalls?: string;
   ewTerms?: string;
-  raceVerdict?: {
-    text: string;
-    mentionedHorses: string[];
-    mainPicks: string[];
-  };
   bettingForecast?: Bet[];
   raceStats?: RaceStats;
   horses: Horse[];
