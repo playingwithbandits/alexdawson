@@ -71,8 +71,90 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     return acc;
   }, {} as Record<string, { runs: number; wins: number; winRate: number }>);
 
+  // Calculate track configuration performance
+  const trackConfigs = form.reduce((acc, run) => {
+    // Determine track style from course configuration
+    let style = "unknown";
+    const config = (run.courseComments || "").toLowerCase();
+    if (config.includes("left-handed") || config.includes("left handed")) {
+      style = "left-handed";
+    } else if (
+      config.includes("right-handed") ||
+      config.includes("right handed")
+    ) {
+      style = "right-handed";
+    } else if (config.includes("straight")) {
+      style = "straight";
+    }
+
+    // Fallback to course name patterns if no explicit configuration
+    if (style === "unknown") {
+      // Clean up course name - remove (A.W) and other suffixes
+      const courseName = (run.courseName || "")
+        .toLowerCase()
+        .replace(/\s*\([^)]*\)/g, "") // Remove anything in parentheses
+        .trim();
+
+      if (
+        [
+          "ascot",
+          "doncaster",
+          "york",
+          "newmarket july",
+          "newmarket rowley",
+          "thirsk",
+        ].includes(courseName)
+      ) {
+        style = "straight";
+      } else if (
+        [
+          "kempton",
+          "lingfield",
+          "wolverhampton",
+          "chelmsford",
+          "dundalk",
+          "southwell",
+          "ayr",
+          "hamilton",
+          "newcastle",
+          "pontefract",
+          "musselburgh",
+        ].includes(courseName)
+      ) {
+        style = "left-handed";
+      } else if (
+        [
+          "windsor",
+          "brighton",
+          "bath",
+          "beverley",
+          "chester",
+          "chepstow",
+          "epsom",
+          "goodwood",
+          "yarmouth",
+        ].includes(courseName)
+      ) {
+        style = "right-handed";
+      }
+    }
+
+    if (!acc[style]) {
+      acc[style] = { style, runs: 0, wins: 0, winRate: 0 };
+    }
+    acc[style].runs++;
+    if (run.raceOutcomeCode === "1") {
+      acc[style].wins++;
+    }
+    acc[style].winRate = (acc[style].wins / acc[style].runs) * 100;
+    return acc;
+  }, {} as Record<string, { style: string; runs: number; wins: number; winRate: number }>);
+
+  const trackConfigPerformance = Object.values(trackConfigs);
+
   return {
     // ... existing stats ...
+    trackConfigPerformance,
     daysOffTrack,
     racingFrequency: (form.length / (daysOffTrack || 1)) * 30, // races per month
     seasonalForm: {
