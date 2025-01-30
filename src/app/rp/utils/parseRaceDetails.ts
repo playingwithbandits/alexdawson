@@ -38,7 +38,7 @@ export async function parseRaceDetails(
   console.log("🐎 Parsing horses...");
   // Parse horses from runner rows
   const rowsElements = doc.querySelectorAll(".RC-runnerRow");
-  const rows = Array.from(rowsElements).slice(0, 3);
+  const rows = Array.from(rowsElements);
   console.log(`Found ${rows.length} horses to parse`);
 
   const horses: Horse[] = await Promise.all(

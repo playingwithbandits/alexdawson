@@ -288,7 +288,7 @@ export function calculateHorseScore(
       predictionScore) *
     100;
 
-  return Math.max(0, Math.min(100, totalScore));
+  return totalScore;
 }
 
 function getCurrentSeason(): Season {

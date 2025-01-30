@@ -11,7 +11,7 @@ interface MeetingAccordionProps {
   meeting: Meeting;
 }
 
-function sortRacesByTime(races: Meeting["races"]) {
+export function sortRacesByTime(races: Meeting["races"]) {
   return [...races].sort((a, b) => {
     const timeA = Number(a.time.replace(":", ""));
     const timeB = Number(b.time.replace(":", ""));
