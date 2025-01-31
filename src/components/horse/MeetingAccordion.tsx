@@ -38,7 +38,11 @@ export function MeetingAccordion({ meeting }: MeetingAccordionProps) {
       </AccordionButton>
       <AccordionContent isExpanded={isExpanded}>
         {sortedRaces.map((race, race_i) => (
-          <RaceAccordion key={race.time + race_i} race={race} />
+          <RaceAccordion
+            key={race.time + race_i}
+            race={race}
+            meeting={meeting}
+          />
         ))}
       </AccordionContent>
     </div>

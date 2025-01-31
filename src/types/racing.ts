@@ -1,3 +1,5 @@
+import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
+
 export interface Horse {
   name: string;
   profileUrl: string;
@@ -34,6 +36,7 @@ export interface Horse {
 export interface Bet {
   horseName: string;
   odds: string;
+  decimalOdds: number;
 }
 
 export interface RaceStats {
@@ -84,6 +87,7 @@ export interface Race {
   id?: string;
   time: string;
   title: string;
+  raceExtraInfo?: RaceAccordionStats;
   runners: number;
   distance: string;
   class: string;
@@ -92,10 +96,10 @@ export interface Race {
   prize?: string;
   url: string;
   going?: string;
-  surface?: string;
-  raceType?: string;
-  trackCondition?: string;
-  weather?: string;
+  // surface?: string;
+  // raceType?: string;
+  // trackCondition?: string;
+  // weather?: string;
   drawBias?: string;
   drawBiasExplanation?: string;
   trackConfig?: "left-handed" | "right-handed" | "straight";
@@ -384,6 +388,7 @@ export interface Meeting {
 export interface Bet {
   horseName: string;
   odds: string;
+  decimalOdds: number;
 }
 
 export interface PredictionRunner {

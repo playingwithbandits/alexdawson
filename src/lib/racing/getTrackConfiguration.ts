@@ -1,0 +1,93 @@
+import { TrackConfiguration } from "./calculateDrawBias";
+
+const courseConfigs: Record<string, TrackConfiguration> = {
+  ascot: "right-handed",
+  ayr: "left-handed",
+  bangor: "left-handed",
+  bath: "left-handed",
+  beverley: "left-handed",
+  brighton: "left-handed",
+  carlisle: "left-handed",
+  cartmel: "left-handed",
+  catterick: "left-handed",
+  chelmsford: "left-handed",
+  chepstow: "left-handed",
+  chester: "left-handed",
+  clonmel: "right-handed",
+  curragh: "straight",
+  doncaster: "left-handed",
+  down: "right-handed",
+  dundalk: "left-handed",
+  epsom: "left-handed",
+  exeter: "right-handed",
+  fairyhouse: "right-handed",
+  fakenham: "left-handed",
+  ffos: "left-handed",
+  fontwell: "right-handed",
+  galway: "right-handed",
+  goodwood: "right-handed",
+  gowran: "right-handed",
+  hamilton: "left-handed",
+  haydock: "left-handed",
+  hexham: "left-handed",
+  huntingdon: "right-handed",
+  kelso: "left-handed",
+  kempton: "right-handed",
+  kilbeggan: "right-handed",
+  laytown: "straight",
+  leicester: "right-handed",
+  leopardstown: "left-handed",
+  limerick: "right-handed",
+  lingfield: "left-handed",
+  listowel: "right-handed",
+  ludlow: "right-handed",
+  market: "left-handed",
+  musselburgh: "left-handed",
+  naas: "right-handed",
+  navan: "right-handed",
+  newbury: "left-handed",
+  newcastle: "left-handed",
+  newmarket: "straight",
+  newton: "left-handed",
+  nottingham: "left-handed",
+  perth: "right-handed",
+  plumpton: "left-handed",
+  pontefract: "left-handed",
+  punchestown: "right-handed",
+  redcar: "left-handed",
+  ripon: "left-handed",
+  roscommon: "left-handed",
+  salisbury: "right-handed",
+  sandown: "right-handed",
+  sedgefield: "left-handed",
+  sligo: "right-handed",
+  southwell: "left-handed",
+  stratford: "left-handed",
+  taunton: "right-handed",
+  thirsk: "left-handed",
+  thurles: "right-handed",
+  tipperary: "right-handed",
+  tramore: "right-handed",
+  uttoxeter: "right-handed",
+  warwick: "left-handed",
+  wetherby: "left-handed",
+  wexford: "right-handed",
+  windsor: "right-handed",
+  wolverhampton: "left-handed",
+  worcester: "left-handed",
+  yarmouth: "left-handed",
+  york: "left-handed",
+};
+
+export function getTrackConfiguration(
+  courseName: string
+): TrackConfiguration | undefined {
+  const normalizedCourseName = courseName.toLowerCase().trim();
+
+  // Find the matching course configuration
+  const matchingCourse = Object.keys(courseConfigs).find((course) =>
+    normalizedCourseName.includes(course)
+  );
+
+  return matchingCourse ? courseConfigs[matchingCourse] : undefined;
+}

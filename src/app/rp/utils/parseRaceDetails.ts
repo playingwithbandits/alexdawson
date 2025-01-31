@@ -8,6 +8,8 @@ import {
   calculateDrawBias,
   TrackConfiguration,
 } from "@/lib/racing/calculateDrawBias";
+import { getTrackConfiguration } from "@/lib/racing/getTrackConfiguration";
+import { fetchRaceAccordion } from "./fetchRaceAccordion";
 
 export async function parseRaceDetails(
   html: string,
@@ -22,20 +24,37 @@ export async function parseRaceDetails(
   console.log("📊 Parsing betting forecast...", html);
   // Parse betting forecast
   const bettingForecast: Bet[] = [];
-  const forecastElement = doc.querySelector(".RC-bettingForecast");
+  const forecastElement = doc.querySelector(
+    `[data-test-selector="RC-bettingForecast_container"]`
+  );
+
   if (forecastElement) {
-    const forecastText = forecastElement.textContent?.trim() || "";
-    // Split on commas and parse each bet
-    const bets = forecastText.split(",").map((bet) => bet.trim());
-    bets.forEach((bet) => {
-      // Format is typically "Horse Name 5/1"
-      const match = bet.match(/(.+?)\s+(\d+(?:\/|\.)\d+)$/);
-      if (match) {
+    // Get all forecast groups
+    const forecastGroups = forecastElement.querySelectorAll(
+      '[data-test-selector="RC-bettingForecast_group"]'
+    );
+
+    forecastGroups.forEach((group) => {
+      // Get odds (first text node)
+      const odds = group.childNodes[0].textContent?.trim() || "";
+
+      // Get all horses in this odds group
+      const horses = Array.from(
+        group.querySelectorAll('[data-test-selector="RC-bettingForecast_link"]')
+      );
+
+      // Convert fractional odds to decimal
+      const [num, den] = odds.split("/").map(Number);
+      const decimalOdds = num && den ? num / den + 1 : 0;
+
+      // Create a bet entry for each horse at these odds
+      horses.forEach((horse) => {
         bettingForecast.push({
-          horseName: match[1].trim(),
-          odds: match[2].trim(),
+          horseName: horse.textContent?.trim() || "",
+          odds: odds,
+          decimalOdds: Number(decimalOdds.toFixed(2)),
         });
-      }
+      });
     });
   }
 
@@ -46,7 +65,7 @@ export async function parseRaceDetails(
   console.log(`Found ${rows.length} horses to parse`);
 
   const horses: Horse[] = await Promise.all(
-    rows.map(async (row, index) => {
+    rows.map(async (row) => {
       const profileLink = row.querySelector(
         ".RC-runnerName.ui-link"
       ) as HTMLAnchorElement;
@@ -134,6 +153,11 @@ export async function parseRaceDetails(
     ?.textContent?.match(/£([\d,]+)/);
   const prizeMoney = prizeMatch ? parseInt(prizeMatch[1].replace(/,/g, "")) : 0;
 
+  const courseName =
+    doc
+      .querySelector(`[data-test-selector="RC-courseHeader__name"]`)
+      ?.textContent?.toLowerCase()
+      .trim() || "";
   // First calculate base race data
   const baseRaceData: Partial<Race> = {
     time:
@@ -173,46 +197,13 @@ export async function parseRaceDetails(
       ?.textContent?.replace(/Going:\s*/i, "")
       .replace(/\s+/g, " ")
       .trim(),
-    surface:
-      doc
-        .querySelector(".RC-courseHeader__surface")
-        ?.textContent?.replace(/Surface:\s*/i, "")
-        .replace(/\s+/g, " ")
-        .trim() || "",
-    raceType:
-      doc
-        .querySelector(".RC-courseHeader__raceType")
-        ?.textContent?.replace(/Type:\s*/i, "")
-        .replace(/\s+/g, " ")
-        .trim() || "",
-    trackCondition:
-      doc
-        .querySelector(".RC-courseHeader__condition")
-        ?.textContent?.replace(/Condition:\s*/i, "")
-        .replace(/\s+/g, " ")
-        .trim() || "",
-    weather:
-      doc
-        .querySelector(".RC-courseHeader__weather")
-        ?.textContent?.replace(/Weather:\s*/i, "")
-        .replace(/\s+/g, " ")
-        .trim() || "",
     // Get track configuration from course header
-    trackConfig: (() => {
-      const courseInfo =
-        doc
-          .querySelector(".RC-courseHeader__trackInfo")
-          ?.textContent?.toLowerCase() || "";
-      if (courseInfo.includes("left-handed")) return "left-handed";
-      if (courseInfo.includes("right-handed")) return "right-handed";
-      if (courseInfo.includes("straight")) return "straight";
-      return undefined;
-    })(),
+    trackConfig: getTrackConfiguration(courseName),
     prize: prizeMoney ? `£${prizeMoney.toLocaleString()}` : "",
     stalls:
       headerBox
         ?.querySelector(
-          "[data-test-selector='RC-headerBox__stalls']> .RC-headerBox__infoRow__content"
+          "[data-test-selector='RC-headerBox__stalls'] > .RC-headerBox__infoRow__content"
         )
         ?.textContent?.replace(/Stalls:\s*/i, "")
         .replace(/\s+/g, " ")
@@ -260,6 +251,10 @@ export async function parseRaceDetails(
     predictions: baseRaceData.id
       ? await fetchPredictions(baseRaceData.id)
       : undefined,
+    raceExtraInfo: baseRaceData.id
+      ? await fetchRaceAccordion(baseRaceData.id)
+      : undefined,
+
     horses: horses?.map((x) => ({
       ...x,
       score: calculateHorseScore(x, baseRaceData, raceStats),

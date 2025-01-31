@@ -141,7 +141,14 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
           <ExpandAllToggle />
         </div>
         {sortedPredictions.map((horse) => (
-          <HorseRow key={horse.name} horse={horse} score={horse.score} />
+          <HorseRow
+            key={horse.name}
+            horse={horse}
+            score={horse.score}
+            race={filteredMeetings
+              ?.flatMap((x) => x.races)
+              .find((x) => x.horses?.map((h) => h.name).includes(horse.name))}
+          />
         ))}
       </div>
     </ExpansionProvider>

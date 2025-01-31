@@ -78,11 +78,6 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
               if (details) {
                 console.log("📝 Got race details, starting parse...");
                 additionalDetails = await parseRaceDetails(details, raceUrl);
-                console.log(`✨ Parsed race details for ${raceUrl}:`, {
-                  horsesCount: additionalDetails.horses?.length,
-                  going: additionalDetails.going,
-                  surface: additionalDetails.surface,
-                });
               }
             } catch (error) {
               console.error(
@@ -91,12 +86,6 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
               );
             }
 
-            console.log(`📊 Race details for ${raceUrl}:`, {
-              horsesCount: additionalDetails.horses?.length,
-              hasGoing: !!additionalDetails.going,
-              hasSurface: !!additionalDetails.surface,
-              hasBettingForecast: !!additionalDetails.bettingForecast?.length,
-            });
             return {
               time: timeElement?.textContent?.trim() || "",
               title: titleElement?.textContent?.trim() || "",
@@ -117,7 +106,7 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
 
       return {
         venue: venueElement?.textContent?.trim() || "",
-        surface: surfaceElement?.textContent?.trim() || "",
+        surface: surfaceElement?.textContent?.trim() || "Turf",
         firstRace: firstRaceElement?.textContent?.trim() || "",
         lastRace:
           lastRaceElement?.textContent?.trim().replace(/[&nbsp;-]*/g, "") || "",

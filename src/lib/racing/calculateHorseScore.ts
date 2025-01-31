@@ -204,9 +204,8 @@ export function calculateHorseScore(
   // Going & Conditions (10%)
   const goingScore =
     normalize(
-      stats.goingPerformance?.find(
-        (g) => g.type === race.going?.toLowerCase() || ""
-      )?.winRate || 0,
+      stats.goingPerformance?.find((g) => g.type === race.going?.toLowerCase())
+        ?.winRate || 0,
       0,
       100
     ) *
@@ -217,14 +216,6 @@ export function calculateHorseScore(
       100
     ) *
       w.goingAndConditions.goodGoingWinRate +
-    normalize(
-      stats.goingPerformance?.find(
-        (g) => g.type === race.trackCondition?.toLowerCase()
-      )?.winRate || 0,
-      0,
-      100
-    ) *
-      w.goingAndConditions.trackConditionWinRate +
     normalize(stats.seasonalForm?.[currentSeason] || 0, 0, maxSeasonalForm) *
       w.goingAndConditions.seasonalForm;
 

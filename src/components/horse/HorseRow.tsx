@@ -1,6 +1,6 @@
 "use client";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { FormObj, GoingRecord, Horse, HorseStats } from "@/types/racing";
+import { FormObj, GoingRecord, Horse, HorseStats, Race } from "@/types/racing";
 import { useState } from "react";
 import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
@@ -8,13 +8,14 @@ import { AccordionContent } from "./accordions/AccordionContent";
 interface HorseRowProps {
   horse: Horse;
   score?: number;
+  race?: Race;
 }
 
-export function HorseRow({ horse, score }: HorseRowProps) {
+export function HorseRow({ horse, score, race }: HorseRowProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="predictions-table">
+    <div className="prediction-accordion">
       <AccordionButton
         isExpanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
@@ -28,7 +29,7 @@ export function HorseRow({ horse, score }: HorseRowProps) {
         </div>
       </AccordionButton>
       <AccordionContent isExpanded={isExpanded}>
-        <div className="space-y-4 p-6 border-t">
+        <div className="space-y-[2rem] p-6 border-t">
           {/* Quick Stats Row */}
           <div className="grid grid-cols-4 gap-4 mb-6 text-sm">
             <div className="flex flex-col">
@@ -56,60 +57,18 @@ export function HorseRow({ horse, score }: HorseRowProps) {
             </div>
           </div>
 
-          {/* Connections */}
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div className="space-y-2">
-              <h3 className="font-semibold">Connections</h3>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="flex flex-col">
-                  <span className="text-gray-500">Jockey</span>
-                  <span className="font-medium">{horse.jockey.name}</span>
-                  <span className="text-xs text-gray-500">
-                    {horse.jockey.allowance
-                      ? `Claims ${horse.jockey.allowance}`
-                      : ""}
-                  </span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-gray-500">Trainer</span>
-                  <span className="font-medium">{horse.trainer.name}</span>
-                  <span className="text-xs text-gray-500">
-                    {horse.trainer.stats || "No recent stats"}
-                  </span>
-                </div>
-                <div className="flex flex-col mt-2">
-                  <span className="text-gray-500">Owner</span>
-                  <span className="font-medium">{horse.owner}</span>
-                </div>
-              </div>
+          {/* Verdict Comment */}
+          {race?.raceExtraInfo?.comments[horse.name] && (
+            <div className="mt-[2rem] text-sm">
+              <h3 className="font-semibold mb-2">Comment</h3>
+              <p className="text-gray-300">
+                {race.raceExtraInfo.comments[horse.name]}
+              </p>
             </div>
-            <div className="space-y-2">
-              <h3 className="font-semibold">Form & Equipment</h3>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="flex flex-col">
-                  <span className="text-gray-500">Head Gear</span>
-                  <span className="font-medium">
-                    {horse.headGear?.description || "None"}
-                  </span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-gray-500">Form</span>
-                  <span className="font-medium">{horse.form || "N/A"}</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-gray-500">Last Run</span>
-                  <span className="font-medium">{horse.lastRun || "N/A"}</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-gray-500">Rating</span>
-                  <span className="font-medium">{horse.rating || "N/A"}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          )}
 
           {/* Stats Tables */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-4 gap-4 mt-[2rem]">
             <StatsTable title="Performance" data={getPerformanceStats(horse)} />
             <StatsTable
               title="Form"
@@ -119,9 +78,13 @@ export function HorseRow({ horse, score }: HorseRowProps) {
               title="Course & Distance"
               data={getCourseDistanceStats(horse.stats)}
             />
+            <StatsTable
+              title="Connections"
+              data={getConnectionStats(horse, race)}
+            />
           </div>
           {horse.formObj && (
-            <div className="mt-8">
+            <div className="mt-[2rem]">
               <h3 className="font-semibold mb-4">Recent Form</h3>
               <Table>
                 <thead>
@@ -220,7 +183,7 @@ function StatsTable({
   data,
 }: {
   title: string;
-  data: Record<string, any>;
+  data: Record<string, string | number | undefined>;
 }) {
   return (
     <div>
@@ -316,5 +279,67 @@ function getCourseDistanceStats(stats?: HorseStats) {
     "Class Level": stats.avgClassLevel?.toFixed(1),
     "Best Class": stats.preferredClass || "N/A",
     "Going Preference": formatGoingPreference(stats.goingPerformance),
+  };
+}
+
+function getConnectionStats(horse: Horse, race?: Race) {
+  const jockeyStats = race?.raceExtraInfo?.jockeyStats?.find(
+    (j) =>
+      j.jockey.toLowerCase().trim() === horse.jockey.name.toLowerCase().trim()
+  );
+  const trainerStats = race?.raceExtraInfo?.trainerStats?.find(
+    (t) =>
+      t.trainer.toLowerCase().trim() === horse.trainer.name.toLowerCase().trim()
+  );
+
+  console.log(
+    "🏁 jockeyStats",
+    jockeyStats,
+    race?.raceExtraInfo?.jockeyStats,
+    horse.jockey.name
+  );
+  console.log(
+    "🏁 trainerStats",
+    trainerStats,
+    race?.raceExtraInfo?.trainerStats,
+    horse.trainer.name
+  );
+
+  return {
+    "Jockey Name": horse.jockey.name,
+    "Jockey Claim": horse.jockey.allowance || "None",
+    "Jockey 14 Day Form": jockeyStats
+      ? `${jockeyStats.last14Days.wins}/${jockeyStats.last14Days.runs} (${jockeyStats.last14Days.winRate}%)`
+      : "N/A",
+    "Jockey 14 Day P/L": jockeyStats
+      ? `${jockeyStats.last14Days.profit > 0 ? "+" : ""}${
+          jockeyStats.last14Days.profit
+        }`
+      : "N/A",
+    "Jockey Overall Form": jockeyStats
+      ? `${jockeyStats.overall.wins}/${jockeyStats.overall.runs} (${jockeyStats.overall.winRate}%)`
+      : "N/A",
+    "Jockey Overall P/L": jockeyStats
+      ? `${jockeyStats.overall.profit > 0 ? "+" : ""}${
+          jockeyStats.overall.profit
+        }`
+      : "N/A",
+    "Trainer Name": horse.trainer.name,
+    "Trainer 14 Day Form": trainerStats
+      ? `${trainerStats.last14Days.wins}/${trainerStats.last14Days.runs} (${trainerStats.last14Days.winRate}%)`
+      : "N/A",
+    "Trainer 14 Day P/L": trainerStats
+      ? `${trainerStats.last14Days.profit > 0 ? "+" : ""}${
+          trainerStats.last14Days.profit
+        }`
+      : "N/A",
+    "Trainer Overall Form": trainerStats
+      ? `${trainerStats.overall.wins}/${trainerStats.overall.runs} (${trainerStats.overall.winRate}%)`
+      : "N/A",
+    "Trainer Overall P/L": trainerStats
+      ? `${trainerStats.overall.profit > 0 ? "+" : ""}${
+          trainerStats.overall.profit
+        }`
+      : "N/A",
   };
 }

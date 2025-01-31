@@ -1,12 +1,12 @@
 [
   {
     "venue": "Catterick",
-    "surface": "",
+    "surface": "Turf",
     "firstRace": "1:05",
     "lastRace": " 4:05",
     "type": "Jumps",
     "raceCount": "7 races",
-    "going": "SOFT, Good to soft in places (GoingStick 5.9) (Showers)",
+    "going": "SOFT, Good to soft in places (GoingStick: 6.2) (Showers)",
     "races": [
       {
         "time": "1:05",
@@ -565,16 +565,8 @@
                 },
                 "flatPlacings": null,
                 "jumpsPlacings": {
-                  "2023": [
-                    3,
-                    4,
-                    4
-                  ],
-                  "2024": [
-                    0,
-                    7,
-                    8
-                  ]
+                  "2023": [3, 4, 4],
+                  "2024": [0, 7, 8]
                 },
                 "flatFiguresCalculated": null,
                 "jumpsFiguresCalculated": [
@@ -695,56 +687,21 @@
               "totalEarnings": 28203.75,
               "recentFormTrend": "improving",
               "avgPositionLastSix": 6.166666666666667,
-              "finishingPositions": [
-                11,
-                7,
-                8,
-                3,
-                4,
-                4
-              ],
+              "finishingPositions": [11, 7, 8, 3, 4, 4],
               "bestRPR": 104,
               "avgRPR": 85.33333333333333,
-              "rprProgression": [
-                93,
-                104,
-                104,
-                58,
-                87,
-                66
-              ],
+              "rprProgression": [93, 104, 104, 58, 87, 66],
               "bestTopSpeed": 99,
               "avgTopSpeed": 52.666666666666664,
-              "topSpeedProgression": [
-                86,
-                68,
-                99,
-                12,
-                51,
-                0
-              ],
+              "topSpeedProgression": [86, 68, 99, 12, 51, 0],
               "minDistance": 15.5,
               "maxDistance": 20,
               "avgDistance": 18,
-              "distanceProgression": [
-                15.5,
-                16,
-                17.5,
-                20,
-                19,
-                20
-              ],
+              "distanceProgression": [15.5, 16, 17.5, 20, 19, 20],
               "minWeight": 151,
               "maxWeight": 162,
               "avgWeight": 154.66666666666666,
-              "weightProgression": [
-                151,
-                155,
-                155,
-                151,
-                154,
-                162
-              ],
+              "weightProgression": [151, 155, 155, 151, 154, 162],
               "highestPrize": 6337.2,
               "avgPrize": 4700.625,
               "totalPrizeMoney": 28203.75,
@@ -763,14 +720,7 @@
               "latestOR": 103,
               "bestOfficialRating": 107,
               "avgOfficialRating": 52.666666666666664,
-              "officialRatingProgression": [
-                0,
-                0,
-                0,
-                107,
-                106,
-                103
-              ],
+              "officialRatingProgression": [0, 0, 0, 107, 106, 103],
               "goingPerformance": [
                 {
                   "goingCode": "gs",
@@ -816,14 +766,7 @@
                 "autumn": 0,
                 "winter": 0
               },
-              "classProgression": [
-                4,
-                4,
-                4,
-                4,
-                4,
-                4
-              ],
+              "classProgression": [4, 4, 4, 4, 4, 4],
               "avgClassLevel": 4,
               "preferredClass": "4",
               "courseForm": {
@@ -3202,40 +3145,10 @@
                 },
                 "flatPlacings": null,
                 "jumpsPlacings": {
-                  "2019": [
-                    "F",
-                    "F"
-                  ],
-                  "2020": [
-                    0,
-                    3,
-                    6,
-                    3,
-                    7,
-                    7,
-                    9,
-                    0
-                  ],
-                  "2021": [
-                    4,
-                    2,
-                    6,
-                    3,
-                    3,
-                    1,
-                    1,
-                    2,
-                    6
-                  ],
-                  "2024": [
-                    6,
-                    1,
-                    2,
-                    6,
-                    5,
-                    5,
-                    "S"
-                  ]
+                  "2019": ["F", "F"],
+                  "2020": [0, 3, 6, 3, 7, 7, 9, 0],
+                  "2021": [4, 2, 6, 3, 3, 1, 1, 2, 6],
+                  "2024": [6, 1, 2, 6, 5, 5, "S"]
                 },
                 "flatFiguresCalculated": null,
                 "jumpsFiguresCalculated": [
@@ -3444,56 +3357,21 @@
               "totalEarnings": 100408.14999999998,
               "recentFormTrend": "declining",
               "avgPositionLastSix": 4.166666666666667,
-              "finishingPositions": [
-                6,
-                1,
-                2,
-                6,
-                5,
-                5
-              ],
+              "finishingPositions": [6, 1, 2, 6, 5, 5],
               "bestRPR": 110,
               "avgRPR": 68.75862068965517,
-              "rprProgression": [
-                78,
-                84,
-                79,
-                92,
-                96,
-                74
-              ],
+              "rprProgression": [78, 84, 79, 92, 96, 74],
               "bestTopSpeed": 91,
               "avgTopSpeed": 42,
-              "topSpeedProgression": [
-                5,
-                45,
-                66,
-                74,
-                89,
-                71
-              ],
+              "topSpeedProgression": [5, 45, 66, 74, 89, 71],
               "minDistance": 15.5,
               "maxDistance": 25.5,
               "avgDistance": 20.82758620689655,
-              "distanceProgression": [
-                22,
-                21,
-                19.5,
-                19.5,
-                25.5,
-                25.5
-              ],
+              "distanceProgression": [22, 21, 19.5, 19.5, 25.5, 25.5],
               "minWeight": 142,
               "maxWeight": 171,
               "avgWeight": 156.6551724137931,
-              "weightProgression": [
-                142,
-                163,
-                159,
-                159,
-                151,
-                165
-              ],
+              "weightProgression": [142, 163, 159, 159, 151, 165],
               "highestPrize": 6208.44,
               "avgPrize": 3462.3499999999995,
               "totalPrizeMoney": 100408.14999999998,
@@ -3517,14 +3395,7 @@
               "latestOR": 98,
               "bestOfficialRating": 108,
               "avgOfficialRating": 80.10344827586206,
-              "officialRatingProgression": [
-                97,
-                94,
-                91,
-                89,
-                93,
-                98
-              ],
+              "officialRatingProgression": [97, 94, 91, 89, 93, 98],
               "goingPerformance": [
                 {
                   "goingCode": "sft",
@@ -3584,33 +3455,8 @@
                 "winter": 1
               },
               "classProgression": [
-                4,
-                4,
-                4,
-                5,
-                5,
-                4,
-                4,
-                5,
-                5,
-                5,
-                4,
-                5,
-                5,
-                4,
-                4,
-                4,
-                4,
-                4,
-                4,
-                5,
-                5,
-                4,
-                5,
-                5,
-                5,
-                5,
-                5
+                4, 4, 4, 5, 5, 4, 4, 5, 5, 5, 4, 5, 5, 4, 4, 4, 4, 4, 4, 5, 5,
+                4, 5, 5, 5, 5, 5
               ],
               "avgClassLevel": 4.518518518518518,
               "preferredClass": "5",
@@ -5455,36 +5301,11 @@
                 },
                 "flatPlacings": null,
                 "jumpsPlacings": {
-                  "2020": [
-                    7
-                  ],
-                  "2021": [
-                    1,
-                    2,
-                    1,
-                    4,
-                    "P"
-                  ],
-                  "2022": [
-                    5,
-                    4,
-                    4,
-                    0
-                  ],
-                  "2023": [
-                    8,
-                    "P",
-                    6,
-                    4,
-                    1,
-                    5,
-                    3
-                  ],
-                  "2024": [
-                    7,
-                    5,
-                    3
-                  ]
+                  "2020": [7],
+                  "2021": [1, 2, 1, 4, "P"],
+                  "2022": [5, 4, 4, 0],
+                  "2023": [8, "P", 6, 4, 1, 5, 3],
+                  "2024": [7, 5, 3]
                 },
                 "flatFiguresCalculated": null,
                 "jumpsFiguresCalculated": [
@@ -5673,55 +5494,21 @@
               "totalEarnings": 70245.52000000002,
               "recentFormTrend": "declining",
               "avgPositionLastSix": 5.8,
-              "finishingPositions": [
-                7,
-                5,
-                3,
-                8,
-                6
-              ],
+              "finishingPositions": [7, 5, 3, 8, 6],
               "bestRPR": 106,
               "avgRPR": 67,
-              "rprProgression": [
-                88,
-                0,
-                65,
-                102,
-                70,
-                60
-              ],
+              "rprProgression": [88, 0, 65, 102, 70, 60],
               "bestTopSpeed": 94,
               "avgTopSpeed": 32.18181818181818,
-              "topSpeedProgression": [
-                69,
-                0,
-                50,
-                68,
-                39,
-                12
-              ],
+              "topSpeedProgression": [69, 0, 50, 68, 39, 12],
               "minDistance": 15.5,
               "maxDistance": 24,
               "avgDistance": 19.34090909090909,
-              "distanceProgression": [
-                16,
-                16,
-                16.5,
-                20,
-                20,
-                16
-              ],
+              "distanceProgression": [16, 16, 16.5, 20, 20, 16],
               "minWeight": 147,
               "maxWeight": 168,
               "avgWeight": 161.04545454545453,
-              "weightProgression": [
-                165,
-                168,
-                156,
-                160,
-                165,
-                163
-              ],
+              "weightProgression": [165, 168, 156, 160, 165, 163],
               "highestPrize": 6337.2,
               "avgPrize": 3192.9781818181827,
               "totalPrizeMoney": 70245.52000000002,
@@ -5745,14 +5532,7 @@
               "latestOR": 100,
               "bestOfficialRating": 105,
               "avgOfficialRating": 56.09090909090909,
-              "officialRatingProgression": [
-                105,
-                104,
-                103,
-                102,
-                102,
-                100
-              ],
+              "officialRatingProgression": [105, 104, 103, 102, 102, 100],
               "goingPerformance": [
                 {
                   "goingCode": "gs",
@@ -5832,22 +5612,7 @@
                 "winter": 2
               },
               "classProgression": [
-                3,
-                4,
-                4,
-                4,
-                4,
-                5,
-                3,
-                5,
-                5,
-                4,
-                5,
-                5,
-                4,
-                5,
-                5,
-                5
+                3, 4, 4, 4, 4, 5, 3, 5, 5, 4, 5, 5, 4, 5, 5, 5
               ],
               "avgClassLevel": 4.375,
               "preferredClass": "4",
@@ -8591,42 +8356,11 @@
                 },
                 "flatPlacings": null,
                 "jumpsPlacings": {
-                  "2020": [
-                    2
-                  ],
-                  "2021": [
-                    9,
-                    1,
-                    2,
-                    7,
-                    9
-                  ],
-                  "2022": [
-                    7,
-                    2,
-                    5,
-                    3,
-                    3,
-                    3,
-                    0
-                  ],
-                  "2023": [
-                    6,
-                    2,
-                    8,
-                    7,
-                    7,
-                    2,
-                    2
-                  ],
-                  "2024": [
-                    4,
-                    4,
-                    1,
-                    4,
-                    "P",
-                    4
-                  ]
+                  "2020": [2],
+                  "2021": [9, 1, 2, 7, 9],
+                  "2022": [7, 2, 5, 3, 3, 3, 0],
+                  "2023": [6, 2, 8, 7, 7, 2, 2],
+                  "2024": [4, 4, 1, 4, "P", 4]
                 },
                 "flatFiguresCalculated": null,
                 "jumpsFiguresCalculated": [
@@ -8843,54 +8577,21 @@
               "totalEarnings": 159664.38,
               "recentFormTrend": "improving",
               "avgPositionLastSix": 3.25,
-              "finishingPositions": [
-                4,
-                4,
-                1,
-                4
-              ],
+              "finishingPositions": [4, 4, 1, 4],
               "bestRPR": 111,
               "avgRPR": 70.93939393939394,
-              "rprProgression": [
-                83,
-                99,
-                0,
-                0,
-                89,
-                87
-              ],
+              "rprProgression": [83, 99, 0, 0, 89, 87],
               "bestTopSpeed": 94,
               "avgTopSpeed": 47.27272727272727,
-              "topSpeedProgression": [
-                41,
-                85,
-                0,
-                0,
-                77,
-                37
-              ],
+              "topSpeedProgression": [41, 85, 0, 0, 77, 37],
               "minDistance": 15.5,
               "maxDistance": 24,
               "avgDistance": 18.954545454545453,
-              "distanceProgression": [
-                20,
-                20,
-                19.5,
-                20,
-                21.5,
-                20
-              ],
+              "distanceProgression": [20, 20, 19.5, 20, 21.5, 20],
               "minWeight": 146,
               "maxWeight": 169,
               "avgWeight": 159.96969696969697,
-              "weightProgression": [
-                161,
-                159,
-                162,
-                157,
-                161,
-                155
-              ],
+              "weightProgression": [161, 159, 162, 157, 161, 155],
               "highestPrize": 15609,
               "avgPrize": 4838.314545454546,
               "totalPrizeMoney": 159664.38,
@@ -8909,14 +8610,7 @@
               "latestOR": 97,
               "bestOfficialRating": 109,
               "avgOfficialRating": 77.42424242424242,
-              "officialRatingProgression": [
-                88,
-                86,
-                97,
-                97,
-                97,
-                97
-              ],
+              "officialRatingProgression": [88, 86, 97, 97, 97, 97],
               "goingPerformance": [
                 {
                   "goingCode": "sft",
@@ -8977,38 +8671,8 @@
                 "winter": 0
               },
               "classProgression": [
-                5,
-                4,
-                4,
-                4,
-                4,
-                3,
-                4,
-                4,
-                4,
-                4,
-                5,
-                4,
-                5,
-                5,
-                2,
-                4,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                4,
-                5,
-                5,
-                5,
-                5,
-                5,
-                4,
-                5,
-                5
+                5, 4, 4, 4, 4, 3, 4, 4, 4, 4, 5, 4, 5, 5, 2, 4, 5, 5, 5, 5, 5,
+                5, 5, 4, 5, 5, 5, 5, 5, 4, 5, 5
               ],
               "avgClassLevel": 4.46875,
               "preferredClass": "4",
@@ -10467,28 +10131,9 @@
                 },
                 "flatPlacings": null,
                 "jumpsPlacings": {
-                  "2021": [
-                    4,
-                    4
-                  ],
-                  "2022": [
-                    "P",
-                    6,
-                    8
-                  ],
-                  "2023": [
-                    1,
-                    5,
-                    1,
-                    4,
-                    3,
-                    "P",
-                    4,
-                    8,
-                    4,
-                    8,
-                    5
-                  ]
+                  "2021": [4, 4],
+                  "2022": ["P", 6, 8],
+                  "2023": [1, 5, 1, 4, 3, "P", 4, 8, 4, 8, 5]
                 },
                 "flatFiguresCalculated": null,
                 "jumpsFiguresCalculated": [
@@ -10661,55 +10306,21 @@
               "totalEarnings": 78611.42,
               "recentFormTrend": "declining",
               "avgPositionLastSix": 2.8,
-              "finishingPositions": [
-                1,
-                5,
-                1,
-                4,
-                3
-              ],
+              "finishingPositions": [1, 5, 1, 4, 3],
               "bestRPR": 93,
               "avgRPR": 55.64705882352941,
-              "rprProgression": [
-                0,
-                75,
-                69,
-                91,
-                92,
-                93
-              ],
+              "rprProgression": [0, 75, 69, 91, 92, 93],
               "bestTopSpeed": 89,
               "avgTopSpeed": 22.235294117647058,
-              "topSpeedProgression": [
-                0,
-                31,
-                42,
-                38,
-                89,
-                21
-              ],
+              "topSpeedProgression": [0, 31, 42, 38, 89, 21],
               "minDistance": 16,
               "maxDistance": 24,
               "avgDistance": 19.41176470588235,
-              "distanceProgression": [
-                20,
-                21,
-                19.5,
-                17,
-                20,
-                20
-              ],
+              "distanceProgression": [20, 21, 19.5, 17, 20, 20],
               "minWeight": 140,
               "maxWeight": 156,
               "avgWeight": 145.8235294117647,
-              "weightProgression": [
-                144,
-                142,
-                146,
-                148,
-                142,
-                154
-              ],
+              "weightProgression": [144, 142, 146, 148, 142, 154],
               "highestPrize": 15609,
               "avgPrize": 4624.2011764705885,
               "totalPrizeMoney": 78611.42,
@@ -10728,14 +10339,7 @@
               "latestOR": 91,
               "bestOfficialRating": 95,
               "avgOfficialRating": 45.705882352941174,
-              "officialRatingProgression": [
-                71,
-                74,
-                74,
-                74,
-                95,
-                91
-              ],
+              "officialRatingProgression": [71, 74, 74, 74, 95, 91],
               "goingPerformance": [
                 {
                   "goingCode": "hy",
@@ -10789,23 +10393,7 @@
                 "winter": 0
               },
               "classProgression": [
-                4,
-                5,
-                4,
-                5,
-                4,
-                4,
-                4,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                2,
-                5
+                4, 5, 4, 5, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 2, 5
               ],
               "avgClassLevel": 4.529411764705882,
               "preferredClass": "5",
@@ -12715,35 +12303,10 @@
                 },
                 "flatPlacings": null,
                 "jumpsPlacings": {
-                  "2021": [
-                    "O",
-                    "P"
-                  ],
-                  "2022": [
-                    0,
-                    "P",
-                    5,
-                    5,
-                    9,
-                    "U",
-                    0,
-                    "P",
-                    "P",
-                    5
-                  ],
-                  "2023": [
-                    4,
-                    0,
-                    3,
-                    9
-                  ],
-                  "2024": [
-                    3,
-                    7,
-                    6,
-                    7,
-                    8
-                  ]
+                  "2021": ["O", "P"],
+                  "2022": [0, "P", 5, 5, 9, "U", 0, "P", "P", 5],
+                  "2023": [4, 0, 3, 9],
+                  "2024": [3, 7, 6, 7, 8]
                 },
                 "flatFiguresCalculated": null,
                 "jumpsFiguresCalculated": [
@@ -12936,55 +12499,21 @@
               "totalEarnings": 108736.36,
               "recentFormTrend": "declining",
               "avgPositionLastSix": 6.2,
-              "finishingPositions": [
-                3,
-                7,
-                6,
-                7,
-                8
-              ],
+              "finishingPositions": [3, 7, 6, 7, 8],
               "bestRPR": 101,
               "avgRPR": 50.391304347826086,
-              "rprProgression": [
-                75,
-                86,
-                80,
-                0,
-                67,
-                84
-              ],
+              "rprProgression": [75, 86, 80, 0, 67, 84],
               "bestTopSpeed": 80,
               "avgTopSpeed": 22.17391304347826,
-              "topSpeedProgression": [
-                16,
-                6,
-                24,
-                0,
-                64,
-                75
-              ],
+              "topSpeedProgression": [16, 6, 24, 0, 64, 75],
               "minDistance": 16,
               "maxDistance": 24,
               "avgDistance": 20.152173913043477,
-              "distanceProgression": [
-                17,
-                23,
-                17.5,
-                23,
-                20,
-                20
-              ],
+              "distanceProgression": [17, 23, 17.5, 23, 20, 20],
               "minWeight": 147,
               "maxWeight": 166,
               "avgWeight": 155.08695652173913,
-              "weightProgression": [
-                152,
-                154,
-                147,
-                152,
-                156,
-                152
-              ],
+              "weightProgression": [152, 154, 147, 152, 156, 152],
               "highestPrize": 7058.82,
               "avgPrize": 4727.667826086957,
               "totalPrizeMoney": 108736.36,
@@ -13008,14 +12537,7 @@
               "latestOR": 83,
               "bestOfficialRating": 100,
               "avgOfficialRating": 46.56521739130435,
-              "officialRatingProgression": [
-                0,
-                86,
-                86,
-                85,
-                85,
-                83
-              ],
+              "officialRatingProgression": [0, 86, 86, 85, 85, 83],
               "goingPerformance": [
                 {
                   "goingCode": "sft",
@@ -13790,20 +13312,9 @@
                 },
                 "flatPlacings": null,
                 "jumpsPlacings": {
-                  "2021": [
-                    5,
-                    "P"
-                  ],
-                  "2022": [
-                    7,
-                    6,
-                    9,
-                    9
-                  ],
-                  "2024": [
-                    0,
-                    6
-                  ]
+                  "2021": [5, "P"],
+                  "2022": [7, 6, 9, 9],
+                  "2024": [0, 6]
                 },
                 "flatFiguresCalculated": null,
                 "jumpsFiguresCalculated": [
@@ -13936,56 +13447,21 @@
               "totalEarnings": 21518.369999999995,
               "recentFormTrend": "consistent",
               "avgPositionLastSix": 8.333333333333334,
-              "finishingPositions": [
-                13,
-                6,
-                7,
-                6,
-                9,
-                9
-              ],
+              "finishingPositions": [13, 6, 7, 6, 9, 9],
               "bestRPR": 81,
               "avgRPR": 52.875,
-              "rprProgression": [
-                50,
-                69,
-                72,
-                76,
-                81,
-                0
-              ],
+              "rprProgression": [50, 69, 72, 76, 81, 0],
               "bestTopSpeed": 48,
               "avgTopSpeed": 14.5,
-              "topSpeedProgression": [
-                0,
-                26,
-                48,
-                36,
-                6,
-                0
-              ],
+              "topSpeedProgression": [0, 26, 48, 36, 6, 0],
               "minDistance": 16,
               "maxDistance": 24,
               "avgDistance": 20,
-              "distanceProgression": [
-                24,
-                20,
-                16,
-                16,
-                16.5,
-                19.5
-              ],
+              "distanceProgression": [24, 20, 16, 16, 16.5, 19.5],
               "minWeight": 144,
               "maxWeight": 165,
               "avgWeight": 155.25,
-              "weightProgression": [
-                160,
-                149,
-                151,
-                159,
-                144,
-                154
-              ],
+              "weightProgression": [160, 149, 151, 159, 144, 154],
               "highestPrize": 4901.4,
               "avgPrize": 2689.7962499999994,
               "totalPrizeMoney": 21518.369999999995,
@@ -14004,14 +13480,7 @@
               "latestOR": 86,
               "bestOfficialRating": 89,
               "avgOfficialRating": 21.875,
-              "officialRatingProgression": [
-                0,
-                0,
-                0,
-                0,
-                89,
-                86
-              ],
+              "officialRatingProgression": [0, 0, 0, 0, 89, 86],
               "goingPerformance": [
                 {
                   "goingCode": "gs",
@@ -14076,13 +13545,7 @@
                 "autumn": 0,
                 "winter": 0
               },
-              "classProgression": [
-                4,
-                4,
-                4,
-                4,
-                5
-              ],
+              "classProgression": [4, 4, 4, 4, 5],
               "avgClassLevel": 4.2,
               "preferredClass": "4",
               "courseForm": {
@@ -17197,67 +16660,17 @@
                   }
                 },
                 "flatPlacings": {
-                  "2018": [
-                    1,
-                    1
-                  ],
-                  "2019": [
-                    0,
-                    8
-                  ],
-                  "2020": [
-                    1,
-                    1,
-                    6,
-                    1,
-                    1,
-                    1,
-                    2,
-                    4
-                  ],
-                  "2021": [
-                    4,
-                    7,
-                    6,
-                    6
-                  ],
-                  "2022": [
-                    9,
-                    5,
-                    7,
-                    4,
-                    4,
-                    4,
-                    6
-                  ],
-                  "2023": [
-                    0,
-                    6,
-                    5,
-                    0,
-                    6
-                  ]
+                  "2018": [1, 1],
+                  "2019": [0, 8],
+                  "2020": [1, 1, 6, 1, 1, 1, 2, 4],
+                  "2021": [4, 7, 6, 6],
+                  "2022": [9, 5, 7, 4, 4, 4, 6],
+                  "2023": [0, 6, 5, 0, 6]
                 },
                 "jumpsPlacings": {
-                  "2022": [
-                    6
-                  ],
-                  "2023": [
-                    9,
-                    4,
-                    5,
-                    5,
-                    1,
-                    5,
-                    8
-                  ],
-                  "2024": [
-                    4,
-                    3,
-                    3,
-                    0,
-                    0
-                  ]
+                  "2022": [6],
+                  "2023": [9, 4, 5, 5, 1, 5, 8],
+                  "2024": [4, 3, 3, 0, 0]
                 },
                 "flatFiguresCalculated": [
                   {
@@ -17551,56 +16964,21 @@
               "totalEarnings": 535555.65,
               "recentFormTrend": "declining",
               "avgPositionLastSix": 7.333333333333333,
-              "finishingPositions": [
-                4,
-                3,
-                3,
-                14,
-                11,
-                9
-              ],
+              "finishingPositions": [4, 3, 3, 14, 11, 9],
               "bestRPR": 104,
               "avgRPR": 54.390243902439025,
-              "rprProgression": [
-                81,
-                61,
-                13,
-                88,
-                87,
-                75
-              ],
+              "rprProgression": [81, 61, 13, 88, 87, 75],
               "bestTopSpeed": 83,
               "avgTopSpeed": 21.341463414634145,
-              "topSpeedProgression": [
-                55,
-                12,
-                0,
-                52,
-                74,
-                59
-              ],
+              "topSpeedProgression": [55, 12, 0, 52, 74, 59],
               "minDistance": 8,
               "maxDistance": 20.5,
               "avgDistance": 14.585365853658537,
-              "distanceProgression": [
-                19.5,
-                20,
-                16,
-                16,
-                20,
-                16.5
-              ],
+              "distanceProgression": [19.5, 20, 16, 16, 20, 16.5],
               "minWeight": 120,
               "maxWeight": 168,
               "avgWeight": 140.0731707317073,
-              "weightProgression": [
-                165,
-                161,
-                156,
-                157,
-                151,
-                152
-              ],
+              "weightProgression": [165, 161, 156, 157, 151, 152],
               "highestPrize": 66160.71,
               "avgPrize": 13062.33292682927,
               "totalPrizeMoney": 535555.65,
@@ -17629,14 +17007,7 @@
               "latestOR": 87,
               "bestOfficialRating": 103,
               "avgOfficialRating": 31.5609756097561,
-              "officialRatingProgression": [
-                100,
-                98,
-                93,
-                89,
-                88,
-                87
-              ],
+              "officialRatingProgression": [100, 98, 93, 89, 88, 87],
               "goingPerformance": [
                 {
                   "goingCode": "gs",
@@ -17708,8 +17079,8 @@
                   "winRate": 0
                 }
               ],
-              "daysOffTrack": 13,
-              "racingFrequency": 94.61538461538461,
+              "daysOffTrack": 14,
+              "racingFrequency": 87.85714285714285,
               "seasonalForm": {
                 "spring": 0,
                 "summer": 3,
@@ -17717,23 +17088,7 @@
                 "winter": 1
               },
               "classProgression": [
-                3,
-                4,
-                4,
-                4,
-                4,
-                3,
-                4,
-                5,
-                4,
-                4,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5,
-                5
+                3, 4, 4, 4, 4, 3, 4, 5, 4, 4, 5, 5, 5, 5, 5, 5, 5
               ],
               "avgClassLevel": 4.352941176470588,
               "preferredClass": "4",
@@ -17784,7 +17139,7 @@
                 }
               }
             },
-            "score": 238.07385634230184
+            "score": 234.2686076826057
           },
           {
             "name": "Dorcas Road",
@@ -18412,19 +17767,9 @@
                 },
                 "flatPlacings": null,
                 "jumpsPlacings": {
-                  "2022": [
-                    7
-                  ],
-                  "2023": [
-                    5,
-                    7
-                  ],
-                  "2024": [
-                    8,
-                    "P",
-                    8,
-                    5
-                  ]
+                  "2022": [7],
+                  "2023": [5, 7],
+                  "2024": [8, "P", 8, 5]
                 },
                 "flatFiguresCalculated": null,
                 "jumpsFiguresCalculated": [
@@ -18557,55 +17902,21 @@
               "totalEarnings": 28259.29,
               "recentFormTrend": "consistent",
               "avgPositionLastSix": 6.6,
-              "finishingPositions": [
-                8,
-                8,
-                5,
-                5,
-                7
-              ],
+              "finishingPositions": [8, 8, 5, 5, 7],
               "bestRPR": 85,
               "avgRPR": 60.57142857142857,
-              "rprProgression": [
-                47,
-                80,
-                80,
-                64,
-                0,
-                68
-              ],
+              "rprProgression": [47, 80, 80, 64, 0, 68],
               "bestTopSpeed": 53,
               "avgTopSpeed": 28.857142857142858,
-              "topSpeedProgression": [
-                10,
-                53,
-                44,
-                26,
-                0,
-                51
-              ],
+              "topSpeedProgression": [10, 53, 44, 26, 0, 51],
               "minDistance": 16,
               "maxDistance": 20,
               "avgDistance": 17.142857142857142,
-              "distanceProgression": [
-                20,
-                16,
-                16,
-                20,
-                16,
-                16
-              ],
+              "distanceProgression": [20, 16, 16, 20, 16, 16],
               "minWeight": 147,
               "maxWeight": 162,
               "avgWeight": 152.28571428571428,
-              "weightProgression": [
-                147,
-                158,
-                148,
-                162,
-                153,
-                148
-              ],
+              "weightProgression": [147, 158, 148, 162, 153, 148],
               "highestPrize": 8168.46,
               "avgPrize": 4037.0414285714287,
               "totalPrizeMoney": 28259.29,
@@ -18624,14 +17935,7 @@
               "latestOR": 81,
               "bestOfficialRating": 88,
               "avgOfficialRating": 36.142857142857146,
-              "officialRatingProgression": [
-                0,
-                0,
-                0,
-                88,
-                84,
-                81
-              ],
+              "officialRatingProgression": [0, 0, 0, 88, 84, 81],
               "goingPerformance": [
                 {
                   "goingCode": "gs",
@@ -18677,15 +17981,7 @@
                 "autumn": 0,
                 "winter": 0
               },
-              "classProgression": [
-                5,
-                4,
-                3,
-                4,
-                5,
-                5,
-                5
-              ],
+              "classProgression": [5, 4, 3, 4, 5, 5, 5],
               "avgClassLevel": 4.428571428571429,
               "preferredClass": "4",
               "courseForm": {
@@ -18715,16 +18011,59 @@
         ],
         "id": "885264",
         "going": "Soft",
-        "surface": "",
-        "raceType": "",
-        "trackCondition": "",
-        "weather": "",
+        "trackConfig": "left-handed",
         "prize": "£3,697",
         "stalls": "10",
         "ewTerms": "",
-        "bettingForecast": [],
-        "drawBias": "No significant bias",
-        "drawBiasExplanation": "Insufficient data to determine draw bias",
+        "bettingForecast": [
+          {
+            "horseName": "Coco Lightning",
+            "odds": "9/4",
+            "decimalOdds": 3.25
+          },
+          {
+            "horseName": "Blame Rose",
+            "odds": "4/1",
+            "decimalOdds": 5
+          },
+          {
+            "horseName": "Quian",
+            "odds": "11/2",
+            "decimalOdds": 6.5
+          },
+          {
+            "horseName": "Limerick Leader",
+            "odds": "6/1",
+            "decimalOdds": 7
+          },
+          {
+            "horseName": "Be The Difference",
+            "odds": "7/1",
+            "decimalOdds": 8
+          },
+          {
+            "horseName": "Call Him Now",
+            "odds": "10/1",
+            "decimalOdds": 11
+          },
+          {
+            "horseName": "Present Fair",
+            "odds": "10/1",
+            "decimalOdds": 11
+          },
+          {
+            "horseName": "Dorcas Road",
+            "odds": "16/1",
+            "decimalOdds": 17
+          },
+          {
+            "horseName": "Reforme",
+            "odds": "33/1",
+            "decimalOdds": 34
+          }
+        ],
+        "drawBias": "Draw less significant",
+        "drawBiasExplanation": "Longer distance reduces impact of draw position",
         "raceStats": {
           "avgOfficialRating": 91.44444444444444,
           "avgRating": 102.11111111111111,
@@ -18823,6 +18162,364 @@
             "dist_to_horse_in_front": "½",
             "dist_to_winner": "3"
           }
+        },
+        "raceExtraInfo": {
+          "verdict": {
+            "comment": "Irish raider COCO LIGHTNING is 0-17 but she was a promising third on her recent stable debut and this could be a good opportunity.",
+            "allNamed": ["COCO LIGHTNING"],
+            "selection": "COCO LIGHTNING",
+            "isNap": false
+          },
+          "comments": {
+            "Be The Difference": "Won here last month; tailed off here since but he's not written off",
+            "Blame Rose": "Two wins last spring; key player if at the top of her game on this first run since",
+            "Call Him Now": "Represents in-form yard but he was tailed off at Doncaster only last Friday",
+            "Coco Lightning": "0-17 but good third on recent stable debut and this Irish raider is firmly in calculations",
+            "Dorcas Road": "Pulled up/soundly beaten on both starts for this yard and she's now 0-7",
+            "Limerick Leader": "Respectable fourth on both outings for this yard and he might not be far away",
+            "Present Fair": "Down to a handy mark but tailed off the last twice and needs to turn things around",
+            "Quian": "Below par on recent stable debut but a case can be made on his late 2024 form",
+            "Reforme": "Down the field at big odds in both handicaps and needs to leave those runs miles behind"
+          },
+          "trainerStats": [
+            {
+              "trainer": "Donald McCain",
+              "last14Days": {
+                "runs": 1,
+                "wins": 23
+              },
+              "overall": {
+                "runs": 24,
+                "wins": 143
+              }
+            },
+            {
+              "trainer": "Philip Kirby",
+              "last14Days": {
+                "runs": 2,
+                "wins": 8
+              },
+              "overall": {
+                "runs": 5,
+                "wins": 63
+              }
+            },
+            {
+              "trainer": "Susan Corbett",
+              "last14Days": {
+                "runs": 0,
+                "wins": 2
+              },
+              "overall": {
+                "runs": 3,
+                "wins": 12
+              }
+            },
+            {
+              "trainer": "Lizzie Quinlan",
+              "last14Days": {
+                "runs": 0,
+                "wins": 6
+              },
+              "overall": {
+                "runs": 3,
+                "wins": 20
+              }
+            },
+            {
+              "trainer": "Harriet Dickin",
+              "last14Days": {
+                "runs": 3,
+                "wins": 6
+              },
+              "overall": {
+                "runs": 1,
+                "wins": 1
+              }
+            },
+            {
+              "trainer": "Joel Parkinson & Sue Smith",
+              "last14Days": {
+                "runs": 5,
+                "wins": 21
+              },
+              "overall": {
+                "runs": 1,
+                "wins": 11
+              }
+            },
+            {
+              "trainer": "Alison Thorpe",
+              "last14Days": {
+                "runs": 0,
+                "wins": 2
+              },
+              "overall": {
+                "runs": 0,
+                "wins": 0
+              }
+            },
+            {
+              "trainer": "Cian Collins",
+              "last14Days": {
+                "runs": 2,
+                "wins": 8
+              },
+              "overall": {
+                "runs": 0,
+                "wins": 2
+              }
+            },
+            {
+              "trainer": "Tom Gretton",
+              "last14Days": {
+                "runs": 0,
+                "wins": 2
+              },
+              "overall": {
+                "runs": 0,
+                "wins": 5
+              }
+            }
+          ],
+          "jockeyStats": [
+            {
+              "jockey": "Tom Midgley",
+              "last14Days": {
+                "runs": 1,
+                "wins": 7
+              },
+              "overall": {
+                "runs": 4,
+                "wins": 55
+              }
+            },
+            {
+              "jockey": "Joe Williamson",
+              "last14Days": {
+                "runs": 2,
+                "wins": 7
+              },
+              "overall": {
+                "runs": 3,
+                "wins": 34
+              }
+            },
+            {
+              "jockey": "William Maggs",
+              "last14Days": {
+                "runs": 1,
+                "wins": 10
+              },
+              "overall": {
+                "runs": 2,
+                "wins": 14
+              }
+            },
+            {
+              "jockey": "Jack Hogan",
+              "last14Days": {
+                "runs": 1,
+                "wins": 13
+              },
+              "overall": {
+                "runs": 2,
+                "wins": 15
+              }
+            },
+            {
+              "jockey": "Bradley Harris",
+              "last14Days": {
+                "runs": 2,
+                "wins": 2
+              },
+              "overall": {
+                "runs": 1,
+                "wins": 1
+              }
+            },
+            {
+              "jockey": "Shane Fenelon",
+              "last14Days": {
+                "runs": 1,
+                "wins": 4
+              },
+              "overall": {
+                "runs": 1,
+                "wins": 4
+              }
+            },
+            {
+              "jockey": "Ben Smith",
+              "last14Days": {
+                "runs": 0,
+                "wins": 7
+              },
+              "overall": {
+                "runs": 0,
+                "wins": 0
+              }
+            },
+            {
+              "jockey": "Danny Gilligan",
+              "last14Days": {
+                "runs": 3,
+                "wins": 20
+              },
+              "overall": {
+                "runs": 0,
+                "wins": 1
+              }
+            },
+            {
+              "jockey": "Joshua Thompson",
+              "last14Days": {
+                "runs": 0,
+                "wins": 3
+              },
+              "overall": {
+                "runs": 0,
+                "wins": 10
+              }
+            }
+          ],
+          "horseStats": [
+            {
+              "horse": "Quian",
+              "going": {
+                "runs": 0,
+                "winRate": 3
+              },
+              "distance": {
+                "runs": 0,
+                "winRate": 4
+              },
+              "course": {
+                "runs": 0,
+                "winRate": 0
+              }
+            },
+            {
+              "horse": "Be The Difference",
+              "going": {
+                "runs": 0,
+                "winRate": 4
+              },
+              "distance": {
+                "runs": 1,
+                "winRate": 9
+              },
+              "course": {
+                "runs": 1,
+                "winRate": 5
+              }
+            },
+            {
+              "horse": "Present Fair",
+              "going": {
+                "runs": 0,
+                "winRate": 7
+              },
+              "distance": {
+                "runs": 0,
+                "winRate": 6
+              },
+              "course": {
+                "runs": 0,
+                "winRate": 2
+              }
+            },
+            {
+              "horse": "Limerick Leader",
+              "going": {
+                "runs": 0,
+                "winRate": 6
+              },
+              "distance": {
+                "runs": 1,
+                "winRate": 9
+              },
+              "course": {
+                "runs": 0,
+                "winRate": 2
+              }
+            },
+            {
+              "horse": "Blame Rose",
+              "going": {
+                "runs": 1,
+                "winRate": 3
+              },
+              "distance": {
+                "runs": 1,
+                "winRate": 7
+              },
+              "course": {
+                "runs": 0,
+                "winRate": 1
+              }
+            },
+            {
+              "horse": "Coco Lightning",
+              "going": {
+                "runs": 0,
+                "winRate": 5
+              },
+              "distance": {
+                "runs": 0,
+                "winRate": 7
+              },
+              "course": {
+                "runs": 0,
+                "winRate": 0
+              }
+            },
+            {
+              "horse": "Call Him Now",
+              "going": {
+                "runs": 0,
+                "winRate": 1
+              },
+              "distance": {
+                "runs": 0,
+                "winRate": 2
+              },
+              "course": {
+                "runs": 0,
+                "winRate": 0
+              }
+            },
+            {
+              "horse": "Dorcas Road",
+              "going": {
+                "runs": 0,
+                "winRate": 3
+              },
+              "distance": {
+                "runs": 0,
+                "winRate": 2
+              },
+              "course": {
+                "runs": 0,
+                "winRate": 0
+              }
+            },
+            {
+              "horse": "Reforme",
+              "going": {
+                "runs": 0,
+                "winRate": 2
+              },
+              "distance": {
+                "runs": 0,
+                "winRate": 3
+              },
+              "course": {
+                "runs": 0,
+                "winRate": 0
+              }
+            }
+          ]
         }
       }
     ]

@@ -1,6 +1,6 @@
 "use client";
 
-import { Race } from "@/types/racing";
+import { Meeting, Race } from "@/types/racing";
 import { useEffect, useState } from "react";
 import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
@@ -10,9 +10,10 @@ import { calculateDrawBias } from "@/lib/racing/calculateDrawBias";
 
 interface RaceAccordionProps {
   race: Race;
+  meeting: Meeting;
 }
 
-export function RaceAccordion({ race }: RaceAccordionProps) {
+export function RaceAccordion({ race, meeting }: RaceAccordionProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const { expandAll } = useExpansion();
 
@@ -47,39 +48,74 @@ export function RaceAccordion({ race }: RaceAccordionProps) {
             <div>
               <h3 className="text-lg font-semibold mb-2">{race.title}</h3>
               <div className="text-sm text-gray-400">
-                {race.class} • {race.distance} • {race.ageRestriction}
+                {race.class} • {race.distance} • {race.ageRestriction} •{" "}
+                {race.tv}
               </div>
             </div>
             <div className="text-right">
               <div className="text-lg font-semibold">{race.prize}</div>
-              <div className="text-sm text-gray-400">
-                {race.runners} runners
+              <div className="text-sm text-gray-400 space-y-1">
+                <div>{race.runners} runners</div>
+                {race.ewTerms && <div>{race.ewTerms}</div>}
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
             <div className="space-y-1">
-              <div className="text-sm text-gray-400">Going</div>
-              <div className="font-medium">{race.going || "Not available"}</div>
-            </div>
-            <div className="space-y-1">
-              <div className="text-sm text-gray-400">Surface</div>
-              <div className="font-medium">
-                {race.surface || "Not available"}
+              <div className="text-sm text-gray-400">Course Details</div>
+              <div className="grid gap-1">
+                <div>
+                  <span className="text-gray-400">Going:</span>{" "}
+                  <span className="font-medium">
+                    {race.going || "Not available"}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-gray-400">Surface:</span>{" "}
+                  <span className="font-medium">
+                    {meeting.surface || "Not available"}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-gray-400">Type:</span>{" "}
+                  <span className="font-medium">
+                    {meeting.type || "Not available"}
+                  </span>
+                </div>
+                {race.stalls && (
+                  <div>
+                    <span className="text-gray-400">Stalls:</span>{" "}
+                    <span className="font-medium">{race.stalls}</span>
+                  </div>
+                )}
               </div>
             </div>
             <div className="space-y-1">
-              <div className="text-sm text-gray-400">Weather</div>
-              <div className="font-medium">
-                {race.weather || "Not available"}
+              <div className="text-sm text-gray-400">Track Configuration</div>
+              <div className="grid gap-1">
+                <div>
+                  <span className="text-gray-400">Layout:</span>{" "}
+                  <span className="font-medium capitalize">
+                    {race.trackConfig || "Not available"}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-gray-400">Draw Bias:</span>{" "}
+                  <span className="font-medium">{drawBiasInfo.bias}</span>
+                </div>
+                <div className="text-xs text-gray-500">
+                  {drawBiasInfo.explanation}
+                </div>
               </div>
             </div>
             <div className="space-y-1">
-              <div className="text-sm text-gray-400">Draw Bias</div>
-              <div className="font-medium">{drawBiasInfo.bias}</div>
-              <div className="text-xs text-gray-500">
-                {drawBiasInfo.explanation}
+              <div className="text-sm text-gray-400">Meeting Info</div>
+              <div className="grid gap-1">
+                <div>
+                  <span className="text-gray-400">Going:</span>{" "}
+                  <span className="font-medium">{meeting.going}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -88,7 +124,20 @@ export function RaceAccordion({ race }: RaceAccordionProps) {
         {/* Predictions List */}
         {race.predictions && Object.keys(race.predictions).length > 0 && (
           <div className="p-4 border-b border-gray-800">
-            <h3 className="text-sm text-gray-400 mb-2">Predictions</h3>
+            <div className="flex justify-between items-start mb-4">
+              <h3 className="text-sm text-gray-400">Predictions</h3>
+              {race.raceExtraInfo?.verdict.selection && (
+                <div className="text-right">
+                  <div className="text-sm text-gray-400">
+                    Selection:{" "}
+                    <span className="font-semibold text-primary">
+                      {race.raceExtraInfo.verdict.selection}
+                      {race.raceExtraInfo.verdict.isNap && " (NAP)"}
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
             <div className="flex flex-wrap gap-2">
               {Object.values(race.predictions)
                 .sort((a, b) => b.score - a.score)
@@ -104,6 +153,16 @@ export function RaceAccordion({ race }: RaceAccordionProps) {
                   </div>
                 ))}
             </div>
+            {race.raceExtraInfo?.verdict.comment && (
+              <div className="mt-4 text-sm text-gray-300">
+                <p className="mb-2">{race.raceExtraInfo.verdict.comment}</p>
+                {race.raceExtraInfo.verdict.allNamed.length > 0 && (
+                  <div className="text-xs text-gray-400">
+                    Mentioned: {race.raceExtraInfo.verdict.allNamed.join(", ")}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         )}
 
@@ -179,9 +238,16 @@ export function RaceAccordion({ race }: RaceAccordionProps) {
           </div>
         )}
 
-        {race.horses.map((horse) => (
-          <HorseRow key={horse.name} horse={horse} score={horse.score} />
-        ))}
+        {[...race.horses]
+          .sort((a, b) => (b.score || 0) - (a.score || 0))
+          .map((horse) => (
+            <HorseRow
+              key={horse.name}
+              horse={horse}
+              score={horse.score}
+              race={race}
+            />
+          ))}
       </AccordionContent>
     </div>
   );
