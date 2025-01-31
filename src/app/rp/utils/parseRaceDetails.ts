@@ -10,6 +10,7 @@ import {
 } from "@/lib/racing/calculateDrawBias";
 import { getTrackConfiguration } from "@/lib/racing/getTrackConfiguration";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
+import { calculateHorseScore2 } from "@/lib/racing/calculateHorseScore2";
 
 export async function parseRaceDetails(
   html: string,
@@ -237,8 +238,9 @@ export async function parseRaceDetails(
     horses: horses.filter((h) => h.stats), // Only include horses with stats
   });
 
-  const result: Race = {
+  const result1: Race = {
     ...baseRaceData,
+    horses: baseRaceData.horses || [],
     time: baseRaceData.time || "",
     title: baseRaceData.title || "",
     distance: baseRaceData.distance || "",
@@ -254,13 +256,16 @@ export async function parseRaceDetails(
     raceExtraInfo: baseRaceData.id
       ? await fetchRaceAccordion(baseRaceData.id)
       : undefined,
+  };
 
+  const result2: Race = {
+    ...result1,
     horses: horses?.map((x) => ({
       ...x,
-      score: calculateHorseScore(x, baseRaceData, raceStats),
+      score: calculateHorseScore2(x, result1, raceStats),
     })),
   };
 
-  console.log("🏁 Completed parseRaceDetails", result);
-  return result;
+  console.log("🏁 Completed parseRaceDetails", result2);
+  return result2;
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { SortOption, FilterOption } from "@/lib/generator/predictions";
 import { MeetingAccordion } from "./MeetingAccordion";
 import { PredictionControls } from "./controls/PredictionControls";
 import { ExpansionProvider } from "./context/ExpansionContext";
@@ -9,6 +8,8 @@ import { ExpandAllToggle } from "./controls/ExpandAllToggle";
 import { ViewToggle } from "./controls/ViewToggle";
 import { Horse, Meeting } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
+
+export type SortOption = "off" | "time" | "rating";
 
 interface DayPredictionsProps {
   meetings: Meeting[];
@@ -18,7 +19,6 @@ interface DayPredictionsProps {
 export function DayPredictions({ meetings, date }: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [sortBy, setSortBy] = useState<SortOption>("off");
-  const [filterRating, setFilterRating] = useState<FilterOption>(null);
   const [view, setView] = useState<"list" | "table">("table");
   //const data = generatePredictions(meetings);
 
@@ -73,12 +73,7 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
           </h2>
 
           <div className="controls-wrapper">
-            <PredictionControls
-              sortBy={sortBy}
-              onSortChange={setSortBy}
-              filterRating={filterRating}
-              onFilterChange={setFilterRating}
-            />
+            <PredictionControls sortBy={sortBy} onSortChange={setSortBy} />
             <ViewToggle view={view} onViewChange={handleViewChange} />
             <ExpandAllToggle />
           </div>
@@ -107,7 +102,9 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
   // Sort the flattened list
   const sortedPredictions: Horse[] = [...allPredictions].sort((a, b) => {
     if (sortBy === "rating") {
-      return (b.score || 0) - (a.score || 0);
+      return (
+        (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+      );
     }
     // Sort by time
     const timeA = Number(a.time.replace(":", ""));
@@ -131,12 +128,7 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
         </h2>
 
         <div className="controls-wrapper">
-          <PredictionControls
-            sortBy={sortBy}
-            onSortChange={setSortBy}
-            filterRating={filterRating}
-            onFilterChange={setFilterRating}
-          />
+          <PredictionControls sortBy={sortBy} onSortChange={setSortBy} />
           <ViewToggle view={view} onViewChange={handleViewChange} />
           <ExpandAllToggle />
         </div>

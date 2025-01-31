@@ -239,7 +239,11 @@ export function RaceAccordion({ race, meeting }: RaceAccordionProps) {
         )}
 
         {[...race.horses]
-          .sort((a, b) => (b.score || 0) - (a.score || 0))
+          .sort(
+            (a, b) =>
+              (b.score?.total?.percentage || 0) -
+              (a.score?.total?.percentage || 0)
+          )
           .map((horse) => (
             <HorseRow
               key={horse.name}

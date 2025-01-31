@@ -4,10 +4,11 @@ import { FormObj, GoingRecord, Horse, HorseStats, Race } from "@/types/racing";
 import { useState } from "react";
 import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
+import { HorseScore } from "@/lib/racing/calculateHorseScore2";
 
 interface HorseRowProps {
   horse: Horse;
-  score?: number;
+  score?: HorseScore;
   race?: Race;
 }
 
@@ -23,9 +24,19 @@ export function HorseRow({ horse, score, race }: HorseRowProps) {
         <div className="flex justify-between items-center w-full px-4 py-3">
           <div className="flex gap-2 items-center">
             <span className="font-bold w-8">{horse.number}</span>
+            {race?.bettingForecast?.find((b) => b.horseName === horse.name) && (
+              <span className="text-sm text-gray-400 w-12">
+                {
+                  race.bettingForecast.find((b) => b.horseName === horse.name)
+                    ?.decimalOdds
+                }
+              </span>
+            )}
             <span>{horse.name}</span>
           </div>
-          <div className="font-semibold">{score?.toFixed(1)}</div>
+          <div className="font-semibold">
+            {score?.total?.percentage?.toFixed(1)}
+          </div>
         </div>
       </AccordionButton>
       <AccordionContent isExpanded={isExpanded}>

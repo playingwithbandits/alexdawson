@@ -1,4 +1,5 @@
 import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
+import { HorseScore } from "@/lib/racing/calculateHorseScore2";
 
 export interface Horse {
   name: string;
@@ -29,7 +30,7 @@ export interface Horse {
   topSpeed: string;
   form?: string;
   lastRun?: string;
-  score?: number;
+  score?: HorseScore;
   stats?: HorseStats;
 }
 

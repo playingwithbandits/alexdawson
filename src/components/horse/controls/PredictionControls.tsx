@@ -1,17 +1,13 @@
-import { SortOption, FilterOption } from "@/lib/generator/predictions";
+import { SortOption } from "../DayPredictions";
 
 interface PredictionControlsProps {
   sortBy: SortOption;
   onSortChange: (sort: SortOption) => void;
-  filterRating: FilterOption;
-  onFilterChange: (rating: FilterOption) => void;
 }
 
 export function PredictionControls({
   sortBy,
   onSortChange,
-  filterRating,
-  onFilterChange,
 }: PredictionControlsProps) {
   return (
     <div className="prediction-controls">
@@ -36,35 +32,6 @@ export function PredictionControls({
           >
             Rating
           </button>
-        </div>
-      </div>
-
-      <div className="control-group">
-        <label>Rating:</label>
-        <div className="button-group">
-          <button
-            className={`control-button ${
-              filterRating === null ? "active" : ""
-            }`}
-            onClick={() => onFilterChange(null)}
-          >
-            Off
-          </button>
-          {[3, 4].map((rating) => (
-            <button
-              key={rating}
-              className={`control-button ${
-                filterRating === rating ? "active" : ""
-              }`}
-              onClick={() =>
-                onFilterChange(
-                  filterRating === rating ? null : (rating as FilterOption)
-                )
-              }
-            >
-              {rating}★
-            </button>
-          ))}
         </div>
       </div>
     </div>

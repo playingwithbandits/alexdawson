@@ -13,7 +13,7 @@ export function DashboardSidebar() {
     Array<{ date: string; display: string }>
   >([]);
   const [cachedDates, setCachedDates] = useState<Set<string>>(new Set());
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const formatDate = (date: Date) => format(date, "yyyy-MM-dd");
