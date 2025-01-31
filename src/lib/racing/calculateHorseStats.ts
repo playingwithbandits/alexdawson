@@ -19,6 +19,26 @@ function calculateDistancePreference(
   return "stayer";
 }
 
+function getRaceType(formRaceCode: string | undefined) {
+  if (!formRaceCode) return null;
+  switch (formRaceCode) {
+    case "P":
+    case "H":
+      return "hurdle";
+    case "C":
+    case "U":
+      return "chase";
+    case "F":
+    case "B":
+      return "flat";
+    case "W":
+    case "X":
+      return "aw";
+    default:
+      return null;
+  }
+}
+
 export function calculateHorseStats(formObj?: FormObj): HorseStats {
   if (!formObj?.form?.length) return {} as HorseStats;
 
@@ -198,6 +218,32 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     }
   }
 
+  // Calculate race type stats
+  const raceTypeStats = {
+    flat: { runs: 0, wins: 0, places: 0, winRate: 0, placeRate: 0 },
+    aw: { runs: 0, wins: 0, places: 0, winRate: 0, placeRate: 0 },
+    hurdle: { runs: 0, wins: 0, places: 0, winRate: 0, placeRate: 0 },
+    chase: { runs: 0, wins: 0, places: 0, winRate: 0, placeRate: 0 },
+  };
+
+  form.forEach((race) => {
+    const raceType = getRaceType(race.raceTypeCode);
+    if (raceType) {
+      raceTypeStats[raceType].runs++;
+      if (race.raceOutcomeCode === "1") raceTypeStats[raceType].wins++;
+      if (parseInt(race.raceOutcomeCode || "99") <= 3)
+        raceTypeStats[raceType].places++;
+    }
+  });
+
+  // Calculate rates
+  Object.values(raceTypeStats).forEach((stats) => {
+    if (stats.runs > 0) {
+      stats.winRate = (stats.wins / stats.runs) * 100;
+      stats.placeRate = (stats.places / stats.runs) * 100;
+    }
+  });
+
   return {
     // Basic stats
     totalStarts: form.length,
@@ -301,5 +347,6 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       avg(form.map((r) => r.distanceFurlong || 0))
     ),
     distanceStats,
+    raceTypeStats,
   };
 }

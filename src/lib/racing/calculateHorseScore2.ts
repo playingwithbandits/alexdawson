@@ -1,4 +1,5 @@
-import { Horse, Race, RaceStats } from "@/types/racing";
+import { Horse, Meeting, Race, RaceStats } from "@/types/racing";
+import { mapGoingCodeToType } from "./goingUtils";
 
 interface ScoreComponent {
   score: number;
@@ -19,13 +20,17 @@ export interface HorseScore {
     prize: ScoreComponent;
     weight: ScoreComponent;
     draw: ScoreComponent;
+    seasonal: ScoreComponent;
+    connectionCombo: ScoreComponent;
+    market: ScoreComponent;
   };
 }
 
 export function calculateHorseScore2(
   horse: Horse,
   race: Race,
-  raceStats: RaceStats
+  raceStats: RaceStats,
+  meetingDetails: Partial<Meeting>
 ): HorseScore {
   const weights = {
     ratings: 1, // Compare ratings to race average and other horses
@@ -37,7 +42,10 @@ export function calculateHorseScore2(
     connections: 1, // Jockey and trainer performance
     prize: 1, // Prize money performance
     weight: 1, // Weight carried and allowances
-    draw: 1, // Draw bias and stall position
+    draw: 1, // Draw bias and stall positionq
+    seasonal: 1, // Seasonal form
+    connectionCombo: 1, // Jockey and trainer combo
+    market: 1, // Market position
   };
 
   // Ratings Score (vs race average and field)
@@ -132,22 +140,138 @@ export function calculateHorseScore2(
     return { score, maxScore, percentage: (score / maxScore) * 100 };
   })();
 
-  // Going Suitability
+  // Going Score
   const goingScore = (() => {
     let score = 0;
-    const maxScore = 3;
+    const maxScore = 6;
+
+    // Get normalized going for comparison
+    const raceGoing = mapGoingCodeToType(meetingDetails.going || "");
+    const isAW =
+      raceGoing.includes("standard") ||
+      meetingDetails.type?.toLowerCase().includes("all-weather") ||
+      meetingDetails.surface?.toLowerCase().includes("polytrack") ||
+      meetingDetails.surface?.toLowerCase().includes("tapeta");
 
     // Has won on this going
-    const goingPerf = horse.stats?.goingPerformance?.find(
-      (g) => g.type === race.going?.toLowerCase()
-    );
-    if (goingPerf?.winRate || 0 > 0) score++;
+    const goingWins = horse.formObj?.form?.filter(
+      (f) =>
+        f.raceOutcomeCode === "1" &&
+        f.goingTypeCode
+          ?.split("/")
+          .some((code) => mapGoingCodeToType(code).includes(raceGoing))
+    ).length;
+    if (goingWins && goingWins > 0) score++;
 
-    // Above average win rate on this going
-    if (goingPerf?.winRate || 0 > 20) score++;
+    // Multiple wins on this going
+    if (goingWins && goingWins > 1) score++;
 
-    // Multiple runs on this going (experience)
-    if (goingPerf?.runs || 0 > 3) score++;
+    // Strong place record on this going
+    const goingPlaces = horse.formObj?.form?.filter(
+      (f) =>
+        parseInt(f.raceOutcomeCode || "99") <= 3 &&
+        f.goingTypeCode
+          ?.split("/")
+          .some((code) => mapGoingCodeToType(code).includes(raceGoing))
+    ).length;
+    if (goingPlaces && goingPlaces >= 3) score++;
+
+    // Recent good run on this going
+    const recentGoingForm = horse.formObj?.form
+      ?.slice(0, 4)
+      .some(
+        (f) =>
+          parseInt(f.raceOutcomeCode || "99") <= 4 &&
+          f.goingTypeCode
+            ?.split("/")
+            .some((code) => mapGoingCodeToType(code).includes(raceGoing))
+      );
+    if (recentGoingForm) score++;
+
+    // AW/Turf specialist check
+    if (isAW) {
+      const awStats = horse.stats?.raceTypeStats?.aw;
+      if (awStats?.runs && awStats.runs > 0) {
+        // Strong win record on AW
+        if (awStats.winRate > 20) score++;
+        if (awStats.winRate > raceStats.avgWinRate * 1.2) score++; // 20% better than avg
+
+        // Strong place record on AW
+        if (awStats.placeRate > 50) score++;
+        if (awStats.placeRate > raceStats.avgPlaceRate * 1.2) score++;
+
+        // Experience and consistency
+        if (awStats.runs >= 5) score++; // Good experience
+        if (awStats.runs >= 10 && awStats.winRate > 15) score++; // Proven specialist
+
+        // Recent form in code
+        const recentAWForm = horse.formObj?.form
+          ?.slice(0, 4)
+          .filter((f) => f.raceTypeCode === "W" || f.raceTypeCode === "X")
+          .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
+        if (recentAWForm) score++;
+      }
+    } else {
+      const flatStats = horse.stats?.raceTypeStats?.flat;
+      if (flatStats?.runs && flatStats.runs > 0) {
+        // Strong win record on turf
+        if (flatStats.winRate > 20) score++;
+        if (flatStats.winRate > raceStats.avgWinRate * 1.2) score++;
+
+        // Strong place record on turf
+        if (flatStats.placeRate > 50) score++;
+        if (flatStats.placeRate > raceStats.avgPlaceRate * 1.2) score++;
+
+        // Experience and consistency
+        if (flatStats.runs >= 5) score++;
+        if (flatStats.runs >= 10 && flatStats.winRate > 15) score++;
+
+        // Recent form in code
+        const recentFlatForm = horse.formObj?.form
+          ?.slice(0, 4)
+          .filter((f) => f.raceTypeCode === "F" || f.raceTypeCode === "B")
+          .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
+        if (recentFlatForm) score++;
+      }
+    }
+
+    // Check for hurdle/chase specialists if applicable
+    const hurdleStats = horse.stats?.raceTypeStats?.hurdle;
+    const chaseStats = horse.stats?.raceTypeStats?.chase;
+
+    // For hurdle races
+    if (
+      meetingDetails.type?.toLowerCase().includes("jumps") &&
+      hurdleStats?.runs &&
+      hurdleStats.runs > 0
+    ) {
+      if (hurdleStats.winRate > 20) score++;
+      if (hurdleStats.placeRate > 50) score++;
+      if (hurdleStats.runs >= 5) score++;
+
+      const recentHurdleForm = horse.formObj?.form
+        ?.slice(0, 4)
+        .filter((f) => f.raceTypeCode === "H" || f.raceTypeCode === "P")
+        .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
+      if (recentHurdleForm) score++;
+    }
+
+    // For chase races
+    if (
+      meetingDetails.type?.toLowerCase().includes("jumps") &&
+      chaseStats?.runs &&
+      chaseStats.runs > 0
+    ) {
+      if (chaseStats.winRate > 20) score++;
+      if (chaseStats.placeRate > 50) score++;
+      if (chaseStats.runs >= 5) score++;
+
+      const recentChaseForm = horse.formObj?.form
+        ?.slice(0, 4)
+        .filter((f) => f.raceTypeCode === "C" || f.raceTypeCode === "U")
+        .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
+      if (recentChaseForm) score++;
+    }
 
     return {
       score,
@@ -169,57 +293,95 @@ export function calculateHorseScore2(
       score++;
 
     // Multiple recent wins
-    const recentWins =
-      horse.formObj?.form?.slice(0, 4).filter((f) => f.raceOutcomeCode === "1")
-        .length || 0;
-    if (recentWins >= 2) score++;
+    const recentWins = horse.formObj?.form
+      ?.slice(0, 6)
+      .filter((f) => f.raceOutcomeCode === "1").length;
+    if (recentWins && recentWins > 1) score++;
 
-    // Progressive RPRs
-    const rprTrend = horse.formObj?.form
-      ?.slice(0, 3)
-      .map((f) => f.rpPostmark || 0);
-    if (rprTrend && rprTrend[0] > rprTrend[1] && rprTrend[1] > rprTrend[2])
+    // Consistent placements
+    const recentPlacements = horse.formObj?.form
+      ?.slice(0, 6)
+      .filter((f) => parseInt(f.raceOutcomeCode || "99") <= 3).length;
+    if (recentPlacements && recentPlacements >= 3) score++;
+
+    // Progressive form
+    const rprs = horse.formObj?.form
+      ?.slice(0, 4)
+      .map((f) => f.rpPostmark)
+      .filter((r): r is number => r !== undefined);
+    if (
+      rprs &&
+      rprs?.length >= 3 &&
+      rprs?.every((rpr, i) => i === 0 || rpr >= (rprs[i - 1] || 0))
+    )
       score++;
 
-    // Improving form trend
-    if (horse.stats?.recentFormTrend === "improving") score++;
+    // Recent class win
+    const recentClassWin = horse.formObj?.form
+      ?.slice(0, 4)
+      .some(
+        (f) =>
+          f.raceOutcomeCode === "1" &&
+          f.raceClass &&
+          f.raceClass <= parseInt(race.class.replace(/\D/g, ""))
+      );
+    if (recentClassWin) score++;
 
-    // Better than average last 6 runs position
-    if ((horse.stats?.avgPositionLastSix || 99) < raceStats.avgLastSixPosition)
-      score++;
+    // Recent course win
+    const recentCourseWin = horse.formObj?.form
+      ?.slice(0, 6)
+      .some(
+        (f) =>
+          f.raceOutcomeCode === "1" &&
+          f.courseName?.toLowerCase() === meetingDetails.venue?.toLowerCase()
+      );
+    if (recentCourseWin) score++;
 
-    // Recent run (freshness)
-    const daysSinceRun = parseInt(horse.lastRun?.split(" ")[0] || "999");
-    if (daysSinceRun < 30) score++;
+    // Recent distance win
+    const recentDistanceWin = horse.formObj?.form
+      ?.slice(0, 6)
+      .some(
+        (f) =>
+          f.raceOutcomeCode === "1" &&
+          Math.abs(
+            f.distanceFurlong || 0 - (raceStats.distanceInFurlongs || 0)
+          ) <= 1
+      );
+    if (recentDistanceWin) score++;
 
-    // In form this season
-    type SeasonalForm = {
-      spring: number;
-      summer: number;
-      autumn: number;
-      winter: number;
+    return {
+      score,
+      maxScore,
+      percentage: (score / maxScore) * 100,
     };
-    const season = ["winter", "spring", "summer", "autumn"][
-      Math.floor(new Date().getMonth() / 3)
-    ] as keyof SeasonalForm;
-    if ((horse.stats?.seasonalForm?.[season] || 0) > 0.5) score++;
-
-    return { score, maxScore, percentage: (score / maxScore) * 100 };
   })();
 
   // Course Form
   const courseScore = (() => {
     let score = 0;
-    const maxScore = 3;
+    const maxScore = 5;
 
     // Course winner
     if ((horse.stats?.courseForm?.wins || 0) > 0) score++;
 
-    // Above average course win rate
-    if ((horse.stats?.courseForm?.winRate || 0) > raceStats.avgWinRate) score++;
+    // Multiple course wins
+    if ((horse.stats?.courseForm?.wins || 0) > 1) score++;
 
-    // Multiple course runs (experience)
-    if ((horse.stats?.courseForm?.runs || 0) > 2) score++;
+    // Strong course place rate
+    if ((horse.stats?.courseForm?.placeRate || 0) > 50) score++;
+
+    // Course experience
+    if ((horse.stats?.courseForm?.runs || 0) > 3) score++;
+
+    // Recent course form
+    const recentCourseForm = horse.formObj?.form
+      ?.slice(0, 4)
+      .some(
+        (f) =>
+          f.courseName?.toLowerCase() === meetingDetails.venue?.toLowerCase() &&
+          parseInt(f.raceOutcomeCode || "99") <= 4
+      );
+    if (recentCourseForm) score++;
 
     return {
       score,
@@ -231,25 +393,53 @@ export function calculateHorseScore2(
   // Class Level
   const classScore = (() => {
     let score = 0;
-    const maxScore = 3;
+    const maxScore = 5;
 
-    // Has won at this class or higher
+    // Class winner
+    const hasWonInClass =
+      horse.formObj?.form?.some(
+        (f) =>
+          f.raceOutcomeCode === "1" &&
+          f.raceClass &&
+          f.raceClass <= parseInt(race.class.replace(/\D/g, ""))
+      ) || false;
+    if (hasWonInClass) score++;
+
+    // Class experience
+    const hasClassExperience =
+      horse.formObj?.form?.some(
+        (f) =>
+          f.raceClass && f.raceClass <= parseInt(race.class.replace(/\D/g, ""))
+      ) || false;
+    if (hasClassExperience) score++;
+
+    // Progressive in class
+    const classProgression = horse.stats?.classProgression || [];
     if (
-      horse.stats?.preferredClass &&
-      Number(horse.stats.preferredClass.replace("Class ", "")) <=
-        Number(race.class.replace("Class ", ""))
+      classProgression.length >= 3 &&
+      classProgression.every((c, i) => i === 0 || c <= classProgression[i - 1])
     )
       score++;
 
-    // Average class level suitable
+    // Proven at higher class
     if (
-      (horse.stats?.avgClassLevel || 99) <=
-      Number(race.class.replace("Class ", ""))
+      horse.formObj?.form?.some(
+        (f) =>
+          f.raceOutcomeCode === "1" &&
+          f.raceClass &&
+          f.raceClass < parseInt(race.class.replace(/\D/g, ""))
+      )
     )
       score++;
 
-    // Class progression positive
-    if ((horse.stats?.classProgression?.[0] || 0) > 0) score++;
+    // Consistent at this level
+    const classPerformance = horse.formObj?.form
+      ?.filter(
+        (f) =>
+          f.raceClass && f.raceClass === parseInt(race.class.replace(/\D/g, ""))
+      )
+      .filter((f) => parseInt(f.raceOutcomeCode || "99") <= 4).length;
+    if (classPerformance && classPerformance >= 3) score++;
 
     return {
       score,
@@ -399,6 +589,111 @@ export function calculateHorseScore2(
     return { score, maxScore, percentage: (score / maxScore) * 100 };
   })();
 
+  // Seasonal Form
+  const seasonalScore = (() => {
+    let score = 0;
+    const maxScore = 5;
+
+    const currentMonth = new Date().getMonth();
+    const isSpring = currentMonth >= 2 && currentMonth <= 4;
+    const isSummer = currentMonth >= 5 && currentMonth <= 7;
+    const isAutumn = currentMonth >= 8 && currentMonth <= 10;
+    const isWinter = currentMonth >= 11 || currentMonth <= 1;
+
+    // Strong record in current season
+    if ((isSpring && horse.stats?.seasonalForm?.spring) || 0 > 3) score++;
+    if ((isSummer && horse.stats?.seasonalForm?.summer) || 0 > 3) score++;
+    if ((isAutumn && horse.stats?.seasonalForm?.autumn) || 0 > 3) score++;
+    if ((isWinter && horse.stats?.seasonalForm?.winter) || 0 > 3) score++;
+
+    // Recent runs in similar conditions
+    const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
+    const similarConditionsRuns = lastSixRuns.filter((run) => {
+      const similarClass =
+        Math.abs(
+          (run.raceClass || 0) - parseInt(race.class.replace(/\D/g, ""))
+        ) <= 1;
+      const similarDistance =
+        Math.abs(
+          (run.distanceFurlong || 0) - (raceStats.distanceInFurlongs || 0)
+        ) <= 1;
+      return similarClass && similarDistance;
+    }).length;
+
+    if (similarConditionsRuns >= 2) score++;
+    if (similarConditionsRuns >= 4) score++;
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Trainer/Jockey Combination
+  const connectionComboScore = (() => {
+    let score = 0;
+    const maxScore = 5;
+
+    // Find previous runs with same jockey combo
+    const comboRuns = horse.formObj?.form?.filter(
+      (run) =>
+        run.jockeyShortName?.toLowerCase() === horse.jockey.name.toLowerCase()
+    );
+
+    if (comboRuns?.length) {
+      // Successful partnership
+      const comboWins = comboRuns.filter(
+        (r) => r.raceOutcomeCode === "1"
+      ).length;
+      const comboPlaces = comboRuns.filter(
+        (r) => parseInt(r.raceOutcomeCode || "99") <= 3
+      ).length;
+
+      if (comboWins > 0) score++;
+      if (comboWins > 1) score++;
+      if (comboPlaces / comboRuns.length > 0.5) score++;
+
+      // Recent success with combo
+      const recentComboSuccess = comboRuns
+        .slice(0, 3)
+        .some((r) => parseInt(r.raceOutcomeCode || "99") <= 3);
+      if (recentComboSuccess) score++;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Market Support History
+  const marketScore = (() => {
+    let score = 0;
+    const maxScore = 5;
+
+    const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
+
+    // Well backed when winning
+    const wellBackedWins = lastSixRuns.filter(
+      (run) =>
+        run.raceOutcomeCode === "1" &&
+        run.oddsDesc &&
+        parseFloat(run.oddsDesc) < 6.0
+    ).length;
+
+    if (wellBackedWins > 0) score++;
+    if (wellBackedWins > 1) score++;
+
+    // Performs well when fancied
+    const fanciedRuns = lastSixRuns.filter(
+      (run) => run.oddsDesc && parseFloat(run.oddsDesc) < 4.0
+    );
+
+    if (fanciedRuns.length) {
+      const goodRuns = fanciedRuns.filter(
+        (r) => parseInt(r.raceOutcomeCode || "99") <= 3
+      ).length;
+
+      if (goodRuns / fanciedRuns.length > 0.5) score++;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
   // Calculate total score
   const totalScore =
     ratingsScore.score * weights.ratings +
@@ -410,7 +705,10 @@ export function calculateHorseScore2(
     connectionsScore.score * weights.connections +
     prizeScore.score * weights.prize +
     weightScore.score * weights.weight +
-    drawScore.score * weights.draw;
+    drawScore.score * weights.draw +
+    seasonalScore.score * weights.seasonal +
+    connectionComboScore.score * weights.connectionCombo +
+    marketScore.score * weights.market;
 
   const totalMaxScore =
     ratingsScore.maxScore * weights.ratings +
@@ -422,7 +720,10 @@ export function calculateHorseScore2(
     connectionsScore.maxScore * weights.connections +
     prizeScore.maxScore * weights.prize +
     weightScore.maxScore * weights.weight +
-    drawScore.maxScore * weights.draw;
+    drawScore.maxScore * weights.draw +
+    seasonalScore.maxScore * weights.seasonal +
+    connectionComboScore.maxScore * weights.connectionCombo +
+    marketScore.maxScore * weights.market;
 
   return {
     total: {
@@ -441,6 +742,9 @@ export function calculateHorseScore2(
       prize: prizeScore,
       weight: weightScore,
       draw: drawScore,
+      seasonal: seasonalScore,
+      connectionCombo: connectionComboScore,
+      market: marketScore,
     },
   };
 }

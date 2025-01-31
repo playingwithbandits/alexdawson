@@ -88,9 +88,7 @@ export async function fetchRaceAccordion(
     const selectionMatch = verdictText.match(
       /\b[A-Z][A-Z\s]+[A-Z]\b(?:\s*\(nap\))?/
     );
-    const selection = selectionMatch
-      ? selectionMatch[0].replace(/\s*\(nap\)$/, "").trim()
-      : "";
+    const selection = selectionMatch ? cleanName(selectionMatch[0]) : "";
 
     const isNap = verdictText.toLowerCase().includes("(nap)");
 
@@ -216,4 +214,11 @@ export async function fetchRaceAccordion(
     console.error("Error fetching race accordion data:", error);
     return undefined;
   }
+}
+
+function cleanName(name: string) {
+  return name
+    .toLowerCase()
+    .replace(/\s*\(nap\)\s*/i, "")
+    .trim();
 }

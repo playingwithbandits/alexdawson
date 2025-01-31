@@ -32,6 +32,18 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
       console.log("Venue:", venueElement?.textContent);
       console.log("Races found:", raceElements);
 
+      const meetingDetails = {
+        venue: venueElement?.textContent?.trim() || "",
+        surface: surfaceElement?.textContent?.trim() || "Turf",
+        firstRace: firstRaceElement?.textContent?.trim() || "",
+        lastRace:
+          lastRaceElement?.textContent?.trim().replace(/[&nbsp;-]*/g, "") || "",
+        type: typeElement?.textContent?.trim() || "",
+        raceCount: raceCountElement?.textContent?.trim() || "",
+        going:
+          goingElement?.textContent?.trim().replace(/^GOING\s*/i, "") || "",
+      };
+
       const races = await Promise.all(
         Array.from(raceElements).map(async (raceElement): Promise<Race> => {
           const linkElement = raceElement.querySelector(
@@ -74,7 +86,11 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
             details = await fetchRaceDetails(raceUrl);
             if (details) {
               console.log("📝 Got race details, starting parse...");
-              additionalDetails = await parseRaceDetails(details, raceUrl);
+              additionalDetails = await parseRaceDetails(
+                details,
+                raceUrl,
+                meetingDetails
+              );
             }
           } catch (error) {
             console.error(
@@ -102,15 +118,7 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
       );
 
       return {
-        venue: venueElement?.textContent?.trim() || "",
-        surface: surfaceElement?.textContent?.trim() || "Turf",
-        firstRace: firstRaceElement?.textContent?.trim() || "",
-        lastRace:
-          lastRaceElement?.textContent?.trim().replace(/[&nbsp;-]*/g, "") || "",
-        type: typeElement?.textContent?.trim() || "",
-        raceCount: raceCountElement?.textContent?.trim() || "",
-        going:
-          goingElement?.textContent?.trim().replace(/^GOING\s*/i, "") || "",
+        ...meetingDetails,
         races,
       };
     })

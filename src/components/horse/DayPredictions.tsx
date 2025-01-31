@@ -8,7 +8,7 @@ import { ViewToggle } from "./controls/ViewToggle";
 import { Horse, Meeting, Race } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 
-type ViewMode = "list" | "table" | "compact";
+export type ViewMode = "list" | "table" | "compact";
 
 interface DayPredictionsProps {
   meetings: Meeting[];
@@ -20,7 +20,7 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
   const [view, setView] = useState<ViewMode>("compact");
   //const data = generatePredictions(meetings);
 
-  const handleViewChange = (newView: "list" | "table" | "compact") => {
+  const handleViewChange = (newView: ViewMode) => {
     console.log("Changing view to:", newView);
     setView(newView);
   };
@@ -111,47 +111,13 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
                 </p>
               </div>
               <div className="space-y-2">
-                {meeting.races.map((race) => {
-                  const selections = getTopSelections(race);
-                  if (!selections?.length) return null;
-                  return (
-                    <div
-                      key={race.time}
-                      className="flex justify-between p-2 rounded"
-                    >
-                      <div className="flex gap-4 flex-1">
-                        <span className="font-semibold w-12">{race.time}</span>
-                        <span className="hidden md:block text-sm text-gray-400">
-                          {race.distance} • {race.class}
-                        </span>
-                      </div>
-                      <div className="flex flex-col gap-1 ">
-                        {selections.map((sel) => (
-                          <div
-                            key={sel.horse.name}
-                            className="flex gap-3 items-center justify-end"
-                          >
-                            <span className="font-medium">
-                              {sel.horse.name}
-                            </span>
-                            <span className="hidden md:block text-sm text-gray-400 w-16">
-                              {sel.odds || "SP"}
-                            </span>
-                            <span
-                              className={`text-sm font-medium w-12 ${
-                                (sel.horse.score?.total?.percentage || 0) > 50
-                                  ? "text-yellow-600"
-                                  : ""
-                              }`}
-                            >
-                              {sel.horse.score?.total?.percentage?.toFixed(1)}%
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
+                {meeting.races.map((race) => (
+                  <CompactRaceRow
+                    key={race.time}
+                    race={race}
+                    meeting={meeting}
+                  />
+                ))}
               </div>
             </div>
           ))}
@@ -186,6 +152,12 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
             key={horse.name}
             horse={horse}
             score={horse.score}
+            mode="list"
+            meeting={filteredMeetings?.find((x) =>
+              x.races.find((r) =>
+                r.horses.map((h) => h.name).includes(horse.name)
+              )
+            )}
             race={filteredMeetings
               ?.flatMap((x) => x.races)
               .find((x) => x.horses?.map((h) => h.name).includes(horse.name))}
@@ -193,5 +165,92 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
         ))}
       </div>
     </ExpansionProvider>
+  );
+}
+
+function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
+  // Get top prediction by score
+  const topScorer = race.horses.sort(
+    (a, b) =>
+      (b.score?.total.percentage || 0) - (a.score?.total.percentage || 0)
+  )[0];
+
+  // Get top model prediction
+
+  const sortedPredictions = Object.values(race.predictions || {}).sort(
+    (a, b) => (b.score || 0) - (a.score || 0)
+  );
+
+  const topPrediction = sortedPredictions[0];
+  const topPredictionNum = topPrediction?.score || 0;
+  const secondPredictionNum = sortedPredictions[1]?.score || 0;
+
+  const predictionGap = topPredictionNum - secondPredictionNum;
+
+  // Get verdict selection
+  const verdictPick = race.raceExtraInfo?.verdict?.selection;
+  const isNap = race.raceExtraInfo?.verdict?.isNap;
+
+  const allTheSame = [topPrediction?.name, topScorer?.name, verdictPick]
+    .filter((x) => x)
+    .map((name) => name?.toLowerCase().trim())
+    .every((val, _, arr) => val === arr[0]);
+
+  return (
+    <div className="flex justify-between p-2 rounded">
+      <div className="flex gap-4 flex-1">
+        <span className="font-semibold w-12">
+          {race.time}
+          {allTheSame && (
+            <span className="text-yellow-400 ml-1" title="All picks agree">
+              ★
+            </span>
+          )}
+        </span>
+        <span className="text-sm text-gray-400">
+          {race.distance} • {race.class}
+        </span>
+      </div>
+      <div className="flex gap-6 items-center">
+        {topPrediction && (
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-500">BOT:</span>
+            <span
+              className={`font-medium ${
+                predictionGap > 10 ? "text-yellow-400 font-bold" : ""
+              }`}
+            >
+              {topPrediction?.name} ({predictionGap.toFixed(1)}%)
+            </span>
+          </div>
+        )}
+        {verdictPick && (
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-500">RP:</span>
+            <span
+              className={`font-medium ${
+                isNap ? "text-yellow-400 font-bold" : ""
+              }`}
+            >
+              {verdictPick}
+            </span>
+          </div>
+        )}
+        {topScorer && (
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-500">AI:</span>
+            <span
+              className={`font-medium ${
+                (topScorer.score?.total?.percentage || 0) > 50
+                  ? "text-yellow-400 font-bold"
+                  : ""
+              }`}
+            >
+              {topScorer.name} ({topScorer.score?.total.percentage.toFixed(1)}%)
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }

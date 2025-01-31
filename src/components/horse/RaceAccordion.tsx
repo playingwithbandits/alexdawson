@@ -250,6 +250,8 @@ export function RaceAccordion({ race, meeting }: RaceAccordionProps) {
               horse={horse}
               score={horse.score}
               race={race}
+              meeting={meeting}
+              mode={"table"}
             />
           ))}
       </AccordionContent>

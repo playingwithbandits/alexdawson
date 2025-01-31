@@ -1,7 +1,6 @@
-import type { Race, Bet, Horse } from "@/types/racing";
+import type { Race, Bet, Horse, Meeting } from "@/types/racing";
 import { calculateHorseStats } from "@/lib/racing/calculateHorseStats";
 import { calculateRaceStats } from "@/lib/racing/calculateRaceStats";
-import { calculateHorseScore } from "@/lib/racing/calculateHorseScore";
 import { fetchHorseForm } from "@/lib/racing/fetchHorseForm";
 import { fetchPredictions } from "./fetchPredictions";
 import {
@@ -14,7 +13,8 @@ import { calculateHorseScore2 } from "@/lib/racing/calculateHorseScore2";
 
 export async function parseRaceDetails(
   html: string,
-  raceUrl: string
+  raceUrl: string,
+  meetingDetails: Partial<Meeting>
 ): Promise<Partial<Race>> {
   console.log("🔄 Starting parseRaceDetails...");
   const parser = new DOMParser();
@@ -262,7 +262,7 @@ export async function parseRaceDetails(
     ...result1,
     horses: horses?.map((x) => ({
       ...x,
-      score: calculateHorseScore2(x, result1, raceStats),
+      score: calculateHorseScore2(x, result1, raceStats, meetingDetails),
     })),
   };
 

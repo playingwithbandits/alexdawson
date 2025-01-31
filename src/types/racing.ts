@@ -329,6 +329,36 @@ export interface HorseStats {
       winRate: number;
     };
   };
+  raceTypeStats?: {
+    flat: {
+      runs: number;
+      wins: number;
+      places: number;
+      winRate: number;
+      placeRate: number;
+    };
+    aw: {
+      runs: number;
+      wins: number;
+      places: number;
+      winRate: number;
+      placeRate: number;
+    };
+    hurdle: {
+      runs: number;
+      wins: number;
+      places: number;
+      winRate: number;
+      placeRate: number;
+    };
+    chase: {
+      runs: number;
+      wins: number;
+      places: number;
+      winRate: number;
+      placeRate: number;
+    };
+  };
 }
 
 export interface RaceStats {

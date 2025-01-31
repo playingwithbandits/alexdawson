@@ -1,18 +1,28 @@
 "use client";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { FormObj, GoingRecord, Horse, HorseStats, Race } from "@/types/racing";
+import {
+  FormObj,
+  GoingRecord,
+  Horse,
+  HorseStats,
+  Meeting,
+  Race,
+} from "@/types/racing";
 import { useState } from "react";
 import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
 import { HorseScore } from "@/lib/racing/calculateHorseScore2";
+import { ViewMode } from "./DayPredictions";
 
 interface HorseRowProps {
   horse: Horse;
   score?: HorseScore;
   race?: Race;
+  mode?: ViewMode;
+  meeting?: Partial<Meeting>;
 }
 
-export function HorseRow({ horse, score, race }: HorseRowProps) {
+export function HorseRow({ horse, score, race, mode, meeting }: HorseRowProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -23,6 +33,12 @@ export function HorseRow({ horse, score, race }: HorseRowProps) {
       >
         <div className="flex justify-between items-center w-full px-4 py-3">
           <div className="flex gap-2 items-center">
+            {mode === "list" && race && (
+              <>
+                <span className="font-medium w-24">{meeting?.venue}</span>
+                <span className="font-medium w-12">{race.time}</span>
+              </>
+            )}
             <span className="font-bold w-8">{horse.number}</span>
             {race?.bettingForecast?.find((b) => b.horseName === horse.name) && (
               <span className="text-sm text-gray-400 w-12">
@@ -92,6 +108,10 @@ export function HorseRow({ horse, score, race }: HorseRowProps) {
             <StatsTable
               title="Connections"
               data={getConnectionStats(horse, race)}
+            />
+            <StatsTable
+              title="Track Specialties"
+              data={getTrackSpecialties(horse)}
             />
           </div>
           {horse.formObj && (
@@ -353,4 +373,46 @@ function getConnectionStats(horse: Horse, race?: Race) {
         }`
       : "N/A",
   };
+}
+
+function getTrackSpecialties(horse: Horse) {
+  const stats = horse.stats?.raceTypeStats;
+  if (!stats) return {};
+
+  const formatStat = (stat: {
+    runs: number;
+    wins: number;
+    winRate: number;
+    placeRate: number;
+  }) => {
+    if (!stat.runs) return "No runs";
+    return `${stat.wins}/${stat.runs} (${stat.winRate.toFixed(
+      1
+    )}% SR, ${stat.placeRate.toFixed(1)}% PR)`;
+  };
+
+  return {
+    "Flat Form": stats.flat ? formatStat(stats.flat) : "N/A",
+    "AW Form": stats.aw ? formatStat(stats.aw) : "N/A",
+    "Hurdle Form": stats.hurdle ? formatStat(stats.hurdle) : "N/A",
+    "Chase Form": stats.chase ? formatStat(stats.chase) : "N/A",
+    "Best Surface": getBestSurface(stats),
+  };
+}
+
+function getBestSurface(stats: NonNullable<Horse["stats"]>["raceTypeStats"]) {
+  const surfaces = [
+    { type: "Flat", stats: stats?.flat },
+    { type: "All-Weather", stats: stats?.aw },
+    { type: "Hurdles", stats: stats?.hurdle },
+    { type: "Chase", stats: stats?.chase },
+  ];
+
+  return (
+    surfaces
+      .filter((s) => s.stats?.runs || 0 >= 3)
+      .sort((a, b) => (b.stats?.winRate || 0) - (a.stats?.winRate || 0))
+      .map((s) => `${s.type} (${s.stats?.winRate.toFixed(1)}%)`)[0] ||
+    "Insufficient data"
+  );
 }
