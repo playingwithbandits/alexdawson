@@ -7,6 +7,7 @@ import { ExpandAllToggle } from "./controls/ExpandAllToggle";
 import { ViewToggle } from "./controls/ViewToggle";
 import { Horse, Meeting, Race } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
+import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
 
 export type ViewMode = "list" | "table" | "compact";
 
@@ -193,52 +194,79 @@ function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
 
   const allTheSame = [topPrediction?.name, topScorer?.name, verdictPick]
     .filter((x) => x)
-    .map((name) => name?.toLowerCase().trim())
+    .map((name) => (name ? cleanName(name) : ""))
     .every((val, _, arr) => val === arr[0]);
+
+  const someTheSame = [topPrediction?.name, verdictPick]
+    .filter((x) => x)
+    .map((name) => (name ? cleanName(name) : ""))
+    .some((val) => val === cleanName(topScorer?.name));
+
+  const verdictOdds = race.bettingForecast?.find(
+    (x) => cleanName(x.horseName) === verdictPick
+  )?.decimalOdds;
+
+  const topScorerOdds = race.bettingForecast?.find(
+    (x) => x.horseName === topScorer?.name
+  )?.decimalOdds;
+
+  const topPredictionOdds = race.bettingForecast?.find(
+    (x) => x.horseName === topPrediction?.name
+  )?.decimalOdds;
 
   return (
     <div className="flex justify-between p-2 rounded">
-      <div className="flex gap-4 flex-1">
-        <span className="font-semibold w-12">
-          {race.time}
-          {allTheSame && (
-            <span className="text-yellow-400 ml-1" title="All picks agree">
-              ★
-            </span>
-          )}
-        </span>
-        <span className="text-sm text-gray-400">
-          {race.distance} • {race.class}
-        </span>
+      <div className="flex gap-1">
+        <span className="font-semibold w-12">{race.time}</span>
+        {someTheSame && (
+          <span className="text-yellow-400 " title="Some picks agree">
+            ★
+          </span>
+        )}
+        {allTheSame && (
+          <span className="text-yellow-400" title="All picks agree">
+            ★
+          </span>
+        )}
+        {someTheSame && (topScorerOdds || 0) > 8 && (
+          <span className="text-blue-400" title="All picks agree">
+            ★
+          </span>
+        )}
       </div>
-      <div className="flex gap-6 items-center">
+      <div className="w-full flex-1 grid grid-cols-3 gap-4 items-center justify-items-center">
         {topPrediction && (
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-500">BOT:</span>
             <span
               className={`font-medium ${
                 predictionGap > 10 ? "text-yellow-400 font-bold" : ""
               }`}
             >
-              {topPrediction?.name} ({predictionGap.toFixed(1)}%)
+              {topPrediction?.name} ({predictionGap.toFixed(1)}%){" "}
+              <span
+                className={(topPredictionOdds || 0) > 8 ? "text-blue-400" : ""}
+              >
+                {topPredictionOdds}
+              </span>
             </span>
           </div>
         )}
         {verdictPick && (
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-500">RP:</span>
             <span
               className={`font-medium ${
                 isNap ? "text-yellow-400 font-bold" : ""
               }`}
             >
-              {verdictPick}
+              {verdictPick}{" "}
+              <span className={(verdictOdds || 0) > 8 ? "text-blue-400" : ""}>
+                {verdictOdds}
+              </span>
             </span>
           </div>
         )}
         {topScorer && (
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-500">AI:</span>
             <span
               className={`font-medium ${
                 (topScorer.score?.total?.percentage || 0) > 50
@@ -246,7 +274,10 @@ function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
                   : ""
               }`}
             >
-              {topScorer.name} ({topScorer.score?.total.percentage.toFixed(1)}%)
+              {topScorer.name} ({topScorer.score?.total.percentage.toFixed(1)}%){" "}
+              <span className={(topScorerOdds || 0) > 8 ? "text-blue-400" : ""}>
+                {topScorerOdds}
+              </span>
             </span>
           </div>
         )}

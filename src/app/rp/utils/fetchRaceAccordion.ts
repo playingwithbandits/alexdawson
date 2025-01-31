@@ -84,11 +84,17 @@ export async function fetchRaceAccordion(
       .map((el) => el.textContent?.trim())
       .filter((name): name is string => !!name);
 
-    // Find selection (horse in ALL CAPS)
-    const selectionMatch = verdictText.match(
-      /\b[A-Z][A-Z\s]+[A-Z]\b(?:\s*\(nap\))?/
+    // Find the all caps name from allNamed array, removing parenthetical content
+    const selection = cleanName(
+      allNamed.find((name) => {
+        // Remove content inside parentheses
+        const nameWithoutParens = name.replace(/\s*\([^)]*\)/g, "").trim();
+        return (
+          nameWithoutParens === nameWithoutParens.toUpperCase() &&
+          nameWithoutParens.length > 1
+        );
+      }) || ""
     );
-    const selection = selectionMatch ? cleanName(selectionMatch[0]) : "";
 
     const isNap = verdictText.toLowerCase().includes("(nap)");
 
@@ -216,7 +222,7 @@ export async function fetchRaceAccordion(
   }
 }
 
-function cleanName(name: string) {
+export function cleanName(name: string) {
   return name
     .toLowerCase()
     .replace(/\s*\(nap\)\s*/i, "")
