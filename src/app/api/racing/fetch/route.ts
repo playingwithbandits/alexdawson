@@ -3,6 +3,66 @@ import { writeFile } from "fs/promises";
 import { join } from "path";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 
+const UK_COURSES = [
+  "ascot",
+  "ayr",
+  "bangor",
+  "bath",
+  "beverley",
+  "brighton",
+  "carlisle",
+  "cartmel",
+  "catterick",
+  "chelmsford",
+  "cheltenham",
+  "chepstow",
+  "chester",
+  "doncaster",
+  "epsom",
+  "exeter",
+  "fakenham",
+  "ffos las",
+  "fontwell",
+  "goodwood",
+  "hamilton",
+  "haydock",
+  "hexham",
+  "huntingdon",
+  "kelso",
+  "kempton",
+  "leicester",
+  "lingfield",
+  "ludlow",
+  "market rasen",
+  "musselburgh",
+  "newbury",
+  "newcastle",
+  "newmarket",
+  "newton abbot",
+  "nottingham",
+  "perth",
+  "plumpton",
+  "pontefract",
+  "redcar",
+  "ripon",
+  "salisbury",
+  "sandown",
+  "sedgefield",
+  "southwell",
+  "stratford",
+  "taunton",
+  "thirsk",
+  "uttoxeter",
+  "warwick",
+  "wetherby",
+  "wincanton",
+  "windsor",
+  "wolverhampton",
+  "worcester",
+  "yarmouth",
+  "york",
+];
+
 export async function POST(request: Request) {
   try {
     const { date } = await request.json();
@@ -15,8 +75,22 @@ export async function POST(request: Request) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
     const elements = doc.querySelectorAll(".RC-accordion");
+    // Filter for UK courses only
+    console.log(`Found ${elements.length} total courses`);
+    const ukElements = Array.from(elements).filter((element) => {
+      const courseName = element
+        .querySelector(".RC-accordion__courseName")
+        ?.textContent?.toLowerCase()
+        .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
+        .trim();
+      console.log(`Processing course: ${courseName}`);
+      const isUkCourse = courseName && UK_COURSES.includes(courseName);
+      console.log(`Is UK course: ${isUkCourse}`);
+      return isUkCourse;
+    });
+    console.log(`Filtered to ${ukElements.length} UK courses`);
 
-    const meetings = await parseMeetings(Array.from(elements));
+    const meetings = await parseMeetings(ukElements);
 
     const filePath = join(process.cwd(), "cache", "racing", `${date}.json`);
     await writeFile(filePath, JSON.stringify(meetings));
