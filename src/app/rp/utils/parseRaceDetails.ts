@@ -4,6 +4,10 @@ import { calculateRaceStats } from "@/lib/racing/calculateRaceStats";
 import { calculateHorseScore } from "@/lib/racing/calculateHorseScore";
 import { fetchHorseForm } from "@/lib/racing/fetchHorseForm";
 import { fetchPredictions } from "./fetchPredictions";
+import {
+  calculateDrawBias,
+  TrackConfiguration,
+} from "@/lib/racing/calculateDrawBias";
 
 export async function parseRaceDetails(
   html: string,
@@ -131,7 +135,7 @@ export async function parseRaceDetails(
   const prizeMoney = prizeMatch ? parseInt(prizeMatch[1].replace(/,/g, "")) : 0;
 
   // First calculate base race data
-  const baseRaceData = {
+  const baseRaceData: Partial<Race> = {
     time:
       doc
         .querySelector(".RC-courseHeader__time")
@@ -193,12 +197,17 @@ export async function parseRaceDetails(
         ?.textContent?.replace(/Weather:\s*/i, "")
         .replace(/\s+/g, " ")
         .trim() || "",
-    drawBias:
-      doc
-        .querySelector(".RC-courseHeader__drawBias")
-        ?.textContent?.replace(/Draw Bias:\s*/i, "")
-        .replace(/\s+/g, " ")
-        .trim() || "",
+    // Get track configuration from course header
+    trackConfig: (() => {
+      const courseInfo =
+        doc
+          .querySelector(".RC-courseHeader__trackInfo")
+          ?.textContent?.toLowerCase() || "";
+      if (courseInfo.includes("left-handed")) return "left-handed";
+      if (courseInfo.includes("right-handed")) return "right-handed";
+      if (courseInfo.includes("straight")) return "straight";
+      return undefined;
+    })(),
     prize: prizeMoney ? `£${prizeMoney.toLocaleString()}` : "",
     stalls:
       headerBox
@@ -221,6 +230,16 @@ export async function parseRaceDetails(
     horses,
   };
 
+  // Calculate draw bias based on track configuration
+  const drawBiasInfo = calculateDrawBias(
+    baseRaceData.trackConfig as TrackConfiguration,
+    baseRaceData.distance || "",
+    baseRaceData.going
+  );
+
+  baseRaceData.drawBias = drawBiasInfo.bias;
+  baseRaceData.drawBiasExplanation = drawBiasInfo.explanation;
+
   // Then calculate stats based on the horses and race data
   const raceStats = calculateRaceStats({
     raceData: baseRaceData,
@@ -229,6 +248,14 @@ export async function parseRaceDetails(
 
   const result: Race = {
     ...baseRaceData,
+    time: baseRaceData.time || "",
+    title: baseRaceData.title || "",
+    distance: baseRaceData.distance || "",
+    class: baseRaceData.class || "",
+    ageRestriction: baseRaceData.ageRestriction || "",
+    tv: baseRaceData.tv || "",
+    url: baseRaceData.url || "",
+    runners: baseRaceData.runners || 0,
     raceStats,
     predictions: baseRaceData.id
       ? await fetchPredictions(baseRaceData.id)

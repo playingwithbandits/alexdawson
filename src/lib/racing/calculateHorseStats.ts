@@ -1,5 +1,6 @@
-import type { FormObj, HorseStats } from "@/types/racing";
+import type { FormObj, GoingRecord, HorseStats } from "@/types/racing";
 import { avg, sum } from "@/lib/utils";
+import { mapGoingCodeToType } from "./goingUtils";
 
 function getSeasonFromDate(dateStr?: string): string {
   if (!dateStr) return "unknown";
@@ -153,31 +154,21 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
 
   // Calculate going performance
   const goingPerf = form.reduce((acc, run) => {
-    const going = (run.goingTypeServicesDesc || "").toLowerCase();
-    let type = "unknown";
+    const goingCode = (run.goingTypeServicesDesc || "").toLowerCase();
+    const type = mapGoingCodeToType(goingCode);
 
-    if (going.includes("soft") || going.includes("heavy")) {
-      type = "soft";
-    } else if (going.includes("good")) {
-      type = "good";
-    } else if (going.includes("firm")) {
-      type = "firm";
-    } else if (going.includes("heavy")) {
-      type = "heavy";
+    if (!acc[goingCode]) {
+      acc[goingCode] = { goingCode, type, runs: 0, wins: 0, winRate: 0 };
     }
 
-    if (!acc[type]) {
-      acc[type] = { type, runs: 0, wins: 0, winRate: 0 };
-    }
-
-    acc[type].runs++;
+    acc[goingCode].runs++;
     if (run.raceOutcomeCode === "1") {
-      acc[type].wins++;
+      acc[goingCode].wins++;
     }
-    acc[type].winRate = (acc[type].wins / acc[type].runs) * 100;
+    acc[goingCode].winRate = (acc[goingCode].wins / acc[goingCode].runs) * 100;
 
     return acc;
-  }, {} as Record<string, { type: string; runs: number; wins: number; winRate: number }>);
+  }, {} as Record<string, GoingRecord>);
 
   const goingPerformance = Object.values(goingPerf);
 

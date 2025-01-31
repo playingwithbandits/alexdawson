@@ -1,6 +1,6 @@
 "use client";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { Horse, HorseStats } from "@/types/racing";
+import { FormObj, GoingRecord, Horse, HorseStats } from "@/types/racing";
 import { useState } from "react";
 import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
@@ -49,8 +49,10 @@ export function HorseRow({ horse, score }: HorseRowProps) {
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="text-gray-500">Last Run</span>
-              <span className="font-medium">{horse.lastRun || "N/A"}</span>
+              <span className="text-gray-500">Draw</span>
+              <span className="font-medium">
+                {horse.draw ? `Stall ${horse.draw}` : "N/A"}
+              </span>
             </div>
           </div>
 
@@ -71,6 +73,9 @@ export function HorseRow({ horse, score }: HorseRowProps) {
                 <div className="flex flex-col">
                   <span className="text-gray-500">Trainer</span>
                   <span className="font-medium">{horse.trainer.name}</span>
+                  <span className="text-xs text-gray-500">
+                    {horse.trainer.stats || "No recent stats"}
+                  </span>
                 </div>
                 <div className="flex flex-col mt-2">
                   <span className="text-gray-500">Owner</span>
@@ -79,7 +84,7 @@ export function HorseRow({ horse, score }: HorseRowProps) {
               </div>
             </div>
             <div className="space-y-2">
-              <h3 className="font-semibold">Equipment & Conditions</h3>
+              <h3 className="font-semibold">Form & Equipment</h3>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex flex-col">
                   <span className="text-gray-500">Head Gear</span>
@@ -91,10 +96,13 @@ export function HorseRow({ horse, score }: HorseRowProps) {
                   <span className="text-gray-500">Form</span>
                   <span className="font-medium">{horse.form || "N/A"}</span>
                 </div>
-
-                <div className="flex flex-col mt-2">
-                  <span className="text-gray-500">Top Speed</span>
-                  <span className="font-medium">{horse.topSpeed || "N/A"}</span>
+                <div className="flex flex-col">
+                  <span className="text-gray-500">Last Run</span>
+                  <span className="font-medium">{horse.lastRun || "N/A"}</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-gray-500">Rating</span>
+                  <span className="font-medium">{horse.rating || "N/A"}</span>
                 </div>
               </div>
             </div>
@@ -102,12 +110,11 @@ export function HorseRow({ horse, score }: HorseRowProps) {
 
           {/* Stats Tables */}
           <div className="grid grid-cols-2 gap-4">
-            <StatsTable title="Basic Info" data={getBasicInfo(horse)} />
+            <StatsTable title="Performance" data={getPerformanceStats(horse)} />
             <StatsTable
-              title="Performance"
-              data={getPerformanceStats(horse.stats)}
+              title="Form"
+              data={getFormStats(horse.stats, horse.formObj)}
             />
-            <StatsTable title="Form" data={getFormStats(horse.stats)} />
             <StatsTable
               title="Course & Distance"
               data={getCourseDistanceStats(horse.stats)}
@@ -131,7 +138,8 @@ export function HorseRow({ horse, score }: HorseRowProps) {
                     <th className="p-2">RPR</th>
                     <th className="p-2">TS</th>
                     <th className="p-2">Runners</th>
-                    <th className="p-2">Prize</th>
+                    <th className="p-2">Race Value</th>
+                    <th className="p-2">Prize Won</th>
                     <th className="p-2">Comment</th>
                   </tr>
                 </thead>
@@ -156,6 +164,11 @@ export function HorseRow({ horse, score }: HorseRowProps) {
                       <TableCell>{form.noOfRunners || "-"}</TableCell>
                       <TableCell>
                         £{form.prizeSterling?.toLocaleString() || "-"}
+                      </TableCell>
+                      <TableCell>
+                        {form.raceOutcomeCode === "1"
+                          ? `£${form.prizeSterling?.toLocaleString() || "-"}`
+                          : "-"}
                       </TableCell>
                       <TableCell className="max-w-xs truncate">
                         {form.rpCloseUpComment || "-"}
@@ -226,34 +239,59 @@ function StatsTable({
   );
 }
 
-function getBasicInfo(horse: Horse) {
+function getPerformanceStats(horse: Horse) {
+  const stats = horse.stats;
   return {
-    "Official Rating": horse.officialRating,
-    "Top Speed": horse.topSpeed,
-    "Last Run": horse.lastRun || "N/A",
-    Form: horse.form || "N/A",
+    "Top Speed": horse.topSpeed || "N/A",
+    "Official Rating": horse.officialRating || "N/A",
+    Rating: horse.rating || "N/A",
+    "Win Rate": stats ? `${(stats.winRate || 0).toFixed(1)}%` : "N/A",
+    "Place Rate": stats ? `${(stats.placeRate || 0).toFixed(1)}%` : "N/A",
+    "Total Starts": stats?.totalStarts || "N/A",
+    "Total Wins": stats?.totalWins || "N/A",
+    "Form Trend": stats?.recentFormTrend || "N/A",
+    "Avg Position (Last 6)": stats?.avgPositionLastSix?.toFixed(1) || "N/A",
+    "Days Since Last Run": horse.lastRun?.split(" ")[0] || "N/A",
+    "Seasonal Form": stats?.seasonalForm
+      ? Object.entries(stats.seasonalForm)
+          .map(([season, form]) => `${season}: ${form}`)
+          .join(", ")
+      : "N/A",
   };
 }
 
-function getPerformanceStats(stats?: HorseStats) {
+function getFormStats(stats?: HorseStats, formObj?: FormObj) {
   if (!stats) return {};
-  return {
-    "Win Rate": `${(stats.winRate || 0).toFixed(1)}%`,
-    "Place Rate": `${(stats.placeRate || 0).toFixed(1)}%`,
-    "Total Starts": stats.totalStarts,
-    "Total Wins": stats.totalWins,
-    "Form Trend": stats.recentFormTrend,
-    "Avg Position (Last 6)": stats.avgPositionLastSix?.toFixed(1),
-  };
-}
 
-function getFormStats(stats?: HorseStats) {
-  if (!stats) return {};
+  const totalPrize =
+    formObj?.form?.reduce(
+      (sum, entry) => sum + (entry.prizeSterling || 0),
+      0
+    ) || 0;
+
+  const totalWinningPrize =
+    formObj?.form?.reduce(
+      (sum, entry) =>
+        sum +
+        (entry.raceOutcomeCode && entry.raceOutcomeCode === "1"
+          ? entry.prizeSterling || 0
+          : 0),
+      0
+    ) || 0;
+  const avgPrize = formObj?.form?.length ? totalPrize / formObj.form.length : 0;
+
   return {
     "Best RPR": stats.bestRPR,
     "Avg RPR": stats.avgRPR?.toFixed(1),
     "Best Top Speed": stats.bestTopSpeed,
     "Avg Top Speed": stats.avgTopSpeed?.toFixed(1),
+    "Avg Race Value": avgPrize
+      ? `£${Math.round(avgPrize).toLocaleString()}`
+      : "N/A",
+    "Total Race Value": totalPrize ? `£${totalPrize.toLocaleString()}` : "N/A",
+    "Total Winning Prize": totalWinningPrize
+      ? `£${totalWinningPrize.toLocaleString()}`
+      : "N/A",
     "Days Off Track": stats.daysOffTrack,
     "Racing Frequency": stats.racingFrequency?.toFixed(1),
   };
@@ -261,12 +299,22 @@ function getFormStats(stats?: HorseStats) {
 
 function getCourseDistanceStats(stats?: HorseStats) {
   if (!stats) return {};
+  const formatGoingPreference = (goingPerf?: GoingRecord[]) => {
+    if (!goingPerf?.length) return "N/A";
+    return goingPerf
+      .map((going) => `${going.goingCode} (${going.winRate.toFixed(1)}%)`)
+      .join(" / ");
+  };
+
   return {
     "Course Wins": stats.courseForm?.wins || 0,
     "Course Places": stats.courseForm?.places || 0,
     "Course Win Rate": `${(stats.courseForm?.winRate || 0).toFixed(1)}%`,
+    "Course Runs": stats.courseForm?.runs || 0,
     "Optimal Distance": `${stats.optimalDistance}f`,
     "Distance Preference": stats.distancePreference,
     "Class Level": stats.avgClassLevel?.toFixed(1),
+    "Best Class": stats.preferredClass || "N/A",
+    "Going Preference": formatGoingPreference(stats.goingPerformance),
   };
 }

@@ -97,6 +97,8 @@ export interface Race {
   trackCondition?: string;
   weather?: string;
   drawBias?: string;
+  drawBiasExplanation?: string;
+  trackConfig?: "left-handed" | "right-handed" | "straight";
   avgSpeedRating?: number;
   avgOfficialRating?: number;
   avgPrize?: number;
@@ -277,12 +279,7 @@ export interface HorseStats {
   highestPrize?: number;
   avgPrize?: number;
   totalPrizeMoney?: number;
-  goingPerformance?: Array<{
-    type: string;
-    runs: number;
-    wins: number;
-    winRate: number;
-  }>;
+  goingPerformance?: Array<GoingRecord>;
   trackConfigPerformance?: Array<{
     style: string;
     runs: number;
@@ -415,4 +412,12 @@ export interface PredictionResponse {
     runners: { [key: string]: PredictionRunner };
   };
   status: number;
+}
+
+export interface GoingRecord {
+  goingCode: string;
+  type: string;
+  runs: number;
+  wins: number;
+  winRate: number;
 }
