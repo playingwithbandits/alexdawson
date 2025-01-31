@@ -1,18 +1,90 @@
-export type TrackConfiguration = "left-handed" | "right-handed" | "straight";
+export type DrawBiasType = "Low" | "Middle" | "High" | "No Clear Bias";
 
-interface DrawBiasResult {
-  bias: string;
+export interface DrawBiasResult {
+  bias: DrawBiasType;
   explanation: string;
 }
+
+export type TrackConfiguration = "left-handed" | "right-handed" | "straight";
 
 export function calculateDrawBias(
   trackConfig: TrackConfiguration | undefined,
   distance: string,
-  going: string | undefined
+  going: string | undefined,
+  course?: string
 ): DrawBiasResult {
+  // Track-specific biases
+  const trackBiases: Record<string, DrawBiasResult> = {
+    chester: {
+      bias: "Low",
+      explanation: "Strong low draw bias due to tight left-handed track",
+    },
+    ayr: {
+      bias: "High",
+      explanation: "High draws favored in sprints, especially on soft ground",
+    },
+    beverley: {
+      bias: "High",
+      explanation:
+        "High numbers favored on straight course, especially in sprints",
+    },
+    catterick: {
+      bias: "Low",
+      explanation: "Low draws advantaged due to sharp left-handed bends",
+    },
+    goodwood: {
+      bias: "Low",
+      explanation:
+        "Low draws advantaged due to camber, especially in large fields",
+    },
+    haydock: {
+      bias: "High",
+      explanation:
+        "High draws preferred in sprints on straight course, especially in soft",
+    },
+    kempton: {
+      bias: "Low",
+      explanation: "Low draws favored on polytrack, particularly in sprints",
+    },
+    lingfield: {
+      bias: "Low",
+      explanation: "Low draws advantaged around tight polytrack bends",
+    },
+    newmarket: {
+      bias: "Middle",
+      explanation: "Middle to high draws often favored on straight Rowley Mile",
+    },
+    pontefract: {
+      bias: "Low",
+      explanation: "Low draws advantaged due to uphill finish and tight turns",
+    },
+    thirsk: {
+      bias: "High",
+      explanation: "High draws favored in sprints on straight course",
+    },
+    wolverhampton: {
+      bias: "Low",
+      explanation: "Low draws advantaged around tight left-handed polytrack",
+    },
+    york: {
+      bias: "High",
+      explanation:
+        "High numbers often advantaged on straight course in big fields",
+    },
+    ascot: {
+      bias: "Low",
+      explanation: "Low draws favored on round course, less bias on straight",
+    },
+  };
+
+  // Check for track-specific bias first
+  if (course && trackBiases[course.toLowerCase()]) {
+    return trackBiases[course.toLowerCase()];
+  }
+
   // Default response if we can't determine
   const defaultResult = {
-    bias: "No significant bias",
+    bias: "No Clear Bias" as DrawBiasType,
     explanation: "Insufficient data to determine draw bias",
   };
 
@@ -30,13 +102,13 @@ export function calculateDrawBias(
         going?.toLowerCase().includes("heavy")
       ) {
         return {
-          bias: "Stand side favored",
+          bias: "High" as DrawBiasType,
           explanation:
             "Soft/heavy going typically favors higher draws on straight tracks",
         };
       }
       return {
-        bias: "Track dependent",
+        bias: "No Clear Bias" as DrawBiasType,
         explanation: "Draw bias varies by track and conditions",
       };
     }
@@ -46,13 +118,13 @@ export function calculateDrawBias(
   if (furlongs > 7 && furlongs <= 12) {
     if (trackConfig === "left-handed") {
       return {
-        bias: "Low draws favored",
+        bias: "Low" as DrawBiasType,
         explanation: "Inside position advantageous around left-handed bends",
       };
     }
     if (trackConfig === "right-handed") {
       return {
-        bias: "Low to middle draws favored",
+        bias: "Middle" as DrawBiasType,
         explanation:
           "Inside to middle position preferred around right-handed bends",
       };
@@ -60,14 +132,10 @@ export function calculateDrawBias(
   }
 
   // Long distance races (>12f)
-  if (furlongs > 12) {
-    return {
-      bias: "Draw less significant",
-      explanation: "Longer distance reduces impact of draw position",
-    };
-  }
-
-  return defaultResult;
+  return {
+    bias: "No Clear Bias" as DrawBiasType,
+    explanation: "Longer distance reduces impact of draw position",
+  };
 }
 
 function parseDistance(distance: string): number {
