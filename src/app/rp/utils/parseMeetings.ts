@@ -33,75 +33,72 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
       console.log("Races found:", raceElements);
 
       const races = await Promise.all(
-        Array.from(raceElements)
-          .slice(0, 1)
-          .map(async (raceElement): Promise<Race> => {
-            const linkElement = raceElement.querySelector(
-              ".RC-meetingItem__link"
-            ) as HTMLAnchorElement;
-            const timeElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__time"]'
-            );
-            const titleElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__info"]'
-            );
-            const runnersElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__runners"]'
-            );
-            const goingDataElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__going"]'
-            );
-            const tvElement = raceElement.querySelector(
-              '[data-test-selector="RC-meetingItem__tv"]'
-            );
+        Array.from(raceElements).map(async (raceElement): Promise<Race> => {
+          const linkElement = raceElement.querySelector(
+            ".RC-meetingItem__link"
+          ) as HTMLAnchorElement;
+          const timeElement = raceElement.querySelector(
+            '[data-test-selector="RC-courseCards__time"]'
+          );
+          const titleElement = raceElement.querySelector(
+            '[data-test-selector="RC-courseCards__info"]'
+          );
+          const runnersElement = raceElement.querySelector(
+            '[data-test-selector="RC-courseCards__runners"]'
+          );
+          const goingDataElement = raceElement.querySelector(
+            '[data-test-selector="RC-courseCards__going"]'
+          );
+          const tvElement = raceElement.querySelector(
+            '[data-test-selector="RC-meetingItem__tv"]'
+          );
 
-            // Parse going data text which contains class, age restriction and distance
-            const goingData =
-              goingDataElement?.textContent
-                ?.trim()
-                .split("\n")
-                .map((s) => s.trim()) || [];
-            const [classInfo, ageRestriction, distance] = goingData;
+          // Parse going data text which contains class, age restriction and distance
+          const goingData =
+            goingDataElement?.textContent
+              ?.trim()
+              .split("\n")
+              .map((s) => s.trim()) || [];
+          const [classInfo, ageRestriction, distance] = goingData;
 
-            // Extract the path from the full URL
-            const raceUrl = linkElement?.href
-              ? "https://www.racingpost.com" +
-                new URL(linkElement.href).pathname
-              : "";
+          // Extract the path from the full URL
+          const raceUrl = linkElement?.href
+            ? "https://www.racingpost.com" + new URL(linkElement.href).pathname
+            : "";
 
-            let details = "";
-            let additionalDetails: Partial<Race> = { horses: [] };
+          let details = "";
+          let additionalDetails: Partial<Race> = { horses: [] };
 
-            try {
-              console.log(`Processing race at ${raceUrl}`);
-              details = await fetchRaceDetails(raceUrl);
-              if (details) {
-                console.log("📝 Got race details, starting parse...");
-                additionalDetails = await parseRaceDetails(details, raceUrl);
-              }
-            } catch (error) {
-              console.error(
-                `Failed to fetch/parse details for race at ${raceUrl}:`,
-                error
-              );
+          try {
+            console.log(`Processing race at ${raceUrl}`);
+            details = await fetchRaceDetails(raceUrl);
+            if (details) {
+              console.log("📝 Got race details, starting parse...");
+              additionalDetails = await parseRaceDetails(details, raceUrl);
             }
+          } catch (error) {
+            console.error(
+              `Failed to fetch/parse details for race at ${raceUrl}:`,
+              error
+            );
+          }
 
-            return {
-              time: timeElement?.textContent?.trim() || "",
-              title: titleElement?.textContent?.trim() || "",
-              runners: parseInt(
-                runnersElement?.textContent?.trim().split(" ")[0] || "0",
-                10
-              ),
-              distance: distance || "",
-              class: classInfo || "",
-              ageRestriction: ageRestriction || "",
-              tv: tvElement?.textContent?.trim() || "",
-              url: raceUrl,
-              horses: [],
-              ...additionalDetails,
-            };
-          })
+          return {
+            time: timeElement?.textContent?.trim() || "",
+            title: titleElement?.textContent?.trim() || "",
+            runners: parseInt(
+              runnersElement?.textContent?.trim().split(" ")[0] || "0",
+              10
+            ),
+            distance: distance || "",
+            class: classInfo || "",
+            ageRestriction: ageRestriction || "",
+            tv: tvElement?.textContent?.trim() || "",
+            url: raceUrl,
+            horses: [],
+            ...additionalDetails,
+          };
+        })
       );
 
       return {

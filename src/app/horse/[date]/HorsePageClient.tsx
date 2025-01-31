@@ -52,9 +52,7 @@ export function HorsePageClient({ date }: { date: string }) {
           ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))"
         );
 
-        const parsedMeetings = await parseMeetings(
-          Array.from(meetingElements).slice(0, 1)
-        );
+        const parsedMeetings = await parseMeetings(Array.from(meetingElements));
         console.log("✨ Successfully parsed meetings data");
         console.log("📝 Saving to cache for date:", date);
 
