@@ -121,11 +121,11 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
                     >
                       <div className="flex gap-4 flex-1">
                         <span className="font-semibold w-12">{race.time}</span>
-                        <span className="text-sm text-gray-400">
+                        <span className="hidden md:block text-sm text-gray-400">
                           {race.distance} • {race.class}
                         </span>
                       </div>
-                      <div className="flex flex-col gap-1 min-w-[400px]">
+                      <div className="flex flex-col gap-1 ">
                         {selections.map((sel) => (
                           <div
                             key={sel.horse.name}
@@ -134,7 +134,7 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
                             <span className="font-medium">
                               {sel.horse.name}
                             </span>
-                            <span className="text-sm text-gray-400 w-16">
+                            <span className="hidden md:block text-sm text-gray-400 w-16">
                               {sel.odds || "SP"}
                             </span>
                             <span
