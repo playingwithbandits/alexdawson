@@ -34,6 +34,7 @@ export function DayPredictions({
 }: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [view, setView] = useState<ViewMode>("compact");
+  const [isSaving, setIsSaving] = useState(false);
   //const data = generatePredictions(meetings);
 
   const handleViewChange = (newView: ViewMode) => {
@@ -98,41 +99,123 @@ export function DayPredictions({
     };
   };
 
+  const handleSaveRoi = async () => {
+    const { roi, wins, total, totalReturns, totalBets } = calculateROI();
+
+    if (!results || results.results.length === 0) {
+      alert("No results available to save ROI");
+      return;
+    }
+
+    setIsSaving(true);
+    try {
+      const response = await fetch("/api/racing/roi", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          date,
+          roi,
+          wins,
+          total,
+          totalReturns,
+          totalBets,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to save ROI");
+      }
+
+      alert("ROI saved successfully");
+    } catch (error) {
+      console.error("Error saving ROI:", error);
+      alert("Failed to save ROI");
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
   const renderHeader = () => {
     const { roi, wins, total, totalReturns, totalBets, noResults } =
       calculateROI();
 
     return (
-      <>
-        <h2>
-          Predictions for{" "}
-          {new Date(date).toLocaleDateString("en-GB", {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
-        </h2>
-        <div className="flex flex-col items-center gap-6 mb-6">
-          <div className="text-center text-2xl">
-            {noResults ? (
-              <span className="text-red-500 font-bold">
-                No results found for this day
-              </span>
-            ) : (
-              <span className="font-bold">
-                £{totalBets?.toLocaleString()} into £
-                {totalReturns?.toLocaleString()} | {roi.toFixed(1)}% | {wins}/
-                {total}
-              </span>
-            )}
-          </div>
-          <div className="flex justify-center gap-4">
-            <ViewToggle view={view} onViewChange={handleViewChange} />
-            {view !== "compact" && <ExpandAllToggle />}
-          </div>
+      <div className="mb-8">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
+            Predictions for{" "}
+            {new Date(date).toLocaleDateString("en-GB", {
+              weekday: "long",
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </h2>
         </div>
-      </>
+
+        {noResults ? (
+          <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-6 text-center">
+            <span className="text-red-400 font-semibold text-lg">
+              No results found for this day
+            </span>
+          </div>
+        ) : (
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="stat-card p-4">
+                <h4 className="text-gray-400 text-sm">Total Staked</h4>
+                <div className="text-xl font-bold">
+                  £{totalBets?.toLocaleString()}
+                </div>
+              </div>
+              <div className="stat-card p-4">
+                <h4 className="text-gray-400 text-sm">Total Returns</h4>
+                <div className="text-xl font-bold">
+                  £{totalReturns?.toLocaleString()}
+                </div>
+              </div>
+              <div className="stat-card p-4">
+                <h4 className="text-gray-400 text-sm">ROI</h4>
+                <div
+                  className={`text-xl font-bold ${
+                    roi >= 0 ? "text-green-500" : "text-red-500"
+                  }`}
+                >
+                  {roi >= 0 ? "+" : ""}
+                  {roi.toFixed(1)}%
+                </div>
+              </div>
+              <div className="stat-card p-4">
+                <h4 className="text-gray-400 text-sm">Strike Rate</h4>
+                <div className="text-xl font-bold">
+                  {wins}/{total} ({((wins / total) * 100).toFixed(1)}%)
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <div className="flex gap-4">
+                <ViewToggle view={view} onViewChange={handleViewChange} />
+                {view !== "compact" && <ExpandAllToggle />}
+              </div>
+
+              <button
+                onClick={handleSaveRoi}
+                disabled={isSaving}
+                className={`px-4 py-2 rounded text-sm ${
+                  isSaving
+                    ? "bg-gray-500 cursor-not-allowed"
+                    : "bg-blue-500 hover:bg-blue-600"
+                } text-white transition-colors`}
+              >
+                {isSaving ? "Saving..." : "Save Day's ROI"}
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     );
   };
 
@@ -191,9 +274,9 @@ export function DayPredictions({
 
   if (view === "compact") {
     return (
-      <div className="day-predictions space-y-6">
+      <div className="container day-predictions space-y-6">
         {renderHeader()}
-        <div className="container space-y-6">
+        <div className=" space-y-6">
           {meetings.map((meeting) => (
             <div key={meeting.venue} className="rounded-lg shadow-sm p-4">
               <div className="border-b pb-2 mb-4">

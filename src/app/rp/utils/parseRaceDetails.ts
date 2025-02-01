@@ -46,7 +46,7 @@ export async function parseRaceDetails(
 
       // Convert fractional odds to decimal
       const [num, den] = odds.split("/").map(Number);
-      const decimalOdds = num && den ? num / den + 1 : 0;
+      const decimalOdds = num && den ? num / den + 1 : 2;
 
       // Create a bet entry for each horse at these odds
       horses.forEach((horse) => {

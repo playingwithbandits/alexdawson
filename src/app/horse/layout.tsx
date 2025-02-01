@@ -8,7 +8,7 @@ export default function HorseLayout({
   return (
     <div className="flex h-screen">
       <DashboardSidebar />
-      <main className="flex-1 overflow-y-auto p-4">{children}</main>
+      <main className="flex-1 overflow-y-auto p-[4rem]">{children}</main>
     </div>
   );
 }

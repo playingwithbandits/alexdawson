@@ -11,13 +11,11 @@ import {
 } from "recharts";
 import { COLORS, TOOLTIP_PROPS } from "./constants";
 
-const roiData = [
-  { name: "Flat", value: 12.5 },
-  { name: "Jump", value: 8.2 },
-  { name: "AW", value: 15.7 },
-];
+interface RoiChartProps {
+  data: Array<{ name: string; value: number }>;
+}
 
-export function RoiChart() {
+export function RoiChart({ data }: RoiChartProps) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -38,7 +36,7 @@ export function RoiChart() {
       <ResponsiveContainer width="100%" height={250}>
         <PieChart>
           <Pie
-            data={roiData}
+            data={data}
             cx="50%"
             cy="50%"
             innerRadius={60}
@@ -48,7 +46,7 @@ export function RoiChart() {
             dataKey="value"
             label
           >
-            {roiData.map((entry, index) => (
+            {data.map((entry, index) => (
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}

@@ -12,13 +12,11 @@ import {
 } from "recharts";
 import { TOOLTIP_PROPS, COLORS } from "./constants";
 
-const accuracyData = [
-  { name: "Win", accuracy: 68 },
-  { name: "Place", accuracy: 75 },
-  { name: "Show", accuracy: 82 },
-];
+interface AccuracyChartProps {
+  data: Array<{ name: string; accuracy: number }>;
+}
 
-export function AccuracyChart() {
+export function AccuracyChart({ data }: AccuracyChartProps) {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -37,7 +35,7 @@ export function AccuracyChart() {
     <div className="stat-card">
       <h3>Prediction Accuracy</h3>
       <ResponsiveContainer width="100%" height={250}>
-        <BarChart data={accuracyData}>
+        <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
