@@ -482,3 +482,26 @@ export interface RaceResults {
   date: string;
   results: RaceResult[];
 }
+
+export interface TipSelection {
+  horse: string;
+  comment?: string;
+  rank?: number;
+}
+
+export interface RaceTip {
+  time: string;
+  selections: TipSelection[];
+  verdict?: string;
+}
+
+export interface CourseTips {
+  course: string;
+  races: RaceTip[];
+}
+
+export interface DayTips {
+  date: string;
+  atrTips: CourseTips[];
+  timeformTips: CourseTips[];
+}

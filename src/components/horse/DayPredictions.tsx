@@ -5,7 +5,7 @@ import { MeetingAccordion } from "./MeetingAccordion";
 import { ExpansionProvider } from "./context/ExpansionContext";
 import { ExpandAllToggle } from "./controls/ExpandAllToggle";
 import { ViewToggle } from "./controls/ViewToggle";
-import { Horse, Meeting, Race, RaceResults } from "@/types/racing";
+import { DayTips, Horse, Meeting, Race, RaceResults } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
 
@@ -15,6 +15,8 @@ interface DayPredictionsProps {
   meetings: Meeting[];
   date: string;
   results: RaceResults | undefined;
+
+  tips: DayTips | null;
 }
 
 const normalizeTime = (time: string) => {
@@ -31,6 +33,7 @@ export function DayPredictions({
   meetings,
   date,
   results,
+  tips,
 }: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [view, setView] = useState<ViewMode>("compact");
@@ -286,13 +289,14 @@ export function DayPredictions({
                   {meeting.going}
                 </p>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 {meeting.races.map((race) => (
                   <CompactRaceRow
                     key={race.time}
                     race={race}
                     meeting={meeting}
                     results={results}
+                    tips={tips}
                   />
                 ))}
               </div>
@@ -349,13 +353,15 @@ function CompactRaceRow({
   race,
   meeting,
   results,
+  tips,
 }: {
   race: Race;
   meeting: Meeting;
   results: RaceResults | undefined;
+  tips: DayTips | null;
 }) {
   // Add helper function to normalize time format
-
+  console.log("tips", tips);
   // Get top prediction by score
   console.log("Getting top scorer for race:", race.time);
   const topScorer = race.horses.sort(
@@ -384,6 +390,35 @@ function CompactRaceRow({
   const isNap = race.raceExtraInfo?.verdict?.isNap;
   console.log("Verdict pick:", verdictPick, "Is nap:", isNap);
 
+  // Get ATR tip for this race
+  console.log("Getting ATR tip");
+  const atrTipSelections = tips?.atrTips
+    ?.flatMap((m) => m.races)
+    ?.find(
+      (r) => normalizeTime(r.time) === normalizeTime(race.time)
+    )?.selections;
+
+  const atrTipSelection = atrTipSelections?.[0]?.horse;
+  const atrTipSelectionOdds = atrTipSelection
+    ? race.bettingForecast?.find(
+        (x) => cleanName(x.horseName) === cleanName(atrTipSelection)
+      )?.decimalOdds
+    : 0;
+
+  const timeformTipSelections = tips?.timeformTips
+    ?.flatMap((m) => m.races)
+    ?.find(
+      (r) => normalizeTime(r.time) === normalizeTime(race.time)
+    )?.selections;
+
+  const timeformTipSelection = timeformTipSelections?.[0]?.horse;
+  const timeformTipSelectionOdds = timeformTipSelection
+    ? race.bettingForecast?.find(
+        (x) => cleanName(x.horseName) === cleanName(timeformTipSelection)
+      )?.decimalOdds
+    : 0;
+
+  // Find matching result for this race
   // Find matching result for this race
   console.log("Finding race result", race.time, results?.results);
   const raceResult = results?.results.find(
@@ -424,13 +459,24 @@ function CompactRaceRow({
   };
 
   // Update allTheSame check to include GG tip
-  const allTheSame = [topPrediction?.name, topScorer?.name, verdictPick]
+  const allTheSame = [
+    topPrediction?.name,
+    topScorer?.name,
+    verdictPick,
+    atrTipSelection,
+    timeformTipSelection,
+  ]
     .filter((x) => x)
     .map((name) => (name ? cleanName(name) : ""))
     .every((val, _, arr) => val === arr[0]);
 
   // Update someTheSame to include GG tip
-  const someTheSame = [topPrediction?.name, verdictPick]
+  const someTheSame = [
+    topPrediction?.name,
+    verdictPick,
+    atrTipSelection,
+    timeformTipSelection,
+  ]
     .filter((x) => x)
     .map((name) => (name ? cleanName(name) : ""))
     .some((val) => val === cleanName(topScorer?.name));
@@ -464,9 +510,19 @@ function CompactRaceRow({
   const verdictPosition = verdictPick ? getHorsePosition(verdictPick) : "";
   const verdictTrophy = getTrophy(verdictPosition);
 
+  const atrTipPosition = atrTipSelection
+    ? getHorsePosition(atrTipSelection)
+    : "";
+  const atrTipTrophy = getTrophy(atrTipPosition);
+
+  const timeformTipPosition = timeformTipSelection
+    ? getHorsePosition(timeformTipSelection)
+    : "";
+  const timeformTipTrophy = getTrophy(timeformTipPosition);
+
   return (
-    <div className="flex justify-between p-2 rounded">
-      <div className="flex gap-1">
+    <div className="flex justify-between py-1 rounded">
+      <div className="flex gap-1 w-24">
         <span className="font-semibold w-12">{race.time}</span>
         {someTheSame && (
           <span className="text-yellow-400" title="Some picks agree">
@@ -478,27 +534,56 @@ function CompactRaceRow({
             ★
           </span>
         )}
-        {someTheSame && (topScorerOdds || 0) > 8 && (
+        {someTheSame && (topScorerOdds || 0) >= 10 && (
           <span className="text-blue-400" title="High odds agreement">
             ★
           </span>
         )}
       </div>
-      <div className="w-full flex-1 grid grid-cols-4 gap-4 items-center justify-items-center">
+
+      <div className="w-full flex-1 grid grid-cols-5 gap-4 items-baseline">
+        {topScorer && (
+          <div className="flex items-center gap-2">
+            <span
+              className={`font-medium ${
+                (topScorer.score?.total?.percentage || 0) > 50
+                  ? "text-yellow-400 font-bold"
+                  : ""
+              }`}
+            >
+              {topScorer.name} {topScorerTrophy}
+              {(topScorerOdds || 0) >= 10 ? (
+                <span
+                  className={(topScorerOdds || 0) >= 10 ? "text-blue-400" : ""}
+                >
+                  {topScorerOdds}
+                </span>
+              ) : (
+                <></>
+              )}
+            </span>
+          </div>
+        )}
+
         {topPrediction && (
           <div className="flex items-center gap-2">
             <span
               className={`font-medium ${
-                predictionGap > 10 ? "text-yellow-400 font-bold" : ""
+                predictionGap >= 15 ? "text-yellow-400 font-bold" : ""
               }`}
             >
-              {topPrediction?.name} {topPredictionTrophy} (
-              {predictionGap.toFixed(1)}%){" "}
-              <span
-                className={(topPredictionOdds || 0) > 8 ? "text-blue-400" : ""}
-              >
-                {topPredictionOdds}
-              </span>
+              {topPrediction?.name} {topPredictionTrophy}
+              {(topPredictionOdds || 0) >= 10 ? (
+                <span
+                  className={
+                    (topPredictionOdds || 0) >= 10 ? "text-blue-400" : ""
+                  }
+                >
+                  {topPredictionOdds}
+                </span>
+              ) : (
+                <></>
+              )}
             </span>
           </div>
         )}
@@ -510,27 +595,52 @@ function CompactRaceRow({
               }`}
             >
               {verdictPick} {verdictTrophy}{" "}
-              <span className={(verdictOdds || 0) > 8 ? "text-blue-400" : ""}>
-                {verdictOdds}
-              </span>
+              {(verdictOdds || 0) >= 10 ? (
+                <span
+                  className={(verdictOdds || 0) >= 10 ? "text-blue-400" : ""}
+                >
+                  {verdictOdds}
+                </span>
+              ) : (
+                <></>
+              )}
+            </span>
+          </div>
+        )}
+        {atrTipSelection && (
+          <div className="flex items-center gap-2">
+            <span className="font-medium">
+              {atrTipSelection} {atrTipTrophy}{" "}
+              {(atrTipSelectionOdds || 0) >= 10 ? (
+                <span
+                  className={
+                    (atrTipSelectionOdds || 0) >= 10 ? "text-blue-400" : ""
+                  }
+                >
+                  {atrTipSelectionOdds}
+                </span>
+              ) : (
+                <></>
+              )}
             </span>
           </div>
         )}
 
-        {topScorer && (
+        {timeformTipSelection && (
           <div className="flex items-center gap-2">
-            <span
-              className={`font-medium ${
-                (topScorer.score?.total?.percentage || 0) > 50
-                  ? "text-yellow-400 font-bold"
-                  : ""
-              }`}
-            >
-              {topScorer.name} {topScorerTrophy} (
-              {topScorer.score?.total.percentage.toFixed(1)}%){" "}
-              <span className={(topScorerOdds || 0) > 8 ? "text-blue-400" : ""}>
-                {topScorerOdds}
-              </span>
+            <span className="font-medium">
+              {timeformTipSelection} {timeformTipTrophy}{" "}
+              {(timeformTipSelectionOdds || 0) >= 10 ? (
+                <span
+                  className={
+                    (timeformTipSelectionOdds || 0) >= 10 ? "text-blue-400" : ""
+                  }
+                >
+                  {timeformTipSelectionOdds}
+                </span>
+              ) : (
+                <></>
+              )}
             </span>
           </div>
         )}
