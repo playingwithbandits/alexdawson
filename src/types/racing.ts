@@ -457,3 +457,28 @@ export interface GoingRecord {
   wins: number;
   winRate: number;
 }
+
+export interface RaceResult {
+  time: string;
+  course: string;
+  raceId?: string;
+  distance: string;
+  prizeMoney?: string;
+  winner: {
+    name: string;
+    trainer: string;
+    jockey: string;
+  };
+  placedHorses: {
+    position: string;
+    name: string;
+  }[];
+  runnersTotal: number;
+  winningDistance?: string;
+  winningTime?: string;
+}
+
+export interface RaceResults {
+  date: string;
+  results: RaceResult[];
+}

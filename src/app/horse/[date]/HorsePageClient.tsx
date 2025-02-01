@@ -1,6 +1,6 @@
 "use client";
 
-import { Meeting } from "@/types/racing";
+import { Meeting, RaceResults } from "@/types/racing";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { DashboardContent } from "../DashboardContent";
@@ -66,13 +66,15 @@ const UK_COURSES = [
   "york",
 ];
 
+function getPageUrl(date: string) {
+  return `https://www.racingpost.com/racecards/${date}/`;
+}
+
 export function HorsePageClient({ date }: { date: string }) {
   const [meetings, setMeetings] = useState<Meeting[]>([]);
+  const [results, setResults] = useState<RaceResults | undefined>(undefined);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  const getPageUrl = (date: string) =>
-    `https://www.racingpost.com/racecards/${date}/`;
 
   useEffect(() => {
     async function loadData() {
@@ -81,6 +83,17 @@ export function HorsePageClient({ date }: { date: string }) {
           console.error("❌ No URL provided");
           setError("No URL provided");
           return;
+        }
+
+        // Try to load results first
+        try {
+          const resultsResponse = await fetch(`/api/racing/results/${date}`);
+          if (resultsResponse.ok) {
+            const resultsData = await resultsResponse.json();
+            setResults(resultsData);
+          }
+        } catch (err) {
+          console.log("No results file found for date:", date);
         }
 
         console.log("🔍 Checking cache for date:", date);
@@ -145,6 +158,7 @@ export function HorsePageClient({ date }: { date: string }) {
         setMeetings(parsedMeetings);
       } catch (err) {
         console.error("Error loading data:", err);
+        setError(err instanceof Error ? err.message : "Failed to load data");
       } finally {
         setLoading(false);
       }
@@ -164,5 +178,5 @@ export function HorsePageClient({ date }: { date: string }) {
   if (error) return <div>Error: {error}</div>;
   if (meetings.length === 0) return <div>Loading...</div>;
 
-  return <DashboardContent meetings={meetings} date={date} />;
+  return <DashboardContent meetings={meetings} date={date} results={results} />;
 }

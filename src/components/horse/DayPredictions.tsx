@@ -5,7 +5,7 @@ import { MeetingAccordion } from "./MeetingAccordion";
 import { ExpansionProvider } from "./context/ExpansionContext";
 import { ExpandAllToggle } from "./controls/ExpandAllToggle";
 import { ViewToggle } from "./controls/ViewToggle";
-import { Horse, Meeting, Race } from "@/types/racing";
+import { Horse, Meeting, Race, RaceResults } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
 
@@ -14,9 +14,24 @@ export type ViewMode = "list" | "table" | "compact";
 interface DayPredictionsProps {
   meetings: Meeting[];
   date: string;
+  results: RaceResults | undefined;
 }
 
-export function DayPredictions({ meetings, date }: DayPredictionsProps) {
+const normalizeTime = (time: string) => {
+  // Convert "1:35" to "13:35" format
+  const [hours, minutes] = time.split(":");
+  const hour = parseInt(hours);
+  if (hour < 12) {
+    return `${hour + 12}:${minutes}`;
+  }
+  return time;
+};
+
+export function DayPredictions({
+  meetings,
+  date,
+  results,
+}: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [view, setView] = useState<ViewMode>("compact");
   //const data = generatePredictions(meetings);
@@ -26,23 +41,100 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
     setView(newView);
   };
 
-  const renderHeader = () => (
-    <>
-      <h2>
-        Predictions for{" "}
-        {new Date(date).toLocaleDateString("en-GB", {
-          weekday: "long",
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })}
-      </h2>
-      <div className="flex justify-center gap-4 mb-6">
-        <ViewToggle view={view} onViewChange={handleViewChange} />
-        {view !== "compact" && <ExpandAllToggle />}
-      </div>
-    </>
-  );
+  const calculateROI = () => {
+    if (!results) return { roi: 0, wins: 0, total: 0, noResults: true };
+
+    let totalBets = 0;
+    let totalReturns = 0;
+    let wins = 0;
+
+    meetings.forEach((meeting) => {
+      meeting.races.forEach((race) => {
+        // Get top scorer for this race
+        const topScorer = race.horses.sort(
+          (a, b) =>
+            (b.score?.total?.percentage || 0) -
+            (a.score?.total?.percentage || 0)
+        )[0];
+
+        if (!topScorer) return;
+
+        // Find matching result
+        const raceResult = results.results.find(
+          (r) => normalizeTime(r.time) === normalizeTime(race.time)
+        );
+
+        if (!raceResult) return;
+
+        // Check if top scorer won
+        const isWinner =
+          cleanName(raceResult.winner.name) === cleanName(topScorer.name);
+
+        // Get odds for top scorer
+        const odds = race.bettingForecast?.find(
+          (x) => cleanName(x.horseName) === cleanName(topScorer.name)
+        )?.decimalOdds;
+
+        if (odds) {
+          totalBets += 1;
+          if (isWinner) {
+            totalReturns += odds;
+            wins += 1;
+          }
+        }
+      });
+    });
+
+    const roi =
+      totalBets > 0 ? ((totalReturns - totalBets) / totalBets) * 100 : 0;
+
+    return {
+      roi: roi,
+      wins,
+      total: totalBets,
+      totalReturns,
+      totalBets,
+      noResults: !results || results.results.length === 0,
+    };
+  };
+
+  const renderHeader = () => {
+    const { roi, wins, total, totalReturns, totalBets, noResults } =
+      calculateROI();
+
+    return (
+      <>
+        <h2>
+          Predictions for{" "}
+          {new Date(date).toLocaleDateString("en-GB", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
+        </h2>
+        <div className="flex flex-col items-center gap-6 mb-6">
+          <div className="text-center text-2xl">
+            {noResults ? (
+              <span className="text-red-500 font-bold">
+                No results found for this day
+              </span>
+            ) : (
+              <span className="font-bold">
+                £{totalBets?.toLocaleString()} into £
+                {totalReturns?.toLocaleString()} | {roi.toFixed(1)}% | {wins}/
+                {total}
+              </span>
+            )}
+          </div>
+          <div className="flex justify-center gap-4">
+            <ViewToggle view={view} onViewChange={handleViewChange} />
+            {view !== "compact" && <ExpandAllToggle />}
+          </div>
+        </div>
+      </>
+    );
+  };
 
   useEffect(() => {
     setIsMounted(true);
@@ -117,6 +209,7 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
                     key={race.time}
                     race={race}
                     meeting={meeting}
+                    results={results}
                   />
                 ))}
               </div>
@@ -169,15 +262,27 @@ export function DayPredictions({ meetings, date }: DayPredictionsProps) {
   );
 }
 
-function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
+function CompactRaceRow({
+  race,
+  meeting,
+  results,
+}: {
+  race: Race;
+  meeting: Meeting;
+  results: RaceResults | undefined;
+}) {
+  // Add helper function to normalize time format
+
   // Get top prediction by score
+  console.log("Getting top scorer for race:", race.time);
   const topScorer = race.horses.sort(
     (a, b) =>
-      (b.score?.total.percentage || 0) - (a.score?.total.percentage || 0)
+      (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
   )[0];
+  console.log("Top scorer:", topScorer?.name);
 
   // Get top model prediction
-
+  console.log("Getting model predictions");
   const sortedPredictions = Object.values(race.predictions || {}).sort(
     (a, b) => (b.score || 0) - (a.score || 0)
   );
@@ -185,23 +290,71 @@ function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
   const topPrediction = sortedPredictions[0];
   const topPredictionNum = topPrediction?.score || 0;
   const secondPredictionNum = sortedPredictions[1]?.score || 0;
+  console.log("Top prediction:", topPrediction?.name);
 
   const predictionGap = topPredictionNum - secondPredictionNum;
+  console.log("Prediction gap:", predictionGap);
 
   // Get verdict selection
+  console.log("Getting verdict selection");
   const verdictPick = race.raceExtraInfo?.verdict?.selection;
   const isNap = race.raceExtraInfo?.verdict?.isNap;
+  console.log("Verdict pick:", verdictPick, "Is nap:", isNap);
 
+  // Find matching result for this race
+  console.log("Finding race result", race.time, results?.results);
+  const raceResult = results?.results.find(
+    (r) => normalizeTime(r.time) === normalizeTime(race.time)
+  );
+  console.log("Race result found:", raceResult, !!raceResult);
+
+  // Helper function to get trophy emoji
+  const getTrophy = (position: string) => {
+    console.log("Getting trophy for position:", position);
+    switch (position.toLowerCase()) {
+      case "1st":
+        return "🏆";
+      case "2nd":
+        return "🥈";
+      case "3rd":
+        return "🥉";
+      default:
+        return "";
+    }
+  };
+
+  // Helper function to get position for a horse
+  const getHorsePosition = (horseName: string) => {
+    console.log("Getting position for horse:", horseName);
+    if (!raceResult) return "";
+
+    if (cleanName(raceResult.winner.name) === cleanName(horseName)) {
+      console.log("Horse was winner");
+      return "1st";
+    }
+
+    const placed = raceResult.placedHorses.find(
+      (h) => cleanName(h.name) === cleanName(horseName)
+    );
+    console.log("Horse placed:", placed?.position);
+    return placed?.position || "";
+  };
+
+  console.log("Checking if all picks match");
   const allTheSame = [topPrediction?.name, topScorer?.name, verdictPick]
     .filter((x) => x)
     .map((name) => (name ? cleanName(name) : ""))
     .every((val, _, arr) => val === arr[0]);
+  console.log("All picks match:", allTheSame);
 
+  console.log("Checking if some picks match");
   const someTheSame = [topPrediction?.name, verdictPick]
     .filter((x) => x)
     .map((name) => (name ? cleanName(name) : ""))
     .some((val) => val === cleanName(topScorer?.name));
+  console.log("Some picks match:", someTheSame);
 
+  console.log("Getting odds");
   const verdictOdds = race.bettingForecast?.find(
     (x) => cleanName(x.horseName) === verdictPick
   )?.decimalOdds;
@@ -213,6 +366,21 @@ function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
   const topPredictionOdds = race.bettingForecast?.find(
     (x) => x.horseName === topPrediction?.name
   )?.decimalOdds;
+
+  console.log("Verdict odds:", verdictOdds);
+  console.log("Top scorer odds:", topScorerOdds);
+  console.log("Top prediction odds:", topPredictionOdds);
+
+  // Get positions and trophies for each pick
+  console.log("Getting positions and trophies");
+  const topScorerPosition = topScorer ? getHorsePosition(topScorer.name) : "";
+  const topScorerTrophy = getTrophy(topScorerPosition);
+  const topPredictionPosition = topPrediction
+    ? getHorsePosition(topPrediction.name)
+    : "";
+  const topPredictionTrophy = getTrophy(topPredictionPosition);
+  const verdictPosition = verdictPick ? getHorsePosition(verdictPick) : "";
+  const verdictTrophy = getTrophy(verdictPosition);
 
   return (
     <div className="flex justify-between p-2 rounded">
@@ -242,7 +410,8 @@ function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
                 predictionGap > 10 ? "text-yellow-400 font-bold" : ""
               }`}
             >
-              {topPrediction?.name} ({predictionGap.toFixed(1)}%){" "}
+              {topPrediction?.name} {topPredictionTrophy} (
+              {predictionGap.toFixed(1)}%){" "}
               <span
                 className={(topPredictionOdds || 0) > 8 ? "text-blue-400" : ""}
               >
@@ -258,7 +427,7 @@ function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
                 isNap ? "text-yellow-400 font-bold" : ""
               }`}
             >
-              {verdictPick}{" "}
+              {verdictPick} {verdictTrophy}{" "}
               <span className={(verdictOdds || 0) > 8 ? "text-blue-400" : ""}>
                 {verdictOdds}
               </span>
@@ -274,7 +443,8 @@ function CompactRaceRow({ race, meeting }: { race: Race; meeting: Meeting }) {
                   : ""
               }`}
             >
-              {topScorer.name} ({topScorer.score?.total.percentage.toFixed(1)}%){" "}
+              {topScorer.name} {topScorerTrophy} (
+              {topScorer.score?.total.percentage.toFixed(1)}%){" "}
               <span className={(topScorerOdds || 0) > 8 ? "text-blue-400" : ""}>
                 {topScorerOdds}
               </span>
