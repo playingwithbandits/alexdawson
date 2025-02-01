@@ -50,7 +50,7 @@ export async function GET(
         const raceContainers = courseContainer.querySelectorAll(
           '[data-test-selector="raceCourse-container"] > .rp-raceCourse__panel__race'
         );
-        console.log(`Found ${raceContainers.length} races at ${courseName}`);
+        //console.log(`Found ${raceContainers.length} races at ${courseName}`);
 
         raceContainers.forEach((race) => {
           // Get race data from attributes
@@ -59,9 +59,9 @@ export async function GET(
             race.getAttribute("data-diffusion-coursename") || "";
           const diffusionTime = race.getAttribute("data-diffusion-racetime");
 
-          console.log(
-            `Processing race ID ${raceId} at ${diffusionCourseName} ${diffusionTime}`
-          );
+          // console.log(
+          //   `Processing race ID ${raceId} at ${diffusionCourseName} ${diffusionTime}`
+          // );
 
           const time =
             diffusionTime ||

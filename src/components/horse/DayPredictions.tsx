@@ -423,14 +423,13 @@ function CompactRaceRow({
     return placed?.position || "";
   };
 
-  console.log("Checking if all picks match");
+  // Update allTheSame check to include GG tip
   const allTheSame = [topPrediction?.name, topScorer?.name, verdictPick]
     .filter((x) => x)
     .map((name) => (name ? cleanName(name) : ""))
     .every((val, _, arr) => val === arr[0]);
-  console.log("All picks match:", allTheSame);
 
-  console.log("Checking if some picks match");
+  // Update someTheSame to include GG tip
   const someTheSame = [topPrediction?.name, verdictPick]
     .filter((x) => x)
     .map((name) => (name ? cleanName(name) : ""))
@@ -439,15 +438,15 @@ function CompactRaceRow({
 
   console.log("Getting odds");
   const verdictOdds = race.bettingForecast?.find(
-    (x) => cleanName(x.horseName) === verdictPick
+    (x) => cleanName(x.horseName) === cleanName(verdictPick || "")
   )?.decimalOdds;
 
   const topScorerOdds = race.bettingForecast?.find(
-    (x) => x.horseName === topScorer?.name
+    (x) => cleanName(x.horseName) === cleanName(topScorer?.name)
   )?.decimalOdds;
 
   const topPredictionOdds = race.bettingForecast?.find(
-    (x) => x.horseName === topPrediction?.name
+    (x) => cleanName(x.horseName) === cleanName(topPrediction?.name)
   )?.decimalOdds;
 
   console.log("Verdict odds:", verdictOdds);
@@ -470,7 +469,7 @@ function CompactRaceRow({
       <div className="flex gap-1">
         <span className="font-semibold w-12">{race.time}</span>
         {someTheSame && (
-          <span className="text-yellow-400 " title="Some picks agree">
+          <span className="text-yellow-400" title="Some picks agree">
             ★
           </span>
         )}
@@ -480,12 +479,12 @@ function CompactRaceRow({
           </span>
         )}
         {someTheSame && (topScorerOdds || 0) > 8 && (
-          <span className="text-blue-400" title="All picks agree">
+          <span className="text-blue-400" title="High odds agreement">
             ★
           </span>
         )}
       </div>
-      <div className="w-full flex-1 grid grid-cols-3 gap-4 items-center justify-items-center">
+      <div className="w-full flex-1 grid grid-cols-4 gap-4 items-center justify-items-center">
         {topPrediction && (
           <div className="flex items-center gap-2">
             <span
@@ -517,6 +516,7 @@ function CompactRaceRow({
             </span>
           </div>
         )}
+
         {topScorer && (
           <div className="flex items-center gap-2">
             <span

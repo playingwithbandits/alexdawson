@@ -1,10 +1,11 @@
 "use client";
 
-import { Meeting, RaceResults } from "@/types/racing";
+import { Meeting } from "@/types/racing";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { DashboardContent } from "../DashboardContent";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
+import { useResults } from "@/hooks/useResults";
 
 const UK_COURSES = [
   "ascot",
@@ -72,7 +73,7 @@ function getPageUrl(date: string) {
 
 export function HorsePageClient({ date }: { date: string }) {
   const [meetings, setMeetings] = useState<Meeting[]>([]);
-  const [results, setResults] = useState<RaceResults | undefined>(undefined);
+  const { data: results, isLoading: resultsLoading } = useResults(date);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -83,17 +84,6 @@ export function HorsePageClient({ date }: { date: string }) {
           console.error("❌ No URL provided");
           setError("No URL provided");
           return;
-        }
-
-        // Try to load results first
-        try {
-          const resultsResponse = await fetch(`/api/racing/results/${date}`);
-          if (resultsResponse.ok) {
-            const resultsData = await resultsResponse.json();
-            setResults(resultsData);
-          }
-        } catch (err) {
-          console.log("No results file found for date:", date);
         }
 
         console.log("🔍 Checking cache for date:", date);
@@ -167,7 +157,7 @@ export function HorsePageClient({ date }: { date: string }) {
     loadData();
   }, [date]);
 
-  if (loading) {
+  if (loading || resultsLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
         <Loader2 className="h-8 w-8 animate-spin" />
