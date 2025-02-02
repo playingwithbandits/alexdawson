@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Aldrich } from "next/font/google";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const aldrich = Aldrich({
   weight: "400",

@@ -8,6 +8,12 @@ import { ViewToggle } from "./controls/ViewToggle";
 import { DayTips, Horse, Meeting, Race, RaceResults } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import React from "react";
 
 export type ViewMode = "list" | "table" | "compact";
 
@@ -360,6 +366,8 @@ function CompactRaceRow({
   results: RaceResults | undefined;
   tips: DayTips | null;
 }) {
+  const [position, setPosition] = React.useState({ x: 0, y: 0 });
+
   // Add helper function to normalize time format
   console.log("tips", tips);
   // Get top prediction by score
@@ -459,13 +467,15 @@ function CompactRaceRow({
   };
 
   // Update allTheSame check to include GG tip
-  const allTheSame = [
+
+  const allPredictionsPicks = [
     topPrediction?.name,
     topScorer?.name,
     verdictPick,
     atrTipSelection,
     timeformTipSelection,
-  ]
+  ];
+  const allTheSame = allPredictionsPicks
     .filter((x) => x)
     .map((name) => (name ? cleanName(name) : ""))
     .every((val, _, arr) => val === arr[0]);
@@ -534,7 +544,7 @@ function CompactRaceRow({
             ★
           </span>
         )}
-        {someTheSame && (topScorerOdds || 0) >= 10 && (
+        {someTheSame && (topScorerOdds || 0) >= 6 && (
           <span className="text-blue-400" title="High odds agreement">
             ★
           </span>
@@ -552,9 +562,9 @@ function CompactRaceRow({
               }`}
             >
               {topScorer.name} {topScorerTrophy}
-              {(topScorerOdds || 0) >= 10 ? (
+              {(topScorerOdds || 0) >= 6 ? (
                 <span
-                  className={(topScorerOdds || 0) >= 10 ? "text-blue-400" : ""}
+                  className={(topScorerOdds || 0) >= 6 ? "text-blue-400" : ""}
                 >
                   {topScorerOdds}
                 </span>
@@ -573,10 +583,10 @@ function CompactRaceRow({
               }`}
             >
               {topPrediction?.name} {topPredictionTrophy}
-              {(topPredictionOdds || 0) >= 10 ? (
+              {(topPredictionOdds || 0) >= 6 ? (
                 <span
                   className={
-                    (topPredictionOdds || 0) >= 10 ? "text-blue-400" : ""
+                    (topPredictionOdds || 0) >= 6 ? "text-blue-400" : ""
                   }
                 >
                   {topPredictionOdds}
@@ -595,9 +605,9 @@ function CompactRaceRow({
               }`}
             >
               {verdictPick} {verdictTrophy}{" "}
-              {(verdictOdds || 0) >= 10 ? (
+              {(verdictOdds || 0) >= 6 ? (
                 <span
-                  className={(verdictOdds || 0) >= 10 ? "text-blue-400" : ""}
+                  className={(verdictOdds || 0) >= 6 ? "text-blue-400" : ""}
                 >
                   {verdictOdds}
                 </span>
@@ -611,10 +621,10 @@ function CompactRaceRow({
           <div className="flex items-center gap-2">
             <span className="font-medium">
               {atrTipSelection} {atrTipTrophy}{" "}
-              {(atrTipSelectionOdds || 0) >= 10 ? (
+              {(atrTipSelectionOdds || 0) >= 6 ? (
                 <span
                   className={
-                    (atrTipSelectionOdds || 0) >= 10 ? "text-blue-400" : ""
+                    (atrTipSelectionOdds || 0) >= 6 ? "text-blue-400" : ""
                   }
                 >
                   {atrTipSelectionOdds}
@@ -630,10 +640,10 @@ function CompactRaceRow({
           <div className="flex items-center gap-2">
             <span className="font-medium">
               {timeformTipSelection} {timeformTipTrophy}{" "}
-              {(timeformTipSelectionOdds || 0) >= 10 ? (
+              {(timeformTipSelectionOdds || 0) >= 6 ? (
                 <span
                   className={
-                    (timeformTipSelectionOdds || 0) >= 10 ? "text-blue-400" : ""
+                    (timeformTipSelectionOdds || 0) >= 6 ? "text-blue-400" : ""
                   }
                 >
                   {timeformTipSelectionOdds}
