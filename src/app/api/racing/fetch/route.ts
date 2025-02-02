@@ -68,7 +68,7 @@ export async function POST(request: Request) {
     const { date } = await request.json();
 
     const response = await fetch(
-      `https://www.racingpost.com/racecards/${date}`
+      `https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com/racecards/${date}`
     );
     const html = await response.text();
 

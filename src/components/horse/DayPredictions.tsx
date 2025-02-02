@@ -5,14 +5,17 @@ import { MeetingAccordion } from "./MeetingAccordion";
 import { ExpansionProvider } from "./context/ExpansionContext";
 import { ExpandAllToggle } from "./controls/ExpandAllToggle";
 import { ViewToggle } from "./controls/ViewToggle";
-import { DayTips, Horse, Meeting, Race, RaceResults } from "@/types/racing";
+import {
+  DayTips,
+  GytoTip,
+  Horse,
+  Meeting,
+  Race,
+  RaceResults,
+  NapsTableTip,
+} from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import React from "react";
 
 export type ViewMode = "list" | "table" | "compact";
@@ -23,6 +26,8 @@ interface DayPredictionsProps {
   results: RaceResults | undefined;
 
   tips: DayTips | null;
+  gytoTips: GytoTip[] | undefined;
+  napsTableTips: NapsTableTip[] | undefined;
 }
 
 const normalizeTime = (time: string) => {
@@ -40,9 +45,12 @@ export function DayPredictions({
   date,
   results,
   tips,
+  gytoTips,
+  napsTableTips,
 }: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [view, setView] = useState<ViewMode>("compact");
+
   const [isSaving, setIsSaving] = useState(false);
   //const data = generatePredictions(meetings);
 
@@ -303,6 +311,8 @@ export function DayPredictions({
                     meeting={meeting}
                     results={results}
                     tips={tips}
+                    gytoTips={gytoTips}
+                    napsTableTips={napsTableTips}
                   />
                 ))}
               </div>
@@ -360,18 +370,24 @@ function CompactRaceRow({
   meeting,
   results,
   tips,
+  gytoTips,
+  napsTableTips,
 }: {
   race: Race;
   meeting: Meeting;
+
   results: RaceResults | undefined;
   tips: DayTips | null;
+  gytoTips: GytoTip[] | undefined;
+  napsTableTips: NapsTableTip[] | undefined;
 }) {
-  const [position, setPosition] = React.useState({ x: 0, y: 0 });
-
   // Add helper function to normalize time format
   console.log("tips", tips);
+  console.log("napsTableTips", napsTableTips);
+  console.log("gytoTips", gytoTips);
   // Get top prediction by score
   console.log("Getting top scorer for race:", race.time);
+
   const topScorer = race.horses.sort(
     (a, b) =>
       (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
@@ -426,9 +442,43 @@ function CompactRaceRow({
       )?.decimalOdds
     : 0;
 
+  console.log("Getting GYTO tip", gytoTips);
+  const gytoTipSelectionObj = gytoTips?.find(
+    (r) => normalizeTime(r.time) === normalizeTime(race.time)
+  );
+  const gytoTipSelection = gytoTipSelectionObj?.horse;
+  console.log("GYTO tip selection:", gytoTipSelection);
+
+  console.log("Getting GYTO tip odds");
+  const gytoTipSelectionOdds = gytoTipSelection
+    ? race.bettingForecast?.find(
+        (x) => cleanName(x.horseName) === cleanName(gytoTipSelection)
+      )?.decimalOdds
+    : 0;
+  console.log("GYTO tip odds:", gytoTipSelectionOdds);
+
+  console.log("Getting Naps Table tip");
+  const napsTableTipSelections = napsTableTips?.filter(
+    (r) => normalizeTime(r.time) === normalizeTime(race.time)
+  );
+  console.log("Naps Table tip selections:", napsTableTipSelections);
+
+  const napsTableTipSelectionObj = napsTableTipSelections?.sort(
+    (a, b) => (parseFloat(b.score) || 0) - (parseFloat(a.score) || 0)
+  )[0];
+  const napsTableTipSelection = napsTableTipSelectionObj?.horse;
+  console.log("Naps Table tip selection:", napsTableTipSelection);
+  const napsTableTipSelectionOdds = napsTableTipSelection
+    ? race.bettingForecast?.find(
+        (x) => cleanName(x.horseName) === cleanName(napsTableTipSelection)
+      )?.decimalOdds
+    : 0;
+  console.log("Naps Table tip odds:", napsTableTipSelectionOdds);
+
   // Find matching result for this race
   // Find matching result for this race
   console.log("Finding race result", race.time, results?.results);
+
   const raceResult = results?.results.find(
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
   );
@@ -474,9 +524,12 @@ function CompactRaceRow({
     verdictPick,
     atrTipSelection,
     timeformTipSelection,
+    gytoTipSelection,
+    napsTableTipSelection,
   ];
   const allTheSame = allPredictionsPicks
     .filter((x) => x)
+
     .map((name) => (name ? cleanName(name) : ""))
     .every((val, _, arr) => val === arr[0]);
 
@@ -486,9 +539,12 @@ function CompactRaceRow({
     verdictPick,
     atrTipSelection,
     timeformTipSelection,
+    gytoTipSelection,
+    napsTableTipSelection,
   ]
     .filter((x) => x)
     .map((name) => (name ? cleanName(name) : ""))
+
     .some((val) => val === cleanName(topScorer?.name));
   console.log("Some picks match:", someTheSame);
 
@@ -530,10 +586,20 @@ function CompactRaceRow({
     : "";
   const timeformTipTrophy = getTrophy(timeformTipPosition);
 
+  const gytoTipPosition = gytoTipSelection
+    ? getHorsePosition(gytoTipSelection)
+    : "";
+  const gytoTipTrophy = getTrophy(gytoTipPosition);
+
+  const napsTableTipPosition = napsTableTipSelection
+    ? getHorsePosition(napsTableTipSelection)
+    : "";
+  const napsTableTipTrophy = getTrophy(napsTableTipPosition);
+
   return (
     <div className="flex justify-between py-1 rounded">
-      <div className="flex gap-1 w-24">
-        <span className="font-semibold w-12">{race.time}</span>
+      <div className="flex gap-[0.1rem] w-20 items-center">
+        <span className="font-semibold w-8 text-xs">{race.time}</span>
         {someTheSame && (
           <span className="text-yellow-400" title="Some picks agree">
             ★
@@ -551,7 +617,7 @@ function CompactRaceRow({
         )}
       </div>
 
-      <div className="w-full flex-1 grid grid-cols-5 gap-4 items-baseline">
+      <div className="w-full flex-1 grid grid-cols-7 gap-2 items-baseline text-sm">
         {topScorer && (
           <div className="flex items-center gap-2">
             <span
@@ -647,6 +713,42 @@ function CompactRaceRow({
                   }
                 >
                   {timeformTipSelectionOdds}
+                </span>
+              ) : (
+                <></>
+              )}
+            </span>
+          </div>
+        )}
+        {gytoTipSelection && (
+          <div className="flex items-center gap-2">
+            <span
+              className={`font-medium ${
+                gytoTipSelectionObj?.isNap ? "text-yellow-400 font-bold" : ""
+              }`}
+            >
+              {gytoTipSelection} {gytoTipTrophy}{" "}
+              {(gytoTipSelectionOdds || 0) >= 6 ? (
+                <span className="text-blue-400">{gytoTipSelectionOdds}</span>
+              ) : (
+                <></>
+              )}
+            </span>
+          </div>
+        )}
+        {napsTableTipSelection && (
+          <div className="flex items-center gap-2">
+            <span
+              className={`font-medium ${
+                parseFloat(napsTableTipSelectionObj?.score) >= 0
+                  ? "text-yellow-400 font-bold"
+                  : ""
+              }`}
+            >
+              {napsTableTipSelection} {napsTableTipTrophy}{" "}
+              {(napsTableTipSelectionOdds || 0) >= 6 ? (
+                <span className="text-blue-400">
+                  {napsTableTipSelectionOdds}
                 </span>
               ) : (
                 <></>

@@ -1,0 +1,305 @@
+{
+  "date": "2025-02-02",
+  "tips": [
+    {
+      "time": "14:25",
+      "horse": "Surrey Quest",
+      "tipster": "Newsboy",
+      "score": "34.2"
+    },
+    {
+      "time": "12:40",
+      "horse": "Phils Choice",
+      "tipster": "Steve Mullington",
+      "score": "15.5"
+    },
+    {
+      "time": "15:50",
+      "horse": "McLaurey",
+      "tipster": "Matt Polley",
+      "score": "14.2"
+    },
+    {
+      "time": "15:00",
+      "horse": "Hamsiyann",
+      "tipster": "Rob Wright",
+      "score": "12.6"
+    },
+    {
+      "time": "15:00",
+      "horse": "Hamsiyann",
+      "tipster": "The Punt",
+      "score": "12.0"
+    },
+    {
+      "time": "14:25",
+      "horse": "Surrey Quest",
+      "tipster": "The Score",
+      "score": "12.1"
+    },
+    {
+      "time": "13:10",
+      "horse": "Croke Park",
+      "tipster": "Sam Hardy",
+      "score": "11.7"
+    },
+    {
+      "time": "14:25",
+      "horse": "Inis Oirr",
+      "tipster": "The Brigadier",
+      "score": "9.8"
+    },
+    {
+      "time": "15:00",
+      "horse": "Hamsiyann",
+      "tipster": "Lee Sobot",
+      "score": "9.3"
+    },
+    {
+      "time": "14:25",
+      "horse": "Bretney",
+      "tipster": "Garry Owen",
+      "score": "7.2"
+    },
+    {
+      "time": "14:25",
+      "horse": "Inis Oirr",
+      "tipster": "Jim Delahunt",
+      "score": "4.5"
+    },
+    {
+      "time": "14:45",
+      "horse": "Backtonormal",
+      "tipster": "Melissa Jones",
+      "score": "3.4"
+    },
+    {
+      "time": "16:05",
+      "horse": "Belvedere Blast",
+      "tipster": "RP Ratings",
+      "score": "0.6"
+    },
+    {
+      "time": "14:25",
+      "horse": "Anglers Crag",
+      "tipster": "Andrew Mount",
+      "score": "-0.9"
+    },
+    {
+      "time": "13:22",
+      "horse": "Tripoli Flyer",
+      "tipster": "West Country",
+      "score": "-1.8"
+    },
+    {
+      "time": "13:10",
+      "horse": "Impaire Et Passe",
+      "tipster": "Ben Morgan",
+      "score": "-2.9"
+    },
+    {
+      "time": "14:45",
+      "horse": "Pinkerton",
+      "tipster": "Karl Hedley",
+      "score": "-4.6"
+    },
+    {
+      "time": "14:25",
+      "horse": "Inis Oirr",
+      "tipster": "Templegate",
+      "score": "-5.9"
+    },
+    {
+      "time": "13:40",
+      "horse": "Bleu De Vassy",
+      "tipster": "Ian Gaughran",
+      "score": "-8.7"
+    },
+    {
+      "time": "13:10",
+      "horse": "Better Days Ahead",
+      "tipster": "Farringdon",
+      "score": "-8.0"
+    },
+    {
+      "time": "13:40",
+      "horse": "Kopek Des Bordes",
+      "tipster": "Luke Tucker",
+      "score": "-7.8"
+    },
+    {
+      "time": "16:34",
+      "horse": "Faithfulflyer",
+      "tipster": "The North",
+      "score": "-8.0"
+    },
+    {
+      "time": "15:00",
+      "horse": "Samui",
+      "tipster": "Jason Heavey",
+      "score": "-7.7"
+    },
+    {
+      "time": "14:45",
+      "horse": "Backtonormal",
+      "tipster": "Chris Connolly",
+      "score": "-8.8"
+    },
+    {
+      "time": "14:37",
+      "horse": "Annaf",
+      "tipster": "Marlborough",
+      "score": "-11.6"
+    },
+    {
+      "time": "15:00",
+      "horse": "Top Man Tom",
+      "tipster": "Lawrence Taylor",
+      "score": "-13.7"
+    },
+    {
+      "time": "16:25",
+      "horse": "Future Prospect",
+      "tipster": "Dean Kilbryde",
+      "score": "-14.4"
+    },
+    {
+      "time": "14:25",
+      "horse": "Bretney",
+      "tipster": "Whistler",
+      "score": "-14.7"
+    },
+    {
+      "time": "14:25",
+      "horse": "Cadell",
+      "tipster": "Glendale",
+      "score": "-16.5"
+    },
+    {
+      "time": "15:12",
+      "horse": "Just Like Magic",
+      "tipster": "Rory Paddock",
+      "score": "-16.4"
+    },
+    {
+      "time": "16:25",
+      "horse": "Amen Kate",
+      "tipster": "Robin Goodfellow",
+      "score": "-19.6"
+    },
+    {
+      "time": "15:00",
+      "horse": "Hamsiyann",
+      "tipster": "Spotlight",
+      "score": "-20.2"
+    },
+    {
+      "time": "16:34",
+      "horse": "Albatala",
+      "tipster": "On The Nose",
+      "score": "-21.9"
+    },
+    {
+      "time": "14:37",
+      "horse": "Annaf",
+      "tipster": "Tipman Tips",
+      "score": "-22.9"
+    },
+    {
+      "time": "15:00",
+      "horse": "Hamsiyann",
+      "tipster": "Rockavon",
+      "score": "-24.3"
+    },
+    {
+      "time": "13:40",
+      "horse": "Kopek Des Bordes",
+      "tipster": "Mercury",
+      "score": "-24.7"
+    },
+    {
+      "time": "14:10",
+      "horse": "El Fabiolo",
+      "tipster": "The Judge",
+      "score": "-25.8"
+    },
+    {
+      "time": "14:25",
+      "horse": "King Turgeon",
+      "tipster": "Ross Shepherd",
+      "score": "-31.2"
+    },
+    {
+      "time": "14:37",
+      "horse": "Marshman",
+      "tipster": "Jon Freeman",
+      "score": "-31.0"
+    },
+    {
+      "time": "15:00",
+      "horse": "Pyffo",
+      "tipster": "Postdata",
+      "score": "-30.7"
+    },
+    {
+      "time": "14:25",
+      "horse": "Inis Oirr",
+      "tipster": "Rory Delargy",
+      "score": "-31.1"
+    },
+    {
+      "time": "15:00",
+      "horse": "Hamsiyann",
+      "tipster": "Computeform",
+      "score": "-33.0"
+    },
+    {
+      "time": "15:00",
+      "horse": "Pyffo",
+      "tipster": "The Duke",
+      "score": "-35.2"
+    },
+    {
+      "time": "16:17",
+      "horse": "Bobby On The Beat",
+      "tipster": "Moorestyle",
+      "score": "-45.1"
+    },
+    {
+      "time": "13:22",
+      "horse": "Tripoli Flyer",
+      "tipster": "Jeffrey Ross",
+      "score": "-45.8"
+    },
+    {
+      "time": "13:40",
+      "horse": "Kopek Des Bordes",
+      "tipster": "Brian Flanagan",
+      "score": "-44.8"
+    },
+    {
+      "time": "13:10",
+      "horse": "Ballyburn",
+      "tipster": "Fortunatus",
+      "score": "-48.6"
+    },
+    {
+      "time": "13:10",
+      "horse": "Ballyburn",
+      "tipster": "Adrian Wall",
+      "score": "-53.8"
+    },
+    {
+      "time": "13:32",
+      "horse": "Sun Dancer Girl",
+      "tipster": "Lambourn",
+      "score": "-58.6"
+    },
+    {
+      "time": "15:50",
+      "horse": "Strutter",
+      "tipster": "Chris Wright",
+      "score": "-56.0"
+    }
+  ]
+}

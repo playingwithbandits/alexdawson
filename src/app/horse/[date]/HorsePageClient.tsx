@@ -1,6 +1,6 @@
 "use client";
 
-import { Meeting, DayTips } from "@/types/racing";
+import { Meeting, DayTips, GytoTips, NapsTableTips } from "@/types/racing";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { DashboardContent } from "../DashboardContent";
@@ -76,6 +76,10 @@ export function HorsePageClient({ date }: { date: string }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [tips, setTips] = useState<DayTips | null>(null);
+  const [gytoTips, setGytoTips] = useState<GytoTips | undefined>(undefined);
+  const [napsTableTips, setNapsTableTips] = useState<NapsTableTips | undefined>(
+    undefined
+  );
   const { data: results, isLoading: resultsLoading } = useResults(date);
 
   useEffect(() => {
@@ -91,6 +95,16 @@ export function HorsePageClient({ date }: { date: string }) {
         const tipsResponse = await fetch(`/api/racing/atr/${date}`);
         const tipsData = await tipsResponse.json();
         setTips(tipsData);
+
+        // Fetch GYTO tips
+        const gytoResponse = await fetch(`/api/racing/gyto/${date}`);
+        const gytoData = await gytoResponse.json();
+        setGytoTips(gytoData);
+
+        // Fetch naps table tips
+        const napsResponse = await fetch(`/api/racing/naps/${date}`);
+        const napsData = await napsResponse.json();
+        setNapsTableTips(napsData);
 
         if (!data) {
           if (!getPageUrl(date) || getPageUrl(date).trim() === "") {
@@ -191,6 +205,8 @@ export function HorsePageClient({ date }: { date: string }) {
       date={date}
       results={results}
       tips={tips}
+      gytoTips={gytoTips?.tips}
+      napsTableTips={napsTableTips?.tips}
     />
   );
 }

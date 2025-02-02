@@ -75,7 +75,8 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
 
           // Extract the path from the full URL
           const raceUrl = linkElement?.href
-            ? "https://www.racingpost.com" + new URL(linkElement.href).pathname
+            ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+              new URL(linkElement.href).pathname
             : "";
 
           let details = "";

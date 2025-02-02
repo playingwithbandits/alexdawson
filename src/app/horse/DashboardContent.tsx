@@ -1,13 +1,21 @@
 "use client";
 
 import { DayPredictions } from "@/components/horse/DayPredictions";
-import { Meeting, RaceResults, DayTips } from "@/types/racing";
+import {
+  Meeting,
+  RaceResults,
+  DayTips,
+  GytoTip,
+  NapsTableTip,
+} from "@/types/racing";
 
 interface DashboardContentProps {
   meetings: Meeting[];
   date: string;
   results: RaceResults | undefined;
   tips: DayTips | null;
+  gytoTips: GytoTip[] | undefined;
+  napsTableTips: NapsTableTip[] | undefined;
 }
 
 export function DashboardContent({
@@ -15,6 +23,8 @@ export function DashboardContent({
   date,
   results,
   tips,
+  gytoTips,
+  napsTableTips,
 }: DashboardContentProps) {
   return (
     <DayPredictions
@@ -22,6 +32,8 @@ export function DashboardContent({
       date={date}
       results={results}
       tips={tips}
+      gytoTips={gytoTips}
+      napsTableTips={napsTableTips}
     />
   );
 }

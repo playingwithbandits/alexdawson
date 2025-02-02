@@ -505,3 +505,26 @@ export interface DayTips {
   atrTips: CourseTips[];
   timeformTips: CourseTips[];
 }
+
+export interface GytoTip {
+  time: string;
+  horse: string;
+  isNap: boolean;
+}
+
+export interface GytoTips {
+  date: string;
+  tips: GytoTip[];
+}
+
+export interface NapsTableTip {
+  time: string;
+  horse: string;
+  tipster: string;
+  score: string;
+}
+
+export interface NapsTableTips {
+  date: string;
+  tips: NapsTableTip[];
+}

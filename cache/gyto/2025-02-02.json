@@ -1,0 +1,180 @@
+{
+  "date": "2025-02-02",
+  "tips": [
+    {
+      "time": "13:10",
+      "horse": "Ballyburn",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Lossiemouth",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Asta La Pasta",
+      "isNap": false
+    },
+    {
+      "time": "14:37",
+      "horse": "Diligent Harry",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Hamsiyann",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Future Prospect",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Ballyburn",
+      "isNap": false
+    },
+    {
+      "time": "13:22",
+      "horse": "Tripoli Flyer",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Kopek Des Bordes",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Gaelic Warrior",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Lossiemouth",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Backtonormal",
+      "isNap": false
+    },
+    {
+      "time": "16:34",
+      "horse": "My Noble Lord",
+      "isNap": false
+    },
+    {
+      "time": "12:40",
+      "horse": "Qualimita",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Ballyburn",
+      "isNap": true
+    },
+    {
+      "time": "13:40",
+      "horse": "Kopek Des Bordes",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Gaelic Warrior",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Backtonormal",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Lossiemouth",
+      "isNap": true
+    },
+    {
+      "time": "15:50",
+      "horse": "James'S Gate",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Future Prospect",
+      "isNap": false
+    },
+    {
+      "time": "13:00",
+      "horse": "Union Island",
+      "isNap": false
+    },
+    {
+      "time": "13:32",
+      "horse": "Zoran",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Mondammej",
+      "isNap": false
+    },
+    {
+      "time": "14:37",
+      "horse": "Diligent Harry",
+      "isNap": false
+    },
+    {
+      "time": "15:12",
+      "horse": "Sunshine Soul",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "One Night Stand",
+      "isNap": false
+    },
+    {
+      "time": "16:17",
+      "horse": "Alafdhal",
+      "isNap": false
+    },
+    {
+      "time": "13:22",
+      "horse": "Tripoli Flyer",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Asta La Pasta",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Surrey Quest",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Hamsiyann",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Grain D'Oudairies",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "You Some Girl",
+      "isNap": false
+    },
+    {
+      "time": "16:34",
+      "horse": "My Noble Lord",
+      "isNap": false
+    }
+  ]
+}

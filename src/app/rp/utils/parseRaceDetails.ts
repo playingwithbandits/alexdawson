@@ -73,7 +73,8 @@ export async function parseRaceDetails(
         ".RC-runnerName.ui-link"
       ) as HTMLAnchorElement;
       const profileUrl = profileLink?.href
-        ? "https://www.racingpost.com" + new URL(profileLink.href).pathname
+        ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+          new URL(profileLink.href).pathname
         : "";
       const formObj = await fetchHorseForm(profileUrl);
 
