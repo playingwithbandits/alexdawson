@@ -93,12 +93,10 @@ export function DayPredictions({
           (x) => cleanName(x.horseName) === cleanName(topScorer.name)
         )?.decimalOdds;
 
-        if (odds) {
-          totalBets += 1;
-          if (isWinner) {
-            totalReturns += odds;
-            wins += 1;
-          }
+        totalBets += 1;
+        if (isWinner) {
+          totalReturns += odds || 2;
+          wins += 1;
         }
       });
     });

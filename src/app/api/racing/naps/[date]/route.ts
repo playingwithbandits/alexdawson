@@ -53,7 +53,10 @@ export async function GET(
 
   // Only return tips for today
   if (date !== today) {
-    return NextResponse.json(undefined);
+    return NextResponse.json({
+      date,
+      tips: [],
+    });
   }
 
   const cacheFile = path.join(CACHE_DIR, `${date}.json`);
