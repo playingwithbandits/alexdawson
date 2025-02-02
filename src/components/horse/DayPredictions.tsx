@@ -304,9 +304,10 @@ export function DayPredictions({
                 </p>
               </div>
               <div className="space-y-1">
-                {meeting.races.map((race) => (
+                {meeting.races.map((race, index) => (
                   <CompactRaceRow
                     key={race.time}
+                    index={index}
                     race={race}
                     meeting={meeting}
                     results={results}
@@ -366,6 +367,7 @@ export function DayPredictions({
 }
 
 function CompactRaceRow({
+  index,
   race,
   meeting,
   results,
@@ -373,6 +375,7 @@ function CompactRaceRow({
   gytoTips,
   napsTableTips,
 }: {
+  index: number;
   race: Race;
   meeting: Meeting;
 
@@ -597,7 +600,11 @@ function CompactRaceRow({
   const napsTableTipTrophy = getTrophy(napsTableTipPosition);
 
   return (
-    <div className="flex justify-between py-1 rounded">
+    <div
+      className={`flex justify-between p-1 rounded ${
+        index % 2 === 0 ? "bg-[#222440]" : ""
+      }`}
+    >
       <div className="flex gap-[0.1rem] w-20 items-center">
         <span className="font-semibold w-8 text-xs">{race.time}</span>
         {someTheSame && (
