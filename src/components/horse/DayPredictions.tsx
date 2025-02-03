@@ -650,7 +650,7 @@ function CompactRaceRow({
           <div className="flex items-center gap-2">
             <span
               className={`font-medium ${
-                predictionGap >= 15 ? "text-yellow-400 font-bold" : ""
+                predictionGap >= 10 ? "text-yellow-400 font-bold" : ""
               }`}
             >
               {topPrediction?.name} {topPredictionTrophy}

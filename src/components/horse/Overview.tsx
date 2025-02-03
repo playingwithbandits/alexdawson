@@ -4,6 +4,9 @@ import { useRoiData } from "@/hooks/useRoiData";
 import { Loader2 } from "lucide-react";
 import { BarChart } from "./charts/BarChart";
 import { DailyRoiChart } from "./charts/DailyRoiChart";
+import { PieChart } from "./charts/PieChart";
+import { MonthlyChart } from "./charts/MonthlyChart";
+import { DayOfWeekChart } from "./charts/DayOfWeekChart";
 import { useState } from "react";
 
 export function Overview() {
@@ -38,7 +41,7 @@ export function Overview() {
     }
   });
 
-  // Calculate summary stats
+  // Calculate summary stats from available data
   const totalStaked = filteredData.reduce(
     (sum, entry) => sum + entry.totalBets,
     0
@@ -69,15 +72,79 @@ export function Overview() {
     }))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-  // Calculate best day only
+  // Calculate best day
   const bestDay = filteredData.length
     ? filteredData.reduce((best, entry) =>
         entry.roi > best.roi ? entry : best
       )
     : null;
 
+  // Calculate monthly performance
+  const monthlyData = filteredData.reduce((acc: any[], entry) => {
+    const month = new Date(entry.date).toLocaleString("default", {
+      month: "short",
+    });
+    const existingMonth = acc.find((m) => m.month === month);
+    if (existingMonth) {
+      existingMonth.roi = (existingMonth.roi + entry.roi) / 2;
+      existingMonth.accuracy =
+        (existingMonth.accuracy + (entry.wins / entry.total) * 100) / 2;
+    } else {
+      acc.push({
+        month,
+        roi: entry.roi,
+        accuracy: (entry.wins / entry.total) * 100,
+      });
+    }
+    return acc;
+  }, []);
+
+  // Calculate day of week performance
+  const dayOfWeekData = filteredData.reduce(
+    (
+      acc: Record<
+        string,
+        { total: number; wins: number; returns: number; stakes: number }
+      >,
+      entry
+    ) => {
+      const dayOfWeek = new Date(entry.date).toLocaleString("default", {
+        weekday: "short",
+      });
+
+      if (!acc[dayOfWeek]) {
+        acc[dayOfWeek] = {
+          total: 0,
+          wins: 0,
+          returns: 0,
+          stakes: 0,
+        };
+      }
+
+      acc[dayOfWeek].total += entry.total;
+      acc[dayOfWeek].wins += entry.wins;
+      acc[dayOfWeek].returns += entry.totalReturns;
+      acc[dayOfWeek].stakes += entry.totalBets;
+
+      return acc;
+    },
+    {}
+  );
+
+  const dayOfWeekChartData = Object.entries(dayOfWeekData)
+    .map(([day, stats]) => ({
+      day,
+      roi: ((stats.returns - stats.stakes) / stats.stakes) * 100,
+      wins: stats.wins,
+      total: stats.total,
+    }))
+    .sort((a, b) => {
+      const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+      return days.indexOf(a.day) - days.indexOf(b.day);
+    });
+
   return (
-    <div className="overview ">
+    <div className="overview">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
           AI Horse Racing Predictor
@@ -206,10 +273,51 @@ export function Overview() {
         </div>
       )}
 
-      <div className="stats-grid">
-        <BarChart data={stakingData} title="Stakes vs Returns (£)" />
-        <DailyRoiChart data={dailyRoiData} title="Daily ROI (%)" />
+      {/* Charts */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="stat-card p-6">
+          <h4 className="text-gray-400 text-sm mb-4">Stakes vs Returns</h4>
+          <BarChart data={stakingData} title="Stakes vs Returns (£)" />
+        </div>
+        <div className="stat-card p-6">
+          <h4 className="text-gray-400 text-sm mb-4">ROI Trend</h4>
+          <DailyRoiChart data={dailyRoiData} title="Daily ROI (%)" />
+        </div>
       </div>
+
+      {/* Day of Week Performance */}
+      {dayOfWeekChartData.length > 0 && (
+        <div className="stat-card p-6 mb-8">
+          <h4 className="text-gray-400 text-sm mb-4">Performance by Day</h4>
+          <DayOfWeekChart data={dayOfWeekChartData} />
+          <div className="grid grid-cols-7 gap-2 mt-4 text-center">
+            {dayOfWeekChartData.map((day) => (
+              <div key={day.day} className="text-sm">
+                <div className="text-gray-400">{day.day}</div>
+                <div className="font-medium">
+                  {((day.wins / day.total) * 100).toFixed(0)}%
+                </div>
+                <div
+                  className={`text-xs ${
+                    day.roi >= 0 ? "text-green-500" : "text-red-500"
+                  }`}
+                >
+                  {day.roi >= 0 ? "+" : ""}
+                  {day.roi.toFixed(1)}%
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Monthly Performance */}
+      {monthlyData.length > 0 && (
+        <div className="stat-card p-6 mb-8">
+          <h4 className="text-gray-400 text-sm mb-4">Monthly Performance</h4>
+          <MonthlyChart data={monthlyData} />
+        </div>
+      )}
     </div>
   );
 }
