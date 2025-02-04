@@ -1,8 +1,9 @@
 import { readFile, writeFile } from "fs/promises";
 import { join } from "path";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import { RaceResults } from "@/types/racing";
 import { JSDOM } from "jsdom";
+import fs from "fs/promises";
 
 export async function GET(
   request: Request,
@@ -174,5 +175,28 @@ export async function GET(
     console.error("Error processing results:", error);
     // Return null if there's any other error
     return NextResponse.json(null);
+  }
+}
+
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: { date: string } }
+) {
+  try {
+    const filePath = join(
+      process.cwd(),
+      "cache",
+      "results",
+      `${params.date}.txt`
+    );
+
+    await fs.unlink(filePath);
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error("Error deleting results:", error);
+    return NextResponse.json(
+      { error: "Failed to delete results" },
+      { status: 500 }
+    );
   }
 }

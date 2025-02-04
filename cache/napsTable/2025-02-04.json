@@ -1,0 +1,299 @@
+{
+  "date": "2025-02-04",
+  "tips": [
+    {
+      "time": "18:00",
+      "horse": "Beneficiary",
+      "tipster": "Newsboy",
+      "score": "31.4"
+    },
+    {
+      "time": "13:40",
+      "horse": "Frisby",
+      "tipster": "Matt Polley",
+      "score": "16.1"
+    },
+    {
+      "time": "13:40",
+      "horse": "I'm A Lumberjack",
+      "tipster": "Steve Mullington",
+      "score": "16.0"
+    },
+    {
+      "time": "14:25",
+      "horse": "Stormy Flight",
+      "tipster": "Sam Hardy",
+      "score": "10.5"
+    },
+    {
+      "time": "15:45",
+      "horse": "Heard That",
+      "tipster": "Rob Wright",
+      "score": "10.2"
+    },
+    {
+      "time": "13:55",
+      "horse": "Saint Anapolino",
+      "tipster": "The Punt",
+      "score": "9.7"
+    },
+    {
+      "time": "15:45",
+      "horse": "Peejaybee",
+      "tipster": "The Score",
+      "score": "9.8"
+    },
+    {
+      "time": "13:25",
+      "horse": "Jurancon",
+      "tipster": "The Brigadier",
+      "score": "7.6"
+    },
+    {
+      "time": "15:45",
+      "horse": "Heard That",
+      "tipster": "Lee Sobot",
+      "score": "8.0"
+    },
+    {
+      "time": "13:40",
+      "horse": "I'm A Lumberjack",
+      "tipster": "Melissa Jones",
+      "score": "5.2"
+    },
+    {
+      "time": "13:55",
+      "horse": "Saint Anapolino",
+      "tipster": "Garry Owen",
+      "score": "4.9"
+    },
+    {
+      "time": "17:00",
+      "horse": "So Grateful",
+      "tipster": "Jim Delahunt",
+      "score": "2.2"
+    },
+    {
+      "time": "14:55",
+      "horse": "Tour Ovalie",
+      "tipster": "RP Ratings",
+      "score": "2.0"
+    },
+    {
+      "time": "16:30",
+      "horse": "Saxon Star",
+      "tipster": "Farringdon",
+      "score": "-0.1"
+    },
+    {
+      "time": "16:05",
+      "horse": "Diesel Line",
+      "tipster": "West Country",
+      "score": "-2.5"
+    },
+    {
+      "time": "15:45",
+      "horse": "Concetto",
+      "tipster": "Andrew Mount",
+      "score": "-3.0"
+    },
+    {
+      "time": "13:55",
+      "horse": "Saint Anapolino",
+      "tipster": "Ben Morgan",
+      "score": "-5.0"
+    },
+    {
+      "time": "14:55",
+      "horse": "Anno Power",
+      "tipster": "Templegate",
+      "score": "-5.4"
+    },
+    {
+      "time": "14:40",
+      "horse": "Treasured Company",
+      "tipster": "Karl Hedley",
+      "score": "-6.7"
+    },
+    {
+      "time": "17:30",
+      "horse": "Streak Lightning",
+      "tipster": "Chris Connolly",
+      "score": "-6.7"
+    },
+    {
+      "time": "14:55",
+      "horse": "Anno Power",
+      "tipster": "Luke Tucker",
+      "score": "-7.9"
+    },
+    {
+      "time": "17:30",
+      "horse": "Mereside Madness",
+      "tipster": "Rory Paddock",
+      "score": "-8.6"
+    },
+    {
+      "time": "19:00",
+      "horse": "William Dewhirst",
+      "tipster": "The North",
+      "score": "-9.1"
+    },
+    {
+      "time": "15:30",
+      "horse": "Camino Rocio",
+      "tipster": "Ian Gaughran",
+      "score": "-10.9"
+    },
+    {
+      "time": "16:40",
+      "horse": "Drash On Ruby",
+      "tipster": "Jason Heavey",
+      "score": "-9.6"
+    },
+    {
+      "time": "18:30",
+      "horse": "War And Love",
+      "tipster": "Marlborough",
+      "score": "-13.4"
+    },
+    {
+      "time": "13:40",
+      "horse": "Belliano",
+      "tipster": "Glendale",
+      "score": "-15.3"
+    },
+    {
+      "time": "15:10",
+      "horse": "Rialannah",
+      "tipster": "Lawrence Taylor",
+      "score": "-15.6"
+    },
+    {
+      "time": "13:25",
+      "horse": "Jurancon",
+      "tipster": "Dean Kilbryde",
+      "score": "-16.2"
+    },
+    {
+      "time": "16:05",
+      "horse": "Diesel Line",
+      "tipster": "Whistler",
+      "score": "-16.5"
+    },
+    {
+      "time": "19:00",
+      "horse": "William Dewhirst",
+      "tipster": "Postdata",
+      "score": "-16.9"
+    },
+    {
+      "time": "14:25",
+      "horse": "The Doyen Chief",
+      "tipster": "Spotlight",
+      "score": "-19.4"
+    },
+    {
+      "time": "17:30",
+      "horse": "Bobby Joe Leg",
+      "tipster": "Jon Freeman",
+      "score": "-21.3"
+    },
+    {
+      "time": "16:30",
+      "horse": "Zivaniya",
+      "tipster": "The Judge",
+      "score": "-21.6"
+    },
+    {
+      "time": "14:10",
+      "horse": "Socialiser",
+      "tipster": "Robin Goodfellow",
+      "score": "-21.3"
+    },
+    {
+      "time": "13:25",
+      "horse": "Jurancon",
+      "tipster": "Mercury",
+      "score": "-23.2"
+    },
+    {
+      "time": "19:30",
+      "horse": "Jems Bond",
+      "tipster": "On The Nose",
+      "score": "-23.5"
+    },
+    {
+      "time": "19:00",
+      "horse": "Moon Flight",
+      "tipster": "Tipman Tips",
+      "score": "-24.5"
+    },
+    {
+      "time": "19:00",
+      "horse": "Dark Kestrel",
+      "tipster": "Rockavon",
+      "score": "-26.0"
+    },
+    {
+      "time": "16:30",
+      "horse": "Midnight Lion",
+      "tipster": "The Duke",
+      "score": "-27.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "Rock On Tommy",
+      "tipster": "Ross Shepherd",
+      "score": "-32.6"
+    },
+    {
+      "time": "15:30",
+      "horse": "Lady Pretender",
+      "tipster": "Computeform",
+      "score": "-33.2"
+    },
+    {
+      "time": "14:40",
+      "horse": "Morandi Second",
+      "tipster": "Rory Delargy",
+      "score": "-32.5"
+    },
+    {
+      "time": "17:30",
+      "horse": "Harlem Nights",
+      "tipster": "Moorestyle",
+      "score": "-45.6"
+    },
+    {
+      "time": "15:45",
+      "horse": "Concetto",
+      "tipster": "Jeffrey Ross",
+      "score": "-45.4"
+    },
+    {
+      "time": "18:30",
+      "horse": "Crack On Boys",
+      "tipster": "Fortunatus",
+      "score": "-48.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "One Horse Town",
+      "tipster": "Lambourn",
+      "score": "-53.5"
+    },
+    {
+      "time": "14:25",
+      "horse": "The Doyen Chief",
+      "tipster": "Adrian Wall",
+      "score": "-53.0"
+    },
+    {
+      "time": "17:30",
+      "horse": "Bobby Joe Leg",
+      "tipster": "Chris Wright",
+      "score": "-56.5"
+    }
+  ]
+}

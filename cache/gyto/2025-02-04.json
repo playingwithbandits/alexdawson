@@ -1,0 +1,155 @@
+{
+  "date": "2025-02-04",
+  "tips": [
+    {
+      "time": "14:55",
+      "horse": "Anno Power",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Court Cian",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Emotional Roller",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "The Doyen Chief",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Heard That",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Midnight Lion",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Henrysbrotherjack",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Anno Power",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Court Cian",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Camino Rocio",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Manuelito",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Time Patrol",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Henrysbrotherjack",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Emotional Roller",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Morandi Second",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Court Cian",
+      "isNap": true
+    },
+    {
+      "time": "15:45",
+      "horse": "Heard That",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Lady Kluck",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Manuelito",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "The Doyen Chief",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Anno Power",
+      "isNap": true
+    },
+    {
+      "time": "15:30",
+      "horse": "Camino Rocio",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Diesel Line",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Ted'S Friend",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Midnight Lion",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Time Patrol",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Blackjack",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Tomorrow Day",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Leodis Dream",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Yaahobby",
+      "isNap": false
+    }
+  ]
+}

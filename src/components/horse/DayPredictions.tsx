@@ -52,7 +52,11 @@ export function DayPredictions({
   const [view, setView] = useState<ViewMode>("compact");
 
   const [isSaving, setIsSaving] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
   //const data = generatePredictions(meetings);
+
+  const today = new Date().toISOString().split("T")[0];
+  const isToday = date === today;
 
   const handleViewChange = (newView: ViewMode) => {
     console.log("Changing view to:", newView);
@@ -152,6 +156,38 @@ export function DayPredictions({
     }
   };
 
+  const handleDeleteResults = async () => {
+    if (!results || results.results.length === 0) {
+      alert("No results available to delete");
+      return;
+    }
+
+    const confirmed = window.confirm(
+      "Are you sure you want to delete the results for this day? This action cannot be undone."
+    );
+
+    if (!confirmed) return;
+
+    setIsDeleting(true);
+    try {
+      const response = await fetch(`/api/racing/results/${date}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete results");
+      }
+
+      alert("Results deleted successfully");
+      window.location.reload(); // Refresh to show updated state
+    } catch (error) {
+      console.error("Error deleting results:", error);
+      alert("Failed to delete results");
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   const renderHeader = () => {
     const { roi, wins, total, totalReturns, totalBets, noResults } =
       calculateROI();
@@ -216,17 +252,22 @@ export function DayPredictions({
                 {view !== "compact" && <ExpandAllToggle />}
               </div>
 
-              <button
-                onClick={handleSaveRoi}
-                disabled={isSaving}
-                className={`px-4 py-2 rounded text-sm ${
-                  isSaving
-                    ? "bg-gray-500 cursor-not-allowed"
-                    : "bg-blue-500 hover:bg-blue-600"
-                } text-white transition-colors`}
-              >
-                {isSaving ? "Saving..." : "Save Day's ROI"}
-              </button>
+              <div className="flex gap-4 justify-center">
+                <button
+                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+                  onClick={handleSaveRoi}
+                  disabled={isSaving || noResults}
+                >
+                  {isSaving ? "Saving..." : "Save ROI"}
+                </button>
+                <button
+                  className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 disabled:opacity-50"
+                  onClick={handleDeleteResults}
+                  disabled={isDeleting || noResults}
+                >
+                  {isDeleting ? "Deleting..." : "Delete Results"}
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -305,6 +346,7 @@ export function DayPredictions({
                 {meeting.races.map((race, index) => (
                   <CompactRaceRow
                     key={race.time}
+                    isToday={isToday}
                     index={index}
                     race={race}
                     meeting={meeting}
@@ -365,6 +407,7 @@ export function DayPredictions({
 }
 
 function CompactRaceRow({
+  isToday,
   index,
   race,
   meeting,
@@ -373,6 +416,7 @@ function CompactRaceRow({
   gytoTips,
   napsTableTips,
 }: {
+  isToday: boolean;
   index: number;
   race: Race;
   meeting: Meeting;
@@ -534,6 +578,25 @@ function CompactRaceRow({
     .map((name) => (name ? cleanName(name) : ""))
     .every((val, _, arr) => val === arr[0]);
 
+  // Check if 3 or more picks match
+  const matchCount = [
+    topPrediction?.name,
+    verdictPick,
+    atrTipSelection,
+    timeformTipSelection,
+    gytoTipSelection,
+    napsTableTipSelection,
+  ]
+    .filter((x) => x)
+    .map((name) => (name ? cleanName(name) : ""))
+    .filter((x) => x === cleanName(topScorer?.name))
+    .reduce((count, val, _, arr) => {
+      const matches = arr.filter((x) => x === val).length;
+      return matches >= count ? matches : count;
+    }, 0);
+
+  const threeOrMoreMatch = matchCount >= 3;
+  console.log("Three or more picks match:", threeOrMoreMatch);
   // Update someTheSame to include GG tip
   const someTheSame = [
     topPrediction?.name,
@@ -610,6 +673,12 @@ function CompactRaceRow({
             ★
           </span>
         )}
+        {threeOrMoreMatch && (
+          <span className="text-yellow-400" title="Some picks agree">
+            ★
+          </span>
+        )}
+
         {allTheSame && (
           <span className="text-yellow-400" title="All picks agree">
             ★
@@ -622,7 +691,11 @@ function CompactRaceRow({
         )}
       </div>
 
-      <div className="w-full flex-1 grid grid-cols-7 gap-2 items-baseline text-sm">
+      <div
+        className={`w-full flex-1 grid ${
+          isToday ? "grid-cols-7" : "grid-cols-5"
+        } gap-2 items-baseline text-sm`}
+      >
         {topScorer && (
           <div className="flex items-center gap-2">
             <span
