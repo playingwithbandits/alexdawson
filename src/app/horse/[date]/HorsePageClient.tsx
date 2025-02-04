@@ -87,6 +87,21 @@ export function HorsePageClient({ date }: { date: string }) {
       try {
         setLoading(true);
 
+        // Check if results file exists and has content
+        const resultsResponse = await fetch(`/api/racing/results/${date}`);
+        const resultsData = await resultsResponse.json();
+
+        console.log("Results data:", resultsData);
+        if (
+          !resultsData ||
+          !resultsData.results ||
+          resultsData.results.length === 0
+        ) {
+          console.log("No results found, fetching from Racing Post...");
+          // Fetch and save results HTML
+          await fetch(`/api/racing/results/fetch?date=${date}`);
+        }
+
         // Fetch racing data
         const response = await fetch(`/api/racing?date=${date}`);
         const data = await response.json();
@@ -176,6 +191,23 @@ export function HorsePageClient({ date }: { date: string }) {
         } else {
           console.log("📦 Using cached data");
           setMeetings(data);
+        }
+
+        const earliestTime = meetings
+          ?.flatMap((meeting) => meeting.races)
+          .sort((a, b) => a.time.localeCompare(b.time))[0]?.time;
+        if (
+          !resultsData ||
+          !resultsData.results ||
+          resultsData.results.length === 0
+        ) {
+          console.log("No results found, fetching from Racing Post...");
+          // Fetch and save results HTML
+          await fetch(
+            `/api/racing/results/fetch?date=${date}${
+              earliestTime ? `&earliestTime=${earliestTime}` : ""
+            }`
+          );
         }
       } catch (err) {
         console.error("Error loading data:", err);
