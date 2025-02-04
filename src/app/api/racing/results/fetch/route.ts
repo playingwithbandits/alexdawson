@@ -18,47 +18,39 @@ function canFetchResults(date: string, earliestTime?: string): boolean {
   console.log(
     `Checking if results can be fetched for date: ${date}, earliest race: ${earliestTime}`
   );
+
   const today = new Date();
   const requestDate = new Date(date);
-  requestDate.setHours(22, 0, 0, 0); // Default cutoff time
 
-  // If date is in the future, return false
-  if (requestDate > today) {
-    console.log("Date is in the future - cannot fetch results");
+  // If date is tomorrow or later, return false
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setHours(0, 0, 0, 0);
+
+  if (requestDate >= tomorrow) {
+    console.log("Date is tomorrow or later - cannot fetch results");
     return false;
   }
 
-  // If it's today, check earliest race time if available
   if (
     requestDate.toISOString().split("T")[0] ===
     today.toISOString().split("T")[0]
   ) {
-    if (earliestTime) {
-      const [hours, minutes] = earliestTime.split(":").map(Number);
-      const raceTime = new Date();
-      raceTime.setHours(hours, minutes + 30, 0, 0); // Add 30 minutes after race time
-
-      console.log(
-        `Today's date - checking if after race time: ${earliestTime}`
-      );
-      return today >= raceTime;
-    }
-
-    // Fallback to 22:00 if no race time available
     console.log(
       `Today's date - using default 22:00 cutoff (current hour: ${today.getHours()})`
     );
     return today.getHours() >= 22;
   }
 
-  // If date is in the past, allow
   console.log("Date is in the past - can fetch results");
   return true;
 }
 
 export async function GET(request: NextRequest) {
   try {
-    const date = request.nextUrl.searchParams.get("date");
+    const date = await Promise.resolve(
+      request.nextUrl.searchParams.get("date")
+    );
     const earliestTime = request.nextUrl.searchParams.get("earliestTime");
 
     if (!date) {
@@ -86,7 +78,9 @@ export async function GET(request: NextRequest) {
     const $ = cheerio.load(html);
 
     // Extract the results container HTML
-    const resultsContainer = $('[data-test-selector="results-main-container"]');
+    const resultsContainer = $(
+      '[data-test-selector="results-items-container"]'
+    );
     const resultsHtml = resultsContainer.length
       ? resultsContainer.toString()
       : "";

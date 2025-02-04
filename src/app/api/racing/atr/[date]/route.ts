@@ -91,16 +91,19 @@ async function parseCoursePage(html: string, selector: string) {
         .text()
         .trim();
       const verdict = raceContainer.find(".panel-content p").text().trim();
-
       races.push({
         time,
         selections: [
           {
             horse: topTip,
+            comment: verdict,
+
             rank: 1,
           },
+
           {
             horse: watchOutFor,
+            comment: verdict,
             rank: 2,
           },
         ],
@@ -108,15 +111,16 @@ async function parseCoursePage(html: string, selector: string) {
       });
     } else {
       // Parse Timeform tips
+
+      const verdict = raceContainer.find(".panel-content p").text().trim();
       const selections = raceContainer
         .find(".ol--inline li a")
         .map((_, el) => ({
           horse: $(el).text().trim(),
+          comment: verdict,
           rank: _ + 1,
         }))
         .get();
-
-      const verdict = raceContainer.find(".panel-content p").text().trim();
 
       races.push({
         time,
@@ -134,8 +138,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { date: string } }
 ) {
-  console.log(`Processing request for date: ${params.date}`);
-  const date = params.date;
+  const date = await Promise.resolve(params.date);
   const cacheFile = path.join(CACHE_DIR, `${date}.json`);
 
   try {

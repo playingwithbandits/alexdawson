@@ -7,12 +7,8 @@ export async function GET(
   { params }: { params: { date: string } }
 ) {
   try {
-    const filePath = join(
-      process.cwd(),
-      "cache",
-      "racing",
-      `${params.date}.json`
-    );
+    const date = await Promise.resolve(params.date);
+    const filePath = join(process.cwd(), "cache", "racing", `${date}.json`);
     const fileContents = await readFile(filePath, "utf8");
     return NextResponse.json(JSON.parse(fileContents));
   } catch (error) {

@@ -30,7 +30,7 @@ interface DayPredictionsProps {
   napsTableTips: NapsTableTip[] | undefined;
 }
 
-const normalizeTime = (time: string) => {
+export const normalizeTime = (time: string) => {
   // Convert "1:35" to "13:35" format
   const [hours, minutes] = time.split(":");
   const hour = parseInt(hours);
@@ -467,7 +467,8 @@ function CompactRaceRow({
       (r) => normalizeTime(r.time) === normalizeTime(race.time)
     )?.selections;
 
-  const atrTipSelection = atrTipSelections?.[0]?.horse;
+  const atrTipSelectionObj = atrTipSelections?.[0];
+  const atrTipSelection = atrTipSelectionObj?.horse;
   const atrTipSelectionOdds = atrTipSelection
     ? race.bettingForecast?.find(
         (x) => cleanName(x.horseName) === cleanName(atrTipSelection)
@@ -480,7 +481,9 @@ function CompactRaceRow({
       (r) => normalizeTime(r.time) === normalizeTime(race.time)
     )?.selections;
 
-  const timeformTipSelection = timeformTipSelections?.[0]?.horse;
+  console.log("timeformTipSelections", timeformTipSelections);
+  const timeformTipSelectionObj = timeformTipSelections?.[0];
+  const timeformTipSelection = timeformTipSelectionObj?.horse;
   const timeformTipSelectionOdds = timeformTipSelection
     ? race.bettingForecast?.find(
         (x) => cleanName(x.horseName) === cleanName(timeformTipSelection)
@@ -595,8 +598,21 @@ function CompactRaceRow({
       return matches >= count ? matches : count;
     }, 0);
 
-  const threeOrMoreMatch = matchCount >= 3;
-  console.log("Three or more picks match:", threeOrMoreMatch);
+  const threeOrMoreMatch = matchCount >= 2;
+  console.log(
+    "Three or more picks match:",
+    topScorer?.name,
+    matchCount,
+    [
+      topPrediction?.name,
+      verdictPick,
+      atrTipSelection,
+      timeformTipSelection,
+      gytoTipSelection,
+      napsTableTipSelection,
+    ],
+    threeOrMoreMatch
+  );
   // Update someTheSame to include GG tip
   const someTheSame = [
     topPrediction?.name,
@@ -697,10 +713,13 @@ function CompactRaceRow({
         } gap-2 items-baseline text-sm`}
       >
         {topScorer && (
-          <div className="flex items-center gap-2">
+          <div
+            className="flex items-center gap-2"
+            title={"Top Scorer: " + topScorer.score?.total?.percentage}
+          >
             <span
               className={`font-medium ${
-                (topScorer.score?.total?.percentage || 0) > 50
+                (topScorer.score?.total?.percentage || 0) > 45
                   ? "text-yellow-400 font-bold"
                   : ""
               }`}
@@ -720,7 +739,15 @@ function CompactRaceRow({
         )}
 
         {topPrediction && (
-          <div className="flex items-center gap-2">
+          <div
+            className="flex items-center gap-2"
+            title={
+              "RP Prediction: " +
+              sortedPredictions
+                ?.map((x) => x.name + ":" + x.score?.toFixed(1))
+                ?.join(", ")
+            }
+          >
             <span
               className={`font-medium ${
                 predictionGap >= 10 ? "text-yellow-400 font-bold" : ""
@@ -742,7 +769,10 @@ function CompactRaceRow({
           </div>
         )}
         {verdictPick && (
-          <div className="flex items-center gap-2">
+          <div
+            className="flex items-center gap-2"
+            title={"RP Verdict: " + race.raceExtraInfo?.verdict?.comment}
+          >
             <span
               className={`font-medium ${
                 isNap ? "text-yellow-400 font-bold" : ""
@@ -762,7 +792,10 @@ function CompactRaceRow({
           </div>
         )}
         {atrTipSelection && (
-          <div className="flex items-center gap-2">
+          <div
+            className="flex items-center gap-2"
+            title={"ATR: " + atrTipSelectionObj?.comment}
+          >
             <span className="font-medium">
               {atrTipSelection} {atrTipTrophy}{" "}
               {(atrTipSelectionOdds || 0) >= 6 ? (
@@ -781,9 +814,12 @@ function CompactRaceRow({
         )}
 
         {timeformTipSelection && (
-          <div className="flex items-center gap-2">
+          <div
+            className="flex items-center gap-2"
+            title={"Timeform: " + timeformTipSelectionObj?.comment}
+          >
             <span className="font-medium">
-              {timeformTipSelection} {timeformTipTrophy}{" "}
+              {timeformTipSelectionObj?.horse} {timeformTipTrophy}{" "}
               {(timeformTipSelectionOdds || 0) >= 6 ? (
                 <span
                   className={
@@ -799,7 +835,7 @@ function CompactRaceRow({
           </div>
         )}
         {gytoTipSelection && (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2" title={"GYTP"}>
             <span
               className={`font-medium ${
                 gytoTipSelectionObj?.isNap ? "text-yellow-400 font-bold" : ""
@@ -815,7 +851,7 @@ function CompactRaceRow({
           </div>
         )}
         {napsTableTipSelection && (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2" title={"Naps Table"}>
             <span
               className={`font-medium ${
                 parseFloat(napsTableTipSelectionObj?.score) >= 0

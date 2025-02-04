@@ -48,7 +48,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { date: string } }
 ) {
-  const date = params.date;
+  const date = await Promise.resolve(params.date);
   const today = new Date().toISOString().split("T")[0];
 
   // Only return tips for today

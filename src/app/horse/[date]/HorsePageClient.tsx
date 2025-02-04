@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { DashboardContent } from "../DashboardContent";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { useResults } from "@/hooks/useResults";
+import { normalizeTime } from "@/components/horse/DayPredictions";
 
 const UK_COURSES = [
   "ascot",
@@ -137,6 +138,7 @@ export function HorsePageClient({ date }: { date: string }) {
           if (cachedData) {
             console.log("Cache hit for:", date);
             setMeetings(cachedData);
+
             return;
           }
 
@@ -191,23 +193,6 @@ export function HorsePageClient({ date }: { date: string }) {
         } else {
           console.log("📦 Using cached data");
           setMeetings(data);
-        }
-
-        const earliestTime = meetings
-          ?.flatMap((meeting) => meeting.races)
-          .sort((a, b) => a.time.localeCompare(b.time))[0]?.time;
-        if (
-          !resultsData ||
-          !resultsData.results ||
-          resultsData.results.length === 0
-        ) {
-          console.log("No results found, fetching from Racing Post...");
-          // Fetch and save results HTML
-          await fetch(
-            `/api/racing/results/fetch?date=${date}${
-              earliestTime ? `&earliestTime=${earliestTime}` : ""
-            }`
-          );
         }
       } catch (err) {
         console.error("Error loading data:", err);

@@ -10,14 +10,10 @@ export async function GET(
   { params }: { params: { date: string } }
 ) {
   try {
-    console.log("Getting results for date:", params.date);
+    const date = await Promise.resolve(params.date);
+    console.log("Getting results for date:", date);
 
-    const filePath = join(
-      process.cwd(),
-      "cache",
-      "results",
-      `${params.date}.txt`
-    );
+    const filePath = join(process.cwd(), "cache", "results", `${date}.txt`);
 
     try {
       console.log("Reading file from:", filePath);
@@ -29,7 +25,7 @@ export async function GET(
       const doc = dom.window.document;
 
       const results: RaceResults = {
-        date: params.date,
+        date: date,
         results: [],
       };
 
@@ -167,7 +163,7 @@ export async function GET(
 
       // Return empty results structure
       return NextResponse.json({
-        date: params.date,
+        date: date,
         results: [],
       });
     }
@@ -183,12 +179,8 @@ export async function DELETE(
   { params }: { params: { date: string } }
 ) {
   try {
-    const filePath = join(
-      process.cwd(),
-      "cache",
-      "results",
-      `${params.date}.txt`
-    );
+    const date = await Promise.resolve(params.date);
+    const filePath = join(process.cwd(), "cache", "results", `${date}.txt`);
 
     await fs.unlink(filePath);
     return NextResponse.json({ success: true });
