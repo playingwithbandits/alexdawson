@@ -1,0 +1,200 @@
+{
+  "date": "2025-02-05",
+  "tips": [
+    {
+      "time": "13:45",
+      "horse": "Viyanni",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Karoline Banbou",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Sa Majeste",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Jasmine Bliss",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Let'S Go Joe",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Moon Over Miami",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Viyanni",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Legionnaire Forez",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Vanderpoel",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Karoline Banbou",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Berkshire Whisper",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Bebside Banter",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Batwomen",
+      "isNap": false
+    },
+    {
+      "time": "12:55",
+      "horse": "Paggane",
+      "isNap": false
+    },
+    {
+      "time": "13:25",
+      "horse": "Mighty Oak Lad",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Sa Majeste",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Legionnaire Forez",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Karoline Banbou",
+      "isNap": true
+    },
+    {
+      "time": "15:55",
+      "horse": "The Nagger Reidy",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Doyen Flyer",
+      "isNap": false
+    },
+    {
+      "time": "13:35",
+      "horse": "Kalo Athena",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Twp Stori",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Tom Creen",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Lone Star",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Let'S Go Joe",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Bebside Banter",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Belle Montrose",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Viyanni",
+      "isNap": true
+    },
+    {
+      "time": "14:15",
+      "horse": "Jasmine Bliss",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Simple Getaway",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Vanderpoel",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Batwomen",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Enrilo",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Help Me Rhonda",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Champagne On Ice",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Berkshire Whisper",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Grenham Bay",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Moon Over Miami",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Always Waving",
+      "isNap": false
+    }
+  ]
+}

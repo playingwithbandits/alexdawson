@@ -39,7 +39,7 @@ function canFetchResults(date: string, earliestTime?: string): boolean {
     console.log(
       `Today's date - using default 22:00 cutoff (current hour: ${today.getHours()})`
     );
-    return today.getHours() >= 22;
+    return today.getHours() >= 20;
   }
 
   console.log("Date is in the past - can fetch results");
