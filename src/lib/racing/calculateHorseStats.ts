@@ -2,7 +2,7 @@ import type { FormObj, GoingRecord, HorseStats } from "@/types/racing";
 import { avg, sum } from "@/lib/utils";
 import { mapGoingCodeToType } from "./goingUtils";
 
-function getSeasonFromDate(dateStr?: string): string {
+export function getSeasonFromDate(dateStr?: string): string {
   if (!dateStr) return "unknown";
   const month = new Date(dateStr).getMonth();
   if (month >= 2 && month <= 4) return "spring";
@@ -11,7 +11,7 @@ function getSeasonFromDate(dateStr?: string): string {
   return "winter";
 }
 
-function calculateDistancePreference(
+export function calculateDistancePreference(
   avgDistance: number
 ): "sprinter" | "middle" | "stayer" {
   if (avgDistance <= 7) return "sprinter";
@@ -19,7 +19,7 @@ function calculateDistancePreference(
   return "stayer";
 }
 
-function getRaceType(formRaceCode: string | undefined) {
+export function getRaceType(formRaceCode: string | undefined) {
   if (!formRaceCode) return null;
   switch (formRaceCode) {
     case "P":
@@ -39,6 +39,72 @@ function getRaceType(formRaceCode: string | undefined) {
   }
 }
 
+const badResultCodes = ["NR", "VOI", "RR", "WDU", "REF"];
+
+function isValidOutcome(raceOutcomeCode: string | undefined): boolean {
+  if (!raceOutcomeCode) return false;
+  return !badResultCodes.includes(raceOutcomeCode);
+}
+
+export const distanceToWinnerStrToFloat = (code: string) => {
+  let result = 0;
+  if (code && code != "undefined" && code != "null") {
+    code = "" + code;
+    const evalStr = code
+      .replace("snse", "+0.05")
+      .replace("nse", "+0.1")
+      .replace("shd", "+0.2")
+      .replace("shd", "+0.2")
+      .replace("snk", "+0.25")
+      .replace("hd", "+0.25")
+      .replace("nk", "+0.3")
+      .replace("½", "+0.5")
+      .replace("⅓", "+0.33")
+      .replace("⅔", "+0.66")
+      .replace("¼", "+0.25")
+      .replace("¾", "+0.75")
+      .replace("⅕", "+0.20")
+      .replace("⅖", "+0.40")
+      .replace("⅗", "+0.60")
+      .replace("⅘", "+0.80")
+      .replace("+L", "")
+      .replace("L", "")
+      .replace("dht", "+0");
+    let evaled = null;
+    try {
+      evaled = eval(evalStr);
+    } catch (e) {
+      //console.log(e, evalStr)
+    }
+    result = parseFloat(evaled) || 0;
+  }
+  return result;
+};
+
+export function isBadDraw(
+  draw: number,
+  totalRunners: number,
+  distance: number,
+  trackConfig: string
+): boolean {
+  if (!draw || !totalRunners) return false;
+
+  const drawPercentile = (draw / totalRunners) * 100;
+
+  // Sprint races (less than 8f)
+  if (distance < 8) {
+    if (trackConfig.includes("straight")) {
+      return drawPercentile > 80; // High draws often disadvantaged
+    }
+    return trackConfig.includes("right")
+      ? drawPercentile < 20
+      : drawPercentile > 80;
+  }
+
+  // Longer races - wide draws generally disadvantaged
+  return drawPercentile > 80;
+}
+
 export function calculateHorseStats(formObj?: FormObj): HorseStats {
   if (!formObj?.form?.length) return {} as HorseStats;
 
@@ -50,8 +116,11 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       )
     : 0;
 
+  // Filter to only valid runs when calculating stats
+  const validRuns = form.filter((r) => isValidOutcome(r.raceOutcomeCode));
+
   // Calculate seasonal performance
-  const seasonalRuns = form.reduce((acc, run) => {
+  const seasonalRuns = validRuns.reduce((acc, run) => {
     const season = getSeasonFromDate(run.raceDatetime);
     if (run.raceOutcomeCode === "1") {
       acc[season] = (acc[season] || 0) + 1;
@@ -60,13 +129,13 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
   }, {} as Record<string, number>);
 
   // Calculate class progression
-  const classProgression = form
+  const classProgression = validRuns
     .map((r) => Number(r.raceClass) || 0)
     .filter(Boolean)
     .reverse();
 
   // Calculate course form
-  const courseForm = form.reduce(
+  const courseForm = validRuns.reduce(
     (acc, run) => {
       acc.runs++;
       if (run.raceOutcomeCode === "1") acc.wins++;
@@ -78,21 +147,8 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
   courseForm.winRate = (courseForm.wins / courseForm.runs) * 100;
   courseForm.placeRate = (courseForm.places / courseForm.runs) * 100;
 
-  // Calculate distance stats
-  const distanceStats = form.reduce((acc, run) => {
-    const distance = run.distanceFurlong || 0;
-    const range = `${Math.floor(distance / 2) * 2}-${
-      Math.floor(distance / 2) * 2 + 2
-    }f`;
-    if (!acc[range]) acc[range] = { runs: 0, wins: 0, winRate: 0 };
-    acc[range].runs++;
-    if (run.raceOutcomeCode === "1") acc[range].wins++;
-    acc[range].winRate = (acc[range].wins / acc[range].runs) * 100;
-    return acc;
-  }, {} as Record<string, { runs: number; wins: number; winRate: number }>);
-
   // Calculate track configuration performance
-  const trackConfigs = form.reduce((acc, run) => {
+  const trackConfigs = validRuns.reduce((acc, run) => {
     // Determine track style from course configuration
     let style = "unknown";
     const config = (run.courseComments || "").toLowerCase();
@@ -173,7 +229,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
   const trackConfigPerformance = Object.values(trackConfigs);
 
   // Calculate going performance
-  const goingPerf = form.reduce((acc, run) => {
+  const goingPerf = validRuns.reduce((acc, run) => {
     const goingCode = (run.goingTypeServicesDesc || "").toLowerCase();
     const type = mapGoingCodeToType(goingCode);
 
@@ -193,7 +249,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
   const goingPerformance = Object.values(goingPerf);
 
   // Calculate recent form trend
-  const recentResults = form
+  const recentResults = validRuns
     .slice(0, 6)
     .map((r) => parseInt(r.raceOutcomeCode || "0"))
     .filter((pos) => pos > 0);
@@ -226,7 +282,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     chase: { runs: 0, wins: 0, places: 0, winRate: 0, placeRate: 0 },
   };
 
-  form.forEach((race) => {
+  validRuns.forEach((race) => {
     const raceType = getRaceType(race.raceTypeCode);
     if (raceType) {
       raceTypeStats[raceType].runs++;
@@ -244,68 +300,118 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     }
   });
 
+  // Calculate form progression
+  const lastSixPositions = validRuns
+    .slice(0, 6)
+    .map((r) => parseInt(r.raceOutcomeCode || "0"))
+    .filter((p) => p > 0);
+
+  const positionTrend = calculatePositionTrend(lastSixPositions);
+  const averagePosition = avg(lastSixPositions);
+
+  // Calculate distance stats
+  const distances = validRuns
+    .map((r) => r.distanceFurlong || 0)
+    .filter((d) => d > 0);
+  const distancePerformance = calculateDistancePerformance(validRuns);
+
+  // Calculate class stats
+  const classes = validRuns.map((r) => r.raceClass || 0).filter((c) => c > 0);
+
+  // Calculate winning/beaten distances
+  const winningMargins = validRuns
+    .filter((r) => r.raceOutcomeCode === "1")
+    .map((r) => distanceToWinnerStrToFloat(r.winningDistance || ""));
+
+  const beatenDistances = validRuns
+    .filter((r) => r.raceOutcomeCode !== "1")
+    .map((r) => distanceToWinnerStrToFloat(r.distanceToWinner || ""));
+
+  // Calculate draw performance
+  const runsFromBadDraw = validRuns.filter((r) =>
+    isBadDraw(
+      r.draw || 0,
+      r.noOfRunners || 0,
+      r.distanceFurlong || 0,
+      r.courseComments || ""
+    )
+  );
+
+  const winsFromBadDraw = runsFromBadDraw.filter(
+    (r) => r.raceOutcomeCode === "1"
+  );
+  const positionsFromBadDraw = runsFromBadDraw
+    .map((r) => parseInt(r.raceOutcomeCode || "0"))
+    .filter((p) => p > 0);
+
   return {
     // Basic stats
-    totalStarts: form.length,
-    totalWins: form.filter((r) => r.raceOutcomeCode === "1").length,
+    totalStarts: validRuns.length,
+    totalWins: validRuns.filter((r) => r.raceOutcomeCode === "1").length,
     winRate:
-      (form.filter((r) => r.raceOutcomeCode === "1").length / form.length) *
+      (validRuns.filter((r) => r.raceOutcomeCode === "1").length /
+        validRuns.length) *
       100,
     placeRate:
-      (form.filter((r) => ["1", "2", "3"].includes(r.raceOutcomeCode || ""))
-        .length /
-        form.length) *
+      (validRuns.filter((r) =>
+        ["1", "2", "3"].includes(r.raceOutcomeCode || "")
+      ).length /
+        validRuns.length) *
       100,
-    avgEarningsPerRace: avg(form.map((r) => r.prizeSterling || 0)),
-    totalEarnings: sum(form.map((r) => r.prizeSterling || 0)),
+    avgEarningsPerRace: avg(validRuns.map((r) => r.prizeSterling || 0)),
+    totalEarnings: sum(validRuns.map((r) => r.prizeSterling || 0)),
 
     // Form trends
     recentFormTrend,
     avgPositionLastSix: avg(recentResults),
-    finishingPositions: form
+    finishingPositions: validRuns
       .slice(0, 6)
       .map((r) => parseInt(r.raceOutcomeCode || "0"))
       .filter(Boolean),
 
     // Ratings
-    bestRPR: Math.max(...form.map((r) => r.rpPostmark || 0)),
-    avgRPR: avg(form.map((r) => r.rpPostmark || 0)),
-    rprProgression: form
+    bestRPR: Math.max(...validRuns.map((r) => r.rpPostmark || 0)),
+    avgRPR: avg(validRuns.map((r) => r.rpPostmark || 0)),
+    rprProgression: validRuns
       .slice(0, 6)
       .map((r) => r.rpPostmark || 0)
       .reverse(),
-    bestTopSpeed: Math.max(...form.map((r) => r.rpTopspeed || 0)),
-    avgTopSpeed: avg(form.map((r) => r.rpTopspeed || 0)),
-    topSpeedProgression: form
+    bestTopSpeed: Math.max(...validRuns.map((r) => r.rpTopspeed || 0)),
+    avgTopSpeed: avg(validRuns.map((r) => r.rpTopspeed || 0)),
+    topSpeedProgression: validRuns
       .slice(0, 6)
       .map((r) => r.rpTopspeed || 0)
       .reverse(),
 
     // Distance
-    minDistance: Math.min(...form.map((r) => r.distanceFurlong || Infinity)),
-    maxDistance: Math.max(...form.map((r) => r.distanceFurlong || 0)),
-    avgDistance: avg(form.map((r) => r.distanceFurlong || 0)),
-    distanceProgression: form
+    minDistance: Math.min(
+      ...validRuns.map((r) => r.distanceFurlong || Infinity)
+    ),
+    maxDistance: Math.max(...validRuns.map((r) => r.distanceFurlong || 0)),
+    avgDistance: avg(validRuns.map((r) => r.distanceFurlong || 0)),
+    distanceProgression: validRuns
       .slice(0, 6)
       .map((r) => r.distanceFurlong || 0)
       .reverse(),
 
     // Weight
-    minWeight: Math.min(...form.map((r) => r.weightCarriedLbs || Infinity)),
-    maxWeight: Math.max(...form.map((r) => r.weightCarriedLbs || 0)),
-    avgWeight: avg(form.map((r) => r.weightCarriedLbs || 0)),
-    weightProgression: form
+    minWeight: Math.min(
+      ...validRuns.map((r) => r.weightCarriedLbs || Infinity)
+    ),
+    maxWeight: Math.max(...validRuns.map((r) => r.weightCarriedLbs || 0)),
+    avgWeight: avg(validRuns.map((r) => r.weightCarriedLbs || 0)),
+    weightProgression: validRuns
       .slice(0, 6)
       .map((r) => r.weightCarriedLbs || 0)
       .reverse(),
 
     // Prize money
-    highestPrize: Math.max(...form.map((r) => r.prizeSterling || 0)),
-    avgPrize: avg(form.map((r) => r.prizeSterling || 0)),
-    totalPrizeMoney: sum(form.map((r) => r.prizeSterling || 0)),
+    highestPrize: Math.max(...validRuns.map((r) => r.prizeSterling || 0)),
+    avgPrize: avg(validRuns.map((r) => r.prizeSterling || 0)),
+    totalPrizeMoney: sum(validRuns.map((r) => r.prizeSterling || 0)),
 
     // Surface stats
-    surfaceStats: form.reduce((acc, run) => {
+    surfaceStats: validRuns.reduce((acc, run) => {
       const surface = (run.courseTypeCode || "unknown").toLowerCase();
       if (!acc[surface]) {
         acc[surface] = { runs: 0, wins: 0, winRate: 0 };
@@ -317,12 +423,12 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     }, {} as Record<string, { runs: number; wins: number; winRate: number }>),
 
     // Official ratings
-    latestOR: form[0]?.officialRatingRanOff || 0,
+    latestOR: validRuns[0]?.officialRatingRanOff || 0,
     bestOfficialRating: Math.max(
-      ...form.map((r) => r.officialRatingRanOff || 0)
+      ...validRuns.map((r) => r.officialRatingRanOff || 0)
     ),
-    avgOfficialRating: avg(form.map((r) => r.officialRatingRanOff || 0)),
-    officialRatingProgression: form
+    avgOfficialRating: avg(validRuns.map((r) => r.officialRatingRanOff || 0)),
+    officialRatingProgression: validRuns
       .slice(0, 6)
       .map((r) => r.officialRatingRanOff || 0)
       .reverse(),
@@ -331,7 +437,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     goingPerformance,
     trackConfigPerformance,
     daysOffTrack,
-    racingFrequency: (form.length / (daysOffTrack || 1)) * 30, // races per month
+    racingFrequency: (validRuns.length / (daysOffTrack || 1)) * 30, // races per month
     seasonalForm: {
       spring: seasonalRuns.spring || 0,
       summer: seasonalRuns.summer || 0,
@@ -342,11 +448,107 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     avgClassLevel: avg(classProgression),
     preferredClass: Math.round(avg(classProgression)).toString(),
     courseForm,
-    optimalDistance: avg(form.map((r) => r.distanceFurlong || 0)),
+    optimalDistance: avg(validRuns.map((r) => r.distanceFurlong || 0)),
     distancePreference: calculateDistancePreference(
-      avg(form.map((r) => r.distanceFurlong || 0))
+      avg(validRuns.map((r) => r.distanceFurlong || 0))
     ),
-    distanceStats,
+    distanceStats: {
+      optimal: findOptimalDistance(validRuns),
+      range: {
+        min: Math.min(...distances),
+        max: Math.max(...distances),
+        avg: avg(distances),
+      },
+      performanceByType: distancePerformance,
+    },
     raceTypeStats,
+    formProgression: {
+      lastSixPositions,
+      positionTrend,
+      averagePosition,
+    },
+    classStats: {
+      highestClass: Math.min(...classes), // Lower number = higher class
+      lowestClass: Math.max(...classes),
+      currentClass: validRuns[0]?.raceClass || 0,
+      classProgression: classes.slice(0, 6),
+    },
+    margins: {
+      avgWinningDistance: avg(winningMargins),
+      avgBeatenDistance: avg(beatenDistances),
+      totalWinningDistance: sum(winningMargins),
+      totalBeatenDistance: sum(beatenDistances),
+      maxWinningMargin: Math.max(...winningMargins, 0),
+      maxBeatenDistance: Math.max(...beatenDistances, 0),
+    },
+    drawPerformance: {
+      winsFromBadDraw: winsFromBadDraw.length,
+      runsFromBadDraw: runsFromBadDraw.length,
+      winRateFromBadDraw:
+        (winsFromBadDraw.length / runsFromBadDraw.length) * 100 || 0,
+      avgPositionFromBadDraw: avg(positionsFromBadDraw) || 0,
+      bestPositionFromBadDraw: Math.min(...positionsFromBadDraw, Infinity),
+    },
   };
+}
+
+function calculatePositionTrend(
+  positions: number[]
+): "improving" | "declining" | "steady" {
+  if (positions.length < 3) return "steady";
+
+  const firstHalf = positions.slice(0, Math.ceil(positions.length / 2));
+  const secondHalf = positions.slice(Math.ceil(positions.length / 2));
+
+  const firstAvg = avg(firstHalf);
+  const secondAvg = avg(secondHalf);
+
+  if (secondAvg < firstAvg - 1) return "improving";
+  if (secondAvg > firstAvg + 1) return "declining";
+  return "steady";
+}
+
+function findOptimalDistance(form: FormObj["form"]): number {
+  const distancePerformances = form?.reduce((acc, race) => {
+    const distance = race.distanceFurlong || 0;
+    if (!acc[distance]) acc[distance] = { wins: 0, runs: 0 };
+    acc[distance].runs++;
+    if (race.raceOutcomeCode === "1") acc[distance].wins++;
+    return acc;
+  }, {} as Record<number, { wins: number; runs: number }>);
+
+  let bestDistance = 0;
+  let bestWinRate = 0;
+
+  Object.entries(distancePerformances || []).forEach(([distance, stats]) => {
+    const winRate = (stats.wins / stats.runs) * 100;
+    if (winRate > bestWinRate && stats.runs >= 2) {
+      bestWinRate = winRate;
+      bestDistance = Number(distance);
+    }
+  });
+
+  return bestDistance;
+}
+
+function calculateDistancePerformance(form: FormObj["form"]) {
+  const categories = {
+    sprint: { min: 0, max: 7, runs: 0, wins: 0, winRate: 0 },
+    mile: { min: 7, max: 9, runs: 0, wins: 0, winRate: 0 },
+    middle: { min: 9, max: 12, runs: 0, wins: 0, winRate: 0 },
+    staying: { min: 12, max: Infinity, runs: 0, wins: 0, winRate: 0 },
+  };
+
+  form?.forEach((race) => {
+    const distance = race.distanceFurlong || 0;
+    for (const [key, range] of Object.entries(categories)) {
+      if (distance > range.min && distance <= range.max) {
+        range.runs++;
+        if (race.raceOutcomeCode === "1") range.wins++;
+        range.winRate = (range.wins / range.runs) * 100;
+      }
+    }
+  });
+
+  return categories;
 }

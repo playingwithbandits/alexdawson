@@ -323,10 +323,13 @@ export interface HorseStats {
   optimalDistance: number;
   distancePreference: "sprinter" | "middle" | "stayer";
   distanceStats: {
-    [range: string]: {
-      runs: number;
-      wins: number;
-      winRate: number;
+    optimal: number;
+    range: { min: number; max: number; avg: number };
+    performanceByType: {
+      sprint: { runs: number; wins: number; winRate: number };
+      mile: { runs: number; wins: number; winRate: number };
+      middle: { runs: number; wins: number; winRate: number };
+      staying: { runs: number; wins: number; winRate: number };
     };
   };
   raceTypeStats?: {
@@ -358,6 +361,32 @@ export interface HorseStats {
       winRate: number;
       placeRate: number;
     };
+  };
+  formProgression: {
+    lastSixPositions: number[];
+    positionTrend: "improving" | "declining" | "steady";
+    averagePosition: number;
+  };
+  classStats: {
+    highestClass: number;
+    lowestClass: number;
+    currentClass: number;
+    classProgression: number[];
+  };
+  margins: {
+    avgWinningDistance: number;
+    avgBeatenDistance: number;
+    totalWinningDistance: number;
+    totalBeatenDistance: number;
+    maxWinningMargin: number;
+    maxBeatenDistance: number;
+  };
+  drawPerformance: {
+    winsFromBadDraw: number;
+    runsFromBadDraw: number;
+    winRateFromBadDraw: number;
+    avgPositionFromBadDraw: number;
+    bestPositionFromBadDraw: number;
   };
 }
 

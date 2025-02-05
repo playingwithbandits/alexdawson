@@ -1,5 +1,7 @@
-import { Horse, Meeting, Race, RaceStats } from "@/types/racing";
+import { Horse, HorseStats, Meeting, Race, RaceStats } from "@/types/racing";
 import { mapGoingCodeToType } from "./goingUtils";
+import { avg } from "../utils";
+import { distanceToWinnerStrToFloat } from "./calculateHorseStats";
 
 interface ScoreComponent {
   score: number;
@@ -23,6 +25,18 @@ export interface HorseScore {
     seasonal: ScoreComponent;
     connectionCombo: ScoreComponent;
     market: ScoreComponent;
+    margins: ScoreComponent;
+    formProgression: ScoreComponent;
+    classMovement: ScoreComponent;
+    trackConfig: ScoreComponent;
+    raceType: ScoreComponent;
+    surfaceAdaptability: ScoreComponent;
+    officialRating: ScoreComponent;
+    consistency: ScoreComponent;
+    layoff: ScoreComponent;
+    weightTrend: ScoreComponent;
+    prizeProgression: ScoreComponent;
+    courseDistance: ScoreComponent;
   };
 }
 
@@ -33,19 +47,40 @@ export function calculateHorseScore2(
   meetingDetails: Partial<Meeting>
 ): HorseScore {
   const weights = {
-    ratings: 1, // Compare ratings to race average and other horses
-    distance: 1, // How well distance matches horse's optimal
-    going: 1, // Performance on this going
-    form: 1, // Recent form and trends
-    course: 1, // Course form and configuration
-    class: 1, // Class level suitability
-    connections: 1, // Jockey and trainer performance
-    prize: 1, // Prize money performance
-    weight: 1, // Weight carried and allowances
-    draw: 1, // Draw bias and stall positionq
-    seasonal: 1, // Seasonal form
-    connectionCombo: 1, // Jockey and trainer combo
-    market: 1, // Market position
+    // Most important factors (0.06-0.07)
+    ratings: 0.07,
+    formProgression: 0.07,
+    officialRating: 0.07,
+
+    // Very important factors (0.05-0.06)
+    distance: 0.06,
+    going: 0.06,
+    form: 0.06,
+    classMovement: 0.06,
+    surfaceAdaptability: 0.06,
+
+    // Important factors (0.04-0.05)
+    course: 0.05,
+    class: 0.05,
+    trackConfig: 0.05,
+    raceType: 0.05,
+    consistency: 0.05,
+    courseDistance: 0.05,
+
+    // Secondary factors (0.03-0.04)
+    connections: 0.04,
+    weight: 0.04,
+    layoff: 0.04,
+    weightTrend: 0.04,
+
+    // Minor factors (0.02-0.03)
+    prize: 0.02,
+    draw: 0.02,
+    seasonal: 0.02,
+    connectionCombo: 0.02,
+    market: 0.02,
+    margins: 0.02,
+    prizeProgression: 0.02,
   };
 
   // Ratings Score (vs race average and field)
@@ -85,57 +120,86 @@ export function calculateHorseScore2(
     };
   })();
 
-  // Distance Suitability
+  // Distance Analysis
   const distanceScore = (() => {
     let score = 0;
-    const maxScore = 5;
+    const maxScore = 10;
 
-    // Perfect distance match
-    if (
-      Math.abs(
-        (horse.stats?.optimalDistance || 0) -
-          (raceStats.distanceInFurlongs || 0)
-      ) < 1
-    )
-      score += 2;
-    // Close distance match
-    else if (
-      Math.abs(
-        (horse.stats?.optimalDistance || 0) -
-          (raceStats.distanceInFurlongs || 0)
-      ) /
-        raceStats.distanceInFurlongs <
-      0.1
-    )
-      score++;
+    // Get distance stats for this range
+    const rangeStats = horse.stats?.distanceStats?.performanceByType;
+
+    // Score based on performance in distance category
+    if (rangeStats) {
+      const category =
+        raceStats.distanceInFurlongs <= 7
+          ? rangeStats.sprint
+          : raceStats.distanceInFurlongs <= 9
+          ? rangeStats.mile
+          : raceStats.distanceInFurlongs <= 12
+          ? rangeStats.middle
+          : rangeStats.staying;
+
+      if (category.winRate > 20) score += 2;
+      if (category.runs >= 5) score += 1;
+    }
 
     // Has won at this distance range
-    if (
-      horse.stats?.distanceStats?.[
-        `${Math.floor(raceStats.distanceInFurlongs || 0)}-${Math.ceil(
-          raceStats.distanceInFurlongs || 0
-        )}f`
-      ]?.winRate ||
-      0 > 0
-    )
-      score++;
+    const distanceWins =
+      horse.formObj?.form?.filter(
+        (r) =>
+          r.raceOutcomeCode === "1" &&
+          Math.abs((r.distanceFurlong || 0) - raceStats.distanceInFurlongs) <= 1
+      ).length || 0;
+    if (distanceWins > 0) score += 3;
+    if (distanceWins > 1) score += 2;
 
     // Strong win rate at this distance
-    if (
-      (horse.stats?.distanceStats?.[
-        `${Math.floor(raceStats.distanceInFurlongs || 0)}-${Math.ceil(
-          raceStats.distanceInFurlongs || 0
-        )}f`
-      ]?.winRate || 0) > 25
-    )
-      score++;
+    const distanceRuns =
+      horse.formObj?.form?.filter(
+        (r) =>
+          Math.abs((r.distanceFurlong || 0) - raceStats.distanceInFurlongs) <= 1
+      ) || [];
+    if (distanceRuns?.length >= 3) {
+      const winRate = (distanceWins / distanceRuns.length) * 100;
+      if (winRate > 25) score += 2;
+      if (winRate > 40) score += 2;
+    }
 
     // Distance within horse's proven range
+    const minDistance = horse.stats?.minDistance || 0;
+    const maxDistance = horse.stats?.maxDistance || 0;
     if (
-      raceStats.distanceInFurlongs >= raceStats.distanceRange.min &&
-      raceStats.distanceInFurlongs <= raceStats.distanceRange.max
-    )
-      score++;
+      raceStats.distanceInFurlongs >= minDistance &&
+      raceStats.distanceInFurlongs <= maxDistance
+    ) {
+      score += 1;
+      // Comfortably within range (not at extremes)
+      if (
+        raceStats.distanceInFurlongs >= minDistance + 1 &&
+        raceStats.distanceInFurlongs <= maxDistance - 1
+      ) {
+        score += 2;
+      }
+    }
+
+    // Good margins at this distance
+    const distanceMargins = horse.formObj?.form
+      ?.filter(
+        (r) =>
+          Math.abs((r.distanceFurlong || 0) - raceStats.distanceInFurlongs) <= 1
+      )
+      .map((r) => {
+        if (r.raceOutcomeCode === "1") {
+          return distanceToWinnerStrToFloat(r.winningDistance || "");
+        }
+        return -distanceToWinnerStrToFloat(r.distanceToWinner || "");
+      });
+
+    if (distanceMargins?.length && distanceMargins.length >= 3) {
+      const avgMargin = avg(distanceMargins);
+      if (avgMargin > 0) score += 2; // Net positive margins
+      if (avgMargin > 1) score += 2; // Strong positive margins
+    }
 
     return { score, maxScore, percentage: (score / maxScore) * 100 };
   })();
@@ -556,38 +620,7 @@ export function calculateHorseScore2(
   })();
 
   // Draw Analysis
-  const drawScore = (() => {
-    let score = 0;
-    const maxScore = 3;
-
-    if (horse.draw && race.drawBias) {
-      // Favorable draw based on track bias
-      const drawNum = parseInt(horse.draw);
-      const isLowDraw = drawNum <= race.runners / 3;
-      const isMiddleDraw =
-        drawNum > race.runners / 3 && drawNum <= (2 * race.runners) / 3;
-      const isHighDraw = drawNum > (2 * race.runners) / 3;
-
-      if (
-        (race.drawBias === "Low" && isLowDraw) ||
-        (race.drawBias === "Middle" && isMiddleDraw) ||
-        (race.drawBias === "High" && isHighDraw) ||
-        race.drawBias === "No Clear Bias"
-      ) {
-        score += 2;
-      }
-      // Experience from similar draw
-      const hasWonFromSimilarDraw = horse.formObj?.form?.some(
-        (f) =>
-          f.raceOutcomeCode === "1" &&
-          f.draw &&
-          Math.abs(f.draw - parseInt(horse.draw || "0")) <= 2
-      );
-      if (hasWonFromSimilarDraw) score++;
-    }
-
-    return { score, maxScore, percentage: (score / maxScore) * 100 };
-  })();
+  const drawScore = calculateDrawScore(horse.stats?.drawPerformance);
 
   // Seasonal Form
   const seasonalScore = (() => {
@@ -694,6 +727,318 @@ export function calculateHorseScore2(
     return { score, maxScore, percentage: (score / maxScore) * 100 };
   })();
 
+  // Calculate margins score
+  const marginsScore = calculateMarginsScore(horse.stats?.margins);
+
+  // Form Progression Score
+  const formProgressionScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const progression = horse.stats?.formProgression;
+    if (progression) {
+      // Improving form trend
+      if (progression.positionTrend === "improving") score += 4;
+      if (progression.positionTrend === "steady") score += 2;
+
+      // Good average position
+      if (progression.averagePosition <= 3) score += 3;
+      else if (progression.averagePosition <= 4) score += 2;
+
+      // Recent good positions
+      const goodPositions = progression.lastSixPositions.filter(
+        (p) => p <= 3
+      ).length;
+      if (goodPositions >= 3) score += 3;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Class Movement Score
+  const classMovementScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const classStats = horse.stats?.classStats;
+    if (classStats) {
+      // Proven at this level or higher
+      if (classStats.highestClass <= parseInt(race.class)) score += 3;
+
+      // Progressive through classes
+      const isProgressive = classStats.classProgression.every(
+        (c, i, arr) => i === 0 || c <= arr[i - 1]
+      );
+      if (isProgressive) score += 4;
+
+      // Well handicapped compared to best
+      if (classStats.currentClass > classStats.highestClass + 2) score += 3;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Track Configuration Score
+  const trackConfigScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const trackConfig = horse.stats?.trackConfigPerformance?.find(
+      (t) => t.style === race?.trackConfig || "unknown"
+    );
+
+    if (trackConfig) {
+      // Good win rate on this configuration
+      if (trackConfig.winRate > 25) score += 4;
+      if (trackConfig.winRate > 15) score += 2;
+
+      // Experience on this configuration
+      if (trackConfig.runs >= 5) score += 3;
+      if (trackConfig.runs >= 3) score += 1;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Race Type Score
+  const raceTypeScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    // Map race type to stats categories
+    const raceType =
+      meetingDetails?.type?.toLowerCase() === "jumps"
+        ? ["hurdle", "chase"]
+        : ["flat", "aw"];
+
+    // Combine stats for relevant categories
+    const relevantStats = raceType
+      .map(
+        (type) =>
+          horse.stats?.raceTypeStats?.[
+            type as keyof typeof horse.stats.raceTypeStats
+          ]
+      )
+      .filter(Boolean);
+
+    if (relevantStats.length > 0) {
+      // Calculate combined stats
+      const totalRuns = relevantStats.reduce(
+        (sum, stat) => sum + (stat?.runs || 0),
+        0
+      );
+      const totalWins = relevantStats.reduce(
+        (sum, stat) => sum + (stat?.wins || 0),
+        0
+      );
+      const avgWinRate = totalRuns > 0 ? (totalWins / totalRuns) * 100 : 0;
+
+      // Score based on combined performance
+      if (avgWinRate > 20) score += 3;
+      if (avgWinRate > 15) score += 2;
+      if (totalRuns >= 5) score += 2;
+
+      // Good place rate
+      const totalPlaces = relevantStats.reduce(
+        (sum, stat) => sum + (stat?.places || 0),
+        0
+      );
+      const placeRate = totalRuns > 0 ? (totalPlaces / totalRuns) * 100 : 0;
+      if (placeRate > 50) score += 3;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Surface Adaptability Score
+  const surfaceScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const surfaceStats = meetingDetails?.surface
+      ? horse.stats?.surfaceStats?.[meetingDetails?.surface?.toLowerCase()]
+      : undefined;
+    if (surfaceStats) {
+      // Strong win rate on surface
+      if (surfaceStats.winRate > 25) score += 4;
+      if (surfaceStats.winRate > 15) score += 2;
+
+      // Proven on surface
+      if (surfaceStats.runs >= 5) score += 2;
+      if (surfaceStats.wins >= 2) score += 2;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Official Rating Progression Score
+  const officialRatingScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    if (horse.stats?.officialRatingProgression) {
+      const progression = horse.stats.officialRatingProgression;
+
+      // Currently well rated vs best
+      if (progression[0] >= Math.max(...progression) - 5) score += 3;
+
+      // Progressive pattern
+      const isProgressive = progression.every(
+        (r, i, arr) => i === 0 || r >= arr[i - 1] - 3
+      );
+      if (isProgressive) score += 4;
+
+      // Well handicapped vs peak
+      const dropFromBest = Math.max(...progression) - progression[0];
+      if (dropFromBest > 5 && dropFromBest < 10) score += 3;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Consistency Score
+  const consistencyScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const validRuns = horse.formObj?.form?.slice(0, 6) || [];
+    if (validRuns.length >= 3) {
+      // Finishing positions consistency
+      const positions = validRuns
+        .map((r) => parseInt(r.raceOutcomeCode || "0"))
+        .filter((p) => p > 0);
+      const positionVariance = calculateVariance(positions);
+      if (positionVariance < 2) score += 4;
+      if (positionVariance < 4) score += 2;
+
+      // Performance level consistency
+      const ratings = validRuns
+        .map((r) => r.rpPostmark || 0)
+        .filter((r) => r > 0);
+      const ratingVariance = calculateVariance(ratings);
+      if (ratingVariance < 5) score += 4;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Layoff Performance Score
+  const layoffScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const daysOff = horse.stats?.daysOffTrack || 0;
+    const form = horse.formObj?.form || [];
+
+    // Good fresh record
+    const freshRuns = form.filter((r) => {
+      const runDaysOff = calculateDaysOff(r.raceDatetime);
+      return runDaysOff > 60 && r.raceOutcomeCode === "1";
+    });
+
+    if (freshRuns.length >= 2) score += 3;
+    if (freshRuns.length >= 1) score += 2;
+
+    // Current layoff suitability
+    if (daysOff < 30) score += 3;
+    else if (daysOff < 60 && freshRuns.length > 0) score += 2;
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Weight Trend Score
+  const weightTrendScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const weightProgression = horse.stats?.weightProgression || [];
+    if (weightProgression.length >= 3) {
+      // Progressive weight carrying
+      const isProgressive = weightProgression.every(
+        (w, i, arr) => i === 0 || Math.abs(w - arr[i - 1]) <= 3
+      );
+      if (isProgressive) score += 4;
+
+      // Current weight vs recent average
+      const recentAvg = avg(weightProgression.slice(0, 3));
+      if (horse.weight.pounds <= recentAvg) score += 3;
+      if (horse.weight.pounds <= recentAvg - 3) score += 3;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Prize Money Progression Score
+  const prizeProgressionScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const form = horse.formObj?.form || [];
+    const prizesWon = form
+      .slice(0, 6)
+      .map((r) => r.prizeSterling || 0)
+      .filter((p) => p > 0);
+
+    if (prizesWon.length >= 3) {
+      // Progressive prize money winning
+      const isProgressive = prizesWon.every(
+        (p, i, arr) => i === 0 || p >= arr[i - 1] * 0.8
+      );
+      if (isProgressive) score += 5;
+
+      // Current race prize vs average won
+      const avgPrize = avg(prizesWon);
+      const racePrize = parseInt(race.prize?.replace(/[£,]/g, "") || "0");
+      if (racePrize <= avgPrize * 1.2) score += 5;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Course and Distance Combined Score
+  const courseDistanceScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const cdRuns =
+      horse.formObj?.form?.filter(
+        (r) =>
+          r.courseName?.toLowerCase() ===
+            meetingDetails?.venue?.toLowerCase() &&
+          Math.abs((r.distanceFurlong || 0) - raceStats.distanceInFurlongs) <= 1
+      ) || [];
+
+    if (cdRuns.length > 0) {
+      // C&D wins
+      const cdWins = cdRuns.filter((r) => r.raceOutcomeCode === "1").length;
+      if (cdWins > 0) score += 4;
+      if (cdWins > 1) score += 2;
+
+      // C&D place rate
+      const cdPlaces = cdRuns.filter(
+        (r) => parseInt(r.raceOutcomeCode || "0") <= 3
+      ).length;
+      const cdPlaceRate = (cdPlaces / cdRuns.length) * 100;
+      if (cdPlaceRate > 50) score += 4;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
+  // Add helper function
+  function calculateVariance(numbers: number[]): number {
+    const mean = avg(numbers);
+    const squareDiffs = numbers.map((n) => Math.pow(n - mean, 2));
+    return avg(squareDiffs);
+  }
+
+  function calculateDaysOff(raceDate?: string): number {
+    if (!raceDate) return 0;
+    const raceTime = new Date(raceDate).getTime();
+    const now = new Date().getTime();
+    return Math.floor((now - raceTime) / (1000 * 60 * 60 * 24));
+  }
+
   // Calculate total score
   const totalScore =
     ratingsScore.score * weights.ratings +
@@ -708,7 +1053,19 @@ export function calculateHorseScore2(
     drawScore.score * weights.draw +
     seasonalScore.score * weights.seasonal +
     connectionComboScore.score * weights.connectionCombo +
-    marketScore.score * weights.market;
+    marketScore.score * weights.market +
+    marginsScore.score * weights.margins +
+    formProgressionScore.score * weights.formProgression +
+    classMovementScore.score * weights.classMovement +
+    trackConfigScore.score * weights.trackConfig +
+    raceTypeScore.score * weights.raceType +
+    surfaceScore.score * weights.surfaceAdaptability +
+    officialRatingScore.score * weights.officialRating +
+    consistencyScore.score * weights.consistency +
+    layoffScore.score * weights.layoff +
+    weightTrendScore.score * weights.weightTrend +
+    prizeProgressionScore.score * weights.prizeProgression +
+    courseDistanceScore.score * weights.courseDistance;
 
   const totalMaxScore =
     ratingsScore.maxScore * weights.ratings +
@@ -723,7 +1080,19 @@ export function calculateHorseScore2(
     drawScore.maxScore * weights.draw +
     seasonalScore.maxScore * weights.seasonal +
     connectionComboScore.maxScore * weights.connectionCombo +
-    marketScore.maxScore * weights.market;
+    marketScore.maxScore * weights.market +
+    marginsScore.maxScore * weights.margins +
+    formProgressionScore.maxScore * weights.formProgression +
+    classMovementScore.maxScore * weights.classMovement +
+    trackConfigScore.maxScore * weights.trackConfig +
+    raceTypeScore.maxScore * weights.raceType +
+    surfaceScore.maxScore * weights.surfaceAdaptability +
+    officialRatingScore.maxScore * weights.officialRating +
+    consistencyScore.maxScore * weights.consistency +
+    layoffScore.maxScore * weights.layoff +
+    weightTrendScore.maxScore * weights.weightTrend +
+    prizeProgressionScore.maxScore * weights.prizeProgression +
+    courseDistanceScore.maxScore * weights.courseDistance;
 
   return {
     total: {
@@ -745,6 +1114,57 @@ export function calculateHorseScore2(
       seasonal: seasonalScore,
       connectionCombo: connectionComboScore,
       market: marketScore,
+      margins: marginsScore,
+      formProgression: formProgressionScore,
+      classMovement: classMovementScore,
+      trackConfig: trackConfigScore,
+      raceType: raceTypeScore,
+      surfaceAdaptability: surfaceScore,
+      officialRating: officialRatingScore,
+      consistency: consistencyScore,
+      layoff: layoffScore,
+      weightTrend: weightTrendScore,
+      prizeProgression: prizeProgressionScore,
+      courseDistance: courseDistanceScore,
     },
   };
+}
+
+function calculateDrawScore(
+  drawPerf?: HorseStats["drawPerformance"]
+): ScoreComponent {
+  if (!drawPerf) return { score: 0, maxScore: 10, percentage: 0 };
+
+  let score = 0;
+  const maxScore = 10;
+
+  // Reward good performance from bad draws
+  if (drawPerf.runsFromBadDraw >= 3) {
+    if (drawPerf.winRateFromBadDraw > 25) score += 5;
+    if (drawPerf.winRateFromBadDraw > 15) score += 3;
+    if (drawPerf.avgPositionFromBadDraw < 4) score += 2;
+  }
+
+  const percentage = (score / maxScore) * 100;
+  return { score, maxScore, percentage };
+}
+
+function calculateMarginsScore(
+  margins?: HorseStats["margins"]
+): ScoreComponent {
+  if (!margins) return { score: 0, maxScore: 10, percentage: 0 };
+
+  let score = 0;
+  const maxScore = 10;
+
+  // Reward horses that win decisively
+  if (margins.avgWinningDistance > 2) score += 3;
+  if (margins.avgWinningDistance > 4) score += 2;
+
+  // Reward horses that stay close when beaten
+  if (margins.avgBeatenDistance < 3) score += 3;
+  if (margins.avgBeatenDistance < 5) score += 2;
+
+  const percentage = (score / maxScore) * 100;
+  return { score, maxScore, percentage };
 }
