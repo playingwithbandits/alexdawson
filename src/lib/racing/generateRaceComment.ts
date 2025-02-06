@@ -1,5 +1,6 @@
 import { Horse, Meeting, Race, RaceStats } from "@/types/racing";
-import { HorseScore } from "./calculateHorseScore2";
+import { GOING_REMAP } from "./goingUtils";
+import { HorseScore } from "./scores/types";
 
 export function generateRaceComment(
   topHorse: Horse,
@@ -133,14 +134,21 @@ export function generateRaceComment(
       name: topHorse?.name,
       goingStats,
       raceGoing: race.going,
+      meetingGoing: meetingDetails.going,
     });
 
-    const goingWins = goingStats?.find((g) => g.type === race.going)?.wins || 0;
-    const goingRuns = goingStats?.find((g) => g.type === race.going)?.runs || 0;
+    const raceGoingMap = GOING_REMAP[race?.going?.toLowerCase()];
+
+    const goingWins = goingStats
+      ?.flatMap((x) => (raceGoingMap.includes(x.goingCode) ? x.wins : 0))
+      .reduce((a, b) => a + b, 0);
+    const goingRuns = goingStats
+      ?.flatMap((x) => (raceGoingMap.includes(x.goingCode) ? x.runs : 0))
+      .reduce((a, b) => a + b, 0);
 
     if (goingRuns > 0) {
       if (components.going.percentage > 75) {
-        comment += `. Ground (${race.going}) looks ideal with ${goingWins} wins from ${goingRuns} starts in these conditions`;
+        comment += `. Ground (${race.going}) looks ideal with ${goingWins} wins from ${goingRuns} starts in similar conditions`;
       } else if (components.going.percentage < 40) {
         comment += `. Going is a significant concern - yet to win on ${race.going} ground from ${goingRuns} attempts`;
       }

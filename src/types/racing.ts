@@ -1,5 +1,5 @@
 import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
-import { HorseScore } from "@/lib/racing/calculateHorseScore2";
+import { HorseScore } from "@/lib/racing/scores/types";
 
 export interface Horse {
   name: string;

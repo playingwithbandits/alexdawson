@@ -11,8 +11,8 @@ import {
 import { useState } from "react";
 import { AccordionButton } from "./accordions/AccordionButton";
 import { AccordionContent } from "./accordions/AccordionContent";
-import { HorseScore } from "@/lib/racing/calculateHorseScore2";
 import { ViewMode } from "./DayPredictions";
+import { HorseScore } from "@/lib/racing/scores/types";
 
 interface HorseRowProps {
   horse: Horse;

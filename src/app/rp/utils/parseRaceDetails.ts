@@ -1,16 +1,16 @@
-import type { Race, Bet, Horse, Meeting } from "@/types/racing";
-import { calculateHorseStats } from "@/lib/racing/calculateHorseStats";
-import { calculateRaceStats } from "@/lib/racing/calculateRaceStats";
-import { fetchHorseForm } from "@/lib/racing/fetchHorseForm";
-import { fetchPredictions } from "./fetchPredictions";
 import {
   calculateDrawBias,
   TrackConfiguration,
 } from "@/lib/racing/calculateDrawBias";
-import { getTrackConfiguration } from "@/lib/racing/getTrackConfiguration";
-import { fetchRaceAccordion } from "./fetchRaceAccordion";
-import { calculateHorseScore2 } from "@/lib/racing/calculateHorseScore2";
+import { calculateHorseStats } from "@/lib/racing/calculateHorseStats";
+import { calculateRaceStats } from "@/lib/racing/calculateRaceStats";
+import { fetchHorseForm } from "@/lib/racing/fetchHorseForm";
 import { generateRaceComment } from "@/lib/racing/generateRaceComment";
+import { getTrackConfiguration } from "@/lib/racing/getTrackConfiguration";
+import { calculateHorseScore3 } from "@/lib/racing/scores/calculateHorseScore3";
+import type { Bet, Horse, Meeting, Race } from "@/types/racing";
+import { fetchPredictions } from "./fetchPredictions";
+import { fetchRaceAccordion } from "./fetchRaceAccordion";
 
 export async function parseRaceDetails(
   html: string,
@@ -267,7 +267,12 @@ export async function parseRaceDetails(
     ...result1,
     horses: horses?.map((x) => ({
       ...x,
-      score: calculateHorseScore2(x, result1, raceStats, meetingDetails),
+      score: calculateHorseScore3({
+        horse: x,
+        race: result1,
+        raceStats,
+        meetingDetails,
+      }),
     })),
   };
 

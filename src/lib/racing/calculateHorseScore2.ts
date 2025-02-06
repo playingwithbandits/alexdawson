@@ -1,7 +1,27 @@
 import { Horse, HorseStats, Meeting, Race, RaceStats } from "@/types/racing";
-import { mapGoingCodeToType } from "./goingUtils";
+import { GOING_REMAP, mapGoingCodeToType } from "./goingUtils";
 import { avg } from "../utils";
 import { distanceToWinnerStrToFloat } from "./calculateHorseStats";
+
+export const MAX_SCORES = {
+  ratings: 8, // 2 for OR, 2 for RPR, 2 for field position, 2 for top speed
+  going: 4, // 1 for wins, 1 for runs, 1 for recent form, 1 for surface adaptability
+  seasonal: 4, // 2 for seasonal form, 2 for time of year performance
+  connectionCombo: 4, // 2 for previous success, 2 for recent form with combo
+  market: 3, // 1 for market position, 2 for market confidence
+  formProgression: 10, // 4 for progression pattern, 4 for recent improvement, 2 for consistency
+  weightTrend: 10, // 4 for progressive pattern, 6 for current weight vs average
+  prize: 4,
+  weight: 4,
+  draw: 10,
+  margins: 10,
+  classMovement: 10,
+  trackConfig: 10,
+  officialRating: 10,
+  consistency: 10,
+  layoff: 10,
+  prizeProgression: 10,
+} as const;
 
 interface ScoreComponent {
   score: number;
@@ -41,54 +61,54 @@ export interface HorseScore {
   };
 }
 
+export const weights: Record<keyof HorseScore["components"], number> = {
+  // Most important factors (0.06-0.07)
+  ratings: 0.07,
+  formProgression: 0.07,
+  officialRating: 0.07,
+
+  // Very important factors (0.05-0.06)
+  distance: 0.06,
+  going: 0.06,
+  form: 0.06,
+  classMovement: 0.06,
+  surfaceAdaptability: 0.06,
+
+  // Important factors (0.04-0.05)
+  course: 0.05,
+  class: 0.05,
+  trackConfig: 0.05,
+  raceType: 0.05,
+  consistency: 0.05,
+  courseDistance: 0.05,
+
+  // Secondary factors (0.03-0.04)
+  connections: 0.04,
+  weight: 0.04,
+  layoff: 0.04,
+  weightTrend: 0.04,
+
+  // Minor factors (0.02-0.03)
+  prize: 0.02,
+  draw: 0.02,
+  seasonal: 0.02,
+  connectionCombo: 0.02,
+  market: 0.02,
+  margins: 0.02,
+  prizeProgression: 0.02,
+  sentiment: 0.06,
+};
+
 export function calculateHorseScore2(
   horse: Horse,
   race: Race,
   raceStats: RaceStats,
   meetingDetails: Partial<Meeting>
 ): HorseScore {
-  const weights = {
-    // Most important factors (0.06-0.07)
-    ratings: 0.07,
-    formProgression: 0.07,
-    officialRating: 0.07,
-
-    // Very important factors (0.05-0.06)
-    distance: 0.06,
-    going: 0.06,
-    form: 0.06,
-    classMovement: 0.06,
-    surfaceAdaptability: 0.06,
-
-    // Important factors (0.04-0.05)
-    course: 0.05,
-    class: 0.05,
-    trackConfig: 0.05,
-    raceType: 0.05,
-    consistency: 0.05,
-    courseDistance: 0.05,
-
-    // Secondary factors (0.03-0.04)
-    connections: 0.04,
-    weight: 0.04,
-    layoff: 0.04,
-    weightTrend: 0.04,
-
-    // Minor factors (0.02-0.03)
-    prize: 0.02,
-    draw: 0.02,
-    seasonal: 0.02,
-    connectionCombo: 0.02,
-    market: 0.02,
-    margins: 0.02,
-    prizeProgression: 0.02,
-    sentiment: 0.06,
-  };
-
   // Ratings Score (vs race average and field)
   const ratingsScore = (() => {
     let score = 0;
-    const maxScore = 8;
+    const maxScore = MAX_SCORES.ratings;
 
     // Better than average OR
     if (Number(horse.officialRating) > raceStats.avgOfficialRating) score++;
@@ -209,10 +229,25 @@ export function calculateHorseScore2(
   // Going Score
   const goingScore = (() => {
     let score = 0;
-    const maxScore = 6;
+    const maxScore = MAX_SCORES.going;
+
+    const raceGoingMap = race.going
+      ? GOING_REMAP[race.going?.toLowerCase()]
+      : [];
+
+    const goingStats = horse.stats?.goingPerformance;
+
+    const goingWins = goingStats
+      ?.flatMap((x) => (raceGoingMap.includes(x.goingCode) ? x.wins : 0))
+      .reduce((a, b) => a + b, 0);
+
+    const goingRuns = goingStats
+      ?.flatMap((x) => (raceGoingMap.includes(x.goingCode) ? x.runs : 0))
+      .reduce((a, b) => a + b, 0);
 
     // Get normalized going for comparison
     const raceGoing = mapGoingCodeToType(meetingDetails.going || "");
+
     const isAW =
       raceGoing.includes("standard") ||
       meetingDetails.type?.toLowerCase().includes("all-weather") ||
@@ -220,27 +255,13 @@ export function calculateHorseScore2(
       meetingDetails.surface?.toLowerCase().includes("tapeta");
 
     // Has won on this going
-    const goingWins = horse.formObj?.form?.filter(
-      (f) =>
-        f.raceOutcomeCode === "1" &&
-        f.goingTypeCode
-          ?.split("/")
-          .some((code) => mapGoingCodeToType(code).includes(raceGoing))
-    ).length;
     if (goingWins && goingWins > 0) score++;
 
     // Multiple wins on this going
     if (goingWins && goingWins > 1) score++;
 
     // Strong place record on this going
-    const goingPlaces = horse.formObj?.form?.filter(
-      (f) =>
-        parseInt(f.raceOutcomeCode || "99") <= 3 &&
-        f.goingTypeCode
-          ?.split("/")
-          .some((code) => mapGoingCodeToType(code).includes(raceGoing))
-    ).length;
-    if (goingPlaces && goingPlaces >= 3) score++;
+    if (goingRuns && goingRuns >= 3) score++;
 
     // Recent good run on this going
     const recentGoingForm = horse.formObj?.form
@@ -250,7 +271,7 @@ export function calculateHorseScore2(
           parseInt(f.raceOutcomeCode || "99") <= 4 &&
           f.goingTypeCode
             ?.split("/")
-            .some((code) => mapGoingCodeToType(code).includes(raceGoing))
+            .some((code) => raceGoingMap?.includes(code?.toLowerCase()))
       );
     if (recentGoingForm) score++;
 
@@ -627,7 +648,7 @@ export function calculateHorseScore2(
   // Seasonal Form
   const seasonalScore = (() => {
     let score = 0;
-    const maxScore = 5;
+    const maxScore = MAX_SCORES.seasonal;
 
     const currentMonth = new Date().getMonth();
     const isSpring = currentMonth >= 2 && currentMonth <= 4;
@@ -664,7 +685,7 @@ export function calculateHorseScore2(
   // Trainer/Jockey Combination
   const connectionComboScore = (() => {
     let score = 0;
-    const maxScore = 5;
+    const maxScore = MAX_SCORES.connectionCombo;
 
     // Find previous runs with same jockey combo
     const comboRuns = horse.formObj?.form?.filter(
@@ -698,7 +719,7 @@ export function calculateHorseScore2(
   // Market Support History
   const marketScore = (() => {
     let score = 0;
-    const maxScore = 5;
+    const maxScore = MAX_SCORES.market;
 
     const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
 
@@ -735,7 +756,7 @@ export function calculateHorseScore2(
   // Form Progression Score
   const formProgressionScore = (() => {
     let score = 0;
-    const maxScore = 10;
+    const maxScore = MAX_SCORES.formProgression;
 
     const progression = horse.stats?.formProgression;
     if (progression) {
@@ -760,7 +781,7 @@ export function calculateHorseScore2(
   // Class Movement Score
   const classMovementScore = (() => {
     let score = 0;
-    const maxScore = 10;
+    const maxScore = MAX_SCORES.classMovement;
 
     const classStats = horse.stats?.classStats;
     if (classStats) {
@@ -783,7 +804,7 @@ export function calculateHorseScore2(
   // Track Configuration Score
   const trackConfigScore = (() => {
     let score = 0;
-    const maxScore = 10;
+    const maxScore = MAX_SCORES.trackConfig;
 
     const trackConfig = horse.stats?.trackConfigPerformance?.find(
       (t) => t.style === race?.trackConfig || "unknown"
@@ -876,7 +897,7 @@ export function calculateHorseScore2(
   // Official Rating Progression Score
   const officialRatingScore = (() => {
     let score = 0;
-    const maxScore = 10;
+    const maxScore = MAX_SCORES.officialRating;
 
     if (horse.stats?.officialRatingProgression) {
       const progression = horse.stats.officialRatingProgression;
@@ -901,7 +922,7 @@ export function calculateHorseScore2(
   // Consistency Score
   const consistencyScore = (() => {
     let score = 0;
-    const maxScore = 10;
+    const maxScore = MAX_SCORES.consistency;
 
     const validRuns = horse.formObj?.form?.slice(0, 6) || [];
     if (validRuns.length >= 3) {
@@ -927,7 +948,7 @@ export function calculateHorseScore2(
   // Layoff Performance Score
   const layoffScore = (() => {
     let score = 0;
-    const maxScore = 10;
+    const maxScore = MAX_SCORES.layoff;
 
     const daysOff = horse.stats?.daysOffTrack || 0;
     const form = horse.formObj?.form || [];
@@ -951,7 +972,7 @@ export function calculateHorseScore2(
   // Weight Trend Score
   const weightTrendScore = (() => {
     let score = 0;
-    const maxScore = 10;
+    const maxScore = MAX_SCORES.weightTrend;
 
     const weightProgression = horse.stats?.weightProgression || [];
     if (weightProgression.length >= 3) {
@@ -973,7 +994,7 @@ export function calculateHorseScore2(
   // Prize Money Progression Score
   const prizeProgressionScore = (() => {
     let score = 0;
-    const maxScore = 10;
+    const maxScore = MAX_SCORES.prizeProgression;
 
     const form = horse.formObj?.form || [];
     const prizesWon = form

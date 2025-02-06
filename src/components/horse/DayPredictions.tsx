@@ -17,8 +17,11 @@ import {
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
 import React from "react";
+import { avg } from "@/lib/utils";
+import { RACING_SCORE_WEIGHTS } from "@/lib/racing/scores/weights";
+import { HorseScore } from "@/lib/racing/scores/types";
 
-export type ViewMode = "list" | "table" | "compact";
+export type ViewMode = "list" | "table" | "compact" | "detailed";
 
 interface DayPredictionsProps {
   meetings: Meeting[];
@@ -49,7 +52,7 @@ export function DayPredictions({
   napsTableTips,
 }: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
-  const [view, setView] = useState<ViewMode>("compact");
+  const [view, setView] = useState<ViewMode>("detailed");
 
   const [isSaving, setIsSaving] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -292,8 +295,7 @@ export function DayPredictions({
       .filter((h) => (h.score?.total?.percentage || 0) >= threshold)
       .map((horse) => ({
         horse,
-        odds: race.bettingForecast?.find((b) => b.horseName === horse.name)
-          ?.odds,
+        odds: race.bettingForecast?.find((b) => b.horseName)?.odds,
       }));
   };
 
@@ -380,6 +382,69 @@ export function DayPredictions({
       (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
     );
   });
+
+  // Add detailed view case
+  if (view === "detailed") {
+    const anExample = meetings?.flatMap((x) =>
+      x.races?.flatMap((x) => x.horses?.flatMap((x) => x.score?.components))
+    )[0];
+    const test = meetings?.flatMap((x) =>
+      x.races?.flatMap((x) => x.horses?.flatMap((x) => x.score?.components))
+    );
+
+    const tempObj = {} as Record<keyof HorseScore["components"], number>;
+
+    Object.entries(RACING_SCORE_WEIGHTS).forEach(([key, value]) => {
+      tempObj[key as keyof HorseScore["components"]] = parseFloat(
+        (
+          avg(
+            test?.flatMap((x) =>
+              key ? x?.[key as keyof HorseScore["components"]].score || 0 : 0
+            )
+          ) /
+          (anExample?.[key as keyof HorseScore["components"]]?.maxScore || 1)
+        ).toFixed(2)
+      );
+    });
+
+    console.log(
+      "SORT THIS OUT!:",
+      Object.entries(tempObj).filter(([key, value]) => value < 0.05)
+    );
+
+    return (
+      <div className="container day-predictions space-y-6">
+        {renderHeader()}
+        <div className="space-y-6">
+          {meetings.map((meeting) => (
+            <div key={meeting.venue} className="rounded-lg shadow-sm p-4">
+              <div className="border-b pb-2 mb-4">
+                <h3 className="font-bold text-lg">{meeting.venue}</h3>
+                <p className="text-sm">
+                  {meeting.races.length} races • {meeting.surface} •{" "}
+                  {meeting.going}
+                </p>
+              </div>
+              <div className="divide-y">
+                {meeting.races.map((race) => (
+                  <DetailedRaceRow
+                    key={race.time}
+                    isToday={isToday}
+                    race={race}
+                    meeting={meeting}
+                    results={results}
+                    tips={tips}
+                    gytoTips={gytoTips}
+                    napsTableTips={napsTableTips}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <ExpansionProvider>
@@ -870,6 +935,54 @@ function CompactRaceRow({
             </span>
           </div>
         )}
+      </div>
+    </div>
+  );
+}
+
+function DetailedRaceRow({
+  isToday,
+  race,
+  meeting,
+  results,
+  tips,
+  gytoTips,
+  napsTableTips,
+}: {
+  isToday: boolean;
+  race: Race;
+  meeting: Meeting;
+  results: RaceResults | undefined;
+  tips: DayTips | null;
+  gytoTips: GytoTip[] | undefined;
+  napsTableTips: NapsTableTip[] | undefined;
+}) {
+  const topScorer = race.horses
+    .sort((a, b) => (b.score?.total?.score || 0) - (a.score?.total?.score || 0))
+    .at(0);
+
+  if (!topScorer?.score) return null;
+
+  return (
+    <div className="p-4 border-b hover:bg-gray-50/5">
+      <div className="flex items-center gap-4 mb-2">
+        <span className="font-semibold text-sm">{race.time}</span>
+        <span className="font-medium">{topScorer.name}</span>
+        <span className="text-yellow-400">
+          {topScorer.score.total.score.toFixed(1)} /{" "}
+          {topScorer.score.total.maxScore.toFixed(1)}
+        </span>
+      </div>
+
+      <div className="grid grid-cols-4 gap-2 text-xs text-gray-400">
+        {Object.entries(topScorer.score.components).map(([key, value]) => (
+          <div key={key} className="flex items-center gap-1">
+            <span>{key}:</span>
+            <span className={value.score > 75 ? "text-yellow-400" : ""}>
+              {value.score.toFixed(1)}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );
