@@ -1,6 +1,8 @@
 import type { FormObj, GoingRecord, HorseStats } from "@/types/racing";
 import { avg, sum } from "@/lib/utils";
 import { mapGoingCodeToType } from "./goingUtils";
+import { analyzeSentiment } from "./analyzeSentiment";
+import { TrackConfiguration } from "./calculateDrawBias";
 
 export function getSeasonFromDate(dateStr?: string): string {
   if (!dateStr) return "unknown";
@@ -35,6 +37,7 @@ export function getRaceType(formRaceCode: string | undefined) {
     case "X":
       return "aw";
     default:
+      console.log(`Unknown race type code: ${formRaceCode}`);
       return null;
   }
 }
@@ -43,7 +46,14 @@ const badResultCodes = ["NR", "VOI", "RR", "WDU", "REF"];
 
 function isValidOutcome(raceOutcomeCode: string | undefined): boolean {
   if (!raceOutcomeCode) return false;
-  return !badResultCodes.includes(raceOutcomeCode);
+
+  const parsed = parseInt(raceOutcomeCode);
+  if (isNaN(parsed)) {
+    console.log(`Invalid race outcome code: ${raceOutcomeCode}`);
+    return false;
+  }
+
+  return true;
 }
 
 export const distanceToWinnerStrToFloat = (code: string) => {
@@ -74,7 +84,14 @@ export const distanceToWinnerStrToFloat = (code: string) => {
     try {
       evaled = eval(evalStr);
     } catch (e) {
-      //console.log(e, evalStr)
+      console.log(
+        "Error parsing distance:",
+        e,
+        "Input:",
+        code,
+        "Evaluated:",
+        evalStr
+      );
     }
     result = parseFloat(evaled) || 0;
   }
@@ -93,16 +110,60 @@ export function isBadDraw(
 
   // Sprint races (less than 8f)
   if (distance < 8) {
-    if (trackConfig.includes("straight")) {
+    if (trackConfig?.toLowerCase().includes("straight")) {
       return drawPercentile > 80; // High draws often disadvantaged
     }
-    return trackConfig.includes("right")
+    if (
+      !trackConfig?.toLowerCase().includes("right") &&
+      !trackConfig?.toLowerCase().includes("left")
+    ) {
+      console.log(
+        `Unable to determine draw bias for track config: ${trackConfig}`
+      );
+      return false;
+    }
+    return trackConfig?.toLowerCase().includes("right")
       ? drawPercentile < 20
       : drawPercentile > 80;
   }
 
   // Longer races - wide draws generally disadvantaged
   return drawPercentile > 80;
+}
+
+export function determineRunStyle(
+  form: FormObj["form"]
+): HorseStats["runStyle"] {
+  const recentRaces = form?.slice(0, 6) || [];
+  const comments = recentRaces.map(
+    (r) => r.rpCloseUpComment?.toLowerCase() || ""
+  );
+
+  // Count running style indicators
+  const leadCount = comments.filter(
+    (c) => c.includes("made all") || c.includes("led") || c.includes("front")
+  ).length;
+
+  const prominentCount = comments.filter(
+    (c) =>
+      c.includes("prominent") || c.includes("tracked") || c.includes("pressed")
+  ).length;
+
+  const heldUpCount = comments.filter(
+    (c) => c.includes("held up") || c.includes("behind") || c.includes("rear")
+  ).length;
+
+  // Determine predominant style
+  if (leadCount >= 2) return "leader";
+  if (prominentCount >= 2) return "prominent";
+  if (heldUpCount >= 2) return "held up";
+
+  // Log if no clear running style found
+  if (leadCount === 0 && prominentCount === 0 && heldUpCount === 0) {
+    console.log("Unable to determine running style from comments:", comments);
+  }
+
+  return "midfield"; // default if no clear pattern
 }
 
 export function calculateHorseStats(formObj?: FormObj): HorseStats {
@@ -150,71 +211,18 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
   // Calculate track configuration performance
   const trackConfigs = validRuns.reduce((acc, run) => {
     // Determine track style from course configuration
-    let style = "unknown";
+    let style: TrackConfiguration = "straight"; // default value
     const config = (run.courseComments || "").toLowerCase();
-    if (config.includes("left-handed") || config.includes("left handed")) {
+
+    if (config.includes("left")) {
       style = "left-handed";
-    } else if (
-      config.includes("right-handed") ||
-      config.includes("right handed")
-    ) {
+    } else if (config.includes("right")) {
       style = "right-handed";
     } else if (config.includes("straight")) {
       style = "straight";
     }
 
-    // Fallback to course name patterns if no explicit configuration
-    if (style === "unknown") {
-      // Clean up course name - remove (A.W) and other suffixes
-      const courseName = (run.courseName || "")
-        .toLowerCase()
-        .replace(/\s*\([^)]*\)/g, "") // Remove anything in parentheses
-        .trim();
-
-      if (
-        [
-          "ascot",
-          "doncaster",
-          "york",
-          "newmarket july",
-          "newmarket rowley",
-          "thirsk",
-        ].includes(courseName)
-      ) {
-        style = "straight";
-      } else if (
-        [
-          "kempton",
-          "lingfield",
-          "wolverhampton",
-          "chelmsford",
-          "dundalk",
-          "southwell",
-          "ayr",
-          "hamilton",
-          "newcastle",
-          "pontefract",
-          "musselburgh",
-        ].includes(courseName)
-      ) {
-        style = "left-handed";
-      } else if (
-        [
-          "windsor",
-          "brighton",
-          "bath",
-          "beverley",
-          "chester",
-          "chepstow",
-          "epsom",
-          "goodwood",
-          "yarmouth",
-        ].includes(courseName)
-      ) {
-        style = "right-handed";
-      }
-    }
-
+    // Add to accumulator
     if (!acc[style]) {
       acc[style] = { style, runs: 0, wins: 0, winRate: 0 };
     }
@@ -223,8 +231,9 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       acc[style].wins++;
     }
     acc[style].winRate = (acc[style].wins / acc[style].runs) * 100;
+
     return acc;
-  }, {} as Record<string, { style: string; runs: number; wins: number; winRate: number }>);
+  }, {} as Record<TrackConfiguration, { style: TrackConfiguration; runs: number; wins: number; winRate: number }>);
 
   const trackConfigPerformance = Object.values(trackConfigs);
 
@@ -343,6 +352,41 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
   const positionsFromBadDraw = runsFromBadDraw
     .map((r) => parseInt(r.raceOutcomeCode || "0"))
     .filter((p) => p > 0);
+
+  // Calculate sentiment stats
+  const sentiment = (() => {
+    const comments =
+      formObj?.form
+        ?.map((r) => r.rpCloseUpComment)
+        .filter((c): c is string => Boolean(c)) || [];
+    const sentiments = comments.map(analyzeSentiment);
+
+    const recentCommentScore = sentiments[0]?.score || 0;
+    const avgCommentScore = avg(sentiments.map((s) => s.score));
+    const positiveComments = sentiments.filter((s) => s.isPositive).length;
+    const negativeComments = sentiments.filter((s) => !s.isPositive).length;
+
+    // Determine trend from last 3 comments
+    const recentScores = sentiments.slice(0, 3).map((s) => s.score);
+    const trend =
+      recentScores.length >= 2
+        ? recentScores[0] > avg(recentScores.slice(1))
+          ? "positive"
+          : recentScores[0] < avg(recentScores.slice(1))
+          ? "negative"
+          : "neutral"
+        : ("neutral" as "positive" | "negative" | "neutral");
+
+    return {
+      recentCommentScore,
+      avgCommentScore,
+      positiveComments,
+      negativeComments,
+      trend,
+    };
+  })();
+
+  const runStyle = determineRunStyle(formObj?.form);
 
   return {
     // Basic stats
@@ -466,9 +510,13 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       lastSixPositions,
       positionTrend,
       averagePosition,
+      last3: lastSixPositions.slice(0, 3),
+      last6: lastSixPositions,
+      trend: positionTrend,
     },
     classStats: {
       highestClass: Math.min(...classes), // Lower number = higher class
+
       lowestClass: Math.max(...classes),
       currentClass: validRuns[0]?.raceClass || 0,
       classProgression: classes.slice(0, 6),
@@ -489,6 +537,8 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       avgPositionFromBadDraw: avg(positionsFromBadDraw) || 0,
       bestPositionFromBadDraw: Math.min(...positionsFromBadDraw, Infinity),
     },
+    sentiment,
+    runStyle,
   };
 }
 

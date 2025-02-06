@@ -26,7 +26,8 @@ export function RaceAccordion({ race, meeting }: RaceAccordionProps) {
       ? ("straight" as const)
       : undefined,
     race.distance,
-    race.going
+    race.going,
+    meeting.venue
   );
 
   useEffect(() => {

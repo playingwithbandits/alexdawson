@@ -39,5 +39,6 @@ export function mapGoingCodeToType(goingCode: string): string {
     }
   }
 
+  console.log(`No going type mapping found for code: ${goingCode}`);
   return normalizedCode; // Return original if no match
 }

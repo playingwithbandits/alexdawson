@@ -115,6 +115,7 @@ export interface Race {
   raceStats?: RaceStats;
   horses: Horse[];
   predictions?: PredictionRunner[];
+  raceComment?: string;
 }
 
 export interface Meeting {
@@ -285,12 +286,6 @@ export interface HorseStats {
   avgPrize?: number;
   totalPrizeMoney?: number;
   goingPerformance?: Array<GoingRecord>;
-  trackConfigPerformance?: Array<{
-    style: string;
-    runs: number;
-    wins: number;
-    winRate: number;
-  }>;
   surfaceStats?: {
     [key: string]: {
       runs: number;
@@ -313,14 +308,6 @@ export interface HorseStats {
   classProgression: Array<number>;
   avgClassLevel: number;
   preferredClass: string;
-  courseForm: {
-    runs: number;
-    wins: number;
-    places: number;
-    winRate: number;
-    placeRate: number;
-  };
-  optimalDistance: number;
   distancePreference: "sprinter" | "middle" | "stayer";
   distanceStats: {
     optimal: number;
@@ -362,11 +349,6 @@ export interface HorseStats {
       placeRate: number;
     };
   };
-  formProgression: {
-    lastSixPositions: number[];
-    positionTrend: "improving" | "declining" | "steady";
-    averagePosition: number;
-  };
   classStats: {
     highestClass: number;
     lowestClass: number;
@@ -388,7 +370,92 @@ export interface HorseStats {
     avgPositionFromBadDraw: number;
     bestPositionFromBadDraw: number;
   };
+  sentiment: {
+    recentCommentScore: number;
+    avgCommentScore: number;
+    positiveComments: number;
+    negativeComments: number;
+    trend: "positive" | "negative" | "neutral";
+  };
+  runStyle?: "leader" | "prominent" | "midfield" | "held up";
+  goingStats?: Array<{
+    type: string;
+    runs: number;
+    wins: number;
+    winRate: number;
+    avgPosition?: number;
+  }>;
+  distancePerformance?: {
+    sprint: DistanceCategory;
+    mile: DistanceCategory;
+    middle: DistanceCategory;
+    staying: DistanceCategory;
+  };
+  optimalDistance?: number;
+  courseForm?: {
+    runs: number;
+    wins: number;
+    places: number;
+    winRate: number;
+    placeRate: number;
+    avgPosition?: number;
+  };
+  trackConfigPerformance?: Array<{
+    style: TrackConfiguration;
+    runs: number;
+    wins: number;
+    winRate: number;
+    avgPosition?: number;
+  }>;
+  formProgression?: {
+    last3: number[];
+    last6: number[];
+    trend: "improving" | "declining" | "steady";
+    lastSixPositions: number[];
+    positionTrend: "improving" | "declining" | "steady";
+    averagePosition: number;
+  };
+  classMovement?: {
+    current: number;
+    highest: number;
+    lowest: number;
+    trend: "up" | "down" | "stable";
+  };
+  consistency?: {
+    finishPositions: number[];
+    avgPosition: number;
+    stdDev: number;
+    reliability: number;
+  };
+  layoff?: {
+    currentDays: number;
+    avgGapDays: number;
+    performanceAfterBreak: {
+      runs: number;
+      wins: number;
+      winRate: number;
+    };
+  };
+  seasonal?: Record<
+    string,
+    {
+      runs: number;
+      wins: number;
+      winRate: number;
+      earnings: number;
+    }
+  >;
 }
+
+interface DistanceCategory {
+  min: number;
+  max: number;
+  runs: number;
+  wins: number;
+  winRate: number;
+}
+
+type TrackConfiguration = "left-handed" | "right-handed" | "straight";
 
 export interface RaceStats {
   avgOfficialRating: number;

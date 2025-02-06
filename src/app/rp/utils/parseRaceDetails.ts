@@ -10,6 +10,7 @@ import {
 import { getTrackConfiguration } from "@/lib/racing/getTrackConfiguration";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
 import { calculateHorseScore2 } from "@/lib/racing/calculateHorseScore2";
+import { generateRaceComment } from "@/lib/racing/generateRaceComment";
 
 export async function parseRaceDetails(
   html: string,
@@ -229,7 +230,8 @@ export async function parseRaceDetails(
   const drawBiasInfo = calculateDrawBias(
     baseRaceData.trackConfig as TrackConfiguration,
     baseRaceData.distance || "",
-    baseRaceData.going
+    baseRaceData.going,
+    meetingDetails.venue
   );
 
   baseRaceData.drawBias = drawBiasInfo.bias;
@@ -269,6 +271,20 @@ export async function parseRaceDetails(
     })),
   };
 
-  console.log("🏁 Completed parseRaceDetails", result2);
-  return result2;
+  // After calculating all horse stats and scores
+  const result3: Race = {
+    ...result2,
+    raceComment: generateRaceComment(
+      result2.horses.sort(
+        (a, b) =>
+          (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+      )[0],
+      result2,
+      raceStats,
+      meetingDetails
+    ),
+  };
+
+  console.log("🏁 Completed parseRaceDetails", result3);
+  return result3;
 }

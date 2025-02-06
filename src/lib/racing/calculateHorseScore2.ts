@@ -37,6 +37,7 @@ export interface HorseScore {
     weightTrend: ScoreComponent;
     prizeProgression: ScoreComponent;
     courseDistance: ScoreComponent;
+    sentiment: ScoreComponent;
   };
 }
 
@@ -81,6 +82,7 @@ export function calculateHorseScore2(
     market: 0.02,
     margins: 0.02,
     prizeProgression: 0.02,
+    sentiment: 0.06,
   };
 
   // Ratings Score (vs race average and field)
@@ -1025,6 +1027,30 @@ export function calculateHorseScore2(
     return { score, maxScore, percentage: (score / maxScore) * 100 };
   })();
 
+  // Add new sentiment score component
+  const sentimentScore = (() => {
+    let score = 0;
+    const maxScore = 10;
+
+    const sentiment = horse.stats?.sentiment;
+    if (sentiment) {
+      // Recent form sentiment
+      if (sentiment.recentCommentScore > 0) score += 2;
+      if (sentiment.recentCommentScore > 2) score += 2;
+
+      // Overall sentiment trend
+      if (sentiment.trend === "positive") score += 2;
+
+      // Ratio of positive to negative comments
+      const ratio =
+        sentiment.positiveComments / (sentiment.negativeComments || 1);
+      if (ratio > 2) score += 2;
+      if (ratio > 4) score += 2;
+    }
+
+    return { score, maxScore, percentage: (score / maxScore) * 100 };
+  })();
+
   // Add helper function
   function calculateVariance(numbers: number[]): number {
     const mean = avg(numbers);
@@ -1065,7 +1091,8 @@ export function calculateHorseScore2(
     layoffScore.score * weights.layoff +
     weightTrendScore.score * weights.weightTrend +
     prizeProgressionScore.score * weights.prizeProgression +
-    courseDistanceScore.score * weights.courseDistance;
+    courseDistanceScore.score * weights.courseDistance +
+    sentimentScore.score * weights.sentiment;
 
   const totalMaxScore =
     ratingsScore.maxScore * weights.ratings +
@@ -1092,7 +1119,8 @@ export function calculateHorseScore2(
     layoffScore.maxScore * weights.layoff +
     weightTrendScore.maxScore * weights.weightTrend +
     prizeProgressionScore.maxScore * weights.prizeProgression +
-    courseDistanceScore.maxScore * weights.courseDistance;
+    courseDistanceScore.maxScore * weights.courseDistance +
+    sentimentScore.maxScore * weights.sentiment;
 
   return {
     total: {
@@ -1126,6 +1154,7 @@ export function calculateHorseScore2(
       weightTrend: weightTrendScore,
       prizeProgression: prizeProgressionScore,
       courseDistance: courseDistanceScore,
+      sentiment: sentimentScore,
     },
   };
 }

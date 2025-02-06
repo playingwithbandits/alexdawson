@@ -715,11 +715,11 @@ function CompactRaceRow({
         {topScorer && (
           <div
             className="flex items-center gap-2"
-            title={"Top Scorer: " + topScorer.score?.total?.percentage}
+            title={"Top Scorer: " + race?.raceComment}
           >
             <span
               className={`font-medium ${
-                (topScorer.score?.total?.percentage || 0) > 45
+                (topScorer.score?.total?.percentage || 0) > 50
                   ? "text-yellow-400 font-bold"
                   : ""
               }`}

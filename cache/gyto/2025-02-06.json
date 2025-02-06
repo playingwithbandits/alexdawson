@@ -1,0 +1,230 @@
+{
+  "date": "2025-02-06",
+  "tips": [
+    {
+      "time": "13:45",
+      "horse": "Califet En Vol",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Transparent",
+      "isNap": false
+    },
+    {
+      "time": "12:40",
+      "horse": "Sangiovese",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Wise Eagle",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Jacob'S Ladder",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Northern Cracksman",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Califet En Vol",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Pour Les Filles",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Carlton",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Transparent",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Rivers Corner",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Draco Malfoy",
+      "isNap": false
+    },
+    {
+      "time": "12:40",
+      "horse": "Sangiovese",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Ginger Jonny",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Califet En Vol",
+      "isNap": true
+    },
+    {
+      "time": "14:20",
+      "horse": "Telepathique",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Imaginarium",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Soldier Saint",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Draco Malfoy",
+      "isNap": false
+    },
+    {
+      "time": "13:00",
+      "horse": "River Voyage",
+      "isNap": false
+    },
+    {
+      "time": "13:35",
+      "horse": "Shareyourbiscuits",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Beau Quali",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Wise Eagle",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "De Tellers Fortune",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Getaway Drumlee",
+      "isNap": false
+    },
+    {
+      "time": "13:25",
+      "horse": "Tullyhill",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Lake Chad",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Hello Jack",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Pour Les Filles",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Jacob'S Ladder",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Navy Waves",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Frankie John",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Mountain Mike",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Clotilda",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Dreams Of Diamonds",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Rivers Corner",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Boston Joe",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Shearer",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Carlton",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Biplane",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Transparent",
+      "isNap": true
+    },
+    {
+      "time": "18:30",
+      "horse": "Northern Cracksman",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Frankies Dream",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Stroxx",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Stoic Syd",
+      "isNap": false
+    }
+  ]
+}

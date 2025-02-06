@@ -82,13 +82,24 @@ export function calculateDrawBias(
     return trackBiases[course.toLowerCase()];
   }
 
-  // Default response if we can't determine
-  const defaultResult = {
-    bias: "No Clear Bias" as DrawBiasType,
-    explanation: "Insufficient data to determine draw bias",
-  };
+  if (course) {
+    console.log(`No track-specific bias found for course: ${course}`);
+  }
 
-  if (!trackConfig || !distance) return defaultResult;
+  // Default response if we can't determine
+  if (!trackConfig || !distance) {
+    console.log({
+      message: "Unable to determine draw bias",
+      trackConfig,
+      distance,
+      going,
+      course,
+    });
+    return {
+      bias: "No Clear Bias" as DrawBiasType,
+      explanation: "Insufficient data to determine draw bias",
+    };
+  }
 
   // Extract distance in furlongs
   const furlongs = parseDistance(distance);
@@ -132,6 +143,9 @@ export function calculateDrawBias(
   }
 
   // Long distance races (>12f)
+  console.log(
+    `No specific draw bias found - trackConfig: ${trackConfig}, distance: ${distance}, going: ${going}, course: ${course}`
+  );
   return {
     bias: "No Clear Bias" as DrawBiasType,
     explanation: "Longer distance reduces impact of draw position",

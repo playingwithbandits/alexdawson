@@ -39,6 +39,14 @@
       "total": 21,
       "totalReturns": 18.5,
       "totalBets": 21
+    },
+    {
+      "date": "2025-02-05",
+      "roi": -0.2857142857142966,
+      "wins": 7,
+      "total": 21,
+      "totalReturns": 20.939999999999998,
+      "totalBets": 21
     }
   ]
 }
