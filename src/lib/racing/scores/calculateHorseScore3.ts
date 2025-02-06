@@ -1,5 +1,5 @@
 import { Horse, Meeting, Race, RaceStats } from "@/types/racing";
-import { calculateRatingsScore } from "./calculateRatingsScore";
+import { calculateRatingsScore } from "./ratings";
 import { HorseScore } from "./types";
 import { calculateDistanceScore } from "./distance";
 import { calculateGoingScore } from "./going";
@@ -58,10 +58,64 @@ export function calculateHorseScore3(props: {
   const weightTrend = calculateWeightTrendScore(props);
   const prizeProgression = calculatePrizeProgressionScore(props);
   const courseDistance = calculateCourseDistanceScore(props);
-  const sentiment = calculateSentimentScore(props);
+  const sentiment = calculateSentimentScore(props); //done
 
-  const totalScore = 0;
-  const totalMaxScore = 0;
+  const totalScore = [
+    ratings,
+    distance,
+    going,
+    form,
+    course,
+    classScore,
+    connections,
+    prize,
+    weight,
+    draw,
+    seasonal,
+    connectionCombo,
+    market,
+    margins,
+    formProgression,
+    classMovement,
+    trackConfig,
+    raceType,
+    surfaceAdaptability,
+    officialRating,
+    consistency,
+    layoff,
+    weightTrend,
+    prizeProgression,
+    courseDistance,
+    sentiment,
+  ].reduce((acc, curr) => acc + curr.score, 0);
+  const totalMaxScore = [
+    ratings,
+    distance,
+    going,
+    form,
+    course,
+    classScore,
+    connections,
+    prize,
+    weight,
+    draw,
+    seasonal,
+    connectionCombo,
+    market,
+    margins,
+    formProgression,
+    classMovement,
+    trackConfig,
+    raceType,
+    surfaceAdaptability,
+    officialRating,
+    consistency,
+    layoff,
+    weightTrend,
+    prizeProgression,
+    courseDistance,
+    sentiment,
+  ].reduce((acc, curr) => acc + curr.maxScore, 0);
 
   const total = {
     score: totalScore,

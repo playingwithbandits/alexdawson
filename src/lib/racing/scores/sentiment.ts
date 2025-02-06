@@ -7,13 +7,29 @@ export function calculateSentimentScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 10;
 
-  score++;
+  const sentiment = horse.stats?.sentiment;
+  if (sentiment) {
+    // Recent form sentiment
+    if (sentiment.recentCommentScore > 0) score += 2;
+    if (sentiment.recentCommentScore > 2) score += 2;
+
+    // Overall sentiment trend
+    if (sentiment.trend === "positive") score += 2;
+
+    if (sentiment.avgCommentScore > 0) score += 2;
+
+    // Ratio of positive to negative comments
+    const ratio =
+      sentiment.positiveComments / (sentiment.negativeComments || 1);
+
+    if (ratio > 0) score += 2;
+  }
 
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }
