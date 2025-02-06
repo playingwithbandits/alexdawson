@@ -788,12 +788,14 @@ function CompactRaceRow({
           >
             <span
               className={`font-medium ${
-                (topScorer.score?.total?.percentage || 0) > 50
+                (topScorer.score?.total?.score || 0) >= 90
                   ? "text-yellow-400 font-bold"
-                  : ""
+                  : (topScorer.score?.total?.score || 0) < 75
+                  ? "text-[#626262]"
+                  : "*:"
               }`}
             >
-              {topScorer.name} {topScorerTrophy}
+              {topScorer.name} {topScorerTrophy} {topScorer.score?.total?.score}
               {(topScorerOdds || 0) >= 6 ? (
                 <span
                   className={(topScorerOdds || 0) >= 6 ? "text-blue-400" : ""}
