@@ -39,6 +39,7 @@ const courseConfigs: Record<string, TrackConfiguration> = {
   stratford: "left-handed",
   uttoxeter: "left-handed",
   warwick: "left-handed",
+  bangor: "left-handed",
 
   // Right-handed tracks
   windsor: "right-handed",
@@ -75,7 +76,9 @@ export function getTrackConfiguration(
   );
 
   if (!matchingCourse) {
-    console.log(`No track configuration found for course: ${courseName}`);
+    console.log(
+      `ERROR: No track configuration found for course: ${courseName}`
+    );
   }
 
   return matchingCourse ? courseConfigs[matchingCourse] : undefined;

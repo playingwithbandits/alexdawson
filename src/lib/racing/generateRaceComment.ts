@@ -130,12 +130,12 @@ export function generateRaceComment(
   if (race.going && topHorse.stats?.goingPerformance) {
     const goingStats = topHorse.stats.goingPerformance;
 
-    console.log("", {
-      name: topHorse?.name,
-      goingStats,
-      raceGoing: race.going,
-      meetingGoing: meetingDetails.going,
-    });
+    // console.log("ERROR: ", {
+    //   name: topHorse?.name,
+    //   goingStats,
+    //   raceGoing: race.going,
+    //   meetingGoing: meetingDetails.going,
+    // });
 
     const raceGoingMap = GOING_REMAP[race?.going?.toLowerCase()];
 

@@ -37,7 +37,7 @@ export function getRaceType(formRaceCode: string | undefined) {
     case "X":
       return "aw";
     default:
-      console.log(`Unknown race type code: ${formRaceCode}`);
+      console.log(`ERROR: Unknown race type code: ${formRaceCode}`);
       return null;
   }
 }
@@ -49,7 +49,7 @@ function isValidOutcome(raceOutcomeCode: string | undefined): boolean {
 
   const parsed = parseInt(raceOutcomeCode);
   if (isNaN(parsed)) {
-    console.log(`Invalid race outcome code: ${raceOutcomeCode}`);
+    //console.log(`Invalid race outcome code: ${raceOutcomeCode}`);
     return false;
   }
 
@@ -85,7 +85,7 @@ export const distanceToWinnerStrToFloat = (code: string) => {
       evaled = eval(evalStr);
     } catch (e) {
       console.log(
-        "Error parsing distance:",
+        "ERROR: parsing distance:",
         e,
         "Input:",
         code,
@@ -118,7 +118,7 @@ export function isBadDraw(
       !trackConfig?.toLowerCase().includes("left")
     ) {
       console.log(
-        `Unable to determine draw bias for track config: ${trackConfig}`
+        `ERROR: Unable to determine draw bias for track config: ${trackConfig}`
       );
       return false;
     }
@@ -160,7 +160,10 @@ export function determineRunStyle(
 
   // Log if no clear running style found
   if (leadCount === 0 && prominentCount === 0 && heldUpCount === 0) {
-    console.log("Unable to determine running style from comments:", comments);
+    console.log(
+      "ERROR: Unable to determine running style from comments:",
+      comments
+    );
   }
 
   return "midfield"; // default if no clear pattern

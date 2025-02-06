@@ -323,18 +323,18 @@ function getConnectionStats(horse: Horse, race?: Race) {
       t.trainer.toLowerCase().trim() === horse.trainer.name.toLowerCase().trim()
   );
 
-  console.log(
-    "🏁 jockeyStats",
-    jockeyStats,
-    race?.raceExtraInfo?.jockeyStats,
-    horse.jockey.name
-  );
-  console.log(
-    "🏁 trainerStats",
-    trainerStats,
-    race?.raceExtraInfo?.trainerStats,
-    horse.trainer.name
-  );
+  // console.log(
+  //   "🏁 jockeyStats",
+  //   jockeyStats,
+  //   race?.raceExtraInfo?.jockeyStats,
+  //   horse.jockey.name
+  // );
+  // console.log(
+  //   "🏁 trainerStats",
+  //   trainerStats,
+  //   race?.raceExtraInfo?.trainerStats,
+  //   horse.trainer.name
+  // );
 
   return {
     "Jockey Name": horse.jockey.name,

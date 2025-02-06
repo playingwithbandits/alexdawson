@@ -1,7 +1,7 @@
 export async function fetchRaceDetails(url: string): Promise<string> {
-  console.log("fetchRaceDetails", url);
+  // console.log("fetchRaceDetails", url);
   if (!url || url.trim() === "") {
-    console.error("❌ No URL provided");
+    //console.error("❌ No URL provided");
     return "";
   }
   const response = await fetch(`/getP.php?q=${encodeURIComponent(url)}`);
