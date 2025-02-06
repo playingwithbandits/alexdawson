@@ -7,6 +7,7 @@ import { DashboardContent } from "../DashboardContent";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { useResults } from "@/hooks/useResults";
 import { normalizeTime } from "@/components/horse/DayPredictions";
+import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 const UK_COURSES = [
   "ascot",
@@ -92,13 +93,13 @@ export function HorsePageClient({ date }: { date: string }) {
         const resultsResponse = await fetch(`/api/racing/results/${date}`);
         const resultsData = await resultsResponse.json();
 
-        console.log("Results data:", resultsData);
+        //console.log("Results data:", resultsData);
         if (
           !resultsData ||
           !resultsData.results ||
           resultsData.results.length === 0
         ) {
-          console.log("No results found, fetching from Racing Post...");
+          //console.log("No results found, fetching from Racing Post...");
           // Fetch and save results HTML
           await fetch(`/api/racing/results/fetch?date=${date}`);
         }
@@ -129,20 +130,20 @@ export function HorsePageClient({ date }: { date: string }) {
             return;
           }
 
-          console.log("🔍 Checking cache for date:", date);
+          //console.log("🔍 Checking cache for date:", date);
 
           // Try to get cached data from file
           const cacheResponse = await fetch(`/api/racing?date=${date}`);
           const cachedData = await cacheResponse.json();
 
           if (cachedData) {
-            console.log("Cache hit for:", date);
+            //console.log("Cache hit for:", date);
             setMeetings(cachedData);
 
             return;
           }
 
-          console.log("❌ No cache found, fetching fresh data");
+          //console.log("❌ No cache found, fetching fresh data");
 
           const response = await fetch(
             `/getP.php?q=${encodeURIComponent(getPageUrl(date))}`
@@ -159,25 +160,28 @@ export function HorsePageClient({ date }: { date: string }) {
             ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))"
           );
 
-          console.log(`Found ${meetingElements.length} total courses`);
+          //console.log(`Found ${meetingElements.length} total courses`);
           const ukElements = Array.from(meetingElements).filter((element) => {
-            const courseName = element
-              .querySelector(".RC-accordion__courseName")
-              ?.textContent?.toLowerCase()
-              .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
-              .trim();
-            console.log(`Processing course: ${courseName}`);
+            const courseName = placeToPlaceKey(
+              element
+                .querySelector(".RC-accordion__courseName")
+                ?.textContent?.toLowerCase()
+                .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
+                .trim() || ""
+            );
+
+            //console.log(`Processing course: ${courseName}`);
             const isUkCourse = courseName && UK_COURSES.includes(courseName);
-            console.log(`Is UK course: ${isUkCourse}`);
+            //console.log(`Is UK course: ${isUkCourse}`);
             return isUkCourse;
           });
-          console.log(`Filtered to ${ukElements.length} UK courses`);
+          //console.log(`Filtered to ${ukElements.length} UK courses`);
 
-          console.log("🔍 Meeting elements:", ukElements);
+          //console.log("🔍 Meeting elements:", ukElements);
 
           const parsedMeetings = await parseMeetings(Array.from(ukElements));
-          console.log("✨ Successfully parsed meetings data");
-          console.log("📝 Saving to cache for date:", date);
+          //console.log("✨ Successfully parsed meetings data");
+          //console.log("📝 Saving to cache for date:", date);
 
           // Save to cache file
           await fetch(`/api/racing?date=${date}`, {
@@ -187,11 +191,11 @@ export function HorsePageClient({ date }: { date: string }) {
             },
             body: JSON.stringify(parsedMeetings),
           });
-          console.log("💾 Cache saved successfully");
+          //console.log("💾 Cache saved successfully");
 
           setMeetings(parsedMeetings);
         } else {
-          console.log("📦 Using cached data");
+          //console.log("📦 Using cached data");
           setMeetings(data);
         }
       } catch (err) {

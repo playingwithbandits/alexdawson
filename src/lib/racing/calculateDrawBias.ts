@@ -89,7 +89,7 @@ export function calculateDrawBias(
   // Default response if we can't determine
   if (!trackConfig || !distance) {
     console.log({
-      message: "Unable to determine draw bias",
+      message: "ERROR: Unable to determine draw bias",
       trackConfig,
       distance,
       going,
@@ -144,8 +144,9 @@ export function calculateDrawBias(
 
   // Long distance races (>12f)
   console.log(
-    `No specific draw bias found - trackConfig: ${trackConfig}, distance: ${distance}, going: ${going}, course: ${course}`
+    `ERROR: No specific draw bias found - trackConfig: ${trackConfig}, distance: ${distance}, going: ${going}, course: ${course}`
   );
+
   return {
     bias: "No Clear Bias" as DrawBiasType,
     explanation: "Longer distance reduces impact of draw position",

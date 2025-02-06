@@ -31,14 +31,14 @@ export function ViewToggle({ view, onViewChange }: ViewToggleProps) {
       </button>
       <button
         className={`inline-flex items-center px-4 py-2 text-sm font-medium border-t border-b ${
-          view === "list"
+          view === "detailed"
             ? "bg-blue-50 text-blue-700 border-blue-700"
             : "bg-white text-gray-900 border-gray-200 hover:bg-gray-100"
         } focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700`}
-        onClick={handleListClick}
+        onClick={() => onViewChange("detailed")}
       >
         <List className="w-4 h-4 mr-2" />
-        List
+        Detailed
       </button>
       <button
         className={`inline-flex items-center px-4 py-2 text-sm font-medium border ${
@@ -50,17 +50,6 @@ export function ViewToggle({ view, onViewChange }: ViewToggleProps) {
       >
         <LayoutList className="w-4 h-4 mr-2" />
         Compact
-      </button>
-      <button
-        className={`inline-flex items-center px-4 py-2 text-sm font-medium border ${
-          view === "detailed"
-            ? "bg-blue-50 text-blue-700 border-blue-700"
-            : "bg-white text-gray-900 border-gray-200 hover:bg-gray-100"
-        } rounded-r-lg focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700`}
-        onClick={() => onViewChange("detailed")}
-      >
-        <List className="w-4 h-4 mr-2" />
-        Detailed
       </button>
     </div>
   );

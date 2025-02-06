@@ -52,7 +52,7 @@ export function DayPredictions({
   napsTableTips,
 }: DayPredictionsProps) {
   const [isMounted, setIsMounted] = useState(false);
-  const [view, setView] = useState<ViewMode>("detailed");
+  const [view, setView] = useState<ViewMode>("compact");
 
   const [isSaving, setIsSaving] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -62,7 +62,7 @@ export function DayPredictions({
   const isToday = date === today;
 
   const handleViewChange = (newView: ViewMode) => {
-    console.log("Changing view to:", newView);
+    //console.log("Changing view to:", newView);
     setView(newView);
   };
 
@@ -77,9 +77,7 @@ export function DayPredictions({
       meeting.races.forEach((race) => {
         // Get top scorer for this race
         const topScorer = race.horses.sort(
-          (a, b) =>
-            (b.score?.total?.percentage || 0) -
-            (a.score?.total?.percentage || 0)
+          (a, b) => (b.score?.total?.score || 0) - (a.score?.total?.score || 0)
         )[0];
 
         if (!topScorer) return;
@@ -210,10 +208,15 @@ export function DayPredictions({
         </div>
 
         {noResults ? (
-          <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-6 text-center">
-            <span className="text-red-400 font-semibold text-lg">
-              No results found for this day
-            </span>
+          <div className="space-y-6">
+            <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-6 text-center">
+              <span className="text-red-400 font-semibold text-lg">
+                No results found for this day
+              </span>
+            </div>
+            <div className="flex gap-4">
+              <ViewToggle view={view} onViewChange={handleViewChange} />
+            </div>
           </div>
         ) : (
           <div className="space-y-6">
@@ -252,7 +255,6 @@ export function DayPredictions({
             <div className="flex justify-between items-center">
               <div className="flex gap-4">
                 <ViewToggle view={view} onViewChange={handleViewChange} />
-                {view !== "compact" && <ExpandAllToggle />}
               </div>
 
               <div className="flex gap-4 justify-center">
@@ -285,10 +287,9 @@ export function DayPredictions({
   const getTopSelections = (race: Race) => {
     if (!race.horses?.length) return null;
     const sorted = [...race.horses].sort(
-      (a, b) =>
-        (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+      (a, b) => (b.score?.total?.score || 0) - (a.score?.total?.score || 0)
     );
-    const topScore = sorted[0].score?.total?.percentage || 0;
+    const topScore = sorted[0].score?.total?.score || 0;
     const threshold = topScore * 0.95; // Within 10% of top score
 
     return sorted
@@ -311,7 +312,7 @@ export function DayPredictions({
     }))
     .filter((meeting) => meeting.races.length > 0);
 
-  console.log("filteredMeetings", filteredMeetings);
+  //console.log("filteredMeetings", filteredMeetings);
 
   // If sort is off, just filter and return meetings as is
   if (view === "table") {
@@ -332,37 +333,39 @@ export function DayPredictions({
 
   if (view === "compact") {
     return (
-      <div className="container day-predictions space-y-6">
-        {renderHeader()}
-        <div className=" space-y-6">
-          {meetings.map((meeting) => (
-            <div key={meeting.venue} className="rounded-lg shadow-sm p-4">
-              <div className="border-b pb-2 mb-4">
-                <h3 className="font-bold text-lg">{meeting.venue}</h3>
-                <p className="text-sm ">
-                  {meeting.races.length} races • {meeting.surface} •{" "}
-                  {meeting.going}
-                </p>
+      <ExpansionProvider>
+        <div className="container day-predictions space-y-6">
+          {renderHeader()}
+          <div className=" space-y-6">
+            {meetings.map((meeting) => (
+              <div key={meeting.venue} className="rounded-lg shadow-sm p-4">
+                <div className="border-b pb-2 mb-4">
+                  <h3 className="font-bold text-lg">{meeting.venue}</h3>
+                  <p className="text-sm ">
+                    {meeting.races.length} races • {meeting.surface} •{" "}
+                    {meeting.going}
+                  </p>
+                </div>
+                <div className="space-y-1">
+                  {meeting.races.map((race, index) => (
+                    <CompactRaceRow
+                      key={race.time}
+                      isToday={isToday}
+                      index={index}
+                      race={race}
+                      meeting={meeting}
+                      results={results}
+                      tips={tips}
+                      gytoTips={gytoTips}
+                      napsTableTips={napsTableTips}
+                    />
+                  ))}
+                </div>
               </div>
-              <div className="space-y-1">
-                {meeting.races.map((race, index) => (
-                  <CompactRaceRow
-                    key={race.time}
-                    isToday={isToday}
-                    index={index}
-                    race={race}
-                    meeting={meeting}
-                    results={results}
-                    tips={tips}
-                    gytoTips={gytoTips}
-                    napsTableTips={napsTableTips}
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </ExpansionProvider>
     );
   }
 
@@ -413,36 +416,38 @@ export function DayPredictions({
     );
 
     return (
-      <div className="container day-predictions space-y-6">
-        {renderHeader()}
-        <div className="space-y-6">
-          {meetings.map((meeting) => (
-            <div key={meeting.venue} className="rounded-lg shadow-sm p-4">
-              <div className="border-b pb-2 mb-4">
-                <h3 className="font-bold text-lg">{meeting.venue}</h3>
-                <p className="text-sm">
-                  {meeting.races.length} races • {meeting.surface} •{" "}
-                  {meeting.going}
-                </p>
+      <ExpansionProvider>
+        <div className="container day-predictions space-y-6">
+          {renderHeader()}
+          <div className="space-y-6">
+            {meetings.map((meeting) => (
+              <div key={meeting.venue} className="rounded-lg shadow-sm p-4">
+                <div className="border-b pb-2 mb-4">
+                  <h3 className="font-bold text-lg">{meeting.venue}</h3>
+                  <p className="text-sm">
+                    {meeting.races.length} races • {meeting.surface} •{" "}
+                    {meeting.going}
+                  </p>
+                </div>
+                <div className="divide-y">
+                  {meeting.races.map((race) => (
+                    <DetailedRaceRow
+                      key={race.time}
+                      isToday={isToday}
+                      race={race}
+                      meeting={meeting}
+                      results={results}
+                      tips={tips}
+                      gytoTips={gytoTips}
+                      napsTableTips={napsTableTips}
+                    />
+                  ))}
+                </div>
               </div>
-              <div className="divide-y">
-                {meeting.races.map((race) => (
-                  <DetailedRaceRow
-                    key={race.time}
-                    isToday={isToday}
-                    race={race}
-                    meeting={meeting}
-                    results={results}
-                    tips={tips}
-                    gytoTips={gytoTips}
-                    napsTableTips={napsTableTips}
-                  />
-                ))}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      </ExpansionProvider>
     );
   }
 
@@ -492,20 +497,19 @@ function CompactRaceRow({
   napsTableTips: NapsTableTip[] | undefined;
 }) {
   // Add helper function to normalize time format
-  console.log("tips", tips);
-  console.log("napsTableTips", napsTableTips);
-  console.log("gytoTips", gytoTips);
+  //console.log("tips", tips);
+  //console.log("napsTableTips", napsTableTips);
+  //console.log("gytoTips", gytoTips);
   // Get top prediction by score
-  console.log("Getting top scorer for race:", race.time);
+  //console.log("Getting top scorer for race:", race.time);
 
   const topScorer = race.horses.sort(
-    (a, b) =>
-      (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+    (a, b) => (b.score?.total?.score || 0) - (a.score?.total?.score || 0)
   )[0];
-  console.log("Top scorer:", topScorer?.name);
+  //console.log("Top scorer:", topScorer?.name);
 
   // Get top model prediction
-  console.log("Getting model predictions");
+  //console.log("Getting model predictions");
   const sortedPredictions = Object.values(race.predictions || {}).sort(
     (a, b) => (b.score || 0) - (a.score || 0)
   );
@@ -513,19 +517,19 @@ function CompactRaceRow({
   const topPrediction = sortedPredictions[0];
   const topPredictionNum = topPrediction?.score || 0;
   const secondPredictionNum = sortedPredictions[1]?.score || 0;
-  console.log("Top prediction:", topPrediction?.name);
+  //console.log("Top prediction:", topPrediction?.name);
 
   const predictionGap = topPredictionNum - secondPredictionNum;
-  console.log("Prediction gap:", predictionGap);
+  //console.log("Prediction gap:", predictionGap);
 
   // Get verdict selection
-  console.log("Getting verdict selection");
+  //console.log("Getting verdict selection");
   const verdictPick = race.raceExtraInfo?.verdict?.selection;
   const isNap = race.raceExtraInfo?.verdict?.isNap;
-  console.log("Verdict pick:", verdictPick, "Is nap:", isNap);
+  //console.log("Verdict pick:", verdictPick, "Is nap:", isNap);
 
   // Get ATR tip for this race
-  console.log("Getting ATR tip");
+  //console.log("Getting ATR tip");
   const atrTipSelections = tips?.atrTips
     ?.flatMap((m) => m.races)
     ?.find(
@@ -546,7 +550,7 @@ function CompactRaceRow({
       (r) => normalizeTime(r.time) === normalizeTime(race.time)
     )?.selections;
 
-  console.log("timeformTipSelections", timeformTipSelections);
+  //console.log("timeformTipSelections", timeformTipSelections);
   const timeformTipSelectionObj = timeformTipSelections?.[0];
   const timeformTipSelection = timeformTipSelectionObj?.horse;
   const timeformTipSelectionOdds = timeformTipSelection
@@ -555,51 +559,51 @@ function CompactRaceRow({
       )?.decimalOdds
     : 0;
 
-  console.log("Getting GYTO tip", gytoTips);
+  //console.log("Getting GYTO tip", gytoTips);
   const gytoTipSelectionObj = gytoTips?.find(
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
   );
   const gytoTipSelection = gytoTipSelectionObj?.horse;
-  console.log("GYTO tip selection:", gytoTipSelection);
+  //console.log("GYTO tip selection:", gytoTipSelection);
 
-  console.log("Getting GYTO tip odds");
+  //console.log("Getting GYTO tip odds");
   const gytoTipSelectionOdds = gytoTipSelection
     ? race.bettingForecast?.find(
         (x) => cleanName(x.horseName) === cleanName(gytoTipSelection)
       )?.decimalOdds
     : 0;
-  console.log("GYTO tip odds:", gytoTipSelectionOdds);
+  //console.log("GYTO tip odds:", gytoTipSelectionOdds);
 
-  console.log("Getting Naps Table tip");
+  //console.log("Getting Naps Table tip");
   const napsTableTipSelections = napsTableTips?.filter(
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
   );
-  console.log("Naps Table tip selections:", napsTableTipSelections);
+  //console.log("Naps Table tip selections:", napsTableTipSelections);
 
   const napsTableTipSelectionObj = napsTableTipSelections?.sort(
     (a, b) => (parseFloat(b.score) || 0) - (parseFloat(a.score) || 0)
   )[0];
   const napsTableTipSelection = napsTableTipSelectionObj?.horse;
-  console.log("Naps Table tip selection:", napsTableTipSelection);
+  //console.log("Naps Table tip selection:", napsTableTipSelection);
   const napsTableTipSelectionOdds = napsTableTipSelection
     ? race.bettingForecast?.find(
         (x) => cleanName(x.horseName) === cleanName(napsTableTipSelection)
       )?.decimalOdds
     : 0;
-  console.log("Naps Table tip odds:", napsTableTipSelectionOdds);
+  //console.log("Naps Table tip odds:", napsTableTipSelectionOdds);
 
   // Find matching result for this race
   // Find matching result for this race
-  console.log("Finding race result", race.time, results?.results);
+  //console.log("Finding race result", race.time, results?.results);
 
   const raceResult = results?.results.find(
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
   );
-  console.log("Race result found:", raceResult, !!raceResult);
+  //console.log("Race result found:", raceResult, !!raceResult);
 
   // Helper function to get trophy emoji
   const getTrophy = (position: string) => {
-    console.log("Getting trophy for position:", position);
+    //console.log("Getting trophy for position:", position);
     switch (position.toLowerCase()) {
       case "1st":
         return "🏆";
@@ -614,18 +618,18 @@ function CompactRaceRow({
 
   // Helper function to get position for a horse
   const getHorsePosition = (horseName: string) => {
-    console.log("Getting position for horse:", horseName);
+    //console.log("Getting position for horse:", horseName);
     if (!raceResult) return "";
 
     if (cleanName(raceResult.winner.name) === cleanName(horseName)) {
-      console.log("Horse was winner");
+      //console.log("Horse was winner");
       return "1st";
     }
 
     const placed = raceResult.placedHorses.find(
       (h) => cleanName(h.name) === cleanName(horseName)
     );
-    console.log("Horse placed:", placed?.position);
+    //console.log("Horse placed:", placed?.position);
     return placed?.position || "";
   };
 
@@ -664,20 +668,20 @@ function CompactRaceRow({
     }, 0);
 
   const threeOrMoreMatch = matchCount >= 2;
-  console.log(
-    "Three or more picks match:",
-    topScorer?.name,
-    matchCount,
-    [
-      topPrediction?.name,
-      verdictPick,
-      atrTipSelection,
-      timeformTipSelection,
-      gytoTipSelection,
-      napsTableTipSelection,
-    ],
-    threeOrMoreMatch
-  );
+  //console.log(
+  //   "Three or more picks match:",
+  //   topScorer?.name,
+  //   matchCount,
+  //   [
+  //     topPrediction?.name,
+  //     verdictPick,
+  //     atrTipSelection,
+  //     timeformTipSelection,
+  //     gytoTipSelection,
+  //     napsTableTipSelection,
+  //   ],
+  //   threeOrMoreMatch
+  // );
   // Update someTheSame to include GG tip
   const someTheSame = [
     topPrediction?.name,
@@ -691,9 +695,9 @@ function CompactRaceRow({
     .map((name) => (name ? cleanName(name) : ""))
 
     .some((val) => val === cleanName(topScorer?.name));
-  console.log("Some picks match:", someTheSame);
+  //console.log("Some picks match:", someTheSame);
 
-  console.log("Getting odds");
+  //console.log("Getting odds");
   const verdictOdds = race.bettingForecast?.find(
     (x) => cleanName(x.horseName) === cleanName(verdictPick || "")
   )?.decimalOdds;
@@ -706,12 +710,12 @@ function CompactRaceRow({
     (x) => cleanName(x.horseName) === cleanName(topPrediction?.name)
   )?.decimalOdds;
 
-  console.log("Verdict odds:", verdictOdds);
-  console.log("Top scorer odds:", topScorerOdds);
-  console.log("Top prediction odds:", topPredictionOdds);
+  //console.log("Verdict odds:", verdictOdds);
+  //console.log("Top scorer odds:", topScorerOdds);
+  //console.log("Top prediction odds:", topPredictionOdds);
 
   // Get positions and trophies for each pick
-  console.log("Getting positions and trophies");
+  //console.log("Getting positions and trophies");
   const topScorerPosition = topScorer ? getHorsePosition(topScorer.name) : "";
   const topScorerTrophy = getTrophy(topScorerPosition);
   const topPredictionPosition = topPrediction

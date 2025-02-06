@@ -1,3 +1,5 @@
+import { horseNameToKey } from "@/lib/racing/scores/funcs";
+
 export interface RaceAccordionStats {
   trainerStats: Array<{
     trainer: string;
@@ -85,15 +87,17 @@ export async function fetchRaceAccordion(
       .filter((name): name is string => !!name);
 
     // Find the all caps name from allNamed array, removing parenthetical content
-    const selection = cleanName(
-      allNamed.find((name) => {
-        // Remove content inside parentheses
-        const nameWithoutParens = name.replace(/\s*\([^)]*\)/g, "").trim();
-        return (
-          nameWithoutParens === nameWithoutParens.toUpperCase() &&
-          nameWithoutParens.length > 1
-        );
-      }) || ""
+    const selection = horseNameToKey(
+      cleanName(
+        allNamed.find((name) => {
+          // Remove content inside parentheses
+          const nameWithoutParens = name.replace(/\s*\([^)]*\)/g, "").trim();
+          return (
+            nameWithoutParens === nameWithoutParens.toUpperCase() &&
+            nameWithoutParens.length > 1
+          );
+        }) || ""
+      )
     );
 
     const isNap = verdictText.toLowerCase().includes("(nap)");
@@ -108,10 +112,13 @@ export async function fetchRaceAccordion(
     // Parse comments
     const comments: Record<string, string> = {};
     doc.querySelectorAll(".RC-spotlightComments__item").forEach((item) => {
-      const horseName = item
-        .querySelector(".RC-spotlightComments__itemTitle")
-        ?.textContent?.trim();
+      const horseName = horseNameToKey(
+        item
+          .querySelector(".RC-spotlightComments__itemTitle")
+          ?.textContent?.trim() || ""
+      );
       const comment = item
+
         .querySelector(".RC-spotlightComments__itemSpotlight")
         ?.textContent?.trim();
       if (horseName && comment) {

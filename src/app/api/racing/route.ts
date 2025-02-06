@@ -27,12 +27,12 @@ export async function GET(request: NextRequest) {
   try {
     // Try to read from cache first
     await fs.access(cacheFile);
-    console.log("📦 Found cached file for:", date);
+    //console.log("📦 Found cached file for:", date);
     const cachedData = await fs.readFile(cacheFile, "utf-8");
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
     // Cache miss - return null to indicate need for fresh data
-    console.log("❌ No cache file found for:", date);
+    //console.log("❌ No cache file found for:", date);
     return NextResponse.json(null);
   }
 }
@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
   const cacheFile = path.join(CACHE_DIR, `${date}.json`);
 
   await fs.writeFile(cacheFile, JSON.stringify(meetings, null, 2));
-  console.log("💾 Cache file saved for:", date);
+  //console.log("💾 Cache file saved for:", date);
 
   return NextResponse.json({ success: true });
 }

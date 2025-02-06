@@ -9,7 +9,18 @@ export function calculateSurfaceAdaptabilityScore({
   let score = 0;
   const maxScore = 0;
 
-  score++;
+  const surfaceStats = meetingDetails?.surface
+    ? horse.stats?.surfaceStats?.[meetingDetails?.surface?.toLowerCase()]
+    : undefined;
+  if (surfaceStats) {
+    // Strong win rate on surface
+    if (surfaceStats.winRate > 25) score += 4;
+    if (surfaceStats.winRate > 15) score += 2;
+
+    // Proven on surface
+    if (surfaceStats.runs >= 5) score += 2;
+    if (surfaceStats.wins >= 2) score += 2;
+  }
 
   return {
     score,

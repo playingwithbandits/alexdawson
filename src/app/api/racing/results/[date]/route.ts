@@ -4,6 +4,7 @@ import { NextResponse, NextRequest } from "next/server";
 import { RaceResults } from "@/types/racing";
 import { JSDOM } from "jsdom";
 import fs from "fs/promises";
+import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 export async function GET(
   request: Request,
@@ -11,14 +12,14 @@ export async function GET(
 ) {
   try {
     const date = await Promise.resolve(params.date);
-    console.log("Getting results for date:", date);
+    //console.log("Getting results for date:", date);
 
     const filePath = join(process.cwd(), "cache", "results", `${date}.txt`);
 
     try {
-      console.log("Reading file from:", filePath);
+      //console.log("Reading file from:", filePath);
       const fileContents = await readFile(filePath, "utf8");
-      console.log("Successfully read file contents");
+      //console.log("Successfully read file contents");
 
       // Parse the HTML content using jsdom
       const dom = new JSDOM(fileContents);
@@ -33,30 +34,32 @@ export async function GET(
       const courseContainers = doc.querySelectorAll(
         '[data-test-selector="course-container"]'
       );
-      console.log(`Found ${courseContainers.length} courses to parse`);
+      //console.log(`Found ${courseContainers.length} courses to parse`);
 
       courseContainers.forEach((courseContainer) => {
         // Get course name for all races in this container
-        const courseName =
+        const courseName = placeToPlaceKey(
           courseContainer
             .querySelector(`[data-test-selector="course-name"]`)
-            ?.textContent?.trim() || "";
-        console.log(`Processing course: ${courseName}`);
+            ?.textContent?.trim() || ""
+        );
+        //console.log(`Processing course: ${courseName}`);
 
         // Get all races for this course
         const raceContainers = courseContainer.querySelectorAll(
           '[data-test-selector="raceCourse-container"] > .rp-raceCourse__panel__race'
         );
-        //console.log(`Found ${raceContainers.length} races at ${courseName}`);
+        ////console.log(`Found ${raceContainers.length} races at ${courseName}`);
 
         raceContainers.forEach((race) => {
           // Get race data from attributes
           const raceId = race.getAttribute("data-diffusion-race-id") || "";
-          const diffusionCourseName =
-            race.getAttribute("data-diffusion-coursename") || "";
+          const diffusionCourseName = placeToPlaceKey(
+            race.getAttribute("data-diffusion-coursename") || ""
+          );
           const diffusionTime = race.getAttribute("data-diffusion-racetime");
 
-          // console.log(
+          // //console.log(
           //   `Processing race ID ${raceId} at ${diffusionCourseName} ${diffusionTime}`
           // );
 
@@ -74,7 +77,7 @@ export async function GET(
               .querySelector(".rp-raceCourse__panel__race__info__distance")
               ?.textContent?.trim() || "";
 
-          console.log(`Processing race at ${courseName} ${time}`);
+          //console.log(`Processing race at ${courseName} ${time}`);
 
           // Get all horses and their outcomes
           const horsesList = race.querySelector(
@@ -154,11 +157,11 @@ export async function GET(
         });
       });
 
-      console.log(`Successfully parsed ${results.results.length} races`);
+      //console.log(`Successfully parsed ${results.results.length} races`);
       return NextResponse.json(results);
     } catch (error) {
       // If file doesn't exist, create an empty one
-      console.log("No results file found, creating empty file");
+      //console.log("No results file found, creating empty file");
       await writeFile(filePath, "");
 
       // Return empty results structure

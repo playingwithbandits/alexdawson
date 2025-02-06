@@ -28,7 +28,7 @@ export function GamePageClient() {
   useEffect(() => {
     // Wait for hydration and check if we need to initialize
 
-    console.log("isInitialized", isInitialized);
+    //console.log("isInitialized", isInitialized);
     setIsLoading(false);
   }, [isInitialized, resetGame]);
 

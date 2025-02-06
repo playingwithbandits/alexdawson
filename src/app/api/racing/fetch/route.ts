@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { writeFile } from "fs/promises";
 import { join } from "path";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
+import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 const UK_COURSES = [
   "ascot",
@@ -76,19 +77,22 @@ export async function POST(request: Request) {
     const doc = parser.parseFromString(html, "text/html");
     const elements = doc.querySelectorAll(".RC-accordion");
     // Filter for UK courses only
-    console.log(`Found ${elements.length} total courses`);
+    //console.log(`Found ${elements.length} total courses`);
     const ukElements = Array.from(elements).filter((element) => {
-      const courseName = element
-        .querySelector(".RC-accordion__courseName")
-        ?.textContent?.toLowerCase()
-        .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
-        .trim();
-      console.log(`Processing course: ${courseName}`);
+      const courseName = placeToPlaceKey(
+        element
+          .querySelector(".RC-accordion__courseName")
+          ?.textContent?.toLowerCase()
+          .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
+          .trim() || ""
+      );
+
+      //console.log(`Processing course: ${courseName}`);
       const isUkCourse = courseName && UK_COURSES.includes(courseName);
-      console.log(`Is UK course: ${isUkCourse}`);
+      //console.log(`Is UK course: ${isUkCourse}`);
       return isUkCourse;
     });
-    console.log(`Filtered to ${ukElements.length} UK courses`);
+    //console.log(`Filtered to ${ukElements.length} UK courses`);
 
     const meetings = await parseMeetings(ukElements);
 

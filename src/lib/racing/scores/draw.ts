@@ -9,7 +9,15 @@ export function calculateDrawScore({
   let score = 0;
   const maxScore = 0;
 
-  score++;
+  const drawPerf = horse.stats?.drawPerformance;
+  if (drawPerf?.runsFromBadDraw && drawPerf.runsFromBadDraw >= 3) {
+    if (drawPerf.winRateFromBadDraw && drawPerf.winRateFromBadDraw > 25)
+      score += 5;
+    if (drawPerf.winRateFromBadDraw && drawPerf.winRateFromBadDraw > 15)
+      score += 3;
+    if (drawPerf.avgPositionFromBadDraw && drawPerf.avgPositionFromBadDraw < 4)
+      score += 2;
+  }
 
   return {
     score,

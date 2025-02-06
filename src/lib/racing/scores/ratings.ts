@@ -14,7 +14,6 @@ export function calculateRatingsScore({
   // Significantly better OR (>10% above average)
   if (Number(horse.officialRating) > raceStats.avgOfficialRating * 1.1) score++;
   // Better than average RPR
-
   if (Number(horse.rating) > raceStats.avgRating) score++;
   // Significantly better RPR (>10% above average)
   if (Number(horse.rating) > raceStats.avgRating * 1.1) score++;

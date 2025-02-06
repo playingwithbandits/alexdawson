@@ -10,7 +10,7 @@ async function ensureDirectoryExists(dir: string) {
   try {
     await fs.access(dir);
   } catch {
-    console.log(`Creating directory: ${dir}`);
+    ////console.log(`Creating directory: ${dir}`);
     await fs.mkdir(dir, { recursive: true });
   }
 }
@@ -30,7 +30,7 @@ async function fetchTipsPage(date: string) {
     return null;
   }
 
-  console.log(`Fetching tips from: ${url}`);
+  //console.log(`Fetching tips from: ${url}`);
   const response = await fetch(url);
   return await response.text();
 }
@@ -45,7 +45,7 @@ async function parseTipsPage(html: string) {
     .first();
 
   if (!ukPanel.length) {
-    console.log("No UK Racing Tips panel found");
+    //console.log("No UK Racing Tips panel found");
     return [];
   }
 
@@ -55,7 +55,7 @@ async function parseTipsPage(html: string) {
     .get()
     .filter(Boolean);
 
-  console.log(`Found ${links.length} course links`);
+  //console.log(`Found ${links.length} course links`);
   return links;
 }
 
@@ -65,7 +65,7 @@ async function parseCoursePage(html: string, selector: string) {
 
   const tab = $(selector);
   if (!tab.length) {
-    console.log(`No tab found for selector: ${selector}`);
+    //console.log(`No tab found for selector: ${selector}`);
     return [];
   }
 
@@ -130,7 +130,7 @@ async function parseCoursePage(html: string, selector: string) {
     }
   });
 
-  console.log(`Parsed ${races.length} races from ${selector}`);
+  //console.log(`Parsed ${races.length} races from ${selector}`);
   return races;
 }
 
@@ -143,16 +143,16 @@ export async function GET(
 
   try {
     // Try to read from cache first
-    console.log(`Attempting to read from cache: ${cacheFile}`);
+    //console.log(`Attempting to read from cache: ${cacheFile}`);
     const cachedData = await fs.readFile(cacheFile, "utf-8");
-    console.log("Cache hit - returning cached data");
+    //console.log("Cache hit - returning cached data");
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
     // Cache miss - fetch fresh data
-    console.log("Cache miss - fetching fresh data");
+    //console.log("Cache miss - fetching fresh data");
     const html = await fetchTipsPage(date);
     if (!html) {
-      console.log("No tips page found for date");
+      //console.log("No tips page found for date");
       return NextResponse.json(null);
     }
 
@@ -164,7 +164,7 @@ export async function GET(
     };
 
     for (const link of courseLinks) {
-      console.log(`Fetching course page: ${link}`);
+      //console.log(`Fetching course page: ${link}`);
       const courseHtml = await fetch(
         "https://alexdawson.co.uk/getP.php?q=https://www.attheraces.com" + link
       ).then((r) => r.text());
@@ -174,22 +174,22 @@ export async function GET(
           ? parts[parts.length - 2]
           : parts[parts.length - 1];
 
-      console.log(`Parsing tips for course: ${course}`);
+      //console.log(`Parsing tips for course: ${course}`);
       const atrRaces = await parseCoursePage(courseHtml, "#tab-atr");
       const timeformRaces = await parseCoursePage(courseHtml, "#tab-timeform");
 
       if (atrRaces.length) {
-        console.log(`Found ${atrRaces.length} ATR races`);
+        //console.log(`Found ${atrRaces.length} ATR races`);
         tips.atrTips.push({ course, races: atrRaces });
       }
       if (timeformRaces.length) {
-        console.log(`Found ${timeformRaces.length} Timeform races`);
+        //console.log(`Found ${timeformRaces.length} Timeform races`);
         tips.timeformTips.push({ course, races: timeformRaces });
       }
     }
 
     // Save to cache
-    console.log("Saving results to cache");
+    //console.log("Saving results to cache");
     await ensureDirectoryExists(CACHE_DIR);
     await fs.writeFile(cacheFile, JSON.stringify(tips, null, 2));
 

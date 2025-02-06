@@ -38,9 +38,9 @@ async function extractComments() {
   const uniqueComments = [...new Set(allComments)];
   await fs.writeFile(outputFile, JSON.stringify(uniqueComments, null, 2));
 
-  console.log(
-    `Extracted ${uniqueComments.length} unique comments to ${outputFile}`
-  );
+  //console.log(
+  //   `Extracted ${uniqueComments.length} unique comments to ${outputFile}`
+  // );
 }
 
 extractComments().catch(console.error);

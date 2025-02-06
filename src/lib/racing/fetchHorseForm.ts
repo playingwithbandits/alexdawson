@@ -4,7 +4,7 @@ export async function fetchHorseForm(
   profileUrl: string
 ): Promise<FormObj | undefined> {
   try {
-    console.log("Fetching form for URL:", profileUrl);
+    //console.log("Fetching form for URL:", profileUrl);
     if (!profileUrl) return undefined;
 
     // Convert profile URL to form URL
@@ -12,7 +12,7 @@ export async function fetchHorseForm(
       profileUrl
         .replace("/profile/horse/", "/profile/tab/horse/")
         .split("#")[0] + "/form";
-    console.log("Converted to form URL:", formUrl);
+    //console.log("Converted to form URL:", formUrl);
 
     const response = await fetch(`/getP.php?q=${encodeURIComponent(formUrl)}`);
 
@@ -21,7 +21,7 @@ export async function fetchHorseForm(
     }
 
     const formData = await response.json();
-    console.log("Parsed form data:", formData);
+    //console.log("Parsed form data:", formData);
     return formData;
   } catch (error) {
     console.error("Error fetching horse form:", error);

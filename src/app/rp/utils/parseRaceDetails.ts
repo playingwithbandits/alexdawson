@@ -11,19 +11,20 @@ import { calculateHorseScore3 } from "@/lib/racing/scores/calculateHorseScore3";
 import type { Bet, Horse, Meeting, Race } from "@/types/racing";
 import { fetchPredictions } from "./fetchPredictions";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
+import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 export async function parseRaceDetails(
   html: string,
   raceUrl: string,
   meetingDetails: Partial<Meeting>
 ): Promise<Partial<Race>> {
-  console.log("🔄 Starting parseRaceDetails...");
+  //console.log("🔄 Starting parseRaceDetails...");
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
 
   const headerBox = doc.querySelector(".RC-headerBox");
 
-  console.log("📊 Parsing betting forecast...", html);
+  //console.log("📊 Parsing betting forecast...", html);
   // Parse betting forecast
   const bettingForecast: Bet[] = [];
   const forecastElement = doc.querySelector(
@@ -60,13 +61,13 @@ export async function parseRaceDetails(
     });
   }
 
-  console.log("🐎 Parsing horses...");
+  //console.log("🐎 Parsing horses...");
   // Parse horses from runner rows
   const rowsElements = doc.querySelectorAll(
     ".RC-runnerRow:not(.RC-runnerRow_disabled)"
   );
   const rows = Array.from(rowsElements);
-  console.log(`Found ${rows.length} horses to parse`);
+  //console.log(`Found ${rows.length} horses to parse`);
 
   const horses: Horse[] = await Promise.all(
     rows.map(async (row) => {
@@ -80,7 +81,9 @@ export async function parseRaceDetails(
       const formObj = await fetchHorseForm(profileUrl);
 
       return {
-        name: row.querySelector(".RC-runnerName")?.textContent?.trim() || "",
+        name: horseNameToKey(
+          row.querySelector(".RC-runnerName")?.textContent?.trim() || ""
+        ),
         profileUrl,
         formObj,
         number:
@@ -158,11 +161,13 @@ export async function parseRaceDetails(
     ?.textContent?.match(/£([\d,]+)/);
   const prizeMoney = prizeMatch ? parseInt(prizeMatch[1].replace(/,/g, "")) : 0;
 
-  const courseName =
+  const courseName = placeToPlaceKey(
     doc
       .querySelector(`[data-test-selector="RC-courseHeader__name"]`)
       ?.textContent?.toLowerCase()
-      .trim() || "";
+      .trim() || ""
+  );
+
   // First calculate base race data
   const baseRaceData: Partial<Race> = {
     time:
@@ -290,6 +295,6 @@ export async function parseRaceDetails(
     ),
   };
 
-  console.log("🏁 Completed parseRaceDetails", result3);
+  //console.log("🏁 Completed parseRaceDetails", result3);
   return result3;
 }

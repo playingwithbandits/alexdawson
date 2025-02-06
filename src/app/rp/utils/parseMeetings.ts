@@ -1,6 +1,7 @@
 import type { Race, Meeting } from "@/types/racing";
 import { fetchRaceDetails } from "./fetchRaceDetails";
 import { parseRaceDetails } from "./parseRaceDetails";
+import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
   return Promise.all(
@@ -29,11 +30,11 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
         '[data-test-selector="RC-courseCards__raceRow"]'
       );
 
-      console.log("Venue:", venueElement?.textContent);
-      console.log("Races found:", raceElements);
+      //console.log("Venue:", venueElement?.textContent);
+      //console.log("Races found:", raceElements);
 
       const meetingDetails = {
-        venue: venueElement?.textContent?.trim() || "",
+        venue: placeToPlaceKey(venueElement?.textContent?.trim() || ""),
         surface: surfaceElement?.textContent?.trim() || "Turf",
         firstRace: firstRaceElement?.textContent?.trim() || "",
         lastRace:
@@ -83,10 +84,10 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
           let additionalDetails: Partial<Race> = { horses: [] };
 
           try {
-            console.log(`Processing race at ${raceUrl}`);
+            //console.log(`Processing race at ${raceUrl}`);
             details = await fetchRaceDetails(raceUrl);
             if (details) {
-              console.log("📝 Got race details, starting parse...");
+              //console.log("📝 Got race details, starting parse...");
               additionalDetails = await parseRaceDetails(
                 details,
                 raceUrl,

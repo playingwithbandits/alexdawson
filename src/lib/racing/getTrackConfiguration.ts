@@ -1,4 +1,5 @@
 import { TrackConfiguration } from "./calculateDrawBias";
+import { placeToPlaceKey } from "./scores/funcs";
 
 const courseConfigs: Record<string, TrackConfiguration> = {
   // Straight tracks
@@ -66,11 +67,11 @@ const courseConfigs: Record<string, TrackConfiguration> = {
 export function getTrackConfiguration(
   courseName: string
 ): TrackConfiguration | undefined {
-  const normalizedCourseName = courseName.toLowerCase().trim();
+  const normalizedCourseName = placeToPlaceKey(courseName).toLowerCase().trim();
 
   // Find the matching course configuration
   const matchingCourse = Object.keys(courseConfigs).find((course) =>
-    normalizedCourseName.includes(course)
+    normalizedCourseName.includes(placeToPlaceKey(course))
   );
 
   if (!matchingCourse) {

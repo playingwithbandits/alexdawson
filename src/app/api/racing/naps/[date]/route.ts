@@ -19,7 +19,7 @@ async function fetchAndParseTips(): Promise<NapsTableTip[]> {
     "https://alexdawson.co.uk/getP.php?q=https://www.horseracing.net/naps-table"
   );
   const html = await response.text();
-  console.log("Naps Table HTML:", html);
+  //console.log("Naps Table HTML:", html);
   const $ = cheerio.load(html);
 
   const tips: NapsTableTip[] = [];
