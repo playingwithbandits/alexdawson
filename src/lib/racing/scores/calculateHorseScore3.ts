@@ -15,17 +15,14 @@ import { calculateConnectionComboScore } from "./connectionCombo";
 import { calculateMarketScore } from "./market";
 import { calculateMarginsScore } from "./margins";
 import { calculateFormProgressionScore } from "./formProgression";
-import { calculateClassMovementScore } from "./classMovement";
 import { calculateTrackConfigScore } from "./trackConfig";
-import { calculateRaceTypeScore } from "./raceType";
-import { calculateSurfaceAdaptabilityScore } from "./surfaceAdaptability";
 import { calculateOfficialRatingScore } from "./officialRating";
 import { calculateConsistencyScore } from "./consistency";
 import { calculateLayoffScore } from "./layoff";
 import { calculateWeightTrendScore } from "./weightTrend";
-import { calculatePrizeProgressionScore } from "./prizeProgression";
 import { calculateCourseDistanceScore } from "./courseDistance";
 import { calculateSentimentScore } from "./sentiment";
+import { RACING_SCORE_WEIGHTS } from "./weights";
 
 export function calculateHorseScore3(props: {
   horse: Horse;
@@ -48,25 +45,21 @@ export function calculateHorseScore3(props: {
   const market = calculateMarketScore(props);
   const margins = calculateMarginsScore(props);
   const formProgression = calculateFormProgressionScore(props);
-  const classMovement = calculateClassMovementScore(props);
   const trackConfig = calculateTrackConfigScore(props);
-  const raceType = calculateRaceTypeScore(props);
-  const surfaceAdaptability = calculateSurfaceAdaptabilityScore(props);
   const officialRating = calculateOfficialRatingScore(props);
   const consistency = calculateConsistencyScore(props);
   const layoff = calculateLayoffScore(props);
   const weightTrend = calculateWeightTrendScore(props);
-  const prizeProgression = calculatePrizeProgressionScore(props);
   const courseDistance = calculateCourseDistanceScore(props);
   const sentiment = calculateSentimentScore(props); //done
 
-  const totalScore = [
+  const totalScore = Object.entries({
     ratings,
     distance,
     going,
     form,
     course,
-    classScore,
+    class: classScore,
     connections,
     prize,
     weight,
@@ -76,52 +69,34 @@ export function calculateHorseScore3(props: {
     market,
     margins,
     formProgression,
-    classMovement,
     trackConfig,
-    raceType,
-    surfaceAdaptability,
     officialRating,
     consistency,
     layoff,
     weightTrend,
-    prizeProgression,
     courseDistance,
     sentiment,
-  ].reduce((acc, curr) => acc + curr.score, 0);
-  const totalMaxScore = [
-    ratings,
-    distance,
-    going,
-    form,
-    course,
-    classScore,
-    connections,
-    prize,
-    weight,
-    draw,
-    seasonal,
-    connectionCombo,
-    market,
-    margins,
-    formProgression,
-    classMovement,
-    trackConfig,
-    raceType,
-    surfaceAdaptability,
-    officialRating,
-    consistency,
-    layoff,
-    weightTrend,
-    prizeProgression,
-    courseDistance,
-    sentiment,
-  ].reduce((acc, curr) => acc + curr.maxScore, 0);
+  }).reduce((acc, [key, component]) => {
+    // Normalize the score (0-1) and apply the weight
+    const normalizedWeightedScore =
+      (component.score / component.maxScore) *
+      RACING_SCORE_WEIGHTS[key as keyof typeof RACING_SCORE_WEIGHTS];
+    return acc + normalizedWeightedScore;
+  }, 0);
+
+  // Calculate total max score (sum of all weights)
+  const totalMaxScore = Object.values(RACING_SCORE_WEIGHTS).reduce(
+    (acc, weight) => acc + weight,
+    0
+  );
 
   const total = {
     score: totalScore,
     maxScore: totalMaxScore,
-    percentage: totalMaxScore === 0 ? 0 : (totalScore / totalMaxScore) * 100,
+    percentage: (totalScore / totalMaxScore) * 100,
   };
+
+  console.log(total);
 
   return {
     total,
@@ -141,15 +116,11 @@ export function calculateHorseScore3(props: {
       market,
       margins,
       formProgression,
-      classMovement,
       trackConfig,
-      raceType,
-      surfaceAdaptability,
       officialRating,
       consistency,
       layoff,
       weightTrend,
-      prizeProgression,
       courseDistance,
       sentiment,
     },

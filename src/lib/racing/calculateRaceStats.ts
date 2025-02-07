@@ -1,17 +1,6 @@
 import { avg, sum } from "@/lib/utils";
 import { Race, RaceStats, Horse } from "@/types/racing";
 
-function parseDistance(distance: string): number {
-  const furlongs = distance.match(/(\d+)f/)?.[1] || "0";
-  const miles = distance.match(/(\d+)m/)?.[1] || "0";
-  return parseInt(miles) * 8 + parseInt(furlongs);
-}
-
-function parseClass(classStr: string): number {
-  const match = classStr.match(/Class\s*(\d+)/i);
-  return match ? parseInt(match[1]) : 0;
-}
-
 interface RaceStatsInput {
   raceData: Partial<Race>;
   horses: Horse[];
@@ -25,8 +14,8 @@ export function calculateRaceStats({
   const horseStats = horses.map((h) => h.stats).filter(Boolean);
 
   // Parse basic race info
-  const distanceInFurlongs = parseDistance(raceData.distance || "");
-  const classLevel = parseClass(raceData.class || "");
+  const distanceInFurlongs = raceData.distance || 0;
+  const classLevel = raceData.class || 0;
   const isHandicap = (raceData.title || "").toLowerCase().includes("handicap");
 
   // Calculate aggregate stats

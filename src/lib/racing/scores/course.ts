@@ -7,7 +7,7 @@ export function calculateCourseScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 5;
 
   // Course winner
   if ((horse.stats?.courseForm?.wins || 0) > 0) score++;
@@ -34,6 +34,6 @@ export function calculateCourseScore({
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

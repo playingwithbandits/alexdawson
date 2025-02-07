@@ -7,34 +7,36 @@ export function calculateWeightTrendScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 3;
 
   // Well weighted compared to field average
   if (horse.weight.pounds < raceStats.avgWeight) score++;
 
-  // Weight allowance advantage
-  if (horse.jockey.allowance) score++;
-
-  // Progressive with this weight
-  if (
-    horse.stats?.weightProgression
-      ?.slice(0, 3)
-      .every((w, i, arr) => i === 0 || w >= arr[i - 1])
-  )
-    score++;
+  const horseWeight =
+    horse.weight.pounds - (parseInt(horse.jockey.allowance || "0") || 0);
 
   // Proven at this weight
-  const weightRange = 5; // 5lb tolerance
+  // Example: If horse carried 130lbs and won, and current weight is 128lbs
+  // 130 > 128 so has proven can win at higher weight
   const hasWonAtWeight = horse.formObj?.form?.some(
     (f) =>
-      f.raceOutcomeCode === "1" &&
-      Math.abs(f.weightCarriedLbs || 0 - horse.weight.pounds) <= weightRange
+      f.raceOutcomeCode === "1" && // Won
+      (f.weightCarriedLbs || 0) >= horseWeight // Carried more weight
   );
   if (hasWonAtWeight) score++;
+
+  // Example: If horse carried 132lbs and placed, and current weight is 128lbs
+  // 132 > 128 so has proven can place at higher weight
+  const hasPlacedAtWeight = horse.formObj?.form?.some(
+    (f) =>
+      ["1", "2", "3"].includes(f.raceOutcomeCode || "") && // Won or placed
+      (f.weightCarriedLbs || 0) >= horseWeight // Carried more weight
+  );
+  if (hasPlacedAtWeight) score++;
 
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

@@ -18,15 +18,11 @@ export interface HorseScore {
     market: ScoreComponent;
     margins: ScoreComponent;
     formProgression: ScoreComponent;
-    classMovement: ScoreComponent;
     trackConfig: ScoreComponent;
-    raceType: ScoreComponent;
-    surfaceAdaptability: ScoreComponent;
     officialRating: ScoreComponent;
     consistency: ScoreComponent;
     layoff: ScoreComponent;
     weightTrend: ScoreComponent;
-    prizeProgression: ScoreComponent;
     courseDistance: ScoreComponent;
     sentiment: ScoreComponent;
   };

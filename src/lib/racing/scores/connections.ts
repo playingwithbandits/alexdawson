@@ -7,7 +7,7 @@ export function calculateConnectionsScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 6;
 
   const jockeyStats = race.raceExtraInfo?.jockeyStats?.find(
     (j) =>
@@ -30,6 +30,7 @@ export function calculateConnectionsScore({
       ?.map((x) => x.last14Days.winRate)
       ?.reduce((sum, t) => sum + (t || 0), 0) ||
     0 / (race.raceExtraInfo?.jockeyStats?.length || 1);
+
   if ((jockeyStats?.last14Days?.winRate || 0) > avgJockeyRate) score++;
 
   // Trainer in form (14 day strike rate > 15%)
@@ -49,6 +50,6 @@ export function calculateConnectionsScore({
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

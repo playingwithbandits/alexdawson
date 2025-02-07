@@ -11,7 +11,12 @@ import { calculateHorseScore3 } from "@/lib/racing/scores/calculateHorseScore3";
 import type { Bet, Horse, Meeting, Race } from "@/types/racing";
 import { fetchPredictions } from "./fetchPredictions";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
-import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
+import {
+  horseNameToKey,
+  isValidOutcome,
+  parseDistance,
+  placeToPlaceKey,
+} from "@/lib/racing/scores/funcs";
 
 export async function parseRaceDetails(
   html: string,
@@ -69,6 +74,7 @@ export async function parseRaceDetails(
   const rows = Array.from(rowsElements);
   //console.log(`Found ${rows.length} horses to parse`);
 
+  const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const horses: Horse[] = await Promise.all(
     rows.map(async (row) => {
       const profileLink = row.querySelector(
@@ -85,7 +91,17 @@ export async function parseRaceDetails(
           row.querySelector(".RC-runnerName")?.textContent?.trim() || ""
         ),
         profileUrl,
-        formObj,
+        formObj: {
+          ...formObj,
+          form: formObj?.form?.filter(
+            (x) =>
+              isValidOutcome(x.raceOutcomeCode) &&
+              x.officialRatingRanOff &&
+              x.officialRatingRanOff > 0 &&
+              x.raceClass !== null &&
+              new Date(x.raceDatetime || "") > twoYearsAgo
+          ),
+        },
         number:
           row.querySelector(".RC-runnerNumber__no")?.textContent?.trim() || "",
         draw: row
@@ -182,17 +198,22 @@ export async function parseRaceDetails(
         ?.textContent?.replace(/\s+/g, " ")
         .trim() || "",
     runners: horses.length,
-    distance:
+    distance: parseDistance(
       doc
         .querySelector(`[data-test-selector="RC-header__raceDistanceRound"]`)
         ?.textContent?.replace(/\s+/g, " ")
-        .trim() || "",
+        .trim() || ""
+    ),
+
     class:
-      doc
-        .querySelector(`[data-test-selector="RC-header__raceClass"]`)
-        ?.textContent?.replace(/[()]/g, "")
-        .replace(/\s+/g, " ")
-        .trim() || "",
+      parseInt(
+        doc
+          .querySelector(`[data-test-selector="RC-header__raceClass"]`)
+          ?.textContent?.replace(/[()]/g, "")
+          .replace(/\s+/g, " ")
+          ?.replace("Class", "")
+          .trim() || ""
+      ) || 0,
     ageRestriction:
       doc
         .querySelector(`[data-test-selector="RC-header__rpAges"]`)
@@ -234,7 +255,7 @@ export async function parseRaceDetails(
   // Calculate draw bias based on track configuration
   const drawBiasInfo = calculateDrawBias(
     baseRaceData.trackConfig as TrackConfiguration,
-    baseRaceData.distance || "",
+    baseRaceData.distance || 0,
     baseRaceData.going,
     meetingDetails.venue
   );
@@ -253,13 +274,14 @@ export async function parseRaceDetails(
     horses: baseRaceData.horses || [],
     time: baseRaceData.time || "",
     title: baseRaceData.title || "",
-    distance: baseRaceData.distance || "",
-    class: baseRaceData.class || "",
+    distance: baseRaceData.distance || 0,
+    class: baseRaceData.class || 0,
     ageRestriction: baseRaceData.ageRestriction || "",
     tv: baseRaceData.tv || "",
     url: baseRaceData.url || "",
     runners: baseRaceData.runners || 0,
     raceStats,
+
     predictions: baseRaceData.id
       ? await fetchPredictions(baseRaceData.id)
       : undefined,
@@ -295,6 +317,6 @@ export async function parseRaceDetails(
     ),
   };
 
-  //console.log("🏁 Completed parseRaceDetails", result3);
+  console.log("🏁 Completed parseRaceDetails", result3);
   return result3;
 }

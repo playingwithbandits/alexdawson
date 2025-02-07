@@ -1,7 +1,7 @@
 import type { Race, Meeting } from "@/types/racing";
 import { fetchRaceDetails } from "./fetchRaceDetails";
 import { parseRaceDetails } from "./parseRaceDetails";
-import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
+import { parseDistance, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
   return Promise.all(
@@ -108,8 +108,8 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
               runnersElement?.textContent?.trim().split(" ")[0] || "0",
               10
             ),
-            distance: distance || "",
-            class: classInfo || "",
+            distance: parseDistance(distance || ""),
+            class: classInfo || ""?.replace("Class", "").trim(),
             ageRestriction: ageRestriction || "",
             tv: tvElement?.textContent?.trim() || "",
             url: raceUrl,

@@ -39,8 +39,6 @@ export function generateRaceComment(
   if (components.course.percentage > 80) strengths.push("strong course form");
   if (components.sentiment?.percentage > 80)
     strengths.push("positive comments");
-  if (components.classMovement.percentage > 80)
-    strengths.push("progressive profile");
   if (components.consistency.percentage > 80)
     strengths.push("consistent performer");
   if (components.connections.percentage > 80)

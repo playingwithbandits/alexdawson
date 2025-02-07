@@ -7,20 +7,17 @@ export function calculateMarketScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 3;
 
   const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
 
   // Well backed when winning
-  const wellBackedWins = lastSixRuns.filter(
-    (run) =>
-      run.raceOutcomeCode === "1" &&
-      run.oddsDesc &&
-      parseFloat(run.oddsDesc) < 6.0
+  const wellBacked = lastSixRuns.filter(
+    (run) => run.oddsDesc && parseFloat(run.oddsDesc) < 6.0
   ).length;
 
-  if (wellBackedWins > 0) score++;
-  if (wellBackedWins > 1) score++;
+  if (wellBacked > 0) score++;
+  if (wellBacked > 1) score++;
 
   // Performs well when fancied
   const fanciedRuns = lastSixRuns.filter(
@@ -38,6 +35,6 @@ export function calculateMarketScore({
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

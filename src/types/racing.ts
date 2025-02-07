@@ -1,4 +1,5 @@
 import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
+import { DrawBiasResult } from "@/lib/racing/calculateDrawBias";
 import { HorseScore } from "@/lib/racing/scores/types";
 
 export interface Horse {
@@ -90,8 +91,8 @@ export interface Race {
   title: string;
   raceExtraInfo?: RaceAccordionStats;
   runners: number;
-  distance: string;
-  class: string;
+  distance: number;
+  class: number;
   ageRestriction: string;
   tv: string;
   prize?: string;
@@ -101,14 +102,15 @@ export interface Race {
   // raceType?: string;
   // trackCondition?: string;
   // weather?: string;
-  drawBias?: string;
-  drawBiasExplanation?: string;
+  drawBias?: DrawBiasResult["bias"];
+  drawBiasExplanation?: DrawBiasResult["explanation"];
   trackConfig?: "left-handed" | "right-handed" | "straight";
   avgSpeedRating?: number;
   avgOfficialRating?: number;
   avgPrize?: number;
   avgTotalPrize?: number;
   avgRating?: number;
+
   stalls?: string;
   ewTerms?: string;
   bettingForecast?: Bet[];

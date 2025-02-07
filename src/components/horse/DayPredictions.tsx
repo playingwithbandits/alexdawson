@@ -77,7 +77,9 @@ export function DayPredictions({
       meeting.races.forEach((race) => {
         // Get top scorer for this race
         const topScorer = race.horses.sort(
-          (a, b) => (b.score?.total?.score || 0) - (a.score?.total?.score || 0)
+          (a, b) =>
+            (b.score?.total?.percentage || 0) -
+            (a.score?.total?.percentage || 0)
         )[0];
 
         if (!topScorer) return;
@@ -287,9 +289,10 @@ export function DayPredictions({
   const getTopSelections = (race: Race) => {
     if (!race.horses?.length) return null;
     const sorted = [...race.horses].sort(
-      (a, b) => (b.score?.total?.score || 0) - (a.score?.total?.score || 0)
+      (a, b) =>
+        (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
     );
-    const topScore = sorted[0].score?.total?.score || 0;
+    const topScore = sorted[0].score?.total?.percentage || 0;
     const threshold = topScore * 0.95; // Within 10% of top score
 
     return sorted
@@ -504,7 +507,8 @@ function CompactRaceRow({
   //console.log("Getting top scorer for race:", race.time);
 
   const topScorer = race.horses.sort(
-    (a, b) => (b.score?.total?.score || 0) - (a.score?.total?.score || 0)
+    (a, b) =>
+      (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
   )[0];
   //console.log("Top scorer:", topScorer?.name);
 
@@ -668,20 +672,20 @@ function CompactRaceRow({
     }, 0);
 
   const threeOrMoreMatch = matchCount >= 2;
-  //console.log(
-  //   "Three or more picks match:",
-  //   topScorer?.name,
-  //   matchCount,
-  //   [
-  //     topPrediction?.name,
-  //     verdictPick,
-  //     atrTipSelection,
-  //     timeformTipSelection,
-  //     gytoTipSelection,
-  //     napsTableTipSelection,
-  //   ],
-  //   threeOrMoreMatch
-  // );
+  console.log(
+    "Three or more picks match:",
+    topScorer?.name,
+    matchCount,
+    [
+      topPrediction?.name,
+      verdictPick,
+      atrTipSelection,
+      timeformTipSelection,
+      gytoTipSelection,
+      napsTableTipSelection,
+    ],
+    threeOrMoreMatch
+  );
   // Update someTheSame to include GG tip
   const someTheSame = [
     topPrediction?.name,
@@ -788,14 +792,15 @@ function CompactRaceRow({
           >
             <span
               className={`font-medium ${
-                (topScorer.score?.total?.score || 0) >= 90
+                (topScorer.score?.total?.percentage || 0) >= 55
                   ? "text-yellow-400 font-bold"
-                  : (topScorer.score?.total?.score || 0) < 75
+                  : (topScorer.score?.total?.percentage || 0) < 40
                   ? "text-[#626262]"
                   : "*:"
               }`}
             >
-              {topScorer.name} {topScorerTrophy} {topScorer.score?.total?.score}
+              {topScorer.name} {topScorerTrophy}{" "}
+              {topScorer.score?.total?.percentage.toFixed(1)}{" "}
               {(topScorerOdds || 0) >= 6 ? (
                 <span
                   className={(topScorerOdds || 0) >= 6 ? "text-blue-400" : ""}
@@ -964,7 +969,10 @@ function DetailedRaceRow({
   napsTableTips: NapsTableTip[] | undefined;
 }) {
   const topScorer = race.horses
-    .sort((a, b) => (b.score?.total?.score || 0) - (a.score?.total?.score || 0))
+    .sort(
+      (a, b) =>
+        (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+    )
     .at(0);
 
   if (!topScorer?.score) return null;
@@ -986,6 +994,12 @@ function DetailedRaceRow({
             <span>{key}:</span>
             <span className={value.score > 75 ? "text-yellow-400" : ""}>
               {value.score.toFixed(1)}
+            </span>
+            <span className={value.maxScore > 75 ? "text-yellow-400" : ""}>
+              {value.maxScore.toFixed(1)}
+            </span>
+            <span className={value.percentage > 75 ? "text-yellow-400" : ""}>
+              {value.percentage.toFixed(1)}
             </span>
           </div>
         ))}

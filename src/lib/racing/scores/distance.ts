@@ -1,5 +1,4 @@
-import { avg } from "@/lib/utils";
-import { distanceToWinnerStrToFloat } from "../calculateHorseStats";
+import { isWithinTenPercent } from "./funcs";
 import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateDistanceScore({
@@ -9,7 +8,7 @@ export function calculateDistanceScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 7;
 
   // Get distance stats for this range
   const rangeStats = horse.stats?.distanceStats?.performanceByType;
@@ -25,8 +24,8 @@ export function calculateDistanceScore({
         ? rangeStats.middle
         : rangeStats.staying;
 
-    if (category.winRate > 20) score += 2;
-    if (category.runs >= 5) score += 1;
+    if (category.winRate > 20) score++;
+    if (category.runs >= 2) score++;
   }
 
   // Has won at this distance range
@@ -34,63 +33,36 @@ export function calculateDistanceScore({
     horse.formObj?.form?.filter(
       (r) =>
         r.raceOutcomeCode === "1" &&
-        Math.abs((r.distanceFurlong || 0) - raceStats.distanceInFurlongs) <= 1
+        isWithinTenPercent(r.distanceFurlong || 0, race.distance)
     ).length || 0;
-  if (distanceWins > 0) score += 3;
-  if (distanceWins > 1) score += 2;
+  if (distanceWins > 0) score++;
+  if (distanceWins > 1) score++;
 
   // Strong win rate at this distance
   const distanceRuns =
-    horse.formObj?.form?.filter(
-      (r) =>
-        Math.abs((r.distanceFurlong || 0) - raceStats.distanceInFurlongs) <= 1
+    horse.formObj?.form?.filter((r) =>
+      isWithinTenPercent(r.distanceFurlong || 0, race.distance)
     ) || [];
-  if (distanceRuns?.length >= 3) {
-    const winRate = (distanceWins / distanceRuns.length) * 100;
-    if (winRate > 25) score += 2;
-    if (winRate > 40) score += 2;
+
+  if (distanceRuns?.length) {
+    score++;
   }
 
   // Distance within horse's proven range
   const minDistance = horse.stats?.minDistance || 0;
   const maxDistance = horse.stats?.maxDistance || 0;
-  if (
-    raceStats.distanceInFurlongs >= minDistance &&
-    raceStats.distanceInFurlongs <= maxDistance
-  ) {
-    score += 1;
+  if (race.distance >= minDistance && race.distance <= maxDistance) {
+    score++;
     // Comfortably within range (not at extremes)
-    if (
-      raceStats.distanceInFurlongs >= minDistance + 1 &&
-      raceStats.distanceInFurlongs <= maxDistance - 1
-    ) {
-      score += 2;
+    if (race.distance >= minDistance + 1 && race.distance <= maxDistance - 1) {
+      score++;
     }
-  }
-
-  // Good margins at this distance
-  const distanceMargins = horse.formObj?.form
-    ?.filter(
-      (r) =>
-        Math.abs((r.distanceFurlong || 0) - raceStats.distanceInFurlongs) <= 1
-    )
-    .map((r) => {
-      if (r.raceOutcomeCode === "1") {
-        return distanceToWinnerStrToFloat(r.winningDistance || "");
-      }
-      return -distanceToWinnerStrToFloat(r.distanceToWinner || "");
-    });
-
-  if (distanceMargins?.length && distanceMargins.length >= 3) {
-    const avgMargin = avg(distanceMargins);
-    if (avgMargin > 0) score += 2; // Net positive margins
-    if (avgMargin > 1) score += 2; // Strong positive margins
   }
 
   const scoreComponent: ScoreComponent = {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 
   return scoreComponent;

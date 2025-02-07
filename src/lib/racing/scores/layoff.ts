@@ -8,7 +8,7 @@ export function calculateLayoffScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 7;
 
   const daysOff = horse.stats?.daysOffTrack || 0;
   const form = horse.formObj?.form || [];
@@ -19,16 +19,21 @@ export function calculateLayoffScore({
     return runDaysOff > 60 && r.raceOutcomeCode === "1";
   });
 
-  if (freshRuns.length >= 2) score += 3;
-  if (freshRuns.length >= 1) score += 2;
+  if (freshRuns.length >= 1) {
+    score++;
+  }
 
   // Current layoff suitability
-  if (daysOff < 30) score += 3;
-  else if (daysOff < 60 && freshRuns.length > 0) score += 2;
+  if (daysOff < 10) score++;
+  if (daysOff < 20) score++;
+  if (daysOff < 30) score++;
+  if (daysOff < 60) score++;
+  if (daysOff < 90) score++;
+  if (daysOff < 120) score++;
 
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

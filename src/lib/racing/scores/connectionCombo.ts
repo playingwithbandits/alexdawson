@@ -7,7 +7,7 @@ export function calculateConnectionComboScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 4;
 
   // Find previous runs with same jockey combo
   const comboRuns = horse.formObj?.form?.filter(
@@ -17,7 +17,9 @@ export function calculateConnectionComboScore({
 
   if (comboRuns?.length) {
     // Successful partnership
-    const comboWins = comboRuns.filter((r) => r.raceOutcomeCode === "1").length;
+    const comboWins = comboRuns.filter(
+      (r) => parseInt(r.raceOutcomeCode || "0") === 1
+    ).length;
     const comboPlaces = comboRuns.filter(
       (r) => parseInt(r.raceOutcomeCode || "99") <= 3
     ).length;
@@ -36,6 +38,6 @@ export function calculateConnectionComboScore({
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

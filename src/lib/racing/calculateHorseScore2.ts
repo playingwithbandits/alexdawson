@@ -1,7 +1,7 @@
 import { Horse, HorseStats, Meeting, Race, RaceStats } from "@/types/racing";
 import { GOING_REMAP, mapGoingCodeToType } from "./goingUtils";
 import { avg } from "../utils";
-import { distanceToWinnerStrToFloat } from "./calculateHorseStats";
+import { distanceToWinnerStrToFloat } from "./scores/funcs";
 
 export const MAX_SCORES = {
   ratings: 8, // 2 for OR, 2 for RPR, 2 for field position, 2 for top speed
@@ -408,15 +408,14 @@ export function calculateHorseScore2(
       ?.slice(0, 4)
       .some(
         (f) =>
-          f.raceOutcomeCode === "1" &&
-          f.raceClass &&
-          f.raceClass <= parseInt(race.class.replace(/\D/g, ""))
+          f.raceOutcomeCode === "1" && f.raceClass && f.raceClass <= race.class
       );
     if (recentClassWin) score++;
 
     // Recent course win
     const recentCourseWin = horse.formObj?.form
       ?.slice(0, 6)
+
       .some(
         (f) =>
           f.raceOutcomeCode === "1" &&
@@ -486,17 +485,14 @@ export function calculateHorseScore2(
     const hasWonInClass =
       horse.formObj?.form?.some(
         (f) =>
-          f.raceOutcomeCode === "1" &&
-          f.raceClass &&
-          f.raceClass <= parseInt(race.class.replace(/\D/g, ""))
+          f.raceOutcomeCode === "1" && f.raceClass && f.raceClass <= race.class
       ) || false;
     if (hasWonInClass) score++;
 
     // Class experience
     const hasClassExperience =
       horse.formObj?.form?.some(
-        (f) =>
-          f.raceClass && f.raceClass <= parseInt(race.class.replace(/\D/g, ""))
+        (f) => f.raceClass && f.raceClass <= race.class
       ) || false;
     if (hasClassExperience) score++;
 
@@ -512,20 +508,16 @@ export function calculateHorseScore2(
     if (
       horse.formObj?.form?.some(
         (f) =>
-          f.raceOutcomeCode === "1" &&
-          f.raceClass &&
-          f.raceClass < parseInt(race.class.replace(/\D/g, ""))
+          f.raceOutcomeCode === "1" && f.raceClass && f.raceClass < race.class
       )
     )
       score++;
 
     // Consistent at this level
     const classPerformance = horse.formObj?.form
-      ?.filter(
-        (f) =>
-          f.raceClass && f.raceClass === parseInt(race.class.replace(/\D/g, ""))
-      )
+      ?.filter((f) => f.raceClass && f.raceClass === race.class)
       .filter((f) => parseInt(f.raceOutcomeCode || "99") <= 4).length;
+
     if (classPerformance && classPerformance >= 3) score++;
 
     return {
@@ -665,10 +657,7 @@ export function calculateHorseScore2(
     // Recent runs in similar conditions
     const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
     const similarConditionsRuns = lastSixRuns.filter((run) => {
-      const similarClass =
-        Math.abs(
-          (run.raceClass || 0) - parseInt(race.class.replace(/\D/g, ""))
-        ) <= 1;
+      const similarClass = Math.abs((run.raceClass || 0) - race.class) <= 1;
       const similarDistance =
         Math.abs(
           (run.distanceFurlong || 0) - (raceStats.distanceInFurlongs || 0)
@@ -786,7 +775,7 @@ export function calculateHorseScore2(
     const classStats = horse.stats?.classStats;
     if (classStats) {
       // Proven at this level or higher
-      if (classStats.highestClass <= parseInt(race.class)) score += 3;
+      if (classStats.highestClass <= race.class) score += 3;
 
       // Progressive through classes
       const isProgressive = classStats.classProgression.every(

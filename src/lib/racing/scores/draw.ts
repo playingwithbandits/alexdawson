@@ -1,3 +1,4 @@
+import { DrawBiasResult } from "../calculateDrawBias";
 import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateDrawScore({
@@ -7,21 +8,36 @@ export function calculateDrawScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 3;
 
-  const drawPerf = horse.stats?.drawPerformance;
-  if (drawPerf?.runsFromBadDraw && drawPerf.runsFromBadDraw >= 3) {
-    if (drawPerf.winRateFromBadDraw && drawPerf.winRateFromBadDraw > 25)
-      score += 5;
-    if (drawPerf.winRateFromBadDraw && drawPerf.winRateFromBadDraw > 15)
-      score += 3;
-    if (drawPerf.avgPositionFromBadDraw && drawPerf.avgPositionFromBadDraw < 4)
-      score += 2;
+  if (!horse.draw) {
+    score += maxScore;
+  } else {
+    const drawBias = race.drawBias;
+    const numberOfRunners = race.runners;
+
+    if (drawBias && numberOfRunners) {
+      const isLowDraw = parseInt(horse.draw) <= numberOfRunners * 0.3;
+      const isHighDraw = parseInt(horse.draw) >= numberOfRunners * 0.7;
+      const isMiddleDraw =
+        parseInt(horse.draw) > numberOfRunners * 0.3 &&
+        parseInt(horse.draw) < numberOfRunners * 0.7;
+
+      if (drawBias === "Low" && isLowDraw) {
+        score++;
+      }
+      if (drawBias === "High" && isHighDraw) {
+        score++;
+      }
+      if (drawBias === "Middle" && isMiddleDraw) {
+        score++;
+      }
+    }
   }
 
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

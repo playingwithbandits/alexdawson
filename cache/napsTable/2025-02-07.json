@@ -1,0 +1,299 @@
+{
+  "date": "2025-02-07",
+  "tips": [
+    {
+      "time": "15:25",
+      "horse": "Flegmatik",
+      "tipster": "Newsboy",
+      "score": "31.6"
+    },
+    {
+      "time": "15:25",
+      "horse": "Issar d'Airy",
+      "tipster": "Matt Polley",
+      "score": "14.9"
+    },
+    {
+      "time": "15:25",
+      "horse": "Flegmatik",
+      "tipster": "The Punt",
+      "score": "12.9"
+    },
+    {
+      "time": "14:12",
+      "horse": "Schalke",
+      "tipster": "Steve Mullington",
+      "score": "13.5"
+    },
+    {
+      "time": "13:50",
+      "horse": "Kingston Pride",
+      "tipster": "Sam Hardy",
+      "score": "9.4"
+    },
+    {
+      "time": "15:50",
+      "horse": "Visual Impact",
+      "tipster": "RP Ratings",
+      "score": "8.4"
+    },
+    {
+      "time": "15:25",
+      "horse": "Flegmatik",
+      "tipster": "Rob Wright",
+      "score": "7.9"
+    },
+    {
+      "time": "15:25",
+      "horse": "Straw Fan Jack",
+      "tipster": "The Score",
+      "score": "7.6"
+    },
+    {
+      "time": "14:12",
+      "horse": "Duke Of Deception",
+      "tipster": "Garry Owen",
+      "score": "7.3"
+    },
+    {
+      "time": "14:20",
+      "horse": "Ideal Des Bordes",
+      "tipster": "The Brigadier",
+      "score": "6.5"
+    },
+    {
+      "time": "15:25",
+      "horse": "Flegmatik",
+      "tipster": "Lee Sobot",
+      "score": "5.7"
+    },
+    {
+      "time": "15:25",
+      "horse": "Flegmatik",
+      "tipster": "Jim Delahunt",
+      "score": "3.6"
+    },
+    {
+      "time": "14:32",
+      "horse": "Maljoom",
+      "tipster": "Melissa Jones",
+      "score": "1.9"
+    },
+    {
+      "time": "14:42",
+      "horse": "Laganhill",
+      "tipster": "Ben Morgan",
+      "score": "-2.5"
+    },
+    {
+      "time": "13:20",
+      "horse": "High Fibre",
+      "tipster": "West Country",
+      "score": "-3.6"
+    },
+    {
+      "time": "16:45",
+      "horse": "Strategic Fortune",
+      "tipster": "Farringdon",
+      "score": "-3.3"
+    },
+    {
+      "time": "15:25",
+      "horse": "Flegmatik",
+      "tipster": "Chris Connolly",
+      "score": "-5.1"
+    },
+    {
+      "time": "14:50",
+      "horse": "The Long Point",
+      "tipster": "Andrew Mount",
+      "score": "-6.1"
+    },
+    {
+      "time": "14:02",
+      "horse": "Gogo Yubari",
+      "tipster": "Rory Paddock",
+      "score": "-6.3"
+    },
+    {
+      "time": "13:50",
+      "horse": "Jus De Citron",
+      "tipster": "Templegate",
+      "score": "-8.3"
+    },
+    {
+      "time": "14:50",
+      "horse": "The Long Point",
+      "tipster": "Karl Hedley",
+      "score": "-9.7"
+    },
+    {
+      "time": "15:50",
+      "horse": "Visual Impact",
+      "tipster": "The North",
+      "score": "-10.0"
+    },
+    {
+      "time": "16:25",
+      "horse": "Walkinthecotswolds",
+      "tipster": "Jason Heavey",
+      "score": "-10.2"
+    },
+    {
+      "time": "13:02",
+      "horse": "Tribal Wisdom",
+      "tipster": "Lawrence Taylor",
+      "score": "-11.5"
+    },
+    {
+      "time": "18:15",
+      "horse": "Rebel's Gamble",
+      "tipster": "Glendale",
+      "score": "-12.0"
+    },
+    {
+      "time": "13:42",
+      "horse": "Flintara",
+      "tipster": "Ian Gaughran",
+      "score": "-14.0"
+    },
+    {
+      "time": "13:12",
+      "horse": "Lord Du Mesnil",
+      "tipster": "Dean Kilbryde",
+      "score": "-15.8"
+    },
+    {
+      "time": "14:20",
+      "horse": "Ideal Des Bordes",
+      "tipster": "Whistler",
+      "score": "-16.5"
+    },
+    {
+      "time": "18:45",
+      "horse": "Neptune Legend",
+      "tipster": "Marlborough",
+      "score": "-15.9"
+    },
+    {
+      "time": "14:50",
+      "horse": "Thunderclap",
+      "tipster": "Postdata",
+      "score": "-18.6"
+    },
+    {
+      "time": "15:25",
+      "horse": "Flegmatik",
+      "tipster": "Spotlight",
+      "score": "-18.1"
+    },
+    {
+      "time": "15:25",
+      "horse": "Issar d'Airy",
+      "tipster": "The Judge",
+      "score": "-19.6"
+    },
+    {
+      "time": "15:25",
+      "horse": "Issar d'Airy",
+      "tipster": "Jon Freeman",
+      "score": "-20.7"
+    },
+    {
+      "time": "13:02",
+      "horse": "Etretat",
+      "tipster": "Robin Goodfellow",
+      "score": "-22.8"
+    },
+    {
+      "time": "16:33",
+      "horse": "Edward Sexton",
+      "tipster": "Mercury",
+      "score": "-23.6"
+    },
+    {
+      "time": "15:25",
+      "horse": "El Rio",
+      "tipster": "Rockavon",
+      "score": "-24.4"
+    },
+    {
+      "time": "16:05",
+      "horse": "Dream By Day",
+      "tipster": "The Duke",
+      "score": "-25.7"
+    },
+    {
+      "time": "14:12",
+      "horse": "Well Dick",
+      "tipster": "On The Nose",
+      "score": "-25.8"
+    },
+    {
+      "time": "16:05",
+      "horse": "Nordic Glory",
+      "tipster": "Tipman Tips",
+      "score": "-26.9"
+    },
+    {
+      "time": "14:12",
+      "horse": "Duke Of Deception",
+      "tipster": "Rory Delargy",
+      "score": "-30.0"
+    },
+    {
+      "time": "16:40",
+      "horse": "Backer Bilk",
+      "tipster": "Computeform",
+      "score": "-33.2"
+    },
+    {
+      "time": "14:12",
+      "horse": "Rockinastorm",
+      "tipster": "Ross Shepherd",
+      "score": "-34.1"
+    },
+    {
+      "time": "14:20",
+      "horse": "Ideal Des Bordes",
+      "tipster": "Fortunatus",
+      "score": "-43.8"
+    },
+    {
+      "time": "14:12",
+      "horse": "Haute Estime",
+      "tipster": "Moorestyle",
+      "score": "-47.3"
+    },
+    {
+      "time": "15:25",
+      "horse": "Flegmatik",
+      "tipster": "Brian Flanagan",
+      "score": "-45.2"
+    },
+    {
+      "time": "14:42",
+      "horse": "Big Ginge",
+      "tipster": "Jeffrey Ross",
+      "score": "-47.1"
+    },
+    {
+      "time": "13:50",
+      "horse": "Jus De Citron",
+      "tipster": "Lambourn",
+      "score": "-53.1"
+    },
+    {
+      "time": "18:30",
+      "horse": "Miss Abby Jools",
+      "tipster": "Adrian Wall",
+      "score": "-54.5"
+    },
+    {
+      "time": "19:15",
+      "horse": "Too Much Too Young",
+      "tipster": "Chris Wright",
+      "score": "-57.8"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ export function calculateSeasonalScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 5;
 
   const currentMonth = new Date().getMonth();
   const isSpring = currentMonth >= 2 && currentMonth <= 4;
@@ -24,10 +24,7 @@ export function calculateSeasonalScore({
   // Recent runs in similar conditions
   const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
   const similarConditionsRuns = lastSixRuns.filter((run) => {
-    const similarClass =
-      Math.abs(
-        (run.raceClass || 0) - parseInt(race.class.replace(/\D/g, ""))
-      ) <= 1;
+    const similarClass = Math.abs((run.raceClass || 0) - race.class) <= 1;
     const similarDistance =
       Math.abs(
         (run.distanceFurlong || 0) - (raceStats.distanceInFurlongs || 0)
@@ -35,12 +32,11 @@ export function calculateSeasonalScore({
     return similarClass && similarDistance;
   }).length;
 
-  if (similarConditionsRuns >= 2) score++;
-  if (similarConditionsRuns >= 4) score++;
+  if (similarConditionsRuns >= 1) score++;
 
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

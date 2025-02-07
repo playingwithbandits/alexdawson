@@ -230,8 +230,10 @@ export async function fetchRaceAccordion(
 }
 
 export function cleanName(name: string) {
-  return name
-    .toLowerCase()
-    .replace(/\s*\(nap\)\s*/i, "")
-    .trim();
+  return horseNameToKey(
+    name
+      ?.toLowerCase()
+      .replace(/\s*\(nap\)\s*/i, "")
+      .trim()
+  );
 }

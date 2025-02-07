@@ -1,3 +1,4 @@
+import { isWithinTenPercent } from "./funcs";
 import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateCourseDistanceScore({
@@ -7,32 +8,30 @@ export function calculateCourseDistanceScore({
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 0;
+  const maxScore = 2;
 
   const cdRuns =
     horse.formObj?.form?.filter(
       (r) =>
         r.courseName?.toLowerCase() === meetingDetails?.venue?.toLowerCase() &&
-        Math.abs((r.distanceFurlong || 0) - raceStats.distanceInFurlongs) <= 1
+        isWithinTenPercent(r.distanceFurlong || 0, race.distance)
     ) || [];
 
   if (cdRuns.length > 0) {
     // C&D wins
     const cdWins = cdRuns.filter((r) => r.raceOutcomeCode === "1").length;
-    if (cdWins > 0) score += 4;
-    if (cdWins > 1) score += 2;
+    if (cdWins > 0) score++;
 
     // C&D place rate
     const cdPlaces = cdRuns.filter(
       (r) => parseInt(r.raceOutcomeCode || "0") <= 3
     ).length;
-    const cdPlaceRate = (cdPlaces / cdRuns.length) * 100;
-    if (cdPlaceRate > 50) score += 4;
+    if (cdPlaces > 0) score++;
   }
 
   return {
     score,
     maxScore,
-    percentage: maxScore === 0 ? 0 : (score / maxScore) * 100,
+    percentage: (score / maxScore) * 100,
   };
 }

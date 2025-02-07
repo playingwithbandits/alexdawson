@@ -9,7 +9,7 @@ export type TrackConfiguration = "left-handed" | "right-handed" | "straight";
 
 export function calculateDrawBias(
   trackConfig: TrackConfiguration | undefined,
-  distance: string,
+  distance: number,
   going: string | undefined,
   course?: string
 ): DrawBiasResult {
@@ -102,7 +102,7 @@ export function calculateDrawBias(
   }
 
   // Extract distance in furlongs
-  const furlongs = parseDistance(distance);
+  const furlongs = distance;
 
   // Sprint races (5-7f)
   if (furlongs <= 7) {
@@ -151,15 +151,4 @@ export function calculateDrawBias(
     bias: "No Clear Bias" as DrawBiasType,
     explanation: "Longer distance reduces impact of draw position",
   };
-}
-
-function parseDistance(distance: string): number {
-  const miles = distance.match(/(\d+)m/);
-  const furlongs = distance.match(/(\d+)f/);
-
-  let totalFurlongs = 0;
-  if (miles) totalFurlongs += parseInt(miles[1]) * 8;
-  if (furlongs) totalFurlongs += parseInt(furlongs[1]);
-
-  return totalFurlongs;
 }

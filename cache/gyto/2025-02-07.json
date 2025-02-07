@@ -1,0 +1,245 @@
+{
+  "date": "2025-02-07",
+  "tips": [
+    {
+      "time": "13:50",
+      "horse": "Kingston Pride",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Cloch Nua",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Big Ginge",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Star Of Affinity",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Many A Star",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Perfect Judgement",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Kingston Pride",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Backer Bilk",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Rebel'S Gamble",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Cloch Nua",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Crebilly",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Cracking Gold",
+      "isNap": false
+    },
+    {
+      "time": "12:50",
+      "horse": "Jena D'Oudairies",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "Andashan",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Kingston Pride",
+      "isNap": true
+    },
+    {
+      "time": "14:50",
+      "horse": "Star Of Affinity",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Crebilly",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Kadastral",
+      "isNap": false
+    },
+    {
+      "time": "16:33",
+      "horse": "Old Park Star",
+      "isNap": false
+    },
+    {
+      "time": "13:02",
+      "horse": "Tribal Wisdom",
+      "isNap": false
+    },
+    {
+      "time": "14:02",
+      "horse": "Diamond Dreamer",
+      "isNap": false
+    },
+    {
+      "time": "14:32",
+      "horse": "Maljoom",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Rey De La Batalla",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "The Thames Lady",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Watermelon Sugar",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Backer Bilk",
+      "isNap": false
+    },
+    {
+      "time": "13:12",
+      "horse": "Lord Du Mesnil",
+      "isNap": false
+    },
+    {
+      "time": "13:42",
+      "horse": "Micks Jet",
+      "isNap": false
+    },
+    {
+      "time": "14:12",
+      "horse": "Caeruleum",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Big Ginge",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "New Found Fame",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Visual Impact",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Cracking Gold",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Eva Rosie",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Tremorgio",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Many A Star",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Rebel'S Gamble",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Hello Zabeel",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Kapparis Kid",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Cloch Nua",
+      "isNap": true
+    },
+    {
+      "time": "20:15",
+      "horse": "Boujee Gold",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Never Shout Never",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Big Gossey",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Persian Bliss",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Cee En Gee",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Miss Abby Jools",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Perfect Judgement",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Someone'S Wish",
+      "isNap": false
+    }
+  ]
+}
