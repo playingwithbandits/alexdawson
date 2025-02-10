@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { MeetingAccordion } from "./MeetingAccordion";
 import { ExpansionProvider } from "./context/ExpansionContext";
-import { ExpandAllToggle } from "./controls/ExpandAllToggle";
 import { ViewToggle } from "./controls/ViewToggle";
 import {
   DayTips,
@@ -415,7 +414,8 @@ export function DayPredictions({
 
     console.log(
       "SORT THIS OUT!:",
-      Object.entries(tempObj).filter(([key, value]) => value < 0.05)
+      tempObj,
+      Object.entries(tempObj).filter(([key, value]) => value < 0.2)
     );
 
     return (
@@ -672,20 +672,20 @@ function CompactRaceRow({
     }, 0);
 
   const threeOrMoreMatch = matchCount >= 2;
-  console.log(
-    "Three or more picks match:",
-    topScorer?.name,
-    matchCount,
-    [
-      topPrediction?.name,
-      verdictPick,
-      atrTipSelection,
-      timeformTipSelection,
-      gytoTipSelection,
-      napsTableTipSelection,
-    ],
-    threeOrMoreMatch
-  );
+  // console.log(
+  //   "Three or more picks match:",
+  //   topScorer?.name,
+  //   matchCount,
+  //   [
+  //     topPrediction?.name,
+  //     verdictPick,
+  //     atrTipSelection,
+  //     timeformTipSelection,
+  //     gytoTipSelection,
+  //     napsTableTipSelection,
+  //   ],
+  //   threeOrMoreMatch
+  // );
   // Update someTheSame to include GG tip
   const someTheSame = [
     topPrediction?.name,

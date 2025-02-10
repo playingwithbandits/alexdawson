@@ -2,7 +2,7 @@ import { horseNameToKey } from "@/lib/racing/scores/funcs";
 
 export interface RaceAccordionStats {
   trainerStats: Array<{
-    trainer: string;
+    name: string;
     last14Days: {
       wins: number;
       runs: number;
@@ -17,7 +17,7 @@ export interface RaceAccordionStats {
     };
   }>;
   jockeyStats: Array<{
-    jockey: string;
+    name: string;
     last14Days: {
       wins: number;
       runs: number;
@@ -127,62 +127,81 @@ export async function fetchRaceAccordion(
     });
 
     // Parse trainer stats
+    function parseStats(row: Element) {
+      // Get name from the link element
+      const nameLink = row.querySelector(".RC-stats__link");
+      const name = nameLink?.textContent?.trim() || "";
+
+      // Parse last 14 days stats
+      const lastWinsRuns =
+        row
+          .querySelector('[data-test-selector="RC-lastWinsRuns__row"]')
+          ?.textContent?.trim() || "";
+      const [lastWins, lastRuns] = lastWinsRuns
+        .split("-")
+        .map((n) => parseInt(n.trim()) || 0);
+      const lastWinRate =
+        parseFloat(
+          row
+            .querySelector('[data-test-selector="RC-lastPercent__row"]')
+            ?.textContent?.trim() || "0"
+        ) || 0;
+      const lastProfit =
+        parseFloat(
+          row
+            .querySelector('[data-test-selector="RC-lastProfit__row"]')
+            ?.textContent?.trim() || "0"
+        ) || 0;
+
+      // Parse overall stats
+      const overallWinsRuns =
+        row
+          .querySelector('[data-test-selector="RC-overallWinsRuns__row"]')
+          ?.textContent?.trim() || "";
+      const [overallWins, overallRuns] = overallWinsRuns
+        .split("-")
+        .map((n) => parseInt(n.trim()) || 0);
+      const overallWinRate =
+        parseFloat(
+          row
+            .querySelector('[data-test-selector="RC-overallPercent__row"]')
+            ?.textContent?.trim() || "0"
+        ) || 0;
+      const overallProfit =
+        parseFloat(
+          row
+            .querySelector('[data-test-selector="RC-overallProfit__row"]')
+            ?.textContent?.trim() || "0"
+        ) || 0;
+
+      return {
+        name,
+        last14Days: {
+          wins: lastWins,
+          runs: lastRuns,
+          winRate: lastWinRate,
+          profit: lastProfit,
+        },
+        overall: {
+          wins: overallWins,
+          runs: overallRuns,
+          winRate: overallWinRate,
+          profit: overallProfit,
+        },
+      };
+    }
+
     const trainerStats = Array.from(
-      doc.querySelectorAll(".RC-stats__table:nth-of-type(1) tbody tr")
-    ).map((row) => {
-      const cells = Array.from(row.querySelectorAll("td"));
-      const [runs14, wins14, winRate14, profit14] = cells[1]
-        .textContent!.split("-")
-        .map((x) => parseFloat(x.trim()));
-      const [runsAll, winsAll, winRateAll, profitAll] = cells[4]
-        .textContent!.split("-")
-        .map((x) => parseFloat(x.trim()));
+      doc.querySelectorAll('[data-test-selector="RC-trainerName__row"]')
+    )
+      .map((el) => el.closest("tr"))
+      .map((row) => parseStats(row as Element));
 
-      return {
-        trainer: cells[0].textContent?.trim() || "",
-        last14Days: {
-          runs: runs14,
-          wins: wins14,
-          winRate: winRate14,
-          profit: profit14,
-        },
-        overall: {
-          runs: runsAll,
-          wins: winsAll,
-          winRate: winRateAll,
-          profit: profitAll,
-        },
-      };
-    });
-
-    // Parse jockey stats
     const jockeyStats = Array.from(
-      doc.querySelectorAll(".RC-stats__table:nth-of-type(2) tbody tr")
-    ).map((row) => {
-      const cells = Array.from(row.querySelectorAll("td"));
-      const [runs14, wins14, winRate14, profit14] = cells[1]
-        .textContent!.split("-")
-        .map((x) => parseFloat(x.trim()));
-      const [runsAll, winsAll, winRateAll, profitAll] = cells[4]
-        .textContent!.split("-")
-        .map((x) => parseFloat(x.trim()));
-
-      return {
-        jockey: cells[0].textContent?.trim() || "",
-        last14Days: {
-          runs: runs14,
-          wins: wins14,
-          winRate: winRate14,
-          profit: profit14,
-        },
-        overall: {
-          runs: runsAll,
-          wins: winsAll,
-          winRate: winRateAll,
-          profit: profitAll,
-        },
-      };
-    });
+      doc.querySelectorAll('[data-test-selector="RC-jockeyName__row"]')
+    )
+      .map((el) => el.closest("tr"))
+      .map((row) => parseStats(row as Element));
 
     // Parse horse stats
     const horseStats = Array.from(

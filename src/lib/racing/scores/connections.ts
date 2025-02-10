@@ -1,3 +1,4 @@
+import { horseNameToKey } from "./funcs";
 import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateConnectionsScore({
@@ -11,11 +12,13 @@ export function calculateConnectionsScore({
 
   const jockeyStats = race.raceExtraInfo?.jockeyStats?.find(
     (j) =>
-      j.jockey.toLowerCase().trim() === horse.jockey.name.toLowerCase().trim()
+      horseNameToKey(j.name.toLowerCase().trim()) ===
+      horseNameToKey(horse.jockey.name.toLowerCase().trim())
   );
   const trainerStats = race.raceExtraInfo?.trainerStats?.find(
     (t) =>
-      t.trainer.toLowerCase().trim() === horse.trainer.name.toLowerCase().trim()
+      horseNameToKey(t.name.toLowerCase().trim()) ===
+      horseNameToKey(horse.trainer.name.toLowerCase().trim())
   );
 
   // Jockey in form (14 day strike rate > 15%)
@@ -47,6 +50,32 @@ export function calculateConnectionsScore({
     0 / (race.raceExtraInfo?.trainerStats?.length || 1);
   if ((trainerStats?.last14Days?.winRate || 0) > avgTrainerRate) score++;
 
+  console.log("connextions", {
+    horse,
+    race,
+    stats: {
+      jockeyObj: race.raceExtraInfo?.jockeyStats,
+      trainerObj: race.raceExtraInfo?.trainerStats,
+      name: horseNameToKey(horse.jockey.name.toLowerCase().trim()),
+      trainer: horseNameToKey(horse.trainer.name.toLowerCase().trim()),
+      jockeyStats,
+      trainerStats,
+    },
+    jockey: {
+      avgJockeyRate,
+      winRate: jockeyStats?.last14Days?.winRate,
+    },
+
+    trainer: {
+      avgTrainerRate,
+      winRate: trainerStats?.last14Days?.winRate,
+    },
+    score: {
+      score,
+      maxScore,
+      percentage: (score / maxScore) * 100,
+    },
+  });
   return {
     score,
     maxScore,

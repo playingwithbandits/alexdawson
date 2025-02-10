@@ -1,0 +1,160 @@
+{
+  "date": "2025-02-10",
+  "tips": [
+    {
+      "time": "15:30",
+      "horse": "Ideallko",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Jolyjump",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Northern Reel",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Confinentic",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Scarlet Sunset",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Match Anthem",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Ideallko",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Jolyjump",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Count Of Vendome",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Megaphone",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Unanswered Prayers",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Limelight",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Lumi Plugin",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "John W Creasy",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Confinentic",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Unanswered Prayers",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Jolyjump",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Getmetothemoon",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Frisby",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Northern Reel",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Ideallko",
+      "isNap": true
+    },
+    {
+      "time": "16:00",
+      "horse": "Not A Light",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Count Of Vendome",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Finn Russell",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Megaphone",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Rosenpur",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Scarlet Sunset",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Bernie The Bear",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Match Anthem",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Fascinating Lips",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Limelight",
+      "isNap": false
+    }
+  ]
+}

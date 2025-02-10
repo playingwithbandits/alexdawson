@@ -1,6 +1,5 @@
-import { Horse, Meeting, Race, RaceStats } from "@/types/racing";
 import { calculateRatingsScore } from "./ratings";
-import { HorseScore } from "./types";
+import { HorseScore, ScoreParams } from "./types";
 import { calculateDistanceScore } from "./distance";
 import { calculateGoingScore } from "./going";
 import { calculateFormScore } from "./form";
@@ -23,15 +22,21 @@ import { calculateWeightTrendScore } from "./weightTrend";
 import { calculateCourseDistanceScore } from "./courseDistance";
 import { calculateSentimentScore } from "./sentiment";
 import { RACING_SCORE_WEIGHTS } from "./weights";
+import { calculateBounceScore } from "./bounce";
+import { calculatePaceScore } from "./pace";
+import { calculateAgeProfileScore } from "./ageProfile";
+import { calculateHeadGearScore } from "./headGear";
+import { calculateCompetitivenessScore } from "./competitiveness";
+import { calculateImprovementScore } from "./improvement";
+import { calculateFieldSizeScore } from "./fieldSize";
+import { calculateTimeOfDayScore } from "./timeOfDay";
+import { calculateWeatherScore } from "./weather";
+import { calculateTravelDistanceScore } from "./travelDistance";
 
-export function calculateHorseScore3(props: {
-  horse: Horse;
-  race: Race;
-  raceStats: RaceStats;
-  meetingDetails: Partial<Meeting>;
-}): HorseScore {
+export function calculateHorseScore3(props: ScoreParams): HorseScore {
   const ratings = calculateRatingsScore(props);
   const distance = calculateDistanceScore(props);
+
   const going = calculateGoingScore(props);
   const form = calculateFormScore(props);
   const course = calculateCourseScore(props);
@@ -51,9 +56,21 @@ export function calculateHorseScore3(props: {
   const layoff = calculateLayoffScore(props);
   const weightTrend = calculateWeightTrendScore(props);
   const courseDistance = calculateCourseDistanceScore(props);
-  const sentiment = calculateSentimentScore(props); //done
+  const sentiment = calculateSentimentScore(props);
 
-  const totalScore = Object.entries({
+  const pace = calculatePaceScore(props);
+  const headGear = calculateHeadGearScore(props);
+  const fieldSize = calculateFieldSizeScore(props);
+  const timeOfDay = calculateTimeOfDayScore(props);
+  const weather = calculateWeatherScore(props);
+  const travelDistance = calculateTravelDistanceScore(props);
+
+  const ageProfile = calculateAgeProfileScore(props);
+  const competitiveness = calculateCompetitivenessScore(props);
+  const improvement = calculateImprovementScore(props);
+  const bounce = calculateBounceScore(props);
+
+  const components = {
     ratings,
     distance,
     going,
@@ -76,53 +93,36 @@ export function calculateHorseScore3(props: {
     weightTrend,
     courseDistance,
     sentiment,
-  }).reduce((acc, [key, component]) => {
-    // Normalize the score (0-1) and apply the weight
-    const normalizedWeightedScore =
-      (component.score / component.maxScore) *
-      RACING_SCORE_WEIGHTS[key as keyof typeof RACING_SCORE_WEIGHTS];
-    return acc + normalizedWeightedScore;
-  }, 0);
+    pace,
+    headGear,
+    fieldSize,
+    timeOfDay,
+    weather,
+    travelDistance,
+    ageProfile,
+    competitiveness,
+    improvement,
+    bounce,
+  };
 
-  // Calculate total max score (sum of all weights)
-  const totalMaxScore = Object.values(RACING_SCORE_WEIGHTS).reduce(
-    (acc, weight) => acc + weight,
+  const weightedScores = Object.entries(components).map(
+    ([key, component]) =>
+      component.percentage *
+      RACING_SCORE_WEIGHTS[key as keyof typeof components]
+  );
+
+  const totalScore = weightedScores.reduce((a, b) => a + b, 0);
+  const maxPossibleScore = Object.values(RACING_SCORE_WEIGHTS).reduce(
+    (a, b) => a + b * 100,
     0
   );
 
-  const total = {
-    score: totalScore,
-    maxScore: totalMaxScore,
-    percentage: (totalScore / totalMaxScore) * 100,
-  };
-
-  console.log(total);
-
   return {
-    total,
-    components: {
-      ratings,
-      distance,
-      going,
-      form,
-      course,
-      class: classScore,
-      connections,
-      prize,
-      weight,
-      draw,
-      seasonal,
-      connectionCombo,
-      market,
-      margins,
-      formProgression,
-      trackConfig,
-      officialRating,
-      consistency,
-      layoff,
-      weightTrend,
-      courseDistance,
-      sentiment,
+    total: {
+      score: totalScore,
+      maxScore: maxPossibleScore,
+      percentage: (totalScore / maxPossibleScore) * 100,
     },
+    components,
   };
 }

@@ -55,6 +55,30 @@
       "total": 22,
       "totalReturns": 64.18,
       "totalBets": 22
+    },
+    {
+      "date": "2025-02-07",
+      "roi": 67.59375000000001,
+      "wins": 12,
+      "total": 32,
+      "totalReturns": 53.63,
+      "totalBets": 32
+    },
+    {
+      "date": "2025-02-08",
+      "roi": -66.66666666666666,
+      "wins": 6,
+      "total": 36,
+      "totalReturns": 12,
+      "totalBets": 36
+    },
+    {
+      "date": "2025-02-09",
+      "roi": 38.85714285714284,
+      "wins": 4,
+      "total": 14,
+      "totalReturns": 19.439999999999998,
+      "totalBets": 14
     }
   ]
 }

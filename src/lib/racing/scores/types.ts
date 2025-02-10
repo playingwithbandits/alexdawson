@@ -25,6 +25,16 @@ export interface HorseScore {
     weightTrend: ScoreComponent;
     courseDistance: ScoreComponent;
     sentiment: ScoreComponent;
+    pace: ScoreComponent;
+    headGear: ScoreComponent;
+    fieldSize: ScoreComponent;
+    timeOfDay: ScoreComponent;
+    weather: ScoreComponent;
+    travelDistance: ScoreComponent;
+    ageProfile: ScoreComponent;
+    competitiveness: ScoreComponent;
+    bounce: ScoreComponent;
+    improvement: ScoreComponent;
   };
 }
 

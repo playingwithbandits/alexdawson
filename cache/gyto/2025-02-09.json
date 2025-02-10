@@ -1,0 +1,270 @@
+{
+  "date": "2025-02-09",
+  "tips": [
+    {
+      "time": "13:15",
+      "horse": "Kientzheim",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Gala Marceau",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Lovely Hurling",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Le Milos",
+      "isNap": false
+    },
+    {
+      "time": "15:23",
+      "horse": "Don'T Tell Su",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Lord Of Thunder",
+      "isNap": false
+    },
+    {
+      "time": "13:15",
+      "horse": "Kientzheim",
+      "isNap": false
+    },
+    {
+      "time": "14:13",
+      "horse": "Flamelco",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Gala Marceau",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Sir Gino",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "The Watcher",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Djelo",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Mister Barclay",
+      "isNap": false
+    },
+    {
+      "time": "12:55",
+      "horse": "Lucky Bere",
+      "isNap": false
+    },
+    {
+      "time": "13:30",
+      "horse": "Got Grey",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Rubaud",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Gala Marceau",
+      "isNap": true
+    },
+    {
+      "time": "15:15",
+      "horse": "Le Milos",
+      "isNap": false
+    },
+    {
+      "time": "16:23",
+      "horse": "Strong Run",
+      "isNap": false
+    },
+    {
+      "time": "13:03",
+      "horse": "Newton Tornado",
+      "isNap": false
+    },
+    {
+      "time": "13:38",
+      "horse": "Surrey Belle",
+      "isNap": false
+    },
+    {
+      "time": "14:13",
+      "horse": "Flamelco",
+      "isNap": false
+    },
+    {
+      "time": "15:23",
+      "horse": "Don'T Tell Su",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Mister Barclay",
+      "isNap": false
+    },
+    {
+      "time": "16:33",
+      "horse": "Mon Kaplais",
+      "isNap": false
+    },
+    {
+      "time": "13:15",
+      "horse": "Kientzheim",
+      "isNap": true
+    },
+    {
+      "time": "13:50",
+      "horse": "The Four Sixes",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Djelo",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Sir Gino",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Lord Of Thunder",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Sober Glory",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "Kurasso Blue",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Koori Star",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Lovely Hurling",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Ragmans Corner",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Apples Jane",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Allegorie De Vassy",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Its On The Line",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Northern Ruler",
+      "isNap": false
+    },
+    {
+      "time": "16:28",
+      "horse": "Royal Approval",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Pockley",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Blast The Dream",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Warrant Holder",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Gustav Graves",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Tomorrow Day",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Urban Road",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Michaela'S Boy",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Green Power",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "The Watcher",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Overnight Oats",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Headshot",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Dash Power",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Kinetic",
+      "isNap": false
+    }
+  ]
+}

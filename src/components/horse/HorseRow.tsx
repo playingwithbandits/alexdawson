@@ -316,11 +316,11 @@ function getCourseDistanceStats(stats?: HorseStats) {
 function getConnectionStats(horse: Horse, race?: Race) {
   const jockeyStats = race?.raceExtraInfo?.jockeyStats?.find(
     (j) =>
-      j.jockey.toLowerCase().trim() === horse.jockey.name.toLowerCase().trim()
+      j.name.toLowerCase().trim() === horse.jockey.name.toLowerCase().trim()
   );
   const trainerStats = race?.raceExtraInfo?.trainerStats?.find(
     (t) =>
-      t.trainer.toLowerCase().trim() === horse.trainer.name.toLowerCase().trim()
+      t.name.toLowerCase().trim() === horse.trainer.name.toLowerCase().trim()
   );
 
   // console.log(
