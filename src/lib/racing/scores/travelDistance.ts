@@ -47,7 +47,7 @@ export function calculateTravelDistanceScore({
     courseLocation.longitude
   );
 
-  if (travelDistance > 500) {
+  if (travelDistance > 200) {
     console.log(
       `Travel distance for horse: ${horse.name} -> trainer: ${horse.trainer?.name} -> course: ${meetingDetails.venue} -> travelDistance: ${travelDistance}`
     );

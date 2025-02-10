@@ -4022,7 +4022,7 @@
                                         Total Non-Runners:
                                     </dt>
                                     <dd class="rp-raceCourse__panel__detailsNarrow__text">
-                                        3                                    </dd>
+                                        4                                    </dd>
                                                             </dl>
                                                         <div class="rp-raceCourse__panel__details" data-test-selector="block-resultPanel">
                                 <div class="rp-raceCourse__panel__race
@@ -4054,7 +4054,7 @@
                                                   Total Non-Runners:
                                              </span>
                                              <span class="rp-raceCourse__panel__details__content__info__text">
-                                                  3                                             </span>
+                                                  4                                             </span>
                                              </div>
                                                                                                                             <div class="rp-raceCourse__panel__details__content__info" data-test-selector="courseMeetingDetailsStalls">
                                             <span class="rp-raceCourse__panel__details__content__info__title">
@@ -4095,28 +4095,28 @@
                                                         Double racecard numbers
                                                     </span>
                                                         <span class="rp-raceCourse__panel__details__content__info__dividendsText">
-                                                        48                                                    </span>
+                                                        54                                                    </span>
                                                     </li>
                                                                                                                                                     <li>
                                                 <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
                                                     Favourites index
                                                 </span>
                                                         <span class="rp-raceCourse__panel__details__content__info__dividendsText">
-                                                    85                                                </span>
+                                                    110                                                </span>
                                                     </li>
                                                                                                                                                     <li>
                                                 <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
                                                     Aggregate SPs
                                                 </span>
                                                         <span class="rp-raceCourse__panel__details__content__info__dividendsText">
-                                                    79.7                                                </span>
+                                                    95.3                                                </span>
                                                     </li>
                                                                                                                                                     <li>
                                                     <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
                                                         Aggregate winning distances
                                                     </span>
                                                         <span class="rp-raceCourse__panel__details__content__info__dividendsText">
-                                                        1.75                                                    </span>
+                                                        2.45                                                    </span>
                                                     </li>
                                                                                             </ul>
                                         </div>
@@ -5875,7 +5875,7 @@
                                                     Class 6,
                                                 <span data-test-selector="text-prizeMoney7">£3,140.40</span>
                     </span>
-                                            <div>Going: Standard</div>
+                                            <div>Going: Abandoned</div>
                                     </div>
                 <div class="rp-raceCourse__panel__race__info__lineThin"></div>
                                         <ol class="rp-voidRace__description">
@@ -5883,7 +5883,7 @@
                 </ol>
                 <div class="rp-raceCourse__panel__race__info__lineThin"></div>
                                     <span class="rp-voidRace__comment" data-test-selector="text-raceComment"><!--
-                    --> <!--
+                    -->Race declared void in the interest of safety.<!--
              --></span>
                                     </div>
 
@@ -5914,12 +5914,19 @@
             </a>
         </div>
     </div>
-                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="887977" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
-    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="20:00" data-diffusion-race-id="887977" data-test-selector="race-panel-513-8:00">
+                                                                    <div class="rp-raceCourse__panel__container" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="20:00" data-diffusion-race-id="887977" data-test-selector="race-panel-513-8:00" data-directive-link-trigger="" href="/results/513/wolverhampton-aw/2025-02-10/887977">
         <div class="rp-raceCourse__panel__race__info">
                         <div class="rp-raceCourse__panel__race__info__title">
-                                    <span class="rp-raceCourse__panel__race__info__title__link">
-                        Gamble Responsibly At BetUK Classified Stakes (Div II)                    </span>
+                                    <a href="/results/513/wolverhampton-aw/2025-02-10/887977" class="ui-link ui-link_table
+                              rp-raceCourse__panel__race__info__title__link
+                              js-popupLink" data-test-selector="link-listCourseNameLink">
+                       <span>Gamble Responsibly At BetUK Classified Stakes (Div II)</span><!--
+                        --><svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                    --></a>
                                             </div>
                             <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
                     <span>
@@ -5930,17 +5937,245 @@
                                             <div>Going: Standard</div>
                                     </div>
                 <div class="rp-raceCourse__panel__race__info__lineThin"></div>
-                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="887977"></ol>
+                                                            <ol class="rp-raceCourse__panel__race__info__results" data-test-selector="link-listOfHorses">
+                                                    <li class="rp-raceCourse__panel__race__info__results__name
+                                       rp-raceCourse__panel__race__info__results__name__table__first" data-outcome-desc="1st">
+                                <div class="rp-raceCourse__panel__race__info__results__name__table
+                                            rp-raceCourse__panel__race__info__results__name__table__first">
+                                    <a href="/profile/horse/5005620/cosmic-view" class="ui-link ui-link_table
+                                                  rp-raceCourse__panel__race__info__results__name__table__row__link
+                                                  js-popupLink" target="_blank" data-test-selector="link-horseListResults">
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__row">
+                                                1.
+                                                Cosmic View                                        </div>
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__price">
+                                            14/1                                        </div>
+                                        <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                                    </a>
+                                </div>
+                                                                    <div class="rp-raceCourse__profileInfo" data-ng-class="{ 'showed': getIsPedigreeSelected() }" data-test-selector="block-pedigreeInfo">
+                                        <div class="rp-raceCourse__profileInfo__pedigree">
+                                                                                                                                                                                    <a href="/profile/horse/670119/new-approach" class="ui-link ui-link_table rp-raceCourse__profileInfo__link
+                                                          js-popupLink" data-test-selector="link-pedigreeSeer">
+                                                    New Approach (IRE)                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                                --></a>
+                                                <span class="rp-raceCourse__profileInfo__title">
+                                                    -
+                                                </span>
+                                                                                                                                        <a href="/profile/horse/1198256/first-priority" class=" ui-link ui-link_table rp-raceCourse__profileInfo__link
+                                                          js-popupLink" data-test-selector="link-pedigreeDam">
+                                                    First Priority                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                                --></a>
+                                                                                                                                        <a href="/profile/horse/537646/street-cry" class="ui-link ui-link_table rp-raceCourse__profileInfo__link
+                                                          js-popupLink" data-test-selector="link-pedigreeDamSeer">
+                                                    (Street Cry (IRE))
+                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                                --></a>
+                                                                                    </div>
+                                        <div class="rp-raceCourse__profileInfo__breeder">
+                                            <span class="rp-raceCourse__profileInfo__title" data-test-selector="text-breederLabel">
+                                                Breeder<!--
+                                             --><span class="rp-raceCourse__profileInfo__column">:</span>
+                                            </span>
+                                            <span class="rp-raceCourse__profileInfo__plainText" data-test-selector="text-breederName">
+                                                Godolphin                                            </span>
+                                        </div>
+                                        <div class="rp-raceCourse__profileInfo__owner">
+                                            <span class="rp-raceCourse__profileInfo__title" data-test-selector="text-ownerLabel">
+                                                Owner<!--
+                                             --><span class="rp-raceCourse__profileInfo__column">:</span>
+                                            </span>
+                                                                                            <a href="/profile/owner/354268/future-champions-and-partner" class="ui-link ui-link_table rp-raceCourse__profileInfo__link
+                                                          rp-raceCourse__profileInfo__plainText
+                                                          js-popupLink" data-test-selector="link-ownerName">
+                                                    Future Champions And Partner                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                                                </a>
+                                                                                    </div>
+                                    </div>
+                                                            </li>
+                                                    <li class="rp-raceCourse__panel__race__info__results__name
+                                       " data-outcome-desc="2nd">
+                                <div class="rp-raceCourse__panel__race__info__results__name__table
+                                            ">
+                                    <a href="/profile/horse/5212148/national-health" class="ui-link ui-link_table
+                                                  rp-raceCourse__panel__race__info__results__name__table__row__link
+                                                  js-popupLink" target="_blank" data-test-selector="link-horseListResults">
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__row">
+                                                4.
+                                                National Health                                        </div>
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__price">
+                                            7/1                                        </div>
+                                        <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                                    </a>
+                                </div>
+                                                            </li>
+                                                    <li class="rp-raceCourse__panel__race__info__results__name
+                                       " data-outcome-desc="3rd">
+                                <div class="rp-raceCourse__panel__race__info__results__name__table
+                                            ">
+                                    <a href="/profile/horse/4597209/walk-the-moon" class="ui-link ui-link_table
+                                                  rp-raceCourse__panel__race__info__results__name__table__row__link
+                                                  js-popupLink" target="_blank" data-test-selector="link-horseListResults">
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__row">
+                                                7.
+                                                Walk The Moon                                        </div>
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__price">
+                                            11/2                                        </div>
+                                        <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                                    </a>
+                                </div>
+                                                            </li>
+                                            </ol>
                                     </div>
 
-                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                                    <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                        <div class="rp-raceCourse__panel__race__info__postRaceInfo
                 " data-test-selector="text-postRaceInfo">
                 <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
-                                                                                                                                </dl>
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                11 ran<!--
+                         --></dt>
+                                                                            <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark">
+                                NR:
+                            </dt>
+                            <dd class="rp-raceCourse__panel__race__info__postRaceInfo__main_light">
+                                Galactic Glow (travel problems)<!--
+                         --></dd>
+                                                                                    </dl>
                                     <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
-                                                                                                                    </div>
-                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
-                                                                                                                                                                                                                                                    
+                                                    <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                        Distances:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                                                                                                                 -->½l<!--
+                                                                                                 -->, <!--
+                                                                                                                                                                                                                             -->1¼l<!--
+                                                                                                 -->, <!--
+                                                                                                                                                                                                                             -->2½l<!--
+                                                                                                                                                                     --></dd>
+                            </dl>
+                                                                            <dl class="description">
+                                <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                    Time:
+                                </dt>
+                                <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-winningTime8">
+                                    2m 40.28s (slow by 4.88s)<!--
+                             --></dd>
+                            </dl>
+                                                                            <dl class="description description_favourites">
+                                 <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                    Unplaced Fav:
+                                 </dt>
+                                <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                                                                                                                                                             --><a href="/profile/horse/4612985/zafaan" class="js-popupLink link ui-link ui-link_table">
+                                                    Zafaan</a>&nbsp;5/4F                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                                                                                                                                                                                     --></dd>
+                            </dl>
+                                                                        <dl class="description">
+                                <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                    Total SP:
+                                </dt>
+                                <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light">
+                                    120%<!--
+                             --></dd>
+                        </dl>
+                                            </div>
+                                            <dl class="rp-raceCourse__panel__race__info__postRaceInfo__more
+                                   rp-raceCourse__panel__race__info__postRaceInfo__more_winningJockey">
+                            <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                Winning jockey:
+                            </dt>
+                            <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-winningJockey">
+
+                                                                                                            <a href="/profile/jockey/78935/tom-queally" class="js-popupLink link ui-link ui-link_table">
+                                            Tom Queally                                            <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                        --></a>                                                                    
+                            </dd>
+                        </dl>
+                                                                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__more
+                                   rp-raceCourse__panel__race__info__postRaceInfo__more_winningTrainer">
+                            <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                Winning trainer:
+                            </dt>
+                            <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-winningTrainer">
+                                                                                                            <a href="/profile/trainer/41396/gary-josh-moore" class="js-popupLink link ui-link ui-link_table">
+                                            Gary &amp; Josh Moore                                            <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                            --></a>                                                                                                </dd>
+                        </dl>
+                                        <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                   <dl class="description">
+                                  <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                     Win:
+                                 </dt>
+                                 <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                  -->£20.20<!--
+                              --></dd>
+                               </dl>
+                                                                                        <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                        Pl:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light">
+                                                                                    £4.40<!--
+                                                                                                                         -->, £2.50<!--
+                                                                                                                         -->, £1.90<!--
+                                                                                                                 --></dd>
+                                </dl>
+                                                                                        <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                        Ex:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                     -->£154.60<!--
+                                 --></dd>
+                                </dl>
+                                                                                        <dl class="description">
+                                    <dl>
+                                          <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                              CSF:
+                                          </dt>
+                                          <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                           -->£106.92<!--
+                                       --></dd>
+                                    </dl>
+                                </dl>
+                                                                                                                    <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark" data-test-selector="course-trifecta-513-8:00-label">
+                                        Trifecta:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="course-trifecta-513-8:00-value">
+                                        £859.70<!--
+                                                                         --></dd>
+                                </dl>
+                                                                                
                                                                             <span class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-raceComment"><!--
                                  --> <!--
                          --></span>
@@ -5948,17 +6183,44 @@
                             </div>
             </div>
     <div class="rp-raceCourse__panel__race__timePanel">
-        <div class="rp-raceCourse__panel__race__time">
+        <div class="rp-raceCourse__panel__race__time" data-directive-link-trigger="" href="/results/513/wolverhampton-aw/2025-02-10/887977">
             <span data-test-selector="text-raceTime">8:00</span>
         </div>
+                    <div class="rp-raceCourse__panel__race__videoIcon">
+                <a href="/results/513/wolverhampton-aw/2025-02-10/887977#fullReplay-resultList" class="ui-link rp-raceCourse__panel__race__videoIconLink js-popupLink">
+                    <svg class="ui-icon
+                                        ui-icon_sizeLarge            ">
+    <use xlink:href="img/icons.svg#icon-videoHollow"></use>
+</svg>                </a>
             </div>
+            </div>
+            <div class="rp-raceCourse__panel__race__arrow ui-icon_blue" data-test-selector="link-fullResult" data-test-view="list-results" data-directive-link-trigger="" href="/results/513/wolverhampton-aw/2025-02-10/887977">
+            <svg class="ui-icon
+                                        ui-icon_sizeMedium            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>        </div>
+        <div class="rp-raceCourse__panel__race__info__buttons">
+            <a class="rp-raceCourse__panel__race__info__buttons__link
+                      js-popupLink" href="/results/513/wolverhampton-aw/2025-02-10/887977" data-test-selector="button-fullResult" data-test-view="list-results">
+                <div class="ui-btn ui-btn_primary rp-raceCourse__panel__race__info__buttons_full">
+                    <span>Full result</span>
+                </div>
+            </a>
+        </div>
     </div>
-                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="886327" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
-    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="20:30" data-diffusion-race-id="886327" data-test-selector="race-panel-513-8:30">
+                                                                    <div class="rp-raceCourse__panel__container" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="20:30" data-diffusion-race-id="886327" data-test-selector="race-panel-513-8:30" data-directive-link-trigger="" href="/results/513/wolverhampton-aw/2025-02-10/886327">
         <div class="rp-raceCourse__panel__race__info">
                         <div class="rp-raceCourse__panel__race__info__title">
-                                    <span class="rp-raceCourse__panel__race__info__title__link">
-                        Boost Your Acca At BetMGM Handicap                    </span>
+                                    <a href="/results/513/wolverhampton-aw/2025-02-10/886327" class="ui-link ui-link_table
+                              rp-raceCourse__panel__race__info__title__link
+                              js-popupLink" data-test-selector="link-listCourseNameLink">
+                       <span>Boost Your Acca At BetMGM Handicap</span><!--
+                        --><svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                    --></a>
                                             </div>
                             <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
                     <span>
@@ -5969,25 +6231,266 @@
                                             <div>Going: Standard</div>
                                     </div>
                 <div class="rp-raceCourse__panel__race__info__lineThin"></div>
-                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="886327"></ol>
+                                                            <ol class="rp-raceCourse__panel__race__info__results" data-test-selector="link-listOfHorses">
+                                                    <li class="rp-raceCourse__panel__race__info__results__name
+                                       rp-raceCourse__panel__race__info__results__name__table__first" data-outcome-desc="1st">
+                                <div class="rp-raceCourse__panel__race__info__results__name__table
+                                            rp-raceCourse__panel__race__info__results__name__table__first">
+                                    <a href="/profile/horse/3366623/king-of-speed" class="ui-link ui-link_table
+                                                  rp-raceCourse__panel__race__info__results__name__table__row__link
+                                                  js-popupLink" target="_blank" data-test-selector="link-horseListResults">
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__row">
+                                                2.
+                                                King Of Speed                                        </div>
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__price">
+                                            13/8F                                        </div>
+                                        <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                                    </a>
+                                </div>
+                                                                    <div class="rp-raceCourse__profileInfo" data-ng-class="{ 'showed': getIsPedigreeSelected() }" data-test-selector="block-pedigreeInfo">
+                                        <div class="rp-raceCourse__profileInfo__pedigree">
+                                                                                                                                                                                    <a href="/profile/horse/541314/acclamation" class="ui-link ui-link_table rp-raceCourse__profileInfo__link
+                                                          js-popupLink" data-test-selector="link-pedigreeSeer">
+                                                    Acclamation                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                                --></a>
+                                                <span class="rp-raceCourse__profileInfo__title">
+                                                    -
+                                                </span>
+                                                                                                                                        <a href="/profile/horse/867815/music-and-dance" class=" ui-link ui-link_table rp-raceCourse__profileInfo__link
+                                                          js-popupLink" data-test-selector="link-pedigreeDam">
+                                                    Music And Dance                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                                --></a>
+                                                                                                                                        <a href="/profile/horse/531769/galileo" class="ui-link ui-link_table rp-raceCourse__profileInfo__link
+                                                          js-popupLink" data-test-selector="link-pedigreeDamSeer">
+                                                    (Galileo (IRE))
+                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                                --></a>
+                                                                                    </div>
+                                        <div class="rp-raceCourse__profileInfo__breeder">
+                                            <span class="rp-raceCourse__profileInfo__title" data-test-selector="text-breederLabel">
+                                                Breeder<!--
+                                             --><span class="rp-raceCourse__profileInfo__column">:</span>
+                                            </span>
+                                            <span class="rp-raceCourse__profileInfo__plainText" data-test-selector="text-breederName">
+                                                Norelands B/Stock &amp; Emma Capon B/Stock                                            </span>
+                                        </div>
+                                        <div class="rp-raceCourse__profileInfo__owner">
+                                            <span class="rp-raceCourse__profileInfo__title" data-test-selector="text-ownerLabel">
+                                                Owner<!--
+                                             --><span class="rp-raceCourse__profileInfo__column">:</span>
+                                            </span>
+                                                                                            <a href="/profile/owner/199605/mrs-c-loughnane" class="ui-link ui-link_table rp-raceCourse__profileInfo__link
+                                                          rp-raceCourse__profileInfo__plainText
+                                                          js-popupLink" data-test-selector="link-ownerName">
+                                                    Mrs C Loughnane                                                    <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                                                </a>
+                                                                                    </div>
+                                    </div>
+                                                            </li>
+                                                    <li class="rp-raceCourse__panel__race__info__results__name
+                                       " data-outcome-desc="2nd">
+                                <div class="rp-raceCourse__panel__race__info__results__name__table
+                                            ">
+                                    <a href="/profile/horse/4318851/conquest-of-power" class="ui-link ui-link_table
+                                                  rp-raceCourse__panel__race__info__results__name__table__row__link
+                                                  js-popupLink" target="_blank" data-test-selector="link-horseListResults">
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__row">
+                                                9.
+                                                Conquest Of Power                                        </div>
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__price">
+                                            15/2                                        </div>
+                                        <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                                    </a>
+                                </div>
+                                                            </li>
+                                                    <li class="rp-raceCourse__panel__race__info__results__name
+                                       " data-outcome-desc="3rd">
+                                <div class="rp-raceCourse__panel__race__info__results__name__table
+                                            ">
+                                    <a href="/profile/horse/5071356/mariner" class="ui-link ui-link_table
+                                                  rp-raceCourse__panel__race__info__results__name__table__row__link
+                                                  js-popupLink" target="_blank" data-test-selector="link-horseListResults">
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__row">
+                                                1.
+                                                Mariner                                        </div>
+                                        <div class="rp-raceCourse__panel__race__info__results__name__table__price">
+                                            20/1                                        </div>
+                                        <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                                    </a>
+                                </div>
+                                                            </li>
+                                            </ol>
                                     </div>
 
-                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                                    <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                        <div class="rp-raceCourse__panel__race__info__postRaceInfo
                 " data-test-selector="text-postRaceInfo">
                 <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
-                                                                                                                                </dl>
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                9 ran<!--
+                         --></dt>
+                                                                                                            </dl>
                                     <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
-                                                                                                                    </div>
-                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
-                                                                                                                                                                                                                                                    
-                                                                    </div>
+                                                    <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                        Distances:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                                                                                                                 -->hd<!--
+                                                                                                 -->, <!--
+                                                                                                                                                                                                                             -->¾l<!--
+                                                                                                 -->, <!--
+                                                                                                                                                                                                                             -->hd<!--
+                                                                                                                                                                     --></dd>
+                            </dl>
+                                                                            <dl class="description">
+                                <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                    Time:
+                                </dt>
+                                <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-winningTime9">
+                                    1m 49.07s (slow by 2.77s)<!--
+                             --></dd>
+                            </dl>
+                                                                                                <dl class="description">
+                                <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                    Total SP:
+                                </dt>
+                                <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light">
+                                    114%<!--
+                             --></dd>
+                        </dl>
+                                            </div>
+                                            <dl class="rp-raceCourse__panel__race__info__postRaceInfo__more
+                                   rp-raceCourse__panel__race__info__postRaceInfo__more_winningJockey">
+                            <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                Winning jockey:
+                            </dt>
+                            <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-winningJockey">
+
+                                                                                                            <a href="/profile/jockey/77767/billy-loughnane" class="js-popupLink link ui-link ui-link_table">
+                                            Billy Loughnane                                            <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                        --></a>                                                                    
+                            </dd>
+                        </dl>
+                                                                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__more
+                                   rp-raceCourse__panel__race__info__postRaceInfo__more_winningTrainer">
+                            <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                Winning trainer:
+                            </dt>
+                            <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-winningTrainer">
+                                                                                                            <a href="/profile/trainer/15429/mark-loughnane" class="js-popupLink link ui-link ui-link_table">
+                                            Mark Loughnane                                            <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg><!--
+                                            --></a>                                                                                                </dd>
+                        </dl>
+                                        <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                   <dl class="description">
+                                  <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                     Win:
+                                 </dt>
+                                 <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                  -->£2.63<!--
+                              --></dd>
+                               </dl>
+                                                                                        <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                        Pl:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light">
+                                                                                    £1.20<!--
+                                                                                                                         -->, £2.40<!--
+                                                                                                                         -->, £4.50<!--
+                                                                                                                 --></dd>
+                                </dl>
+                                                                                        <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                        Ex:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                     -->£14.50<!--
+                                 --></dd>
+                                </dl>
+                                                                                        <dl class="description">
+                                    <dl>
+                                          <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                              CSF:
+                                          </dt>
+                                          <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                           -->£13.83<!--
+                                       --></dd>
+                                    </dl>
+                                </dl>
+                                                                                        <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark">
+                                        Tricast:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light"><!--
+                                     -->£176.10<!--
+                                 --></dd>
+                                </dl>
+                                                                                        <dl class="description">
+                                    <dt class="rp-raceCourse__panel__race__info__postRaceInfo__more_dark" data-test-selector="course-trifecta-513-8:30-label">
+                                        Trifecta:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="course-trifecta-513-8:30-value">
+                                        £182.60<!--
+                                                                         --></dd>
+                                </dl>
+                                                                                
+                                                                            <span class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-raceComment"><!--
+                                 --> <!--
+                         --></span>
+                                            </div>
                             </div>
             </div>
     <div class="rp-raceCourse__panel__race__timePanel">
-        <div class="rp-raceCourse__panel__race__time">
+        <div class="rp-raceCourse__panel__race__time" data-directive-link-trigger="" href="/results/513/wolverhampton-aw/2025-02-10/886327">
             <span data-test-selector="text-raceTime">8:30</span>
         </div>
+                    <div class="rp-raceCourse__panel__race__videoIcon">
+                <a href="/results/513/wolverhampton-aw/2025-02-10/886327#fullReplay-resultList" class="ui-link rp-raceCourse__panel__race__videoIconLink js-popupLink">
+                    <svg class="ui-icon
+                                        ui-icon_sizeLarge            ">
+    <use xlink:href="img/icons.svg#icon-videoHollow"></use>
+</svg>                </a>
             </div>
+            </div>
+            <div class="rp-raceCourse__panel__race__arrow ui-icon_blue" data-test-selector="link-fullResult" data-test-view="list-results" data-directive-link-trigger="" href="/results/513/wolverhampton-aw/2025-02-10/886327">
+            <svg class="ui-icon
+                                        ui-icon_sizeMedium            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>        </div>
+        <div class="rp-raceCourse__panel__race__info__buttons">
+            <a class="rp-raceCourse__panel__race__info__buttons__link
+                      js-popupLink" href="/results/513/wolverhampton-aw/2025-02-10/886327" data-test-selector="button-fullResult" data-test-view="list-results">
+                <div class="ui-btn ui-btn_primary rp-raceCourse__panel__race__info__buttons_full">
+                    <span>Full result</span>
+                </div>
+            </a>
+        </div>
     </div>
                                                                 <div class="rp-raceCourse__panel__analysisButton">
                             <a class="ui-link
