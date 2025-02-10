@@ -792,7 +792,7 @@ function CompactRaceRow({
           >
             <span
               className={`font-medium ${
-                (topScorer.score?.total?.percentage || 0) >= 55
+                (topScorer.score?.total?.percentage || 0) >= 50
                   ? "text-yellow-400 font-bold"
                   : (topScorer.score?.total?.percentage || 0) < 40
                   ? "text-[#626262]"
