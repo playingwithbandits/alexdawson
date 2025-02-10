@@ -35,6 +35,7 @@ export const placeToPlaceKey = (m_place: string) => {
       .replace("_on_dee", "")
       .replace("-on-dee", "")
       .replace(" (aw)", "-aw")
+      .replace(" (a.w)", "-aw")
       .replace("-aw", "")
       .replace("_", "-")
       .replace("-city", "")

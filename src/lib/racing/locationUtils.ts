@@ -283,6 +283,77 @@ const TRAINER_LOCATIONS: Record<string, Location> = {
 
   // Update A P O'Brien to match listing format
   "a p o brien": { latitude: 52.4877, longitude: -7.2207 }, // Ballydoyle
+
+  // Scotland trainers
+  "n w alexander": { latitude: 56.3567, longitude: -3.3139 }, // Perth
+  "jim goldie": { latitude: 55.9464, longitude: -3.0509 }, // Musselburgh
+  "stuart coltherd": { latitude: 55.6001, longitude: -2.4338 }, // Kelso
+  "donald whillans": { latitude: 55.6001, longitude: -2.4338 }, // Kelso
+  "ewan whillans": { latitude: 55.6001, longitude: -2.4338 }, // Kelso
+  "sandy forster": { latitude: 55.6001, longitude: -2.4338 }, // Kelso
+  "george bewley": { latitude: 54.8952, longitude: -2.9189 }, // Carlisle
+  "james moffatt": { latitude: 54.2003, longitude: -2.9515 }, // Cartmel
+  "ian duncan": { latitude: 56.2082, longitude: -3.4249 }, // Kinross
+
+  // Northern trainers
+  "ruth carr": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "rebecca menzies": { latitude: 54.6557, longitude: -1.4501 }, // Sedgefield
+  "r mike smith": { latitude: 54.6557, longitude: -1.4501 }, // Sedgefield
+  "k r burke": { latitude: 54.0056, longitude: -1.4662 }, // Middleham
+  "charlie johnston": { latitude: 54.0056, longitude: -1.4662 }, // Middleham
+
+  // Irish trainers
+  "s r b crawford": { latitude: 54.4435, longitude: -6.4035 }, // County Antrim
+
+  // Midlands trainers
+  "oliver greenall & josh guerriero": { latitude: 53.1907, longitude: -2.8843 }, // Chester
+  "james evans": { latitude: 52.3673, longitude: -2.7144 }, // Ludlow
+  "adrian wintle": { latitude: 52.0505, longitude: -2.7641 }, // Hereford
+  "shaun lycett": { latitude: 52.0505, longitude: -2.7641 }, // Hereford
+  "mark loughnane": { latitude: 52.5851, longitude: -2.1134 }, // Wolverhampton
+  "derek shaw": { latitude: 52.6312, longitude: -1.0955 }, // Leicester
+  "john mackie": { latitude: 52.9375, longitude: -1.1001 }, // Nottingham
+  "kevin frost": { latitude: 52.9375, longitude: -1.1001 }, // Nottingham
+
+  // Southern trainers
+  "gary & josh moore": { latitude: 50.9334, longitude: -0.2818 }, // Lower Beeding
+  "nick gifford": { latitude: 50.9195, longitude: 0.0565 }, // Plumpton
+  "olly murphy": { latitude: 52.1674, longitude: -1.7863 }, // Alcester
+  "jamie osborne": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "jonathan portman": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "joe tickle": { latitude: 50.5297, longitude: -3.6116 }, // Newton Abbot
+  "rod millman": { latitude: 50.5297, longitude: -3.6116 }, // Newton Abbot
+  "grace harris": { latitude: 51.6027, longitude: -3.7352 }, // Vale of Glamorgan
+  "chris gordon": { latitude: 51.0689, longitude: -1.7547 }, // Salisbury
+  "tom lacey": { latitude: 52.1908, longitude: -1.7094 }, // Stratford
+
+  // Newmarket trainers
+  "james owen": { latitude: 52.2429, longitude: 0.3807 },
+  "darryll holland": { latitude: 52.2429, longitude: 0.3807 },
+
+  // Other trainers
+  "jack morland": { latitude: 53.0676, longitude: -0.9055 }, // Southwell
+  "dylan cunha": { latitude: 52.2429, longitude: 0.3807 }, // Newmarket
+  "patrick morris": { latitude: 53.1907, longitude: -2.8843 }, // Chester
+  "scott dixon": { latitude: 52.9375, longitude: -1.1001 }, // Nottingham
+  "paul attwater": { latitude: 51.3532, longitude: -2.0281 }, // Westbury
+  "michael attwater": { latitude: 51.3532, longitude: -2.0281 }, // Westbury
+  "b f brookhouse": { latitude: 52.0505, longitude: -2.7641 }, // Hereford
+  "daisy hitchins": { latitude: 51.0689, longitude: -1.7547 }, // Salisbury
+  "j r jenkins": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "ben lund": { latitude: 52.2429, longitude: 0.3807 }, // Newmarket
+  "michael keady": { latitude: 53.0676, longitude: -0.9055 }, // Southwell
+  "joseph parr": { latitude: 52.5851, longitude: -2.1134 }, // Wolverhampton
+  "john gallagher": { latitude: 51.1748, longitude: -0.0161 }, // Lingfield
+  "gerald stephen quinn": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+  "brian toomey": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "stella barclay": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "chelsea banham": { latitude: 52.6156, longitude: 1.7321 }, // Great Yarmouth
+  "anthony carson": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+  "ian mcinnes": { latitude: 55.4589, longitude: -4.6179 }, // Ayr
+  "lisa williamson": { latitude: 52.9375, longitude: -1.1001 }, // Nottingham
+  "paddy butler": { latitude: 52.3673, longitude: -2.7144 }, // Ludlow
+  "jonjo & a j o'neill": { latitude: 51.9431, longitude: -1.9882 }, // Cheltenham
 };
 
 export function getCourseLocation(venue: string): Location | null {
@@ -292,7 +363,9 @@ export function getCourseLocation(venue: string): Location | null {
   );
   const location = key ? COURSE_LOCATIONS[key] : null;
   if (!location) {
-    console.log(`Warning: No location found for course: ${venue}`);
+    console.log(
+      `Warning: No location found for course: input: ${venue} -> normalized: ${normalizedVenue} -> key: ${key}`
+    );
   }
   return location;
 }
@@ -304,7 +377,9 @@ export function getTrainerLocation(trainerName: string): Location | null {
   );
   const location = key ? TRAINER_LOCATIONS[key] : null;
   if (!location) {
-    console.log(`Warning: No location found for trainer: ${trainerName}`);
+    console.log(
+      `Warning: No location found for trainer: input: ${trainerName} -> normalized: ${normalizedName} -> key: ${key}`
+    );
   }
   return location;
 }
