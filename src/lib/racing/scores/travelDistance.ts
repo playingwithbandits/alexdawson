@@ -33,6 +33,9 @@ export function calculateTravelDistanceScore({
 
   // If we don't have location data, return neutral score
   if (!trainerLocation || !courseLocation) {
+    console.log(
+      `Warning: No location data for horse: ${horse.name} -> trainer: ${horse.trainer?.name} -> course: ${meetingDetails.venue} -> trainerLocation: ${trainerLocation} -> courseLocation: ${courseLocation}`
+    );
     return { score: maxScore, maxScore, percentage: 100 };
   }
 
@@ -44,8 +47,15 @@ export function calculateTravelDistanceScore({
     courseLocation.longitude
   );
 
+  if (travelDistance > 500) {
+    console.log(
+      `Travel distance for horse: ${horse.name} -> trainer: ${horse.trainer?.name} -> course: ${meetingDetails.venue} -> travelDistance: ${travelDistance}`
+    );
+  }
+
   // Get recent runs to analyze travel performance
   const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
+
   const travelPerformance = recentRuns.reduce(
     (acc, run) => {
       const runLocation = getCourseLocation(run.courseName || "");

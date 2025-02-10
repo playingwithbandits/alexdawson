@@ -32,9 +32,6 @@ export const RACING_SCORE_WEIGHTS: Record<
   layoff: 0.9, // Days since last run
   draw: 0.9, // Draw bias impact
   connectionCombo: 0.9, // Jockey/trainer combination
-  breeding: 0.9, // Pedigree analysis
-  trainerPatterns: 0.9, // Trainer patterns/angles
-  jockeyPatterns: 0.9, // Jockey patterns/angles
   bounce: 0.8, // Recovery from big effort
   weightTrend: 0.8, // Weight carrying trends
   seasonal: 0.8, // Seasonal patterns
