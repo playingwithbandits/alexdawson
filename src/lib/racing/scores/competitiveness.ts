@@ -6,7 +6,7 @@ export function calculateCompetitivenessScore({
   raceStats,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 5;
+  const maxScore = 3;
 
   // Analyze race competitiveness
   const ratingSpread = raceStats.avgRating * 0.1; // 10% of average rating
@@ -14,14 +14,14 @@ export function calculateCompetitivenessScore({
 
   // Within competitive rating range
   if (Math.abs(horseRating - raceStats.avgRating) <= ratingSpread) {
-    score += 2;
+    score++;
   }
 
   // Recent competitive races
   const recentRuns = horse.formObj?.form?.slice(0, 4) || [];
   const competitiveRaces = recentRuns.filter((run) => {
     const finishPos = parseInt(run.raceOutcomeCode || "99");
-    const totalRunners = run.numberOfRunners || 0;
+    const totalRunners = run.noOfRunners || 0;
 
     // Finished in top half of field
     if (totalRunners > 0) {
@@ -30,8 +30,8 @@ export function calculateCompetitivenessScore({
     return false;
   });
 
-  if (competitiveRaces.length >= 2) score += 2;
-  if (competitiveRaces.length >= 3) score += 1;
+  if (competitiveRaces.length >= 2) score++;
+  if (competitiveRaces.length >= 3) score++;
 
   return {
     score,

@@ -64,7 +64,6 @@ export function calculateHorseScore3(props: ScoreParams): HorseScore {
   const timeOfDay = calculateTimeOfDayScore(props);
   const weather = calculateWeatherScore(props);
   const travelDistance = calculateTravelDistanceScore(props);
-
   const ageProfile = calculateAgeProfileScore(props);
   const competitiveness = calculateCompetitivenessScore(props);
   const improvement = calculateImprovementScore(props);

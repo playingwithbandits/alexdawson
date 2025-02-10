@@ -5,11 +5,11 @@ export function calculateBounceScore({
   race,
 }: ScoreParams): ScoreComponent {
   let score = 0;
-  const maxScore = 5;
+  const maxScore = 3;
 
   const recentRuns = horse.formObj?.form?.slice(0, 4) || [];
   if (recentRuns.length === 0) {
-    return { score: 0, maxScore, percentage: 0 };
+    return { score: maxScore, maxScore, percentage: 100 };
   }
 
   const lastRun = recentRuns[0];
@@ -18,7 +18,7 @@ export function calculateBounceScore({
   // Check if last run was a big effort
   const wasBigEffort =
     lastRun.raceOutcomeCode === "1" || // Won
-    parseInt(lastRun.rpPostmark || "0") >= 100 || // High rating
+    lastRun.rpPostmark! >= 100 || // High rating
     lastRun.rpCloseUpComment?.toLowerCase().includes("hard race");
 
   if (wasBigEffort) {
@@ -31,8 +31,7 @@ export function calculateBounceScore({
     const previousBouncePattern = recentRuns.slice(1).some((run, index) => {
       const prevRun = recentRuns[index];
       return (
-        (run.raceOutcomeCode === "1" ||
-          parseInt(run.rpPostmark || "0") >= 100) &&
+        (run.raceOutcomeCode === "1" || run.rpPostmark! >= 100) &&
         parseInt(prevRun.raceOutcomeCode || "99") > 4
       );
     });
