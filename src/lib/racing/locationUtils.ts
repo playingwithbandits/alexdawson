@@ -65,6 +65,11 @@ const COURSE_LOCATIONS: Record<string, Location> = {
   worcester: { latitude: 52.1932, longitude: -2.2201 },
   yarmouth: { latitude: 52.6156, longitude: 1.7321 },
   york: { latitude: 53.9589, longitude: -1.0683 },
+  wincanton: { latitude: 51.0553, longitude: -2.4095 },
+  hereford: { latitude: 52.0505, longitude: -2.7641 },
+  chester: { latitude: 53.1907, longitude: -2.8843 },
+  windsor: { latitude: 51.4821, longitude: -0.6077 },
+  "newmarket-july": { latitude: 52.2429, longitude: 0.3807 },
 };
 
 // Major UK training centers and locations
@@ -354,6 +359,50 @@ const TRAINER_LOCATIONS: Record<string, Location> = {
   "lisa williamson": { latitude: 52.9375, longitude: -1.1001 }, // Nottingham
   "paddy butler": { latitude: 52.3673, longitude: -2.7144 }, // Ludlow
   "jonjo & a j o'neill": { latitude: 51.9431, longitude: -1.9882 }, // Cheltenham
+
+  // Southern trainers
+  "richard j bandey": { latitude: 51.2345, longitude: -1.3397 }, // Hampshire
+  "robert walford": { latitude: 50.9401, longitude: -2.7543 }, // Dorset
+  "max comley": { latitude: 51.0689, longitude: -1.7547 }, // Salisbury
+  "lydia richards": { latitude: 50.9334, longitude: -0.2818 }, // Sussex
+  "pat phelan": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "emma-jane bishop": { latitude: 51.3532, longitude: -2.0281 }, // Westbury
+  "matt crawley": { latitude: 52.2429, longitude: 0.3807 }, // Newmarket
+  "harry charlton": { latitude: 51.2345, longitude: -1.3397 }, // Andover
+
+  // Midlands trainers
+  "tom gretton": { latitude: 52.0505, longitude: -2.7641 }, // Herefordshire
+  "ryan potter": { latitude: 52.0505, longitude: -2.7641 }, // Herefordshire
+  "katy price": { latitude: 52.0505, longitude: -2.7641 }, // Herefordshire
+  "harriet dickin": { latitude: 52.1908, longitude: -1.7094 }, // Stratford
+  "d j jeffreys": { latitude: 52.0505, longitude: -2.7641 }, // Herefordshire
+
+  // Northern trainers
+  "dianne sayer": { latitude: 54.8952, longitude: -2.9189 }, // Carlisle
+  "andrew hamilton": { latitude: 54.8952, longitude: -2.9189 }, // Carlisle
+  "lizzie quinlan": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+  "james ewart": { latitude: 55.6001, longitude: -2.4338 }, // Kelso
+  "jackie stephen": { latitude: 57.1497, longitude: -2.1383 }, // Aberdeen
+  "susan corbett": { latitude: 55.6474, longitude: -2.4154 }, // Kelso
+  "jane walton": { latitude: 54.4465, longitude: -1.6744 }, // Catterick
+  "gary brown": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "leonard kerr": { latitude: 55.0833, longitude: -3.3333 }, // Dumfries
+
+  // Irish trainers
+  "patrick neville": { latitude: 52.3559, longitude: -7.6947 }, // Tipperary
+  "s mcparlan": { latitude: 54.4435, longitude: -6.4035 }, // County Antrim
+  "daragh bourke": { latitude: 53.4789, longitude: -6.8367 }, // Meath
+  "noel c kelly": { latitude: 53.4789, longitude: -6.8367 }, // Meath
+
+  // Partnership updates
+  "kim bailey & mat nicholls": { latitude: 51.9431, longitude: -1.9882 }, // Cheltenham
+  "philip hobbs & johnson white": { latitude: 51.2877, longitude: -2.7704 }, // Minehead
+
+  // Other trainers
+  "cynthia woods": { latitude: 52.9375, longitude: -1.1001 }, // Nottingham
+  "catch bissett": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+  "tony forbes": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+  "danni o'neill": { latitude: 53.1907, longitude: -2.8843 }, // Chester
 };
 
 export function getCourseLocation(venue: string): Location | null {

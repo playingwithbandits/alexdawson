@@ -38,6 +38,8 @@ export const placeToPlaceKey = (m_place: string) => {
       .replace(" (a.w)", "-aw")
       .replace("-aw", "")
       .replace("_", "-")
+      .replace(" (july)", "")
+      .replace("-july", "")
       .replace("-city", "")
       .replace(/\s+/g, "-")
       .trim();
