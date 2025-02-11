@@ -403,6 +403,79 @@ const TRAINER_LOCATIONS: Record<string, Location> = {
   "catch bissett": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
   "tony forbes": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
   "danni o'neill": { latitude: 53.1907, longitude: -2.8843 }, // Chester
+
+  // Newmarket trainers
+  "john & thady gosden": { latitude: 52.2429, longitude: 0.3807 },
+  "charles hills": { latitude: 52.2429, longitude: 0.3807 },
+  "charlie clover": { latitude: 52.2429, longitude: 0.3807 },
+  "george margarson": { latitude: 52.2429, longitude: 0.3807 },
+  "william stone": { latitude: 52.2429, longitude: 0.3807 },
+  "ismail mohammed": { latitude: 52.2429, longitude: 0.3807 },
+
+  // Yorkshire trainers
+  "peter niven": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "julia & shelley birkett": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "joel parkinson & sue smith": { latitude: 53.9461, longitude: -1.3845 }, // Wetherby
+  "michael herrington": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "michael & david easterby": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "mark walford": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "seb spencer": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+
+  // Midlands trainers
+  "roy bowring": { latitude: 52.9375, longitude: -1.1001 }, // Nottingham
+  "nick kent": { latitude: 53.2273, longitude: -0.5351 }, // Lincoln
+  "jennie candlish": { latitude: 53.1261, longitude: -1.8558 }, // Baslow
+  "henry daly": { latitude: 52.5851, longitude: -2.1134 }, // Wolverhampton
+
+  // East Anglia trainers
+  "pam sly": { latitude: 52.4334, longitude: -0.2462 }, // Peterborough
+  "lucy wadham": { latitude: 52.2429, longitude: 0.3807 }, // Newmarket region
+
+  // Southern trainers
+  "harry derham": { latitude: 51.2345, longitude: -1.3397 }, // Hampshire
+  "seamus mullins": { latitude: 51.0689, longitude: -1.7547 }, // Salisbury
+  "george baker": { latitude: 51.2345, longitude: -1.3397 }, // Hampshire
+  "simon dow": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "lemos de souza": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "michael madgwick": { latitude: 50.8429, longitude: -0.1273 }, // Brighton
+  "tom ward": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "mark usher": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "martin dunne": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "d donovan": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "j s moore": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "dr richard newland & jamie insole": {
+    latitude: 52.1932,
+    longitude: -2.2201,
+  }, // Worcester
+  "roger teal": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "jack jones": { latitude: 52.1932, longitude: -2.2201 }, // Worcester
+  "jack channon": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "mark hoad": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "keiran burke": { latitude: 50.9401, longitude: -2.7543 }, // Dorset
+  "karen jewell": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "daniel steele": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "laura mongan": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "mark pattinson": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+  "charlie wallis": { latitude: 51.3723, longitude: -0.3573 }, // Epsom
+
+  // Northern trainers
+  "tristan davidson": { latitude: 54.8952, longitude: -2.9189 }, // Carlisle
+  "t ellis": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+  "liam bailey": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+  "paul collins": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+  "michael mullineaux": { latitude: 53.1907, longitude: -2.8843 }, // Chester
+  "simon west": { latitude: 54.9966, longitude: -1.6171 }, // Newcastle
+
+  // Yorkshire trainers (add to existing Yorkshire section)
+  "john & sean quinn": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "edward bethell": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "james horton": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+  "craig lidster": { latitude: 54.0931, longitude: -1.3474 }, // Malton
+
+  // Southern trainers (add to existing Southern section)
+  "heather main": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "miss katy brown": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
+  "alison hamilton": { latitude: 51.5275, longitude: -1.5145 }, // Lambourn
 };
 
 export function getCourseLocation(venue: string): Location | null {
