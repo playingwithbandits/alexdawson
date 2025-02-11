@@ -29,7 +29,8 @@ export async function POST(request: Request) {
       );
 
       //console.log(`Processing course: ${courseName}`);
-      const isUkCourse = courseName && UK_COURSES.includes(courseName);
+      const ukCourseKeys = UK_COURSES.map((course) => placeToPlaceKey(course));
+      const isUkCourse = courseName && ukCourseKeys.includes(courseName);
       //console.log(`Is UK course: ${isUkCourse}`);
       return isUkCourse;
     });
