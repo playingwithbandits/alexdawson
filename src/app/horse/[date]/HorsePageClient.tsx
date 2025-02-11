@@ -8,7 +8,7 @@ import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { useResults } from "@/hooks/useResults";
 import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
-const UK_COURSES = [
+export const UK_COURSES = [
   "ascot",
   "ayr",
   "bangor",
@@ -26,7 +26,7 @@ const UK_COURSES = [
   "epsom",
   "exeter",
   "fakenham",
-  "ffos las",
+  "ffos-las",
   "fontwell",
   "goodwood",
   "hamilton",
@@ -66,6 +66,15 @@ const UK_COURSES = [
   "worcester",
   "yarmouth",
   "york",
+  "hereford",
+  "towcester",
+  "aintree",
+  "folkestone",
+  "great leighs",
+  "rothwell",
+  "southport",
+  "great yarmouth",
+  "thurles"
 ];
 
 function getPageUrl(date: string) {
@@ -171,63 +180,4 @@ export function HorsePageClient({ date }: { date: string }) {
 
             //console.log(`Processing course: ${courseName}`);
             const isUkCourse = courseName && UK_COURSES.includes(courseName);
-            //console.log(`Is UK course: ${isUkCourse}`);
-            return isUkCourse;
-          });
-          //console.log(`Filtered to ${ukElements.length} UK courses`);
-
-          //console.log("🔍 Meeting elements:", ukElements);
-
-          const parsedMeetings = await parseMeetings(Array.from(ukElements));
-          //console.log("✨ Successfully parsed meetings data");
-          //console.log("📝 Saving to cache for date:", date);
-
-          // Save to cache file
-          await fetch(`/api/racing?date=${date}`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(parsedMeetings),
-          });
-          //console.log("💾 Cache saved successfully");
-
-          setMeetings(parsedMeetings);
-        } else {
-          //console.log("📦 Using cached data");
-          setMeetings(data);
-        }
-      } catch (err) {
-        console.error("Error loading data:", err);
-        setError(err instanceof Error ? err.message : "Failed to load data");
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadData();
-  }, [date]);
-
-  if (loading || resultsLoading) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <Loader2 className="h-8 w-8 animate-spin" />
-      </div>
-    );
-  }
-
-  if (error) return <div>Error: {error}</div>;
-  if (meetings.length === 0) return <div>Loading...</div>;
-
-  console.log("meetings", meetings);
-  return (
-    <DashboardContent
-      meetings={meetings}
-      date={date}
-      results={results}
-      tips={tips}
-      gytoTips={gytoTips?.tips}
-      napsTableTips={napsTableTips?.tips}
-    />
-  );
-}
+            //console.log(`
