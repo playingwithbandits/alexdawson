@@ -10,7 +10,7 @@ export function calculateConsistencyScore({
   let score = 0;
   const maxScore = 3;
 
-  const validRuns = horse.formObj?.form?.slice(0, 6) || [];
+  const validRuns = horse.formObj?.form?.slice(0, 12) || [];
   if (validRuns.length >= 3) {
     // Finishing positions consistency
     const positions = validRuns

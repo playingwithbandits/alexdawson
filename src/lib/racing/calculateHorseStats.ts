@@ -106,7 +106,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
 
   // Calculate recent form trend
   const recentResults = validRuns
-    .slice(0, 6)
+    .slice(0, 12)
     .map((r) => parseInt(r.raceOutcomeCode || "0"))
     .filter((pos) => pos > 0);
 
@@ -158,7 +158,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
 
   // Calculate form progression
   const lastSixPositions = validRuns
-    .slice(0, 6)
+    .slice(0, 12)
     .map((r) => parseInt(r.raceOutcomeCode || "0"))
     .filter((p) => p > 0);
 
@@ -256,7 +256,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     recentFormTrend,
     avgPositionLastSix: avg(recentResults),
     finishingPositions: validRuns
-      .slice(0, 6)
+      .slice(0, 12)
       .map((r) => parseInt(r.raceOutcomeCode || "0"))
       .filter(Boolean),
 
@@ -264,13 +264,13 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     bestRPR: Math.max(...validRuns.map((r) => r.rpPostmark || 0)),
     avgRPR: avg(validRuns.map((r) => r.rpPostmark || 0)),
     rprProgression: validRuns
-      .slice(0, 6)
+      .slice(0, 12)
       .map((r) => r.rpPostmark || 0)
       .reverse(),
     bestTopSpeed: Math.max(...validRuns.map((r) => r.rpTopspeed || 0)),
     avgTopSpeed: avg(validRuns.map((r) => r.rpTopspeed || 0)),
     topSpeedProgression: validRuns
-      .slice(0, 6)
+      .slice(0, 12)
       .map((r) => r.rpTopspeed || 0)
       .reverse(),
 
@@ -281,7 +281,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     maxDistance: Math.max(...validRuns.map((r) => r.distanceFurlong || 0)),
     avgDistance: avg(validRuns.map((r) => r.distanceFurlong || 0)),
     distanceProgression: validRuns
-      .slice(0, 6)
+      .slice(0, 12)
       .map((r) => r.distanceFurlong || 0)
       .reverse(),
 
@@ -292,7 +292,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     maxWeight: Math.max(...validRuns.map((r) => r.weightCarriedLbs || 0)),
     avgWeight: avg(validRuns.map((r) => r.weightCarriedLbs || 0)),
     weightProgression: validRuns
-      .slice(0, 6)
+      .slice(0, 12)
       .map((r) => r.weightCarriedLbs || 0)
       .reverse(),
 
@@ -320,7 +320,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     ),
     avgOfficialRating: avg(validRuns.map((r) => r.officialRatingRanOff || 0)),
     officialRatingProgression: validRuns
-      .slice(0, 6)
+      .slice(0, 12)
       .map((r) => r.officialRatingRanOff || 0)
       .reverse(),
 
@@ -366,7 +366,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
 
       lowestClass: Math.max(...classes),
       currentClass: validRuns[0]?.raceClass || 0,
-      classProgression: classes.slice(0, 6),
+      classProgression: classes.slice(0, 12),
     },
     margins: {
       avgWinningDistance: avg(winningMargins),

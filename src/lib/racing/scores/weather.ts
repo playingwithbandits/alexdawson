@@ -10,7 +10,7 @@ export function calculateWeatherScore({
   const maxScore = 3;
 
   const currentGoing = race.going?.toLowerCase() || "";
-  const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
+  const recentRuns = horse.formObj?.form?.slice(0, 12) || [];
 
   // Group performance by weather conditions
   const goingPerformance = recentRuns.reduce((acc, run) => {

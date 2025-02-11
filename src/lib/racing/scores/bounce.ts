@@ -7,7 +7,7 @@ export function calculateBounceScore({
   let score = 0;
   const maxScore = 3;
 
-  const recentRuns = horse.formObj?.form?.slice(0, 4) || [];
+  const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
   if (recentRuns.length === 0) {
     return { score: maxScore, maxScore, percentage: 100 };
   }

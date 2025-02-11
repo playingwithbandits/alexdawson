@@ -50,32 +50,32 @@ export function calculateConnectionsScore({
     0 / (race.raceExtraInfo?.trainerStats?.length || 1);
   if ((trainerStats?.last14Days?.winRate || 0) > avgTrainerRate) score++;
 
-  console.log("connextions", {
-    horse,
-    race,
-    stats: {
-      jockeyObj: race.raceExtraInfo?.jockeyStats,
-      trainerObj: race.raceExtraInfo?.trainerStats,
-      name: horseNameToKey(horse.jockey.name.toLowerCase().trim()),
-      trainer: horseNameToKey(horse.trainer.name.toLowerCase().trim()),
-      jockeyStats,
-      trainerStats,
-    },
-    jockey: {
-      avgJockeyRate,
-      winRate: jockeyStats?.last14Days?.winRate,
-    },
+  // console.log("connextions", {
+  //   horse,
+  //   race,
+  //   stats: {
+  //     jockeyObj: race.raceExtraInfo?.jockeyStats,
+  //     trainerObj: race.raceExtraInfo?.trainerStats,
+  //     name: horseNameToKey(horse.jockey.name.toLowerCase().trim()),
+  //     trainer: horseNameToKey(horse.trainer.name.toLowerCase().trim()),
+  //     jockeyStats,
+  //     trainerStats,
+  //   },
+  //   jockey: {
+  //     avgJockeyRate,
+  //     winRate: jockeyStats?.last14Days?.winRate,
+  //   },
 
-    trainer: {
-      avgTrainerRate,
-      winRate: trainerStats?.last14Days?.winRate,
-    },
-    score: {
-      score,
-      maxScore,
-      percentage: (score / maxScore) * 100,
-    },
-  });
+  //   trainer: {
+  //     avgTrainerRate,
+  //     winRate: trainerStats?.last14Days?.winRate,
+  //   },
+  //   score: {
+  //     score,
+  //     maxScore,
+  //     percentage: (score / maxScore) * 100,
+  //   },
+  // });
   return {
     score,
     maxScore,

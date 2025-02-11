@@ -23,7 +23,7 @@ export function calculateCourseScore({
 
   // Recent course form
   const recentCourseForm = horse.formObj?.form
-    ?.slice(0, 4)
+    ?.slice(0, 6)
     .some(
       (f) =>
         f.courseName?.toLowerCase() === meetingDetails.venue?.toLowerCase() &&

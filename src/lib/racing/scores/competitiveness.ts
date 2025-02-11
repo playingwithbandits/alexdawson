@@ -18,7 +18,7 @@ export function calculateCompetitivenessScore({
   }
 
   // Recent competitive races
-  const recentRuns = horse.formObj?.form?.slice(0, 4) || [];
+  const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
   const competitiveRaces = recentRuns.filter((run) => {
     const finishPos = parseInt(run.raceOutcomeCode || "99");
     const totalRunners = run.noOfRunners || 0;

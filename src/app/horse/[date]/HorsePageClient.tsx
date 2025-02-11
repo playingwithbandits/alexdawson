@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { DashboardContent } from "../DashboardContent";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { useResults } from "@/hooks/useResults";
-import { normalizeTime } from "@/components/horse/DayPredictions";
 import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 const UK_COURSES = [
@@ -220,6 +219,7 @@ export function HorsePageClient({ date }: { date: string }) {
   if (error) return <div>Error: {error}</div>;
   if (meetings.length === 0) return <div>Loading...</div>;
 
+  console.log("meetings", meetings);
   return (
     <DashboardContent
       meetings={meetings}

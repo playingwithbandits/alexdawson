@@ -265,7 +265,7 @@ export function calculateHorseScore2(
 
     // Recent good run on this going
     const recentGoingForm = horse.formObj?.form
-      ?.slice(0, 4)
+      ?.slice(0, 6)
       .some(
         (f) =>
           parseInt(f.raceOutcomeCode || "99") <= 4 &&
@@ -293,7 +293,7 @@ export function calculateHorseScore2(
 
         // Recent form in code
         const recentAWForm = horse.formObj?.form
-          ?.slice(0, 4)
+          ?.slice(0, 6)
           .filter((f) => f.raceTypeCode === "W" || f.raceTypeCode === "X")
           .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
         if (recentAWForm) score++;
@@ -315,7 +315,7 @@ export function calculateHorseScore2(
 
         // Recent form in code
         const recentFlatForm = horse.formObj?.form
-          ?.slice(0, 4)
+          ?.slice(0, 6)
           .filter((f) => f.raceTypeCode === "F" || f.raceTypeCode === "B")
           .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
         if (recentFlatForm) score++;
@@ -337,7 +337,7 @@ export function calculateHorseScore2(
       if (hurdleStats.runs >= 5) score++;
 
       const recentHurdleForm = horse.formObj?.form
-        ?.slice(0, 4)
+        ?.slice(0, 6)
         .filter((f) => f.raceTypeCode === "H" || f.raceTypeCode === "P")
         .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
       if (recentHurdleForm) score++;
@@ -354,7 +354,7 @@ export function calculateHorseScore2(
       if (chaseStats.runs >= 5) score++;
 
       const recentChaseForm = horse.formObj?.form
-        ?.slice(0, 4)
+        ?.slice(0, 6)
         .filter((f) => f.raceTypeCode === "C" || f.raceTypeCode === "U")
         .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
       if (recentChaseForm) score++;
@@ -381,19 +381,19 @@ export function calculateHorseScore2(
 
     // Multiple recent wins
     const recentWins = horse.formObj?.form
-      ?.slice(0, 6)
+      ?.slice(0, 12)
       .filter((f) => f.raceOutcomeCode === "1").length;
     if (recentWins && recentWins > 1) score++;
 
     // Consistent placements
     const recentPlacements = horse.formObj?.form
-      ?.slice(0, 6)
+      ?.slice(0, 12)
       .filter((f) => parseInt(f.raceOutcomeCode || "99") <= 3).length;
     if (recentPlacements && recentPlacements >= 3) score++;
 
     // Progressive form
     const rprs = horse.formObj?.form
-      ?.slice(0, 4)
+      ?.slice(0, 6)
       .map((f) => f.rpPostmark)
       .filter((r): r is number => r !== undefined);
     if (
@@ -405,7 +405,7 @@ export function calculateHorseScore2(
 
     // Recent class win
     const recentClassWin = horse.formObj?.form
-      ?.slice(0, 4)
+      ?.slice(0, 6)
       .some(
         (f) =>
           f.raceOutcomeCode === "1" && f.raceClass && f.raceClass <= race.class
@@ -414,7 +414,7 @@ export function calculateHorseScore2(
 
     // Recent course win
     const recentCourseWin = horse.formObj?.form
-      ?.slice(0, 6)
+      ?.slice(0, 12)
 
       .some(
         (f) =>
@@ -425,7 +425,7 @@ export function calculateHorseScore2(
 
     // Recent distance win
     const recentDistanceWin = horse.formObj?.form
-      ?.slice(0, 6)
+      ?.slice(0, 12)
       .some(
         (f) =>
           f.raceOutcomeCode === "1" &&
@@ -461,7 +461,7 @@ export function calculateHorseScore2(
 
     // Recent course form
     const recentCourseForm = horse.formObj?.form
-      ?.slice(0, 4)
+      ?.slice(0, 6)
       .some(
         (f) =>
           f.courseName?.toLowerCase() === meetingDetails.venue?.toLowerCase() &&
@@ -654,7 +654,7 @@ export function calculateHorseScore2(
     if ((isWinter && horse.stats?.seasonalForm?.winter) || 0 > 3) score++;
 
     // Recent runs in similar conditions
-    const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
+    const lastSixRuns = horse.formObj?.form?.slice(0, 12) || [];
     const similarConditionsRuns = lastSixRuns.filter((run) => {
       const similarClass = Math.abs((run.raceClass || 0) - race.class) <= 1;
       const similarDistance =
@@ -709,7 +709,7 @@ export function calculateHorseScore2(
     let score = 0;
     const maxScore = MAX_SCORES.market;
 
-    const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
+    const lastSixRuns = horse.formObj?.form?.slice(0, 12) || [];
 
     // Well backed when winning
     const wellBackedWins = lastSixRuns.filter(
@@ -912,7 +912,7 @@ export function calculateHorseScore2(
     let score = 0;
     const maxScore = MAX_SCORES.consistency;
 
-    const validRuns = horse.formObj?.form?.slice(0, 6) || [];
+    const validRuns = horse.formObj?.form?.slice(0, 12) || [];
     if (validRuns.length >= 3) {
       // Finishing positions consistency
       const positions = validRuns
@@ -986,7 +986,7 @@ export function calculateHorseScore2(
 
     const form = horse.formObj?.form || [];
     const prizesWon = form
-      .slice(0, 6)
+      .slice(0, 12)
       .map((r) => r.prizeSterling || 0)
       .filter((p) => p > 0);
 

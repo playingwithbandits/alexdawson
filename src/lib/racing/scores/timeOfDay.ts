@@ -22,7 +22,7 @@ export function calculateTimeOfDayScore({
 
   //console.log(`[TimeOfDay] Normalized race time: ${normalizedRaceTime}`);
   const hour = raceTime.getHours();
-  const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
+  const recentRuns = horse.formObj?.form?.slice(0, 12) || [];
 
   //console.log(`[TimeOfDay] Analyzing ${horse.name} for race at ${hour}:00`);
   //console.log(`[TimeOfDay] Found ${recentRuns.length} recent runs to analyze`);

@@ -47,14 +47,14 @@ export function calculateTravelDistanceScore({
     courseLocation.longitude
   );
 
-  if (travelDistance > 200) {
+  if (travelDistance > 300) {
     console.log(
       `Travel distance for horse: ${horse.name} -> trainer: ${horse.trainer?.name} -> course: ${meetingDetails.venue} -> travelDistance: ${travelDistance}`
     );
   }
 
   // Get recent runs to analyze travel performance
-  const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
+  const recentRuns = horse.formObj?.form?.slice(0, 12) || [];
 
   const travelPerformance = recentRuns.reduce(
     (acc, run) => {
@@ -87,7 +87,7 @@ export function calculateTravelDistanceScore({
     // Local race (within 50km)
     score++;
   }
-  if (travelDistance >= 500) {
+  if (travelDistance >= 200) {
     // Distant race (within 500km)
     score++;
   }

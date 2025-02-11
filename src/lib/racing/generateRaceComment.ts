@@ -108,7 +108,7 @@ export function generateRaceComment(
   }
 
   // Add form analysis
-  const recentForm = topHorse.formObj?.form?.slice(0, 4);
+  const recentForm = topHorse.formObj?.form?.slice(0, 6);
   if (recentForm?.length) {
     const recentWins = recentForm.filter(
       (r) => r.raceOutcomeCode === "1"

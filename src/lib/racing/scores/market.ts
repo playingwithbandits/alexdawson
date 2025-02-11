@@ -9,7 +9,7 @@ export function calculateMarketScore({
   let score = 0;
   const maxScore = 3;
 
-  const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
+  const lastSixRuns = horse.formObj?.form?.slice(0, 12) || [];
 
   // Well backed when winning
   const wellBacked = lastSixRuns.filter(

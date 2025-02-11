@@ -7,7 +7,7 @@ export function calculateImprovementScore({
   let score = 0;
   const maxScore = 3;
 
-  const recentRuns = horse.formObj?.form?.slice(0, 4) || [];
+  const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
 
   // Check for progressive form pattern
   const ratings = recentRuns

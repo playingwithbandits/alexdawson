@@ -12,7 +12,7 @@ export function calculateHeadGearScore({
   }
 
   const currentGear = horse.headGear.code;
-  const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
+  const recentRuns = horse.formObj?.form?.slice(0, 12) || [];
 
   // Check effectiveness of current headgear
   const runsWithCurrentGear = recentRuns.filter(

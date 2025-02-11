@@ -46,7 +46,7 @@ export function calculateGoingScore({
 
   // Recent good run on this going
   const recentGoingForm = horse.formObj?.form
-    ?.slice(0, 4)
+    ?.slice(0, 6)
     .some(
       (f) =>
         parseInt(f.raceOutcomeCode || "99") <= 4 &&
@@ -76,7 +76,7 @@ export function calculateGoingScore({
 
         // Recent form in code
         const recentAWForm = horse.formObj?.form
-          ?.slice(0, 4)
+          ?.slice(0, 6)
           .filter((f) => f.raceTypeCode === "W" || f.raceTypeCode === "X")
           .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
         if (recentAWForm) score++;
@@ -100,7 +100,7 @@ export function calculateGoingScore({
 
         // Recent form in code
         const recentFlatForm = horse.formObj?.form
-          ?.slice(0, 4)
+          ?.slice(0, 6)
           .filter((f) => f.raceTypeCode === "F" || f.raceTypeCode === "B")
           .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
         if (recentFlatForm) score++;
@@ -124,7 +124,7 @@ export function calculateGoingScore({
       if (hurdleStats.runs >= 5) score++;
 
       const recentHurdleForm = horse.formObj?.form
-        ?.slice(0, 4)
+        ?.slice(0, 6)
         .filter((f) => f.raceTypeCode === "H" || f.raceTypeCode === "P")
         .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
       if (recentHurdleForm) score++;
@@ -141,7 +141,7 @@ export function calculateGoingScore({
       if (chaseStats.runs >= 5) score++;
 
       const recentChaseForm = horse.formObj?.form
-        ?.slice(0, 4)
+        ?.slice(0, 6)
         .filter((f) => f.raceTypeCode === "C" || f.raceTypeCode === "U")
         .some((f) => parseInt(f.raceOutcomeCode || "99") <= 3);
       if (recentChaseForm) score++;

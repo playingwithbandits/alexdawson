@@ -1,0 +1,165 @@
+{
+  "date": "2025-02-11",
+  "tips": [
+    {
+      "time": "14:40",
+      "horse": "Pour Les Filles",
+      "isNap": false
+    },
+    {
+      "time": "16:02",
+      "horse": "Pilsdon Pen",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Don Brocco",
+      "isNap": false
+    },
+    {
+      "time": "16:37",
+      "horse": "Double Oban",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Marinakis",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Path To Dubai",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Presenting Doy",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Pleasington",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Pour Les Filles",
+      "isNap": false
+    },
+    {
+      "time": "16:02",
+      "horse": "Pilsdon Pen",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Piaff Bubbles",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Venus Slipper",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Ballyfort",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Wainwright",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Pour Les Filles",
+      "isNap": true
+    },
+    {
+      "time": "15:10",
+      "horse": "Rock On Jet",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Piaff Bubbles",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Don Brocco",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Kenisa Sport",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Presenting Doy",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Pleasington",
+      "isNap": false
+    },
+    {
+      "time": "15:27",
+      "horse": "Chauffeur Driven",
+      "isNap": false
+    },
+    {
+      "time": "16:02",
+      "horse": "Pilsdon Pen",
+      "isNap": true
+    },
+    {
+      "time": "16:37",
+      "horse": "Double Oban",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Muddy Mooy",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Marinakis",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Venus Slipper",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Lord Rapscallion",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Path To Dubai",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Piperstown",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Bankrupt",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Big Time Rascal",
+      "isNap": false
+    }
+  ]
+}

@@ -37,22 +37,22 @@ export function calculateConnectionComboScore({
     if (recentComboSuccess) score++;
   }
 
-  console.log("calculateConnectionComboScore", {
-    comboRuns,
-    horse,
-    race,
-    stats: {
-      jockeyObj: race.raceExtraInfo?.jockeyStats,
-      trainerObj: race.raceExtraInfo?.trainerStats,
-      name: horseNameToKey(horse.jockey.name.toLowerCase().trim()),
-      trainer: horseNameToKey(horse.trainer.name.toLowerCase().trim()),
-    },
-    score: {
-      score,
-      maxScore,
-      percentage: (score / maxScore) * 100,
-    },
-  });
+  // console.log("calculateConnectionComboScore", {
+  //   comboRuns,
+  //   horse,
+  //   race,
+  //   stats: {
+  //     jockeyObj: race.raceExtraInfo?.jockeyStats,
+  //     trainerObj: race.raceExtraInfo?.trainerStats,
+  //     name: horseNameToKey(horse.jockey.name.toLowerCase().trim()),
+  //     trainer: horseNameToKey(horse.trainer.name.toLowerCase().trim()),
+  //   },
+  //   score: {
+  //     score,
+  //     maxScore,
+  //     percentage: (score / maxScore) * 100,
+  //   },
+  // });
 
   return {
     score,

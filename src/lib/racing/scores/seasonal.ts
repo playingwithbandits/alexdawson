@@ -22,7 +22,7 @@ export function calculateSeasonalScore({
   if ((isWinter && horse.stats?.seasonalForm?.winter) || 0 > 3) score++;
 
   // Recent runs in similar conditions
-  const lastSixRuns = horse.formObj?.form?.slice(0, 6) || [];
+  const lastSixRuns = horse.formObj?.form?.slice(0, 12) || [];
   const similarConditionsRuns = lastSixRuns.filter((run) => {
     const similarClass = Math.abs((run.raceClass || 0) - race.class) <= 1;
     const similarDistance =

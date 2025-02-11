@@ -43,7 +43,7 @@ export function calculateAgeProfileScore({
   }
 
   // Recent form for age group
-  const recentRuns = horse.formObj?.form?.slice(0, 4) || [];
+  const recentRuns = horse.formObj?.form?.slice(0, 6) || [];
   const ageGroupSuccess = recentRuns.some(
     (run) => parseInt(run.raceOutcomeCode || "99") <= 3
   );

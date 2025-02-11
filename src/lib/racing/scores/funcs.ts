@@ -188,7 +188,7 @@ export function isBadDraw(
 export function determineRunStyle(
   form: FormObj["form"]
 ): HorseStats["runStyle"] {
-  const recentRaces = form?.slice(0, 6) || [];
+  const recentRaces = form?.slice(0, 12) || [];
   const comments = recentRaces.map(
     (r) => r.rpCloseUpComment?.toLowerCase() || ""
   );
