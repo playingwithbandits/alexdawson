@@ -327,6 +327,8 @@ h2::after {
 
 .project-card {
   background: var(--card-bg);
+  border: 1px solid;
+  border-color: var(--primary);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(10, 11, 26, 0.4);

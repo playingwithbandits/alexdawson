@@ -19,14 +19,14 @@ export const projects: Project[] = [
     id: 2,
     title: "AI Horse Racing Predictor",
     description: "A machine learning tool for predicting horse racing results",
-    imageUrl: "/project2.jpg",
+    imageUrl: "/images/projects/horse.png",
     projectUrl: "/horse",
   },
   {
     id: 3,
     title: "Pussy - Drinking Card Game",
     description: "A drinking card game for friends.",
-    imageUrl: "/project3.jpg",
+    imageUrl: "/images/projects/game.png",
     projectUrl: "/gamereset",
   },
 ];
