@@ -2,13 +2,24 @@ import { readFile, writeFile } from "fs/promises";
 import { join } from "path";
 import { NextResponse } from "next/server";
 
-interface RoiEntry {
-  date: string;
+interface RoiSource {
   roi: number;
   wins: number;
   total: number;
   totalReturns: number;
   totalBets: number;
+}
+
+interface RoiEntry {
+  date: string;
+  sources: {
+    ai: RoiSource;
+    predictions: RoiSource;
+    atr: RoiSource;
+    timeform: RoiSource;
+    gyto: RoiSource;
+    naps: RoiSource;
+  };
 }
 
 interface RoiData {
@@ -31,18 +42,19 @@ export async function POST(request: Request) {
       roiData = { entries: [] };
     }
 
-    // Remove any existing entry for this date
-    roiData.entries = roiData.entries.filter(
-      (entry) => entry.date !== newEntry.date
+    // Update or add new entry
+    const existingIndex = roiData.entries.findIndex(
+      (entry) => entry.date === newEntry.date
     );
 
-    // Add new entry
-    roiData.entries.push(newEntry);
+    if (existingIndex >= 0) {
+      roiData.entries[existingIndex] = newEntry;
+    } else {
+      roiData.entries.push(newEntry);
+    }
 
     // Sort entries by date
-    roiData.entries.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-    );
+    roiData.entries.sort((a, b) => a.date.localeCompare(b.date));
 
     // Save updated data
     await writeFile(ROI_FILE_PATH, JSON.stringify(roiData, null, 2));

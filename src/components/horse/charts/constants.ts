@@ -1,10 +1,10 @@
 export const COLORS = [
-  "#00e5ff",
-  "#00b8d4",
-  "#00fff2",
-  "#26c6da",
-  "#4dd0e1",
-  "#80deea",
+  "#00e5ff", // Cyan
+  "#ff4d94", // Pink
+  "#ffcf40", // Gold
+  "#4dff88", // Mint
+  "#bf7fff", // Purple
+  "#ff8533", // Orange
 ];
 
 export const TOOLTIP_STYLE = {

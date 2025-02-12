@@ -19,6 +19,8 @@ import React from "react";
 import { avg } from "@/lib/utils";
 import { RACING_SCORE_WEIGHTS } from "@/lib/racing/scores/weights";
 import { HorseScore } from "@/lib/racing/scores/types";
+import { calculateROI } from "@/lib/racing/calculateROI";
+import { horseNameToKey } from "@/lib/racing/scores/funcs";
 
 export type ViewMode = "list" | "table" | "compact" | "detailed";
 
@@ -65,63 +67,113 @@ export function DayPredictions({
     setView(newView);
   };
 
-  const calculateROI = () => {
-    if (!results) return { roi: 0, wins: 0, total: 0, noResults: true };
-
-    let totalBets = 0;
-    let totalReturns = 0;
-    let wins = 0;
-
-    meetings.forEach((meeting) => {
-      meeting.races.forEach((race) => {
-        // Get top scorer for this race
+  const aiRoi = calculateROI({
+    meetings,
+    results,
+    picks: meetings?.flatMap((place) =>
+      place.races?.flatMap((race) => {
         const topScorer = race.horses.sort(
           (a, b) =>
             (b.score?.total?.percentage || 0) -
             (a.score?.total?.percentage || 0)
         )[0];
 
-        if (!topScorer) return;
+        const selection = horseNameToKey(topScorer.name);
+        return {
+          time: race.time,
+          horse: selection,
+        };
+      })
+    ),
+  });
 
-        // Find matching result
-        const raceResult = results.results.find(
-          (r) => normalizeTime(r.time) === normalizeTime(race.time)
+  const predictionsRoi = calculateROI({
+    meetings,
+    results,
+    picks: meetings?.flatMap((place) =>
+      place.races?.flatMap((race) => {
+        const sortedPrediction = Object.values(race.predictions || {}).sort(
+          (a, b) => (b.score || 0) - (a.score || 0)
+        )?.[0];
+
+        const selection = horseNameToKey(sortedPrediction?.name || "");
+        return {
+          time: race.time,
+          horse: selection,
+        };
+      })
+    ),
+  });
+
+  const rpPicks = calculateROI({
+    meetings,
+    results,
+    picks: meetings?.flatMap((place) =>
+      place.races?.flatMap((race) => {
+        const selection = horseNameToKey(
+          race.raceExtraInfo?.verdict?.selection || ""
         );
+        return {
+          time: race.time,
+          horse: selection,
+        };
+      })
+    ),
+  });
 
-        if (!raceResult) return;
+  const atrRoi = calculateROI({
+    meetings,
+    results,
+    picks: tips?.atrTips?.flatMap((tip) =>
+      tip.races?.flatMap((race) => ({
+        time: race.time,
+        horse: race.selections?.[0]?.horse,
+      }))
+    ),
+  });
 
-        // Check if top scorer won
-        const isWinner =
-          cleanName(raceResult.winner.name) === cleanName(topScorer.name);
+  const timeformRoi = calculateROI({
+    meetings,
+    results,
+    picks: tips?.timeformTips?.flatMap((tip) =>
+      tip.races?.flatMap((race) => ({
+        time: race.time,
+        horse: race.selections?.[0]?.horse,
+      }))
+    ),
+  });
 
-        // Get odds for top scorer
-        const odds = race.bettingForecast?.find(
-          (x) => cleanName(x.horseName) === cleanName(topScorer.name)
-        )?.decimalOdds;
+  const gytoRoi = calculateROI({
+    meetings,
+    results,
+    picks: gytoTips?.map((tip) => ({
+      time: tip.time,
+      horse: tip.horse,
+    })),
+  });
 
-        totalBets += 1;
-        if (isWinner) {
-          totalReturns += odds || 2;
-          wins += 1;
-        }
-      });
-    });
-
-    const roi =
-      totalBets > 0 ? ((totalReturns - totalBets) / totalBets) * 100 : 0;
-
-    return {
-      roi: roi,
-      wins,
-      total: totalBets,
-      totalReturns,
-      totalBets,
-      noResults: !results || results.results.length === 0,
-    };
-  };
+  const napsRoi = calculateROI({
+    meetings,
+    results,
+    picks: napsTableTips?.map((tip) => ({
+      time: tip.time,
+      horse: tip.horse,
+    })),
+  });
 
   const handleSaveRoi = async () => {
-    const { roi, wins, total, totalReturns, totalBets } = calculateROI();
+    const roiData = {
+      date,
+      sources: {
+        ai: aiRoi,
+        predictions: predictionsRoi,
+        atr: atrRoi,
+        timeform: timeformRoi,
+        gyto: gytoRoi,
+        naps: napsRoi,
+        rp: rpPicks,
+      },
+    };
 
     if (!results || results.results.length === 0) {
       alert("No results available to save ROI");
@@ -135,14 +187,7 @@ export function DayPredictions({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          date,
-          roi,
-          wins,
-          total,
-          totalReturns,
-          totalBets,
-        }),
+        body: JSON.stringify(roiData),
       });
 
       if (!response.ok) {
@@ -191,8 +236,7 @@ export function DayPredictions({
   };
 
   const renderHeader = () => {
-    const { roi, wins, total, totalReturns, totalBets, noResults } =
-      calculateROI();
+    const { roi, wins, total, totalReturns, totalBets, noResults } = aiRoi;
 
     return (
       <div className="mb-8">

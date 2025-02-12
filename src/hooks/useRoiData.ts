@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-export interface RoiEntry {
-  date: string;
+interface RoiSource {
   roi: number;
   wins: number;
   total: number;
@@ -9,8 +8,25 @@ export interface RoiEntry {
   totalBets: number;
 }
 
+export interface RoiEntry {
+  date: string;
+  sources: {
+    ai: RoiSource;
+    predictions: RoiSource;
+    atr: RoiSource;
+    timeform: RoiSource;
+    gyto: RoiSource;
+    naps: RoiSource;
+    rp: RoiSource;
+  };
+}
+
+interface RoiData {
+  entries: RoiEntry[];
+}
+
 export function useRoiData() {
-  const [data, setData] = useState<RoiEntry[]>([]);
+  const [data, setData] = useState<RoiData>({ entries: [] });
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -19,8 +35,8 @@ export function useRoiData() {
       try {
         const response = await fetch("/api/racing/roi");
         if (!response.ok) throw new Error("Failed to fetch ROI data");
-        const { entries } = await response.json();
-        setData(entries);
+        const roiData = await response.json();
+        setData(roiData);
       } catch (err) {
         setError(
           err instanceof Error ? err.message : "Failed to load ROI data"
