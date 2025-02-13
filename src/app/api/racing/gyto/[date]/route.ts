@@ -49,8 +49,8 @@ export async function GET(
   const date = await Promise.resolve(params.date);
   const today = new Date().toISOString().split("T")[0];
 
-  // Only return tips for today
-  if (date !== today) {
+  // Check if requested date is in the future
+  if (date > today) {
     return NextResponse.json({
       date,
       tips: [],
@@ -64,18 +64,26 @@ export async function GET(
     const cachedData = await fs.readFile(cacheFile, "utf-8");
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
-    // Cache miss - fetch fresh data
-    const tips = await fetchAndParseTips();
+    // Only fetch fresh data if it's today
+    if (date === today) {
+      const tips = await fetchAndParseTips();
 
-    const gytoTips: GytoTips = {
+      const gytoTips: GytoTips = {
+        date,
+        tips,
+      };
+
+      // Save to cache
+      await ensureDirectoryExists(CACHE_DIR);
+      await fs.writeFile(cacheFile, JSON.stringify(gytoTips, null, 2));
+
+      return NextResponse.json(gytoTips);
+    }
+
+    // For past dates with no cache, return empty tips
+    return NextResponse.json({
       date,
-      tips,
-    };
-
-    // Save to cache
-    await ensureDirectoryExists(CACHE_DIR);
-    await fs.writeFile(cacheFile, JSON.stringify(gytoTips, null, 2));
-
-    return NextResponse.json(gytoTips);
+      tips: [],
+    });
   }
 }

@@ -60,7 +60,7 @@ export function DayPredictions({
   //const data = generatePredictions(meetings);
 
   const today = new Date().toISOString().split("T")[0];
-  const isToday = date === today;
+  const isTodayOrPast = date === today || date < today;
 
   const handleViewChange = (newView: ViewMode) => {
     //console.log("Changing view to:", newView);
@@ -143,6 +143,7 @@ export function DayPredictions({
     ),
   });
 
+  console.log("gyto Tips", gytoTips);
   const gytoRoi = calculateROI({
     meetings,
     results,
@@ -152,6 +153,8 @@ export function DayPredictions({
     })),
   });
 
+  console.log("gyto Roi", gytoRoi);
+  console.log("naps TableTips", napsTableTips);
   const napsRoi = calculateROI({
     meetings,
     results,
@@ -160,6 +163,7 @@ export function DayPredictions({
       horse: tip.horse,
     })),
   });
+  console.log("naps Roi", napsRoi);
 
   const handleSaveRoi = async () => {
     const roiData = {
@@ -396,7 +400,7 @@ export function DayPredictions({
                   {meeting.races.map((race, index) => (
                     <CompactRaceRow
                       key={race.time}
-                      isToday={isToday}
+                      isTodayOrPast={isTodayOrPast}
                       index={index}
                       race={race}
                       meeting={meeting}
@@ -524,7 +528,7 @@ export function DayPredictions({
 }
 
 function CompactRaceRow({
-  isToday,
+  isTodayOrPast,
   index,
   race,
   meeting,
@@ -543,6 +547,16 @@ function CompactRaceRow({
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
 }) {
+  console.log("CompactRaceRow", {
+    isTodayOrPast,
+    index,
+    race,
+    meeting,
+    results,
+    tips,
+    gytoTips,
+    napsTableTips,
+  });
   // Add helper function to normalize time format
   //console.log("tips", tips);
   //console.log("napsTableTips", napsTableTips);
@@ -826,7 +840,7 @@ function CompactRaceRow({
 
       <div
         className={`w-full flex-1 grid ${
-          isToday ? "grid-cols-7" : "grid-cols-5"
+          isTodayOrPast ? "grid-cols-7" : "grid-cols-5"
         } gap-2 items-baseline text-sm`}
       >
         {topScorer && (
@@ -1012,6 +1026,16 @@ function DetailedRaceRow({
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
 }) {
+  console.log("DetailedRaceRow", {
+    isToday,
+    race,
+    meeting,
+    results,
+    tips,
+    gytoTips,
+    napsTableTips,
+  });
+
   const topScorer = race.horses
     .sort(
       (a, b) =>
