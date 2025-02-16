@@ -1,0 +1,180 @@
+{
+  "date": "2025-02-16",
+  "tips": [
+    {
+      "time": "12:52",
+      "horse": "Winnebago",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "William Munny",
+      "isNap": false
+    },
+    {
+      "time": "13:22",
+      "horse": "Rosenpur",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Bravethewaves",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Cardamon Hill",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Duffys Hodey",
+      "isNap": false
+    },
+    {
+      "time": "12:52",
+      "horse": "Winnebago",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "High Class Hero",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "William Munny",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Gameofinches",
+      "isNap": false
+    },
+    {
+      "time": "13:52",
+      "horse": "Al Waqidi",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Last Kingdom",
+      "isNap": false
+    },
+    {
+      "time": "12:52",
+      "horse": "Winnebago",
+      "isNap": true
+    },
+    {
+      "time": "13:22",
+      "horse": "Rosenpur",
+      "isNap": false
+    },
+    {
+      "time": "13:52",
+      "horse": "Al Waqidi",
+      "isNap": false
+    },
+    {
+      "time": "14:22",
+      "horse": "Frankies Dream",
+      "isNap": false
+    },
+    {
+      "time": "14:52",
+      "horse": "Fact Or Fable",
+      "isNap": false
+    },
+    {
+      "time": "15:22",
+      "horse": "Brinton",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Raintown",
+      "isNap": false
+    },
+    {
+      "time": "16:22",
+      "horse": "Baikal",
+      "isNap": false
+    },
+    {
+      "time": "16:52",
+      "horse": "Sir Laurence Graff",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Stressfree",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Jasmine D'Airy",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Looking Splendid",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Bravethewaves",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Anamanda",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Cardamon Hill",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Heart Above",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Release The Beast",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "High Class Hero",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Bushmans Pass",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "William Munny",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "Last Kingdom",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Duffys Hodey",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Gameofinches",
+      "isNap": false
+    }
+  ]
+}

@@ -19,6 +19,7 @@ interface RoiEntry {
     timeform: RoiSource;
     gyto: RoiSource;
     naps: RoiSource;
+    aiLarge: RoiSource;
   };
 }
 

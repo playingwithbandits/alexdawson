@@ -18,6 +18,7 @@ export interface RoiEntry {
     gyto: RoiSource;
     naps: RoiSource;
     rp: RoiSource;
+    aiLarge: RoiSource;
   };
 }
 

@@ -1,0 +1,235 @@
+{
+  "date": "2025-02-13",
+  "tips": [
+    {
+      "time": "14:40",
+      "horse": "Bucksy Des Epeires",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Tom Doniphon",
+      "isNap": false
+    },
+    {
+      "time": "12:35",
+      "horse": "Karamoja",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Largy Force",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Classic Anthem",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Missile Mac",
+      "isNap": false
+    },
+    {
+      "time": "13:30",
+      "horse": "We Got Your Back",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Bucksy Des Epeires",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Rattling Road",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Tom Doniphon",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Tradecraft",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Switchel",
+      "isNap": false
+    },
+    {
+      "time": "12:35",
+      "horse": "Karamoja",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Saint Le Fort",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Ballybow",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Apologise",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "French Hill",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Bossofthebus",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Luminous Light",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Banprionsa",
+      "isNap": false
+    },
+    {
+      "time": "13:05",
+      "horse": "Carrig Kate",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Green Sky",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Rattling Road",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Galahad Threepwood",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Demoiselle Kap",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Conman John",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "Casa Loupi",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Mount Tempest",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Frenchy Du Large",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Tradecraft",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Classic Anthem",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Tom Doniphon",
+      "isNap": true
+    },
+    {
+      "time": "13:30",
+      "horse": "We Got Your Back",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Hill Of Tara",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Bucksy Des Epeires",
+      "isNap": true
+    },
+    {
+      "time": "15:15",
+      "horse": "Largy Force",
+      "isNap": false
+    },
+    {
+      "time": "15:49",
+      "horse": "Orbys River",
+      "isNap": false
+    },
+    {
+      "time": "16:19",
+      "horse": "Mr Glass",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "The Craftymaster",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Starshot",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Dashing Harry",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Rebel Empire",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "No Release",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Missile Mac",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Magical Treasure",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Switchel",
+      "isNap": false
+    }
+  ]
+}

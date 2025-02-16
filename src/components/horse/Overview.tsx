@@ -12,7 +12,9 @@ type Source =
   | "timeform"
   | "gyto"
   | "naps"
-  | "rp";
+  | "rp"
+  | "aiLarge";
+
 const sourceNames: Record<Source, string> = {
   ai: "AI Picks",
   predictions: "RP Predictor",
@@ -21,6 +23,7 @@ const sourceNames: Record<Source, string> = {
   timeform: "Timeform",
   gyto: "GYTO",
   naps: "Naps Table",
+  aiLarge: "AI Large",
 };
 
 export function Overview() {
@@ -64,23 +67,24 @@ export function Overview() {
     "gyto",
     "naps",
     "rp",
+    "aiLarge",
   ];
   const sourceStats = sources
     .map((source) => {
       const totalStaked = filteredData.reduce(
-        (sum, entry) => sum + entry.sources[source].totalBets,
+        (sum, entry) => sum + (entry.sources[source]?.totalBets || 0),
         0
       );
       const totalReturned = filteredData.reduce(
-        (sum, entry) => sum + entry.sources[source].totalReturns,
+        (sum, entry) => sum + (entry.sources[source]?.totalReturns || 0),
         0
       );
       const totalWins = filteredData.reduce(
-        (sum, entry) => sum + entry.sources[source].wins,
+        (sum, entry) => sum + entry.sources[source]?.wins || 0,
         0
       );
       const totalBets = filteredData.reduce(
-        (sum, entry) => sum + entry.sources[source].total,
+        (sum, entry) => sum + entry.sources[source]?.total || 0,
         0
       );
 
@@ -108,7 +112,7 @@ export function Overview() {
       ...sources.reduce(
         (acc, source) => ({
           ...acc,
-          [source]: entry.sources[source].roi,
+          [source]: entry.sources[source]?.roi || 0,
         }),
         {}
       ),

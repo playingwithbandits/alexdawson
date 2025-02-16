@@ -87,6 +87,52 @@ export function DayPredictions({
     ),
   });
 
+  const aiLargeRoi = calculateROI({
+    meetings,
+    results,
+    picks: meetings
+      ?.flatMap((place) =>
+        place.races?.flatMap((race) => {
+          const topPercentage = race?.horses?.sort(
+            (a, b) =>
+              (b.score?.total?.percentage || 0) -
+              (a.score?.total?.percentage || 0)
+          )?.[0]?.score?.total?.percentage;
+          const fivePercentOffTop = topPercentage
+            ? topPercentage * 0.95
+            : undefined;
+
+          const topScorer = race.horses
+            ?.filter((x) => {
+              const odds = race.bettingForecast?.find(
+                (y) => cleanName(y.horseName) === cleanName(x.name)
+              )?.decimalOdds;
+
+              return (
+                fivePercentOffTop &&
+                x.score?.total?.percentage &&
+                x.score?.total?.percentage >= fivePercentOffTop &&
+                Boolean(odds) &&
+                odds &&
+                odds >= 10
+              );
+            })
+            .sort(
+              (a, b) =>
+                (b.score?.total?.percentage || 0) -
+                (a.score?.total?.percentage || 0)
+            )[0];
+
+          const selection = horseNameToKey(topScorer?.name);
+          return {
+            time: race.time,
+            horse: selection,
+          };
+        })
+      )
+      .filter((x) => Boolean(x.horse)),
+  });
+
   const predictionsRoi = calculateROI({
     meetings,
     results,
@@ -176,6 +222,7 @@ export function DayPredictions({
         gyto: gytoRoi,
         naps: napsRoi,
         rp: rpPicks,
+        aiLarge: aiLargeRoi,
       },
     };
 
@@ -564,11 +611,50 @@ function CompactRaceRow({
   // Get top prediction by score
   //console.log("Getting top scorer for race:", race.time);
 
-  const topScorer = race.horses.sort(
+  const topScorer = race?.horses?.sort(
     (a, b) =>
       (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
   )[0];
-  //console.log("Top scorer:", topScorer?.name);
+
+  const topPercentage = race?.horses?.sort(
+    (a, b) =>
+      (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+  )?.[0]?.score?.total?.percentage;
+  const fivePercentOffTop = topPercentage ? topPercentage * 0.95 : undefined;
+
+  const topScorerLarge = race.horses
+    ?.filter((x) => {
+      const odds = race.bettingForecast?.find(
+        (y) => cleanName(y.horseName) === cleanName(x.name)
+      )?.decimalOdds;
+
+      return (
+        fivePercentOffTop &&
+        x.score?.total?.percentage &&
+        x.score?.total?.percentage >= fivePercentOffTop &&
+        Boolean(odds) &&
+        odds &&
+        odds >= 10
+      );
+    })
+    .sort(
+      (a, b) =>
+        (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+    )[0];
+  // console.log("Top scorer:", topScorer?.name, {
+  //   temp: race.horses
+  //     ?.filter((x) => {
+  //       const odds = race.bettingForecast?.find(
+  //         (y) => cleanName(y.horseName) === cleanName(x.name)
+  //       )?.decimalOdds;
+
+  //       return Boolean(odds) && odds && odds > 10;
+  //     })
+  //     .sort(
+  //       (a, b) =>
+  //         (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+  //     ),
+  // });
 
   // Get top model prediction
   //console.log("Getting model predictions");
@@ -768,6 +854,10 @@ function CompactRaceRow({
     (x) => cleanName(x.horseName) === cleanName(topScorer?.name)
   )?.decimalOdds;
 
+  const topScorerLargeOdds = race.bettingForecast?.find(
+    (x) => cleanName(x.horseName) === cleanName(topScorerLarge?.name)
+  )?.decimalOdds;
+
   const topPredictionOdds = race.bettingForecast?.find(
     (x) => cleanName(x.horseName) === cleanName(topPrediction?.name)
   )?.decimalOdds;
@@ -778,11 +868,17 @@ function CompactRaceRow({
 
   // Get positions and trophies for each pick
   //console.log("Getting positions and trophies");
-  const topScorerPosition = topScorer ? getHorsePosition(topScorer.name) : "";
+  const topScorerPosition = topScorer ? getHorsePosition(topScorer?.name) : "";
   const topScorerTrophy = getTrophy(topScorerPosition);
   const topPredictionPosition = topPrediction
     ? getHorsePosition(topPrediction.name)
     : "";
+
+  const topScorerLargePosition = topScorerLarge
+    ? getHorsePosition(topScorerLarge?.name)
+    : "";
+
+  const topScorerLargeTrophy = getTrophy(topScorerLargePosition);
   const topPredictionTrophy = getTrophy(topPredictionPosition);
   const verdictPosition = verdictPick ? getHorsePosition(verdictPick) : "";
   const verdictTrophy = getTrophy(verdictPosition);
@@ -840,17 +936,17 @@ function CompactRaceRow({
 
       <div
         className={`w-full flex-1 grid ${
-          isTodayOrPast ? "grid-cols-7" : "grid-cols-5"
+          isTodayOrPast ? "grid-cols-8" : "grid-cols-6"
         } gap-2 items-baseline text-sm`}
       >
-        {topScorer && (
-          <div
-            className="flex items-center gap-2"
-            title={"Top Scorer: " + race?.raceComment}
-          >
+        <div
+          className="flex items-center gap-2"
+          title={"Top Scorer: " + race?.raceComment}
+        >
+          {topScorer ? (
             <span
               className={`font-medium ${
-                (topScorer.score?.total?.percentage || 0) >= 50
+                (topScorer.score?.total?.percentage || 0) >= 58
                   ? "text-yellow-400 font-bold"
                   : (topScorer.score?.total?.percentage || 0) < 40
                   ? "text-[#626262]"
@@ -859,7 +955,7 @@ function CompactRaceRow({
             >
               {topScorer.name} {topScorerTrophy}{" "}
               {topScorer.score?.total?.percentage.toFixed(1)}{" "}
-              {(topScorerOdds || 0) >= 6 ? (
+              {(topScorerOdds || 0) >= 0 ? (
                 <span
                   className={(topScorerOdds || 0) >= 6 ? "text-blue-400" : ""}
                 >
@@ -869,8 +965,42 @@ function CompactRaceRow({
                 <></>
               )}
             </span>
-          </div>
-        )}
+          ) : (
+            <>-</>
+          )}
+        </div>
+        <div
+          className="flex items-center gap-2"
+          title={"Top Scorer: " + race?.raceComment}
+        >
+          {topScorerLarge ? (
+            <span
+              className={`font-medium ${
+                (topScorerLarge.score?.total?.percentage || 0) >= 58
+                  ? "text-yellow-400 font-bold"
+                  : (topScorerLarge.score?.total?.percentage || 0) < 40
+                  ? "text-[#626262]"
+                  : "*:"
+              }`}
+            >
+              {topScorerLarge.name} {topScorerLargeTrophy}{" "}
+              {topScorerLarge.score?.total?.percentage.toFixed(1)}{" "}
+              {(topScorerLargeOdds || 0) >= 0 ? (
+                <span
+                  className={
+                    (topScorerLargeOdds || 0) >= 6 ? "text-blue-400" : ""
+                  }
+                >
+                  {topScorerLargeOdds}
+                </span>
+              ) : (
+                <></>
+              )}
+            </span>
+          ) : (
+            <>-</>
+          )}
+        </div>
 
         {topPrediction && (
           <div
