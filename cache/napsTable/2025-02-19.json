@@ -1,0 +1,293 @@
+{
+  "date": "2025-02-19",
+  "tips": [
+    {
+      "time": "18:00",
+      "horse": "Party Bear",
+      "tipster": "Newsboy",
+      "score": "27.7"
+    },
+    {
+      "time": "20:30",
+      "horse": "Ray Gun",
+      "tipster": "Matt Polley",
+      "score": "17.4"
+    },
+    {
+      "time": "16:10",
+      "horse": "Balkardy",
+      "tipster": "Farringdon",
+      "score": "9.8"
+    },
+    {
+      "time": "16:33",
+      "horse": "Maxiboy Dagrostis",
+      "tipster": "RP Ratings",
+      "score": "8.1"
+    },
+    {
+      "time": "15:20",
+      "horse": "Farmer Jimmy",
+      "tipster": "Rob Wright",
+      "score": "7.5"
+    },
+    {
+      "time": "17:13",
+      "horse": "Midnight Ginger",
+      "tipster": "Melissa Jones",
+      "score": "6.4"
+    },
+    {
+      "time": "15:58",
+      "horse": "Dusautior",
+      "tipster": "Steve Mullington",
+      "score": "5.6"
+    },
+    {
+      "time": "15:35",
+      "horse": "Rascal",
+      "tipster": "The Punt",
+      "score": "4.3"
+    },
+    {
+      "time": "20:00",
+      "horse": "Cracking Gold",
+      "tipster": "Garry Owen",
+      "score": "1.6"
+    },
+    {
+      "time": "20:00",
+      "horse": "Sterling Knight",
+      "tipster": "Sam Hardy",
+      "score": "1.0"
+    },
+    {
+      "time": "19:30",
+      "horse": "G'Daay",
+      "tipster": "Jim Delahunt",
+      "score": "1.0"
+    },
+    {
+      "time": "15:05",
+      "horse": "Regal Renaissance",
+      "tipster": "Luke Tucker",
+      "score": "0.9"
+    },
+    {
+      "time": "15:20",
+      "horse": "Jukebox Fury",
+      "tipster": "Rory Paddock",
+      "score": "0.7"
+    },
+    {
+      "time": "16:33",
+      "horse": "Gwennie May Star",
+      "tipster": "Lee Sobot",
+      "score": "-2.2"
+    },
+    {
+      "time": "20:30",
+      "horse": "Sydney Whistler",
+      "tipster": "The Brigadier",
+      "score": "-2.7"
+    },
+    {
+      "time": "16:10",
+      "horse": "Kelce",
+      "tipster": "The Score",
+      "score": "-3.2"
+    },
+    {
+      "time": "15:35",
+      "horse": "Moon Chime",
+      "tipster": "West Country",
+      "score": "-4.3"
+    },
+    {
+      "time": "14:15",
+      "horse": "Queens Wish",
+      "tipster": "Glendale",
+      "score": "-9.0"
+    },
+    {
+      "time": "15:05",
+      "horse": "Sacre Coeur",
+      "tipster": "Ian Gaughran",
+      "score": "-9.9"
+    },
+    {
+      "time": "17:13",
+      "horse": "Super Sabre Sam",
+      "tipster": "Ben Morgan",
+      "score": "-9.3"
+    },
+    {
+      "time": "16:25",
+      "horse": "Phoenix Star",
+      "tipster": "Chris Connolly",
+      "score": "-9.8"
+    },
+    {
+      "time": "16:10",
+      "horse": "Kelce",
+      "tipster": "Robin Goodfellow",
+      "score": "-10.0"
+    },
+    {
+      "time": "20:00",
+      "horse": "Brasil Power",
+      "tipster": "Lawrence Taylor",
+      "score": "-11.2"
+    },
+    {
+      "time": "15:58",
+      "horse": "Fairlawn Flyer",
+      "tipster": "Karl Hedley",
+      "score": "-13.9"
+    },
+    {
+      "time": "16:10",
+      "horse": "Ballycamus",
+      "tipster": "Dean Kilbryde",
+      "score": "-14.3"
+    },
+    {
+      "time": "18:00",
+      "horse": "Party Bear",
+      "tipster": "Templegate",
+      "score": "-14.8"
+    },
+    {
+      "time": "17:13",
+      "horse": "Whatsupwithyou",
+      "tipster": "Postdata",
+      "score": "-14.9"
+    },
+    {
+      "time": "18:00",
+      "horse": "Cosmic Force",
+      "tipster": "Marlborough",
+      "score": "-15.5"
+    },
+    {
+      "time": "18:00",
+      "horse": "Party Bear",
+      "tipster": "The North",
+      "score": "-17.2"
+    },
+    {
+      "time": "16:33",
+      "horse": "Gwennie May Star",
+      "tipster": "Jason Heavey",
+      "score": "-17.2"
+    },
+    {
+      "time": "20:00",
+      "horse": "Brasil Power",
+      "tipster": "The Judge",
+      "score": "-19.0"
+    },
+    {
+      "time": "16:43",
+      "horse": "Dunstall Rambler",
+      "tipster": "Whistler",
+      "score": "-21.0"
+    },
+    {
+      "time": "14:15",
+      "horse": "Queens Wish",
+      "tipster": "Mercury",
+      "score": "-24.3"
+    },
+    {
+      "time": "20:00",
+      "horse": "Local Hero",
+      "tipster": "Spotlight",
+      "score": "-23.5"
+    },
+    {
+      "time": "16:55",
+      "horse": "Man On A Mission",
+      "tipster": "The Duke",
+      "score": "-24.8"
+    },
+    {
+      "time": "19:30",
+      "horse": "Grenham Bay",
+      "tipster": "Rockavon",
+      "score": "-25.7"
+    },
+    {
+      "time": "16:43",
+      "horse": "Electric Jet",
+      "tipster": "Tipman Tips",
+      "score": "-27.8"
+    },
+    {
+      "time": "15:35",
+      "horse": "Continuance",
+      "tipster": "Computeform",
+      "score": "-29.1"
+    },
+    {
+      "time": "14:50",
+      "horse": "Tommy Cullen",
+      "tipster": "On The Nose",
+      "score": "-29.9"
+    },
+    {
+      "time": "16:10",
+      "horse": "Back On The Lash",
+      "tipster": "Ross Shepherd",
+      "score": "-33.7"
+    },
+    {
+      "time": "14:50",
+      "horse": "Snowy Clouds",
+      "tipster": "Rory Delargy",
+      "score": "-34.6"
+    },
+    {
+      "time": "14:00",
+      "horse": "Welcheston Warrier",
+      "tipster": "Jeffrey Ross",
+      "score": "-36.9"
+    },
+    {
+      "time": "14:30",
+      "horse": "Keel Strand",
+      "tipster": "Fortunatus",
+      "score": "-39.0"
+    },
+    {
+      "time": "15:05",
+      "horse": "Sacre Coeur",
+      "tipster": "Brian Flanagan",
+      "score": "-42.9"
+    },
+    {
+      "time": "15:20",
+      "horse": "Skin Full",
+      "tipster": "Moorestyle",
+      "score": "-46.2"
+    },
+    {
+      "time": "20:30",
+      "horse": "Sydney Whistler",
+      "tipster": "Lambourn",
+      "score": "-54.7"
+    },
+    {
+      "time": "15:20",
+      "horse": "Ca Plane Pour Moi",
+      "tipster": "Adrian Wall",
+      "score": "-56.4"
+    },
+    {
+      "time": "15:20",
+      "horse": "Farmer Jimmy",
+      "tipster": "Chris Wright",
+      "score": "-58.2"
+    }
+  ]
+}

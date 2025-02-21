@@ -1,0 +1,255 @@
+{
+  "date": "2025-02-21",
+  "tips": [
+    {
+      "time": "15:00",
+      "horse": "La Malmason",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Casa Loupi",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Keppel Queen",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Stans The Man",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Portoro",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Ranko Express",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Deafening Silence",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "La Malmason",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Casa Loupi",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Java Raja",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Liam Swagger",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Casi Crudo",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Shuil Ceoil",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Deafening Silence",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Keppel Queen",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Demnat",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Casi Crudo",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Casa Loupi",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "The Midwife",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Claim Du Brizais",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Whimsy",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Runcok",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Familiar Dreams",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Mayo Shirocco",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Lucky Viv",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "One And Only",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Mighty Soldier",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Lord Tobin",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Stans The Man",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "La Malmason",
+      "isNap": true
+    },
+    {
+      "time": "15:30",
+      "horse": "Inis Oirr",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Shantwopointfive",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Shuil Ceoil",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "The Blue Room",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Hammer The Hammer",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Java Raja",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Liam Swagger",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Many A Star",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Fistral Beach",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Portoro",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Mickey Mongoose",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Tortured Soul",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Sporting Hero",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Winsome",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Clonmacash",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "California Dreamer",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Perfect Judgement",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Ranko Express",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Spicy Margarita",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Aird",
+      "isNap": false
+    }
+  ]
+}

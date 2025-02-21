@@ -1,0 +1,165 @@
+{
+  "date": "2025-02-19",
+  "tips": [
+    {
+      "time": "14:15",
+      "horse": "Queens Wish",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Kelce",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Farmer Jimmy",
+      "isNap": false
+    },
+    {
+      "time": "17:13",
+      "horse": "Saunton Surf",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Grenham Bay",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Cracking Gold",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "No Questions Asked",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Queens Wish",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Kelce",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Rajwa",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Papa Oscar",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "God'S Own Getaway",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Man On A Mission",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "No Questions Asked",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Pike Road",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Game On For Glory",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Kelce",
+      "isNap": true
+    },
+    {
+      "time": "16:43",
+      "horse": "Dunstall Rambler",
+      "isNap": false
+    },
+    {
+      "time": "17:13",
+      "horse": "Saunton Surf",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Queens Wish",
+      "isNap": true
+    },
+    {
+      "time": "14:50",
+      "horse": "God'S Own Getaway",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Farmer Jimmy",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Fairlawn Flyer",
+      "isNap": false
+    },
+    {
+      "time": "17:03",
+      "horse": "Pilgrims King",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Smasher",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Man On A Mission",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Rajwa",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Papa Oscar",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Amber Honey",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Grenham Bay",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Cracking Gold",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Sydney Whistler",
+      "isNap": false
+    }
+  ]
+}

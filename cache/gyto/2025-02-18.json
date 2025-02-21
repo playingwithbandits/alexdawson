@@ -1,0 +1,160 @@
+{
+  "date": "2025-02-18",
+  "tips": [
+    {
+      "time": "15:20",
+      "horse": "Miss Cynthia",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Camulus",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Ask Me Another",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Maximum Offers",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Geordie Night",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Mamdoh",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Wallquatari",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Miss Cynthia",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Camulus",
+      "isNap": false
+    },
+    {
+      "time": "16:27",
+      "horse": "Onesoc",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Groom De Cotte",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Royal Accord",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Wallquatari",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Bluey",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Groom De Cotte",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Miss Cynthia",
+      "isNap": true
+    },
+    {
+      "time": "15:52",
+      "horse": "Geordie Night",
+      "isNap": false
+    },
+    {
+      "time": "16:27",
+      "horse": "Onesoc",
+      "isNap": false
+    },
+    {
+      "time": "17:02",
+      "horse": "Forward Thinking",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Ask Me Another",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Zaochen Enki",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Maximum Offers",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Camulus",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Shearer",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Wonderbolt",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Watkins",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Royal Accord",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Corsican Caper",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Mamdoh",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Match Anthem",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "High Court Judge",
+      "isNap": false
+    }
+  ]
+}
