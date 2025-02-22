@@ -1,0 +1,275 @@
+{
+  "date": "2025-02-22",
+  "tips": [
+    {
+      "time": "13:50",
+      "horse": "Rubaud",
+      "isNap": false
+    },
+    {
+      "time": "15:07",
+      "horse": "Javert Allen",
+      "isNap": false
+    },
+    {
+      "time": "14:32",
+      "horse": "Guard The Moon",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Diligent Harry",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Genois",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Drifts Away",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Rubaud",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Mondo Man",
+      "isNap": false
+    },
+    {
+      "time": "15:07",
+      "horse": "Javert Allen",
+      "isNap": false
+    },
+    {
+      "time": "16:17",
+      "horse": "C'Est Different",
+      "isNap": false
+    },
+    {
+      "time": "13:15",
+      "horse": "Doyen Quest",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Feel The Need",
+      "isNap": false
+    },
+    {
+      "time": "13:05",
+      "horse": "De Temps En Temps",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Janes Harbour",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Dancing Jeremy",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Leah'S Contessa",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "I Am Maximus",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Jasmin De Cotte",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Bioluminescence",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Eachtotheirown",
+      "isNap": false
+    },
+    {
+      "time": "13:15",
+      "horse": "Doyen Quest",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Rubaud",
+      "isNap": true
+    },
+    {
+      "time": "14:25",
+      "horse": "Mondo Man",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Lowry'S Bar",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Blow Your Wad",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "One Knight",
+      "isNap": false
+    },
+    {
+      "time": "13:25",
+      "horse": "Kapal Layar",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Royal Jewel",
+      "isNap": false
+    },
+    {
+      "time": "14:32",
+      "horse": "Guard The Moon",
+      "isNap": false
+    },
+    {
+      "time": "15:07",
+      "horse": "Javert Allen",
+      "isNap": true
+    },
+    {
+      "time": "16:17",
+      "horse": "C'Est Different",
+      "isNap": false
+    },
+    {
+      "time": "16:52",
+      "horse": "Just Golden",
+      "isNap": false
+    },
+    {
+      "time": "13:35",
+      "horse": "Surrey Belle",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Passing Well",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "He'S Bresilian",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Genois",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Horn Cape",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Caldwell",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Mister Smarty",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Diligent Harry",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Royal Champion",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Feel The Need",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "So Quiet",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Alrazeen",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Redhot Whisper",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Eligible",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Master Of Combat",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Scattering Light",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Drifts Away",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Combustion",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Dicko The Legend",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Monsieur Beaulieu",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Elterwater",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Dash Power",
+      "isNap": false
+    }
+  ]
+}
