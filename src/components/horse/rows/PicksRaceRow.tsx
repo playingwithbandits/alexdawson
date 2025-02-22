@@ -141,6 +141,14 @@ export function PicksRaceRow({
     }, [])
     .sort((a, b) => b[1] - a[1]);
 
+  const nameCountsWithPerc: [string, number, number][] = nameCounts?.map(
+    ([name, count]) => [
+      name,
+      count,
+      Math.round((count / allNames.length) * 100),
+    ]
+  );
+
   return (
     <div
       className={`flex justify-between p-1 rounded ${
@@ -264,20 +272,24 @@ export function PicksRaceRow({
           ))}
         </div>
         <div className="flex flex-col gap-2">
-          {nameCounts?.map((x, x_i) => (
-            <HorseNameRow
-              key={race.time + x_i}
-              horseName={x[0] || ""}
-              results={results}
-              time={race.time}
-              odds={
-                race.bettingForecast?.find(
-                  (y) => cleanName(y.horseName) === cleanName(x[0] || "")
-                )?.decimalOdds || 0
-              }
-              extraText={" : " + x[1]}
-            />
-          ))}
+          {nameCountsWithPerc?.map((x, x_i) => {
+            const odds =
+              race.bettingForecast?.find(
+                (y) => cleanName(y.horseName) === cleanName(x[0] || "")
+              )?.decimalOdds || 0;
+            return (
+              <HorseNameRow
+                key={race.time + x_i}
+                horseName={x[0] || ""}
+                results={results}
+                time={race.time}
+                odds={odds}
+                extraText={" : " + x[1] + " (" + x[2] + "%)"}
+                highlight={x[2] >= 50}
+                greyedOut={x[2] < 30}
+              />
+            );
+          })}
         </div>
       </div>
     </div>
@@ -328,6 +340,7 @@ function HorseNameRow({
   time,
   highlight,
   extraText,
+  greyedOut,
 }: {
   horseName: string;
   results: RaceResults | undefined;
@@ -335,12 +348,13 @@ function HorseNameRow({
   odds: number;
   highlight?: boolean;
   extraText?: string;
+  greyedOut?: boolean;
 }) {
   return (
     <span
       className={`flex items-center justify-between gap-2 ${
         highlight ? "text-yellow-400 font-bold" : ""
-      }`}
+      } ${greyedOut ? "text-gray-500" : ""}`}
     >
       <span>
         {getTrophy(getHorsePosition(horseName, results, time))}
