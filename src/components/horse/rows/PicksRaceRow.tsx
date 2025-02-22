@@ -153,7 +153,7 @@ export function PicksRaceRow({
 
       <div
         className={`w-full flex-1 grid ${
-          isTodayOrPast ? "grid-cols-8" : "grid-cols-7"
+          isTodayOrPast ? "grid-cols-8" : "grid-cols-8"
         } gap-2 items-baseline text-sm`}
       >
         <div className="flex flex-col gap-2">
