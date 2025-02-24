@@ -2,7 +2,6 @@ import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateImprovementScore({
   horse,
-  race,
 }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 3;

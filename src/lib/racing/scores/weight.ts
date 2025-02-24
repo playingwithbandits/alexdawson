@@ -1,12 +1,7 @@
 import { avg } from "@/lib/utils";
 import { ScoreComponent, ScoreParams } from "./types";
 
-export function calculateWeightScore({
-  horse,
-  race,
-  raceStats,
-  meetingDetails,
-}: ScoreParams): ScoreComponent {
+export function calculateWeightScore({ horse }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 1;
 

@@ -2,9 +2,7 @@ import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateWeightTrendScore({
   horse,
-  race,
   raceStats,
-  meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 3;

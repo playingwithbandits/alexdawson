@@ -438,7 +438,7 @@ function calculateDistancePerformance(form: FormObj["form"]) {
 
   form?.forEach((race) => {
     const distance = race.distanceFurlong || 0;
-    for (const [key, range] of Object.entries(categories)) {
+    for (const [, range] of Object.entries(categories)) {
       if (distance > range.min && distance <= range.max) {
         range.runs++;
         if (race.raceOutcomeCode === "1") range.wins++;

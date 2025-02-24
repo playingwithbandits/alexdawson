@@ -22,7 +22,6 @@ function calculateDistance(
 
 export function calculateTravelDistanceScore({
   horse,
-  race,
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;

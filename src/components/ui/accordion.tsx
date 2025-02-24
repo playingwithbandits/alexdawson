@@ -10,7 +10,6 @@ export function Accordion({ children }: AccordionProps) {
 
 export function AccordionItem({
   children,
-  value,
 }: {
   children: React.ReactNode;
   value: string;

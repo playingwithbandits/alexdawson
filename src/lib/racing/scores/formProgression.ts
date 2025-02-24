@@ -2,9 +2,6 @@ import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateFormProgressionScore({
   horse,
-  race,
-  raceStats,
-  meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 2;

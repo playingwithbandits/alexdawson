@@ -2,7 +2,6 @@ import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateCompetitivenessScore({
   horse,
-  race,
   raceStats,
 }: ScoreParams): ScoreComponent {
   let score = 0;

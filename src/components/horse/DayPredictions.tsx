@@ -517,7 +517,7 @@ export function DayPredictions({
 
     const tempObj = {} as Record<keyof HorseScore["components"], number>;
 
-    Object.entries(RACING_SCORE_WEIGHTS).forEach(([key, value]) => {
+    Object.entries(RACING_SCORE_WEIGHTS).forEach(([key]) => {
       tempObj[key as keyof HorseScore["components"]] = parseFloat(
         (
           avg(
@@ -533,7 +533,7 @@ export function DayPredictions({
     console.log(
       "SORT THIS OUT!:",
       tempObj,
-      Object.entries(tempObj).filter(([key, value]) => value < 0.2)
+      Object.entries(tempObj).filter(([, value]) => value < 0.2)
     );
 
     return (

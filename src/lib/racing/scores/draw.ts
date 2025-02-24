@@ -1,11 +1,8 @@
-import { DrawBiasResult } from "../calculateDrawBias";
 import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateDrawScore({
   horse,
   race,
-  raceStats,
-  meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 3;

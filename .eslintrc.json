@@ -1,0 +1,32 @@
+{
+  "extends": "next/core-web-vitals",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "args": "none"
+      }
+    ],
+    "no-unused-vars": "off",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/lib/racing/scores/*.ts",
+        "src/app/api/racing/**/*.ts",
+        "src/components/horse/**/*.tsx",
+        "src/components/ui/**/*.tsx",
+        "src/lib/racing/**/*.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "no-unused-vars": "off"
+      }
+    }
+  ]
+}

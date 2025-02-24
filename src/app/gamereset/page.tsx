@@ -12,7 +12,7 @@ export default function GameReset() {
     resetGame();
     // Redirect back to the game page
     router.push("/game");
-  }, []);
+  }, [resetGame, router]);
 
   return (
     <div>

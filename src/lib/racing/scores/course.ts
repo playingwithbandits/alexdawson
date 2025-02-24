@@ -2,8 +2,6 @@ import { ScoreComponent, ScoreParams } from "./types";
 
 export function calculateCourseScore({
   horse,
-  race,
-  raceStats,
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;

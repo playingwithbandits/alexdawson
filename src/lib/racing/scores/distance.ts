@@ -5,7 +5,6 @@ export function calculateDistanceScore({
   horse,
   race,
   raceStats,
-  meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 7;

@@ -1,11 +1,6 @@
 import { ScoreComponent, ScoreParams } from "./types";
 
-export function calculateMarketScore({
-  horse,
-  race,
-  raceStats,
-  meetingDetails,
-}: ScoreParams): ScoreComponent {
+export function calculateMarketScore({ horse }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 3;
 

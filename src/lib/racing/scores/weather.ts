@@ -4,7 +4,6 @@ import { ScoreComponent, ScoreParams } from "./types";
 export function calculateWeatherScore({
   horse,
   race,
-  meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 3;

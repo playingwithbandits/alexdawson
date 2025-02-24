@@ -4,7 +4,6 @@ import { ScoreComponent, ScoreParams } from "./types";
 export function calculateFormScore({
   horse,
   race,
-  raceStats,
   meetingDetails,
 }: ScoreParams): ScoreComponent {
   let score = 0;

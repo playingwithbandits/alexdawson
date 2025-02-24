@@ -1,12 +1,7 @@
 import { calculateDaysOff } from "./funcs";
 import { ScoreComponent, ScoreParams } from "./types";
 
-export function calculateLayoffScore({
-  horse,
-  race,
-  raceStats,
-  meetingDetails,
-}: ScoreParams): ScoreComponent {
+export function calculateLayoffScore({ horse }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 7;
 

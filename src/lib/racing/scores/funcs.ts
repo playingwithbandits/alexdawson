@@ -96,8 +96,6 @@ export function getRaceType(formRaceCode: string | undefined) {
   }
 }
 
-const badResultCodes = ["NR", "VOI", "RR", "WDU", "REF"];
-
 export function isValidOutcome(raceOutcomeCode: string | undefined): boolean {
   if (!raceOutcomeCode) return false;
 

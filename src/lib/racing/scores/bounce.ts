@@ -1,9 +1,6 @@
 import { ScoreComponent, ScoreParams } from "./types";
 
-export function calculateBounceScore({
-  horse,
-  race,
-}: ScoreParams): ScoreComponent {
+export function calculateBounceScore({ horse }: ScoreParams): ScoreComponent {
   let score = 0;
   const maxScore = 3;
 
