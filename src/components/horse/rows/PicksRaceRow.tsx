@@ -46,13 +46,13 @@ export function PicksRaceRow({
     (a, b) =>
       (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
   )?.[0]?.score?.total?.percentage;
-  const fivePercentOffTop = topPercentage ? topPercentage * 0.95 : 100;
+  const fivePercentOffTop = topPercentage ? topPercentage * 0.9 : 100;
 
   const aiTopPicks = race?.horses?.filter(
     (x) =>
       x.score?.total?.percentage &&
       x.score?.total?.percentage >= fivePercentOffTop &&
-      x.score?.total?.percentage >= 50
+      x.score?.total?.percentage >= 45
   );
 
   const rpPredictions = Object.values(race.predictions || {}).sort(
@@ -60,12 +60,10 @@ export function PicksRaceRow({
   );
 
   const topRpPredictions = rpPredictions?.filter(
-    (x) => x.score && x.score >= 95
+    (x) => x.score && x.score >= 90
   );
 
   const rpVerdictPick = race.raceExtraInfo?.verdict?.selection;
-  const rpVerdictPickIsNap = race.raceExtraInfo?.verdict?.isNap;
-  //console.log("Verdict pick:", verdictPick, "Is nap:", isNap);
 
   // Get ATR tip for this race
   //console.log("Getting ATR tip");
@@ -88,6 +86,7 @@ export function PicksRaceRow({
   const napsTableTipSelections = napsTableTips?.filter(
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
   );
+  //?.filter((x) => x.score && parseFloat(x.score) > -15);
   //console.log("Naps Table tip selections:", napsTableTipSelections);
 
   const napsTableTipSelectionsScoreSorted = napsTableTipSelections?.sort(
@@ -127,26 +126,60 @@ export function PicksRaceRow({
     allNames
   );
 
-  const nameCounts = allNames
-    .reduce<[string, number][]>((acc, name) => {
+  // Create weighted scores for each source
+  const weightedScores = [
+    ...(aiTopPicks?.map(
+      (x, i) => [x.name, 0.5 / Math.pow(2, i)] as [string, number]
+    ) || []),
+    ...(topRpPredictions?.map(
+      (x, i) => [x.name, 0.5 / Math.pow(2, i)] as [string, number]
+    ) || []),
+    ...(rpVerdictPick ? [[rpVerdictPick, 0.5]] : []),
+    ...(atrTipSelections?.map(
+      (x, i) => [x.horse, 0.5 / Math.pow(2, i)] as [string, number]
+    ) || []),
+    ...(timeformTipSelections?.map(
+      (x, i) => [x.horse, 0.5 / Math.pow(2, i)] as [string, number]
+    ) || []),
+    ...(gytoTipSelectionObj ? [[gytoTipSelectionObj.horse, 0.5]] : []),
+    ...(napsTableTipSelectionsScoreSorted?.map(
+      (x, i) => [x.horse, 0.5 / Math.pow(2, i)] as [string, number]
+    ) || []),
+  ];
+
+  const nameCounts = weightedScores
+    .reduce<[string, number][]>((acc, [name, score]) => {
       const existing = acc.find(
-        ([existingName]) => cleanName(existingName) === cleanName(name)
-      );
+        ([existingName]) =>
+          cleanName(existingName as string) === cleanName(name as string)
+      ) as [string, number] | undefined;
       if (existing) {
-        existing[1]++;
+        existing[1] += Number(score);
       } else {
-        acc.push([name, 1]);
+        acc.push([name as string, Number(score)]);
       }
       return acc;
     }, [])
     .sort((a, b) => b[1] - a[1]);
 
+  const totalWeightedScore = weightedScores.reduce(
+    (acc, [, score]) => acc + Number(score),
+    0
+  );
+
   const nameCountsWithPerc: [string, number, number][] = nameCounts?.map(
     ([name, count]) => [
       name,
       count,
-      Math.round((count / allNames.length) * 100),
+      Math.round((count / totalWeightedScore) * 100),
     ]
+  );
+
+  console.log(
+    "Name counts with perc:",
+    nameCountsWithPerc,
+    nameCounts,
+    weightedScores
   );
 
   return (
@@ -160,11 +193,9 @@ export function PicksRaceRow({
       </div>
 
       <div
-        className={`w-full flex-1 grid ${
-          isTodayOrPast ? "grid-cols-8" : "grid-cols-8"
-        } gap-2 items-baseline text-sm`}
+        className={`w-full flex-1 grid ${"grid-cols-1"} gap-2 items-baseline text-sm`}
       >
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           {aiTopPicks?.map((x, x_i) => (
             <HorseNameRow
               key={race.time + x_i}
@@ -270,7 +301,7 @@ export function PicksRaceRow({
               }
             />
           ))}
-        </div>
+        </div> */}
         <div className="flex flex-col gap-2">
           {nameCountsWithPerc?.map((x, x_i) => {
             const odds =
@@ -284,9 +315,9 @@ export function PicksRaceRow({
                 results={results}
                 time={race.time}
                 odds={odds}
-                extraText={" : " + x[1] + " (" + x[2] + "%)"}
-                highlight={x[2] >= 50}
-                greyedOut={x[2] < 30}
+                extraText={x[1].toFixed(2) + " (" + x[2] + "%)"}
+                highlight={x[2] >= 33}
+                greyedOut={x[1] < 1}
               />
             );
           })}
@@ -359,9 +390,11 @@ function HorseNameRow({
       <span>
         {getTrophy(getHorsePosition(horseName, results, time))}
         {horseName}
-        {extraText}
       </span>
-      <span>{odds}</span>
+      <span className="flex gap-2">
+        <span>{extraText}</span>
+        <span>{odds}</span>
+      </span>
     </span>
   );
 }
