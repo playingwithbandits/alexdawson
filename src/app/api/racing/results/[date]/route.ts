@@ -159,6 +159,7 @@ export async function GET(
 
       //console.log(`Successfully parsed ${results.results.length} races`);
       return NextResponse.json(results);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       // If file doesn't exist, create an empty one
       //console.log("No results file found, creating empty file");
