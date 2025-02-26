@@ -1,0 +1,150 @@
+{
+  "date": "2025-02-25",
+  "tips": [
+    {
+      "time": "14:45",
+      "horse": "Jumper Madrik",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Not Staying Long",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Quian",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Diamond Dice",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Harlington",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Charlatan",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "River Run Free",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Jumper Madrik",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Beat The Edge",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Not Staying Long",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "The Last Cloud",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Star Time",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "River Run Free",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Jumper Madrik",
+      "isNap": true
+    },
+    {
+      "time": "15:45",
+      "horse": "Diamond Dice",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Pyleigh Court",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Gracchus De Balme",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Quian",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Beat The Edge",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "The Last Cloud",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Not Staying Long",
+      "isNap": true
+    },
+    {
+      "time": "16:30",
+      "horse": "One More Stroke",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Khangai",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Harlington",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Runaround Sioux",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Under Curfew",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Charlatan",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Star Time",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Henery Hawk",
+      "isNap": false
+    }
+  ]
+}

@@ -316,7 +316,7 @@ export function PicksRaceRow({
                 time={race.time}
                 odds={odds}
                 extraText={x[1].toFixed(2) + " (" + x[2] + "%)"}
-                highlight={x[2] >= 33}
+                highlight={x[2] >= 50}
                 greyedOut={x[1] < 1}
               />
             );
