@@ -11,6 +11,7 @@ export async function GET(
     const filePath = join(process.cwd(), "cache", "racing", `${date}.json`);
     const fileContents = await readFile(filePath, "utf8");
     return NextResponse.json(JSON.parse(fileContents));
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return new Response("Not found", { status: 404 });
   }

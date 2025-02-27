@@ -151,7 +151,7 @@ export function PicksRaceRow({
       ? [[gytoTipSelectionObj?.horse, gytoTipSelectionIsNap ? 0.75 : 0.5]]
       : []),
     ...(napsTableTipSelectionsScoreSorted?.map(
-      (x, i) => [x.horse, 0.5] as [string, number]
+      (x) => [x.horse, 0.5] as [string, number]
     ) || []),
   ];
 

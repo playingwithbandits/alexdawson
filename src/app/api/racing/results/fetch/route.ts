@@ -14,7 +14,7 @@ async function ensureDirectoryExists(dir: string) {
   }
 }
 
-function canFetchResults(date: string, earliestTime?: string): boolean {
+function canFetchResults(date: string): boolean {
   //console.log(
   //   `Checking if results can be fetched for date: ${date}, earliest race: ${earliestTime}`
   // );
@@ -51,7 +51,6 @@ export async function GET(request: NextRequest) {
     const date = await Promise.resolve(
       request.nextUrl.searchParams.get("date")
     );
-    const earliestTime = request.nextUrl.searchParams.get("earliestTime");
 
     if (!date) {
       //console.log("No date provided in request");
@@ -60,7 +59,7 @@ export async function GET(request: NextRequest) {
 
     //console.log(`Attempting to fetch results for date: ${date}`);
 
-    if (!canFetchResults(date, earliestTime ?? undefined)) {
+    if (!canFetchResults(date)) {
       //console.log("Results cannot be fetched yet");
       return NextResponse.json(
         { error: "Results not yet available" },
