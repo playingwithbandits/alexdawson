@@ -6,11 +6,15 @@ export const metadata: Metadata = {
   description: "AI-powered horse racing predictions",
 };
 
-export default async function HorsePage({
-  params: { date },
-}: {
-  params: { date: string };
-}) {
+interface PageProps {
+  params: {
+    date: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default async function Page({ params }: PageProps) {
+  const date = params.date;
   const validatedDate = await Promise.resolve(date);
   return <HorsePageClient date={validatedDate} />;
 }
