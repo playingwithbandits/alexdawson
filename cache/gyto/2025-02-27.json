@@ -1,0 +1,220 @@
+{
+  "date": "2025-02-27",
+  "tips": [
+    {
+      "time": "15:00",
+      "horse": "Good Friday Fairy",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Komedy Kicks",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Just Ten High",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Felton Bellevue",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Badbury Rings",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Elterwater",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Good Friday Fairy",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Komedy Kicks",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Regalian",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Space Voyage",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Blackcurrent",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "The Spotlight Kid",
+      "isNap": false
+    },
+    {
+      "time": "13:35",
+      "horse": "Rubellite",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Payment Plan",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Just Ten High",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Maharajas Express",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Regalian",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Blackcurrent",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Fast Flo",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Barnaby",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Look To The West",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Maciver",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Robinstown",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Ciao Adios",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "St Cuthbert'S Cave",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Moudan",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Robyndeglory",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Diamonds For Luck",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Good Friday Fairy",
+      "isNap": true
+    },
+    {
+      "time": "15:35",
+      "horse": "Badbury Rings",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Space Voyage",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Blue Carpet",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Walkadina",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Felton Bellevue",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Komedy Kicks",
+      "isNap": true
+    },
+    {
+      "time": "16:20",
+      "horse": "Sacre Coeur",
+      "isNap": false
+    },
+    {
+      "time": "17:23",
+      "horse": "Port Or Starboard",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Crack On Boys",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "The Spotlight Kid",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Southbank",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Smokey Malone",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Elterwater",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Urban Lion",
+      "isNap": false
+    }
+  ]
+}
