@@ -1,0 +1,220 @@
+{
+  "date": "2025-03-01",
+  "tips": [
+    {
+      "time": "15:58",
+      "horse": "Horaces Pearl",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Tribal Act",
+      "isNap": false
+    },
+    {
+      "time": "15:23",
+      "horse": "The Good Doctor",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Puddlesinthepark",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Soames Forsyte",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Dexterity",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Give It To Me Oj",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Horaces Pearl",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Tribal Act",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "The Glen Rovers",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Cliffcake",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Bearaway",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Brazilian Rose",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Good Banter",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Rohaan",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "The Glen Rovers",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Destructive",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Give It To Me Oj",
+      "isNap": false
+    },
+    {
+      "time": "15:23",
+      "horse": "The Good Doctor",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Horaces Pearl",
+      "isNap": true
+    },
+    {
+      "time": "16:33",
+      "horse": "Rath Gaul Hill",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Gamesters Guy",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Dexterity",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "River Voyage",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Puddlesinthepark",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Mumbles",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Leech",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Kosac D'Oudairies",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Harry'S Bar",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "No Return",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Lyle The Crocodile",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Elegant Madame",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Athlumney Warrior",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Dallas Star",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Heather",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Doctor Grace",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Beale Street",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "San Juanito",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Mullwarchar",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Soames Forsyte",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Cliffcake",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Tribal Act",
+      "isNap": true
+    },
+    {
+      "time": "20:15",
+      "horse": "Love Games",
+      "isNap": false
+    }
+  ]
+}

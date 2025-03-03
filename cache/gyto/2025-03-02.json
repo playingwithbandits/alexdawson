@@ -1,0 +1,170 @@
+{
+  "date": "2025-03-02",
+  "tips": [
+    {
+      "time": "13:20",
+      "horse": "Honesty Policy",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "El Rio",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Aviemore",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Fortune The Brave",
+      "isNap": false
+    },
+    {
+      "time": "15:07",
+      "horse": "Shuil Ceoil",
+      "isNap": false
+    },
+    {
+      "time": "15:17",
+      "horse": "Cluain Aodha",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "Honesty Policy",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Nativehill",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Tommy Cullen",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "El Rio",
+      "isNap": false
+    },
+    {
+      "time": "16:02",
+      "horse": "Tyre Kicker",
+      "isNap": false
+    },
+    {
+      "time": "16:27",
+      "horse": "Cracker Star",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "Honesty Policy",
+      "isNap": true
+    },
+    {
+      "time": "13:50",
+      "horse": "Fortune The Brave",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Pied Piper",
+      "isNap": false
+    },
+    {
+      "time": "14:57",
+      "horse": "Cher Tara",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Crescent Moon",
+      "isNap": false
+    },
+    {
+      "time": "16:02",
+      "horse": "Tyre Kicker",
+      "isNap": false
+    },
+    {
+      "time": "16:37",
+      "horse": "Iris Emery",
+      "isNap": false
+    },
+    {
+      "time": "17:12",
+      "horse": "Carrigmoorna Beech",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Aviemore",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Nativehill",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Groom De Cotte",
+      "isNap": false
+    },
+    {
+      "time": "15:17",
+      "horse": "Cluain Aodha",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "El Rio",
+      "isNap": true
+    },
+    {
+      "time": "16:27",
+      "horse": "Cracker Star",
+      "isNap": false
+    },
+    {
+      "time": "17:02",
+      "horse": "Bobajob",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Supervisor",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Tommy Cullen",
+      "isNap": false
+    },
+    {
+      "time": "15:07",
+      "horse": "Shuil Ceoil",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Thank You Ma'Am",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Whoshotthesheriff",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Danger Nap",
+      "isNap": false
+    }
+  ]
+}

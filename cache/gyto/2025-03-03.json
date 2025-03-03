@@ -1,0 +1,195 @@
+{
+  "date": "2025-03-03",
+  "tips": [
+    {
+      "time": "13:50",
+      "horse": "Lawrenny",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "La Pinsonniere",
+      "isNap": false
+    },
+    {
+      "time": "13:00",
+      "horse": "Koktail Divin",
+      "isNap": false
+    },
+    {
+      "time": "14:37",
+      "horse": "Sangiovese",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Bathgate",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Lady Wingalong",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Lawrenny",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Majestic Force",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "La Pinsonniere",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Preanka",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Clonbury Bridge",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Virtual Hug",
+      "isNap": false
+    },
+    {
+      "time": "13:00",
+      "horse": "Koktail Divin",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Goodie Girl",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Money Heist",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Majestic Force",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Clonbury Bridge",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Sugar Cookie",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Lawrenny",
+      "isNap": true
+    },
+    {
+      "time": "14:25",
+      "horse": "On The Go",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "The Dark Edge",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Cave Hill",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Bathgate",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Dartmouth Castle",
+      "isNap": false
+    },
+    {
+      "time": "14:37",
+      "horse": "Sangiovese",
+      "isNap": false
+    },
+    {
+      "time": "15:07",
+      "horse": "Jimmy The Digger",
+      "isNap": false
+    },
+    {
+      "time": "15:42",
+      "horse": "Syllabus",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Ronnies Rules",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "La Pinsonniere",
+      "isNap": true
+    },
+    {
+      "time": "16:25",
+      "horse": "City Escape",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Virtual Hug",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Lednikov",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Preanka",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Lady Wingalong",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Kapparis Kid",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Nordic Glory",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Collusion",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Bernard Spierpoint",
+      "isNap": false
+    }
+  ]
+}
