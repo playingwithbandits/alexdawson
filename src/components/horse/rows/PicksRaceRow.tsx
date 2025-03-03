@@ -14,11 +14,11 @@ interface PicksRaceRowProps {
   index: number;
   race: Race;
   meeting: Meeting;
-
   results: RaceResults | undefined;
   tips: DayTips | null;
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
+  isNonRunner: (time: string, selection: string) => boolean;
 }
 
 export function PicksRaceRow({
@@ -30,6 +30,7 @@ export function PicksRaceRow({
   tips,
   gytoTips,
   napsTableTips,
+  isNonRunner,
 }: PicksRaceRowProps) {
   console.log("CompactRaceRow", {
     isTodayOrPast,
@@ -58,6 +59,11 @@ export function PicksRaceRow({
   const rpPredictions = Object.values(race.predictions || {}).sort(
     (a, b) => (b.score || 0) - (a.score || 0)
   );
+
+  const worseRpPredictionScore = Math.min(
+    ...rpPredictions?.map((x) => x.score || 0)
+  );
+  const rpPredictionScoreGap = 100 - worseRpPredictionScore;
 
   const topRpPredictions = rpPredictions?.filter(
     (x) => x.score && x.score >= 95
@@ -106,7 +112,7 @@ export function PicksRaceRow({
   // Filter out any empty strings or undefined values
   const allNames: string[] = [
     ...aiTopPicks?.map((x) => x.name),
-    ...topRpPredictions?.map((x) => x.name),
+    ...rpPredictions?.map((x) => x.name),
     rpVerdictPick ? rpVerdictPick : "",
     ...(atrTipSelections?.map((x) => x.horse) || []),
     ...(timeformTipSelections?.map((x) => x.horse) || []),
@@ -118,7 +124,7 @@ export function PicksRaceRow({
     "All horse names:",
     {
       "1": aiTopPicks?.map((x) => x.name),
-      "2": topRpPredictions?.map((x) => x.name),
+      "2": rpPredictions?.map((x) => x.name),
       "3": rpVerdictPick ? rpVerdictPick : "",
       "4": atrTipSelections?.map((x) => x.horse) || [],
       "5": timeformTipSelections?.map((x) => x.horse) || [],
@@ -130,14 +136,23 @@ export function PicksRaceRow({
     allNames
   );
 
+  const rpPredictionsWeighted =
+    rpPredictions?.map((x) => {
+      // const scorePercentage =
+      //   ((x.score || 0) - worseRpPredictionScore) / rpPredictionScoreGap;
+
+      const scorePercentage = (x.score || 0) / 100;
+      return [x.name, 0.75 * scorePercentage] as [string, number];
+    }) || [];
+
+  console.log("RP Predictions Weighted:", rpPredictionsWeighted);
+
   // Create weighted scores for each source
   const weightedScores = [
     ...(aiTopPicks?.map(
       (x, i) => [x.name, 0.75 / Math.pow(2, i)] as [string, number]
     ) || []),
-    ...(topRpPredictions?.map(
-      (x, i) => [x.name, 0.5 / Math.pow(2, i)] as [string, number]
-    ) || []),
+    ...rpPredictionsWeighted,
     ...(rpVerdictPick
       ? [[rpVerdictPick, rpVerdictPickIsNap ? 0.75 : 0.5]]
       : []),
@@ -218,11 +233,20 @@ export function PicksRaceRow({
                   (y) => cleanName(y.horseName) === cleanName(x.name)
                 )?.decimalOdds || 0
               }
+              isNonRunner={isNonRunner(race.time, x.name)}
+              greyedOut={false}
+              title={
+                "AI Top Pick: " +
+                x.name +
+                " : " +
+                x.score?.total?.percentage?.toFixed(1) +
+                "%"
+              }
             />
           ))}
         </div>
         <div className="flex flex-col gap-2">
-          {topRpPredictions?.map((x, x_i) => (
+          {rpPredictions?.map((x, x_i) => (
             <HorseNameRow
               key={race.time + x_i}
               horseName={x.name}
@@ -232,6 +256,14 @@ export function PicksRaceRow({
                 race.bettingForecast?.find(
                   (y) => cleanName(y.horseName) === cleanName(x.name)
                 )?.decimalOdds || 0
+              }
+              isNonRunner={isNonRunner(race.time, x.name)}
+              greyedOut={false}
+              title={
+                "RP Prediction: " +
+                rpPredictions
+                  ?.map((x) => x.name + " : " + x.score?.toFixed(1))
+                  ?.join(", ")
               }
             />
           ))}
@@ -249,6 +281,9 @@ export function PicksRaceRow({
                 )?.decimalOdds || 0
               }
               extraText={rpVerdictPickIsNap ? " (NAP)" : ""}
+              isNonRunner={isNonRunner(race.time, x || "")}
+              greyedOut={false}
+              title={"RP Verdict: " + race.raceExtraInfo?.verdict?.comment}
             />
           ))}
         </div>
@@ -264,6 +299,9 @@ export function PicksRaceRow({
                   (y) => cleanName(y.horseName) === cleanName(x.horse || "")
                 )?.decimalOdds || 0
               }
+              isNonRunner={isNonRunner(race.time, x.horse || "")}
+              greyedOut={false}
+              title={"ATR Tip: " + x.horse}
             />
           ))}
         </div>
@@ -279,6 +317,9 @@ export function PicksRaceRow({
                   (y) => cleanName(y.horseName) === cleanName(x.horse || "")
                 )?.decimalOdds || 0
               }
+              isNonRunner={isNonRunner(race.time, x.horse || "")}
+              greyedOut={false}
+              title={"Timeform Tip: " + x.horse}
             />
           ))}
         </div>
@@ -296,6 +337,9 @@ export function PicksRaceRow({
                 )?.decimalOdds || 0
               }
               extraText={gytoTipSelectionIsNap ? " (NAP)" : ""}
+              isNonRunner={isNonRunner(race.time, x?.horse || "")}
+              greyedOut={false}
+              title={"GYTO Tip: " + x?.horse + (x?.isNap ? " (NAP)" : "")}
             />
           ))}
         </div>
@@ -311,26 +355,30 @@ export function PicksRaceRow({
                   (y) => cleanName(y.horseName) === cleanName(x.horse || "")
                 )?.decimalOdds || 0
               }
+              isNonRunner={isNonRunner(race.time, x.horse || "")}
+              greyedOut={false}
+              title={"Naps Table Tip: " + x.horse + " (Score: " + x.score + ")"}
             />
           ))}
         </div>
         <div className="flex flex-col col-span-2 gap-2">
-          {nameCountsWithPerc?.map((x, x_i) => {
+          {nameCountsWithPerc?.map(([name, count, perc], x_i) => {
             const odds =
               race.bettingForecast?.find(
-                (y) => cleanName(y.horseName) === cleanName(x[0] || "")
+                (y) => cleanName(y.horseName) === cleanName(name)
               )?.decimalOdds || 0;
             return (
               <HorseNameRow
                 key={race.time + x_i}
-                horseName={x[0] || ""}
+                horseName={name}
                 results={results}
                 time={race.time}
                 odds={odds}
-                extraText={x[1].toFixed(2) + " (" + x[2] + "%)"}
-                highlight={x[2] >= 50}
-                greyedOut={x[1] <= 1}
-                oddsHighlight={odds >= 8 && x[1] > 1}
+                extraText={`${count.toFixed(1)} : ${perc}%`}
+                oddsHighlight={odds > 8 && count > 1}
+                isNonRunner={isNonRunner(race.time, name)}
+                greyedOut={count <= 1}
+                title={"Name: " + name + " : " + count + " : " + perc + "%"}
               />
             );
           })}
@@ -379,37 +427,40 @@ const getHorsePosition = (
 
 function HorseNameRow({
   horseName,
-  odds,
   results,
   time,
-  highlight,
+  odds,
   extraText,
-  greyedOut,
   oddsHighlight,
+  isNonRunner,
+  greyedOut,
+  title,
 }: {
   horseName: string;
   results: RaceResults | undefined;
   time: string;
   odds: number;
-  highlight?: boolean;
   extraText?: string;
-  greyedOut?: boolean;
   oddsHighlight?: boolean;
+  isNonRunner?: boolean;
+  greyedOut?: boolean;
+  title?: string;
 }) {
   return (
-    <span
-      className={`flex items-center justify-between gap-2 ${
-        highlight ? "text-yellow-400 font-bold" : ""
-      } ${greyedOut ? "text-gray-500" : ""}`}
+    <div
+      className={`flex justify-between ${greyedOut ? "text-gray-500" : ""}`}
+      title={title}
     >
       <span>
         {getTrophy(getHorsePosition(horseName, results, time))}
-        {horseName}
+        <span className={isNonRunner ? "line-through text-red-900" : ""}>
+          {horseName}
+        </span>
       </span>
       <span className="flex gap-2">
         <span>{extraText}</span>
         <span className={oddsHighlight ? "text-[#1EEAFF]" : ""}>{odds}</span>
       </span>
-    </span>
+    </div>
   );
 }

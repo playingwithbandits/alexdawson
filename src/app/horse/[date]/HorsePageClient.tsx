@@ -1,12 +1,16 @@
 "use client";
 
-import { Meeting, DayTips, GytoTips, NapsTableTips } from "@/types/racing";
+import {
+  Meeting,
+  DayTips,
+  GytoTips,
+  NapsTableTips,
+  NonRunnerMeeting,
+} from "@/types/racing";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { DashboardContent } from "../DashboardContent";
-import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { useResults } from "@/hooks/useResults";
-import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 export const UK_COURSES = [
   "ascot",
@@ -76,10 +80,6 @@ export const UK_COURSES = [
   "thurles",
 ];
 
-function getPageUrl(date: string) {
-  return `https://www.racingpost.com/racecards/${date}/`;
-}
-
 export function HorsePageClient({ date }: { date: string }) {
   const [meetings, setMeetings] = useState<Meeting[]>([]);
   const [loading, setLoading] = useState(true);
@@ -89,6 +89,7 @@ export function HorsePageClient({ date }: { date: string }) {
   const [napsTableTips, setNapsTableTips] = useState<NapsTableTips | undefined>(
     undefined
   );
+  const [nonRunners, setNonRunners] = useState<NonRunnerMeeting[]>([]);
   const { data: results, isLoading: resultsLoading } = useResults(date);
 
   useEffect(() => {
@@ -100,16 +101,20 @@ export function HorsePageClient({ date }: { date: string }) {
         const resultsResponse = await fetch(`/api/racing/results/${date}`);
         const resultsData = await resultsResponse.json();
 
-        //console.log("Results data:", resultsData);
         if (
           !resultsData ||
           !resultsData.results ||
           resultsData.results.length === 0
         ) {
-          //console.log("No results found, fetching from Racing Post...");
-          // Fetch and save results HTML
           await fetch(`/api/racing/results/fetch?date=${date}`);
         }
+
+        // Fetch non-runners data
+        const nonRunnersResponse = await fetch(
+          `/api/racing/nonrunners/fetch?date=${date}`
+        );
+        const nonRunnersData = await nonRunnersResponse.json();
+        setNonRunners(nonRunnersData);
 
         // Fetch racing data
         const response = await fetch(`/api/racing?date=${date}`);
@@ -130,82 +135,7 @@ export function HorsePageClient({ date }: { date: string }) {
         const napsData = await napsResponse.json();
         setNapsTableTips(napsData);
 
-        if (!data) {
-          if (!getPageUrl(date) || getPageUrl(date).trim() === "") {
-            console.error("❌ No URL provided");
-            setError("No URL provided");
-            return;
-          }
-
-          //console.log("🔍 Checking cache for date:", date);
-
-          // Try to get cached data from file
-          const cacheResponse = await fetch(`/api/racing?date=${date}`);
-          const cachedData = await cacheResponse.json();
-
-          if (cachedData) {
-            //console.log("Cache hit for:", date);
-            setMeetings(cachedData);
-
-            return;
-          }
-
-          //console.log("❌ No cache found, fetching fresh data");
-
-          const response = await fetch(
-            `/getP.php?q=${encodeURIComponent(getPageUrl(date))}`
-          );
-
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-
-          const html = await response.text();
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const meetingElements = doc.querySelectorAll(
-            ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))"
-          );
-
-          //console.log(`Found ${meetingElements.length} total courses`);
-          const ukElements = Array.from(meetingElements).filter((element) => {
-            const courseName = placeToPlaceKey(
-              element
-                .querySelector(".RC-accordion__courseName")
-                ?.textContent?.toLowerCase()
-                .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
-                .trim() || ""
-            );
-
-            //console.log(`Processing course: ${courseName}`);
-            const ukCourseKeys = UK_COURSES.map((course) =>
-              placeToPlaceKey(course)
-            );
-            const isUkCourse = courseName && ukCourseKeys.includes(courseName);
-            //console.log(`Is UK course: ${isUkCourse}`);
-            return isUkCourse;
-          });
-          //console.log(`Filtered to ${ukElements.length} UK courses`);
-
-          //console.log("🔍 Meeting elements:", ukElements);
-
-          const parsedMeetings = await parseMeetings(Array.from(ukElements));
-          //console.log("✨ Successfully parsed meetings data");
-          //console.log("📝 Saving to cache for date:", date);
-
-          // Save to cache file
-          await fetch(`/api/racing?date=${date}`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(parsedMeetings),
-          });
-          //console.log("💾 Cache saved successfully");
-
-          setMeetings(parsedMeetings);
-        } else {
-          //console.log("📦 Using cached data");
+        if (data) {
           setMeetings(data);
         }
       } catch (err) {
@@ -230,7 +160,7 @@ export function HorsePageClient({ date }: { date: string }) {
   if (error) return <div>Error: {error}</div>;
   if (meetings.length === 0) return <div>Loading...</div>;
 
-  console.log("meetings", meetings);
+  console.log("nonRunners", nonRunners);
   return (
     <DashboardContent
       meetings={meetings}
@@ -239,6 +169,7 @@ export function HorsePageClient({ date }: { date: string }) {
       tips={tips}
       gytoTips={gytoTips?.tips}
       napsTableTips={napsTableTips?.tips}
+      nonRunners={nonRunners}
     />
   );
 }

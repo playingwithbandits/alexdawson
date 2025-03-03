@@ -1,0 +1,245 @@
+[
+  {
+    "courseName": "Dundalk (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-02-28#dundalk-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1138/dundalk-aw/2025-02-28",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Dry",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-02-28/889090",
+        "horses": [
+          {
+            "horseName": "Cooee Call",
+            "horseProfileUrl": "/profile/horse/6889488/cooee-call/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Tommy McJohn",
+            "horseProfileUrl": "/profile/horse/58956110/tommy-mcjohn/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-02-28/889091",
+        "horses": [
+          {
+            "horseName": "Glen Princess",
+            "horseProfileUrl": "/profile/horse/5751524/glen-princess/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-02-28/889092",
+        "horses": [
+          {
+            "horseName": "Widely Acclaimed",
+            "horseProfileUrl": "/profile/horse/7073236/widely-acclaimed/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Percussionist",
+            "horseProfileUrl": "/profile/horse/7055612/percussionist/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Rising Sky",
+            "horseProfileUrl": "/profile/horse/6046656/rising-sky/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-02-28/889095",
+        "horses": [
+          {
+            "horseName": "Vivacious Lady",
+            "horseProfileUrl": "/profile/horse/5218305/vivacious-lady/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Must Be Dreaming",
+            "horseProfileUrl": "/profile/horse/3125443/must-be-dreaming/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-02-28#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-02-28",
+    "going": "HEAVY (4.5)",
+    "weather": "Sunny and dry",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-02-28/887205",
+        "horses": [
+          {
+            "horseName": "Our Flying Angel",
+            "horseProfileUrl": "/profile/horse/4622321/our-flying-angel/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-02-28/887207",
+        "horses": [
+          {
+            "horseName": "Whiskey Yankee",
+            "horseProfileUrl": "/profile/horse/7191408/whiskey-yankee/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-02-28#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-02-28",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Fine",
+    "stallsPosition": "1m - Outside; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-02-28#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-02-28",
+    "going": "SOFT (Heavy in places; Chs 3.1, Hdl 2.8)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:13",
+        "raceCardUrl": "/racecards/36/newbury/2025-02-28/887211",
+        "horses": [
+          {
+            "horseName": "In Limbo",
+            "horseProfileUrl": "/profile/horse/4231723/in-limbo/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/36/newbury/2025-02-28/887209",
+        "horses": [
+          {
+            "horseName": "Champagne Twist",
+            "horseProfileUrl": "/profile/horse/4908763/champagne-twist/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-02-28#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-02-28",
+    "going": "TAPETA: STANDARD",
+    "weather": "",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-02-28/887399",
+        "horses": [
+          {
+            "horseName": "Captain Parma",
+            "horseProfileUrl": "/profile/horse/7191404/captain-parma/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-02-28/887394",
+        "horses": [
+          {
+            "horseName": "Ten Commitments",
+            "horseProfileUrl": "/profile/horse/5048047/ten-commitments/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Three Yorkshiremen",
+            "horseProfileUrl": "/profile/horse/4479500/three-yorkshiremen/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "King David",
+            "horseProfileUrl": "/profile/horse/5172490/king-david/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-02-28/889631",
+        "horses": [
+          {
+            "horseName": "Super Hit",
+            "horseProfileUrl": "/profile/horse/5218435/super-hit/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:15",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-02-28/887400",
+        "horses": [
+          {
+            "horseName": "La Mer Grise",
+            "horseProfileUrl": "/profile/horse/6143210/la-mer-grise/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Abu Dhabi",
+    "raceCardsCourseUrl": "/racecards/2025-02-28#abu-dhabi",
+    "raceCardsCourseMeetingsUrl": "/racecards/490/abu-dhabi/2025-02-28",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/490/abu-dhabi/2025-02-28/889654",
+        "horses": [
+          {
+            "horseName": "Pure Ambition",
+            "horseProfileUrl": "/profile/horse/5574427/pure-ambition/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/490/abu-dhabi/2025-02-28/889655",
+        "horses": [
+          {
+            "horseName": "Nukanan",
+            "horseProfileUrl": "/profile/horse/5237788/nukanan/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  }
+]

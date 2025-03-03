@@ -1,0 +1,253 @@
+[
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-02-27#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-02-27",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-02-27/887377",
+        "horses": [
+          {
+            "horseName": "Capuchinero",
+            "horseProfileUrl": "/profile/horse/3880897/capuchinero/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Sonmarg",
+            "horseProfileUrl": "/profile/horse/5089380/sonmarg/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Just Rita",
+            "horseProfileUrl": "/profile/horse/5048076/just-rita/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-02-27/887378",
+        "horses": [
+          {
+            "horseName": "Madame Fenella",
+            "horseProfileUrl": "/profile/horse/3776075/madame-fenella/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Man On A Mission",
+            "horseProfileUrl": "/profile/horse/3493744/man-on-a-mission/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-02-27/887375",
+        "horses": [
+          {
+            "horseName": "Smith",
+            "horseProfileUrl": "/profile/horse/1860137/smith/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Certain Style",
+            "horseProfileUrl": "/profile/horse/4564401/certain-style/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-02-27/887376",
+        "horses": [
+          {
+            "horseName": "I Can't Believe",
+            "horseProfileUrl": "/profile/horse/5412833/i-cant-believe/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Clonmel",
+    "raceCardsCourseUrl": "/racecards/2025-02-27#clonmel",
+    "raceCardsCourseMeetingsUrl": "/racecards/177/clonmel/2025-02-27",
+    "going": "HEAVY (Soft to heavy in places)",
+    "weather": "Sunny intervals",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/177/clonmel/2025-02-27/888969",
+        "horses": [
+          {
+            "horseName": "Made In The Woods",
+            "horseProfileUrl": "/profile/horse/4027307/made-in-the-woods/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Danny The Fence",
+            "horseProfileUrl": "/profile/horse/4071949/danny-the-fence/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Oneforgonzo",
+            "horseProfileUrl": "/profile/horse/4315482/oneforgonzo/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:25",
+        "raceCardUrl": "/racecards/177/clonmel/2025-02-27/888971",
+        "horses": [
+          {
+            "horseName": "Realtin Lonrach",
+            "horseProfileUrl": "/profile/horse/5554960/realtin-lonrach/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Kp's Ladyofknock",
+            "horseProfileUrl": "/profile/horse/5809859/kps-ladyofknock/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Taketwotoone",
+            "horseProfileUrl": "/profile/horse/5034809/taketwotoone/",
+            "raceNumber": "(19)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/177/clonmel/2025-02-27/888972",
+        "horses": [
+          {
+            "horseName": "She's Got Gears",
+            "horseProfileUrl": "/profile/horse/6604838/shes-got-gears/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/177/clonmel/2025-02-27/888974",
+        "horses": [
+          {
+            "horseName": "Noble Expression",
+            "horseProfileUrl": "/profile/horse/1636586/noble-expression/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "God Help Us",
+            "horseProfileUrl": "/profile/horse/3408336/god-help-us/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Imbolc",
+            "horseProfileUrl": "/profile/horse/4753567/imbolc/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ludlow",
+    "raceCardsCourseUrl": "/racecards/2025-02-27#ludlow",
+    "raceCardsCourseMeetingsUrl": "/racecards/34/ludlow/2025-02-27",
+    "going": "SOFT (4.8)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/34/ludlow/2025-02-27/887190",
+        "horses": [
+          {
+            "horseName": "Hystery Bere",
+            "horseProfileUrl": "/profile/horse/2655822/hystery-bere/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-02-27#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-02-27",
+    "going": "TAPETA: STANDARD",
+    "weather": "",
+    "stallsPosition": "1m4f - Outside; Straight - Centre; 2m - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Taunton",
+    "raceCardsCourseUrl": "/racecards/2025-02-27#taunton",
+    "raceCardsCourseMeetingsUrl": "/racecards/73/taunton/2025-02-27",
+    "going": "Chase course - SOFT (Heavy in places); Hurdle course - HEAVY (Soft in places; 5.3)",
+    "weather": "Sunny intervals",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/73/taunton/2025-02-27/887200",
+        "horses": [
+          {
+            "horseName": "Chester Tonik",
+            "horseProfileUrl": "/profile/horse/4389441/chester-tonik/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Rip Wheeler",
+            "horseProfileUrl": "/profile/horse/5633053/rip-wheeler/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chantilly",
+    "raceCardsCourseUrl": "/racecards/2025-02-27#chantilly",
+    "raceCardsCourseMeetingsUrl": "/racecards/204/chantilly/2025-02-27",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:14",
+        "raceCardUrl": "/racecards/204/chantilly/2025-02-27/889721",
+        "horses": [
+          {
+            "horseName": "Princess Anne",
+            "horseProfileUrl": "/profile/horse/3448695/princess-anne/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/204/chantilly/2025-02-27/889722",
+        "horses": [
+          {
+            "horseName": "Le Gast",
+            "horseProfileUrl": "/profile/horse/5394052/le-gast/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Yes Zara",
+            "horseProfileUrl": "/profile/horse/4753705/yes-zara/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  }
+]

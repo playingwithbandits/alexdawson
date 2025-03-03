@@ -7,6 +7,7 @@ import {
   DayTips,
   GytoTip,
   NapsTableTip,
+  NonRunnerMeeting,
 } from "@/types/racing";
 
 interface DashboardContentProps {
@@ -16,6 +17,7 @@ interface DashboardContentProps {
   tips: DayTips | null;
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
+  nonRunners: NonRunnerMeeting[];
 }
 
 export function DashboardContent({
@@ -25,6 +27,7 @@ export function DashboardContent({
   tips,
   gytoTips,
   napsTableTips,
+  nonRunners,
 }: DashboardContentProps) {
   return (
     <DayPredictions
@@ -34,6 +37,7 @@ export function DashboardContent({
       tips={tips}
       gytoTips={gytoTips}
       napsTableTips={napsTableTips}
+      nonRunners={nonRunners}
     />
   );
 }

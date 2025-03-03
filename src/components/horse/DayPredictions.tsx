@@ -12,6 +12,7 @@ import {
   Race,
   RaceResults,
   NapsTableTip,
+  NonRunnerMeeting,
 } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
@@ -34,6 +35,7 @@ interface DayPredictionsProps {
   tips: DayTips | null;
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
+  nonRunners: NonRunnerMeeting[];
 }
 
 export const normalizeTime = (time: string) => {
@@ -53,12 +55,43 @@ export function DayPredictions({
   tips,
   gytoTips,
   napsTableTips,
+  nonRunners,
 }: DayPredictionsProps) {
+  console.log("nonRunners", nonRunners);
+
+  const getNonRunnersMap = () => {
+    const nonRunnersMap: Record<string, string[]> = {};
+
+    nonRunners.forEach((meeting) => {
+      meeting.races.forEach((race) => {
+        const normalizedTime = normalizeTime(race.raceTime);
+        if (!nonRunnersMap[normalizedTime]) {
+          nonRunnersMap[normalizedTime] = [];
+        }
+        nonRunnersMap[normalizedTime].push(
+          ...race.horses.map((h) => horseNameToKey(h.horseName))
+        );
+      });
+    });
+
+    return nonRunnersMap;
+  };
+
+  const nonRunnersMap = getNonRunnersMap();
+  console.log("nonRunnersMap", nonRunnersMap);
+
+  const isNonRunner = (time: string, horseName: string) => {
+    return nonRunnersMap[normalizeTime(time)]?.includes(
+      horseNameToKey(horseName)
+    );
+  };
+
   const [isMounted, setIsMounted] = useState(false);
-  const [view, setView] = useState<ViewMode>("compact");
+  const [view, setView] = useState<ViewMode>("picks");
 
   const [isSaving, setIsSaving] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isDeletingNonRunners, setIsDeletingNonRunners] = useState(false);
   //const data = generatePredictions(meetings);
 
   const today = new Date().toISOString().split("T")[0];
@@ -81,6 +114,11 @@ export function DayPredictions({
         )[0];
 
         const selection = horseNameToKey(topScorer.name);
+
+        if (isNonRunner(race.time, selection)) {
+          return [];
+        }
+
         return {
           time: race.time,
           horse: selection,
@@ -126,6 +164,10 @@ export function DayPredictions({
             )[0];
 
           const selection = horseNameToKey(topScorer?.name);
+
+          if (isNonRunner(race.time, selection)) {
+            return [];
+          }
           return {
             time: race.time,
             horse: selection,
@@ -145,6 +187,9 @@ export function DayPredictions({
         )?.[0];
 
         const selection = horseNameToKey(sortedPrediction?.name || "");
+        if (isNonRunner(race.time, selection)) {
+          return [];
+        }
         return {
           time: race.time,
           horse: selection,
@@ -161,6 +206,9 @@ export function DayPredictions({
         const selection = horseNameToKey(
           race.raceExtraInfo?.verdict?.selection || ""
         );
+        if (isNonRunner(race.time, selection)) {
+          return [];
+        }
         return {
           time: race.time,
           horse: selection,
@@ -173,10 +221,16 @@ export function DayPredictions({
     meetings,
     results,
     picks: tips?.atrTips?.flatMap((tip) =>
-      tip.races?.flatMap((race) => ({
-        time: race.time,
-        horse: race.selections?.[0]?.horse,
-      }))
+      tip.races?.flatMap((race) => {
+        const selection = horseNameToKey(race.selections?.[0]?.horse || "");
+        if (isNonRunner(race.time, selection)) {
+          return [];
+        }
+        return {
+          time: race.time,
+          horse: selection,
+        };
+      })
     ),
   });
 
@@ -184,10 +238,16 @@ export function DayPredictions({
     meetings,
     results,
     picks: tips?.timeformTips?.flatMap((tip) =>
-      tip.races?.flatMap((race) => ({
-        time: race.time,
-        horse: race.selections?.[0]?.horse,
-      }))
+      tip.races?.flatMap((race) => {
+        const selection = horseNameToKey(race.selections?.[0]?.horse || "");
+        if (isNonRunner(race.time, selection)) {
+          return [];
+        }
+        return {
+          time: race.time,
+          horse: selection,
+        };
+      })
     ),
   });
 
@@ -195,10 +255,16 @@ export function DayPredictions({
   const gytoRoi = calculateROI({
     meetings,
     results,
-    picks: gytoTips?.map((tip) => ({
-      time: tip.time,
-      horse: tip.horse,
-    })),
+    picks: gytoTips?.flatMap((tip) => {
+      const selection = horseNameToKey(tip.horse);
+      if (isNonRunner(tip.time, selection)) {
+        return [];
+      }
+      return {
+        time: tip.time,
+        horse: selection,
+      };
+    }),
   });
 
   console.log("gyto Roi", gytoRoi);
@@ -206,10 +272,16 @@ export function DayPredictions({
   const napsRoi = calculateROI({
     meetings,
     results,
-    picks: napsTableTips?.map((tip) => ({
-      time: tip.time,
-      horse: tip.horse,
-    })),
+    picks: napsTableTips?.flatMap((tip) => {
+      const selection = horseNameToKey(tip.horse);
+      if (isNonRunner(tip.time, selection)) {
+        return [];
+      }
+      return {
+        time: tip.time,
+        horse: selection,
+      };
+    }),
   });
   console.log("naps Roi", napsRoi);
 
@@ -288,6 +360,33 @@ export function DayPredictions({
     }
   };
 
+  const handleDeleteNonRunners = async () => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete the non-runners data for this day? This action cannot be undone."
+    );
+
+    if (!confirmed) return;
+
+    setIsDeletingNonRunners(true);
+    try {
+      const response = await fetch(`/api/racing/nonrunners/${date}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete non-runners data");
+      }
+
+      alert("Non-runners data deleted successfully");
+      window.location.reload(); // Refresh to show updated state
+    } catch (error) {
+      console.error("Error deleting non-runners data:", error);
+      alert("Failed to delete non-runners data");
+    } finally {
+      setIsDeletingNonRunners(false);
+    }
+  };
+
   const renderHeader = () => {
     const { roi, wins, total, totalReturns, totalBets, noResults } = aiRoi;
 
@@ -350,10 +449,10 @@ export function DayPredictions({
               </div>
             </div>
 
-            <div className="flex justify-between items-center">
-              <div className="flex gap-4">
+            <div className="flex justify-center items-center">
+              {/* <div className="flex gap-4">
                 <ViewToggle view={view} onViewChange={handleViewChange} />
-              </div>
+              </div> */}
 
               <div className="flex gap-4 justify-center">
                 <button
@@ -368,7 +467,14 @@ export function DayPredictions({
                   onClick={handleDeleteResults}
                   disabled={isDeleting || noResults}
                 >
-                  {isDeleting ? "Deleting..." : "Delete Results"}
+                  {isDeleting ? "Deleting..." : "Results"}
+                </button>
+                <button
+                  className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 disabled:opacity-50"
+                  onClick={handleDeleteNonRunners}
+                  disabled={isDeletingNonRunners}
+                >
+                  {isDeletingNonRunners ? "Deleting..." : "Non-Runners"}
                 </button>
               </div>
             </div>
@@ -386,6 +492,7 @@ export function DayPredictions({
     return <div className="day-predictions">{renderHeader()}</div>;
   }
 
+  console.log("nonRunners", nonRunners);
   // First filter the predictions
   const filteredMeetings = meetings
     .map((meeting) => ({
@@ -478,6 +585,7 @@ export function DayPredictions({
                       tips={tips}
                       gytoTips={gytoTips}
                       napsTableTips={napsTableTips}
+                      isNonRunner={isNonRunner}
                     />
                   ))}
                 </div>

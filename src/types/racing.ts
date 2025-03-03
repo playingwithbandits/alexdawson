@@ -626,3 +626,25 @@ export interface NapsTableTips {
   date: string;
   tips: NapsTableTip[];
 }
+
+export interface NonRunnerHorse {
+  horseName: string;
+  horseProfileUrl: string;
+  raceNumber: string;
+}
+
+export interface NonRunnerRace {
+  raceTime: string;
+  raceCardUrl: string;
+  horses: NonRunnerHorse[];
+}
+
+export interface NonRunnerMeeting {
+  courseName: string;
+  raceCardsCourseUrl: string;
+  raceCardsCourseMeetingsUrl: string;
+  going: string;
+  weather: string;
+  stallsPosition: string;
+  races: NonRunnerRace[];
+}

@@ -1,0 +1,296 @@
+[
+  {
+    "courseName": "Bangor-on-Dee",
+    "raceCardsCourseUrl": "/racecards/2025-02-26#bangor-on-dee",
+    "raceCardsCourseMeetingsUrl": "/racecards/4/bangor-on-dee/2025-02-26",
+    "going": "HEAVY (2.9)",
+    "weather": "Light rain showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-02-26/887172",
+        "horses": [
+          {
+            "horseName": "Nancy Till",
+            "horseProfileUrl": "/profile/horse/4737891/nancy-till/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Chumlee",
+            "horseProfileUrl": "/profile/horse/3014346/chumlee/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:55",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-02-26/887170",
+        "horses": [
+          {
+            "horseName": "Hunter Legend",
+            "horseProfileUrl": "/profile/horse/3958764/hunter-legend/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-02-26/887174",
+        "horses": [
+          {
+            "horseName": "Forcetoreckonwith",
+            "horseProfileUrl": "/profile/horse/5472200/forcetoreckonwith/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-02-26/887173",
+        "horses": [
+          {
+            "horseName": "Count Adhemar",
+            "horseProfileUrl": "/profile/horse/6820606/count-adhemar/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:35",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-02-26/887175",
+        "horses": [
+          {
+            "horseName": "C'Est Different",
+            "horseProfileUrl": "/profile/horse/6640609/cest-different/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Leading The Way",
+            "horseProfileUrl": "/profile/horse/3822300/leading-the-way/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-02-26/887171",
+        "horses": [
+          {
+            "horseName": "Pure Sirloin",
+            "horseProfileUrl": "/profile/horse/4119746/pure-sirloin/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-02-26#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-02-26",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "4:23",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-02-26/887371",
+        "horses": [
+          {
+            "horseName": "Bear Rock",
+            "horseProfileUrl": "/profile/horse/5982514/bear-rock/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-02-26/887372",
+        "horses": [
+          {
+            "horseName": "My Boy Harry",
+            "horseProfileUrl": "/profile/horse/6509780/my-boy-harry/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-02-26/887370",
+        "horses": [
+          {
+            "horseName": "Sceptic",
+            "horseProfileUrl": "/profile/horse/4570896/sceptic/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-02-26/889074",
+        "horses": [
+          {
+            "horseName": "Pursuit Of Truth",
+            "horseProfileUrl": "/profile/horse/5151725/pursuit-of-truth/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wetherby",
+    "raceCardsCourseUrl": "/racecards/2025-02-26#wetherby",
+    "raceCardsCourseMeetingsUrl": "/racecards/87/wetherby/2025-02-26",
+    "going": "SOFT (Good to soft in places; Hdl 5.6, Chs 5.7)",
+    "weather": "cloudy with showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/87/wetherby/2025-02-26/887180",
+        "horses": [
+          {
+            "horseName": "Moveonbuy",
+            "horseProfileUrl": "/profile/horse/5488168/moveonbuy/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/87/wetherby/2025-02-26/887178",
+        "horses": [
+          {
+            "horseName": "Ultra Beat",
+            "horseProfileUrl": "/profile/horse/4652665/ultra-beat/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:28",
+        "raceCardUrl": "/racecards/87/wetherby/2025-02-26/887182",
+        "horses": [
+          {
+            "horseName": "Bring The Action",
+            "horseProfileUrl": "/profile/horse/3031685/bring-the-action/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-02-26#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-02-26",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "11:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-02-26/889077",
+        "horses": [
+          {
+            "horseName": "Dragon Delight",
+            "horseProfileUrl": "/profile/horse/4001786/dragon-delight/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Toy Soltero",
+            "horseProfileUrl": "/profile/horse/5042462/toy-soltero/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-02-26/889079",
+        "horses": [
+          {
+            "horseName": "Prime Mortar",
+            "horseProfileUrl": "/profile/horse/4381622/prime-mortar/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Owners' Praise",
+            "horseProfileUrl": "/profile/horse/4735665/owners-praise/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-02-26/889081",
+        "horses": [
+          {
+            "horseName": "Telecom Power",
+            "horseProfileUrl": "/profile/horse/5357810/telecom-power/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Rewarding Twinkle",
+            "horseProfileUrl": "/profile/horse/6582531/rewarding-twinkle/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:45",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-02-26/889082",
+        "horses": [
+          {
+            "horseName": "Casa Rochester",
+            "horseProfileUrl": "/profile/horse/6737356/casa-rochester/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Atomic Beauty",
+            "horseProfileUrl": "/profile/horse/3650101/atomic-beauty/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-02-26/889084",
+        "horses": [
+          {
+            "horseName": "Know At Heart",
+            "horseProfileUrl": "/profile/horse/6903312/know-at-heart/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Launceston",
+    "raceCardsCourseUrl": "/racecards/2025-02-26#launceston",
+    "raceCardsCourseMeetingsUrl": "/racecards/1207/launceston/2025-02-26",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:19",
+        "raceCardUrl": "/racecards/1207/launceston/2025-02-26/889284",
+        "horses": [
+          {
+            "horseName": "Just A Needs",
+            "horseProfileUrl": "/profile/horse/5657826/just-a-needs/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Wings Of Song",
+            "horseProfileUrl": "/profile/horse/5187991/wings-of-song/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  }
+]

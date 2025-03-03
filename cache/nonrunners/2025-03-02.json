@@ -1,0 +1,479 @@
+[
+  {
+    "courseName": "Doncaster",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#doncaster",
+    "raceCardsCourseMeetingsUrl": "/racecards/15/doncaster/2025-03-02",
+    "going": "GOOD (6.2)",
+    "weather": "Fine with sunny spells",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-02/887234",
+        "horses": [
+          {
+            "horseName": "Champagnesuperover",
+            "horseProfileUrl": "/profile/horse/2902408/champagnesuperover/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:35",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-02/887235",
+        "horses": [
+          {
+            "horseName": "Koenigsstern",
+            "horseProfileUrl": "/profile/horse/3142120/koenigsstern/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:07",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-02/887238",
+        "horses": [
+          {
+            "horseName": "Shuil Ceoil",
+            "horseProfileUrl": "/profile/horse/4272452/shuil-ceoil/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-02/887236",
+        "horses": [
+          {
+            "horseName": "Ski Lodge",
+            "horseProfileUrl": "/profile/horse/5021475/ski-lodge/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-02/887237",
+        "horses": [
+          {
+            "horseName": "Just Gino",
+            "horseProfileUrl": "/profile/horse/4952175/just-gino/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Whoshotthesheriff",
+            "horseProfileUrl": "/profile/horse/1857643/whoshotthesheriff/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-02/887239",
+        "horses": [
+          {
+            "horseName": "Empire Day",
+            "horseProfileUrl": "/profile/horse/7200249/empire-day/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Heaven Can Wait",
+            "horseProfileUrl": "/profile/horse/7200241/heaven-can-wait/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Huntingdon",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#huntingdon",
+    "raceCardsCourseMeetingsUrl": "/racecards/26/huntingdon/2025-03-02",
+    "going": "GOOD TO SOFT (Good in places; Chs 7.0, Hdl 7.5)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-02/887244",
+        "horses": [
+          {
+            "horseName": "Bertie The Rebel",
+            "horseProfileUrl": "/profile/horse/6547834/bertie-the-rebel/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:17",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-02/887242",
+        "horses": [
+          {
+            "horseName": "Tellairsue",
+            "horseProfileUrl": "/profile/horse/4693315/tellairsue/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:52",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-02/887240",
+        "horses": [
+          {
+            "horseName": "Light N Strike",
+            "horseProfileUrl": "/profile/horse/3216237/light-n-strike/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:27",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-02/887245",
+        "horses": [
+          {
+            "horseName": "Dickens",
+            "horseProfileUrl": "/profile/horse/3177346/dickens/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:02",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-02/887246",
+        "horses": [
+          {
+            "horseName": "My Fortune",
+            "horseProfileUrl": "/profile/horse/6425005/my-fortune/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-03-02",
+    "going": "YIELDING (Yielding to soft in places on Hurdle course; Good to yielding in places on Chase course)",
+    "weather": "Fresh across",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:20",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-02/889213",
+        "horses": [
+          {
+            "horseName": "Sommesky",
+            "horseProfileUrl": "/profile/horse/5711183/sommesky/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Great Attitude",
+            "horseProfileUrl": "/profile/horse/4893311/great-attitude/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:50",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-02/889214",
+        "horses": [
+          {
+            "horseName": "Two's Kompany",
+            "horseProfileUrl": "/profile/horse/6864636/twos-kompany/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Killala Bay",
+            "horseProfileUrl": "/profile/horse/7148042/killala-bay/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Abitlikethat",
+            "horseProfileUrl": "/profile/horse/7087009/abitlikethat/",
+            "raceNumber": "(21)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-02/889215",
+        "horses": [
+          {
+            "horseName": "Any Road",
+            "horseProfileUrl": "/profile/horse/4129090/any-road/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:57",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-02/889216",
+        "horses": [
+          {
+            "horseName": "The Nagger Reidy",
+            "horseProfileUrl": "/profile/horse/5063761/the-nagger-reidy/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-02/889725",
+        "horses": [
+          {
+            "horseName": "Pralognan",
+            "horseProfileUrl": "/profile/horse/3855469/pralognan/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:12",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-02/889219",
+        "horses": [
+          {
+            "horseName": "Carrigmoorna Beech",
+            "horseProfileUrl": "/profile/horse/7020724/carrigmoorna-beech/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Auteuil",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#auteuil",
+    "raceCardsCourseMeetingsUrl": "/racecards/205/auteuil/2025-03-02",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Hanshin",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#hanshin",
+    "raceCardsCourseMeetingsUrl": "/racecards/491/hanshin/2025-03-02",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Jebel Ali",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#jebel-ali",
+    "raceCardsCourseMeetingsUrl": "/racecards/565/jebel-ali/2025-03-02",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:15",
+        "raceCardUrl": "/racecards/565/jebel-ali/2025-03-02/889730",
+        "horses": [
+          {
+            "horseName": "Arz Lebnan",
+            "horseProfileUrl": "/profile/horse/6807867/arz-lebnan/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:45",
+        "raceCardUrl": "/racecards/565/jebel-ali/2025-03-02/889731",
+        "horses": [
+          {
+            "horseName": "Abshrek",
+            "horseProfileUrl": "/profile/horse/4088915/abshrek/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:15",
+        "raceCardUrl": "/racecards/565/jebel-ali/2025-03-02/889732",
+        "horses": [
+          {
+            "horseName": "El Faras",
+            "horseProfileUrl": "/profile/horse/3092964/el-faras/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nakayama",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#nakayama",
+    "raceCardsCourseMeetingsUrl": "/racecards/514/nakayama/2025-03-02",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Santa Anita",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#santa-anita",
+    "raceCardsCourseMeetingsUrl": "/racecards/257/santa-anita/2025-03-02",
+    "going": "DIRT: FAST; TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:15",
+        "raceCardUrl": "/racecards/257/santa-anita/2025-03-02/889184",
+        "horses": [
+          {
+            "horseName": "El Potente",
+            "horseProfileUrl": "/profile/horse/3900213/el-potente/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:47",
+        "raceCardUrl": "/racecards/257/santa-anita/2025-03-02/889185",
+        "horses": [
+          {
+            "horseName": "Tarantino",
+            "horseProfileUrl": "/profile/horse/3282240/tarantino/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-03-02#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-03-02",
+    "going": "DIRT: STANDARD; TURF: GOOD changing to GOOD TO FIRM before Race 7 (8.05am)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-02/889679",
+        "horses": [
+          {
+            "horseName": "Mount Everest",
+            "horseProfileUrl": "/profile/horse/7209389/mount-everest/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Victorythirtythree",
+            "horseProfileUrl": "/profile/horse/58950330/victorythirtythree/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-02/889681",
+        "horses": [
+          {
+            "horseName": "Wisdom Star",
+            "horseProfileUrl": "/profile/horse/6042354/wisdom-star/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Perfecto Moments",
+            "horseProfileUrl": "/profile/horse/5539590/perfecto-moments/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-02/889683",
+        "horses": [
+          {
+            "horseName": "King Alloy",
+            "horseProfileUrl": "/profile/horse/7117337/king-alloy/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Commanding Missile",
+            "horseProfileUrl": "/profile/horse/3239157/commanding-missile/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-02/889684",
+        "horses": [
+          {
+            "horseName": "Handsome Bomb",
+            "horseProfileUrl": "/profile/horse/5550803/handsome-bomb/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Ka Ying Superb",
+            "horseProfileUrl": "/profile/horse/5787789/ka-ying-superb/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:35",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-02/889685",
+        "horses": [
+          {
+            "horseName": "Can't Go Wong",
+            "horseProfileUrl": "/profile/horse/3974413/cant-go-wong/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Telecom Dragon",
+            "horseProfileUrl": "/profile/horse/5132182/telecom-dragon/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:05",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-02/889686",
+        "horses": [
+          {
+            "horseName": "Sky Heart",
+            "horseProfileUrl": "/profile/horse/5563307/sky-heart/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Romantic Thor",
+            "horseProfileUrl": "/profile/horse/5147940/romantic-thor/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:15",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-02/889688",
+        "horses": [
+          {
+            "horseName": "Family Jewel",
+            "horseProfileUrl": "/profile/horse/6042355/family-jewel/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Romantic Thor",
+            "horseProfileUrl": "/profile/horse/5147940/romantic-thor/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:50",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-02/889680",
+        "horses": [
+          {
+            "horseName": "Savvy Brilliant",
+            "horseProfileUrl": "/profile/horse/6460875/savvy-brilliant/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  }
+]
