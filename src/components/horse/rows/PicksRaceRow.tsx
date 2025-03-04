@@ -8,6 +8,7 @@ import {
 } from "@/types/racing";
 import { normalizeTime } from "../DayPredictions";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
+import { horseNameToKey } from "@/lib/racing/scores/funcs";
 
 interface PicksRaceRowProps {
   isTodayOrPast: boolean;
@@ -71,7 +72,17 @@ export function PicksRaceRow({
 
   const rpVerdictPick = race.raceExtraInfo?.verdict?.selection;
   const rpVerdictPickIsNap = race.raceExtraInfo?.verdict?.isNap;
+  const rpVerdictAllNamed = race.raceExtraInfo?.verdict?.allNamed;
+  const rpVerdictAllOthers = rpVerdictAllNamed?.filter((x) =>
+    rpVerdictPick ? horseNameToKey(x) !== horseNameToKey(rpVerdictPick) : true
+  );
 
+  console.log(
+    "RP Verdict All Named:",
+    rpVerdictPick,
+    rpVerdictAllNamed,
+    rpVerdictAllOthers
+  );
   // Get ATR tip for this race
   //console.log("Getting ATR tip");
   const atrTipSelections = tips?.atrTips
@@ -114,6 +125,7 @@ export function PicksRaceRow({
     ...aiTopPicks?.map((x) => x.name),
     ...rpPredictions?.map((x) => x.name),
     rpVerdictPick ? rpVerdictPick : "",
+    ...(rpVerdictAllOthers || []),
     ...(atrTipSelections?.map((x) => x.horse) || []),
     ...(timeformTipSelections?.map((x) => x.horse) || []),
     gytoTipSelectionObj ? gytoTipSelectionObj.horse : "",
@@ -130,6 +142,7 @@ export function PicksRaceRow({
       "5": timeformTipSelections?.map((x) => x.horse) || [],
       "6": gytoTipSelectionObj ? gytoTipSelectionObj.horse : "",
       "7": napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || [],
+      "8": rpVerdictAllOthers || [],
     },
     race.time,
     gytoTips,
@@ -156,6 +169,7 @@ export function PicksRaceRow({
     ...(rpVerdictPick
       ? [[rpVerdictPick, rpVerdictPickIsNap ? 0.75 : 0.5]]
       : []),
+    ...(rpVerdictAllOthers?.map((x) => [x, 0.25] as [string, number]) || []),
     ...(atrTipSelections?.map(
       (x, i) => [x.horse, 0.5 / Math.pow(2, i)] as [string, number]
     ) || []),
@@ -286,6 +300,23 @@ export function PicksRaceRow({
               title={"RP Verdict: " + race.raceExtraInfo?.verdict?.comment}
             />
           ))}
+
+          {rpVerdictAllOthers?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x || ""}
+              results={results}
+              time={race.time}
+              odds={
+                race.bettingForecast?.find(
+                  (y) => cleanName(y.horseName) === cleanName(x || "")
+                )?.decimalOdds || 0
+              }
+              isNonRunner={isNonRunner(race.time, x || "")}
+              greyedOut={false}
+              title={"RP Verdict: " + race.raceExtraInfo?.verdict?.comment}
+            />
+          ))}
         </div>
         <div className="flex flex-col gap-2">
           {atrTipSelections?.map((x, x_i) => (
@@ -375,10 +406,12 @@ export function PicksRaceRow({
                 time={race.time}
                 odds={odds}
                 extraText={`${count.toFixed(1)} : ${perc}%`}
-                oddsHighlight={odds > 8 && count > 1}
+                oddsHighlight={odds > 12 && count > 1}
                 isNonRunner={isNonRunner(race.time, name)}
                 greyedOut={count <= 1}
                 title={"Name: " + name + " : " + count + " : " + perc + "%"}
+                highlight1={count > 1 && perc >= 40}
+                highlight2={count > 1 && perc >= 50}
               />
             );
           })}
@@ -434,6 +467,8 @@ function HorseNameRow({
   oddsHighlight,
   isNonRunner,
   greyedOut,
+  highlight1,
+  highlight2,
   title,
 }: {
   horseName: string;
@@ -444,11 +479,15 @@ function HorseNameRow({
   oddsHighlight?: boolean;
   isNonRunner?: boolean;
   greyedOut?: boolean;
+  highlight1?: boolean;
+  highlight2?: boolean;
   title?: string;
 }) {
   return (
     <div
-      className={`flex justify-between ${greyedOut ? "text-gray-500" : ""}`}
+      className={`flex justify-between ${greyedOut ? "text-gray-500" : ""} ${
+        highlight1 && !highlight2 ? "text-[#f2f92c]" : ""
+      } ${highlight2 ? "text-[#ff881f]" : ""}`}
       title={title}
     >
       <span>
@@ -457,9 +496,9 @@ function HorseNameRow({
           {horseName}
         </span>
       </span>
-      <span className="flex gap-2">
+      <span className={`flex gap-2 ${oddsHighlight ? "text-[#1EEAFF]" : ""}`}>
         <span>{extraText}</span>
-        <span className={oddsHighlight ? "text-[#1EEAFF]" : ""}>{odds}</span>
+        <span>{odds}</span>
       </span>
     </div>
   );
