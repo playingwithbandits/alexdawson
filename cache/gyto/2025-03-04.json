@@ -1,0 +1,165 @@
+{
+  "date": "2025-03-04",
+  "tips": [
+    {
+      "time": "17:15",
+      "horse": "Jubilant",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Bajan Blue",
+      "isNap": false
+    },
+    {
+      "time": "14:22",
+      "horse": "Manton Road",
+      "isNap": false
+    },
+    {
+      "time": "15:22",
+      "horse": "Brewing",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Nollyador",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Gozo",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Wellington Arch",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Jubilant",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Wonder",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Bajan Blue",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Basford",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Aspire To Glory",
+      "isNap": false
+    },
+    {
+      "time": "14:22",
+      "horse": "Manton Road",
+      "isNap": false
+    },
+    {
+      "time": "14:52",
+      "horse": "Noble Victory",
+      "isNap": false
+    },
+    {
+      "time": "15:22",
+      "horse": "Brewing",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Strong Power",
+      "isNap": false
+    },
+    {
+      "time": "16:22",
+      "horse": "Blackjack",
+      "isNap": false
+    },
+    {
+      "time": "16:52",
+      "horse": "Glastonbury",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Basford",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Wellington Arch",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Moonset",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Realisation",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Nollyador",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Jubilant",
+      "isNap": true
+    },
+    {
+      "time": "16:30",
+      "horse": "Antiquity",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Appleblossomwhite",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Aspire To Glory",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Zu Run",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Wonder",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Bedford Flyer",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Bajan Blue",
+      "isNap": true
+    },
+    {
+      "time": "20:30",
+      "horse": "Gozo",
+      "isNap": false
+    }
+  ]
+}
