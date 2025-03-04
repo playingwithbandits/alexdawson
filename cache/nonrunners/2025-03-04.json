@@ -3,7 +3,7 @@
     "courseName": "Market Rasen",
     "raceCardsCourseUrl": "/racecards/2025-03-04#market-rasen",
     "raceCardsCourseMeetingsUrl": "/racecards/35/market-rasen/2025-03-04",
-    "going": "GOOD TO SOFT, Good in places on Hurdle course (GoingStick: Chase 6.8, Hurdle 5.9) (Rail movements: 2.05 & 3.35 +156yds and 4.40 +78yds)",
+    "going": "GOOD TO SOFT, Good in places on Hurdle course (GoingStick: Chase 7.9, Hurdle 6.5) (Rail movements: 2.05 & 3.35 +156yds and 4.40 +78yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
     "races": []
@@ -24,6 +24,18 @@
     "going": "TAPETA: STANDARD",
     "weather": "Partly cloudy",
     "stallsPosition": "5f - Centre; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-03-04/889800",
+        "horses": [
+          {
+            "horseName": "Cloudside Rock",
+            "horseProfileUrl": "/profile/horse/5920415/cloudside-rock/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
   }
 ]

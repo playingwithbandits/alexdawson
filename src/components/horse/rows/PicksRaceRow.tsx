@@ -44,17 +44,15 @@ export function PicksRaceRow({
     napsTableTips,
   });
 
-  const topPercentage = race?.horses?.sort(
+  const topAiPercentage = race?.horses?.sort(
     (a, b) =>
       (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
   )?.[0]?.score?.total?.percentage;
-  const fivePercentOffTop = topPercentage ? topPercentage * 0.95 : 100;
+  //const fivePercentOffTop = topPercentage ? topPercentage * 0.95 : 100;
 
-  const aiTopPicks = race?.horses?.filter(
-    (x) =>
-      x.score?.total?.percentage &&
-      x.score?.total?.percentage >= fivePercentOffTop &&
-      x.score?.total?.percentage >= 40
+  const aiTopPicks = race?.horses?.filter((x) => x.score?.total?.percentage);
+  const worseAiPercentageScore = Math.min(
+    ...aiTopPicks?.map((x) => x.score?.total?.percentage || 0)
   );
 
   const rpPredictions = Object.values(race.predictions || {}).sort(
@@ -149,22 +147,30 @@ export function PicksRaceRow({
     allNames
   );
 
+  const aiTopPicksWeighted =
+    aiTopPicks?.map((x) => {
+      const scorePercentage =
+        ((x.score?.total?.percentage || 0) - worseAiPercentageScore) /
+        ((topAiPercentage || 100) - worseAiPercentageScore);
+      return [x.name, 0.75 * scorePercentage] as [string, number];
+    }) || [];
+
   const rpPredictionsWeighted =
     rpPredictions?.map((x) => {
       // const scorePercentage =
       //   ((x.score || 0) - worseRpPredictionScore) / rpPredictionScoreGap;
 
-      const scorePercentage = (x.score || 0) / 100;
+      const scorePercentage =
+        (x.score - worseRpPredictionScore || 0) /
+        (100 - worseRpPredictionScore);
       return [x.name, 0.75 * scorePercentage] as [string, number];
     }) || [];
 
-  console.log("RP Predictions Weighted:", rpPredictionsWeighted);
+  console.log("AI Predictions Weighted:", aiTopPicksWeighted);
 
   // Create weighted scores for each source
   const weightedScores = [
-    ...(aiTopPicks?.map(
-      (x, i) => [x.name, 0.75 / Math.pow(2, i)] as [string, number]
-    ) || []),
+    ...aiTopPicksWeighted,
     ...rpPredictionsWeighted,
     ...(rpVerdictPick
       ? [[rpVerdictPick, rpVerdictPickIsNap ? 0.75 : 0.5]]
@@ -398,6 +404,9 @@ export function PicksRaceRow({
               race.bettingForecast?.find(
                 (y) => cleanName(y.horseName) === cleanName(name)
               )?.decimalOdds || 0;
+
+            const decimalOdds = 100 / (perc || 0.1);
+
             return (
               <HorseNameRow
                 key={race.time + x_i}
@@ -405,13 +414,25 @@ export function PicksRaceRow({
                 results={results}
                 time={race.time}
                 odds={odds}
-                extraText={`${count.toFixed(1)} : ${perc}%`}
-                oddsHighlight={odds > 12 && count > 1}
+                extraText={`${count.toFixed(
+                  1
+                )} : ${perc}% : ${decimalOdds.toFixed(1)}`}
+                oddsHighlight={odds > decimalOdds && count > 1.25}
                 isNonRunner={isNonRunner(race.time, name)}
                 greyedOut={count <= 1}
-                title={"Name: " + name + " : " + count + " : " + perc + "%"}
-                highlight1={count > 1 && perc >= 40}
-                highlight2={count > 1 && perc >= 50}
+                title={
+                  "Name: " +
+                  name +
+                  " : " +
+                  count +
+                  " : " +
+                  perc +
+                  "%" +
+                  ": " +
+                  decimalOdds.toFixed(1)
+                }
+                highlight1={count > 1.25 && perc >= 40}
+                highlight2={count > 1.25 && perc >= 50}
               />
             );
           })}
@@ -496,9 +517,11 @@ function HorseNameRow({
           {horseName}
         </span>
       </span>
-      <span className={`flex gap-2 ${oddsHighlight ? "text-[#1EEAFF]" : ""}`}>
+      <span className={`flex gap-2 `}>
         <span>{extraText}</span>
-        <span>{odds}</span>
+        <span className={`${oddsHighlight ? "text-[#1EEAFF]" : ""}`}>
+          {odds}
+        </span>
       </span>
     </div>
   );
