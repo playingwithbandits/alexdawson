@@ -27,6 +27,13 @@ import { PicksRaceRow } from "./rows/PicksRaceRow";
 
 export type ViewMode = "list" | "table" | "compact" | "detailed" | "picks";
 
+interface LiveOdds {
+  horseName: string;
+  odds: number;
+  time: string;
+  course: string;
+}
+
 interface DayPredictionsProps {
   meetings: Meeting[];
   date: string;
@@ -36,6 +43,7 @@ interface DayPredictionsProps {
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
   nonRunners: NonRunnerMeeting[];
+  liveOdds: LiveOdds[];
 }
 
 export const normalizeTime = (time: string) => {
@@ -56,8 +64,10 @@ export function DayPredictions({
   gytoTips,
   napsTableTips,
   nonRunners,
+  liveOdds,
 }: DayPredictionsProps) {
   console.log("nonRunners", nonRunners);
+  console.log("liveOdds", liveOdds);
 
   const getNonRunnersMap = () => {
     const nonRunnersMap: Record<string, string[]> = {};

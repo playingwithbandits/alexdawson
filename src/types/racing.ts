@@ -648,3 +648,10 @@ export interface NonRunnerMeeting {
   stallsPosition: string;
   races: NonRunnerRace[];
 }
+
+export interface LiveOdds {
+  horseName: string;
+  odds: number;
+  time: string;
+  course: string;
+}

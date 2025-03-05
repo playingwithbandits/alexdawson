@@ -23,21 +23,31 @@ async function fetchAndParseTips(): Promise<GytoTip[]> {
 
   const tips: GytoTip[] = [];
 
-  $(".acca-selection").each((_, element) => {
-    const time = $(element).find(".horse-racing-single-racetime").text().trim();
-    const horse = $(element).find(".horse-racing-single-horse2").text().trim();
-    const featureBetTips = $(element).find(".feature-bet-tips").text().trim();
-    const isNap = ["nap", "next best"].includes(featureBetTips?.toLowerCase());
+  $(".Todays-horse-racing-meetings + .acca-container > .acca-selection").each(
+    (_, element) => {
+      const time = $(element)
+        .find(".horse-racing-single-racetime")
+        .text()
+        .trim();
+      const horse = $(element)
+        .find(".horse-racing-single-horse2")
+        .text()
+        .trim();
+      const featureBetTips = $(element).find(".feature-bet-tips").text().trim();
+      const isNap = ["nap", "next best"].includes(
+        featureBetTips?.toLowerCase()
+      );
 
-    //console.log(
-    //   `Found tip - Time: ${time}, Horse: ${horse}, Feature bet: ${featureBetTips}`
-    // );
-    //console.log(`Is NAP: ${isNap}`);
+      //console.log(
+      //   `Found tip - Time: ${time}, Horse: ${horse}, Feature bet: ${featureBetTips}`
+      // );
+      //console.log(`Is NAP: ${isNap}`);
 
-    if (time && horse) {
-      tips.push({ time, horse, isNap });
+      if (time && horse) {
+        tips.push({ time, horse, isNap });
+      }
     }
-  });
+  );
 
   return tips;
 }

@@ -5,6 +5,7 @@ import {
   NapsTableTip,
   Race,
   RaceResults,
+  LiveOdds,
 } from "@/types/racing";
 import { normalizeTime } from "../DayPredictions";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
@@ -20,6 +21,7 @@ interface PicksRaceRowProps {
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
   isNonRunner: (time: string, selection: string) => boolean;
+  liveOdds: LiveOdds[];
 }
 
 export function PicksRaceRow({
@@ -32,6 +34,7 @@ export function PicksRaceRow({
   gytoTips,
   napsTableTips,
   isNonRunner,
+  liveOdds,
 }: PicksRaceRowProps) {
   console.log("CompactRaceRow", {
     isTodayOrPast,
@@ -61,11 +64,6 @@ export function PicksRaceRow({
 
   const worseRpPredictionScore = Math.min(
     ...rpPredictions?.map((x) => x.score || 0)
-  );
-  const rpPredictionScoreGap = 100 - worseRpPredictionScore;
-
-  const topRpPredictions = rpPredictions?.filter(
-    (x) => x.score && x.score >= 95
   );
 
   const rpVerdictPick = race.raceExtraInfo?.verdict?.selection;
@@ -99,6 +97,7 @@ export function PicksRaceRow({
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
   );
   const gytoTipSelectionIsNap = gytoTipSelectionObj?.isNap;
+  console.log("GYTO Tip Selection:", gytoTipSelectionObj);
 
   const napsTableTipSelections = napsTableTips?.filter(
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
@@ -228,6 +227,15 @@ export function PicksRaceRow({
   //const topScorePerc = Math.max(...nameCountsWithPerc?.map((x) => x[2]));
   //const topScorePerc20Perc = topScorePerc * 0.8;
 
+  const getLiveOddsForHorse = (horseName: string) => {
+    return liveOdds.find(
+      (odds) =>
+        cleanName(odds.horseName) === cleanName(horseName) &&
+        normalizeTime(odds.time) === normalizeTime(race.time) &&
+        cleanName(odds.course) === cleanName(meeting.venue)
+    )?.odds;
+  };
+
   return (
     <div
       className={`flex justify-between p-1 rounded ${
@@ -249,9 +257,11 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={
+                getLiveOddsForHorse(x.name) ||
                 race.bettingForecast?.find(
                   (y) => cleanName(y.horseName) === cleanName(x.name)
-                )?.decimalOdds || 0
+                )?.decimalOdds ||
+                0
               }
               isNonRunner={isNonRunner(race.time, x.name)}
               greyedOut={false}

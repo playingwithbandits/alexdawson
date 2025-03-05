@@ -1,0 +1,102 @@
+[
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-03-05#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-03-05",
+    "going": "GOOD (GoingStick: 7.3)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/10/catterick/2025-03-05/887266",
+        "horses": [
+          {
+            "horseName": "Ridin Solo",
+            "horseProfileUrl": "/profile/horse/5355556/ridin-solo/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Coral Blue",
+            "horseProfileUrl": "/profile/horse/2232384/coral-blue/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/10/catterick/2025-03-05/887270",
+        "horses": [
+          {
+            "horseName": "Ask A Honey Bee",
+            "horseProfileUrl": "/profile/horse/2467726/ask-a-honey-bee/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-05#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-03-05",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-03-05/887441",
+        "horses": [
+          {
+            "horseName": "Too Sweet",
+            "horseProfileUrl": "/profile/horse/5982393/too-sweet/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-05#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-03-05",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 1m - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:42",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-03-05/887446",
+        "horses": [
+          {
+            "horseName": "The Defiant",
+            "horseProfileUrl": "/profile/horse/2052711/the-defiant/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-03-05#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-03-05",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "10:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-05/889816",
+        "horses": [
+          {
+            "horseName": "Fury And Gold",
+            "horseProfileUrl": "/profile/horse/5541857/fury-and-gold/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  }
+]

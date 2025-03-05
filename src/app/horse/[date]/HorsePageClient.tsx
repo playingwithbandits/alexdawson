@@ -14,6 +14,36 @@ import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { useResults } from "@/hooks/useResults";
 import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
+// Add types for the-odds-api response
+interface OddsApiOutcome {
+  name: string;
+  price: number;
+}
+
+interface OddsApiMarket {
+  key: string;
+  outcomes: OddsApiOutcome[];
+}
+
+interface OddsApiBookmaker {
+  key: string;
+  markets: OddsApiMarket[];
+}
+
+interface OddsApiEvent {
+  home_team: string;
+  commence_time: string;
+  bookmakers: OddsApiBookmaker[];
+}
+
+// Add new type for live odds
+interface LiveOdds {
+  horseName: string;
+  odds: number;
+  time: string;
+  course: string;
+}
+
 export const UK_COURSES = [
   "ascot",
   "ayr",
@@ -95,7 +125,46 @@ export function HorsePageClient({ date }: { date: string }) {
     undefined
   );
   const [nonRunners, setNonRunners] = useState<NonRunnerMeeting[]>([]);
+  const [liveOdds, setLiveOdds] = useState<LiveOdds[]>([]);
   const { data: results, isLoading: resultsLoading } = useResults(date);
+
+  // Add function to fetch live odds
+  const fetchLiveOdds = async () => {
+    try {
+      const response = await fetch(
+        `https://api.the-odds-api.com/v4/sports/horse_racing_uk/odds/?apiKey=9c1dc8286707901c807fadd6adac738d&regions=uk&markets=h2h&oddsFormat=decimal`
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch live odds");
+      }
+
+      const data: OddsApiEvent[] = await response.json();
+
+      console.log("fetchLiveOdds data", data);
+      // Transform the data into our LiveOdds format
+      const transformedOdds: LiveOdds[] = data.flatMap((event) => {
+        const course = event.home_team;
+        const time = event.commence_time;
+
+        return event.bookmakers.flatMap((bookmaker) => {
+          const market = bookmaker.markets.find((m) => m.key === "h2h");
+          if (!market) return [];
+
+          return market.outcomes.map((outcome) => ({
+            horseName: outcome.name,
+            odds: outcome.price,
+            time,
+            course,
+          }));
+        });
+      });
+
+      setLiveOdds(transformedOdds);
+    } catch (error) {
+      console.error("Error fetching live odds:", error);
+    }
+  };
 
   useEffect(() => {
     async function loadData() {
@@ -139,6 +208,15 @@ export function HorsePageClient({ date }: { date: string }) {
         const napsResponse = await fetch(`/api/racing/naps/${date}`);
         const napsData = await napsResponse.json();
         setNapsTableTips(napsData);
+
+        // Fetch live odds
+        await fetchLiveOdds();
+
+        // // Set up interval to refresh live odds every 30 seconds
+        // const oddsInterval = setInterval(fetchLiveOdds, 30000);
+
+        // // Cleanup interval on unmount
+        // return () => clearInterval(oddsInterval);
 
         if (!data) {
           if (!getPageUrl(date) || getPageUrl(date).trim() === "") {
@@ -250,6 +328,7 @@ export function HorsePageClient({ date }: { date: string }) {
       gytoTips={gytoTips?.tips}
       napsTableTips={napsTableTips?.tips}
       nonRunners={nonRunners}
+      liveOdds={liveOdds}
     />
   );
 }

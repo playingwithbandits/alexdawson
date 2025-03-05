@@ -10,6 +10,13 @@ import {
   NonRunnerMeeting,
 } from "@/types/racing";
 
+interface LiveOdds {
+  horseName: string;
+  odds: number;
+  time: string;
+  course: string;
+}
+
 interface DashboardContentProps {
   meetings: Meeting[];
   date: string;
@@ -18,6 +25,7 @@ interface DashboardContentProps {
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
   nonRunners: NonRunnerMeeting[];
+  liveOdds: LiveOdds[];
 }
 
 export function DashboardContent({
@@ -28,6 +36,7 @@ export function DashboardContent({
   gytoTips,
   napsTableTips,
   nonRunners,
+  liveOdds,
 }: DashboardContentProps) {
   return (
     <DayPredictions
@@ -38,6 +47,7 @@ export function DashboardContent({
       gytoTips={gytoTips}
       napsTableTips={napsTableTips}
       nonRunners={nonRunners}
+      liveOdds={liveOdds}
     />
   );
 }

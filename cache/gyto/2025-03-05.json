@@ -1,0 +1,105 @@
+{
+  "date": "2025-03-05",
+  "tips": [
+    {
+      "time": "13:42",
+      "horse": "Green Team",
+      "isNap": false
+    },
+    {
+      "time": "14:12",
+      "horse": "Big Sip",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Francis Drake",
+      "isNap": false
+    },
+    {
+      "time": "15:12",
+      "horse": "Watermelon Sugar",
+      "isNap": true
+    },
+    {
+      "time": "16:12",
+      "horse": "Kitaro Kich",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "Coolagh Magic",
+      "isNap": false
+    },
+    {
+      "time": "17:17",
+      "horse": "Backer Bilk",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Collingham",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Magical Annie",
+      "isNap": true
+    },
+    {
+      "time": "15:25",
+      "horse": "Treaty Boy",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Lahire",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Eva'S Oskar",
+      "isNap": false
+    },
+    {
+      "time": "16:22",
+      "horse": "Nobleman",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Olivia Jane",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Naughty Eyes",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Ernie'S Valentine",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Tea Sea",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Mr Baloo",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Supreme King",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Almosh'Her",
+      "isNap": false
+    }
+  ]
+}
