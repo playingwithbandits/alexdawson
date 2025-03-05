@@ -3,17 +3,51 @@
     "courseName": "Market Rasen",
     "raceCardsCourseUrl": "/racecards/2025-03-04#market-rasen",
     "raceCardsCourseMeetingsUrl": "/racecards/35/market-rasen/2025-03-04",
-    "going": "GOOD TO SOFT, Good in places on Hurdle course (GoingStick: Chase 7.9, Hurdle 6.5) (Rail movements: 2.05 & 3.35 +156yds and 4.40 +78yds)",
+    "going": "GOOD TO SOFT (Good in places; Chs 7.9, Hdl 6.5)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-03-04/887263",
+        "horses": [
+          {
+            "horseName": "Foreverwalking",
+            "horseProfileUrl": "/profile/horse/4261311/foreverwalking/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-03-04/887261",
+        "horses": [
+          {
+            "horseName": "Alto Alto",
+            "horseProfileUrl": "/profile/horse/3457998/alto-alto/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-03-04/887262",
+        "horses": [
+          {
+            "horseName": "Coastal Rock",
+            "horseProfileUrl": "/profile/horse/4969962/coastal-rock/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Newcastle (AW)",
     "raceCardsCourseUrl": "/racecards/2025-03-04#newcastle-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-03-04",
     "going": "TAPETA: STANDARD",
-    "weather": "Cloudy",
+    "weather": "Overcast dry",
     "stallsPosition": "Straight - Centre; 1m4f - Outside",
     "races": []
   },
@@ -33,6 +67,27 @@
             "horseName": "Cloudside Rock",
             "horseProfileUrl": "/profile/horse/5920415/cloudside-rock/",
             "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Compiegne",
+    "raceCardsCourseUrl": "/racecards/2025-03-04#compiegne",
+    "raceCardsCourseMeetingsUrl": "/racecards/291/compiegne/2025-03-04",
+    "going": "TURF: HEAVY",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "11:55",
+        "raceCardUrl": "/racecards/291/compiegne/2025-03-04/889787",
+        "horses": [
+          {
+            "horseName": "Montquin",
+            "horseProfileUrl": "/profile/horse/7222356/montquin/",
+            "raceNumber": "(4)"
           }
         ]
       }
