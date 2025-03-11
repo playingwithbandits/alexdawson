@@ -1,0 +1,125 @@
+{
+  "date": "2025-03-06",
+  "tips": [
+    {
+      "time": "14:10",
+      "horse": "Ask Peter",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Miss Goldfire",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Soigneux Bell",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Demoiselle Kap",
+      "isNap": true
+    },
+    {
+      "time": "16:40",
+      "horse": "Bras D'Or",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Celtic Fortune",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Miss Altea Blue",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Dunstall Rambler",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Regent'S Stroll",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Saladins Son",
+      "isNap": true
+    },
+    {
+      "time": "17:20",
+      "horse": "Just Aidan",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Spinning Web",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Welcome Back",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Joueuse Royale",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Cowper Hall",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Mack The Chemist",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Crossing The Bar",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Sunset Boulevard",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Odd Socks Havana",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Noble Testimony",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Overnight Oats",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Latin Five",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Cloch Nua",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Doon The Glen",
+      "isNap": false
+    }
+  ]
+}

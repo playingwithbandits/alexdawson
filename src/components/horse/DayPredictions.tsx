@@ -13,6 +13,7 @@ import {
   RaceResults,
   NapsTableTip,
   NonRunnerMeeting,
+  RtWebTip,
 } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
@@ -44,6 +45,7 @@ interface DayPredictionsProps {
   napsTableTips: NapsTableTip[] | undefined;
   nonRunners: NonRunnerMeeting[];
   liveOdds: LiveOdds[];
+  rtWebTips: RtWebTip[] | undefined;
 }
 
 export const normalizeTime = (time: string) => {
@@ -65,6 +67,7 @@ export function DayPredictions({
   napsTableTips,
   nonRunners,
   liveOdds,
+  rtWebTips,
 }: DayPredictionsProps) {
   console.log("nonRunners", nonRunners);
   console.log("liveOdds", liveOdds);
@@ -596,6 +599,8 @@ export function DayPredictions({
                       gytoTips={gytoTips}
                       napsTableTips={napsTableTips}
                       isNonRunner={isNonRunner}
+                      liveOdds={liveOdds}
+                      rtWebTips={rtWebTips}
                     />
                   ))}
                 </div>

@@ -1,0 +1,165 @@
+{
+  "date": "2025-03-11",
+  "tips": [
+    {
+      "time": "13:20",
+      "horse": "Kopek Des Bordes",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "Workahead",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Majborough",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Trelawne",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Broadway Boy",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Whistle Stop Tour",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Lossiemouth",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Constitution Hill",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Wendrock",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Stencil",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Beyond Your Dreams",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Haiti Couleurs",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Hasthing",
+      "isNap": false
+    },
+    {
+      "time": "13:38",
+      "horse": "Demoiselle Kap",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Bond Broker",
+      "isNap": false
+    },
+    {
+      "time": "14:58",
+      "horse": "I'M Too Tired",
+      "isNap": false
+    },
+    {
+      "time": "16:18",
+      "horse": "Ladronne",
+      "isNap": false
+    },
+    {
+      "time": "16:53",
+      "horse": "Ce Mi Run",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Buraback",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "City Escape",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Diamond Dreamer",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Manton Road",
+      "isNap": true
+    },
+    {
+      "time": "19:00",
+      "horse": "Lynwood Lad",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Hawajes",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Coconut Bay",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Enchanted Way",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "King Of Speed",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Jesse Luc",
+      "isNap": true
+    },
+    {
+      "time": "18:15",
+      "horse": "Elegant Erin",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Hammer The Hammer",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Nelson Gay",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Just Rita",
+      "isNap": false
+    }
+  ]
+}

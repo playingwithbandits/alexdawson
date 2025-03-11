@@ -1,0 +1,305 @@
+{
+  "date": "2025-03-11",
+  "tips": [
+    {
+      "time": "14:40",
+      "horse": "Malina Girl",
+      "tipster": "Newsboy",
+      "score": "16.9"
+    },
+    {
+      "time": "17:20",
+      "horse": "Duffle Coat",
+      "tipster": "Matt Polley",
+      "score": "11.3"
+    },
+    {
+      "time": "16:30",
+      "horse": "Em Jay Kay",
+      "tipster": "Rory Paddock",
+      "score": "10.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Whistle Stop Tour",
+      "tipster": "Rob Wright",
+      "score": "8.8"
+    },
+    {
+      "time": "14:40",
+      "horse": "Malina Girl",
+      "tipster": "The Punt",
+      "score": "6.9"
+    },
+    {
+      "time": "20:30",
+      "horse": "Dovey Moon",
+      "tipster": "Melissa Jones",
+      "score": "5.4"
+    },
+    {
+      "time": "16:40",
+      "horse": "Stencil",
+      "tipster": "RP Ratings",
+      "score": "4.1"
+    },
+    {
+      "time": "14:40",
+      "horse": "Katate Dori",
+      "tipster": "Farringdon",
+      "score": "3.6"
+    },
+    {
+      "time": "17:20",
+      "horse": "Will Do",
+      "tipster": "Sam Hardy",
+      "score": "0.6"
+    },
+    {
+      "time": "17:20",
+      "horse": "Haiti Couleurs",
+      "tipster": "Chris Connolly",
+      "score": "-1.8"
+    },
+    {
+      "time": "14:40",
+      "horse": "Famous Bridge",
+      "tipster": "Karl Hedley",
+      "score": "-2.7"
+    },
+    {
+      "time": "14:40",
+      "horse": "Whistle Stop Tour",
+      "tipster": "Jim Delahunt",
+      "score": "-4.0"
+    },
+    {
+      "time": "17:20",
+      "horse": "Gericault Roque",
+      "tipster": "Ian Gaughran",
+      "score": "-4.5"
+    },
+    {
+      "time": "15:38",
+      "horse": "Super Saint",
+      "tipster": "Luke Tucker",
+      "score": "-4.5"
+    },
+    {
+      "time": "14:00",
+      "horse": "L'Eau Du Sud",
+      "tipster": "Glendale",
+      "score": "-6.6"
+    },
+    {
+      "time": "17:20",
+      "horse": "In D'Or",
+      "tipster": "Steve Mullington",
+      "score": "-7.0"
+    },
+    {
+      "time": "13:20",
+      "horse": "Romeo Coolio",
+      "tipster": "Garry Owen",
+      "score": "-6.9"
+    },
+    {
+      "time": "16:40",
+      "horse": "Hot Fuss",
+      "tipster": "The Brigadier",
+      "score": "-7.3"
+    },
+    {
+      "time": "16:40",
+      "horse": "Puturhandstogether",
+      "tipster": "Lee Sobot",
+      "score": "-9.2"
+    },
+    {
+      "time": "14:40",
+      "horse": "Myretown",
+      "tipster": "Jason Heavey",
+      "score": "-9.8"
+    },
+    {
+      "time": "17:20",
+      "horse": "Captain Cody",
+      "tipster": "The Score",
+      "score": "-10.3"
+    },
+    {
+      "time": "19:30",
+      "horse": "Till It Shines",
+      "tipster": "Andrew Mount",
+      "score": "-10.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Henry's Friend",
+      "tipster": "Dean Kilbryde",
+      "score": "-11.6"
+    },
+    {
+      "time": "13:20",
+      "horse": "Kopek Des Bordes",
+      "tipster": "Marlborough",
+      "score": "-11.6"
+    },
+    {
+      "time": "16:18",
+      "horse": "Ladronne",
+      "tipster": "The North",
+      "score": "-13.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Famous Bridge",
+      "tipster": "Postdata",
+      "score": "-14.5"
+    },
+    {
+      "time": "14:40",
+      "horse": "Broadway Boy",
+      "tipster": "West Country",
+      "score": "-16.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "Broadway Boy",
+      "tipster": "Robin Goodfellow",
+      "score": "-17.8"
+    },
+    {
+      "time": "14:40",
+      "horse": "Famous Bridge",
+      "tipster": "Ben Morgan",
+      "score": "-20.2"
+    },
+    {
+      "time": "13:20",
+      "horse": "Tripoli Flyer",
+      "tipster": "Lawrence Taylor",
+      "score": "-21.2"
+    },
+    {
+      "time": "14:40",
+      "horse": "Katate Dori",
+      "tipster": "Whistler",
+      "score": "-22.7"
+    },
+    {
+      "time": "14:40",
+      "horse": "Whistle Stop Tour",
+      "tipster": "Rockavon",
+      "score": "-22.2"
+    },
+    {
+      "time": "17:20",
+      "horse": "Transmission",
+      "tipster": "The Judge",
+      "score": "-21.5"
+    },
+    {
+      "time": "16:18",
+      "horse": "Cave Article",
+      "tipster": "Computeform",
+      "score": "-25.2"
+    },
+    {
+      "time": "17:20",
+      "horse": "Hasthing",
+      "tipster": "Jon Freeman",
+      "score": "-25.4"
+    },
+    {
+      "time": "14:00",
+      "horse": "Majborough",
+      "tipster": "Mercury",
+      "score": "-25.9"
+    },
+    {
+      "time": "16:40",
+      "horse": "Stencil",
+      "tipster": "Templegate",
+      "score": "-26.2"
+    },
+    {
+      "time": "14:40",
+      "horse": "Myretown",
+      "tipster": "Spotlight",
+      "score": "-28.6"
+    },
+    {
+      "time": "14:40",
+      "horse": "Broadway Boy",
+      "tipster": "The Duke",
+      "score": "-32.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "Malina Girl",
+      "tipster": "On The Nose",
+      "score": "-32.9"
+    },
+    {
+      "time": "19:15",
+      "horse": "Gorgeous Mr George",
+      "tipster": "Jeffrey Ross",
+      "score": "-35.2"
+    },
+    {
+      "time": "14:40",
+      "horse": "Whistle Stop Tour",
+      "tipster": "Tipman Tips",
+      "score": "-35.4"
+    },
+    {
+      "time": "17:20",
+      "horse": "Transmission",
+      "tipster": "Brian Flanagan",
+      "score": "-37.7"
+    },
+    {
+      "time": "14:40",
+      "horse": "The Short Go",
+      "tipster": "Ross Shepherd",
+      "score": "-42.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "The Short Go",
+      "tipster": "Fortunatus",
+      "score": "-42.3"
+    },
+    {
+      "time": "14:40",
+      "horse": "Whistle Stop Tour",
+      "tipster": "Chris Wright",
+      "score": "-43.2"
+    },
+    {
+      "time": "15:20",
+      "horse": "Kala Conti",
+      "tipster": "Rory Delargy",
+      "score": "-43.4"
+    },
+    {
+      "time": "15:20",
+      "horse": "July Flower",
+      "tipster": "Moorestyle",
+      "score": "-45.9"
+    },
+    {
+      "time": "16:00",
+      "horse": "Constitution Hill",
+      "tipster": "Adrian Wall",
+      "score": "-54.1"
+    },
+    {
+      "time": "16:40",
+      "horse": "Quantock Hills",
+      "tipster": "Lambourn",
+      "score": "-56.6"
+    }
+  ]
+}

@@ -3,10 +3,21 @@
     "courseName": "Catterick",
     "raceCardsCourseUrl": "/racecards/2025-03-05#catterick",
     "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-03-05",
-    "going": "GOOD (GoingStick: 7.3)",
-    "weather": "Partly cloudy",
+    "going": "GOOD (Good to firm in places; Chs 7.4, Hdl 7.7)",
+    "weather": "Fine",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "2:55",
+        "raceCardUrl": "/racecards/10/catterick/2025-03-05/887268",
+        "horses": [
+          {
+            "horseName": "Uokhun",
+            "horseProfileUrl": "/profile/horse/4938914/uokhun/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
       {
         "raceTime": "3:55",
         "raceCardUrl": "/racecards/10/catterick/2025-03-05/887266",
@@ -45,6 +56,17 @@
     "stallsPosition": "Inside",
     "races": [
       {
+        "raceTime": "4:22",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-03-05/887440",
+        "horses": [
+          {
+            "horseName": "John T",
+            "horseProfileUrl": "/profile/horse/6838444/john-t/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
         "raceTime": "5:30",
         "raceCardUrl": "/racecards/1079/kempton-aw/2025-03-05/887441",
         "horses": [
@@ -52,6 +74,17 @@
             "horseName": "Too Sweet",
             "horseProfileUrl": "/profile/horse/5982393/too-sweet/",
             "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-03-05/887437",
+        "horses": [
+          {
+            "horseName": "Gaiety Musical",
+            "horseProfileUrl": "/profile/horse/5973539/gaiety-musical/",
+            "raceNumber": "(5)"
           }
         ]
       }
@@ -62,9 +95,25 @@
     "raceCardsCourseUrl": "/racecards/2025-03-05#lingfield-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-03-05",
     "going": "POLYTRACK: STANDARD",
-    "weather": "Partly cloudy",
+    "weather": "Sunny",
     "stallsPosition": "5f & 1m - Outside; Remainder - Inside",
     "races": [
+      {
+        "raceTime": "4:12",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-03-05/887448",
+        "horses": [
+          {
+            "horseName": "Land Lover",
+            "horseProfileUrl": "/profile/horse/5048137/land-lover/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Triggered",
+            "horseProfileUrl": "/profile/horse/1860182/triggered/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
       {
         "raceTime": "4:42",
         "raceCardUrl": "/racecards/393/lingfield-aw/2025-03-05/887446",
@@ -94,6 +143,86 @@
             "horseName": "Fury And Gold",
             "horseProfileUrl": "/profile/horse/5541857/fury-and-gold/",
             "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "11:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-05/889817",
+        "horses": [
+          {
+            "horseName": "Northern Fire Ball",
+            "horseProfileUrl": "/profile/horse/6492161/northern-fire-ball/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Triumphant Warrior",
+            "horseProfileUrl": "/profile/horse/5453363/triumphant-warrior/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-05/889819",
+        "horses": [
+          {
+            "horseName": "Find My Love",
+            "horseProfileUrl": "/profile/horse/3583178/find-my-love/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Island Buddy",
+            "horseProfileUrl": "/profile/horse/5800858/island-buddy/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-05/889820",
+        "horses": [
+          {
+            "horseName": "Fight Time",
+            "horseProfileUrl": "/profile/horse/5598824/fight-time/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Gameplayer Elite",
+            "horseProfileUrl": "/profile/horse/5410624/gameplayer-elite/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-05/889821",
+        "horses": [
+          {
+            "horseName": "Confringo",
+            "horseProfileUrl": "/profile/horse/5947047/confringo/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Baby Satellite",
+            "horseProfileUrl": "/profile/horse/6582526/baby-satellite/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-05/889823",
+        "horses": [
+          {
+            "horseName": "Celestial Harmony",
+            "horseProfileUrl": "/profile/horse/5244554/celestial-harmony/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "To Infinity",
+            "horseProfileUrl": "/profile/horse/4305421/to-infinity/",
+            "raceNumber": "(14)"
           }
         ]
       }

@@ -19,6 +19,7 @@ export const horseNameToKey = (horse_name: string) => {
   const input = horse_name?.trim();
   const output = input
     ?.toLowerCase()
+    .replace(/\s*\([^)]*\)/g, "")
     .replace(/[(]*nap[)]*$/gi, "")
     .replace(/'/gi, "")
     .replace(/\s+/g, "")

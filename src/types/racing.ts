@@ -604,6 +604,17 @@ export interface DayTips {
   timeformTips: CourseTips[];
 }
 
+export interface RtWebTip {
+  horseName: string;
+  time: string;
+  rating: number;
+}
+
+export interface RtWebData {
+  date: string;
+  tips: RtWebTip[];
+}
+
 export interface GytoTip {
   time: string;
   horse: string;

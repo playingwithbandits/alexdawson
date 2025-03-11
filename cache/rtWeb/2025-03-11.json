@@ -1,0 +1,65 @@
+{
+  "date": "2025-03-11",
+  "tips": [
+    {
+      "horseName": "Seas Of Elzaam (IRE)",
+      "time": "19:00",
+      "rating": 70.6
+    },
+    {
+      "horseName": "Rogue Thunder",
+      "time": "19:30",
+      "rating": 80.2
+    },
+    {
+      "horseName": "Coconut Bay",
+      "time": "20:00",
+      "rating": 72.8
+    },
+    {
+      "horseName": "Demoiselle Kap",
+      "time": "13:38",
+      "rating": 91.1
+    },
+    {
+      "horseName": "Bond Broker",
+      "time": "14:18",
+      "rating": 88.6
+    },
+    {
+      "horseName": "Fearless Action",
+      "time": "14:58",
+      "rating": 70.7
+    },
+    {
+      "horseName": "Love True",
+      "time": "15:38",
+      "rating": 81.1
+    },
+    {
+      "horseName": "Ladronne (FR)",
+      "time": "16:18",
+      "rating": 66.7
+    },
+    {
+      "horseName": "Majborough",
+      "time": "14:00",
+      "rating": 83.7
+    },
+    {
+      "horseName": "Lossiemouth",
+      "time": "15:20",
+      "rating": 88.9
+    },
+    {
+      "horseName": "Constitution Hill",
+      "time": "16:00",
+      "rating": 89.9
+    },
+    {
+      "horseName": "Haiti Couleurs",
+      "time": "17:20",
+      "rating": 75.8
+    }
+  ]
+}

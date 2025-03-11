@@ -1,0 +1,87 @@
+[
+  {
+    "courseName": "Cheltenham",
+    "raceCardsCourseUrl": "/racecards/2025-03-12#cheltenham",
+    "raceCardsCourseMeetingsUrl": "/racecards/11/cheltenham/2025-03-12",
+    "going": "GOOD TO SOFT, Good in places on Cross-Country Course (GoingStick: Old 5.5, Cross-Country 5.1) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Huntingdon",
+    "raceCardsCourseUrl": "/racecards/2025-03-12#huntingdon",
+    "raceCardsCourseMeetingsUrl": "/racecards/26/huntingdon/2025-03-12",
+    "going": "GOOD (GoingStick: 7.1) (Watered) (Rail Movements: 12.28, 1.38 & 4.18 +128yds, 12.58 +40yds, 2.18 & 2.58 +155yds and 3.38 +31yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:58",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-12/888211",
+        "horses": [
+          {
+            "horseName": "Glenvango",
+            "horseProfileUrl": "/profile/horse/5499900/glenvango/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:38",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-12/888210",
+        "horses": [
+          {
+            "horseName": "Kings Justice",
+            "horseProfileUrl": "/profile/horse/4185054/kings-justice/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Thunder N Lightnin",
+            "horseProfileUrl": "/profile/horse/4173294/thunder-n-lightnin/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-12#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-03-12",
+    "going": "TAPETA: STANDARD",
+    "weather": "Showers",
+    "stallsPosition": "Straight - Centre; 2m - Inside",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-12/888412",
+        "horses": [
+          {
+            "horseName": "Rebecca's Girl",
+            "horseProfileUrl": "/profile/horse/4891160/rebeccas-girl/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-12#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-03-12",
+    "going": "TAPETA: STANDARD",
+    "weather": "Rain and snow",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-03-12#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-03-12",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

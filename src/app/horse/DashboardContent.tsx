@@ -8,6 +8,7 @@ import {
   GytoTip,
   NapsTableTip,
   NonRunnerMeeting,
+  RtWebTip,
 } from "@/types/racing";
 
 interface LiveOdds {
@@ -26,6 +27,7 @@ interface DashboardContentProps {
   napsTableTips: NapsTableTip[] | undefined;
   nonRunners: NonRunnerMeeting[];
   liveOdds: LiveOdds[];
+  rtWebTips: RtWebTip[] | undefined;
 }
 
 export function DashboardContent({
@@ -37,6 +39,7 @@ export function DashboardContent({
   napsTableTips,
   nonRunners,
   liveOdds,
+  rtWebTips,
 }: DashboardContentProps) {
   return (
     <DayPredictions
@@ -48,6 +51,7 @@ export function DashboardContent({
       napsTableTips={napsTableTips}
       nonRunners={nonRunners}
       liveOdds={liveOdds}
+      rtWebTips={rtWebTips}
     />
   );
 }

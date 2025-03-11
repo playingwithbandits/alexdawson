@@ -1,0 +1,300 @@
+[
+  {
+    "courseName": "Fontwell",
+    "raceCardsCourseUrl": "/racecards/2025-03-06#fontwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/20/fontwell/2025-03-06",
+    "going": "Chase course - SOFT (Good to soft in places; 6.1); Hurdle course - GOOD TO SOFT (Good in places; 6.1)",
+    "weather": "Sunny spells throughout the day",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/20/fontwell/2025-03-06/887276",
+        "horses": [
+          {
+            "horseName": "Storming Nelson",
+            "horseProfileUrl": "/profile/horse/4938769/storming-nelson/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/20/fontwell/2025-03-06/887273",
+        "horses": [
+          {
+            "horseName": "Smart Casual",
+            "horseProfileUrl": "/profile/horse/4733694/smart-casual/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-06#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-03-06",
+    "going": "TAPETA: STANDARD",
+    "weather": "Dry",
+    "stallsPosition": "1m2f - Outside; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-06/887454",
+        "horses": [
+          {
+            "horseName": "Sandret",
+            "horseProfileUrl": "/profile/horse/2489325/sandret/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-06/887455",
+        "horses": [
+          {
+            "horseName": "Odd Socks Havana",
+            "horseProfileUrl": "/profile/horse/3340061/odd-socks-havana/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-06/887450",
+        "horses": [
+          {
+            "horseName": "Mr Mistoffelees",
+            "horseProfileUrl": "/profile/horse/4001894/mr-mistoffelees/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Thurles",
+    "raceCardsCourseUrl": "/racecards/2025-03-06#thurles",
+    "raceCardsCourseMeetingsUrl": "/racecards/198/thurles/2025-03-06",
+    "going": "GOOD TO YIELDING (Yielding in places; watered) changing to GOOD (Good to yielding in places) after Race 4 (4.00)",
+    "weather": "Light cloud",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/198/thurles/2025-03-06/889698",
+        "horses": [
+          {
+            "horseName": "Shotgun Jack",
+            "horseProfileUrl": "/profile/horse/4366850/shotgun-jack/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/198/thurles/2025-03-06/889700",
+        "horses": [
+          {
+            "horseName": "Astelia",
+            "horseProfileUrl": "/profile/horse/3862918/astelia/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Mister Box",
+            "horseProfileUrl": "/profile/horse/6829600/mister-box/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Young And Foolish",
+            "horseProfileUrl": "/profile/horse/7209397/young-and-foolish/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "God Of Thunder",
+            "horseProfileUrl": "/profile/horse/3366681/god-of-thunder/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Underhercontrol",
+            "horseProfileUrl": "/profile/horse/6763604/underhercontrol/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/198/thurles/2025-03-06/889701",
+        "horses": [
+          {
+            "horseName": "Kp's Ladyofknock",
+            "horseProfileUrl": "/profile/horse/5809859/kps-ladyofknock/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Southgate Avenue",
+            "horseProfileUrl": "/profile/horse/6640614/southgate-avenue/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Walk Of The Roses",
+            "horseProfileUrl": "/profile/horse/5073380/walk-of-the-roses/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/198/thurles/2025-03-06/889702",
+        "horses": [
+          {
+            "horseName": "Beckistine",
+            "horseProfileUrl": "/profile/horse/6630911/beckistine/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/198/thurles/2025-03-06/889703",
+        "horses": [
+          {
+            "horseName": "Carrig Sam",
+            "horseProfileUrl": "/profile/horse/3265165/carrig-sam/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Donkey Years",
+            "horseProfileUrl": "/profile/horse/2941417/donkey-years/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Arion Soldier",
+            "horseProfileUrl": "/profile/horse/5383925/arion-soldier/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/198/thurles/2025-03-06/889704",
+        "horses": [
+          {
+            "horseName": "Super Fly",
+            "horseProfileUrl": "/profile/horse/6864634/super-fly/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Sinngali",
+            "horseProfileUrl": "/profile/horse/5870140/sinngali/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Justabitofyours",
+            "horseProfileUrl": "/profile/horse/58956247/justabitofyours/",
+            "raceNumber": "(20)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wincanton",
+    "raceCardsCourseUrl": "/racecards/2025-03-06#wincanton",
+    "raceCardsCourseMeetingsUrl": "/racecards/90/wincanton/2025-03-06",
+    "going": "GOOD TO SOFT (Good in places; 4.8)",
+    "weather": "Overcast with sunny intervals",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/90/wincanton/2025-03-06/887282",
+        "horses": [
+          {
+            "horseName": "Kadex",
+            "horseProfileUrl": "/profile/horse/4197086/kadex/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/90/wincanton/2025-03-06/887283",
+        "horses": [
+          {
+            "horseName": "Cracker Muddle",
+            "horseProfileUrl": "/profile/horse/7152223/cracker-muddle/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/90/wincanton/2025-03-06/887279",
+        "horses": [
+          {
+            "horseName": "Siam Park",
+            "horseProfileUrl": "/profile/horse/4867603/siam-park/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/90/wincanton/2025-03-06/887284",
+        "horses": [
+          {
+            "horseName": "Gorcombe Blueskye",
+            "horseProfileUrl": "/profile/horse/7055598/gorcombe-blueskye/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/90/wincanton/2025-03-06/887278",
+        "horses": [
+          {
+            "horseName": "Hudson De Grugy",
+            "horseProfileUrl": "/profile/horse/3098179/hudson-de-grugy/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Saint-Cloud",
+    "raceCardsCourseUrl": "/racecards/2025-03-06#saint-cloud",
+    "raceCardsCourseMeetingsUrl": "/racecards/219/saint-cloud/2025-03-06",
+    "going": "TURF: HEAVY",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:55",
+        "raceCardUrl": "/racecards/219/saint-cloud/2025-03-06/890044",
+        "horses": [
+          {
+            "horseName": "Sheema's Rose",
+            "horseProfileUrl": "/profile/horse/5784922/sheemas-rose/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/219/saint-cloud/2025-03-06/890049",
+        "horses": [
+          {
+            "horseName": "Meyudine'K",
+            "horseProfileUrl": "/profile/horse/6969838/meyudinek/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  }
+]

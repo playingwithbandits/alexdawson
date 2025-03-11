@@ -6,6 +6,7 @@ import {
   Race,
   RaceResults,
   LiveOdds,
+  RtWebTip,
 } from "@/types/racing";
 import { normalizeTime } from "../DayPredictions";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
@@ -22,6 +23,7 @@ interface PicksRaceRowProps {
   napsTableTips: NapsTableTip[] | undefined;
   isNonRunner: (time: string, selection: string) => boolean;
   liveOdds: LiveOdds[];
+  rtWebTips: RtWebTip[] | undefined;
 }
 
 export function PicksRaceRow({
@@ -35,6 +37,7 @@ export function PicksRaceRow({
   napsTableTips,
   isNonRunner,
   liveOdds,
+  rtWebTips,
 }: PicksRaceRowProps) {
   console.log("CompactRaceRow", {
     isTodayOrPast,
@@ -45,6 +48,7 @@ export function PicksRaceRow({
     tips,
     gytoTips,
     napsTableTips,
+    rtWebTips,
   });
 
   const topAiPercentage = race?.horses?.sort(
@@ -53,17 +57,23 @@ export function PicksRaceRow({
   )?.[0]?.score?.total?.percentage;
   //const fivePercentOffTop = topPercentage ? topPercentage * 0.95 : 100;
 
-  const aiTopPicks = race?.horses?.filter((x) => x.score?.total?.percentage);
+  const aiTopPicks = race?.horses
+    ?.filter((x) => x.score?.total?.percentage)
+    .filter(
+      (x) => x.score?.total?.percentage && x.score?.total?.percentage >= 50
+    );
   const worseAiPercentageScore = Math.min(
-    ...aiTopPicks?.map((x) => x.score?.total?.percentage || 0)
+    ...race?.horses
+      ?.filter((x) => x.score?.total?.percentage)
+      ?.map((x) => x.score?.total?.percentage || 0)
   );
 
-  const rpPredictions = Object.values(race.predictions || {}).sort(
-    (a, b) => (b.score || 0) - (a.score || 0)
-  );
+  const rpPredictions = Object.values(race.predictions || {})
+    .sort((a, b) => (b.score || 0) - (a.score || 0))
+    ?.filter((x) => x.score && x.score >= 90);
 
   const worseRpPredictionScore = Math.min(
-    ...rpPredictions?.map((x) => x.score || 0)
+    ...(Object.values(race.predictions || {})?.map((x) => x.score || 0) || [])
   );
 
   const rpVerdictPick = race.raceExtraInfo?.verdict?.selection;
@@ -109,6 +119,10 @@ export function PicksRaceRow({
     (a, b) => (parseFloat(b.score) || 0) - (parseFloat(a.score) || 0)
   );
 
+  const rtWebTipSelections = rtWebTips?.filter(
+    (r) => normalizeTime(r.time) === normalizeTime(race.time)
+  );
+
   // Combine all horse names from different sources:
   // - AI top picks based on percentage threshold
   // - Racing Post predictions
@@ -127,6 +141,7 @@ export function PicksRaceRow({
     ...(timeformTipSelections?.map((x) => x.horse) || []),
     gytoTipSelectionObj ? gytoTipSelectionObj.horse : "",
     ...(napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || []),
+    ...(rtWebTipSelections?.map((x) => x.horseName) || []),
   ].filter((x) => x !== "" && x !== undefined);
 
   console.log(
@@ -140,6 +155,7 @@ export function PicksRaceRow({
       "6": gytoTipSelectionObj ? gytoTipSelectionObj.horse : "",
       "7": napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || [],
       "8": rpVerdictAllOthers || [],
+      "9": rtWebTipSelections?.map((x) => x.horseName) || [],
     },
     race.time,
     gytoTips,
@@ -185,7 +201,10 @@ export function PicksRaceRow({
       ? [[gytoTipSelectionObj?.horse, gytoTipSelectionIsNap ? 0.75 : 0.5]]
       : []),
     ...(napsTableTipSelectionsScoreSorted?.map(
-      (x) => [x.horse, 0.5] as [string, number]
+      (x) => [x.horse, parseFloat(x.score) > 0 ? 0.5 : 0.25] as [string, number]
+    ) || []),
+    ...(rtWebTipSelections?.map(
+      (x) => [x.horseName, 0.5] as [string, number]
     ) || []),
   ];
 
@@ -228,7 +247,7 @@ export function PicksRaceRow({
   //const topScorePerc20Perc = topScorePerc * 0.8;
 
   const getLiveOddsForHorse = (horseName: string) => {
-    return liveOdds.find(
+    return liveOdds?.find(
       (odds) =>
         cleanName(odds.horseName) === cleanName(horseName) &&
         normalizeTime(odds.time) === normalizeTime(race.time) &&
@@ -247,7 +266,7 @@ export function PicksRaceRow({
       </div>
 
       <div
-        className={`w-full flex-1 grid ${"grid-cols-9"} gap-2 items-baseline text-sm`}
+        className={`w-full flex-1 grid ${"grid-cols-10"} gap-2 items-baseline text-sm`}
       >
         <div className="flex flex-col gap-2">
           {aiTopPicks?.map((x, x_i) => (
@@ -408,6 +427,25 @@ export function PicksRaceRow({
             />
           ))}
         </div>
+
+        <div className="flex flex-col gap-2">
+          {rtWebTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={
+                race.bettingForecast?.find(
+                  (y) => cleanName(y.horseName) === cleanName(x.horseName)
+                )?.decimalOdds || 0
+              }
+              isNonRunner={isNonRunner(race.time, x.horseName || "")}
+              greyedOut={false}
+              title={"RT Web Tip: " + x.horseName}
+            />
+          ))}
+        </div>
         <div className="flex flex-col col-span-2 gap-2">
           {nameCountsWithPerc?.map(([name, count, perc], x_i) => {
             const odds =
@@ -427,9 +465,9 @@ export function PicksRaceRow({
                 extraText={`${count.toFixed(
                   1
                 )} : ${perc}% : ${decimalOdds.toFixed(1)}`}
-                oddsHighlight={odds > decimalOdds && count > 1.25}
+                oddsHighlight={odds > 6 && count > 2}
                 isNonRunner={isNonRunner(race.time, name)}
-                greyedOut={count <= 1}
+                greyedOut={count < 2}
                 title={
                   "Name: " +
                   name +
@@ -441,8 +479,8 @@ export function PicksRaceRow({
                   ": " +
                   decimalOdds.toFixed(1)
                 }
-                highlight1={count > 1.25 && perc >= 40}
-                highlight2={count > 1.25 && perc >= 50}
+                highlight1={count >= 3}
+                highlight2={count >= 4}
               />
             );
           })}
