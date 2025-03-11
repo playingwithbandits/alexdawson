@@ -19,26 +19,26 @@ async function fetchAndParseTips(): Promise<RtWebTip[]> {
     "https://alexdawson.co.uk/getP.php?q=https://racingoracle.com/tips.php"
   );
   const html = await response.text();
-  console.log("fetchAndParseTips", html);
+  //console.log("fetchAndParseTips", html);
   const $ = cheerio.load(html);
 
   const tips: RtWebTip[] = [];
 
   $("tip").each((_, element) => {
     const el = $(element);
-    console.log("fetchAndParseTips el", el);
+    //console.log("fetchAndParseTips el", el);
     // Parse tip content
     const tipText = el.text().trim();
-    console.log("fetchAndParseTips tipText", tipText);
+    //console.log("fetchAndParseTips tipText", tipText);
     const match = tipText?.match(/^(\d{2}:\d{2})\s+(.*?)\s*\((\d+\.\d+)\)$/);
-    console.log("fetchAndParseTips match", match);
+    //1console.log("fetchAndParseTips match", match);
 
     if (match) {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const [_, time, horseName, rating] = match;
-      console.log("fetchAndParseTips horseName", horseName);
-      console.log("fetchAndParseTips time", time);
-      console.log("fetchAndParseTips rating", rating);
+      //console.log("fetchAndParseTips horseName", horseName);
+      //console.log("fetchAndParseTips time", time);
+      //console.log("fetchAndParseTips rating", rating);
 
       tips.push({
         horseName,
@@ -47,7 +47,7 @@ async function fetchAndParseTips(): Promise<RtWebTip[]> {
       });
     }
   });
-  console.log("fetchAndParseTips tips", tips);
+  //console.log("fetchAndParseTips tips", tips);
   return tips;
 }
 
