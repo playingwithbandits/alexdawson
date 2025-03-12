@@ -1,0 +1,15 @@
+{
+  "date": "2025-03-12",
+  "tips": [
+    {
+      "horseName": "Stumptown",
+      "time": "15:20",
+      "rating": 79.4
+    },
+    {
+      "horseName": "Jonbon (FR)",
+      "time": "16:00",
+      "rating": 85.7
+    }
+  ]
+}

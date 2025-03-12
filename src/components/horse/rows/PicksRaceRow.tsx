@@ -367,7 +367,7 @@ export function PicksRaceRow({
               }
               isNonRunner={isNonRunner(race.time, x.horse || "")}
               greyedOut={false}
-              title={"ATR Tip: " + x.horse}
+              title={"ATR Tip: " + x.comment}
             />
           ))}
         </div>
@@ -385,7 +385,7 @@ export function PicksRaceRow({
               }
               isNonRunner={isNonRunner(race.time, x.horse || "")}
               greyedOut={false}
-              title={"Timeform Tip: " + x.horse}
+              title={"Timeform Tip: " + x.comment}
             />
           ))}
         </div>
@@ -423,7 +423,15 @@ export function PicksRaceRow({
               }
               isNonRunner={isNonRunner(race.time, x.horse || "")}
               greyedOut={false}
-              title={"Naps Table Tip: " + x.horse + " (Score: " + x.score + ")"}
+              title={
+                "Naps Table Tip: " +
+                x.horse +
+                " (Score: " +
+                x.score +
+                ", Tipster: " +
+                x.tipster +
+                ")"
+              }
             />
           ))}
         </div>
