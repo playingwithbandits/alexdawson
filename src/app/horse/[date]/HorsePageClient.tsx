@@ -116,6 +116,22 @@ function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
 }
 
+function isGoda(date: string): boolean {
+  const today = new Date().toISOString().split("T")[0];
+  const requestDate = new Date(date);
+  const currentTime = new Date();
+  const cutoffTime = new Date();
+  cutoffTime.setHours(10, 30, 0, 0);
+
+  // If it's not today, return false
+  if (date !== today) {
+    return false;
+  }
+
+  // If it's today and past 10:30am, return true
+  return currentTime >= cutoffTime;
+}
+
 export function HorsePageClient({ date }: { date: string }) {
   const [meetings, setMeetings] = useState<Meeting[]>([]);
   const [loading, setLoading] = useState(true);

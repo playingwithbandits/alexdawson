@@ -12,7 +12,7 @@
     "courseName": "Huntingdon",
     "raceCardsCourseUrl": "/racecards/2025-03-12#huntingdon",
     "raceCardsCourseMeetingsUrl": "/racecards/26/huntingdon/2025-03-12",
-    "going": "GOOD (GoingStick: 7.1) (Watered) (Rail Movements: 12.28, 1.38 & 4.18 +128yds, 12.58 +40yds, 2.18 & 2.58 +155yds and 3.38 +31yds)",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.1) (Watered) (Rail Movements: 12.28, 1.38 & 4.18 +128yds, 12.58 +40yds, 2.18 & 2.58 +155yds and 3.38 +31yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
     "races": [
@@ -40,6 +40,17 @@
             "horseName": "Thunder N Lightnin",
             "horseProfileUrl": "/profile/horse/4173294/thunder-n-lightnin/",
             "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:18",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-12/888213",
+        "horses": [
+          {
+            "horseName": "Java Jackie",
+            "horseProfileUrl": "/profile/horse/6928485/java-jackie/",
+            "raceNumber": "(6)"
           }
         ]
       }
@@ -71,9 +82,21 @@
     "raceCardsCourseUrl": "/racecards/2025-03-12#wolverhampton-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-03-12",
     "going": "TAPETA: STANDARD",
-    "weather": "Rain and snow",
+    "weather": "Rain",
     "stallsPosition": "7f - Outside; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-12/888402",
+        "horses": [
+          {
+            "horseName": "Shamardia",
+            "horseProfileUrl": "/profile/horse/5021418/shamardia/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Happy Valley",
