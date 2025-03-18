@@ -1,0 +1,210 @@
+{
+  "date": "2025-03-13",
+  "tips": [
+    {
+      "time": "12:30",
+      "horse": "Action Plan",
+      "isNap": false
+    },
+    {
+      "time": "13:00",
+      "horse": "Mozzies Sister",
+      "isNap": false
+    },
+    {
+      "time": "13:34",
+      "horse": "A Mere Bagatelle",
+      "isNap": false
+    },
+    {
+      "time": "14:14",
+      "horse": "Custom Taylor",
+      "isNap": false
+    },
+    {
+      "time": "14:54",
+      "horse": "Midweek Voices",
+      "isNap": false
+    },
+    {
+      "time": "15:34",
+      "horse": "Lake Chad",
+      "isNap": false
+    },
+    {
+      "time": "16:14",
+      "horse": "Maciver",
+      "isNap": false
+    },
+    {
+      "time": "16:54",
+      "horse": "Fruit De Mer",
+      "isNap": false
+    },
+    {
+      "time": "13:05",
+      "horse": "Dickens",
+      "isNap": false
+    },
+    {
+      "time": "13:42",
+      "horse": "Benmore",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Breeze Of Wind",
+      "isNap": false
+    },
+    {
+      "time": "15:42",
+      "horse": "Baratablet",
+      "isNap": false
+    },
+    {
+      "time": "16:22",
+      "horse": "I See The Sea",
+      "isNap": true
+    },
+    {
+      "time": "17:00",
+      "horse": "Clovis Boy",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "Aurora Vega",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "Jubilee Alpha",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Springwell Bay",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Firefox",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Moon D'Orange",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Win Some Lose Some",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Catch Him Derry",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Fact To File",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Teahupoo",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Masaccio",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Mint Boy",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Nine Graces",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Walking On Air",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Eva Rosie",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Ana Emaraaty",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Cemlyn",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Papa Oscar",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "So Quiet",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "King'S Crown",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "William Dewhirst",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Odd Socks Havana",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Amaysmont",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Champagne On Ice",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Just Ten High",
+      "isNap": true
+    },
+    {
+      "time": "19:15",
+      "horse": "Penzance",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Cerulean Summer",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Drifts Away",
+      "isNap": false
+    }
+  ]
+}

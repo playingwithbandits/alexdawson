@@ -1,0 +1,299 @@
+{
+  "date": "2025-03-16",
+  "tips": [
+    {
+      "time": "15:37",
+      "horse": "Shantwopointfive",
+      "tipster": "Newsboy",
+      "score": "12.5"
+    },
+    {
+      "time": "14:52",
+      "horse": "Ballywood",
+      "tipster": "Steve Mullington",
+      "score": "12.5"
+    },
+    {
+      "time": "14:22",
+      "horse": "Joining Force",
+      "tipster": "Matt Polley",
+      "score": "7.0"
+    },
+    {
+      "time": "14:10",
+      "horse": "Rathbranchurch",
+      "tipster": "Rory Paddock",
+      "score": "6.6"
+    },
+    {
+      "time": "16:12",
+      "horse": "Sao Carlos",
+      "tipster": "Jason Heavey",
+      "score": "6.0"
+    },
+    {
+      "time": "15:57",
+      "horse": "Geordie Night",
+      "tipster": "Rob Wright",
+      "score": "4.5"
+    },
+    {
+      "time": "15:45",
+      "horse": "Raadobarg",
+      "tipster": "The Punt",
+      "score": "3.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "Laugh A Minute",
+      "tipster": "Chris Connolly",
+      "score": "1.7"
+    },
+    {
+      "time": "16:47",
+      "horse": "Monbari",
+      "tipster": "Melissa Jones",
+      "score": "1.4"
+    },
+    {
+      "time": "15:37",
+      "horse": "Shantwopointfive",
+      "tipster": "RP Ratings",
+      "score": "0.2"
+    },
+    {
+      "time": "15:45",
+      "horse": "Gleneagle Bay",
+      "tipster": "Lee Sobot",
+      "score": "-0.1"
+    },
+    {
+      "time": "15:02",
+      "horse": "Militaire",
+      "tipster": "Farringdon",
+      "score": "-0.5"
+    },
+    {
+      "time": "15:45",
+      "horse": "Take Heart",
+      "tipster": "Sam Hardy",
+      "score": "-2.5"
+    },
+    {
+      "time": "14:32",
+      "horse": "Newton Tornado",
+      "tipster": "Glendale",
+      "score": "-5.9"
+    },
+    {
+      "time": "15:10",
+      "horse": "Wannabe Royal",
+      "tipster": "Luke Tucker",
+      "score": "-6.1"
+    },
+    {
+      "time": "14:40",
+      "horse": "Big Gossey",
+      "tipster": "Karl Hedley",
+      "score": "-6.5"
+    },
+    {
+      "time": "15:45",
+      "horse": "Fleetfoot",
+      "tipster": "Jim Delahunt",
+      "score": "-7.8"
+    },
+    {
+      "time": "15:57",
+      "horse": "Serious Chat",
+      "tipster": "Ian Gaughran",
+      "score": "-8.5"
+    },
+    {
+      "time": "15:37",
+      "horse": "Blue Las",
+      "tipster": "Garry Owen",
+      "score": "-10.4"
+    },
+    {
+      "time": "15:45",
+      "horse": "Gleneagle Bay",
+      "tipster": "Andrew Mount",
+      "score": "-10.9"
+    },
+    {
+      "time": "15:45",
+      "horse": "Raadobarg",
+      "tipster": "The Brigadier",
+      "score": "-10.8"
+    },
+    {
+      "time": "14:52",
+      "horse": "Smart Casual",
+      "tipster": "Marlborough",
+      "score": "-10.9"
+    },
+    {
+      "time": "15:02",
+      "horse": "Safe Destination",
+      "tipster": "The Score",
+      "score": "-13.7"
+    },
+    {
+      "time": "15:37",
+      "horse": "Blue Las",
+      "tipster": "Dean Kilbryde",
+      "score": "-14.3"
+    },
+    {
+      "time": "14:02",
+      "horse": "Miss Tiara",
+      "tipster": "Whistler",
+      "score": "-16.2"
+    },
+    {
+      "time": "15:45",
+      "horse": "Gleneagle Bay",
+      "tipster": "Robin Goodfellow",
+      "score": "-16.8"
+    },
+    {
+      "time": "15:37",
+      "horse": "Greyval",
+      "tipster": "Postdata",
+      "score": "-17.7"
+    },
+    {
+      "time": "15:02",
+      "horse": "Safe Destination",
+      "tipster": "West Country",
+      "score": "-19.5"
+    },
+    {
+      "time": "15:22",
+      "horse": "Gms Prince",
+      "tipster": "Spotlight",
+      "score": "-19.9"
+    },
+    {
+      "time": "15:02",
+      "horse": "Safe Destination",
+      "tipster": "Rockavon",
+      "score": "-22.1"
+    },
+    {
+      "time": "14:40",
+      "horse": "Laugh A Minute",
+      "tipster": "Ben Morgan",
+      "score": "-23.3"
+    },
+    {
+      "time": "14:40",
+      "horse": "Laugh A Minute",
+      "tipster": "Lawrence Taylor",
+      "score": "-23.6"
+    },
+    {
+      "time": "15:57",
+      "horse": "Serious Chat",
+      "tipster": "Jon Freeman",
+      "score": "-25.0"
+    },
+    {
+      "time": "15:45",
+      "horse": "Raadobarg",
+      "tipster": "The Judge",
+      "score": "-24.4"
+    },
+    {
+      "time": "16:20",
+      "horse": "First Wave",
+      "tipster": "Computeform",
+      "score": "-26.1"
+    },
+    {
+      "time": "15:37",
+      "horse": "Blue Las",
+      "tipster": "Mercury",
+      "score": "-26.9"
+    },
+    {
+      "time": "14:52",
+      "horse": "Smart Casual",
+      "tipster": "Templegate",
+      "score": "-28.4"
+    },
+    {
+      "time": "13:40",
+      "horse": "Army Leave",
+      "tipster": "Brian Flanagan",
+      "score": "-32.9"
+    },
+    {
+      "time": "15:57",
+      "horse": "Ithaka",
+      "tipster": "On The Nose",
+      "score": "-32.6"
+    },
+    {
+      "time": "15:37",
+      "horse": "Love Of Neymore",
+      "tipster": "Ross Shepherd",
+      "score": "-35.0"
+    },
+    {
+      "time": "14:02",
+      "horse": "Jena D'Oudairies",
+      "tipster": "The Duke",
+      "score": "-34.6"
+    },
+    {
+      "time": "14:22",
+      "horse": "Mikimoto",
+      "tipster": "Jeffrey Ross",
+      "score": "-35.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Laugh A Minute",
+      "tipster": "Tipman Tips",
+      "score": "-37.8"
+    },
+    {
+      "time": "15:57",
+      "horse": "Geordie Night",
+      "tipster": "Moorestyle",
+      "score": "-42.6"
+    },
+    {
+      "time": "15:45",
+      "horse": "Raadobarg",
+      "tipster": "Fortunatus",
+      "score": "-44.5"
+    },
+    {
+      "time": "16:32",
+      "horse": "Lagonda",
+      "tipster": "Chris Wright",
+      "score": "-45.4"
+    },
+    {
+      "time": "15:02",
+      "horse": "Safe Destination",
+      "tipster": "Rory Delargy",
+      "score": "-45.5"
+    },
+    {
+      "time": "15:45",
+      "horse": "Gleneagle Bay",
+      "tipster": "Adrian Wall",
+      "score": "-53.2"
+    },
+    {
+      "time": "15:37",
+      "horse": "Shantwopointfive",
+      "tipster": "Lambourn",
+      "score": "-58.3"
+    }
+  ]
+}

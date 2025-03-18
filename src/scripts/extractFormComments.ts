@@ -2,9 +2,14 @@ import fs from "fs/promises";
 import path from "path";
 import { Meeting, Race, Horse } from "@/types/racing";
 
-async function extractComments() {
+async function extractFormComments() {
   const racingCacheDir = path.join(process.cwd(), "cache", "racing");
-  const outputFile = path.join(process.cwd(), "cache", "data", "comments.json");
+  const outputFile = path.join(
+    process.cwd(),
+    "cache",
+    "data",
+    "formComments.json"
+  );
 
   // Ensure data directory exists
   await fs.mkdir(path.join(process.cwd(), "cache", "data"), {
@@ -43,4 +48,4 @@ async function extractComments() {
   // );
 }
 
-extractComments().catch(console.error);
+extractFormComments().catch(console.error);

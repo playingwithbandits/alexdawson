@@ -1,0 +1,40 @@
+{
+  "date": "2025-03-15",
+  "tips": [
+    {
+      "horseName": "Nordic Glory",
+      "time": "19:30",
+      "rating": 74.6
+    },
+    {
+      "horseName": "Two Plus Two",
+      "time": "20:30",
+      "rating": 71.9
+    },
+    {
+      "horseName": "Hidden History",
+      "time": "13:50",
+      "rating": 82.8
+    },
+    {
+      "horseName": "Guard Duty",
+      "time": "14:25",
+      "rating": 70.4
+    },
+    {
+      "horseName": "Tanganyika",
+      "time": "15:00",
+      "rating": 67.3
+    },
+    {
+      "horseName": "Deafening Silence",
+      "time": "15:35",
+      "rating": 75.2
+    },
+    {
+      "horseName": "Intimate",
+      "time": "16:45",
+      "rating": 80
+    }
+  ]
+}

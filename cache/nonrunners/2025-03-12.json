@@ -3,19 +3,42 @@
     "courseName": "Cheltenham",
     "raceCardsCourseUrl": "/racecards/2025-03-12#cheltenham",
     "raceCardsCourseMeetingsUrl": "/racecards/11/cheltenham/2025-03-12",
-    "going": "GOOD TO SOFT, Good in places on Cross-Country Course (GoingStick: Old 5.5, Cross-Country 5.1) (Watered)",
-    "weather": "Partly cloudy",
+    "going": "GOOD TO SOFT (Good in places on Cross-Country Course; Watered: 5.1)",
+    "weather": "Sunny intervals",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-03-12/886029",
+        "horses": [
+          {
+            "horseName": "Highland Haven",
+            "horseProfileUrl": "/profile/horse/6692996/highland-haven/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Huntingdon",
     "raceCardsCourseUrl": "/racecards/2025-03-12#huntingdon",
     "raceCardsCourseMeetingsUrl": "/racecards/26/huntingdon/2025-03-12",
-    "going": "GOOD, Good to soft in places (GoingStick: 7.1) (Watered) (Rail Movements: 12.28, 1.38 & 4.18 +128yds, 12.58 +40yds, 2.18 & 2.58 +155yds and 3.38 +31yds)",
-    "weather": "Partly cloudy",
+    "going": "GOOD (Good to soft in places; Watered: Chs 7.1, Hdl 7.0)",
+    "weather": "Sunny intervals cold",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "12:28",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-12/888208",
+        "horses": [
+          {
+            "horseName": "Early Morning Dew",
+            "horseProfileUrl": "/profile/horse/3248551/early-morning-dew/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
       {
         "raceTime": "2:58",
         "raceCardUrl": "/racecards/26/huntingdon/2025-03-12/888211",
@@ -74,6 +97,33 @@
             "raceNumber": "(1)"
           }
         ]
+      },
+      {
+        "raceTime": "7:45",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-12/888408",
+        "horses": [
+          {
+            "horseName": "Pop Dancer",
+            "horseProfileUrl": "/profile/horse/2755571/pop-dancer/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Henery Hawk",
+            "horseProfileUrl": "/profile/horse/3728987/henery-hawk/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:15",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-12/888406",
+        "horses": [
+          {
+            "horseName": "Code Purple",
+            "horseProfileUrl": "/profile/horse/3749592/code-purple/",
+            "raceNumber": "(6)"
+          }
+        ]
       }
     ]
   },
@@ -82,7 +132,7 @@
     "raceCardsCourseUrl": "/racecards/2025-03-12#wolverhampton-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-03-12",
     "going": "TAPETA: STANDARD",
-    "weather": "Rain",
+    "weather": "Mostly sunny",
     "stallsPosition": "7f - Outside; Remainder - Inside",
     "races": [
       {
@@ -95,6 +145,49 @@
             "raceNumber": "(2)"
           }
         ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-12/890131",
+        "horses": [
+          {
+            "horseName": "Kaaranah",
+            "horseProfileUrl": "/profile/horse/3147622/kaaranah/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-12/888403",
+        "horses": [
+          {
+            "horseName": "Porsche Lad",
+            "horseProfileUrl": "/profile/horse/5248363/porsche-lad/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Compiegne",
+    "raceCardsCourseUrl": "/racecards/2025-03-12#compiegne",
+    "raceCardsCourseMeetingsUrl": "/racecards/291/compiegne/2025-03-12",
+    "going": "TURF: HEAVY",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:36",
+        "raceCardUrl": "/racecards/291/compiegne/2025-03-12/890753",
+        "horses": [
+          {
+            "horseName": "Panarea",
+            "horseProfileUrl": "/profile/horse/6224791/panarea/",
+            "raceNumber": "(13)"
+          }
+        ]
       }
     ]
   },
@@ -102,9 +195,122 @@
     "courseName": "Happy Valley",
     "raceCardsCourseUrl": "/racecards/2025-03-12#happy-valley",
     "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-03-12",
-    "going": "TURF: GOOD",
+    "going": "TURF: GOOD TO FIRM",
     "weather": "",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "10:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-12/890132",
+        "horses": [
+          {
+            "horseName": "Miles Away",
+            "horseProfileUrl": "/profile/horse/4932270/miles-away/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Chateau Le Peche",
+            "horseProfileUrl": "/profile/horse/5646920/chateau-le-peche/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "11:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-12/890133",
+        "horses": [
+          {
+            "horseName": "Super Contented",
+            "horseProfileUrl": "/profile/horse/4982016/super-contented/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Hyper Dragon Ball",
+            "horseProfileUrl": "/profile/horse/3689345/hyper-dragon-ball/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "11:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-12/890134",
+        "horses": [
+          {
+            "horseName": "Young Horizon",
+            "horseProfileUrl": "/profile/horse/4292095/young-horizon/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Leading Article",
+            "horseProfileUrl": "/profile/horse/7117339/leading-article/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-12/890135",
+        "horses": [
+          {
+            "horseName": "Happy United",
+            "horseProfileUrl": "/profile/horse/4904794/happy-united/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Lucky Blessing",
+            "horseProfileUrl": "/profile/horse/6706332/lucky-blessing/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-12/890136",
+        "horses": [
+          {
+            "horseName": "Panda",
+            "horseProfileUrl": "/profile/horse/5431100/panda/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Harmony Galaxy",
+            "horseProfileUrl": "/profile/horse/5055522/harmony-galaxy/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-12/890137",
+        "horses": [
+          {
+            "horseName": "Celtic Times",
+            "horseProfileUrl": "/profile/horse/3481810/celtic-times/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Zetta Force",
+            "horseProfileUrl": "/profile/horse/6793579/zetta-force/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-12/890140",
+        "horses": [
+          {
+            "horseName": "Aestheticism",
+            "horseProfileUrl": "/profile/horse/5031194/aestheticism/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Samarkand",
+            "horseProfileUrl": "/profile/horse/3900191/samarkand/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
   }
 ]

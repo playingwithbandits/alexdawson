@@ -1,0 +1,359 @@
+[
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-03-16#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-03-16",
+    "going": "GOOD (Good to soft in places on Hurdle course; Chs 6.8, Hdl 6.4)",
+    "weather": "Overcast",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:02",
+        "raceCardUrl": "/racecards/12/chepstow/2025-03-16/888259",
+        "horses": [
+          {
+            "horseName": "Paradise Park",
+            "horseProfileUrl": "/profile/horse/5851321/paradise-park/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:32",
+        "raceCardUrl": "/racecards/12/chepstow/2025-03-16/888258",
+        "horses": [
+          {
+            "horseName": "Minneigh Mozze",
+            "horseProfileUrl": "/profile/horse/4584212/minneigh-mozze/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:02",
+        "raceCardUrl": "/racecards/12/chepstow/2025-03-16/888256",
+        "horses": [
+          {
+            "horseName": "Roger Rarebit",
+            "horseProfileUrl": "/profile/horse/3323496/roger-rarebit/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Exmoor Forest",
+            "horseProfileUrl": "/profile/horse/4074035/exmoor-forest/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:37",
+        "raceCardUrl": "/racecards/12/chepstow/2025-03-16/888255",
+        "horses": [
+          {
+            "horseName": "Blue Las",
+            "horseProfileUrl": "/profile/horse/5523893/blue-las/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Love Of Neymore",
+            "horseProfileUrl": "/profile/horse/4187580/love-of-neymore/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:47",
+        "raceCardUrl": "/racecards/12/chepstow/2025-03-16/888260",
+        "horses": [
+          {
+            "horseName": "Orbys River",
+            "horseProfileUrl": "/profile/horse/4652656/orbys-river/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Palawan Du Mazet",
+            "horseProfileUrl": "/profile/horse/5104281/palawan-du-mazet/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:17",
+        "raceCardUrl": "/racecards/12/chepstow/2025-03-16/888261",
+        "horses": [
+          {
+            "horseName": "Tormund Giantsbane",
+            "horseProfileUrl": "/profile/horse/5806762/tormund-giantsbane/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Curragh",
+    "raceCardsCourseUrl": "/racecards/2025-03-16#curragh",
+    "raceCardsCourseMeetingsUrl": "/racecards/178/curragh/2025-03-16",
+    "going": "SOFT",
+    "weather": "Overcast",
+    "stallsPosition": "(Stands' side) Sprints - Centre",
+    "races": [
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-16/890272",
+        "horses": [
+          {
+            "horseName": "Stonezilian",
+            "horseProfileUrl": "/profile/horse/7267895/stonezilian/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-16/890273",
+        "horses": [
+          {
+            "horseName": "Never Shout Never",
+            "horseProfileUrl": "/profile/horse/5092895/never-shout-never/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Tommy McJohn",
+            "horseProfileUrl": "/profile/horse/58956110/tommy-mcjohn/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-16/890275",
+        "horses": [
+          {
+            "horseName": "Wannabe Royal",
+            "horseProfileUrl": "/profile/horse/6838450/wannabe-royal/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Clarabell",
+            "horseProfileUrl": "/profile/horse/6397989/clarabell/",
+            "raceNumber": "(22)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-16/890002",
+        "horses": [
+          {
+            "horseName": "Crypto Force",
+            "horseProfileUrl": "/profile/horse/4352830/crypto-force/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Facethepuckout",
+            "horseProfileUrl": "/profile/horse/1996369/facethepuckout/",
+            "raceNumber": "(29)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-16/890277",
+        "horses": [
+          {
+            "horseName": "Genuine Jim",
+            "horseProfileUrl": "/profile/horse/4584375/genuine-jim/",
+            "raceNumber": "(22)"
+          },
+          {
+            "horseName": "Hemight",
+            "horseProfileUrl": "/profile/horse/5385896/hemight/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Picpoul",
+            "horseProfileUrl": "/profile/horse/3142156/picpoul/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Royal Pippen",
+            "horseProfileUrl": "/profile/horse/3126607/royal-pippen/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-16/890278",
+        "horses": [
+          {
+            "horseName": "Pedro Nunes",
+            "horseProfileUrl": "/profile/horse/7267910/pedro-nunes/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Pinmoney",
+            "horseProfileUrl": "/profile/horse/6873168/pinmoney/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Ze Do Asfalto",
+            "horseProfileUrl": "/profile/horse/6573382/ze-do-asfalto/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Market Rasen",
+    "raceCardsCourseUrl": "/racecards/2025-03-16#market-rasen",
+    "raceCardsCourseMeetingsUrl": "/racecards/35/market-rasen/2025-03-16",
+    "going": "GOOD (Good to soft in places; watered; Chs 6.9, Hdl 7.2)",
+    "weather": "Overcast with showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:52",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-03-16/888265",
+        "horses": [
+          {
+            "horseName": "Lundi Noir",
+            "horseProfileUrl": "/profile/horse/6949241/lundi-noir/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:57",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-03-16/888263",
+        "horses": [
+          {
+            "horseName": "Spitalfield",
+            "horseProfileUrl": "/profile/horse/4582288/spitalfield/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:07",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-03-16/888268",
+        "horses": [
+          {
+            "horseName": "Known Warrior",
+            "horseProfileUrl": "/profile/horse/5633093/known-warrior/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chukyo",
+    "raceCardsCourseUrl": "/racecards/2025-03-16#chukyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/574/chukyo/2025-03-16",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Jebel Ali",
+    "raceCardsCourseUrl": "/racecards/2025-03-16#jebel-ali",
+    "raceCardsCourseMeetingsUrl": "/racecards/565/jebel-ali/2025-03-16",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:45",
+        "raceCardUrl": "/racecards/565/jebel-ali/2025-03-16/890805",
+        "horses": [
+          {
+            "horseName": "Magadan",
+            "horseProfileUrl": "/profile/horse/2743818/magadan/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Silver Jubilee",
+            "horseProfileUrl": "/profile/horse/3648372/silver-jubilee/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:15",
+        "raceCardUrl": "/racecards/565/jebel-ali/2025-03-16/890806",
+        "horses": [
+          {
+            "horseName": "Wild Crusade",
+            "horseProfileUrl": "/profile/horse/3956911/wild-crusade/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Local Law",
+            "horseProfileUrl": "/profile/horse/3171301/local-law/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:45",
+        "raceCardUrl": "/racecards/565/jebel-ali/2025-03-16/890807",
+        "horses": [
+          {
+            "horseName": "Fayadh",
+            "horseProfileUrl": "/profile/horse/5469756/fayadh/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Prima Summer",
+            "horseProfileUrl": "/profile/horse/5412847/prima-summer/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Thunder D'Oro",
+            "horseProfileUrl": "/profile/horse/7015797/thunder-doro/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Al Shaman",
+            "horseProfileUrl": "/profile/horse/1453559/al-shaman/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nakayama",
+    "raceCardsCourseUrl": "/racecards/2025-03-16#nakayama",
+    "raceCardsCourseMeetingsUrl": "/racecards/514/nakayama/2025-03-16",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Saint-Cloud",
+    "raceCardsCourseUrl": "/racecards/2025-03-16#saint-cloud",
+    "raceCardsCourseMeetingsUrl": "/racecards/219/saint-cloud/2025-03-16",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/219/saint-cloud/2025-03-16/890887",
+        "horses": [
+          {
+            "horseName": "Ponderado",
+            "horseProfileUrl": "/profile/horse/6005939/ponderado/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  }
+]

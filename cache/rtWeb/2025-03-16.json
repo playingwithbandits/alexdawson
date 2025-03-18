@@ -1,0 +1,25 @@
+{
+  "date": "2025-03-16",
+  "tips": [
+    {
+      "horseName": "Smart Casual",
+      "time": "14:52",
+      "rating": 86.7
+    },
+    {
+      "horseName": "Gms Prince",
+      "time": "15:22",
+      "rating": 79.2
+    },
+    {
+      "horseName": "Springs A Girl",
+      "time": "15:57",
+      "rating": 71.7
+    },
+    {
+      "horseName": "Lagonda",
+      "time": "16:32",
+      "rating": 74.9
+    }
+  ]
+}

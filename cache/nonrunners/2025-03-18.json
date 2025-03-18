@@ -1,0 +1,69 @@
+[
+  {
+    "courseName": "Exeter",
+    "raceCardsCourseUrl": "/racecards/2025-03-18#exeter",
+    "raceCardsCourseMeetingsUrl": "/racecards/14/exeter/2025-03-18",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.8) (Selective watering to maintain)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-18/888287",
+        "horses": [
+          {
+            "horseName": "King Orry",
+            "horseProfileUrl": "/profile/horse/3354081/king-orry/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wetherby",
+    "raceCardsCourseUrl": "/racecards/2025-03-18#wetherby",
+    "raceCardsCourseMeetingsUrl": "/racecards/87/wetherby/2025-03-18",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.2) (Rail movements: 2.00 & 4.45 -12yds, 2.30 +102yds, 3.00 +30yds, 3.35 +120yds and 4.10 -24yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-18#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-03-18",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-18/888462",
+        "horses": [
+          {
+            "horseName": "Joy Of Dubai",
+            "horseProfileUrl": "/profile/horse/7087002/joy-of-dubai/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-18/888466",
+        "horses": [
+          {
+            "horseName": "Light Up Our Stars",
+            "horseProfileUrl": "/profile/horse/2204199/light-up-our-stars/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Panama City",
+            "horseProfileUrl": "/profile/horse/3597156/panama-city/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  }
+]

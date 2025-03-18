@@ -20,6 +20,25 @@ const POSITIVE_TERMS = [
   "powered",
   "stormed",
   "commanded",
+  "kept on",
+  "headway",
+  "challenged",
+  "pressed",
+  "led",
+  "ridden out",
+  "cosily",
+  "readily",
+  "going best",
+  "going easily",
+  "smooth headway",
+  "ran on well",
+  "promising",
+  "comfortably",
+  "just prevailed",
+  "eyecatcher",
+  "rallied",
+  "nearest finish",
+  "just did enough",
 
   // Winning terms
   "won",
@@ -57,6 +76,18 @@ const POSITIVE_TERMS = [
   "agile",
   "springy",
   "bouncing",
+
+  // New positive terms
+  "made all",
+  "went clear",
+  "pushed out",
+  "ran on",
+  "shaken up",
+  "always doing enough",
+  "recovered",
+  "disputed lead",
+  "faced challenge",
+  "nudged along",
 ];
 
 const NEGATIVE_TERMS = [
@@ -81,6 +112,16 @@ const NEGATIVE_TERMS = [
   "detached",
   "eased",
   "stopped",
+  "pulled up",
+  "no extra",
+  "no impression",
+  "no match",
+  "dwelt",
+  "hung",
+  "unseated",
+  "fell",
+  "tailed off",
+  "refused",
 
   // Movement issues
   "stumbled",
@@ -121,6 +162,36 @@ const NEGATIVE_TERMS = [
   "heavy",
   "plodded",
   "struggled",
+
+  // New negative terms
+  "ducked",
+  "carried head awkwardly",
+  "stone bruise",
+  "off feed",
+  "ran green",
+  "respiratory noise",
+  "not clear run",
+  "no chance",
+  "short of room",
+  "lost touch",
+  "hung right",
+  "hung left",
+
+  // New negative terms
+  "reared",
+  "slowly away",
+  "visibility reduced",
+  "struggling home",
+  "carried head",
+  "pecked",
+  "sprawled",
+  "unsuitable ground",
+  "lost ground",
+  "dropped to rear",
+  "lost position",
+  "not reach leaders",
+  "not near to challenge",
+  "not pace to challenge",
 ];
 
 export function analyzeSentiment(comment: string): {

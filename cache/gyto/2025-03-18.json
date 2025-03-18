@@ -1,0 +1,95 @@
+{
+  "date": "2025-03-18",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Mister Smarty",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Bois Guillbert",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "Jukebox Fury",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "The Mad Poet",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Devon Dude",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "J J Moon",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Investment Manager",
+      "isNap": false
+    },
+    {
+      "time": "16:27",
+      "horse": "The Long Point",
+      "isNap": true
+    },
+    {
+      "time": "17:02",
+      "horse": "Sea Invasion",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Knockmoylan",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Joy Of Dubai",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Rebel Star",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Aurora Majesty",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Galileo Glass",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Match Anthem",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Visibility",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Bank On Kent",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Forest Spirit",
+      "isNap": false
+    }
+  ]
+}

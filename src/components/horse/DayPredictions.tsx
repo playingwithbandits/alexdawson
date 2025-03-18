@@ -14,6 +14,7 @@ import {
   NapsTableTip,
   NonRunnerMeeting,
   RtWebTip,
+  OLBGTip,
 } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
@@ -46,6 +47,7 @@ interface DayPredictionsProps {
   nonRunners: NonRunnerMeeting[];
   liveOdds: LiveOdds[];
   rtWebTips: RtWebTip[] | undefined;
+  olbgTips: OLBGTip[] | undefined;
 }
 
 export const normalizeTime = (time: string) => {
@@ -68,6 +70,7 @@ export function DayPredictions({
   nonRunners,
   liveOdds,
   rtWebTips,
+  olbgTips,
 }: DayPredictionsProps) {
   console.log("nonRunners", nonRunners);
   console.log("liveOdds", liveOdds);
@@ -75,7 +78,7 @@ export function DayPredictions({
   const getNonRunnersMap = () => {
     const nonRunnersMap: Record<string, string[]> = {};
 
-    nonRunners.forEach((meeting) => {
+    nonRunners?.forEach((meeting) => {
       meeting.races.forEach((race) => {
         const normalizedTime = normalizeTime(race.raceTime);
         if (!nonRunnersMap[normalizedTime]) {
@@ -105,6 +108,7 @@ export function DayPredictions({
   const [isSaving, setIsSaving] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isDeletingNonRunners, setIsDeletingNonRunners] = useState(false);
+  const [isDeletingOlbg, setIsDeletingOlbg] = useState(false);
   //const data = generatePredictions(meetings);
 
   const today = new Date().toISOString().split("T")[0];
@@ -341,6 +345,32 @@ export function DayPredictions({
     }
   };
 
+  const handleDeleteOlbg = async () => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete the OLBG data for this day? This action cannot be undone."
+    );
+
+    if (!confirmed) return;
+
+    setIsDeletingOlbg(true);
+    try {
+      const response = await fetch(`/api/racing/olbg/${date}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete OLBG data");
+      }
+
+      alert("OLBG data deleted successfully");
+    } catch (error) {
+      console.error("Error deleting OLBG data:", error);
+      alert("Failed to delete OLBG data");
+    } finally {
+      setIsDeletingOlbg(false);
+    }
+  };
+
   const handleDeleteResults = async () => {
     if (!results || results.results.length === 0) {
       alert("No results available to delete");
@@ -489,6 +519,13 @@ export function DayPredictions({
                 >
                   {isDeletingNonRunners ? "Deleting..." : "Non-Runners"}
                 </button>
+                <button
+                  className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 disabled:opacity-50"
+                  onClick={handleDeleteOlbg}
+                  disabled={isDeletingOlbg}
+                >
+                  {isDeletingOlbg ? "Deleting..." : "OLBG"}
+                </button>
               </div>
             </div>
           </div>
@@ -601,6 +638,7 @@ export function DayPredictions({
                       isNonRunner={isNonRunner}
                       liveOdds={liveOdds}
                       rtWebTips={rtWebTips}
+                      olbgTips={olbgTips}
                     />
                   ))}
                 </div>

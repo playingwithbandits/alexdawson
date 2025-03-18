@@ -7,6 +7,7 @@ import {
   RaceResults,
   LiveOdds,
   RtWebTip,
+  OLBGTip,
 } from "@/types/racing";
 import { normalizeTime } from "../DayPredictions";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
@@ -24,6 +25,7 @@ interface PicksRaceRowProps {
   isNonRunner: (time: string, selection: string) => boolean;
   liveOdds: LiveOdds[];
   rtWebTips: RtWebTip[] | undefined;
+  olbgTips: OLBGTip[] | undefined;
 }
 
 export function PicksRaceRow({
@@ -38,6 +40,7 @@ export function PicksRaceRow({
   isNonRunner,
   liveOdds,
   rtWebTips,
+  olbgTips,
 }: PicksRaceRowProps) {
   console.log("CompactRaceRow", {
     isTodayOrPast,
@@ -49,7 +52,24 @@ export function PicksRaceRow({
     gytoTips,
     napsTableTips,
     rtWebTips,
+    olbgTips,
   });
+
+  const olbgTipsForRace = olbgTips?.filter((tip) => {
+    const tipHorseKey = horseNameToKey(tip.horseName);
+    return race.horses.some(
+      (horse) => horseNameToKey(horse.name) === tipHorseKey
+    );
+  });
+
+  const olbgTipsWithNap = olbgTipsForRace?.filter((x) => x.napTips > 1);
+  const olbgTipsWithEw = olbgTipsForRace?.filter((x) => x.ewTips >= 10);
+  console.log(
+    "OLBG Tips for Race:",
+    olbgTips,
+    olbgTipsForRace,
+    olbgTipsWithNap
+  );
 
   const topAiPercentage = race?.horses?.sort(
     (a, b) =>
@@ -83,12 +103,12 @@ export function PicksRaceRow({
     rpVerdictPick ? horseNameToKey(x) !== horseNameToKey(rpVerdictPick) : true
   );
 
-  console.log(
-    "RP Verdict All Named:",
-    rpVerdictPick,
-    rpVerdictAllNamed,
-    rpVerdictAllOthers
-  );
+  // console.log(
+  //   "RP Verdict All Named:",
+  //   rpVerdictPick,
+  //   rpVerdictAllNamed,
+  //   rpVerdictAllOthers
+  // );
   // Get ATR tip for this race
   //console.log("Getting ATR tip");
   const atrTipSelections = tips?.atrTips
@@ -142,6 +162,8 @@ export function PicksRaceRow({
     gytoTipSelectionObj ? gytoTipSelectionObj.horse : "",
     ...(napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || []),
     ...(rtWebTipSelections?.map((x) => x.horseName) || []),
+    ...(olbgTipsWithNap?.map((x) => x.horseName) || []),
+    ...(olbgTipsWithEw?.map((x) => x.horseName) || []),
   ].filter((x) => x !== "" && x !== undefined);
 
   console.log(
@@ -156,6 +178,8 @@ export function PicksRaceRow({
       "7": napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || [],
       "8": rpVerdictAllOthers || [],
       "9": rtWebTipSelections?.map((x) => x.horseName) || [],
+      "10": olbgTipsWithNap?.map((x) => x.horseName) || [],
+      "11": olbgTipsWithEw?.map((x) => x.horseName) || [],
     },
     race.time,
     gytoTips,
@@ -205,6 +229,12 @@ export function PicksRaceRow({
     ) || []),
     ...(rtWebTipSelections?.map(
       (x) => [x.horseName, 0.5] as [string, number]
+    ) || []),
+    ...(olbgTipsWithNap?.map(
+      (x) => [x.horseName, 0.33 * x.napTips] as [string, number]
+    ) || []),
+    ...(olbgTipsWithEw?.map(
+      (x) => [x.horseName, 0.05 * x.ewTips] as [string, number]
     ) || []),
   ];
 
@@ -266,33 +296,37 @@ export function PicksRaceRow({
       </div>
 
       <div
-        className={`w-full flex-1 grid ${"grid-cols-10"} gap-2 items-baseline text-sm`}
+        className={`w-full flex-1 grid ${"grid-cols-12"} gap-2 items-baseline text-sm`}
       >
         <div className="flex flex-col gap-2">
-          {aiTopPicks?.map((x, x_i) => (
-            <HorseNameRow
-              key={race.time + x_i}
-              horseName={x.name}
-              results={results}
-              time={race.time}
-              odds={
-                getLiveOddsForHorse(x.name) ||
-                race.bettingForecast?.find(
-                  (y) => cleanName(y.horseName) === cleanName(x.name)
-                )?.decimalOdds ||
-                0
-              }
-              isNonRunner={isNonRunner(race.time, x.name)}
-              greyedOut={false}
-              title={
-                "AI Top Pick: " +
-                x.name +
-                " : " +
-                x.score?.total?.percentage?.toFixed(1) +
-                "%"
-              }
-            />
-          ))}
+          {aiTopPicks?.map((x, x_i) => {
+            return (
+              <HorseNameRow
+                key={race.time + x_i}
+                horseName={x.name}
+                results={results}
+                time={race.time}
+                odds={
+                  getLiveOddsForHorse(x.name) ||
+                  race.bettingForecast?.find(
+                    (y) => cleanName(y.horseName) === cleanName(x.name)
+                  )?.decimalOdds ||
+                  0
+                }
+                isNonRunner={isNonRunner(race.time, x.name)}
+                greyedOut={false}
+                title={
+                  "AI Top Pick: " +
+                  x.name +
+                  " : " +
+                  x.score?.total?.percentage?.toFixed(1) +
+                  "%" +
+                  " : " +
+                  race?.raceExtraInfo?.comments[cleanName(x.name)]
+                }
+              />
+            );
+          })}
         </div>
         <div className="flex flex-col gap-2">
           {rpPredictions?.map((x, x_i) => (
@@ -312,7 +346,9 @@ export function PicksRaceRow({
                 "RP Prediction: " +
                 rpPredictions
                   ?.map((x) => x.name + " : " + x.score?.toFixed(1))
-                  ?.join(", ")
+                  ?.join(", ") +
+                " : " +
+                race?.raceExtraInfo?.comments[cleanName(x.name)]
               }
             />
           ))}
@@ -332,7 +368,12 @@ export function PicksRaceRow({
               extraText={rpVerdictPickIsNap ? " (NAP)" : ""}
               isNonRunner={isNonRunner(race.time, x || "")}
               greyedOut={false}
-              title={"RP Verdict: " + race.raceExtraInfo?.verdict?.comment}
+              title={
+                "RP Verdict: " +
+                race.raceExtraInfo?.verdict?.comment +
+                " : " +
+                race?.raceExtraInfo?.comments[cleanName(x || "")]
+              }
             />
           ))}
 
@@ -349,7 +390,12 @@ export function PicksRaceRow({
               }
               isNonRunner={isNonRunner(race.time, x || "")}
               greyedOut={false}
-              title={"RP Verdict: " + race.raceExtraInfo?.verdict?.comment}
+              title={
+                "RP Verdict: " +
+                race.raceExtraInfo?.verdict?.comment +
+                " : " +
+                race?.raceExtraInfo?.comments[cleanName(x || "")]
+              }
             />
           ))}
         </div>
@@ -367,7 +413,12 @@ export function PicksRaceRow({
               }
               isNonRunner={isNonRunner(race.time, x.horse || "")}
               greyedOut={false}
-              title={"ATR Tip: " + x.comment}
+              title={
+                "ATR Tip: " +
+                x.comment +
+                " : " +
+                race?.raceExtraInfo?.comments[cleanName(x.horse || "")]
+              }
             />
           ))}
         </div>
@@ -385,7 +436,12 @@ export function PicksRaceRow({
               }
               isNonRunner={isNonRunner(race.time, x.horse || "")}
               greyedOut={false}
-              title={"Timeform Tip: " + x.comment}
+              title={
+                "Timeform Tip: " +
+                x.comment +
+                " : " +
+                race?.raceExtraInfo?.comments[cleanName(x.horse || "")]
+              }
             />
           ))}
         </div>
@@ -405,7 +461,13 @@ export function PicksRaceRow({
               extraText={gytoTipSelectionIsNap ? " (NAP)" : ""}
               isNonRunner={isNonRunner(race.time, x?.horse || "")}
               greyedOut={false}
-              title={"GYTO Tip: " + x?.horse + (x?.isNap ? " (NAP)" : "")}
+              title={
+                "GYTO Tip: " +
+                x?.horse +
+                (x?.isNap ? " (NAP)" : "") +
+                " : " +
+                race?.raceExtraInfo?.comments[cleanName(x?.horse || "")]
+              }
             />
           ))}
         </div>
@@ -430,7 +492,9 @@ export function PicksRaceRow({
                 x.score +
                 ", Tipster: " +
                 x.tipster +
-                ")"
+                ")" +
+                " : " +
+                race?.raceExtraInfo?.comments[cleanName(x.horse || "")]
               }
             />
           ))}
@@ -450,7 +514,44 @@ export function PicksRaceRow({
               }
               isNonRunner={isNonRunner(race.time, x.horseName || "")}
               greyedOut={false}
-              title={"RT Web Tip: " + x.horseName}
+              title={
+                "RT Web Tip: " +
+                x.horseName +
+                " : " +
+                race?.raceExtraInfo?.comments[cleanName(x.horseName || "")]
+              }
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {olbgTipsWithEw?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={
+                race.bettingForecast?.find(
+                  (y) => cleanName(y.horseName) === cleanName(x.horseName)
+                )?.decimalOdds || 0
+              }
+              extraText={`${x.ewTips}`}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {olbgTipsWithNap?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={
+                race.bettingForecast?.find(
+                  (y) => cleanName(y.horseName) === cleanName(x.horseName)
+                )?.decimalOdds || 0
+              }
+              extraText={`${x.napTips}`}
             />
           ))}
         </div>
@@ -473,9 +574,9 @@ export function PicksRaceRow({
                 extraText={`${count.toFixed(
                   1
                 )} : ${perc}% : ${decimalOdds.toFixed(1)}`}
-                oddsHighlight={odds > 6 && count > 2}
+                oddsHighlight={odds > 6 && count > 2.5}
                 isNonRunner={isNonRunner(race.time, name)}
-                greyedOut={count < 2}
+                greyedOut={count < 1.75}
                 title={
                   "Name: " +
                   name +
@@ -485,10 +586,12 @@ export function PicksRaceRow({
                   perc +
                   "%" +
                   ": " +
-                  decimalOdds.toFixed(1)
+                  decimalOdds.toFixed(1) +
+                  " : " +
+                  race?.raceExtraInfo?.comments[cleanName(name)]
                 }
-                highlight1={count >= 3}
-                highlight2={count >= 4}
+                highlight1={count >= 2.5}
+                highlight2={count >= 3.5}
               />
             );
           })}

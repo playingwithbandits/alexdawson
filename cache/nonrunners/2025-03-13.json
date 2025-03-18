@@ -1,0 +1,328 @@
+[
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-13#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-03-13",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-03-13/888425",
+        "horses": [
+          {
+            "horseName": "Kondratiev Wave",
+            "horseProfileUrl": "/profile/horse/2829583/kondratiev-wave/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-03-13/888426",
+        "horses": [
+          {
+            "horseName": "Thismydream",
+            "horseProfileUrl": "/profile/horse/3481816/thismydream/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:15",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-03-13/888423",
+        "horses": [
+          {
+            "horseName": "Poetic Force",
+            "horseProfileUrl": "/profile/horse/1028267/poetic-force/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cheltenham",
+    "raceCardsCourseUrl": "/racecards/2025-03-13#cheltenham",
+    "raceCardsCourseMeetingsUrl": "/racecards/11/cheltenham/2025-03-13",
+    "going": "GOOD TO SOFT (Watered; 5.4)",
+    "weather": "Sunny intervals",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:20",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-03-13/883111",
+        "horses": [
+          {
+            "horseName": "Disco Dancer",
+            "horseProfileUrl": "/profile/horse/4969850/disco-dancer/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-03-13/887346",
+        "horses": [
+          {
+            "horseName": "Ryan's Rocket",
+            "horseProfileUrl": "/profile/horse/4183370/ryans-rocket/",
+            "raceNumber": "(19)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-03-13/881098",
+        "horses": [
+          {
+            "horseName": "Monmiral",
+            "horseProfileUrl": "/profile/horse/3070547/monmiral/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Langer Dan",
+            "horseProfileUrl": "/profile/horse/2863097/langer-dan/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-03-13/887345",
+        "horses": [
+          {
+            "horseName": "Lord Of Thunder",
+            "horseProfileUrl": "/profile/horse/4782725/lord-of-thunder/",
+            "raceNumber": "(19)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-03-13/887348",
+        "horses": [
+          {
+            "horseName": "Where It All Began",
+            "horseProfileUrl": "/profile/horse/3056476/where-it-all-began/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hexham",
+    "raceCardsCourseUrl": "/racecards/2025-03-13#hexham",
+    "raceCardsCourseMeetingsUrl": "/racecards/25/hexham/2025-03-13",
+    "going": "GOOD TO SOFT (Good in places; 5.6)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:05",
+        "raceCardUrl": "/racecards/25/hexham/2025-03-13/888218",
+        "horses": [
+          {
+            "horseName": "Tread Softly Now",
+            "horseProfileUrl": "/profile/horse/5029056/tread-softly-now/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:42",
+        "raceCardUrl": "/racecards/25/hexham/2025-03-13/888220",
+        "horses": [
+          {
+            "horseName": "Famous Liss",
+            "horseProfileUrl": "/profile/horse/4231713/famous-liss/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:42",
+        "raceCardUrl": "/racecards/25/hexham/2025-03-13/888219",
+        "horses": [
+          {
+            "horseName": "Saint Malinas",
+            "horseProfileUrl": "/profile/horse/5671331/saint-malinas/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Limerick",
+    "raceCardsCourseUrl": "/racecards/2025-03-13#limerick",
+    "raceCardsCourseMeetingsUrl": "/racecards/188/limerick/2025-03-13",
+    "going": "Hurdle course - YIELDING; Chase course - GOOD TO YIELDING",
+    "weather": "Mostly overcast",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:00",
+        "raceCardUrl": "/racecards/188/limerick/2025-03-13/890037",
+        "horses": [
+          {
+            "horseName": "Sainte Tartare",
+            "horseProfileUrl": "/profile/horse/5504693/sainte-tartare/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:34",
+        "raceCardUrl": "/racecards/188/limerick/2025-03-13/890038",
+        "horses": [
+          {
+            "horseName": "Shanroe Nancy",
+            "horseProfileUrl": "/profile/horse/6604794/shanroe-nancy/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Jekiki",
+            "horseProfileUrl": "/profile/horse/5050192/jekiki/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Knockaneleigh Girl",
+            "horseProfileUrl": "/profile/horse/4867638/knockaneleigh-girl/",
+            "raceNumber": "(20)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:54",
+        "raceCardUrl": "/racecards/188/limerick/2025-03-13/890040",
+        "horses": [
+          {
+            "horseName": "Splashing Out",
+            "horseProfileUrl": "/profile/horse/4100977/splashing-out/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Natural Breeze",
+            "horseProfileUrl": "/profile/horse/2615827/natural-breeze/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:34",
+        "raceCardUrl": "/racecards/188/limerick/2025-03-13/890041",
+        "horses": [
+          {
+            "horseName": "Soloman Lane",
+            "horseProfileUrl": "/profile/horse/3301618/soloman-lane/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:14",
+        "raceCardUrl": "/racecards/188/limerick/2025-03-13/890042",
+        "horses": [
+          {
+            "horseName": "Gold Haven",
+            "horseProfileUrl": "/profile/horse/4191641/gold-haven/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Without Exception",
+            "horseProfileUrl": "/profile/horse/5383921/without-exception/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Colline Fleurie",
+            "horseProfileUrl": "/profile/horse/4231688/colline-fleurie/",
+            "raceNumber": "(18)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-13#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-03-13",
+    "going": "TAPETA: STANDARD",
+    "weather": "Showers",
+    "stallsPosition": "1m2f - Outside; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-13/888419",
+        "horses": [
+          {
+            "horseName": "Stoneacre",
+            "horseProfileUrl": "/profile/horse/6688035/stoneacre/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-13/890222",
+        "horses": [
+          {
+            "horseName": "Rohilla",
+            "horseProfileUrl": "/profile/horse/6701909/rohilla/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Ciara Storm",
+            "horseProfileUrl": "/profile/horse/4575810/ciara-storm/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-13/888418",
+        "horses": [
+          {
+            "horseName": "Westington House",
+            "horseProfileUrl": "/profile/horse/7250773/westington-house/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-13/888414",
+        "horses": [
+          {
+            "horseName": "Fortamour",
+            "horseProfileUrl": "/profile/horse/2497891/fortamour/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chantilly",
+    "raceCardsCourseUrl": "/racecards/2025-03-13#chantilly",
+    "raceCardsCourseMeetingsUrl": "/racecards/204/chantilly/2025-03-13",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/204/chantilly/2025-03-13/890797",
+        "horses": [
+          {
+            "horseName": "Power Papers",
+            "horseProfileUrl": "/profile/horse/4761173/power-papers/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -7,6 +7,7 @@ import {
   NapsTableTips,
   NonRunnerMeeting,
   RtWebData,
+  OLBGTips,
 } from "@/types/racing";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -128,6 +129,7 @@ export function HorsePageClient({ date }: { date: string }) {
   const [nonRunners, setNonRunners] = useState<NonRunnerMeeting[]>([]);
   const [liveOdds] = useState<LiveOdds[]>([]);
   const [rtWebTips, setRtWebTips] = useState<RtWebData | undefined>(undefined);
+  const [olbgTips, setOLBGTips] = useState<OLBGTips | undefined>(undefined);
   const { data: results, isLoading: resultsLoading } = useResults(date);
 
   // Add function to fetch live odds
@@ -220,6 +222,11 @@ export function HorsePageClient({ date }: { date: string }) {
         const rtWebResponse = await fetch(`/api/racing/rtWeb/${date}`);
         const rtWebData = await rtWebResponse.json();
         setRtWebTips(rtWebData);
+
+        // Fetch OLBG tips
+        const olbgResponse = await fetch(`/api/racing/olbg/${date}`);
+        const olbgData = await olbgResponse.json();
+        setOLBGTips(olbgData);
 
         // Fetch live odds
         //await fetchLiveOdds();
@@ -342,6 +349,7 @@ export function HorsePageClient({ date }: { date: string }) {
       nonRunners={nonRunners}
       liveOdds={liveOdds}
       rtWebTips={rtWebTips?.tips}
+      olbgTips={olbgTips?.tips}
     />
   );
 }

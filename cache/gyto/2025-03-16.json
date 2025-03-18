@@ -1,0 +1,115 @@
+{
+  "date": "2025-03-16",
+  "tips": [
+    {
+      "time": "13:40",
+      "horse": "Power Blue",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Never Shout Never",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Apache Outlaw",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Win Me Over",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Smooth Tom",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "First Wave",
+      "isNap": true
+    },
+    {
+      "time": "16:55",
+      "horse": "Cousin Shay",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Mathan",
+      "isNap": false
+    },
+    {
+      "time": "13:52",
+      "horse": "Lundi Noir",
+      "isNap": false
+    },
+    {
+      "time": "14:22",
+      "horse": "Mikimoto",
+      "isNap": false
+    },
+    {
+      "time": "14:52",
+      "horse": "Smart Casual",
+      "isNap": false
+    },
+    {
+      "time": "15:22",
+      "horse": "Gms Prince",
+      "isNap": false
+    },
+    {
+      "time": "15:57",
+      "horse": "Serious Chat",
+      "isNap": false
+    },
+    {
+      "time": "16:32",
+      "horse": "Space Voyage",
+      "isNap": false
+    },
+    {
+      "time": "17:07",
+      "horse": "Constantinian",
+      "isNap": false
+    },
+    {
+      "time": "14:02",
+      "horse": "Jena D'Oudairies",
+      "isNap": false
+    },
+    {
+      "time": "14:32",
+      "horse": "Newton Tornado",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Safe Destination",
+      "isNap": false
+    },
+    {
+      "time": "15:37",
+      "horse": "Blue Las",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Torneo",
+      "isNap": true
+    },
+    {
+      "time": "16:47",
+      "horse": "Ideallko",
+      "isNap": false
+    },
+    {
+      "time": "17:17",
+      "horse": "Karonacho",
+      "isNap": false
+    }
+  ]
+}

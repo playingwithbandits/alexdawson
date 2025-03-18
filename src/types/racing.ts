@@ -666,3 +666,23 @@ export interface LiveOdds {
   time: string;
   course: string;
 }
+
+export interface OLBGTip {
+  horseName: string;
+  winTips: number;
+  winTotal: number;
+  winPerc: number;
+  ewTips: number;
+  ewTotal: number;
+  ewPerc: number;
+  napTips: number;
+  napTotal: number;
+  napPerc: number;
+  expertCount: number;
+  commentCount: number;
+}
+
+export interface OLBGTips {
+  date: string;
+  tips: OLBGTip[];
+}

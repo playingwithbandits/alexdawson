@@ -1,0 +1,210 @@
+{
+  "date": "2025-03-14",
+  "tips": [
+    {
+      "time": "13:20",
+      "horse": "Lulamba",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Valgrand",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Dinoblue",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Intense Approach",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "The Big Westerner",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Galopin Des Champs",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Ryehill",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Kopeck De Mee",
+      "isNap": false
+    },
+    {
+      "time": "13:35",
+      "horse": "Zafaan",
+      "isNap": false
+    },
+    {
+      "time": "14:14",
+      "horse": "Taxus Baccata",
+      "isNap": false
+    },
+    {
+      "time": "14:54",
+      "horse": "Jackpot Cash",
+      "isNap": false
+    },
+    {
+      "time": "15:34",
+      "horse": "Remarkable Flight",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "For Pleasure",
+      "isNap": true
+    },
+    {
+      "time": "16:55",
+      "horse": "Janika",
+      "isNap": false
+    },
+    {
+      "time": "13:42",
+      "horse": "Our Lil",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Burrows Hall",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Pure Carbon",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Baby Chou",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Dartmouth Castle",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Captain Parma",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Fulford Cross",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Romantic Opera",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "King Of York",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Legal Reform",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Shartash",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Sax Appeal",
+      "isNap": true
+    },
+    {
+      "time": "20:30",
+      "horse": "Mr Mistoffelees",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Crystal Luna",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Hightimeyouwon",
+      "isNap": false
+    },
+    {
+      "time": "17:37",
+      "horse": "Guest Star",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Theophilos",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Daonethatgotaway",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Your Call",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Arizona Blaze",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Daamberdiplomat",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Topwarrior",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Padre Bay",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Bravo Zulu",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "War Zone",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "City Escape",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Tuco Salamanca",
+      "isNap": false
+    }
+  ]
+}

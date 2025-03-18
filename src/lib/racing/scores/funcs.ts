@@ -22,6 +22,7 @@ export const horseNameToKey = (horse_name: string) => {
     .replace(/\s*\([^)]*\)/g, "")
     .replace(/[(]*nap[)]*$/gi, "")
     .replace(/'/gi, "")
+    .replace(/\d+/g, "")
     .replace(/\s+/g, "")
     .trim();
 
@@ -192,34 +193,230 @@ export function determineRunStyle(
     (r) => r.rpCloseUpComment?.toLowerCase() || ""
   );
 
-  // Count running style indicators
-  const leadCount = comments.filter(
-    (c) => c.includes("made all") || c.includes("led") || c.includes("front")
-  ).length;
+  // Enhanced running style indicators with weights
+  const styleIndicators = {
+    leader: {
+      strong: [
+        "made all",
+        "led throughout",
+        "set steady pace",
+        "set pace",
+        "always led",
+        "made running",
+        "led from start",
+        "led early",
+        "led from outset",
+        "soon led",
+        "led after",
+        "made virtually all",
+      ],
+      medium: [
+        "led",
+        "disputed lead",
+        "pressed leader",
+        "front",
+        "soon led",
+        "went on",
+        "set out to make all",
+        "disputed",
+        "made the running",
+        "set the pace",
+        "led narrowly",
+        "led briefly",
+        "went clear",
+      ],
+      weak: [
+        "went clear",
+        "tracked leader",
+        "went on",
+        "made running",
+        "chased leader",
+        "pressed pace",
+        "tracked pace",
+        "disputed early lead",
+        "led momentarily",
+        "vied for lead",
+        "shared lead",
+      ],
+    },
+    prominent: {
+      strong: [
+        "prominent",
+        "tracked leaders",
+        "chased leaders",
+        "disputed",
+        "pressed leaders",
+        "always prominent",
+        "up with pace",
+        "close up",
+        "tracked pace",
+        "chased pace",
+        "disputed second",
+        "raced freely",
+      ],
+      medium: [
+        "close up",
+        "tracked pace",
+        "handy",
+        "towards fore",
+        "up with pace",
+        "pressed pace",
+        "tracked leader",
+        "chased leader",
+        "second throughout",
+        "disputed third",
+        "raced keenly",
+        "well placed",
+      ],
+      weak: [
+        "within touch",
+        "not far away",
+        "disputed third",
+        "went second",
+        "tracked main group",
+        "with leaders",
+        "near pace",
+        "close to pace",
+        "followed leaders",
+        "on heels of leaders",
+        "prominent early",
+      ],
+    },
+    midfield: {
+      strong: [
+        "midfield",
+        "mid division",
+        "middle",
+        "tracked main body",
+        "mid pack",
+        "in touch",
+        "covered up",
+        "settled midfield",
+        "central",
+        "tracked main group",
+        "covered up midfield",
+        "always midfield",
+      ],
+      medium: [
+        "in touch",
+        "covered up",
+        "settled",
+        "tracked main group",
+        "with main group",
+        "tracked majority",
+        "amongst rivals",
+        "within touch",
+        "settled well",
+        "took closer order",
+        "well placed",
+        "good position",
+      ],
+      weak: [
+        "waited with",
+        "took time",
+        "steady pace",
+        "off the pace",
+        "settled behind",
+        "tracked others",
+        "with others",
+        "in company",
+        "behind leaders",
+        "held position",
+        "maintained position",
+      ],
+    },
+    heldUp: {
+      strong: [
+        "held up",
+        "in rear",
+        "behind",
+        "last",
+        "back of field",
+        "at rear",
+        "always last",
+        "well back",
+        "far back",
+        "dropped out",
+        "outpaced",
+        "always behind",
+      ],
+      medium: [
+        "towards rear",
+        "dropped out",
+        "detached",
+        "waited with",
+        "at back",
+        "behind rivals",
+        "never near",
+        "never involved",
+        "well off pace",
+        "lost touch",
+        "lost contact",
+        "tailed off",
+      ],
+      weak: [
+        "patiently ridden",
+        "off the pace",
+        "dropped back",
+        "outpaced",
+        "steadied",
+        "restrained",
+        "held back",
+        "waited tactics",
+        "bided time",
+        "gradually back",
+        "never showed",
+        "never on terms",
+      ],
+    },
+  };
 
-  const prominentCount = comments.filter(
-    (c) =>
-      c.includes("prominent") || c.includes("tracked") || c.includes("pressed")
-  ).length;
+  // Calculate weighted scores for each style
+  const scores = {
+    leader: 0,
+    prominent: 0,
+    midfield: 0,
+    heldUp: 0,
+  };
 
-  const heldUpCount = comments.filter(
-    (c) => c.includes("held up") || c.includes("behind") || c.includes("rear")
-  ).length;
+  comments.forEach((comment, index) => {
+    // Weight more recent races higher (last 3 races get 2x weight)
+    const weight = index < 3 ? 2 : 1;
 
-  // Determine predominant style
-  if (leadCount >= 2) return "leader";
-  if (prominentCount >= 2) return "prominent";
-  if (heldUpCount >= 2) return "held up";
+    Object.entries(styleIndicators).forEach(([style, patterns]) => {
+      // Strong indicators (3 points)
+      if (patterns.strong.some((pattern) => comment.includes(pattern))) {
+        scores[style as keyof typeof scores] += 3 * weight;
+      }
+      // Medium indicators (2 points)
+      if (patterns.medium.some((pattern) => comment.includes(pattern))) {
+        scores[style as keyof typeof scores] += 2 * weight;
+      }
+      // Weak indicators (1 point)
+      if (patterns.weak.some((pattern) => comment.includes(pattern))) {
+        scores[style as keyof typeof scores] += 1 * weight;
+      }
+    });
+  });
 
-  // Log if no clear running style found
-  if (leadCount === 0 && prominentCount === 0 && heldUpCount === 0) {
-    console.log(
-      "ERROR: Unable to determine running style from comments:",
-      comments
-    );
+  // Find the predominant style
+  const maxScore = Math.max(...Object.values(scores));
+  const predominantStyles = Object.entries(scores)
+    .filter(([, score]) => score === maxScore)
+    .map(([style]) => style);
+
+  // If there's a clear winner, return it
+  if (predominantStyles.length === 1) {
+    return predominantStyles[0] as HorseStats["runStyle"];
   }
 
-  return "midfield"; // default if no clear pattern
+  // If no clear pattern or tied scores
+  if (maxScore === 0 || predominantStyles.length > 1) {
+    // Bias towards midfield when uncertain
+    return "midfield";
+  }
+
+  return "midfield"; // Default fallback
 }
 
 export function isWithinTenPercent(
