@@ -62,8 +62,12 @@ export function PicksRaceRow({
     );
   });
 
-  const olbgTipsWithNap = olbgTipsForRace?.filter((x) => x.napTips > 1);
-  const olbgTipsWithEw = olbgTipsForRace?.filter((x) => x.ewTips >= 10);
+  const olbgTipsWithNap = olbgTipsForRace?.filter(
+    (x) => x.napTips > 1 && x.commentCount > 0
+  );
+  const olbgTipsWithEw = olbgTipsForRace?.filter(
+    (x) => x.ewTips >= 8 && x.commentCount > 0
+  );
   console.log(
     "OLBG Tips for Race:",
     olbgTips,
@@ -191,7 +195,7 @@ export function PicksRaceRow({
       const scorePercentage =
         ((x.score?.total?.percentage || 0) - worseAiPercentageScore) /
         ((topAiPercentage || 100) - worseAiPercentageScore);
-      return [x.name, 0.75 * scorePercentage] as [string, number];
+      return [x.name, 1 * scorePercentage] as [string, number];
     }) || [];
 
   const rpPredictionsWeighted =
@@ -231,10 +235,10 @@ export function PicksRaceRow({
       (x) => [x.horseName, 0.5] as [string, number]
     ) || []),
     ...(olbgTipsWithNap?.map(
-      (x) => [x.horseName, 0.33 * x.napTips] as [string, number]
+      (x) => [x.horseName, 0.2 * x.napTips] as [string, number]
     ) || []),
     ...(olbgTipsWithEw?.map(
-      (x) => [x.horseName, 0.05 * x.ewTips] as [string, number]
+      (x) => [x.horseName, 0.075 * x.ewTips] as [string, number]
     ) || []),
   ];
 
@@ -536,6 +540,7 @@ export function PicksRaceRow({
                 )?.decimalOdds || 0
               }
               extraText={`${x.ewTips}`}
+              title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount}`}
             />
           ))}
         </div>
@@ -552,6 +557,7 @@ export function PicksRaceRow({
                 )?.decimalOdds || 0
               }
               extraText={`${x.napTips}`}
+              title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount}`}
             />
           ))}
         </div>
