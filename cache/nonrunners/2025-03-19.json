@@ -1,0 +1,106 @@
+[
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-03-19#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-03-19",
+    "going": "GOOD, Good to soft in places (GoingStick: 5.8) (Watered) (Rail movements: 2.20 -6yds, 2.50, 3.20, 3.50 & 5.00 +44yds, 4.25 -13yds, and 5.35 +88yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/23/haydock/2025-03-19/888297",
+        "horses": [
+          {
+            "horseName": "Miss Ireland",
+            "horseProfileUrl": "/profile/horse/5842872/miss-ireland/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/23/haydock/2025-03-19/888298",
+        "horses": [
+          {
+            "horseName": "Hecouldbetheone",
+            "horseProfileUrl": "/profile/horse/3549394/hecouldbetheone/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Huntingdon",
+    "raceCardsCourseUrl": "/racecards/2025-03-19#huntingdon",
+    "raceCardsCourseMeetingsUrl": "/racecards/26/huntingdon/2025-03-19",
+    "going": "GOOD (GoingStick: 7.1) (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:35",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-19/888304",
+        "horses": [
+          {
+            "horseName": "Buckna",
+            "horseProfileUrl": "/profile/horse/5727949/buckna/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-19/888303",
+        "horses": [
+          {
+            "horseName": "Mac's Xpress",
+            "horseProfileUrl": "/profile/horse/4217600/macs-xpress/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:07",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-19/888305",
+        "horses": [
+          {
+            "horseName": "Dartmouth Rose",
+            "horseProfileUrl": "/profile/horse/58956410/dartmouth-rose/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:42",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-19/888301",
+        "horses": [
+          {
+            "horseName": "Constant Friday",
+            "horseProfileUrl": "/profile/horse/3031671/constant-friday/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-19#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-03-19",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-03-19#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-03-19",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

@@ -1,0 +1,305 @@
+{
+  "date": "2025-03-19",
+  "tips": [
+    {
+      "time": "18:30",
+      "horse": "Barnaby",
+      "tipster": "Newsboy",
+      "score": "11.9"
+    },
+    {
+      "time": "16:25",
+      "horse": "Regarde",
+      "tipster": "Steve Mullington",
+      "score": "10.7"
+    },
+    {
+      "time": "17:35",
+      "horse": "Lune De La Mer",
+      "tipster": "Rory Paddock",
+      "score": "8.7"
+    },
+    {
+      "time": "18:00",
+      "horse": "Tortured Soul",
+      "tipster": "The Punt",
+      "score": "5.8"
+    },
+    {
+      "time": "20:30",
+      "horse": "Chief Mankato",
+      "tipster": "Rob Wright",
+      "score": "6.1"
+    },
+    {
+      "time": "18:30",
+      "horse": "Romanova",
+      "tipster": "Jason Heavey",
+      "score": "5.3"
+    },
+    {
+      "time": "16:25",
+      "horse": "Amateur",
+      "tipster": "Matt Polley",
+      "score": "4.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Kourosh",
+      "tipster": "Chris Connolly",
+      "score": "2.9"
+    },
+    {
+      "time": "15:20",
+      "horse": "Jarrive De Mee",
+      "tipster": "Lee Sobot",
+      "score": "0.1"
+    },
+    {
+      "time": "16:25",
+      "horse": "Wal Buck's",
+      "tipster": "Melissa Jones",
+      "score": "-0.1"
+    },
+    {
+      "time": "17:00",
+      "horse": "Diamond Koda",
+      "tipster": "RP Ratings",
+      "score": "-0.3"
+    },
+    {
+      "time": "16:07",
+      "horse": "Wolf Moon",
+      "tipster": "Sam Hardy",
+      "score": "-1.9"
+    },
+    {
+      "time": "15:50",
+      "horse": "Eileen's Orders",
+      "tipster": "Farringdon",
+      "score": "-2.8"
+    },
+    {
+      "time": "16:07",
+      "horse": "Galactic Charm",
+      "tipster": "Luke Tucker",
+      "score": "-5.4"
+    },
+    {
+      "time": "18:30",
+      "horse": "Sovereign Sea",
+      "tipster": "Glendale",
+      "score": "-6.5"
+    },
+    {
+      "time": "16:07",
+      "horse": "Wolf Moon",
+      "tipster": "Ian Gaughran",
+      "score": "-8.0"
+    },
+    {
+      "time": "17:00",
+      "horse": "Diamond Koda",
+      "tipster": "Karl Hedley",
+      "score": "-8.6"
+    },
+    {
+      "time": "16:25",
+      "horse": "Duke Of Deception",
+      "tipster": "Jim Delahunt",
+      "score": "-9.9"
+    },
+    {
+      "time": "18:30",
+      "horse": "Sovereign Sea",
+      "tipster": "Marlborough",
+      "score": "-10.8"
+    },
+    {
+      "time": "18:30",
+      "horse": "Romanova",
+      "tipster": "The Brigadier",
+      "score": "-11.3"
+    },
+    {
+      "time": "18:30",
+      "horse": "Sovereign Sea",
+      "tipster": "Garry Owen",
+      "score": "-11.7"
+    },
+    {
+      "time": "20:30",
+      "horse": "Chief Mankato",
+      "tipster": "Andrew Mount",
+      "score": "-12.3"
+    },
+    {
+      "time": "20:30",
+      "horse": "Westmorian",
+      "tipster": "The North",
+      "score": "-13.5"
+    },
+    {
+      "time": "20:30",
+      "horse": "Chief Mankato",
+      "tipster": "Postdata",
+      "score": "-12.8"
+    },
+    {
+      "time": "16:25",
+      "horse": "Regarde",
+      "tipster": "Whistler",
+      "score": "-14.0"
+    },
+    {
+      "time": "16:07",
+      "horse": "Wolf Moon",
+      "tipster": "West Country",
+      "score": "-16.5"
+    },
+    {
+      "time": "16:25",
+      "horse": "Duke Of Deception",
+      "tipster": "Dean Kilbryde",
+      "score": "-15.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Typhoon Flyer",
+      "tipster": "The Score",
+      "score": "-15.6"
+    },
+    {
+      "time": "17:25",
+      "horse": "Caballo De Mar",
+      "tipster": "Robin Goodfellow",
+      "score": "-16.5"
+    },
+    {
+      "time": "17:35",
+      "horse": "Minella Rescue",
+      "tipster": "Spotlight",
+      "score": "-19.3"
+    },
+    {
+      "time": "17:12",
+      "horse": "Shotgun Shirley",
+      "tipster": "Ben Morgan",
+      "score": "-21.5"
+    },
+    {
+      "time": "16:52",
+      "horse": "Captain Kinsella",
+      "tipster": "Lawrence Taylor",
+      "score": "-21.9"
+    },
+    {
+      "time": "18:00",
+      "horse": "Tortured Soul",
+      "tipster": "Rockavon",
+      "score": "-23.9"
+    },
+    {
+      "time": "16:07",
+      "horse": "Galactic Charm",
+      "tipster": "Mercury",
+      "score": "-25.5"
+    },
+    {
+      "time": "14:50",
+      "horse": "Pike Road",
+      "tipster": "Computeform",
+      "score": "-27.3"
+    },
+    {
+      "time": "16:07",
+      "horse": "Galactic Charm",
+      "tipster": "Jon Freeman",
+      "score": "-26.7"
+    },
+    {
+      "time": "18:00",
+      "horse": "Bearaway",
+      "tipster": "The Judge",
+      "score": "-26.1"
+    },
+    {
+      "time": "16:25",
+      "horse": "Wal Buck's",
+      "tipster": "Templegate",
+      "score": "-30.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Sovereign Sea",
+      "tipster": "The Duke",
+      "score": "-32.8"
+    },
+    {
+      "time": "17:00",
+      "horse": "Kourosh",
+      "tipster": "Brian Flanagan",
+      "score": "-34.4"
+    },
+    {
+      "time": "15:05",
+      "horse": "Kalista Love",
+      "tipster": "On The Nose",
+      "score": "-34.1"
+    },
+    {
+      "time": "16:25",
+      "horse": "Duke Of Deception",
+      "tipster": "Ross Shepherd",
+      "score": "-36.0"
+    },
+    {
+      "time": "17:12",
+      "horse": "Shotgun Shirley",
+      "tipster": "Tipman Tips",
+      "score": "-35.8"
+    },
+    {
+      "time": "14:35",
+      "horse": "Buckna",
+      "tipster": "Jeffrey Ross",
+      "score": "-37.4"
+    },
+    {
+      "time": "16:25",
+      "horse": "Wal Buck's",
+      "tipster": "Moorestyle",
+      "score": "-43.9"
+    },
+    {
+      "time": "16:42",
+      "horse": "Red Nika",
+      "tipster": "Chris Wright",
+      "score": "-44.7"
+    },
+    {
+      "time": "17:12",
+      "horse": "Shotgun Shirley",
+      "tipster": "Fortunatus",
+      "score": "-45.7"
+    },
+    {
+      "time": "15:35",
+      "horse": "Superstylin",
+      "tipster": "Rory Delargy",
+      "score": "-46.7"
+    },
+    {
+      "time": "16:25",
+      "horse": "Rockinastorm",
+      "tipster": "Adrian Wall",
+      "score": "-54.2"
+    },
+    {
+      "time": "17:12",
+      "horse": "Ride Like A Girl",
+      "tipster": "Lambourn",
+      "score": "-59.3"
+    }
+  ]
+}

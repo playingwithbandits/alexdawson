@@ -3,10 +3,64 @@
     "courseName": "Exeter",
     "raceCardsCourseUrl": "/racecards/2025-03-18#exeter",
     "raceCardsCourseMeetingsUrl": "/racecards/14/exeter/2025-03-18",
-    "going": "GOOD, Good to firm in places (GoingStick: 6.8) (Selective watering to maintain)",
-    "weather": "Partly cloudy",
+    "going": "GOOD (Good to firm in places; watered; 6.5)",
+    "weather": "Sunny",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "3:17",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-18/888281",
+        "horses": [
+          {
+            "horseName": "Stoner's Choice",
+            "horseProfileUrl": "/profile/horse/2510179/stoners-choice/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:52",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-18/888283",
+        "horses": [
+          {
+            "horseName": "Investment Manager",
+            "horseProfileUrl": "/profile/horse/2892896/investment-manager/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:27",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-18/888284",
+        "horses": [
+          {
+            "horseName": "Kepagge",
+            "horseProfileUrl": "/profile/horse/2496397/kepagge/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Saint Cyr De Pail",
+            "horseProfileUrl": "/profile/horse/4566490/saint-cyr-de-pail/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Bredon Hill",
+            "horseProfileUrl": "/profile/horse/5725096/bredon-hill/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:02",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-18/888282",
+        "horses": [
+          {
+            "horseName": "Filanderer",
+            "horseProfileUrl": "/profile/horse/4017615/filanderer/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
       {
         "raceTime": "5:35",
         "raceCardUrl": "/racecards/14/exeter/2025-03-18/888287",
@@ -24,10 +78,43 @@
     "courseName": "Wetherby",
     "raceCardsCourseUrl": "/racecards/2025-03-18#wetherby",
     "raceCardsCourseMeetingsUrl": "/racecards/87/wetherby/2025-03-18",
-    "going": "GOOD, Good to soft in places (GoingStick: 6.2) (Rail movements: 2.00 & 4.45 -12yds, 2.30 +102yds, 3.00 +30yds, 3.35 +120yds and 4.10 -24yds)",
-    "weather": "Partly cloudy",
+    "going": "GOOD (Chs 6.3, Hdl 6.2)",
+    "weather": "Sunny dry",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/87/wetherby/2025-03-18/888288",
+        "horses": [
+          {
+            "horseName": "Grand Albert",
+            "horseProfileUrl": "/profile/horse/4952202/grand-albert/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Felicie Du Maquis",
+            "horseProfileUrl": "/profile/horse/3968799/felicie-du-maquis/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/87/wetherby/2025-03-18/888291",
+        "horses": [
+          {
+            "horseName": "Wearapinkribbon",
+            "horseProfileUrl": "/profile/horse/3154605/wearapinkribbon/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Paddy O'Mahler",
+            "horseProfileUrl": "/profile/horse/4863583/paddy-omahler/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Wolverhampton (AW)",
@@ -61,6 +148,22 @@
             "horseName": "Panama City",
             "horseProfileUrl": "/profile/horse/3597156/panama-city/",
             "raceNumber": "(4)"
+          },
+          {
+            "horseName": "I Can't Believe",
+            "horseProfileUrl": "/profile/horse/5412833/i-cant-believe/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-18/888468",
+        "horses": [
+          {
+            "horseName": "Rhodes Royce",
+            "horseProfileUrl": "/profile/horse/6949246/rhodes-royce/",
+            "raceNumber": "(8)"
           }
         ]
       }

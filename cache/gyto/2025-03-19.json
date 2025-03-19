@@ -1,0 +1,95 @@
+{
+  "date": "2025-03-19",
+  "tips": [
+    {
+      "time": "14:20",
+      "horse": "Galunggung",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Pike Road",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Jarrive De Mee",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Presenting Doy",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Wal Buck'S",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Kourosh",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Buckna",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Superstylin",
+      "isNap": false
+    },
+    {
+      "time": "16:07",
+      "horse": "Galactic Charm",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "Camino Rocio",
+      "isNap": true
+    },
+    {
+      "time": "17:12",
+      "horse": "Shotgun Shirley",
+      "isNap": false
+    },
+    {
+      "time": "16:52",
+      "horse": "Blinky",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Caballo De Mar",
+      "isNap": true
+    },
+    {
+      "time": "18:00",
+      "horse": "Without Compromise",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Pelean",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Nutmeg",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Indian Spirit",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Westmorian",
+      "isNap": false
+    }
+  ]
+}

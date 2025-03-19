@@ -63,10 +63,10 @@ export function PicksRaceRow({
   });
 
   const olbgTipsWithNap = olbgTipsForRace?.filter(
-    (x) => x.napTips > 1 && x.commentCount > 0
+    (x) => x.napTips > 0 && x.commentCount > 0
   );
   const olbgTipsWithEw = olbgTipsForRace?.filter(
-    (x) => x.ewTips >= 8 && x.commentCount > 0
+    (x) => x.ewTips > 0 && x.commentCount > 0
   );
   console.log(
     "OLBG Tips for Race:",
