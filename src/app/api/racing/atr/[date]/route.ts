@@ -65,7 +65,7 @@ async function parseCoursePage(html: string, selector: string) {
 
   const tab = $(selector);
   if (!tab.length) {
-    //console.log(`No tab found for selector: ${selector}`);
+    console.log(`No tab found for selector: ${selector}`, html);
     return [];
   }
 
@@ -157,6 +157,7 @@ export async function GET(
     }
 
     const courseLinks = await parseTipsPage(html);
+    console.log("courseLinks", courseLinks);
     const tips: DayTips = {
       date,
       atrTips: [],
@@ -174,10 +175,13 @@ export async function GET(
           ? parts[parts.length - 2]
           : parts[parts.length - 1];
 
+      console.log("course", course);
+
       //console.log(`Parsing tips for course: ${course}`);
       const atrRaces = await parseCoursePage(courseHtml, "#tab-atr");
       const timeformRaces = await parseCoursePage(courseHtml, "#tab-timeform");
-
+      console.log("atrRaces", atrRaces);
+      console.log("timeformRaces", timeformRaces);
       if (atrRaces.length) {
         //console.log(`Found ${atrRaces.length} ATR races`);
         tips.atrTips.push({ course, races: atrRaces });
