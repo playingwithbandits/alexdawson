@@ -3,18 +3,66 @@
     "courseName": "Haydock",
     "raceCardsCourseUrl": "/racecards/2025-03-19#haydock",
     "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-03-19",
-    "going": "GOOD, Good to soft in places (GoingStick: 5.8) (Watered) (Rail movements: 2.20 -6yds, 2.50, 3.20, 3.50 & 5.00 +44yds, 4.25 -13yds, and 5.35 +88yds)",
+    "going": "GOOD (Good to soft in places on Chase course; watered; 6.0)",
     "weather": "Cloudy",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/23/haydock/2025-03-19/888295",
+        "horses": [
+          {
+            "horseName": "Galunggung",
+            "horseProfileUrl": "/profile/horse/3575202/galunggung/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Hermino AA",
+            "horseProfileUrl": "/profile/horse/4707522/hermino-aa/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/23/haydock/2025-03-19/888300",
+        "horses": [
+          {
+            "horseName": "Break Point",
+            "horseProfileUrl": "/profile/horse/5011618/break-point/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
       {
         "raceTime": "3:50",
         "raceCardUrl": "/racecards/23/haydock/2025-03-19/888297",
         "horses": [
           {
+            "horseName": "Presenting Doy",
+            "horseProfileUrl": "/profile/horse/5398626/presenting-doy/",
+            "raceNumber": "(1)"
+          },
+          {
             "horseName": "Miss Ireland",
             "horseProfileUrl": "/profile/horse/5842872/miss-ireland/",
             "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/23/haydock/2025-03-19/888294",
+        "horses": [
+          {
+            "horseName": "Wal Buck's",
+            "horseProfileUrl": "/profile/horse/4893314/wal-bucks/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Saint Xavier",
+            "horseProfileUrl": "/profile/horse/899827/saint-xavier/",
+            "raceNumber": "(6)"
           }
         ]
       },
@@ -35,8 +83,8 @@
     "courseName": "Huntingdon",
     "raceCardsCourseUrl": "/racecards/2025-03-19#huntingdon",
     "raceCardsCourseMeetingsUrl": "/racecards/26/huntingdon/2025-03-19",
-    "going": "GOOD (GoingStick: 7.1) (Watering)",
-    "weather": "Cloudy",
+    "going": "GOOD (Watered; 7.0)",
+    "weather": "Dry with sunny spells",
     "stallsPosition": "",
     "races": [
       {
@@ -54,6 +102,11 @@
         "raceTime": "3:05",
         "raceCardUrl": "/racecards/26/huntingdon/2025-03-19/888303",
         "horses": [
+          {
+            "horseName": "Kalista Love",
+            "horseProfileUrl": "/profile/horse/5764641/kalista-love/",
+            "raceNumber": "(1)"
+          },
           {
             "horseName": "Mac's Xpress",
             "horseProfileUrl": "/profile/horse/4217600/macs-xpress/",
@@ -82,6 +135,17 @@
             "raceNumber": "(6)"
           }
         ]
+      },
+      {
+        "raceTime": "5:12",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-03-19/888306",
+        "horses": [
+          {
+            "horseName": "Night Burlesque",
+            "horseProfileUrl": "/profile/horse/6993305/night-burlesque/",
+            "raceNumber": "(9)"
+          }
+        ]
       }
     ]
   },
@@ -92,15 +156,145 @@
     "going": "TAPETA: STANDARD",
     "weather": "Partly cloudy",
     "stallsPosition": "5f - Centre; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-03-19/888469",
+        "horses": [
+          {
+            "horseName": "Romanova",
+            "horseProfileUrl": "/profile/horse/5204021/romanova/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Happy Valley",
     "raceCardsCourseUrl": "/racecards/2025-03-19#happy-valley",
     "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-03-19",
-    "going": "TURF: GOOD",
+    "going": "TURF: GOOD changing to GOOD TO FIRM after race 3",
     "weather": "",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "10:35",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-19/890890",
+        "horses": [
+          {
+            "horseName": "Mr Aladdin",
+            "horseProfileUrl": "/profile/horse/5396348/mr-aladdin/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Superb Move",
+            "horseProfileUrl": "/profile/horse/4292089/superb-move/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Cervin",
+            "horseProfileUrl": "/profile/horse/4998626/cervin/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Winning Seven",
+            "horseProfileUrl": "/profile/horse/5526377/winning-seven/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "11:35",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-19/890892",
+        "horses": [
+          {
+            "horseName": "Prime Mortar",
+            "horseProfileUrl": "/profile/horse/4381622/prime-mortar/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Mega Bonus",
+            "horseProfileUrl": "/profile/horse/3538607/mega-bonus/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:05",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-19/890893",
+        "horses": [
+          {
+            "horseName": "Rewarding Twinkle",
+            "horseProfileUrl": "/profile/horse/6582531/rewarding-twinkle/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Team Happy",
+            "horseProfileUrl": "/profile/horse/5722048/team-happy/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:35",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-19/890894",
+        "horses": [
+          {
+            "horseName": "Prestige Good",
+            "horseProfileUrl": "/profile/horse/6932582/prestige-good/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Storm Runner",
+            "horseProfileUrl": "/profile/horse/6903300/storm-runner/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:05",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-19/890895",
+        "horses": [
+          {
+            "horseName": "Turf Phoenix",
+            "horseProfileUrl": "/profile/horse/4924718/turf-phoenix/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "King Glorioso",
+            "horseProfileUrl": "/profile/horse/5778967/king-glorioso/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-19/890896",
+        "horses": [
+          {
+            "horseName": "Morgan Success",
+            "horseProfileUrl": "/profile/horse/5189705/morgan-success/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Stellar Grande",
+            "horseProfileUrl": "/profile/horse/4076273/stellar-grande/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-03-19/890897",
+        "horses": [
+          {
+            "horseName": "Warriors Dream",
+            "horseProfileUrl": "/profile/horse/5767691/warriors-dream/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
   }
 ]

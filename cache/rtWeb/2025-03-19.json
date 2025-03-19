@@ -1,0 +1,40 @@
+{
+  "date": "2025-03-19",
+  "tips": [
+    {
+      "horseName": "Galunggung",
+      "time": "14:20",
+      "rating": 81.7
+    },
+    {
+      "horseName": "Pike Road",
+      "time": "14:50",
+      "rating": 88.6
+    },
+    {
+      "horseName": "Jarrive De Mee",
+      "time": "15:20",
+      "rating": 89.4
+    },
+    {
+      "horseName": "Presenting Doy",
+      "time": "15:50",
+      "rating": 89.1
+    },
+    {
+      "horseName": "Duke Of Deception",
+      "time": "16:25",
+      "rating": 76.7
+    },
+    {
+      "horseName": "Typhoon Flyer",
+      "time": "17:00",
+      "rating": 74
+    },
+    {
+      "horseName": "Minella Rescue",
+      "time": "17:35",
+      "rating": 76.6
+    }
+  ]
+}
