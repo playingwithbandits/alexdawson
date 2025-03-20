@@ -21,8 +21,7 @@ async function fetchTipsPage(date: string) {
     .toISOString()
     .split("T")[0];
 
-  let url =
-    "https://alexdawson.co.uk/getP.php?q=https://www.attheraces.com/tips";
+  let url = "https://www.attheraces.com/tips";
 
   if (date === tomorrow) {
     url += "/race-by-race-guides/tomorrow";
@@ -166,9 +165,9 @@ export async function GET(
 
     for (const link of courseLinks) {
       //console.log(`Fetching course page: ${link}`);
-      const courseHtml = await fetch(
-        "https://alexdawson.co.uk/getP.php?q=https://www.attheraces.com" + link
-      ).then((r) => r.text());
+      const courseHtml = await fetch("https://www.attheraces.com" + link).then(
+        (r) => r.text()
+      );
       const parts = link.split("/");
       const course =
         parts[parts.length - 1].toLowerCase() === "tomorrow"

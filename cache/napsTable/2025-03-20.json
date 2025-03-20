@@ -1,0 +1,299 @@
+{
+  "date": "2025-03-20",
+  "tips": [
+    {
+      "time": "15:20",
+      "horse": "Marche D'Aligre",
+      "tipster": "Steve Mullington",
+      "score": "12.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Reginald Charles",
+      "tipster": "Newsboy",
+      "score": "11.1"
+    },
+    {
+      "time": "15:30",
+      "horse": "Chique Angel",
+      "tipster": "Rory Paddock",
+      "score": "7.9"
+    },
+    {
+      "time": "17:00",
+      "horse": "Reginald Charles",
+      "tipster": "Jason Heavey",
+      "score": "5.3"
+    },
+    {
+      "time": "19:00",
+      "horse": "Miss Attitude",
+      "tipster": "The Punt",
+      "score": "5.0"
+    },
+    {
+      "time": "17:15",
+      "horse": "Five Quarters",
+      "tipster": "Rob Wright",
+      "score": "5.3"
+    },
+    {
+      "time": "20:30",
+      "horse": "Doon The Glen",
+      "tipster": "Matt Polley",
+      "score": "3.8"
+    },
+    {
+      "time": "20:00",
+      "horse": "Blackcurrent",
+      "tipster": "Chris Connolly",
+      "score": "2.1"
+    },
+    {
+      "time": "15:10",
+      "horse": "Siberian Star",
+      "tipster": "Lee Sobot",
+      "score": "0.5"
+    },
+    {
+      "time": "16:40",
+      "horse": "Getuptheyard",
+      "tipster": "Melissa Jones",
+      "score": "-0.1"
+    },
+    {
+      "time": "17:15",
+      "horse": "Five Quarters",
+      "tipster": "RP Ratings",
+      "score": "-1.1"
+    },
+    {
+      "time": "16:30",
+      "horse": "Kado De Joie",
+      "tipster": "Sam Hardy",
+      "score": "-1.6"
+    },
+    {
+      "time": "15:55",
+      "horse": "Rock House",
+      "tipster": "Farringdon",
+      "score": "-3.6"
+    },
+    {
+      "time": "14:45",
+      "horse": "Not Now Nathaniel",
+      "tipster": "Luke Tucker",
+      "score": "-6.1"
+    },
+    {
+      "time": "16:30",
+      "horse": "Kado De Joie",
+      "tipster": "Glendale",
+      "score": "-7.2"
+    },
+    {
+      "time": "14:55",
+      "horse": "Lock Out",
+      "tipster": "Karl Hedley",
+      "score": "-9.3"
+    },
+    {
+      "time": "15:45",
+      "horse": "Maura Jeanne",
+      "tipster": "Jim Delahunt",
+      "score": "-10.6"
+    },
+    {
+      "time": "14:35",
+      "horse": "Reel Her In",
+      "tipster": "The North",
+      "score": "-11.6"
+    },
+    {
+      "time": "17:30",
+      "horse": "Beraz",
+      "tipster": "The Brigadier",
+      "score": "-11.3"
+    },
+    {
+      "time": "16:05",
+      "horse": "Fashion's Model",
+      "tipster": "Whistler",
+      "score": "-12.0"
+    },
+    {
+      "time": "17:30",
+      "horse": "Charlie's Choice",
+      "tipster": "Marlborough",
+      "score": "-11.4"
+    },
+    {
+      "time": "16:05",
+      "horse": "Stellar Stream",
+      "tipster": "Garry Owen",
+      "score": "-12.4"
+    },
+    {
+      "time": "16:30",
+      "horse": "Mostly Sunny",
+      "tipster": "Andrew Mount",
+      "score": "-12.9"
+    },
+    {
+      "time": "19:30",
+      "horse": "Mayor Of Maghera",
+      "tipster": "Postdata",
+      "score": "-13.4"
+    },
+    {
+      "time": "17:15",
+      "horse": "Keppel Queen",
+      "tipster": "The Score",
+      "score": "-14.3"
+    },
+    {
+      "time": "16:05",
+      "horse": "Stellar Stream",
+      "tipster": "West Country",
+      "score": "-16.1"
+    },
+    {
+      "time": "15:55",
+      "horse": "Rock House",
+      "tipster": "Dean Kilbryde",
+      "score": "-16.2"
+    },
+    {
+      "time": "18:00",
+      "horse": "Frankies Dream",
+      "tipster": "Robin Goodfellow",
+      "score": "-15.7"
+    },
+    {
+      "time": "15:10",
+      "horse": "Siberian Star",
+      "tipster": "Spotlight",
+      "score": "-19.9"
+    },
+    {
+      "time": "15:30",
+      "horse": "Hard Dealt",
+      "tipster": "Ben Morgan",
+      "score": "-22.1"
+    },
+    {
+      "time": "17:15",
+      "horse": "Five Quarters",
+      "tipster": "Lawrence Taylor",
+      "score": "-22.5"
+    },
+    {
+      "time": "19:00",
+      "horse": "Paddy's Day",
+      "tipster": "Rockavon",
+      "score": "-24.5"
+    },
+    {
+      "time": "15:20",
+      "horse": "Marche D'Aligre",
+      "tipster": "Mercury",
+      "score": "-26.1"
+    },
+    {
+      "time": "15:02",
+      "horse": "Bright Legend",
+      "tipster": "Computeform",
+      "score": "-27.8"
+    },
+    {
+      "time": "19:00",
+      "horse": "Mondammej",
+      "tipster": "Jon Freeman",
+      "score": "-27.2"
+    },
+    {
+      "time": "17:15",
+      "horse": "Five Quarters",
+      "tipster": "The Judge",
+      "score": "-26.6"
+    },
+    {
+      "time": "14:20",
+      "horse": "My Friend Sean",
+      "tipster": "Templegate",
+      "score": "-30.0"
+    },
+    {
+      "time": "19:00",
+      "horse": "Bergerac",
+      "tipster": "The Duke",
+      "score": "-33.3"
+    },
+    {
+      "time": "17:00",
+      "horse": "Reginald Charles",
+      "tipster": "On The Nose",
+      "score": "-34.1"
+    },
+    {
+      "time": "16:12",
+      "horse": "Sir Bob",
+      "tipster": "Brian Flanagan",
+      "score": "-34.9"
+    },
+    {
+      "time": "18:00",
+      "horse": "Diamont Katie",
+      "tipster": "Ross Shepherd",
+      "score": "-36.5"
+    },
+    {
+      "time": "17:45",
+      "horse": "Hurricane Pat",
+      "tipster": "Tipman Tips",
+      "score": "-36.3"
+    },
+    {
+      "time": "20:30",
+      "horse": "She'Sashambles",
+      "tipster": "Jeffrey Ross",
+      "score": "-37.4"
+    },
+    {
+      "time": "16:40",
+      "horse": "Sergeant Fury",
+      "tipster": "Moorestyle",
+      "score": "-43.9"
+    },
+    {
+      "time": "14:20",
+      "horse": "My Friend Sean",
+      "tipster": "Chris Wright",
+      "score": "-45.1"
+    },
+    {
+      "time": "19:30",
+      "horse": "Stay Around",
+      "tipster": "Fortunatus",
+      "score": "-46.1"
+    },
+    {
+      "time": "16:05",
+      "horse": "Stellar Stream",
+      "tipster": "Rory Delargy",
+      "score": "-47.1"
+    },
+    {
+      "time": "19:00",
+      "horse": "Miss Attitude",
+      "tipster": "Lambourn",
+      "score": "-55.4"
+    },
+    {
+      "time": "16:30",
+      "horse": "Kado De Joie",
+      "tipster": "Adrian Wall",
+      "score": "-54.6"
+    }
+  ]
+}

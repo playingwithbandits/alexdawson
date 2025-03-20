@@ -1,0 +1,35 @@
+{
+  "date": "2025-03-20",
+  "tips": [
+    {
+      "horseName": "Paddys Policy",
+      "time": "14:00",
+      "rating": 89.5
+    },
+    {
+      "horseName": "Scorsese",
+      "time": "14:35",
+      "rating": 75.2
+    },
+    {
+      "horseName": "Siberian Star",
+      "time": "15:10",
+      "rating": 84.6
+    },
+    {
+      "horseName": "Musique De Fee",
+      "time": "15:45",
+      "rating": 77.2
+    },
+    {
+      "horseName": "The Paddy Pie (IRE)",
+      "time": "16:20",
+      "rating": 70.4
+    },
+    {
+      "horseName": "Synchronist",
+      "time": "16:53",
+      "rating": 75.3
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "date": "2025-03-20",
+  "tips": [
+    {
+      "time": "13:52",
+      "horse": "Blake",
+      "isNap": false
+    },
+    {
+      "time": "14:27",
+      "horse": "Added Bonus",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Bright Legend",
+      "isNap": false
+    },
+    {
+      "time": "15:37",
+      "horse": "Cobra Queen",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Machismo",
+      "isNap": false
+    },
+    {
+      "time": "16:47",
+      "horse": "Kalnoo",
+      "isNap": false
+    },
+    {
+      "time": "17:22",
+      "horse": "Early Bird",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Paddys Policy",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Grand Scheme",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Ballydisco",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Malago Rose",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Pilgrims King",
+      "isNap": false
+    },
+    {
+      "time": "16:53",
+      "horse": "Telhimlisten",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Puddlesinthepark",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Chique Angel",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Fashion'S Model",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Sergeant Fury",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Keppel Queen",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Hurricane Pat",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Ascending Lark",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Marche D'Aligre",
+      "isNap": true
+    },
+    {
+      "time": "15:55",
+      "horse": "Ostrava Du Berlais",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Demoiselle Kap",
+      "isNap": false
+    },
+    {
+      "time": "17:37",
+      "horse": "Frere D'Armes",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Reginald Charles",
+      "isNap": true
+    },
+    {
+      "time": "17:30",
+      "horse": "Beraz",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Diamont Katie",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Miss Attitude",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Antiquity",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Korroor",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Doon The Glen",
+      "isNap": false
+    }
+  ]
+}

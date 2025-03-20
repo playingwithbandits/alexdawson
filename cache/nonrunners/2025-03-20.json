@@ -1,0 +1,329 @@
+[
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-03-20#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-03-20",
+    "going": "GOOD (Watered; Chs 6.2, Hdl 6.0)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/12/chepstow/2025-03-20/888312",
+        "horses": [
+          {
+            "horseName": "Mind Hunter",
+            "horseProfileUrl": "/profile/horse/3137664/mind-hunter/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Remarkable Flight",
+            "horseProfileUrl": "/profile/horse/5325049/remarkable-flight/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cork",
+    "raceCardsCourseUrl": "/racecards/2025-03-20#cork",
+    "raceCardsCourseMeetingsUrl": "/racecards/596/cork/2025-03-20",
+    "going": "GOOD (Good to yielding in places)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:27",
+        "raceCardUrl": "/racecards/596/cork/2025-03-20/890778",
+        "horses": [
+          {
+            "horseName": "Silent Dawn",
+            "horseProfileUrl": "/profile/horse/5116049/silent-dawn/",
+            "raceNumber": "(22)"
+          },
+          {
+            "horseName": "Old Kenmare",
+            "horseProfileUrl": "/profile/horse/6855090/old-kenmare/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Olord",
+            "horseProfileUrl": "/profile/horse/3499244/olord/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Go Gill Go",
+            "horseProfileUrl": "/profile/horse/3564085/go-gill-go/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Bal Kauto",
+            "horseProfileUrl": "/profile/horse/3481853/bal-kauto/",
+            "raceNumber": "(23)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:02",
+        "raceCardUrl": "/racecards/596/cork/2025-03-20/890779",
+        "horses": [
+          {
+            "horseName": "Toor Beag",
+            "horseProfileUrl": "/profile/horse/5848835/toor-beag/",
+            "raceNumber": "(23)"
+          },
+          {
+            "horseName": "Coup d'Etat",
+            "horseProfileUrl": "/profile/horse/5848831/coup-detat/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Tennesse Boy",
+            "horseProfileUrl": "/profile/horse/6949133/tennesse-boy/",
+            "raceNumber": "(24)"
+          },
+          {
+            "horseName": "Caught Again",
+            "horseProfileUrl": "/profile/horse/6903323/caught-again/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Promontory",
+            "horseProfileUrl": "/profile/horse/5947074/promontory/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:37",
+        "raceCardUrl": "/racecards/596/cork/2025-03-20/890780",
+        "horses": [
+          {
+            "horseName": "Moylussa",
+            "horseProfileUrl": "/profile/horse/5689562/moylussa/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Alright Darling",
+            "horseProfileUrl": "/profile/horse/5554945/alright-darling/",
+            "raceNumber": "(23)"
+          },
+          {
+            "horseName": "Smackwater Jack",
+            "horseProfileUrl": "/profile/horse/1913964/smackwater-jack/",
+            "raceNumber": "(24)"
+          },
+          {
+            "horseName": "The Names Jock",
+            "horseProfileUrl": "/profile/horse/2184154/the-names-jock/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:12",
+        "raceCardUrl": "/racecards/596/cork/2025-03-20/890781",
+        "horses": [
+          {
+            "horseName": "Toor Khov",
+            "horseProfileUrl": "/profile/horse/4895502/toor-khov/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Flemensface",
+            "horseProfileUrl": "/profile/horse/3984123/flemensface/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Arion Soldier",
+            "horseProfileUrl": "/profile/horse/5383925/arion-soldier/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:22",
+        "raceCardUrl": "/racecards/596/cork/2025-03-20/890783",
+        "horses": [
+          {
+            "horseName": "Early Bird",
+            "horseProfileUrl": "/profile/horse/6898675/early-bird/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ludlow",
+    "raceCardsCourseUrl": "/racecards/2025-03-20#ludlow",
+    "raceCardsCourseMeetingsUrl": "/racecards/34/ludlow/2025-03-20",
+    "going": "GOOD (Good to soft in places; watered; 6.5)",
+    "weather": "Fine but cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/34/ludlow/2025-03-20/888318",
+        "horses": [
+          {
+            "horseName": "Pomeriggio",
+            "horseProfileUrl": "/profile/horse/5019605/pomeriggio/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Rascallion",
+            "horseProfileUrl": "/profile/horse/5842798/rascallion/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-20#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-03-20",
+    "going": "TAPETA: STANDARD TO SLOW",
+    "weather": "Cloudy",
+    "stallsPosition": "1m2f - Outside; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-20/888480",
+        "horses": [
+          {
+            "horseName": "War Memorial",
+            "horseProfileUrl": "/profile/horse/5207742/war-memorial/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-20/888477",
+        "horses": [
+          {
+            "horseName": "Believe The Storm",
+            "horseProfileUrl": "/profile/horse/6224704/believe-the-storm/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-20/888476",
+        "horses": [
+          {
+            "horseName": "Tees Spirit",
+            "horseProfileUrl": "/profile/horse/3196075/tees-spirit/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Buzz Box",
+            "horseProfileUrl": "/profile/horse/5202355/buzz-box/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-20/888481",
+        "horses": [
+          {
+            "horseName": "Banana",
+            "horseProfileUrl": "/profile/horse/3468193/banana/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-20/890966",
+        "horses": [
+          {
+            "horseName": "Lochaber",
+            "horseProfileUrl": "/profile/horse/4826923/lochaber/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sedgefield",
+    "raceCardsCourseUrl": "/racecards/2025-03-20#sedgefield",
+    "raceCardsCourseMeetingsUrl": "/racecards/57/sedgefield/2025-03-20",
+    "going": "GOOD (5.9)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:35",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-03-20/888325",
+        "horses": [
+          {
+            "horseName": "Scar Bridge",
+            "horseProfileUrl": "/profile/horse/5728028/scar-bridge/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-03-20/888324",
+        "horses": [
+          {
+            "horseName": "Rumble B",
+            "horseProfileUrl": "/profile/horse/2564352/rumble-b/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-03-20/888323",
+        "horses": [
+          {
+            "horseName": "Coolmoyne",
+            "horseProfileUrl": "/profile/horse/3890914/coolmoyne/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:53",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-03-20/888321",
+        "horses": [
+          {
+            "horseName": "Telhimlisten",
+            "horseProfileUrl": "/profile/horse/3023370/telhimlisten/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Saint-Cloud",
+    "raceCardsCourseUrl": "/racecards/2025-03-20#saint-cloud",
+    "raceCardsCourseMeetingsUrl": "/racecards/219/saint-cloud/2025-03-20",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/219/saint-cloud/2025-03-20/891112",
+        "horses": [
+          {
+            "horseName": "Edibest Fal",
+            "horseProfileUrl": "/profile/horse/7312316/edibest-fal/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  }
+]

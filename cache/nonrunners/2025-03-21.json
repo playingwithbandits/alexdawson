@@ -1,0 +1,59 @@
+[
+  {
+    "courseName": "Dundalk (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-21#dundalk-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1138/dundalk-aw/2025-03-21",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-03-21#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-03-21",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.0) (Watered) (Rail movements: 2.08 & 2.40 -72yds and 4.15 & 4.50 -48yds)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Musselburgh",
+    "raceCardsCourseUrl": "/racecards/2025-03-21#musselburgh",
+    "raceCardsCourseMeetingsUrl": "/racecards/16/musselburgh/2025-03-21",
+    "going": "GOOD TO SOFT (Watering to maintain) (Rail Movements: 2.20, 3.20, 5.00 & 5.30 +10yds and 2.50, 3.50 & 4.25 +20yds)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-03-21#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-03-21",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: Chase 4.5, Hurdle 4.3) (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-21#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-03-21",
+    "going": "TAPETA: STANDARD",
+    "weather": "Cloudy",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-03-21/888487",
+        "horses": [
+          {
+            "horseName": "Oursin",
+            "horseProfileUrl": "/profile/horse/6496405/oursin/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  }
+]
