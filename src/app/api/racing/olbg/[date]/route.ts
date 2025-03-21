@@ -195,15 +195,23 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
         );
         horseEntry.commentCount = commentCount;
 
-        // Extract comment text if there are multiple comments
+        // Extract comment text if there are comments
         if (commentCount > 0) {
-          const commentElement = $tip
-            .next(".ev-cmt")
-            .find(".rw.h-readable")
-            .text()
-            .trim();
-          if (commentElement) {
-            horseEntry.comment = commentElement;
+          //console.log("🔍 Comment count:", commentCount);
+          //console.log("🔍 Tip element:", $tip.html());
+          const nextElement = $tip.next();
+          //console.log("🔍 Next element:", nextElement.html());
+          const nextElementHtml = nextElement.html() || "";
+          const $nextElement = cheerio.load(nextElementHtml);
+          const commentElement = $nextElement(".rw.h-readable");
+          const comment = commentElement.text().trim();
+
+          // console.log("🔍 Comment element:", commentElement.html());
+          // console.log("🔍 Raw comment text:", commentElement.text());
+          // console.log("🔍 Trimmed comment:", comment);
+          // console.log("🔍 Comment:", comment);
+          if (comment) {
+            horseEntry.comment = comment;
           }
         }
 
@@ -285,6 +293,19 @@ export async function GET(
       //Save to cache
       await ensureDirectoryExists(CACHE_DIR);
       await fs.writeFile(cacheFile, JSON.stringify(olbgTips, null, 2));
+
+      // Also save to next day's cache file if it doesn't exist
+      const nextDate = new Date(date);
+      nextDate.setDate(nextDate.getDate() + 1);
+      const nextDateString = nextDate.toISOString().split("T")[0];
+      const nextCacheFile = path.join(CACHE_DIR, `${nextDateString}.json`);
+
+      try {
+        await fs.access(nextCacheFile);
+      } catch {
+        // Next day's file doesn't exist, so create it
+        await fs.writeFile(nextCacheFile, JSON.stringify(olbgTips, null, 2));
+      }
 
       return NextResponse.json(olbgTips);
     }

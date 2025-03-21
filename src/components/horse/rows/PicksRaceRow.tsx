@@ -12,6 +12,7 @@ import {
 import { normalizeTime } from "../DayPredictions";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
+import { HorseNameRow } from "./HorseNameRow";
 
 interface PicksRaceRowProps {
   isTodayOrPast: boolean;
@@ -610,6 +611,102 @@ export function PicksRaceRow({
 
             const decimalOdds = 100 / (perc || 0.1);
 
+            const scoreSummary =
+              "Name: " +
+              name +
+              " : Count: " +
+              count.toFixed(2) +
+              " : Perc: " +
+              perc.toFixed(2) +
+              "%" +
+              " : Odds: " +
+              decimalOdds.toFixed(2);
+
+            const olbgSummary = `Win: ${
+              olbgTipsWithWin?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.winTips || 0
+            }/${
+              olbgTipsWithWin?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.winTotal || 0
+            } : EW: ${
+              olbgTipsWithEw?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.ewTips || 0
+            }/${
+              olbgTipsWithEw?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.ewTotal || 0
+            } : NAP: ${
+              olbgTipsWithNap?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.napTips || 0
+            }/${
+              olbgTipsWithNap?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.napTotal || 0
+            } : Expert: ${
+              olbgTipsWithExpert?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.expertCount || 0
+            } : Comments: ${
+              olbgTipsWithComment?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.commentCount || 0
+            }`;
+
+            const olbgComment = olbgTipsWithComment
+              ?.filter((x) => cleanName(x.horseName) === cleanName(name))
+              ?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.comment;
+
+            const atrComment = atrTipSelections
+              ?.filter((x) => cleanName(x.horse) === cleanName(name))
+              ?.find((x) => cleanName(x.horse) === cleanName(name))?.comment;
+
+            const timeformComment = timeformTipSelections
+              ?.filter((x) => cleanName(x.horse) === cleanName(name))
+              ?.find((x) => cleanName(x.horse) === cleanName(name))?.comment;
+
+            const rpRaceComment = race?.raceExtraInfo?.verdict?.allNamed?.find(
+              (x) => cleanName(x) === cleanName(name)
+            )
+              ? race?.raceExtraInfo?.verdict?.comment
+              : undefined;
+
+            const rpHorseComment =
+              race?.raceExtraInfo?.comments[cleanName(name)];
+
+            const paraGraph = [
+              scoreSummary,
+              olbgSummary
+                ? `<span style='color: #666'>OLBG Summary:</span>\n` +
+                  olbgSummary
+                : undefined,
+              olbgComment
+                ? `<span style='color: #666'>OLBG Top Comment:</span>\n` +
+                  olbgComment
+                : undefined,
+              atrComment
+                ? `<span style='color: #666'>ATR Comment:</span>\n` + atrComment
+                : undefined,
+              timeformComment
+                ? `<span style='color: #666'>Timeform Comment:</span>\n` +
+                  timeformComment
+                : undefined,
+              rpRaceComment
+                ? "<span style='color: #666'>RP Verdict:</span>\n" +
+                  rpRaceComment
+                : undefined,
+              rpHorseComment
+                ? "<span style='color: #666'>RP Comment:</span>\n" +
+                  rpHorseComment
+                : undefined,
+            ]
+              ?.filter((x) => x)
+              .join("\n\n");
             return (
               <HorseNameRow
                 key={race.time + x_i}
@@ -621,19 +718,7 @@ export function PicksRaceRow({
                 oddsHighlight={odds > 6 && count >= 3}
                 isNonRunner={isNonRunner(race.time, name)}
                 greyedOut={count < 3}
-                title={
-                  "Name: " +
-                  name +
-                  " : " +
-                  count.toFixed(2) +
-                  " : " +
-                  perc.toFixed(2) +
-                  "%" +
-                  ": " +
-                  decimalOdds.toFixed(2) +
-                  " : " +
-                  race?.raceExtraInfo?.comments[cleanName(name)]
-                }
+                title={paraGraph}
                 highlight1={count >= 4}
                 highlight2={
                   count >= 4 &&
@@ -649,91 +734,6 @@ export function PicksRaceRow({
           })}
         </div>
       </div>
-    </div>
-  );
-}
-
-const getTrophy = (position: string) => {
-  switch (position.toLowerCase()) {
-    case "1st":
-      return "🏆";
-    case "2nd":
-      return "🥈";
-    case "3rd":
-      return "🥉";
-    default:
-      return "";
-  }
-};
-
-const getHorsePosition = (
-  horseName: string,
-  results: RaceResults | undefined,
-  time: string
-) => {
-  console.log("Getting position for horse:", horseName);
-  const raceResult = results?.results.find(
-    (r) => normalizeTime(r.time) === normalizeTime(time)
-  );
-
-  if (!raceResult) return "";
-
-  if (cleanName(raceResult.winner.name) === cleanName(horseName)) {
-    console.log("Horse was winner");
-    return "1st";
-  }
-
-  const placed = raceResult.placedHorses.find(
-    (h) => cleanName(h.name) === cleanName(horseName)
-  );
-  console.log("Horse placed:", placed?.position);
-  return placed?.position || "";
-};
-
-function HorseNameRow({
-  horseName,
-  results,
-  time,
-  odds,
-  extraText,
-  oddsHighlight,
-  isNonRunner,
-  greyedOut,
-  highlight1,
-  highlight2,
-  title,
-}: {
-  horseName: string;
-  results: RaceResults | undefined;
-  time: string;
-  odds: number;
-  extraText?: string;
-  oddsHighlight?: boolean;
-  isNonRunner?: boolean;
-  greyedOut?: boolean;
-  highlight1?: boolean;
-  highlight2?: boolean;
-  title?: string;
-}) {
-  return (
-    <div
-      className={`flex justify-between ${greyedOut ? "text-gray-500" : ""} ${
-        highlight1 && !highlight2 ? "text-[#f2f92c]" : ""
-      } ${highlight2 ? "text-[#ff881f]" : ""}`}
-      title={title}
-    >
-      <span>
-        {getTrophy(getHorsePosition(horseName, results, time))}
-        <span className={isNonRunner ? "line-through text-red-900" : ""}>
-          {horseName}
-        </span>
-      </span>
-      <span className={`flex gap-2 `}>
-        <span>{extraText}</span>
-        <span className={`${oddsHighlight ? "text-[#1EEAFF]" : ""}`}>
-          {odds.toFixed(2)}
-        </span>
-      </span>
     </div>
   );
 }
