@@ -6,34 +6,188 @@
     "going": "POLYTRACK: STANDARD",
     "weather": "Light rain",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-21/890909",
+        "horses": [
+          {
+            "horseName": "Sakakibara",
+            "horseProfileUrl": "/profile/horse/6460904/sakakibara/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Sea View Lady",
+            "horseProfileUrl": "/profile/horse/7195633/sea-view-lady/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Arctic Steps",
+            "horseProfileUrl": "/profile/horse/6487589/arctic-steps/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-21/890911",
+        "horses": [
+          {
+            "horseName": "El Bello",
+            "horseProfileUrl": "/profile/horse/3679956/el-bello/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-21/890912",
+        "horses": [
+          {
+            "horseName": "Prince Of Love",
+            "horseProfileUrl": "/profile/horse/6737430/prince-of-love/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Latin",
+            "horseProfileUrl": "/profile/horse/5061496/latin/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Nezeeh",
+            "horseProfileUrl": "/profile/horse/5237784/nezeeh/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Saxon Kingdom",
+            "horseProfileUrl": "/profile/horse/5132218/saxon-kingdom/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:15",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-21/890914",
+        "horses": [
+          {
+            "horseName": "Uberrima Fides",
+            "horseProfileUrl": "/profile/horse/3918337/uberrima-fides/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Randall Poets Lass",
+            "horseProfileUrl": "/profile/horse/4652645/randall-poets-lass/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Metamorpheus",
+            "horseProfileUrl": "/profile/horse/3737118/metamorpheus/",
+            "raceNumber": "(17)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Ffos Las",
     "raceCardsCourseUrl": "/racecards/2025-03-21#ffos-las",
     "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-03-21",
-    "going": "GOOD, Good to soft in places (GoingStick: 7.0) (Watered) (Rail movements: 2.08 & 2.40 -72yds and 4.15 & 4.50 -48yds)",
-    "weather": "Light rain",
+    "going": "GOOD (Good to soft in places; watered; 6.8)",
+    "weather": "Light rain showers",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:08",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-03-21/888330",
+        "horses": [
+          {
+            "horseName": "Arctic Stream",
+            "horseProfileUrl": "/profile/horse/4175273/arctic-stream/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Musselburgh",
     "raceCardsCourseUrl": "/racecards/2025-03-21#musselburgh",
     "raceCardsCourseMeetingsUrl": "/racecards/16/musselburgh/2025-03-21",
-    "going": "GOOD TO SOFT (Watering to maintain) (Rail Movements: 2.20, 3.20, 5.00 & 5.30 +10yds and 2.50, 3.50 & 4.25 +20yds)",
+    "going": "GOOD TO SOFT, Good in places (Watered) (Rail Movements: 2.20, 3.20, 5.00 & 5.30 +10yds and 2.50, 3.50 & 4.25 +20yds)",
     "weather": "Light rain",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-03-21/888337",
+        "horses": [
+          {
+            "horseName": "Teofimo",
+            "horseProfileUrl": "/profile/horse/58956153/teofimo/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-03-21/888335",
+        "horses": [
+          {
+            "horseName": "Platin Moon",
+            "horseProfileUrl": "/profile/horse/6903328/platin-moon/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-03-21/888338",
+        "horses": [
+          {
+            "horseName": "No Flies On Her",
+            "horseProfileUrl": "/profile/horse/5864665/no-flies-on-her/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Newbury",
     "raceCardsCourseUrl": "/racecards/2025-03-21#newbury",
     "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-03-21",
-    "going": "GOOD TO SOFT, Good in places (GoingStick: Chase 4.5, Hurdle 4.3) (Watering)",
-    "weather": "Cloudy",
+    "going": "GOOD TO SOFT (Good in places; watered; 4.2)",
+    "weather": "Sunny spells",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/36/newbury/2025-03-21/888344",
+        "horses": [
+          {
+            "horseName": "Ski Lodge",
+            "horseProfileUrl": "/profile/horse/5021475/ski-lodge/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:02",
+        "raceCardUrl": "/racecards/36/newbury/2025-03-21/888342",
+        "horses": [
+          {
+            "horseName": "All Authorized",
+            "horseProfileUrl": "/profile/horse/4980115/all-authorized/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "High Treason",
+            "horseProfileUrl": "/profile/horse/4906677/high-treason/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Southwell (AW)",
@@ -51,6 +205,32 @@
             "horseName": "Oursin",
             "horseProfileUrl": "/profile/horse/6496405/oursin/",
             "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Lights Go Down",
+            "horseProfileUrl": "/profile/horse/7200238/lights-go-down/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-03-21/888485",
+        "horses": [
+          {
+            "horseName": "Cinque Verde",
+            "horseProfileUrl": "/profile/horse/4438488/cinque-verde/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Spring Is Sprung",
+            "horseProfileUrl": "/profile/horse/3499194/spring-is-sprung/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Momaer",
+            "horseProfileUrl": "/profile/horse/3437873/momaer/",
+            "raceNumber": "(11)"
           }
         ]
       }

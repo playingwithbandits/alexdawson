@@ -597,7 +597,7 @@ export function PicksRaceRow({
               time={race.time}
               odds={olbgCommentTipsWeighted[x_i][1]}
               extraText={`${x.commentCount}`}
-              title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount}`}
+              title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount} : ${x.comment}`}
             />
           ))}
         </div>
@@ -618,9 +618,9 @@ export function PicksRaceRow({
                 time={race.time}
                 odds={odds}
                 extraText={`${count.toFixed(1)} : ${perc}%`}
-                oddsHighlight={odds > 6 && perc >= 20}
+                oddsHighlight={odds > 6 && count >= 3}
                 isNonRunner={isNonRunner(race.time, name)}
-                greyedOut={perc < 10}
+                greyedOut={count < 3}
                 title={
                   "Name: " +
                   name +
@@ -634,8 +634,16 @@ export function PicksRaceRow({
                   " : " +
                   race?.raceExtraInfo?.comments[cleanName(name)]
                 }
-                highlight1={perc >= 20}
-                highlight2={perc >= 33}
+                highlight1={count >= 4}
+                highlight2={
+                  count >= 4 &&
+                  olbgTipsWithComment
+                    ?.filter((x) => x.commentCount > 1)
+                    ?.some((x) => cleanName(x.horseName) === cleanName(name)) &&
+                  olbgTipsWithNap
+                    ?.filter((x) => x.napTips > 1)
+                    ?.some((x) => cleanName(x.horseName) === cleanName(name))
+                }
               />
             );
           })}

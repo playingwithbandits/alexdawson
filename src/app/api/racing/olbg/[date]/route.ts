@@ -44,6 +44,7 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
       napPerc: number;
       expertCount: number;
       commentCount: number;
+      comment?: string;
     }
   >();
 
@@ -194,6 +195,18 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
         );
         horseEntry.commentCount = commentCount;
 
+        // Extract comment text if there are multiple comments
+        if (commentCount > 0) {
+          const commentElement = $tip
+            .next(".ev-cmt")
+            .find(".rw.h-readable")
+            .text()
+            .trim();
+          if (commentElement) {
+            horseEntry.comment = commentElement;
+          }
+        }
+
         tipsMap.set(horseName, horseEntry);
       });
     } catch (error) {
@@ -215,6 +228,7 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
     napPerc: entry.napPerc,
     expertCount: entry.expertCount,
     commentCount: entry.commentCount,
+    comment: entry.comment,
   }));
 
   //console.log("🔗 Total race links found:", raceLinks.length);

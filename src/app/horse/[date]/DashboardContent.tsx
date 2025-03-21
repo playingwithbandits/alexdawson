@@ -28,6 +28,11 @@ export function DashboardContent({ olbgTips }: DashboardContentProps) {
                   <div className="text-sm text-gray-500 mt-2">
                     {tip.expertCount} experts | {tip.commentCount} comments
                   </div>
+                  {tip.comment && (
+                    <div className="mt-2 text-sm text-gray-700 italic">
+                      &ldquo;{tip.comment}&rdquo;
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

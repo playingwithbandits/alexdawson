@@ -680,6 +680,7 @@ export interface OLBGTip {
   napPerc: number;
   expertCount: number;
   commentCount: number;
+  comment?: string;
 }
 
 export interface OLBGTips {
