@@ -1,0 +1,146 @@
+[
+  {
+    "courseName": "Bangor-on-Dee",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#bangor-on-dee",
+    "raceCardsCourseMeetingsUrl": "/racecards/4/bangor-on-dee/2025-03-22",
+    "going": "GOOD, Good to soft in places (GoingStick: Chase 6.2, Hurdle 6.7) (Watered) (Rail Movements: 1.35, 2.15 & 4.37 +36yds, 2.52 +56yds, 3.27 +72yds and 4.02 & 5.10 +46yds)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Kelso",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#kelso",
+    "raceCardsCourseMeetingsUrl": "/racecards/27/kelso/2025-03-22",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.2) (Watering to maintain)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Navan",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#navan",
+    "raceCardsCourseMeetingsUrl": "/racecards/193/navan/2025-03-22",
+    "going": "YIELDING",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-03-22",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 4.2) (Watered)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-03-22",
+    "going": "TAPETA: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "1m2f - Outside; Straight - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-03-22",
+    "going": "TAPETA: STANDARD",
+    "weather": "Showers",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:18",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-22/888500",
+        "horses": [
+          {
+            "horseName": "Major Major",
+            "horseProfileUrl": "/profile/horse/4274014/major-major/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-22/888497",
+        "horses": [
+          {
+            "horseName": "Commander Flavius",
+            "horseProfileUrl": "/profile/horse/5884241/commander-flavius/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Abu Dhabi",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#abu-dhabi",
+    "raceCardsCourseMeetingsUrl": "/racecards/490/abu-dhabi/2025-03-22",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/490/abu-dhabi/2025-03-22/891097",
+        "horses": [
+          {
+            "horseName": "Harvest Gold",
+            "horseProfileUrl": "/profile/horse/4102888/harvest-gold/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Al Khazneh",
+            "horseProfileUrl": "/profile/horse/4269995/al-khazneh/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/490/abu-dhabi/2025-03-22/891098",
+        "horses": [
+          {
+            "horseName": "Nawroz",
+            "horseProfileUrl": "/profile/horse/5521272/nawroz/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Moonee Valley",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#moonee-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/299/moonee-valley/2025-03-22",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Rosehill",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#rosehill",
+    "raceCardsCourseMeetingsUrl": "/racecards/311/rosehill/2025-03-22",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/311/rosehill/2025-03-22/891063",
+        "horses": [
+          {
+            "horseName": "Ostraka",
+            "horseProfileUrl": "/profile/horse/5075496/ostraka/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -258,30 +258,27 @@ export async function GET(
   const cutoffTime = new Date();
   cutoffTime.setHours(10, 30, 0, 0);
 
-  // Check if requested date is in the future
-  if (date > today) {
-    return NextResponse.json({
-      date,
-      tips: [],
-    });
-  }
-
-  // Check if it's today but before 10:30am
-  if (date === today && now < cutoffTime) {
-    return NextResponse.json({
-      date,
-      tips: [],
-    });
-  }
-
   const cacheFile = path.join(CACHE_DIR, `${date}.json`);
-
   try {
     // Try to read from cache first
     const cachedData = await fs.readFile(cacheFile, "utf-8");
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
-    // Only fetch fresh data if it's today
+    if (date > today) {
+      return NextResponse.json({
+        date,
+        tips: [],
+      });
+    }
+
+    // Check if it's today but before 10:30am
+    // if (date === today && now < cutoffTime) {
+    //   return NextResponse.json({
+    //     date,
+    //     tips: [],
+    //   });
+    // }
+
     if (date === today) {
       const tips = await fetchAndParseTips();
 
@@ -310,7 +307,6 @@ export async function GET(
       return NextResponse.json(olbgTips);
     }
 
-    // For past dates with no cache, return empty tips
     return NextResponse.json({
       date,
       tips: [],

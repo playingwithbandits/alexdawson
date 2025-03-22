@@ -277,7 +277,7 @@ export function PicksRaceRow({
 
   const olbgCommentTipsWeighted =
     olbgTipsWithComment?.map(
-      (x) => [x.horseName, 0.15 * x.commentCount] as [string, number]
+      (x) => [x.horseName, 0.25 * x.commentCount] as [string, number]
     ) || [];
 
   const weightedScores = [
@@ -717,17 +717,17 @@ export function PicksRaceRow({
                 extraText={`${count.toFixed(1)} : ${perc}%`}
                 oddsHighlight={odds > 6 && count >= 3}
                 isNonRunner={isNonRunner(race.time, name)}
-                greyedOut={count < 3}
+                greyedOut={count < 2}
                 title={paraGraph}
                 highlight1={count >= 4}
                 highlight2={
-                  count >= 4 &&
+                  count >= 3 &&
                   olbgTipsWithComment
-                    ?.filter((x) => x.commentCount > 1)
+                    ?.filter((x) => x.commentCount >= 1)
                     ?.some((x) => cleanName(x.horseName) === cleanName(name)) &&
-                  olbgTipsWithNap
-                    ?.filter((x) => x.napTips > 1)
-                    ?.some((x) => cleanName(x.horseName) === cleanName(name))
+                  (aiTopPicks?.find(
+                    (x) => cleanName(x.name) === cleanName(name)
+                  )?.score?.total?.percentage || 0) >= 40
                 }
               />
             );

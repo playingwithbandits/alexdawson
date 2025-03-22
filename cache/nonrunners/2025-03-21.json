@@ -4,7 +4,7 @@
     "raceCardsCourseUrl": "/racecards/2025-03-21#dundalk-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/1138/dundalk-aw/2025-03-21",
     "going": "POLYTRACK: STANDARD",
-    "weather": "Light rain",
+    "weather": "Overcast",
     "stallsPosition": "",
     "races": [
       {
@@ -113,8 +113,8 @@
     "courseName": "Musselburgh",
     "raceCardsCourseUrl": "/racecards/2025-03-21#musselburgh",
     "raceCardsCourseMeetingsUrl": "/racecards/16/musselburgh/2025-03-21",
-    "going": "GOOD TO SOFT, Good in places (Watered) (Rail Movements: 2.20, 3.20, 5.00 & 5.30 +10yds and 2.50, 3.50 & 4.25 +20yds)",
-    "weather": "Light rain",
+    "going": "GOOD TO SOFT (Good in places; watered)",
+    "weather": "overcast",
     "stallsPosition": "",
     "races": [
       {
@@ -194,7 +194,7 @@
     "raceCardsCourseUrl": "/racecards/2025-03-21#southwell-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-03-21",
     "going": "TAPETA: STANDARD",
-    "weather": "Cloudy",
+    "weather": "Partly sunny",
     "stallsPosition": "5f - Centre; Remainder - Inside",
     "races": [
       {
@@ -235,5 +235,23 @@
         ]
       }
     ]
+  },
+  {
+    "courseName": "Le Croise-Laroche",
+    "raceCardsCourseUrl": "/racecards/2025-03-21#le-croise-laroche",
+    "raceCardsCourseMeetingsUrl": "/racecards/227/le-croise-laroche/2025-03-21",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Le Mans",
+    "raceCardsCourseUrl": "/racecards/2025-03-21#le-mans",
+    "raceCardsCourseMeetingsUrl": "/racecards/278/le-mans/2025-03-21",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
   }
 ]
