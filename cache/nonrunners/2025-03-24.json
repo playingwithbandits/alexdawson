@@ -1,0 +1,29 @@
+[
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-24#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-03-24",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "1m - Outside; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Wincanton",
+    "raceCardsCourseUrl": "/racecards/2025-03-24#wincanton",
+    "raceCardsCourseMeetingsUrl": "/racecards/90/wincanton/2025-03-24",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.5) (Selective watering to maintain)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-24#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-03-24",
+    "going": "TAPETA: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": []
+  }
+]

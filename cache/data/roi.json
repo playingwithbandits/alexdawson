@@ -2746,6 +2746,67 @@
           "totalBets": 8
         }
       }
+    },
+    {
+      "date": "2025-03-23",
+      "sources": {
+        "ai": {
+          "roi": 148.9090909090909,
+          "wins": 5,
+          "total": 11,
+          "totalReturns": 27.38,
+          "totalBets": 11
+        },
+        "predictions": {
+          "roi": 71.81818181818184,
+          "wins": 5,
+          "total": 11,
+          "totalReturns": 18.900000000000002,
+          "totalBets": 11
+        },
+        "atr": {
+          "roi": 55.30000000000002,
+          "wins": 5,
+          "total": 10,
+          "totalReturns": 15.530000000000001,
+          "totalBets": 10
+        },
+        "timeform": {
+          "roi": 36.66666666666668,
+          "wins": 3,
+          "total": 9,
+          "totalReturns": 12.3,
+          "totalBets": 9
+        },
+        "gyto": {
+          "roi": -13.636363636363635,
+          "wins": 8,
+          "total": 22,
+          "totalReturns": 19,
+          "totalBets": 22
+        },
+        "naps": {
+          "roi": 43.86363636363635,
+          "wins": 14,
+          "total": 44,
+          "totalReturns": 63.3,
+          "totalBets": 44
+        },
+        "rp": {
+          "roi": 79.3,
+          "wins": 4,
+          "total": 10,
+          "totalReturns": 17.93,
+          "totalBets": 10
+        },
+        "aiLarge": {
+          "roi": -100,
+          "wins": 0,
+          "total": 1,
+          "totalReturns": 0,
+          "totalBets": 1
+        }
+      }
     }
   ]
 }
