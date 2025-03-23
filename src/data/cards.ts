@@ -1,4 +1,5 @@
 import { Card } from "@/types/game";
+import { cards2 } from "./cards2";
 
 export const cards: Card[] = [
   {
@@ -1185,6 +1186,18 @@ export const cards: Card[] = [
     penaltyCost: 2,
     category: "dare",
     image: "wildcard-spin",
+  },
+  {
+    description: "Change places! All of the group change seats, draw again!",
+    penaltyCost: 0,
+    category: "wildcard",
+    image: "wildcard-seats",
+  },
+  {
+    description: "Change places! All of the group change seats, draw again!",
+    penaltyCost: 0,
+    category: "wildcard",
+    image: "wildcard-seats",
   },
   {
     description: "Change places! All of the group change seats, draw again!",
@@ -4618,4 +4631,6 @@ export const cards: Card[] = [
       "Would you rather be caught naked in public or caught having sex by your parents?",
     penaltyCost: 3,
   },
+  
+  ...cards2,
 ];

@@ -1,0 +1,313 @@
+[
+  {
+    "courseName": "Carlisle",
+    "raceCardsCourseUrl": "/racecards/2025-03-23#carlisle",
+    "raceCardsCourseMeetingsUrl": "/racecards/8/carlisle/2025-03-23",
+    "going": "GOOD, Good to soft in places (GoingStick: Chase 6.3; Hurdle 6.2) (Watering) (Inner hurdle course)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/8/carlisle/2025-03-23/888371",
+        "horses": [
+          {
+            "horseName": "Admiral Stewart",
+            "horseProfileUrl": "/profile/horse/5472174/admiral-stewart/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/8/carlisle/2025-03-23/888367",
+        "horses": [
+          {
+            "horseName": "Hold The Note",
+            "horseProfileUrl": "/profile/horse/2268122/hold-the-note/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Catch Catchfire",
+            "horseProfileUrl": "/profile/horse/5511341/catch-catchfire/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/8/carlisle/2025-03-23/888368",
+        "horses": [
+          {
+            "horseName": "O'Connell",
+            "horseProfileUrl": "/profile/horse/4330832/oconnell/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Taras Halls",
+            "horseProfileUrl": "/profile/horse/4782838/taras-halls/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/8/carlisle/2025-03-23/888370",
+        "horses": [
+          {
+            "horseName": "Bray Dale",
+            "horseProfileUrl": "/profile/horse/4117869/bray-dale/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Exeter",
+    "raceCardsCourseUrl": "/racecards/2025-03-23#exeter",
+    "raceCardsCourseMeetingsUrl": "/racecards/14/exeter/2025-03-23",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.8) (Watering) (Rail movements: 2.28 & 3.02 +39yds, 3.37 & 5.23 +28yds, 4.13 +62yds and 4.48 +42yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:28",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-23/888375",
+        "horses": [
+          {
+            "horseName": "Doctor Kildare",
+            "horseProfileUrl": "/profile/horse/5541792/doctor-kildare/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:02",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-23/888374",
+        "horses": [
+          {
+            "horseName": "Tellairsue",
+            "horseProfileUrl": "/profile/horse/4693315/tellairsue/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:37",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-23/888377",
+        "horses": [
+          {
+            "horseName": "Youhadmeathello",
+            "horseProfileUrl": "/profile/horse/5034791/youhadmeathello/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:13",
+        "raceCardUrl": "/racecards/14/exeter/2025-03-23/888372",
+        "horses": [
+          {
+            "horseName": "Bretney",
+            "horseProfileUrl": "/profile/horse/2953244/bretney/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Art Decco",
+            "horseProfileUrl": "/profile/horse/3890934/art-decco/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Limerick",
+    "raceCardsCourseUrl": "/racecards/2025-03-23#limerick",
+    "raceCardsCourseMeetingsUrl": "/racecards/188/limerick/2025-03-23",
+    "going": "GOOD, Good to yielding in places on Hurdle course",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:18",
+        "raceCardUrl": "/racecards/188/limerick/2025-03-23/891007",
+        "horses": [
+          {
+            "horseName": "Jerrari",
+            "horseProfileUrl": "/profile/horse/58956143/jerrari/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Lacken Forest",
+            "horseProfileUrl": "/profile/horse/5521390/lacken-forest/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:53",
+        "raceCardUrl": "/racecards/188/limerick/2025-03-23/891008",
+        "horses": [
+          {
+            "horseName": "Shuil Swift",
+            "horseProfileUrl": "/profile/horse/7087008/shuil-swift/",
+            "raceNumber": "(18)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Naas",
+    "raceCardsCourseUrl": "/racecards/2025-03-23#naas",
+    "raceCardsCourseMeetingsUrl": "/racecards/192/naas/2025-03-23",
+    "going": "YIELDING TO SOFT, Soft in places",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:28",
+        "raceCardUrl": "/racecards/192/naas/2025-03-23/890998",
+        "horses": [
+          {
+            "horseName": "My Girl Sioux",
+            "horseProfileUrl": "/profile/horse/4550202/my-girl-sioux/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:48",
+        "raceCardUrl": "/racecards/192/naas/2025-03-23/891002",
+        "horses": [
+          {
+            "horseName": "Temperance",
+            "horseProfileUrl": "/profile/horse/6388853/temperance/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chukyo",
+    "raceCardsCourseUrl": "/racecards/2025-03-23#chukyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/574/chukyo/2025-03-23",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Hanshin",
+    "raceCardsCourseUrl": "/racecards/2025-03-23#hanshin",
+    "raceCardsCourseMeetingsUrl": "/racecards/491/hanshin/2025-03-23",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-03-23#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-03-23",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-23/891085",
+        "horses": [
+          {
+            "horseName": "Wrote A New Page",
+            "horseProfileUrl": "/profile/horse/7117343/wrote-a-new-page/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Fortune Star",
+            "horseProfileUrl": "/profile/horse/7307977/fortune-star/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-23/891088",
+        "horses": [
+          {
+            "horseName": "Star Brose",
+            "horseProfileUrl": "/profile/horse/7307979/star-brose/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "South Star",
+            "horseProfileUrl": "/profile/horse/7020682/south-star/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-23/891089",
+        "horses": [
+          {
+            "horseName": "Blazing Beam",
+            "horseProfileUrl": "/profile/horse/7073213/blazing-beam/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Commanding Missile",
+            "horseProfileUrl": "/profile/horse/3239157/commanding-missile/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-23/891091",
+        "horses": [
+          {
+            "horseName": "Ping Hai Comet",
+            "horseProfileUrl": "/profile/horse/5616484/ping-hai-comet/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Victory Patch",
+            "horseProfileUrl": "/profile/horse/6932583/victory-patch/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:05",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-23/891092",
+        "horses": [
+          {
+            "horseName": "Mondial",
+            "horseProfileUrl": "/profile/horse/5719027/mondial/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Sky Heart",
+            "horseProfileUrl": "/profile/horse/5563307/sky-heart/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:20",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-23/891094",
+        "horses": [
+          {
+            "horseName": "Lightness Of Being",
+            "horseProfileUrl": "/profile/horse/5147980/lightness-of-being/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  }
+]

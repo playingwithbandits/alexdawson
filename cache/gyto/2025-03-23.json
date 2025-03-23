@@ -1,0 +1,140 @@
+{
+  "date": "2025-03-23",
+  "tips": [
+    {
+      "time": "13:28",
+      "horse": "Noble Nation",
+      "isNap": false
+    },
+    {
+      "time": "14:03",
+      "horse": "Island Girl",
+      "isNap": false
+    },
+    {
+      "time": "14:38",
+      "horse": "Rowdy Yeats",
+      "isNap": false
+    },
+    {
+      "time": "15:13",
+      "horse": "Love Billy Boy",
+      "isNap": false
+    },
+    {
+      "time": "15:48",
+      "horse": "Serengeti",
+      "isNap": false
+    },
+    {
+      "time": "16:23",
+      "horse": "Bravais",
+      "isNap": false
+    },
+    {
+      "time": "16:58",
+      "horse": "Guarded",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Trinity College",
+      "isNap": true
+    },
+    {
+      "time": "13:43",
+      "horse": "Jalila Moriviere",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "The Nagger Reidy",
+      "isNap": false
+    },
+    {
+      "time": "14:53",
+      "horse": "Dr Eggman",
+      "isNap": false
+    },
+    {
+      "time": "15:28",
+      "horse": "Springt De La Mare",
+      "isNap": false
+    },
+    {
+      "time": "16:03",
+      "horse": "Monbeg Park",
+      "isNap": true
+    },
+    {
+      "time": "16:38",
+      "horse": "Banprionsa",
+      "isNap": false
+    },
+    {
+      "time": "17:13",
+      "horse": "Carrigmoorna Beech",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Admiral Stewart",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Tommy Combats",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Emotional Roller",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Sean Og",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Dubai Days",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Simply Red",
+      "isNap": false
+    },
+    {
+      "time": "14:28",
+      "horse": "Doctor Kildare",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Coconut Twist",
+      "isNap": false
+    },
+    {
+      "time": "15:37",
+      "horse": "Youhadmeathello",
+      "isNap": false
+    },
+    {
+      "time": "16:13",
+      "horse": "Art Decco",
+      "isNap": false
+    },
+    {
+      "time": "16:48",
+      "horse": "Minniemum",
+      "isNap": false
+    },
+    {
+      "time": "17:23",
+      "horse": "Couer D'Alene",
+      "isNap": false
+    }
+  ]
+}

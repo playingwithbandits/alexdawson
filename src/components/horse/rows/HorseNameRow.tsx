@@ -67,6 +67,9 @@ export function HorseNameRow({
   highlight2,
   title,
 }: HorseNameRowProps) {
+  if (!highlight2) {
+    return <></>;
+  }
   return (
     <HoverTooltip content={title || ""}>
       <div

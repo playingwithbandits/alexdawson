@@ -723,11 +723,11 @@ export function PicksRaceRow({
                 highlight2={
                   count >= 3 &&
                   olbgTipsWithComment
-                    ?.filter((x) => x.commentCount >= 1)
+                    ?.filter((x) => x.napTips >= 2)
                     ?.some((x) => cleanName(x.horseName) === cleanName(name)) &&
                   (aiTopPicks?.find(
                     (x) => cleanName(x.name) === cleanName(name)
-                  )?.score?.total?.percentage || 0) >= 40
+                  )?.score?.total?.percentage || 0) >= 50
                 }
               />
             );

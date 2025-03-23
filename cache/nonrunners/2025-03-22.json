@@ -3,17 +3,118 @@
     "courseName": "Bangor-on-Dee",
     "raceCardsCourseUrl": "/racecards/2025-03-22#bangor-on-dee",
     "raceCardsCourseMeetingsUrl": "/racecards/4/bangor-on-dee/2025-03-22",
-    "going": "GOOD, Good to soft in places (GoingStick: Chase 6.2, Hurdle 6.7) (Watered) (Rail Movements: 1.35, 2.15 & 4.37 +36yds, 2.52 +56yds, 3.27 +72yds and 4.02 & 5.10 +46yds)",
-    "weather": "Showers",
+    "going": "GOOD (Good to soft in places; Chs 6.3; Hdl 7.0; watered) changing to GOOD on Hurdle course after Race 3 (2.52)",
+    "weather": "Cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "1:35",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-03-22/888352",
+        "horses": [
+          {
+            "horseName": "Milldam",
+            "horseProfileUrl": "/profile/horse/3896796/milldam/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "West To The Bridge",
+            "horseProfileUrl": "/profile/horse/1673070/west-to-the-bridge/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:27",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-03-22/888356",
+        "horses": [
+          {
+            "horseName": "Esperti",
+            "horseProfileUrl": "/profile/horse/3632529/esperti/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Record High",
+            "horseProfileUrl": "/profile/horse/3892990/record-high/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Jo Lescribaa",
+            "horseProfileUrl": "/profile/horse/5412918/jo-lescribaa/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:02",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-03-22/888353",
+        "horses": [
+          {
+            "horseName": "Land Genie",
+            "horseProfileUrl": "/profile/horse/4668978/land-genie/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Double Click",
+            "horseProfileUrl": "/profile/horse/4201366/double-click/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Holokea",
+            "horseProfileUrl": "/profile/horse/4965701/holokea/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Sole Solution",
+            "horseProfileUrl": "/profile/horse/4721640/sole-solution/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Sunshine Diamond",
+            "horseProfileUrl": "/profile/horse/4908795/sunshine-diamond/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:37",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-03-22/888355",
+        "horses": [
+          {
+            "horseName": "Neptune House",
+            "horseProfileUrl": "/profile/horse/5740914/neptune-house/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Atlantic Lad",
+            "horseProfileUrl": "/profile/horse/5911195/atlantic-lad/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Thickthorn Tom",
+            "horseProfileUrl": "/profile/horse/6640606/thickthorn-tom/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-03-22/888357",
+        "horses": [
+          {
+            "horseName": "Superior Glance",
+            "horseProfileUrl": "/profile/horse/3324895/superior-glance/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Kelso",
     "raceCardsCourseUrl": "/racecards/2025-03-22#kelso",
     "raceCardsCourseMeetingsUrl": "/racecards/27/kelso/2025-03-22",
-    "going": "GOOD, Good to soft in places (GoingStick: 6.2) (Watering to maintain)",
-    "weather": "Showers",
+    "going": "GOOD TO SOFT (GoingStick: 5.9) (Watered)",
+    "weather": "cloudy",
     "stallsPosition": "",
     "races": []
   },
@@ -21,19 +122,208 @@
     "courseName": "Navan",
     "raceCardsCourseUrl": "/racecards/2025-03-22#navan",
     "raceCardsCourseMeetingsUrl": "/racecards/193/navan/2025-03-22",
-    "going": "YIELDING",
-    "weather": "Rain",
+    "going": "SOFT (Yielding in places)",
+    "weather": "Light rain showers",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/193/navan/2025-03-22/890991",
+        "horses": [
+          {
+            "horseName": "Warriors Wood",
+            "horseProfileUrl": "/profile/horse/5845772/warriors-wood/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/193/navan/2025-03-22/891075",
+        "horses": [
+          {
+            "horseName": "Grey Pharoh",
+            "horseProfileUrl": "/profile/horse/6732772/grey-pharoh/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Peaceinthevalley",
+            "horseProfileUrl": "/profile/horse/5746443/peaceinthevalley/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/193/navan/2025-03-22/890992",
+        "horses": [
+          {
+            "horseName": "Cleopatra's Needle",
+            "horseProfileUrl": "/profile/horse/3538652/cleopatras-needle/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/193/navan/2025-03-22/890994",
+        "horses": [
+          {
+            "horseName": "Attaboyarchie",
+            "horseProfileUrl": "/profile/horse/4102976/attaboyarchie/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Colorado Charlie",
+            "horseProfileUrl": "/profile/horse/5784885/colorado-charlie/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/193/navan/2025-03-22/890995",
+        "horses": [
+          {
+            "horseName": "Jasmin De Cotte",
+            "horseProfileUrl": "/profile/horse/4965694/jasmin-de-cotte/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Western Fold",
+            "horseProfileUrl": "/profile/horse/4969844/western-fold/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/193/navan/2025-03-22/890997",
+        "horses": [
+          {
+            "horseName": "Astley",
+            "horseProfileUrl": "/profile/horse/6604816/astley/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Kaleo Ametsa",
+            "horseProfileUrl": "/profile/horse/6763601/kaleo-ametsa/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Newbury",
     "raceCardsCourseUrl": "/racecards/2025-03-22#newbury",
     "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-03-22",
-    "going": "GOOD TO SOFT, Good in places (GoingStick: 4.2) (Watered)",
+    "going": "GOOD (Good to soft in places; Chs 4.4; Hdl 4.3; watered)",
     "weather": "Cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/36/newbury/2025-03-22/888350",
+        "horses": [
+          {
+            "horseName": "Calimystic",
+            "horseProfileUrl": "/profile/horse/5842826/calimystic/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Serious Challenge",
+            "horseProfileUrl": "/profile/horse/4449866/serious-challenge/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/36/newbury/2025-03-22/888347",
+        "horses": [
+          {
+            "horseName": "Numitor",
+            "horseProfileUrl": "/profile/horse/2583898/numitor/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Real Stone",
+            "horseProfileUrl": "/profile/horse/2984472/real-stone/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/36/newbury/2025-03-22/888346",
+        "horses": [
+          {
+            "horseName": "Crazierthandaisy",
+            "horseProfileUrl": "/profile/horse/5601239/crazierthandaisy/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/36/newbury/2025-03-22/888351",
+        "horses": [
+          {
+            "horseName": "Rene's Walk",
+            "horseProfileUrl": "/profile/horse/6768219/renes-walk/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Coconut Grove",
+            "horseProfileUrl": "/profile/horse/6139088/coconut-grove/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "I Play County",
+            "horseProfileUrl": "/profile/horse/4965697/i-play-county/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Don't Mind If I Do",
+            "horseProfileUrl": "/profile/horse/5299434/dont-mind-if-i-do/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Jasmin Bellevue",
+            "horseProfileUrl": "/profile/horse/4922495/jasmin-bellevue/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/36/newbury/2025-03-22/874662",
+        "horses": [
+          {
+            "horseName": "Half Hoping",
+            "horseProfileUrl": "/profile/horse/6979127/half-hoping/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Blue Du Neuf",
+            "horseProfileUrl": "/profile/horse/5299429/blue-du-neuf/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/36/newbury/2025-03-22/888348",
+        "horses": [
+          {
+            "horseName": "Smarty Wild",
+            "horseProfileUrl": "/profile/horse/1969659/smarty-wild/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Newcastle (AW)",
@@ -42,14 +332,47 @@
     "going": "TAPETA: STANDARD",
     "weather": "Light rain",
     "stallsPosition": "1m2f - Outside; Straight - Centre",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-22/888493",
+        "horses": [
+          {
+            "horseName": "Wyvern",
+            "horseProfileUrl": "/profile/horse/3916381/wyvern/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Tea Sea",
+            "horseProfileUrl": "/profile/horse/4612989/tea-sea/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-22/888494",
+        "horses": [
+          {
+            "horseName": "Sir Garfield",
+            "horseProfileUrl": "/profile/horse/5379853/sir-garfield/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Oriental Prince",
+            "horseProfileUrl": "/profile/horse/5743692/oriental-prince/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Wolverhampton (AW)",
     "raceCardsCourseUrl": "/racecards/2025-03-22#wolverhampton-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-03-22",
     "going": "TAPETA: STANDARD",
-    "weather": "Showers",
+    "weather": "Mostly cloudy",
     "stallsPosition": "7f - Outside; Remainder - Inside",
     "races": [
       {
@@ -64,6 +387,17 @@
         ]
       },
       {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-22/888499",
+        "horses": [
+          {
+            "horseName": "Wise Stars",
+            "horseProfileUrl": "/profile/horse/5580178/wise-stars/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
         "raceTime": "7:00",
         "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-22/888497",
         "horses": [
@@ -71,6 +405,11 @@
             "horseName": "Commander Flavius",
             "horseProfileUrl": "/profile/horse/5884241/commander-flavius/",
             "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Kamekist",
+            "horseProfileUrl": "/profile/horse/6807907/kamekist/",
+            "raceNumber": "(1)"
           }
         ]
       }
@@ -94,9 +433,24 @@
             "raceNumber": "(15)"
           },
           {
+            "horseName": "Al Muzn",
+            "horseProfileUrl": "/profile/horse/4175280/al-muzn/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Fast-Uno",
+            "horseProfileUrl": "/profile/horse/4765702/fast-uno/",
+            "raceNumber": "(16)"
+          },
+          {
             "horseName": "Al Khazneh",
             "horseProfileUrl": "/profile/horse/4269995/al-khazneh/",
             "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Matloob",
+            "horseProfileUrl": "/profile/horse/5045865/matloob/",
+            "raceNumber": "(3)"
           }
         ]
       },
@@ -108,16 +462,122 @@
             "horseName": "Nawroz",
             "horseProfileUrl": "/profile/horse/5521272/nawroz/",
             "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Elzaami",
+            "horseProfileUrl": "/profile/horse/6675574/elzaami/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Manshod",
+            "horseProfileUrl": "/profile/horse/7250645/manshod/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Symbolic Gesture",
+            "horseProfileUrl": "/profile/horse/5665668/symbolic-gesture/",
+            "raceNumber": "(19)"
           }
         ]
       }
     ]
   },
   {
+    "courseName": "Chukyo",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#chukyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/574/chukyo/2025-03-22",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "La Teste De Buch",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#la-teste-de-buch",
+    "raceCardsCourseMeetingsUrl": "/racecards/391/la-teste-de-buch/2025-03-22",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
     "courseName": "Moonee Valley",
     "raceCardsCourseUrl": "/racecards/2025-03-22#moonee-valley",
     "raceCardsCourseMeetingsUrl": "/racecards/299/moonee-valley/2025-03-22",
     "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:45",
+        "raceCardUrl": "/racecards/299/moonee-valley/2025-03-22/891067",
+        "horses": [
+          {
+            "horseName": "Royal Lodge",
+            "horseProfileUrl": "/profile/horse/7303530/royal-lodge/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Petit Artiste",
+            "horseProfileUrl": "/profile/horse/7238260/petit-artiste/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Scenic Point",
+            "horseProfileUrl": "/profile/horse/7298689/scenic-point/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/299/moonee-valley/2025-03-22/891171",
+        "horses": [
+          {
+            "horseName": "Qatars Choice",
+            "horseProfileUrl": "/profile/horse/6229334/qatars-choice/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:35",
+        "raceCardUrl": "/racecards/299/moonee-valley/2025-03-22/891066",
+        "horses": [
+          {
+            "horseName": "Jasmin Rouge",
+            "horseProfileUrl": "/profile/horse/6291919/jasmin-rouge/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "London's Image",
+            "horseProfileUrl": "/profile/horse/5400972/londons-image/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Certain Rise",
+            "horseProfileUrl": "/profile/horse/7112773/certain-rise/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Satin Stiletto",
+            "horseProfileUrl": "/profile/horse/5490571/satin-stiletto/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Chewing Gum",
+            "horseProfileUrl": "/profile/horse/6577981/chewing-gum/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nakayama",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#nakayama",
+    "raceCardsCourseMeetingsUrl": "/racecards/514/nakayama/2025-03-22",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
     "weather": "",
     "stallsPosition": "",
     "races": []
@@ -131,16 +591,116 @@
     "stallsPosition": "",
     "races": [
       {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/311/rosehill/2025-03-22/891167",
+        "horses": [
+          {
+            "horseName": "Djapana",
+            "horseProfileUrl": "/profile/horse/5085148/djapana/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/311/rosehill/2025-03-22/891168",
+        "horses": [
+          {
+            "horseName": "Bacio Del Mist",
+            "horseProfileUrl": "/profile/horse/4054882/bacio-del-mist/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Laspirit Deeler",
+            "horseProfileUrl": "/profile/horse/6161695/laspirit-deeler/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/311/rosehill/2025-03-22/891058",
+        "horses": [
+          {
+            "horseName": "Midnight Dynamite",
+            "horseProfileUrl": "/profile/horse/5942505/midnight-dynamite/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/311/rosehill/2025-03-22/891059",
+        "horses": [
+          {
+            "horseName": "Zarakem",
+            "horseProfileUrl": "/profile/horse/5127950/zarakem/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/311/rosehill/2025-03-22/891062",
+        "horses": [
+          {
+            "horseName": "Alabama Magic",
+            "horseProfileUrl": "/profile/horse/7051347/alabama-magic/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Nepotism",
+            "horseProfileUrl": "/profile/horse/7205171/nepotism/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
         "raceTime": "6:15",
         "raceCardUrl": "/racecards/311/rosehill/2025-03-22/891063",
         "horses": [
+          {
+            "horseName": "Mazu",
+            "horseProfileUrl": "/profile/horse/3424327/mazu/",
+            "raceNumber": "(1)"
+          },
           {
             "horseName": "Ostraka",
             "horseProfileUrl": "/profile/horse/5075496/ostraka/",
             "raceNumber": "(9)"
           }
         ]
+      },
+      {
+        "raceTime": "6:55",
+        "raceCardUrl": "/racecards/311/rosehill/2025-03-22/891057",
+        "horses": [
+          {
+            "horseName": "Commemorative",
+            "horseProfileUrl": "/profile/horse/5111586/commemorative/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Autumn Glow",
+            "horseProfileUrl": "/profile/horse/6323522/autumn-glow/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Overriding",
+            "horseProfileUrl": "/profile/horse/5061550/overriding/",
+            "raceNumber": "(9)"
+          }
+        ]
       }
     ]
+  },
+  {
+    "courseName": "Trentham",
+    "raceCardsCourseUrl": "/racecards/2025-03-22#trentham",
+    "raceCardsCourseMeetingsUrl": "/racecards/479/trentham/2025-03-22",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
   }
 ]
