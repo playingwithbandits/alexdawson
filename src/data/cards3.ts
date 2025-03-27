@@ -167,13 +167,25 @@ export const cards3: Card[] = [
       "The person opposite you must give you a hickey on your inner thigh.",
     penaltyCost: 4,
     category: "dare",
-    image: "dare-bite",
+    image: "dare-eat",
   },
   {
     description:
       "On GO! Everyone swap an item of underwear with the person to your left. Last person finishes their drink.",
     penaltyCost: 4,
     category: "dare",
-    image: "dare-bite",
+    image: "dare-clothes",
+  },
+  {
+    description: "Eat a pube off (using your teeth) the person to your left.",
+    penaltyCost: 5,
+    category: "dare",
+    image: "dare-eat",
+  },
+  {
+    description: "Eat a provided pube hair from the person to your left.",
+    penaltyCost: 3,
+    category: "dare",
+    image: "dare-eat",
   },
 ];

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Aldrich } from "next/font/google";
+import { Roboto } from "next/font/google";
 
-const aldrich = Aldrich({
+const roboto = Roboto({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
@@ -27,7 +27,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         />
       </head>
-      <body className={`${aldrich.className} antialiased`}>{children}</body>
+      <body className={`${roboto.className} antialiased`}>{children}</body>
     </html>
   );
 }

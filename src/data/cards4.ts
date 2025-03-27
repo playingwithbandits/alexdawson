@@ -1237,49 +1237,15 @@ export const cards4: Card[] = [
     category: "trivia",
     image: "question",
     description:
-      "What is the most common day of the week for heart attacks? (Answer: Monday)",
-    penaltyCost: 1,
-  },
-  {
-    category: "trivia",
-    image: "question",
-    description:
-      "What is the most common day of the week for births? (Answer: Tuesday)",
-    penaltyCost: 1,
-  },
-  {
-    category: "trivia",
-    image: "question",
-    description:
-      "What is the most common day of the week for deaths? (Answer: Saturday)",
-    penaltyCost: 1,
-  },
-  {
-    category: "trivia",
-    image: "question",
-    description:
-      "What is the most common day of the week for suicides? (Answer: Monday)",
-    penaltyCost: 1,
-  },
-  {
-    category: "trivia",
-    image: "question",
-    description:
-      "What is the most common day of the week for car accidents? (Answer: Friday)",
-    penaltyCost: 1,
-  },
-  {
-    category: "trivia",
-    image: "question",
-    description:
       "What is the most common day of the week for weddings? (Answer: Saturday)",
     penaltyCost: 1,
   },
+
   {
-    category: "trivia",
-    image: "question",
+    category: "would-you-rather",
+    image: "wyr",
     description:
-      "What is the most common day of the week for divorces? (Answer: Monday)",
-    penaltyCost: 1,
+      "Would you rather watch your parents have sex or have them watch you have sex?",
+    penaltyCost: 3,
   },
 ];

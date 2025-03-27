@@ -108,13 +108,22 @@ export function Card({ card, isBack = false, className = "" }: CardProps) {
             alt={"Missing image"}
             fill
             className="object-cover"
+            onError={(e) => {
+              // Fallback to slutty.jpg if original image not found
+              e.currentTarget.src = "/images/fallback.jpg";
+            }}
           />
         </div>
       )}
 
       {/* Description section */}
       <div className="flex-1 p-4 flex flex-col items-center justify-center text-center bg-[#030a38] text-[#fbfbf9]">
-        <p className="text-md">{question}</p>
+        <p
+          className="text-[1.25rem] tracking-[0.05rem]
+  "
+        >
+          {question}
+        </p>
         {hasAnswer && (
           <div className="mt-2">
             <button

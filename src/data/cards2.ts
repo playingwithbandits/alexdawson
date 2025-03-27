@@ -6,7 +6,7 @@ export const cards2: Card[] = [
       "The person to your left must give you a quick peck on the cheek.",
     penaltyCost: 1,
     category: "dare",
-    image: "dare-kiss",
+    image: "kiss",
   },
   {
     description: "The person opposite you must pinch your arm for 3 seconds.",
@@ -44,7 +44,7 @@ export const cards2: Card[] = [
       "The person 2 places to your left must kiss your neck for 5 seconds.",
     penaltyCost: 2,
     category: "dare",
-    image: "dare-kiss",
+    image: "kiss",
   },
   {
     description: "The person opposite you must pinch your thigh for 5 seconds.",
@@ -76,7 +76,7 @@ export const cards2: Card[] = [
       "The person 3 places to your left must kiss your collarbone for 10 seconds.",
     penaltyCost: 3,
     category: "dare",
-    image: "dare-kiss",
+    image: "kiss",
   },
   {
     description:
@@ -96,7 +96,7 @@ export const cards2: Card[] = [
       "The person 2 places to your right must kiss your inner thigh for 15 seconds.",
     penaltyCost: 4,
     category: "dare",
-    image: "dare-kiss",
+    image: "kiss",
   },
   {
     description:
@@ -116,7 +116,7 @@ export const cards2: Card[] = [
       "The person 3 places to your right must kiss your pussy/dick through your clothes.",
     penaltyCost: 5,
     category: "dare",
-    image: "dare-kiss",
+    image: "kiss",
   },
   {
     description:
