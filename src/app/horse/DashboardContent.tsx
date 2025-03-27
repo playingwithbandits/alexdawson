@@ -9,7 +9,6 @@ import {
   NapsTableTip,
   NonRunnerMeeting,
   RtWebTip,
-  OLBGTips,
   OLBGTip,
 } from "@/types/racing";
 

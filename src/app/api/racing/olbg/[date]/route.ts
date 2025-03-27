@@ -254,7 +254,6 @@ export async function GET(
 ) {
   const date = await Promise.resolve(params.date);
   const today = new Date().toISOString().split("T")[0];
-  const now = new Date();
   const cutoffTime = new Date();
   cutoffTime.setHours(10, 30, 0, 0);
 

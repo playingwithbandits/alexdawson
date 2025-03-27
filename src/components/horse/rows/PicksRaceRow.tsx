@@ -40,7 +40,6 @@ export function PicksRaceRow({
   gytoTips,
   napsTableTips,
   isNonRunner,
-  liveOdds,
   rtWebTips,
   olbgTips,
   showOnlyBest,
