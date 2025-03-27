@@ -3868,446 +3868,446 @@ export const cards: Card[] = [
     image: "question",
     description:
       "Answer this: 'What's the capital of Australia?' (Answer: Canberra)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What's the legal drinking age in the majority of Europe? (Answer: 18)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description: "How many condoms come in a standard box? (Answer: 12)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people admit to fantasizing about their friends? (Answer: ~60%)",
-    penaltyCost: 4,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the most sensitive part of the human body? (Answer: Lips)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the average duration of sex globally? (Answer: ~5.4 minutes)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What's the most common fantasy people have? (Answer: Threesome)",
-    penaltyCost: 4,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "How many calories does the average person burn during sex? (Answer: ~100)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What's the most common day for people to have sex? (Answer: Saturday)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "In what country is public nudity most widely accepted? (Answer: Germany)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people admit to faking it in bed? (Answer: ~60%)",
-    penaltyCost: 4,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What's the most searched category on adult sites worldwide? (Answer: Lesbian)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "How long does the average first kiss last? (Answer: ~12 seconds)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What's the largest erogenous zone in the body? (Answer: The skin)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the average length of an erect penis? (Answer: Around 5.16 inches / 13.12 cm)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which organ in the human body is primarily responsible for sexual pleasure? (Answer: The brain)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the scientific term for the female G-spot? (Answer: Gräfenberg Spot)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which country is known for having the highest frequency of sex according to surveys? (Answer: Greece)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "How long does the average male orgasm last? (Answer: Around 6 seconds)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "How long does the average female orgasm last? (Answer: Around 20 seconds)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the record for the most female orgasms in one hour? (Answer: 134)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description: "What is the most common sexual fantasy? (Answer: Threesome)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which sexually transmitted infection (STI) is the most common worldwide? (Answer: Human Papillomavirus (HPV))",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the scientific term for the fear of sex? (Answer: Genophobia)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which fruit is said to be an aphrodisiac due to its shape and texture? (Answer: Fig)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which part of the body has the most nerve endings? (Answer: The clitoris, with around 8,000 nerve endings)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people admit to having had a one-night stand? (Answer: Around 55-65%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the world record for the most sexual partners in 24 hours? (Answer: 919 by Lisa Sparxxx in 2004)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which animal has the longest penis relative to body size? (Answer: Barnacle)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which sex position is considered the most popular worldwide? (Answer: Missionary)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the average amount of time sex lasts for couples? (Answer: Between 5-7 minutes)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "How many calories does the average sex session burn? (Answer: Around 100-200 calories)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which male body part continues to grow even after death? (Answer: The penis appears larger due to blood pooling, but it does not actually grow)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of women have faked an orgasm? (Answer: Around 50-70%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the most common cause of erectile dysfunction? (Answer: Stress and anxiety)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which sex act is illegal in more than 10 U.S. states? (Answer: Oral sex, though rarely enforced)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the name of the hormone responsible for sexual arousal? (Answer: Dopamine and oxytocin)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the average number of times a couple has sex per year? (Answer: Around 50-60 times)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which country produces the most adult films? (Answer: United States)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of men reach orgasm every time they have sex? (Answer: Around 75%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of women reach orgasm every time they have sex? (Answer: Around 30-40%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which food contains natural compounds that may increase libido? (Answer: Dark chocolate)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have admitted to joining the 'mile-high club'? (Answer: Around 4-5%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the average number of sexual partners a person has in their lifetime? (Answer: Around 7-10 partners)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which muscle is primarily engaged during orgasm? (Answer: Pubococcygeus muscle)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the technical term for swallowing semen? (Answer: Semen ingestion)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which country was the first to legalize same-sex marriage? (Answer: Netherlands, in 2001)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people admit to watching porn regularly? (Answer: Around 70%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the world record for longest recorded orgasm? (Answer: 43 seconds)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which animal has the largest penis relative to its body? (Answer: Barnacle)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the rarest human blood type, which can sometimes affect fertility? (Answer: AB negative)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the official term for a fetish involving armpits? (Answer: Maschalagnia)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which fruit is said to resemble the male testicles, leading to its name? (Answer: Avocado)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of couples have admitted to using sex toys? (Answer: Over 50%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which famous historical figure was said to have consumed oysters daily for their aphrodisiac effects? (Answer: Casanova)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the average speed of ejaculation? (Answer: Around 28 mph / 45 km/h)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which country has the highest average age of losing virginity? (Answer: India, around 19.8 years old)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the name of the hormone that increases after orgasm, making people feel closer? (Answer: Oxytocin)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which part of the body becomes darker due to increased blood flow during arousal? (Answer: Nipples)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What is the term for someone who is only sexually attracted to intelligence? (Answer: Sapiosexual)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which historical civilization used crocodile dung as an early form of birth control? (Answer: Ancient Egyptians)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which body part is scientifically proven to be more sensitive in women than in men? (Answer: Lips)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "Which famous book, published in 1969, is known as the 'Sex Bible'? (Answer: The Joy of Sex)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have admitted to having sex in a public place? (Answer: Around 25-30%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "truth",
