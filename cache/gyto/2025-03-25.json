@@ -1,0 +1,100 @@
+{
+  "date": "2025-03-25",
+  "tips": [
+    {
+      "time": "14:50",
+      "horse": "Coral Blue",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Road To Home",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Halfway House Lad",
+      "isNap": true
+    },
+    {
+      "time": "16:20",
+      "horse": "Lawrenny",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Choose A Copper",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Imperfectlyperfect",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Fasol",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Ma Belle Noire",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Jim De Sarti",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Ede'Iffs Rock",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Bobbi'S Beauty",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Act Of Innocence",
+      "isNap": false
+    },
+    {
+      "time": "16:43",
+      "horse": "Rubellite",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Life On The Rocks",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Market House",
+      "isNap": true
+    },
+    {
+      "time": "18:15",
+      "horse": "Inspire Hope",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Just Typical",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Atherstone Beau",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Midnightattheoasis",
+      "isNap": false
+    }
+  ]
+}

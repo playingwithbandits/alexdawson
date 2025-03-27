@@ -15,6 +15,7 @@ interface HorseNameRowProps {
   highlight1?: boolean;
   highlight2?: boolean;
   title?: string;
+  showOnlyBest: boolean;
 }
 
 const getTrophy = (position: string) => {
@@ -66,8 +67,9 @@ export function HorseNameRow({
   highlight1,
   highlight2,
   title,
+  showOnlyBest,
 }: HorseNameRowProps) {
-  if (!highlight2) {
+  if (!highlight2 && showOnlyBest) {
     return <></>;
   }
   return (

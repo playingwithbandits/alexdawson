@@ -1,0 +1,435 @@
+[
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-27#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-03-27",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-03-27/889538",
+        "horses": [
+          {
+            "horseName": "Top Star",
+            "horseProfileUrl": "/profile/horse/5884254/top-star/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Clonmel",
+    "raceCardsCourseUrl": "/racecards/2025-03-27#clonmel",
+    "raceCardsCourseMeetingsUrl": "/racecards/177/clonmel/2025-03-27",
+    "going": "GOOD TO YIELDING",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:42",
+        "raceCardUrl": "/racecards/177/clonmel/2025-03-27/891099",
+        "horses": [
+          {
+            "horseName": "Ta Na La",
+            "horseProfileUrl": "/profile/horse/3811158/ta-na-la/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Karacole",
+            "horseProfileUrl": "/profile/horse/5412971/karacole/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Ernie From Nurney",
+            "horseProfileUrl": "/profile/horse/4001854/ernie-from-nurney/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:12",
+        "raceCardUrl": "/racecards/177/clonmel/2025-03-27/891100",
+        "horses": [
+          {
+            "horseName": "Rath Gaul Boy",
+            "horseProfileUrl": "/profile/horse/3906190/rath-gaul-boy/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Lady Bresil",
+            "horseProfileUrl": "/profile/horse/4201396/lady-bresil/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Killaney King",
+            "horseProfileUrl": "/profile/horse/4272448/killaney-king/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Dancingondaceiling",
+            "horseProfileUrl": "/profile/horse/5613790/dancingondaceiling/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:42",
+        "raceCardUrl": "/racecards/177/clonmel/2025-03-27/891101",
+        "horses": [
+          {
+            "horseName": "Ask Mike",
+            "horseProfileUrl": "/profile/horse/4175195/ask-mike/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Game And Glory",
+            "horseProfileUrl": "/profile/horse/3087869/game-and-glory/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "One Horse Army",
+            "horseProfileUrl": "/profile/horse/3415158/one-horse-army/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Getaway King",
+            "horseProfileUrl": "/profile/horse/5428931/getaway-king/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Baldur's Gate",
+            "horseProfileUrl": "/profile/horse/3918412/baldurs-gate/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/177/clonmel/2025-03-27/891102",
+        "horses": [
+          {
+            "horseName": "On The Cards",
+            "horseProfileUrl": "/profile/horse/5412965/on-the-cards/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Way Down We Go",
+            "horseProfileUrl": "/profile/horse/7087012/way-down-we-go/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Getaways Charm",
+            "horseProfileUrl": "/profile/horse/5689575/getaways-charm/",
+            "raceNumber": "(21)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/177/clonmel/2025-03-27/891104",
+        "horses": [
+          {
+            "horseName": "Star Official",
+            "horseProfileUrl": "/profile/horse/3230966/star-official/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Kalanisi Dubh",
+            "horseProfileUrl": "/profile/horse/3413905/kalanisi-dubh/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "St Anthonys Corner",
+            "horseProfileUrl": "/profile/horse/5942581/st-anthonys-corner/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/177/clonmel/2025-03-27/891314",
+        "horses": [
+          {
+            "horseName": "Doyen Flyer",
+            "horseProfileUrl": "/profile/horse/4552159/doyen-flyer/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Highland Earl",
+            "horseProfileUrl": "/profile/horse/5746467/highland-earl/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Voice Of Reason",
+            "horseProfileUrl": "/profile/horse/4455466/voice-of-reason/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/177/clonmel/2025-03-27/891105",
+        "horses": [
+          {
+            "horseName": "Lion Of The Desert",
+            "horseProfileUrl": "/profile/horse/7209401/lion-of-the-desert/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell",
+    "raceCardsCourseUrl": "/racecards/2025-03-27#southwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/61/southwell/2025-03-27",
+    "going": "GOOD (Watered; 6.4)",
+    "weather": "Fine dry",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:35",
+        "raceCardUrl": "/racecards/61/southwell/2025-03-27/889359",
+        "horses": [
+          {
+            "horseName": "Martalmix'jac",
+            "horseProfileUrl": "/profile/horse/3935883/martalmixjac/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/61/southwell/2025-03-27/889360",
+        "horses": [
+          {
+            "horseName": "Bold Jury",
+            "horseProfileUrl": "/profile/horse/5727958/bold-jury/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Quick Sharpener",
+            "horseProfileUrl": "/profile/horse/3560187/quick-sharpener/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/61/southwell/2025-03-27/889364",
+        "horses": [
+          {
+            "horseName": "Good Buy Dolly",
+            "horseProfileUrl": "/profile/horse/6354478/good-buy-dolly/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/61/southwell/2025-03-27/889362",
+        "horses": [
+          {
+            "horseName": "Luwdvig",
+            "horseProfileUrl": "/profile/horse/5419088/luwdvig/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "House Of Habsburg",
+            "horseProfileUrl": "/profile/horse/5671328/house-of-habsburg/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/61/southwell/2025-03-27/889363",
+        "horses": [
+          {
+            "horseName": "Klapton Boy",
+            "horseProfileUrl": "/profile/horse/5864596/klapton-boy/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Missy Mole",
+            "horseProfileUrl": "/profile/horse/5784890/missy-mole/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Scorsese",
+            "horseProfileUrl": "/profile/horse/4725841/scorsese/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Kap De Triomphe",
+            "horseProfileUrl": "/profile/horse/5649696/kap-de-triomphe/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/61/southwell/2025-03-27/891332",
+        "horses": [
+          {
+            "horseName": "Tramuntana",
+            "horseProfileUrl": "/profile/horse/5445487/tramuntana/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "My Dream",
+            "horseProfileUrl": "/profile/horse/4799829/my-dream/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Macmolly",
+            "horseProfileUrl": "/profile/horse/5343902/macmolly/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Warwick",
+    "raceCardsCourseUrl": "/racecards/2025-03-27#warwick",
+    "raceCardsCourseMeetingsUrl": "/racecards/85/warwick/2025-03-27",
+    "going": "GOOD (Watered; 6.6)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:57",
+        "raceCardUrl": "/racecards/85/warwick/2025-03-27/889369",
+        "horses": [
+          {
+            "horseName": "Victory Club",
+            "horseProfileUrl": "/profile/horse/4100992/victory-club/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:27",
+        "raceCardUrl": "/racecards/85/warwick/2025-03-27/889367",
+        "horses": [
+          {
+            "horseName": "Jack Sparrow Grey",
+            "horseProfileUrl": "/profile/horse/5426864/jack-sparrow-grey/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:57",
+        "raceCardUrl": "/racecards/85/warwick/2025-03-27/889366",
+        "horses": [
+          {
+            "horseName": "Caramelo Rapido",
+            "horseProfileUrl": "/profile/horse/5761791/caramelo-rapido/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/85/warwick/2025-03-27/889370",
+        "horses": [
+          {
+            "horseName": "Pic N Mix",
+            "horseProfileUrl": "/profile/horse/7312407/pic-n-mix/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-27#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-03-27",
+    "going": "TAPETA: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-27/889552",
+        "horses": [
+          {
+            "horseName": "Perfect Parole",
+            "horseProfileUrl": "/profile/horse/5991300/perfect-parole/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-27/889548",
+        "horses": [
+          {
+            "horseName": "Bunker Bay",
+            "horseProfileUrl": "/profile/horse/3801053/bunker-bay/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-27/889551",
+        "horses": [
+          {
+            "horseName": "Miss Billie",
+            "horseProfileUrl": "/profile/horse/5104269/miss-billie/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-27/891331",
+        "horses": [
+          {
+            "horseName": "Global Effort",
+            "horseProfileUrl": "/profile/horse/4225300/global-effort/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:10",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-27/889546",
+        "horses": [
+          {
+            "horseName": "My Mate Arnie",
+            "horseProfileUrl": "/profile/horse/7312415/my-mate-arnie/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-27/889547",
+        "horses": [
+          {
+            "horseName": "General Assembly",
+            "horseProfileUrl": "/profile/horse/4826920/general-assembly/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chantilly",
+    "raceCardsCourseUrl": "/racecards/2025-03-27#chantilly",
+    "raceCardsCourseMeetingsUrl": "/racecards/204/chantilly/2025-03-27",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

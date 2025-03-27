@@ -1,0 +1,125 @@
+[
+  {
+    "courseName": "Hexham",
+    "raceCardsCourseUrl": "/racecards/2025-03-25#hexham",
+    "raceCardsCourseMeetingsUrl": "/racecards/25/hexham/2025-03-25",
+    "going": "GOOD TO SOFT (GoingStick: 5.5) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/25/hexham/2025-03-25/889338",
+        "horses": [
+          {
+            "horseName": "Rogue Sea",
+            "horseProfileUrl": "/profile/horse/5005623/rogue-sea/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/25/hexham/2025-03-25/889336",
+        "horses": [
+          {
+            "horseName": "Lucky Soldier",
+            "horseProfileUrl": "/profile/horse/4652629/lucky-soldier/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/25/hexham/2025-03-25/889334",
+        "horses": [
+          {
+            "horseName": "Yealand",
+            "horseProfileUrl": "/profile/horse/5005617/yealand/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Hello Judge",
+            "horseProfileUrl": "/profile/horse/3232216/hello-judge/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-25#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-03-25",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; 1m2f & 1m4f - Outside; 2m - Inside",
+    "races": [
+      {
+        "raceTime": "4:43",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-25/889520",
+        "horses": [
+          {
+            "horseName": "Three Yorkshiremen",
+            "horseProfileUrl": "/profile/horse/4479500/three-yorkshiremen/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-25/889524",
+        "horses": [
+          {
+            "horseName": "Luna A Inbhir Nis",
+            "horseProfileUrl": "/profile/horse/6429648/luna-a-inbhir-nis/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:45",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-25/889523",
+        "horses": [
+          {
+            "horseName": "Cuan",
+            "horseProfileUrl": "/profile/horse/5859140/cuan/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Taunton",
+    "raceCardsCourseUrl": "/racecards/2025-03-25#taunton",
+    "raceCardsCourseMeetingsUrl": "/racecards/73/taunton/2025-03-25",
+    "going": "GOOD (GoingStick: 7.9) (Watered) (Rail movements: 2.35, 3.35, 4.35 & 5.35 +60yds, 3.05 +84yds, 4.05 +54yds and 5.05 +39yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/73/taunton/2025-03-25/889344",
+        "horses": [
+          {
+            "horseName": "Melleray Hill",
+            "horseProfileUrl": "/profile/horse/4893355/melleray-hill/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/73/taunton/2025-03-25/889346",
+        "horses": [
+          {
+            "horseName": "Sinchi Roca",
+            "horseProfileUrl": "/profile/horse/6829592/sinchi-roca/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  }
+]

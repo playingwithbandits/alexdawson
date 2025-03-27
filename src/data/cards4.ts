@@ -177,210 +177,210 @@ export const cards4: Card[] = [
     image: "question",
     description:
       "What percentage of people have admitted to having sex in a public place? (Answer: Around 25-30%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had a threesome? (Answer: Around 20%)",
-    penaltyCost: 4,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met on a dating app? (Answer: Around 40%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex in a car? (Answer: Around 60%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with a friend? (Answer: Around 45%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they worked with? (Answer: Around 35%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met at a party? (Answer: Around 55%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met on vacation? (Answer: Around 30%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met at a bar? (Answer: Around 50%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met at a club? (Answer: Around 40%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met at a concert? (Answer: Around 25%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met at a sports event? (Answer: Around 20%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met at a wedding? (Answer: Around 15%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met at a funeral? (Answer: Around 5%)",
-    penaltyCost: 4,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have had sex with someone they met at a religious event? (Answer: Around 10%)",
-    penaltyCost: 4,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have lied about their age on social media? (Answer: Around 45%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be sick to get out of work? (Answer: Around 65%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have snooped through someone's phone? (Answer: Around 35%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be on the phone to avoid talking to someone? (Answer: Around 75%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to laugh at a joke they didn't understand? (Answer: Around 80%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be busy to avoid hanging out? (Answer: Around 70%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be asleep to avoid conversation? (Answer: Around 60%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to like a gift they hated? (Answer: Around 85%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be working when they were actually on social media? (Answer: Around 55%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be busy to avoid answering texts? (Answer: Around 65%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be happy when they were actually sad? (Answer: Around 75%)",
-    penaltyCost: 3,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be confident when they were nervous? (Answer: Around 70%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be interested in a conversation they hated? (Answer: Around 80%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be working out when they were actually just taking selfies? (Answer: Around 40%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "trivia",
     image: "question",
     description:
       "What percentage of people have pretended to be busy to avoid cleaning their house? (Answer: Around 60%)",
-    penaltyCost: 2,
+    penaltyCost: 1,
   },
   {
     category: "truth",
@@ -1063,5 +1063,223 @@ export const cards4: Card[] = [
     penaltyCost: 3,
     category: "dare",
     image: "dare-action",
+  },
+
+  {
+    description: "Shoey! Drink some of your drink from your shoe.",
+    penaltyCost: 5,
+    category: "dare",
+    image: "dare-action",
+  },
+  {
+    description: "Shoey! Drink some of your drink from the closest shoe.",
+    penaltyCost: 5,
+    category: "dare",
+    image: "dare-action",
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common phobia in the world? (Answer: Arachnophobia - fear of spiders)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description: "What is the only mammal that can't jump? (Answer: Elephant)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common birthday in the world? (Answer: September 9th)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common name in the world? (Answer: Muhammad)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common password in the world? (Answer: 123456)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description: "What is the most common dream people have? (Answer: Falling)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common lie people tell? (Answer: 'I'm fine')",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common food allergy in the world? (Answer: Milk)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common color in national flags? (Answer: Red)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description: "What is the most common pet in the world? (Answer: Fish)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common phobia in the world? (Answer: Arachnophobia - fear of spiders)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common birthday in the world? (Answer: September 9th)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common name in the world? (Answer: Muhammad)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common password in the world? (Answer: 123456)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description: "What is the most common dream people have? (Answer: Falling)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common lie people tell? (Answer: 'I'm fine')",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common food allergy in the world? (Answer: Milk)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common color in national flags? (Answer: Red)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description: "What is the most common pet in the world? (Answer: Fish)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common phobia in the world? (Answer: Arachnophobia - fear of spiders)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the only letter that doesn't appear in any US state name? (Answer: Q)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common blood type in the world? (Answer: O positive)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common eye color in the world? (Answer: Brown)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common day of the week for heart attacks? (Answer: Monday)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common day of the week for births? (Answer: Tuesday)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common day of the week for deaths? (Answer: Saturday)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common day of the week for suicides? (Answer: Monday)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common day of the week for car accidents? (Answer: Friday)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common day of the week for weddings? (Answer: Saturday)",
+    penaltyCost: 1,
+  },
+  {
+    category: "trivia",
+    image: "question",
+    description:
+      "What is the most common day of the week for divorces? (Answer: Monday)",
+    penaltyCost: 1,
   },
 ];

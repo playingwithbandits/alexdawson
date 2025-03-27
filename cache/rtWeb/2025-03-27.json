@@ -1,0 +1,40 @@
+{
+  "date": "2025-03-27",
+  "tips": [
+    {
+      "horseName": "May Remain",
+      "time": "15:50",
+      "rating": 71.5
+    },
+    {
+      "horseName": "Nordic Glory",
+      "time": "16:25",
+      "rating": 74.5
+    },
+    {
+      "horseName": "Aviation",
+      "time": "14:27",
+      "rating": 85.3
+    },
+    {
+      "horseName": "De Vegas Warrior",
+      "time": "14:57",
+      "rating": 70.6
+    },
+    {
+      "horseName": "Yes And Yes",
+      "time": "15:27",
+      "rating": 82.5
+    },
+    {
+      "horseName": "Whats One More",
+      "time": "15:57",
+      "rating": 81.4
+    },
+    {
+      "horseName": "The Doyen Chief",
+      "time": "16:32",
+      "rating": 79.2
+    }
+  ]
+}

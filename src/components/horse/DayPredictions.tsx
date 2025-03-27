@@ -109,6 +109,7 @@ export function DayPredictions({
   const [isDeleting, setIsDeleting] = useState(false);
   const [isDeletingNonRunners, setIsDeletingNonRunners] = useState(false);
   const [isDeletingOlbg, setIsDeletingOlbg] = useState(false);
+  const [showOnlyBest, setShowOnlyBest] = useState(true);
   //const data = generatePredictions(meetings);
 
   const today = new Date().toISOString().split("T")[0];
@@ -506,6 +507,14 @@ export function DayPredictions({
                   {isSaving ? "Saving..." : "Save ROI"}
                 </button>
                 <button
+                  className={`px-4 py-2 rounded hover:opacity-80 disabled:opacity-50 ${
+                    showOnlyBest ? "bg-green-500" : "bg-gray-500"
+                  } text-white`}
+                  onClick={() => setShowOnlyBest(!showOnlyBest)}
+                >
+                  {showOnlyBest ? "Show All" : "Show Best Only"}
+                </button>
+                <button
                   className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 disabled:opacity-50"
                   onClick={handleDeleteResults}
                   disabled={isDeleting || noResults}
@@ -639,6 +648,7 @@ export function DayPredictions({
                       liveOdds={liveOdds}
                       rtWebTips={rtWebTips}
                       olbgTips={olbgTips}
+                      showOnlyBest={showOnlyBest}
                     />
                   ))}
                 </div>

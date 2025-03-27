@@ -4,18 +4,64 @@
     "raceCardsCourseUrl": "/racecards/2025-03-24#lingfield-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-03-24",
     "going": "POLYTRACK: STANDARD",
-    "weather": "Mostly cloudy",
+    "weather": "Cloudy with some sunny spells",
     "stallsPosition": "1m - Outside; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:47",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-03-24/891176",
+        "horses": [
+          {
+            "horseName": "Galel",
+            "horseProfileUrl": "/profile/horse/5270604/galel/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:47",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-03-24/891175",
+        "horses": [
+          {
+            "horseName": "Keen Interest",
+            "horseProfileUrl": "/profile/horse/5394031/keen-interest/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Wincanton",
     "raceCardsCourseUrl": "/racecards/2025-03-24#wincanton",
     "raceCardsCourseMeetingsUrl": "/racecards/90/wincanton/2025-03-24",
-    "going": "GOOD, Good to firm in places (GoingStick: 6.5) (Selective watering to maintain)",
-    "weather": "Partly cloudy",
+    "going": "GOOD (Watered; 6.8)",
+    "weather": "Brightsunny",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/90/wincanton/2025-03-24/889329",
+        "horses": [
+          {
+            "horseName": "Onethreefivenotout",
+            "horseProfileUrl": "/profile/horse/3324891/onethreefivenotout/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/90/wincanton/2025-03-24/889332",
+        "horses": [
+          {
+            "horseName": "Gorcombe Moonshine",
+            "horseProfileUrl": "/profile/horse/3612344/gorcombe-moonshine/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Wolverhampton (AW)",
@@ -24,6 +70,82 @@
     "going": "TAPETA: STANDARD",
     "weather": "Mostly cloudy",
     "stallsPosition": "7f - Outside; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-24/889512",
+        "horses": [
+          {
+            "horseName": "Brazilian Rose",
+            "horseProfileUrl": "/profile/horse/6296589/brazilian-rose/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Gressington",
+            "horseProfileUrl": "/profile/horse/5289430/gressington/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-03-24/889517",
+        "horses": [
+          {
+            "horseName": "Beaumadier",
+            "horseProfileUrl": "/profile/horse/4249769/beaumadier/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Compiegne",
+    "raceCardsCourseUrl": "/racecards/2025-03-24#compiegne",
+    "raceCardsCourseMeetingsUrl": "/racecards/291/compiegne/2025-03-24",
+    "going": "TURF: HEAVY",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:12",
+        "raceCardUrl": "/racecards/291/compiegne/2025-03-24/891242",
+        "horses": [
+          {
+            "horseName": "Jamaico",
+            "horseProfileUrl": "/profile/horse/4946176/jamaico/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:22",
+        "raceCardUrl": "/racecards/291/compiegne/2025-03-24/891246",
+        "horses": [
+          {
+            "horseName": "Boom Boom Ciao",
+            "horseProfileUrl": "/profile/horse/5002202/boom-boom-ciao/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:57",
+        "raceCardUrl": "/racecards/291/compiegne/2025-03-24/891254",
+        "horses": [
+          {
+            "horseName": "Celeb",
+            "horseProfileUrl": "/profile/horse/5198151/celeb/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Burgandy",
+            "horseProfileUrl": "/profile/horse/4881042/burgandy/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
   }
 ]

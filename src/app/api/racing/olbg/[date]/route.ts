@@ -279,7 +279,7 @@ export async function GET(
     //   });
     // }
 
-    if (date === today) {
+    if (date) {
       const tips = await fetchAndParseTips();
 
       const olbgTips: OLBGTips = {

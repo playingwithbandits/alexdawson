@@ -27,6 +27,7 @@ interface PicksRaceRowProps {
   liveOdds: LiveOdds[];
   rtWebTips: RtWebTip[] | undefined;
   olbgTips: OLBGTip[] | undefined;
+  showOnlyBest: boolean;
 }
 
 export function PicksRaceRow({
@@ -42,6 +43,7 @@ export function PicksRaceRow({
   liveOdds,
   rtWebTips,
   olbgTips,
+  showOnlyBest,
 }: PicksRaceRowProps) {
   console.log("CompactRaceRow", {
     isTodayOrPast,
@@ -370,6 +372,7 @@ export function PicksRaceRow({
                   " : " +
                   race?.raceExtraInfo?.comments[cleanName(x.name)]
                 }
+                showOnlyBest={showOnlyBest}
               />
             );
           })}
@@ -392,6 +395,7 @@ export function PicksRaceRow({
                 " : " +
                 race?.raceExtraInfo?.comments[cleanName(x.name)]
               }
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -412,6 +416,7 @@ export function PicksRaceRow({
                 " : " +
                 race?.raceExtraInfo?.comments[cleanName(x || "")]
               }
+              showOnlyBest={showOnlyBest}
             />
           ))}
 
@@ -430,6 +435,7 @@ export function PicksRaceRow({
                 " : " +
                 race?.raceExtraInfo?.comments[cleanName(x || "")]
               }
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -449,6 +455,7 @@ export function PicksRaceRow({
                 " : " +
                 race?.raceExtraInfo?.comments[cleanName(x.horse || "")]
               }
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -468,6 +475,7 @@ export function PicksRaceRow({
                 " : " +
                 race?.raceExtraInfo?.comments[cleanName(x.horse || "")]
               }
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -490,6 +498,7 @@ export function PicksRaceRow({
                 " : " +
                 race?.raceExtraInfo?.comments[cleanName(x?.horse || "")]
               }
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -514,6 +523,7 @@ export function PicksRaceRow({
                 " : " +
                 race?.raceExtraInfo?.comments[cleanName(x.horse || "")]
               }
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -534,6 +544,7 @@ export function PicksRaceRow({
                 " : " +
                 race?.raceExtraInfo?.comments[cleanName(x.horseName || "")]
               }
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -547,6 +558,7 @@ export function PicksRaceRow({
               odds={olbgWinTipsWeighted[x_i][1]}
               extraText={`${x.winTips}`}
               title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount}`}
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -560,6 +572,7 @@ export function PicksRaceRow({
               odds={olbgEwTipsWeighted[x_i][1]}
               extraText={`${x.ewTips}`}
               title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount}`}
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -573,6 +586,7 @@ export function PicksRaceRow({
               odds={olbgNapTipsWeighted[x_i][1]}
               extraText={`${x.napTips}`}
               title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount}`}
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -586,6 +600,7 @@ export function PicksRaceRow({
               odds={olbgExpertTipsWeighted[x_i][1]}
               extraText={`${x.expertCount}`}
               title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount}`}
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -599,6 +614,7 @@ export function PicksRaceRow({
               odds={olbgCommentTipsWeighted[x_i][1]}
               extraText={`${x.commentCount}`}
               title={`Win: ${x.winTips}/${x.winTotal} : EW: ${x.ewTips}/${x.ewTotal} : NAP: ${x.napTips}/${x.napTotal} : Expert: ${x.expertCount} : Comment: ${x.commentCount} : ${x.comment}`}
+              showOnlyBest={showOnlyBest}
             />
           ))}
         </div>
@@ -679,8 +695,15 @@ export function PicksRaceRow({
             const rpHorseComment =
               race?.raceExtraInfo?.comments[cleanName(name)];
 
+            const aiSummary =
+              (
+                aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
+                  ?.score?.total?.percentage || 0
+              ).toFixed(2) + "%";
+
             const paraGraph = [
               scoreSummary,
+              aiSummary,
               olbgSummary
                 ? `<span style='color: #666'>OLBG Summary:</span>\n` +
                   olbgSummary
@@ -729,6 +752,7 @@ export function PicksRaceRow({
                     (x) => cleanName(x.name) === cleanName(name)
                   )?.score?.total?.percentage || 0) >= 40
                 }
+                showOnlyBest={showOnlyBest}
               />
             );
           })}

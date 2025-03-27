@@ -1,0 +1,100 @@
+{
+  "date": "2025-03-24",
+  "tips": [
+    {
+      "time": "13:47",
+      "horse": "Baileys Jubilation",
+      "isNap": false
+    },
+    {
+      "time": "14:17",
+      "horse": "Crafter",
+      "isNap": false
+    },
+    {
+      "time": "14:47",
+      "horse": "Fat Gladiator",
+      "isNap": false
+    },
+    {
+      "time": "15:17",
+      "horse": "Ashford Hill",
+      "isNap": false
+    },
+    {
+      "time": "15:47",
+      "horse": "Neptune Legend",
+      "isNap": false
+    },
+    {
+      "time": "16:47",
+      "horse": "Cosmic View",
+      "isNap": false
+    },
+    {
+      "time": "17:17",
+      "horse": "Poles Apart",
+      "isNap": false
+    },
+    {
+      "time": "17:47",
+      "horse": "Big Narstie",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Briefly",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Mr Mackay",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Zaochen Enki",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Space Voyage",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Jaramillo",
+      "isNap": true
+    },
+    {
+      "time": "17:00",
+      "horse": "Mach Ten",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Vamp",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Wannabe Brave",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Tuscan Star",
+      "isNap": true
+    },
+    {
+      "time": "19:00",
+      "horse": "Ash Wednesday",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Supreme King",
+      "isNap": false
+    }
+  ]
+}

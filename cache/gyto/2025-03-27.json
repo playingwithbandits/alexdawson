@@ -1,0 +1,180 @@
+{
+  "date": "2025-03-27",
+  "tips": [
+    {
+      "time": "14:20",
+      "horse": "Infantry Officer",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Elterwater",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Media Mogul",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Anglesey Lad",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Mashaan",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Annalee Lass",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "L'Immortale",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Catch Cunningham",
+      "isNap": false
+    },
+    {
+      "time": "14:27",
+      "horse": "Aviation",
+      "isNap": false
+    },
+    {
+      "time": "14:57",
+      "horse": "Honey Jack",
+      "isNap": false
+    },
+    {
+      "time": "15:27",
+      "horse": "Jack Sparrow Grey",
+      "isNap": false
+    },
+    {
+      "time": "15:57",
+      "horse": "Holeshot",
+      "isNap": true
+    },
+    {
+      "time": "17:05",
+      "horse": "Dutch Corner",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Saint Bibiana",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Tommy Cullen",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Service Minimum",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Dunskay",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Coastal Rock",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Scorsese",
+      "isNap": true
+    },
+    {
+      "time": "17:40",
+      "horse": "Our Pink Lady",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Ballybrittas",
+      "isNap": false
+    },
+    {
+      "time": "15:12",
+      "horse": "Rath Gaul Boy",
+      "isNap": false
+    },
+    {
+      "time": "15:42",
+      "horse": "Maciver",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Howdoyalikeherhome",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Ashdale Flyer",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Volez Vous",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Tingarran Express",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Doctor Steinberg",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "I Maximus",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "The Colorist",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Olympic Melody",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Double Mocha",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Stella Hogan",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Lady Flora",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Lightening Mann",
+      "isNap": false
+    }
+  ]
+}
