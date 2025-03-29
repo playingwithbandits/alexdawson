@@ -1,0 +1,205 @@
+{
+  "date": "2025-03-29",
+  "tips": [
+    {
+      "time": "13:15",
+      "horse": "Kamakameleon",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Look Back Smiling",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Spycatcher",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Midnight Gun",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Bedouin Prince",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Waistcoat",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Letmeseethecolts",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Joyful Tidings",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Two Stars",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Vanderbilt House",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Mathan",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Poet Master",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Restful",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Apercu",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Bear Profit",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "St Pancras",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Lawmans Blis",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "The Wolf",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Matchless",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Siam Park",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Nowyouvebinandunit",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Cool Party",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Balmacara",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Soprano",
+      "isNap": true
+    },
+    {
+      "time": "15:50",
+      "horse": "Bermuda Longtail",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Cavallo Bay",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Java Raja",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Ruler Legend",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Doctor Kildare",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Range",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Konfusion",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Clondaw Royale",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Double Measure",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Federated",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Bayenah",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Bantz",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Frankini",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Tuco Salamanca",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Oriental Prince",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Rebecca'S Girl",
+      "isNap": false
+    }
+  ]
+}

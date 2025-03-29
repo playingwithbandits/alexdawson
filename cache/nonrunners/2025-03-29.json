@@ -1,0 +1,404 @@
+[
+  {
+    "courseName": "Curragh",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#curragh",
+    "raceCardsCourseMeetingsUrl": "/racecards/178/curragh/2025-03-29",
+    "going": "SOFT (Yielding to soft in places on Round course)",
+    "weather": "Overcast with showers",
+    "stallsPosition": "Sprints - Centre",
+    "races": [
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-29/891395",
+        "horses": [
+          {
+            "horseName": "Smart Sioux",
+            "horseProfileUrl": "/profile/horse/7324743/smart-sioux/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Joyful Tidings",
+            "horseProfileUrl": "/profile/horse/7329757/joyful-tidings/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-29/891399",
+        "horses": [
+          {
+            "horseName": "Tina's Indian",
+            "horseProfileUrl": "/profile/horse/5820854/tinas-indian/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Fleur De Chine",
+            "horseProfileUrl": "/profile/horse/5203862/fleur-de-chine/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/178/curragh/2025-03-29/891402",
+        "horses": [
+          {
+            "horseName": "Solar Breeze",
+            "horseProfileUrl": "/profile/horse/3811179/solar-breeze/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Inchiquin Maid",
+            "horseProfileUrl": "/profile/horse/4249776/inchiquin-maid/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Purple Sky",
+            "horseProfileUrl": "/profile/horse/5812357/purple-sky/",
+            "raceNumber": "(20)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Doncaster",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#doncaster",
+    "raceCardsCourseMeetingsUrl": "/racecards/15/doncaster/2025-03-29",
+    "going": "GOOD TO SOFT (Soft in places on Round course; 6.1) changing to GOOD TO SOFT (Good in places on Straight course) after Race 1 (1.15)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "1:50",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-29/889285",
+        "horses": [
+          {
+            "horseName": "One Night Thunder",
+            "horseProfileUrl": "/profile/horse/4175314/one-night-thunder/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-29/889290",
+        "horses": [
+          {
+            "horseName": "Bouquet De Paris",
+            "horseProfileUrl": "/profile/horse/7200234/bouquet-de-paris/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Singing In Paris",
+            "horseProfileUrl": "/profile/horse/6838440/singing-in-paris/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-03-29",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-03-29",
+    "going": "TAPETA: STANDARD",
+    "weather": "Cloudy",
+    "stallsPosition": "1m2f - Outside; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-03-29/889567",
+        "horses": [
+          {
+            "horseName": "Brian The Snail",
+            "horseProfileUrl": "/profile/horse/1131875/brian-the-snail/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Jimmy Knocker",
+            "horseProfileUrl": "/profile/horse/5668388/jimmy-knocker/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Tomorrow Day",
+            "horseProfileUrl": "/profile/horse/5162493/tomorrow-day/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Stratford",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#stratford",
+    "raceCardsCourseMeetingsUrl": "/racecards/67/stratford/2025-03-29",
+    "going": "GOOD (Good to soft in places; Watered, 6.5)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/67/stratford/2025-03-29/889386",
+        "horses": [
+          {
+            "horseName": "Kientzheim",
+            "horseProfileUrl": "/profile/horse/6613582/kientzheim/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/67/stratford/2025-03-29/889387",
+        "horses": [
+          {
+            "horseName": "Present De Vango",
+            "horseProfileUrl": "/profile/horse/4668930/present-de-vango/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/67/stratford/2025-03-29/889384",
+        "horses": [
+          {
+            "horseName": "Pedley Wood",
+            "horseProfileUrl": "/profile/horse/4086850/pedley-wood/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/67/stratford/2025-03-29/889389",
+        "horses": [
+          {
+            "horseName": "It's A Good Name",
+            "horseProfileUrl": "/profile/horse/4584213/its-a-good-name/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/67/stratford/2025-03-29/889388",
+        "horses": [
+          {
+            "horseName": "Arctic Saint",
+            "horseProfileUrl": "/profile/horse/4728106/arctic-saint/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Ted's Friend",
+            "horseProfileUrl": "/profile/horse/3360170/teds-friend/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Uttoxeter",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#uttoxeter",
+    "raceCardsCourseMeetingsUrl": "/racecards/84/uttoxeter/2025-03-29",
+    "going": "GOOD (Good to soft in places; Watered, Chs 6.5, Hdl 6.8)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-03-29/889394",
+        "horses": [
+          {
+            "horseName": "Sweet Magic",
+            "horseProfileUrl": "/profile/horse/4201350/sweet-magic/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-03-29/889391",
+        "horses": [
+          {
+            "horseName": "Caeruleum",
+            "horseProfileUrl": "/profile/horse/4682997/caeruleum/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-03-29/889392",
+        "horses": [
+          {
+            "horseName": "Superior Glance",
+            "horseProfileUrl": "/profile/horse/3324895/superior-glance/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Marty Byrde",
+            "horseProfileUrl": "/profile/horse/3952099/marty-byrde/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-03-29/889396",
+        "horses": [
+          {
+            "horseName": "Barrow Hill Lad",
+            "horseProfileUrl": "/profile/horse/7191407/barrow-hill-lad/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Flemington",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#flemington",
+    "raceCardsCourseMeetingsUrl": "/racecards/297/flemington/2025-03-29",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Fontainebleau",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#fontainebleau",
+    "raceCardsCourseMeetingsUrl": "/racecards/209/fontainebleau/2025-03-29",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Gulfstream Park",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#gulfstream-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/272/gulfstream-park/2025-03-29",
+    "going": "DIRT: FAST; TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Hanshin",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#hanshin",
+    "raceCardsCourseMeetingsUrl": "/racecards/491/hanshin/2025-03-29",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:35",
+        "raceCardUrl": "/racecards/491/hanshin/2025-03-29/892017",
+        "horses": [
+          {
+            "horseName": "Vola Via",
+            "horseProfileUrl": "/profile/horse/7091070/vola-via/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nakayama",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#nakayama",
+    "raceCardsCourseMeetingsUrl": "/racecards/514/nakayama/2025-03-29",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Oaklawn Park",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#oaklawn-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/466/oaklawn-park/2025-03-29",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Saint-Cloud",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#saint-cloud",
+    "raceCardsCourseMeetingsUrl": "/racecards/219/saint-cloud/2025-03-29",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/219/saint-cloud/2025-03-29/892023",
+        "horses": [
+          {
+            "horseName": "Sinileo",
+            "horseProfileUrl": "/profile/horse/7355954/sinileo/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:35",
+        "raceCardUrl": "/racecards/219/saint-cloud/2025-03-29/892028",
+        "horses": [
+          {
+            "horseName": "May It Be",
+            "horseProfileUrl": "/profile/horse/58953259/may-it-be/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Trentham",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#trentham",
+    "raceCardsCourseMeetingsUrl": "/racecards/479/trentham/2025-03-29",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Turffontein Standside",
+    "raceCardsCourseUrl": "/racecards/2025-03-29#turffontein-standside",
+    "raceCardsCourseMeetingsUrl": "/racecards/1001/turffontein-standside/2025-03-29",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:35",
+        "raceCardUrl": "/racecards/1001/turffontein-standside/2025-03-29/891907",
+        "horses": [
+          {
+            "horseName": "Silver Sanctuary",
+            "horseProfileUrl": "/profile/horse/5481568/silver-sanctuary/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Hotarubi",
+            "horseProfileUrl": "/profile/horse/5222258/hotarubi/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  }
+]

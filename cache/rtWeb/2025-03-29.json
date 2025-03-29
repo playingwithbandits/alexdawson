@@ -1,0 +1,30 @@
+{
+  "date": "2025-03-29",
+  "tips": [
+    {
+      "horseName": "Remarkable Flight",
+      "time": "14:10",
+      "rating": 80
+    },
+    {
+      "horseName": "Blue Las",
+      "time": "15:20",
+      "rating": 78.5
+    },
+    {
+      "horseName": "Range",
+      "time": "15:55",
+      "rating": 85.3
+    },
+    {
+      "horseName": "Broughshane",
+      "time": "16:30",
+      "rating": 74.7
+    },
+    {
+      "horseName": "Double Click (IRE)",
+      "time": "17:05",
+      "rating": 73.5
+    }
+  ]
+}

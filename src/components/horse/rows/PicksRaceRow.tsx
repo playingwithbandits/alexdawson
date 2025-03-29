@@ -729,6 +729,20 @@ export function PicksRaceRow({
             ]
               ?.filter((x) => x)
               .join("\n\n");
+
+            const aiPerc =
+              aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
+                ?.score?.total?.percentage || 0;
+            const aiPercWithin5Percent = aiPerc >= (topAiPercentage || 100) - 5;
+
+            const olbgNapCount = olbgTipsWithNap
+              ?.filter((x) => x.napTips >= 1)
+              ?.some((x) => cleanName(x.horseName) === cleanName(name));
+
+            const olbgCommentCount = olbgTipsWithComment
+              ?.filter((x) => x.commentCount >= 1)
+              ?.some((x) => cleanName(x.horseName) === cleanName(name));
+
             return (
               <HorseNameRow
                 key={race.time + x_i}
@@ -736,20 +750,25 @@ export function PicksRaceRow({
                 results={results}
                 time={race.time}
                 odds={odds}
-                extraText={`${count.toFixed(1)} : ${perc}%`}
-                oddsHighlight={odds > 6 && count >= 3}
+                extraText={
+                  `${count.toFixed(1)} : ${perc}%`
+                  // +
+                  // ` : AI: ${aiPercWithin10Percent ? "Yes" : "No"}  olbgNap: ${
+                  //   olbgNap ? "Yes" : "No"
+                  // }`
+                }
+                oddsHighlight={odds > 6 && aiPercWithin5Percent}
                 isNonRunner={isNonRunner(race.time, name)}
                 greyedOut={count < 2}
                 title={paraGraph}
                 highlight1={count >= 4}
                 highlight2={
                   count >= 3 &&
-                  olbgTipsWithComment
-                    ?.filter((x) => x.napTips >= 1)
-                    ?.some((x) => cleanName(x.horseName) === cleanName(name)) &&
-                  (aiTopPicks?.find(
-                    (x) => cleanName(x.name) === cleanName(name)
-                  )?.score?.total?.percentage || 0) >= 40
+                  olbgNapCount &&
+                  olbgCommentCount &&
+                  aiPercWithin5Percent &&
+                  aiPerc >= 30 &&
+                  perc >= 10
                 }
                 showOnlyBest={showOnlyBest}
               />

@@ -1,0 +1,170 @@
+{
+  "date": "2025-03-28",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "All Well And Good",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Tamar Bridge",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Hold Onto The Line",
+      "isNap": false
+    },
+    {
+      "time": "16:07",
+      "horse": "Fete Champetre",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Glory Hights",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Queen Of Steel",
+      "isNap": true
+    },
+    {
+      "time": "17:50",
+      "horse": "Wandering Ego",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "The Cox Express",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Kalif D'Airy",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Joe Cotton",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Authentic Legacy",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Copper Cove",
+      "isNap": false
+    },
+    {
+      "time": "14:22",
+      "horse": "French Martini",
+      "isNap": false
+    },
+    {
+      "time": "14:52",
+      "horse": "Spoilt",
+      "isNap": false
+    },
+    {
+      "time": "15:22",
+      "horse": "Key Witness",
+      "isNap": false
+    },
+    {
+      "time": "15:57",
+      "horse": "Midnightattheoasis",
+      "isNap": false
+    },
+    {
+      "time": "16:32",
+      "horse": "Early Release",
+      "isNap": false
+    },
+    {
+      "time": "17:07",
+      "horse": "Combustion",
+      "isNap": true
+    },
+    {
+      "time": "17:37",
+      "horse": "Brasil Power",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Popular Dream",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Only One Blue",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Fosroc",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Masham Moor",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Vixey",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Match Anthem",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Kats Bob",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Solomon Coop",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Manhattan Dandy",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Duke Otto",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Lady Iman",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Elana Osario",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Propose",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Dynamite Defense",
+      "isNap": false
+    }
+  ]
+}

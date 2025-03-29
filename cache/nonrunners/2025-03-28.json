@@ -1,0 +1,330 @@
+[
+  {
+    "courseName": "Dundalk (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-28#dundalk-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1138/dundalk-aw/2025-03-28",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-28/891228",
+        "horses": [
+          {
+            "horseName": "Nezeeh",
+            "horseProfileUrl": "/profile/horse/5237784/nezeeh/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-28/891229",
+        "horses": [
+          {
+            "horseName": "Latin",
+            "horseProfileUrl": "/profile/horse/5061496/latin/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Hope And Innocence",
+            "horseProfileUrl": "/profile/horse/4522984/hope-and-innocence/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Harry The Rogue",
+            "horseProfileUrl": "/profile/horse/5100007/harry-the-rogue/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-28/891231",
+        "horses": [
+          {
+            "horseName": "Luna Beaux",
+            "horseProfileUrl": "/profile/horse/7324739/luna-beaux/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-28/891233",
+        "horses": [
+          {
+            "horseName": "What's Your Game",
+            "horseProfileUrl": "/profile/horse/6582566/whats-your-game/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-03-28/891234",
+        "horses": [
+          {
+            "horseName": "Higher Kingdom",
+            "horseProfileUrl": "/profile/horse/2645439/higher-kingdom/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Lord Talbot",
+            "horseProfileUrl": "/profile/horse/6265722/lord-talbot/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Randall Poets Lass",
+            "horseProfileUrl": "/profile/horse/4652645/randall-poets-lass/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Fontwell",
+    "raceCardsCourseUrl": "/racecards/2025-03-28#fontwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/20/fontwell/2025-03-28",
+    "going": "GOOD, Good to soft in places (GoingStick 5.7) (Watered) (Rail Movements: All races +12yds)",
+    "weather": "Sunny spells",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-28#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-03-28",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "5f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:52",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-03-28/889555",
+        "horses": [
+          {
+            "horseName": "Broadhaven Bay",
+            "horseProfileUrl": "/profile/horse/6175551/broadhaven-bay/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:57",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-03-28/889559",
+        "horses": [
+          {
+            "horseName": "Dream By Day",
+            "horseProfileUrl": "/profile/horse/3785504/dream-by-day/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:32",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-03-28/889556",
+        "horses": [
+          {
+            "horseName": "Early Release",
+            "horseProfileUrl": "/profile/horse/5895609/early-release/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-03-28#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-03-28",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-03-28/889541",
+        "horses": [
+          {
+            "horseName": "Only One Blue",
+            "horseProfileUrl": "/profile/horse/6363106/only-one-blue/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Flute d'Or",
+            "horseProfileUrl": "/profile/horse/7015792/flute-dor/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-03-28/889543",
+        "horses": [
+          {
+            "horseName": "Disclosure",
+            "horseProfileUrl": "/profile/horse/5405228/disclosure/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-03-28/891875",
+        "horses": [
+          {
+            "horseName": "Forever Proud",
+            "horseProfileUrl": "/profile/horse/4582295/forever-proud/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:45",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-03-28/889544",
+        "horses": [
+          {
+            "horseName": "Lumenbourg",
+            "horseProfileUrl": "/profile/horse/5401014/lumenbourg/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wetherby",
+    "raceCardsCourseUrl": "/racecards/2025-03-28#wetherby",
+    "raceCardsCourseMeetingsUrl": "/racecards/87/wetherby/2025-03-28",
+    "going": "GOOD (Good to soft in places; Hdl 6.1; Chs 6.2)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/87/wetherby/2025-03-28/889381",
+        "horses": [
+          {
+            "horseName": "Dilly's Gunner",
+            "horseProfileUrl": "/profile/horse/6796761/dillys-gunner/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/87/wetherby/2025-03-28/889380",
+        "horses": [
+          {
+            "horseName": "Benito",
+            "horseProfileUrl": "/profile/horse/3323498/benito/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:07",
+        "raceCardUrl": "/racecards/87/wetherby/2025-03-28/889377",
+        "horses": [
+          {
+            "horseName": "Roger Rarebit",
+            "horseProfileUrl": "/profile/horse/3323496/roger-rarebit/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Fete Champetre",
+            "horseProfileUrl": "/profile/horse/3072060/fete-champetre/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Carrigeen Castle",
+            "horseProfileUrl": "/profile/horse/3309321/carrigeen-castle/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/87/wetherby/2025-03-28/889382",
+        "horses": [
+          {
+            "horseName": "Glory Hights",
+            "horseProfileUrl": "/profile/horse/4782837/glory-hights/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Angus De Bull",
+            "horseProfileUrl": "/profile/horse/3538537/angus-de-bull/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Henrysbrotherjack",
+            "horseProfileUrl": "/profile/horse/5605693/henrysbrotherjack/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/87/wetherby/2025-03-28/891876",
+        "horses": [
+          {
+            "horseName": "Foreva Alfie",
+            "horseProfileUrl": "/profile/horse/4725951/foreva-alfie/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:50",
+        "raceCardUrl": "/racecards/87/wetherby/2025-03-28/889383",
+        "horses": [
+          {
+            "horseName": "Starmount",
+            "horseProfileUrl": "/profile/horse/6640439/starmount/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Ned Hill",
+            "horseProfileUrl": "/profile/horse/7037496/ned-hill/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Mondoui'boy",
+            "horseProfileUrl": "/profile/horse/5689557/mondouiboy/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Girlfromtheglen",
+            "horseProfileUrl": "/profile/horse/6604801/girlfromtheglen/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Compiegne",
+    "raceCardsCourseUrl": "/racecards/2025-03-28#compiegne",
+    "raceCardsCourseMeetingsUrl": "/racecards/291/compiegne/2025-03-28",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:41",
+        "raceCardUrl": "/racecards/291/compiegne/2025-03-28/891896",
+        "horses": [
+          {
+            "horseName": "Sigtuna",
+            "horseProfileUrl": "/profile/horse/7334602/sigtuna/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  }
+]
