@@ -733,7 +733,8 @@ export function PicksRaceRow({
             const aiPerc =
               aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score?.total?.percentage || 0;
-            const aiPercWithin5Percent = aiPerc >= (topAiPercentage || 100) - 5;
+            const aiPercWithin10Percent =
+              aiPerc >= (topAiPercentage || 100) - 5;
 
             const olbgNapCount = olbgTipsWithNap
               ?.filter((x) => x.napTips >= 1)
@@ -757,7 +758,7 @@ export function PicksRaceRow({
                   //   olbgNap ? "Yes" : "No"
                   // }`
                 }
-                oddsHighlight={odds > 6 && aiPercWithin5Percent}
+                oddsHighlight={odds > 6 && aiPercWithin10Percent}
                 isNonRunner={isNonRunner(race.time, name)}
                 greyedOut={count < 2}
                 title={paraGraph}
@@ -766,9 +767,9 @@ export function PicksRaceRow({
                   count >= 3 &&
                   olbgNapCount &&
                   olbgCommentCount &&
-                  aiPercWithin5Percent &&
+                  aiPercWithin10Percent &&
                   aiPerc >= 30 &&
-                  perc >= 10
+                  perc >= 25
                 }
                 showOnlyBest={showOnlyBest}
               />

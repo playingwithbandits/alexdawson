@@ -1,0 +1,80 @@
+[
+  {
+    "courseName": "Aintree",
+    "raceCardsCourseUrl": "/racecards/2025-04-04#aintree",
+    "raceCardsCourseMeetingsUrl": "/racecards/32/aintree/2025-04-04",
+    "going": "GOOD TO SOFT, Good in places on Mildmay course (GoingStick: Mildmay Hurdle 5.1, Mildmay Chase 5.4, Grand National course 5.5) (Watering) (Rail movements: 1.45 & 4.40 +41yds, 2.20 +37yds, 2.55, 3.30 & 5.15 +29yds and 4.05 +15yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-04/889464",
+        "horses": [
+          {
+            "horseName": "Jet Blue",
+            "horseProfileUrl": "/profile/horse/4604704/jet-blue/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Bath",
+    "raceCardsCourseUrl": "/racecards/2025-04-04#bath",
+    "raceCardsCourseMeetingsUrl": "/racecards/5/bath/2025-04-04",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 7.8) (Rail movements: 1.55, 4.15, 4.50 & 5.25 +11yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Sprints - Centre; 1m & 1m6f - Inside; 1m3f - Outside",
+    "races": []
+  },
+  {
+    "courseName": "Dundalk (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-04#dundalk-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1138/dundalk-aw/2025-04-04",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Leicester",
+    "raceCardsCourseUrl": "/racecards/2025-04-04#leicester",
+    "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-04-04",
+    "going": "GOOD, Good to firm in places (GoingStick 7.3) (Selective watering) (Rail movements: 3.17 & 4.27 +15yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": [
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/30/leicester/2025-04-04/889314",
+        "horses": [
+          {
+            "horseName": "Marsh Benham",
+            "horseProfileUrl": "/profile/horse/3550657/marsh-benham/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-04#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-04-04",
+    "going": "TAPETA: STANDARD",
+    "weather": "Clear",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Wexford",
+    "raceCardsCourseUrl": "/racecards/2025-04-04#wexford",
+    "raceCardsCourseMeetingsUrl": "/racecards/201/wexford/2025-04-04",
+    "going": "GOOD TO YIELDING (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  }
+]

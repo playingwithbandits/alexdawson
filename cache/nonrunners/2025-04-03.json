@@ -1,0 +1,315 @@
+[
+  {
+    "courseName": "Aintree",
+    "raceCardsCourseUrl": "/racecards/2025-04-03#aintree",
+    "raceCardsCourseMeetingsUrl": "/racecards/32/aintree/2025-04-03",
+    "going": "GOOD TO SOFT, Good in places on Mildmay course (GoingStick: Mildmay Hurdle 5.0, Mildmay Chase 5.4, Grand National course 5.2) (Watered) (Rail movements: 1.45, 2.20 & 5.15 +59yds, 2.55 +82yds, 3.30 +73yds, 4.05 +29yds and 4.40 +48yds)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-03/889456",
+        "horses": [
+          {
+            "horseName": "Salver",
+            "horseProfileUrl": "/profile/horse/5415111/salver/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-03/889454",
+        "horses": [
+          {
+            "horseName": "Captain Tommy",
+            "horseProfileUrl": "/profile/horse/1939908/captain-tommy/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-03#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-04-03",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-03/889606",
+        "horses": [
+          {
+            "horseName": "Balqaa",
+            "horseProfileUrl": "/profile/horse/3721425/balqaa/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-03/889605",
+        "horses": [
+          {
+            "horseName": "Mc Moan",
+            "horseProfileUrl": "/profile/horse/58956161/mc-moan/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-03/889607",
+        "horses": [
+          {
+            "horseName": "Midnightattheoasis",
+            "horseProfileUrl": "/profile/horse/4303304/midnightattheoasis/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Sir Benedict",
+            "horseProfileUrl": "/profile/horse/3168686/sir-benedict/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-03/889608",
+        "horses": [
+          {
+            "horseName": "Late Star",
+            "horseProfileUrl": "/profile/horse/6283456/late-star/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Naas",
+    "raceCardsCourseUrl": "/racecards/2025-04-03#naas",
+    "raceCardsCourseMeetingsUrl": "/racecards/192/naas/2025-04-03",
+    "going": "GOOD TO YIELDING, Yielding in places (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:25",
+        "raceCardUrl": "/racecards/192/naas/2025-04-03/891960",
+        "horses": [
+          {
+            "horseName": "Catch Fire",
+            "horseProfileUrl": "/profile/horse/6649609/catch-fire/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/192/naas/2025-04-03/892134",
+        "horses": [
+          {
+            "horseName": "Screaming Eagle",
+            "horseProfileUrl": "/profile/horse/5315428/screaming-eagle/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Kanog Bay",
+            "horseProfileUrl": "/profile/horse/7139177/kanog-bay/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Heslostthehunger",
+            "horseProfileUrl": "/profile/horse/7267884/heslostthehunger/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:35",
+        "raceCardUrl": "/racecards/192/naas/2025-04-03/891961",
+        "horses": [
+          {
+            "horseName": "Joshsue",
+            "horseProfileUrl": "/profile/horse/5168462/joshsue/",
+            "raceNumber": "(23)"
+          },
+          {
+            "horseName": "Music Of Life",
+            "horseProfileUrl": "/profile/horse/5793406/music-of-life/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Belle Of Boston",
+            "horseProfileUrl": "/profile/horse/7339100/belle-of-boston/",
+            "raceNumber": "(22)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/192/naas/2025-04-03/891963",
+        "horses": [
+          {
+            "horseName": "Go Gill Go",
+            "horseProfileUrl": "/profile/horse/3564085/go-gill-go/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Masterstonemason",
+            "horseProfileUrl": "/profile/horse/1120809/masterstonemason/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Mooretown Lad",
+            "horseProfileUrl": "/profile/horse/5338278/mooretown-lad/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Welcome Aboard",
+            "horseProfileUrl": "/profile/horse/7046565/welcome-aboard/",
+            "raceNumber": "(23)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/192/naas/2025-04-03/891964",
+        "horses": [
+          {
+            "horseName": "Toor Moon",
+            "horseProfileUrl": "/profile/horse/3823959/toor-moon/",
+            "raceNumber": "(22)"
+          },
+          {
+            "horseName": "Walk Away Harry",
+            "horseProfileUrl": "/profile/horse/4982082/walk-away-harry/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Silent Flight",
+            "horseProfileUrl": "/profile/horse/4177624/silent-flight/",
+            "raceNumber": "(21)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/192/naas/2025-04-03/891965",
+        "horses": [
+          {
+            "horseName": "Royal Cave",
+            "horseProfileUrl": "/profile/horse/5009835/royal-cave/",
+            "raceNumber": "(23)"
+          },
+          {
+            "horseName": "Ballerina Boxer",
+            "horseProfileUrl": "/profile/horse/4753546/ballerina-boxer/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Mahler Appeal",
+            "horseProfileUrl": "/profile/horse/3385807/mahler-appeal/",
+            "raceNumber": "(22)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/192/naas/2025-04-03/891966",
+        "horses": [
+          {
+            "horseName": "Saint Peregrine",
+            "horseProfileUrl": "/profile/horse/7308004/saint-peregrine/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Plumpton",
+    "raceCardsCourseUrl": "/racecards/2025-04-03#plumpton",
+    "raceCardsCourseMeetingsUrl": "/racecards/44/plumpton/2025-04-03",
+    "going": "GOOD (GoingStick 6.9) (Watered) (Rail movements: 2.30, 4.15 & 4.50 +49yds and 3.05 +61yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-03/889444",
+        "horses": [
+          {
+            "horseName": "Jolyjump",
+            "horseProfileUrl": "/profile/horse/5455544/jolyjump/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-03/889446",
+        "horses": [
+          {
+            "horseName": "Pure Theatre",
+            "horseProfileUrl": "/profile/horse/4191647/pure-theatre/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-03/889443",
+        "horses": [
+          {
+            "horseName": "Delgany Monarch",
+            "horseProfileUrl": "/profile/horse/2942419/delgany-monarch/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-03/889447",
+        "horses": [
+          {
+            "horseName": "Jorebel",
+            "horseProfileUrl": "/profile/horse/5034758/jorebel/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Leave Her To Me",
+            "horseProfileUrl": "/profile/horse/4391162/leave-her-to-me/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sedgefield",
+    "raceCardsCourseUrl": "/racecards/2025-04-03#sedgefield",
+    "raceCardsCourseMeetingsUrl": "/racecards/57/sedgefield/2025-04-03",
+    "going": "GOOD (GoingStick 5.6) (Watered) (Rail movements: 2.07 -19yds, 2.42 +28yds, 3.17 & 5.02 -20yds, 3.52 +38yds and 4.27 -30yds)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:17",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-04-03/889450",
+        "horses": [
+          {
+            "horseName": "Cancelled",
+            "horseProfileUrl": "/profile/horse/5915793/cancelled/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  }
+]

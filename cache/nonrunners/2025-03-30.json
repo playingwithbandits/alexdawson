@@ -1,0 +1,337 @@
+[
+  {
+    "courseName": "Ascot",
+    "raceCardsCourseUrl": "/racecards/2025-03-30#ascot",
+    "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-03-30",
+    "going": "GOOD, Good to firm in places (GoingStick: Chase 7.6, Hurdle 7.9) (Watered) (Rail movements: 2.10 +80yds, 2.45 +68yds, 3.20 +56yds, 3.55 +110yds, 4.30 +70yds and 5.05 +108yds)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/2/ascot/2025-03-30/889403",
+        "horses": [
+          {
+            "horseName": "Haaland",
+            "horseProfileUrl": "/profile/horse/4566615/haaland/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/2/ascot/2025-03-30/889398",
+        "horses": [
+          {
+            "horseName": "Bretney",
+            "horseProfileUrl": "/profile/horse/2953244/bretney/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/2/ascot/2025-03-30/889401",
+        "horses": [
+          {
+            "horseName": "Loverdose",
+            "horseProfileUrl": "/profile/horse/5461615/loverdose/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Doncaster",
+    "raceCardsCourseUrl": "/racecards/2025-03-30#doncaster",
+    "raceCardsCourseMeetingsUrl": "/racecards/15/doncaster/2025-03-30",
+    "going": "GOOD, Good to soft in places on Round course (GoingStick: Round 6.2, Straight 6.6) (Rail movements: 2.30 & 4.15 +12yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-30/889294",
+        "horses": [
+          {
+            "horseName": "Law Supreme",
+            "horseProfileUrl": "/profile/horse/4175185/law-supreme/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-30/889297",
+        "horses": [
+          {
+            "horseName": "Dubai Gold",
+            "horseProfileUrl": "/profile/horse/7276584/dubai-gold/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Erick",
+            "horseProfileUrl": "/profile/horse/7320618/erick/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-30/889292",
+        "horses": [
+          {
+            "horseName": "Zoulu Chief",
+            "horseProfileUrl": "/profile/horse/5038627/zoulu-chief/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Aleezdancer",
+            "horseProfileUrl": "/profile/horse/3437944/aleezdancer/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Solar Aclaim",
+            "horseProfileUrl": "/profile/horse/5279949/solar-aclaim/",
+            "raceNumber": "(19)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-30/889291",
+        "horses": [
+          {
+            "horseName": "Theory Of Tides",
+            "horseProfileUrl": "/profile/horse/5894809/theory-of-tides/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Cormier",
+            "horseProfileUrl": "/profile/horse/2184155/cormier/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/15/doncaster/2025-03-30/889295",
+        "horses": [
+          {
+            "horseName": "Ata Rangi",
+            "horseProfileUrl": "/profile/horse/5342157/ata-rangi/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Downpatrick",
+    "raceCardsCourseUrl": "/racecards/2025-03-30#downpatrick",
+    "raceCardsCourseMeetingsUrl": "/racecards/179/downpatrick/2025-03-30",
+    "going": "GOOD, Good to yielding in places (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-03-30/891392",
+        "horses": [
+          {
+            "horseName": "Broken Ice",
+            "horseProfileUrl": "/profile/horse/2781438/broken-ice/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Run Wild Fred",
+            "horseProfileUrl": "/profile/horse/1939898/run-wild-fred/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Gold Cup Bailly",
+            "horseProfileUrl": "/profile/horse/3265155/gold-cup-bailly/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-03-30#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-03-30",
+    "going": "GOOD TO YIELDING",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-30/891407",
+        "horses": [
+          {
+            "horseName": "Mister Adam",
+            "horseProfileUrl": "/profile/horse/6671049/mister-adam/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-30/891408",
+        "horses": [
+          {
+            "horseName": "Church Mountain",
+            "horseProfileUrl": "/profile/horse/3178683/church-mountain/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "La La Lucrative",
+            "horseProfileUrl": "/profile/horse/5325047/la-la-lucrative/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Starting Monday",
+            "horseProfileUrl": "/profile/horse/3125486/starting-monday/",
+            "raceNumber": "(22)"
+          },
+          {
+            "horseName": "Abbey Actress",
+            "horseProfileUrl": "/profile/horse/5504590/abbey-actress/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Super Exceed",
+            "horseProfileUrl": "/profile/horse/5357868/super-exceed/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-03-30/891409",
+        "horses": [
+          {
+            "horseName": "Pub Talk",
+            "horseProfileUrl": "/profile/horse/4249774/pub-talk/",
+            "raceNumber": "(23)"
+          },
+          {
+            "horseName": "Latin",
+            "horseProfileUrl": "/profile/horse/5061496/latin/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Annie Lavinia",
+            "horseProfileUrl": "/profile/horse/6087997/annie-lavinia/",
+            "raceNumber": "(22)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chukyo",
+    "raceCardsCourseUrl": "/racecards/2025-03-30#chukyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/574/chukyo/2025-03-30",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Nakayama",
+    "raceCardsCourseUrl": "/racecards/2025-03-30#nakayama",
+    "raceCardsCourseMeetingsUrl": "/racecards/514/nakayama/2025-03-30",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-03-30#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-03-30",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-30/891911",
+        "horses": [
+          {
+            "horseName": "Ping Hai Comet",
+            "horseProfileUrl": "/profile/horse/5616484/ping-hai-comet/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Hakka Radiance",
+            "horseProfileUrl": "/profile/horse/4942563/hakka-radiance/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-30/891914",
+        "horses": [
+          {
+            "horseName": "Precious Hill",
+            "horseProfileUrl": "/profile/horse/6768150/precious-hill/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Sunny Sing Spirit",
+            "horseProfileUrl": "/profile/horse/7338971/sunny-sing-spirit/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-30/891915",
+        "horses": [
+          {
+            "horseName": "Sunny Darling",
+            "horseProfileUrl": "/profile/horse/4159690/sunny-darling/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Rattan Galaxy",
+            "horseProfileUrl": "/profile/horse/7338975/rattan-galaxy/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:45",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-30/891917",
+        "horses": [
+          {
+            "horseName": "Carroll Street",
+            "horseProfileUrl": "/profile/horse/3335329/carroll-street/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:50",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-03-30/891919",
+        "horses": [
+          {
+            "horseName": "Mighty Steed",
+            "horseProfileUrl": "/profile/horse/6134907/mighty-steed/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Always My Folks",
+            "horseProfileUrl": "/profile/horse/6042349/always-my-folks/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,160 @@
+{
+  "date": "2025-04-03",
+  "tips": [
+    {
+      "time": "13:25",
+      "horse": "Los Blanco",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Jazz De Cotte",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Fiver Friday",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Shuffle The Deck",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "River Vale",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Smackwater Jack",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Butchers Bill",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Ifallgoeswell",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Jango Baie",
+      "isNap": true
+    },
+    {
+      "time": "14:55",
+      "horse": "Grey Dawning",
+      "isNap": true
+    },
+    {
+      "time": "15:30",
+      "horse": "Lossiemouth",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "My Drogo",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "My Mate Mozzie",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Seo Linn",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Delpotro",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Blacksamssenorita",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Pure Theatre",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Leading Swoop",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Jorebel",
+      "isNap": false
+    },
+    {
+      "time": "14:07",
+      "horse": "Tyson Magoo",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Jackpot Cash",
+      "isNap": false
+    },
+    {
+      "time": "15:17",
+      "horse": "Cancelled",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Old Page",
+      "isNap": false
+    },
+    {
+      "time": "16:27",
+      "horse": "Star Vantage",
+      "isNap": false
+    },
+    {
+      "time": "17:02",
+      "horse": "Milajess",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Tactical Control",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Paradoxical",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Walnut",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Southbank",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Kracking",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "No Gain",
+      "isNap": false
+    }
+  ]
+}

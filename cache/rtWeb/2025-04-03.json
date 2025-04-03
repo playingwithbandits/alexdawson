@@ -1,0 +1,65 @@
+{
+  "date": "2025-04-03",
+  "tips": [
+    {
+      "horseName": "Masterpiece (USA)",
+      "time": "14:07",
+      "rating": 78.3
+    },
+    {
+      "horseName": "Tom Creen",
+      "time": "14:42",
+      "rating": 77.5
+    },
+    {
+      "horseName": "Cancelled",
+      "time": "15:17",
+      "rating": 83.3
+    },
+    {
+      "horseName": "Ann DArabie",
+      "time": "15:52",
+      "rating": 85.7
+    },
+    {
+      "horseName": "Star Vantage",
+      "time": "16:27",
+      "rating": 81.6
+    },
+    {
+      "horseName": "Tara Iti",
+      "time": "17:02",
+      "rating": 82.6
+    },
+    {
+      "horseName": "Jango Baie",
+      "time": "13:45",
+      "rating": 81.1
+    },
+    {
+      "horseName": "Puturhandstogether",
+      "time": "14:20",
+      "rating": 81.2
+    },
+    {
+      "horseName": "Grey Dawning",
+      "time": "14:55",
+      "rating": 77.5
+    },
+    {
+      "horseName": "Constitution Hill",
+      "time": "15:30",
+      "rating": 84.7
+    },
+    {
+      "horseName": "Willitgoahead",
+      "time": "16:05",
+      "rating": 73.9
+    },
+    {
+      "horseName": "My Mate Mozzie",
+      "time": "16:40",
+      "rating": 69.5
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "date": "2025-04-03",
+  "tips": [
+    {
+      "time": "14:20",
+      "horse": "Puturhandstogether",
+      "tipster": "Jason Heavey",
+      "score": "15.7"
+    },
+    {
+      "time": "13:45",
+      "horse": "Jango Baie",
+      "tipster": "Newsboy",
+      "score": "14.6"
+    },
+    {
+      "time": "16:05",
+      "horse": "Milan Forth",
+      "tipster": "Rob Wright",
+      "score": "11.3"
+    },
+    {
+      "time": "20:00",
+      "horse": "G'Daay",
+      "tipster": "Rory Paddock",
+      "score": "10.5"
+    },
+    {
+      "time": "17:15",
+      "horse": "St Irene",
+      "tipster": "Steve Mullington",
+      "score": "8.4"
+    },
+    {
+      "time": "14:55",
+      "horse": "Ahoy Senor",
+      "tipster": "Chris Connolly",
+      "score": "6.4"
+    },
+    {
+      "time": "16:40",
+      "horse": "Hunters Yarn",
+      "tipster": "Farringdon",
+      "score": "5.8"
+    },
+    {
+      "time": "14:20",
+      "horse": "Murcia",
+      "tipster": "RP Ratings",
+      "score": "2.9"
+    },
+    {
+      "time": "16:05",
+      "horse": "Gracchus De Balme",
+      "tipster": "Melissa Jones",
+      "score": "1.1"
+    },
+    {
+      "time": "16:05",
+      "horse": "Joker De Mai",
+      "tipster": "Karl Hedley",
+      "score": "-1.6"
+    },
+    {
+      "time": "13:45",
+      "horse": "Jango Baie",
+      "tipster": "Andrew Mount",
+      "score": "-2.0"
+    },
+    {
+      "time": "14:20",
+      "horse": "Naturally Nimble",
+      "tipster": "Matt Polley",
+      "score": "-3.2"
+    },
+    {
+      "time": "14:55",
+      "horse": "Ahoy Senor",
+      "tipster": "The Punt",
+      "score": "-3.2"
+    },
+    {
+      "time": "14:20",
+      "horse": "Puturhandstogether",
+      "tipster": "Lee Sobot",
+      "score": "-4.1"
+    },
+    {
+      "time": "14:20",
+      "horse": "Live Conti",
+      "tipster": "Luke Tucker",
+      "score": "-4.1"
+    },
+    {
+      "time": "15:30",
+      "horse": "Lossiemouth",
+      "tipster": "Glendale",
+      "score": "-4.1"
+    },
+    {
+      "time": "16:40",
+      "horse": "The Folkes Tiara",
+      "tipster": "Jim Delahunt",
+      "score": "-8.3"
+    },
+    {
+      "time": "14:55",
+      "horse": "Ahoy Senor",
+      "tipster": "Robin Goodfellow",
+      "score": "-8.2"
+    },
+    {
+      "time": "14:55",
+      "horse": "The Real Whacker",
+      "tipster": "Sam Hardy",
+      "score": "-10.3"
+    },
+    {
+      "time": "16:05",
+      "horse": "Famous Clermont",
+      "tipster": "West Country",
+      "score": "-11.5"
+    },
+    {
+      "time": "16:05",
+      "horse": "Milan Forth",
+      "tipster": "Ian Gaughran",
+      "score": "-12.2"
+    },
+    {
+      "time": "13:45",
+      "horse": "Gidleigh Park",
+      "tipster": "Whistler",
+      "score": "-11.6"
+    },
+    {
+      "time": "16:05",
+      "horse": "Gracchus De Balme",
+      "tipster": "The North",
+      "score": "-13.4"
+    },
+    {
+      "time": "20:00",
+      "horse": "G'Daay",
+      "tipster": "Marlborough",
+      "score": "-12.8"
+    },
+    {
+      "time": "13:45",
+      "horse": "Croke Park",
+      "tipster": "Garry Owen",
+      "score": "-13.5"
+    },
+    {
+      "time": "16:40",
+      "horse": "Inedit Star",
+      "tipster": "The Score",
+      "score": "-13.6"
+    },
+    {
+      "time": "16:05",
+      "horse": "My Drogo",
+      "tipster": "Dean Kilbryde",
+      "score": "-14.6"
+    },
+    {
+      "time": "16:40",
+      "horse": "Sans Bruit",
+      "tipster": "The Brigadier",
+      "score": "-16.6"
+    },
+    {
+      "time": "16:40",
+      "horse": "Primoz",
+      "tipster": "Postdata",
+      "score": "-21.6"
+    },
+    {
+      "time": "16:40",
+      "horse": "The Folkes Tiara",
+      "tipster": "Rockavon",
+      "score": "-22.0"
+    },
+    {
+      "time": "14:20",
+      "horse": "Puturhandstogether",
+      "tipster": "Spotlight",
+      "score": "-21.1"
+    },
+    {
+      "time": "17:15",
+      "horse": "Seo Linn",
+      "tipster": "Mercury",
+      "score": "-24.7"
+    },
+    {
+      "time": "16:05",
+      "horse": "Willewonga",
+      "tipster": "Ross Shepherd",
+      "score": "-25.0"
+    },
+    {
+      "time": "13:45",
+      "horse": "Impaire Et Passe",
+      "tipster": "Ben Morgan",
+      "score": "-26.2"
+    },
+    {
+      "time": "16:40",
+      "horse": "Calico",
+      "tipster": "The Duke",
+      "score": "-27.1"
+    },
+    {
+      "time": "15:40",
+      "horse": "Dear Ralphy",
+      "tipster": "Computeform",
+      "score": "-28.5"
+    },
+    {
+      "time": "17:15",
+      "horse": "Seo Linn",
+      "tipster": "Jeffrey Ross",
+      "score": "-29.3"
+    },
+    {
+      "time": "14:55",
+      "horse": "Grey Dawning",
+      "tipster": "Templegate",
+      "score": "-29.6"
+    },
+    {
+      "time": "16:40",
+      "horse": "Primoz",
+      "tipster": "The Judge",
+      "score": "-31.2"
+    },
+    {
+      "time": "16:40",
+      "horse": "Petit Tonnerre",
+      "tipster": "On The Nose",
+      "score": "-31.6"
+    },
+    {
+      "time": "16:40",
+      "horse": "Rath Gaul Hill",
+      "tipster": "Jon Freeman",
+      "score": "-33.6"
+    },
+    {
+      "time": "16:05",
+      "horse": "My Drogo",
+      "tipster": "Chris Wright",
+      "score": "-38.3"
+    },
+    {
+      "time": "14:55",
+      "horse": "Spillane's Tower",
+      "tipster": "Brian Flanagan",
+      "score": "-38.4"
+    },
+    {
+      "time": "13:45",
+      "horse": "The Kalooki Kid",
+      "tipster": "Moorestyle",
+      "score": "-41.0"
+    },
+    {
+      "time": "15:30",
+      "horse": "Constitution Hill",
+      "tipster": "Tipman Tips",
+      "score": "-40.7"
+    },
+    {
+      "time": "16:40",
+      "horse": "Inedit Star",
+      "tipster": "Rory Delargy",
+      "score": "-42.5"
+    },
+    {
+      "time": "16:40",
+      "horse": "Primoz",
+      "tipster": "Fortunatus",
+      "score": "-46.0"
+    },
+    {
+      "time": "13:45",
+      "horse": "Jango Baie",
+      "tipster": "Adrian Wall",
+      "score": "-52.4"
+    },
+    {
+      "time": "17:15",
+      "horse": "Jackie Hobbs",
+      "tipster": "Lambourn",
+      "score": "-54.3"
+    }
+  ]
+}

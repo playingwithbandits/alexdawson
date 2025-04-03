@@ -1,0 +1,145 @@
+{
+  "date": "2025-03-30",
+  "tips": [
+    {
+      "time": "13:45",
+      "horse": "Toad Hall",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Kalsman",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Ciao Adios",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Maid On The Moon",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Dunboyne",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Heroes Rise",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Step Up Son",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Warning Sign",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Pantile Warrior",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Palmarian",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Billyjoh",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "City Of Delight",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Circe",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Onemorenomore",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Project Dante",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Intensify",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Henri Matisse",
+      "isNap": true
+    },
+    {
+      "time": "15:10",
+      "horse": "Exactly",
+      "isNap": true
+    },
+    {
+      "time": "15:45",
+      "horse": "Delacroix",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Lady O",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Dark Viper",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Master Garvey",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Wicked Thoughts",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Galactic Charm",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Kotmask",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Native Moon",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Northern Poet",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Court Cian",
+      "isNap": false
+    }
+  ]
+}
