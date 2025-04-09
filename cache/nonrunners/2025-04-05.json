@@ -1,0 +1,600 @@
+[
+  {
+    "courseName": "Aintree",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#aintree",
+    "raceCardsCourseMeetingsUrl": "/racecards/32/aintree/2025-04-05",
+    "going": "National Course - GOOD TO SOFT; Mildmay Course - GOOD (Watered; Mildmay Chs 5.4, Mildmay Hdl 5.3, Grand National 5.3)",
+    "weather": "Fine dry",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:20",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-05/889472",
+        "horses": [
+          {
+            "horseName": "Nurse Susan",
+            "horseProfileUrl": "/profile/horse/3910265/nurse-susan/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Navajo Indy",
+            "horseProfileUrl": "/profile/horse/4865790/navajo-indy/",
+            "raceNumber": "(22)"
+          },
+          {
+            "horseName": "Maximilian",
+            "horseProfileUrl": "/profile/horse/3906194/maximilian/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Bo Zenith",
+            "horseProfileUrl": "/profile/horse/4241539/bo-zenith/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Jeriko Du Reponet",
+            "horseProfileUrl": "/profile/horse/4938752/jeriko-du-reponet/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-05/889471",
+        "horses": [
+          {
+            "horseName": "Lulamba",
+            "horseProfileUrl": "/profile/horse/6577926/lulamba/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Fingle Bridge",
+            "horseProfileUrl": "/profile/horse/4662611/fingle-bridge/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Moon Phases",
+            "horseProfileUrl": "/profile/horse/5398596/moon-phases/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-05/889470",
+        "horses": [
+          {
+            "horseName": "Heltenham",
+            "horseProfileUrl": "/profile/horse/3960806/heltenham/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Doctor Ken",
+            "horseProfileUrl": "/profile/horse/3294851/doctor-ken/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Myretown",
+            "horseProfileUrl": "/profile/horse/4031502/myretown/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Peaky Boy",
+            "horseProfileUrl": "/profile/horse/4159567/peaky-boy/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-05/889468",
+        "horses": [
+          {
+            "horseName": "Teahupoo",
+            "horseProfileUrl": "/profile/horse/3261340/teahupoo/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Dashel Drasher",
+            "horseProfileUrl": "/profile/horse/1765122/dashel-drasher/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-05/889473",
+        "horses": [
+          {
+            "horseName": "Blofeld",
+            "horseProfileUrl": "/profile/horse/6609337/blofeld/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Our Boy Stan",
+            "horseProfileUrl": "/profile/horse/6928469/our-boy-stan/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "El Cairos",
+            "horseProfileUrl": "/profile/horse/5840006/el-cairos/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Camberwell",
+            "horseProfileUrl": "/profile/horse/5784860/camberwell/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Edward Sexton",
+            "horseProfileUrl": "/profile/horse/6692995/edward-sexton/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Bellewstown",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#bellewstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/176/bellewstown/2025-04-05",
+    "going": "GOOD (Selective watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/176/bellewstown/2025-04-05/892146",
+        "horses": [
+          {
+            "horseName": "Marianne North",
+            "horseProfileUrl": "/profile/horse/5746539/marianne-north/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/176/bellewstown/2025-04-05/892147",
+        "horses": [
+          {
+            "horseName": "Higher Kingdom",
+            "horseProfileUrl": "/profile/horse/2645439/higher-kingdom/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:55",
+        "raceCardUrl": "/racecards/176/bellewstown/2025-04-05/892148",
+        "horses": [
+          {
+            "horseName": "My Girl Sioux",
+            "horseProfileUrl": "/profile/horse/4550202/my-girl-sioux/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:55",
+        "raceCardUrl": "/racecards/176/bellewstown/2025-04-05/892150",
+        "horses": [
+          {
+            "horseName": "Rauzan",
+            "horseProfileUrl": "/profile/horse/4642853/rauzan/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-04-05",
+    "going": "GOOD (GoingStick: Chase 6.3, Hurdle 6.0) (Watering) (Rail Movements: 12.40, 1.10, 1.40, 3.32 & 4.38 +45yds and 2.15 & 2.50 +66yds)",
+    "weather": "Brightsunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/12/chepstow/2025-04-05/889476",
+        "horses": [
+          {
+            "horseName": "Jack Sparrow Grey",
+            "horseProfileUrl": "/profile/horse/5426864/jack-sparrow-grey/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#newcastle",
+    "raceCardsCourseMeetingsUrl": "/racecards/37/newcastle/2025-04-05",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.4) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-04-05",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-05/889618",
+        "horses": [
+          {
+            "horseName": "Whiteley Way",
+            "horseProfileUrl": "/profile/horse/5104257/whiteley-way/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Claxton Bay",
+            "horseProfileUrl": "/profile/horse/4924653/claxton-bay/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:45",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-05/889616",
+        "horses": [
+          {
+            "horseName": "Raneenn",
+            "horseProfileUrl": "/profile/horse/6265748/raneenn/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-04-05",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.1) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "Straight - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-04-05/889323",
+        "horses": [
+          {
+            "horseName": "Artificer",
+            "horseProfileUrl": "/profile/horse/5806752/artificer/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-04-05/889322",
+        "horses": [
+          {
+            "horseName": "Lady Ridgewood",
+            "horseProfileUrl": "/profile/horse/6509777/lady-ridgewood/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:35",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-04-05/889324",
+        "horses": [
+          {
+            "horseName": "Grovely Belle",
+            "horseProfileUrl": "/profile/horse/6296581/grovely-belle/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Perianth",
+            "horseProfileUrl": "/profile/horse/5089375/perianth/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:05",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-04-05/889325",
+        "horses": [
+          {
+            "horseName": "Kitty's Dream",
+            "horseProfileUrl": "/profile/horse/5598646/kittys-dream/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ascot (Aus)",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#ascot-aus",
+    "raceCardsCourseMeetingsUrl": "/racecards/518/ascot-aus/2025-04-05",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Caulfield",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#caulfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/469/caulfield/2025-04-05",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/469/caulfield/2025-04-05/892394",
+        "horses": [
+          {
+            "horseName": "Virtuous Circle",
+            "horseProfileUrl": "/profile/horse/4157767/virtuous-circle/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Normandy Bridge",
+            "horseProfileUrl": "/profile/horse/3205701/normandy-bridge/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:55",
+        "raceCardUrl": "/racecards/469/caulfield/2025-04-05/892219",
+        "horses": [
+          {
+            "horseName": "Regal Zeus",
+            "horseProfileUrl": "/profile/horse/4851574/regal-zeus/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Jennilala",
+            "horseProfileUrl": "/profile/horse/4918237/jennilala/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hanshin",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#hanshin",
+    "raceCardsCourseMeetingsUrl": "/racecards/491/hanshin/2025-04-05",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Meydan",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#meydan",
+    "raceCardsCourseMeetingsUrl": "/racecards/1231/meydan/2025-04-05",
+    "going": "TURF: GOOD; DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/1231/meydan/2025-04-05/892065",
+        "horses": [
+          {
+            "horseName": "Meshtri",
+            "horseProfileUrl": "/profile/horse/5412858/meshtri/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Cagliostro",
+            "horseProfileUrl": "/profile/horse/4554324/cagliostro/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/1231/meydan/2025-04-05/892068",
+        "horses": [
+          {
+            "horseName": "Jasper Krone",
+            "horseProfileUrl": "/profile/horse/3879087/jasper-krone/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Royal Commando",
+            "horseProfileUrl": "/profile/horse/2537460/royal-commando/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Meydan (UAE)",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#meydan-uae",
+    "raceCardsCourseMeetingsUrl": "/racecards/1390/meydan-uae/2025-04-05",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:35",
+        "raceCardUrl": "/racecards/1390/meydan-uae/2025-04-05/892087",
+        "horses": [
+          {
+            "horseName": "Asfan Al Khalediah (Ksa)",
+            "horseProfileUrl": "/profile/horse/5686894/asfan-al-khalediah-ksa/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Moulins",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#moulins",
+    "raceCardsCourseMeetingsUrl": "/racecards/754/moulins/2025-04-05",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Nakayama",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#nakayama",
+    "raceCardsCourseMeetingsUrl": "/racecards/514/nakayama/2025-04-05",
+    "going": "DIRT: STANDARD; TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:45",
+        "raceCardUrl": "/racecards/514/nakayama/2025-04-05/892343",
+        "horses": [
+          {
+            "horseName": "Ecoro Bloom",
+            "horseProfileUrl": "/profile/horse/5432932/ecoro-bloom/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Randwick",
+    "raceCardsCourseUrl": "/racecards/2025-04-05#randwick",
+    "raceCardsCourseMeetingsUrl": "/racecards/471/randwick/2025-04-05",
+    "going": "TURF: GOOD TO SOFT changing to GOOD after Race 5 (4.45)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/471/randwick/2025-04-05/892220",
+        "horses": [
+          {
+            "horseName": "Aleppo Pine",
+            "horseProfileUrl": "/profile/horse/6833946/aleppo-pine/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Thalestris",
+            "horseProfileUrl": "/profile/horse/7324691/thalestris/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Fortissimo",
+            "horseProfileUrl": "/profile/horse/7374106/fortissimo/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Sylph",
+            "horseProfileUrl": "/profile/horse/7374104/sylph/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/471/randwick/2025-04-05/892393",
+        "horses": [
+          {
+            "horseName": "Kalkallo",
+            "horseProfileUrl": "/profile/horse/6291908/kalkallo/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Pleasure Artist",
+            "horseProfileUrl": "/profile/horse/6640534/pleasure-artist/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:35",
+        "raceCardUrl": "/racecards/471/randwick/2025-04-05/892225",
+        "horses": [
+          {
+            "horseName": "Sandpaper",
+            "horseProfileUrl": "/profile/horse/4102908/sandpaper/",
+            "raceNumber": "(23)"
+          },
+          {
+            "horseName": "Ducasse",
+            "horseProfileUrl": "/profile/horse/5034890/ducasse/",
+            "raceNumber": "(24)"
+          },
+          {
+            "horseName": "Celestial Legend",
+            "horseProfileUrl": "/profile/horse/5043800/celestial-legend/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Swiftfalcon",
+            "horseProfileUrl": "/profile/horse/5864819/swiftfalcon/",
+            "raceNumber": "(22)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/471/randwick/2025-04-05/892226",
+        "horses": [
+          {
+            "horseName": "Format",
+            "horseProfileUrl": "/profile/horse/5942526/format/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Black Babylon",
+            "horseProfileUrl": "/profile/horse/7365332/black-babylon/",
+            "raceNumber": "(23)"
+          },
+          {
+            "horseName": "Red Aces",
+            "horseProfileUrl": "/profile/horse/6424898/red-aces/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Deal N' Dash",
+            "horseProfileUrl": "/profile/horse/7338984/deal-n-dash/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "So You Are",
+            "horseProfileUrl": "/profile/horse/7374107/so-you-are/",
+            "raceNumber": "(22)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:50",
+        "raceCardUrl": "/racecards/471/randwick/2025-04-05/892221",
+        "horses": [
+          {
+            "horseName": "Useapin",
+            "horseProfileUrl": "/profile/horse/5778990/useapin/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Satin Stiletto",
+            "horseProfileUrl": "/profile/horse/5490571/satin-stiletto/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Durova",
+            "horseProfileUrl": "/profile/horse/5784943/durova/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  }
+]

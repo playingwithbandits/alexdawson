@@ -1,0 +1,35 @@
+{
+  "date": "2025-04-05",
+  "tips": [
+    {
+      "horseName": "Galaxy Zoo",
+      "time": "16:45",
+      "rating": 71.2
+    },
+    {
+      "horseName": "Act Of Authority",
+      "time": "13:20",
+      "rating": 70
+    },
+    {
+      "horseName": "Imperial Saint",
+      "time": "14:30",
+      "rating": 73.5
+    },
+    {
+      "horseName": "Teahupoo (FR)",
+      "time": "15:05",
+      "rating": 78.7
+    },
+    {
+      "horseName": "Iroko",
+      "time": "16:00",
+      "rating": 66.7
+    },
+    {
+      "horseName": "LEau Du Sud",
+      "time": "17:00",
+      "rating": 86.1
+    }
+  ]
+}

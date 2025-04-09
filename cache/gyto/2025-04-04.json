@@ -1,0 +1,205 @@
+{
+  "date": "2025-04-04",
+  "tips": [
+    {
+      "time": "13:30",
+      "horse": "Valor Spirit",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Exactly Right",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Shelbourne",
+      "isNap": false
+    },
+    {
+      "time": "15:17",
+      "horse": "Midnight'S Dream",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Gemini Star",
+      "isNap": false
+    },
+    {
+      "time": "16:27",
+      "horse": "Zayina",
+      "isNap": false
+    },
+    {
+      "time": "17:02",
+      "horse": "Above",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Handstands",
+      "isNap": true
+    },
+    {
+      "time": "14:20",
+      "horse": "Impose Toi",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Romeo Coolio",
+      "isNap": true
+    },
+    {
+      "time": "15:30",
+      "horse": "Jonbon",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Bad",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Celtic Dino",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Mamdoh",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Canyouhearthedrums",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Tourist",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Royal Accord",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "King Of Speed",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Starfighter",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Kish Bank",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Full Of Life",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Ira Hayes",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Westport Cove",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Sea Music",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Dont Go Yet",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Siberian Star",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Cast Party",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Niminy Piminy",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Bust A Moon",
+      "isNap": false
+    },
+    {
+      "time": "18:55",
+      "horse": "Las Ramblas",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Gibside",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Combustion",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Port Hedland",
+      "isNap": false
+    },
+    {
+      "time": "17:07",
+      "horse": "Collective Power",
+      "isNap": false
+    },
+    {
+      "time": "17:42",
+      "horse": "Movin And Groovin",
+      "isNap": false
+    },
+    {
+      "time": "18:12",
+      "horse": "Rattletheonionbag",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "First Wave",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Camachero",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Umala",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Dromore Glory",
+      "isNap": false
+    }
+  ]
+}

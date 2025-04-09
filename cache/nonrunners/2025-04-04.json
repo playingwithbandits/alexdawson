@@ -3,10 +3,32 @@
     "courseName": "Aintree",
     "raceCardsCourseUrl": "/racecards/2025-04-04#aintree",
     "raceCardsCourseMeetingsUrl": "/racecards/32/aintree/2025-04-04",
-    "going": "GOOD TO SOFT, Good in places on Mildmay course (GoingStick: Mildmay Hurdle 5.1, Mildmay Chase 5.4, Grand National course 5.5) (Watering) (Rail movements: 1.45 & 4.40 +41yds, 2.20 +37yds, 2.55, 3.30 & 5.15 +29yds and 4.05 +15yds)",
+    "going": "GOOD TO SOFT, Good in places on Mildmay course (GoingStick: Mildmay Chase 5.5, Mildmay Hurdle 5.3, Grand National course 5.3) (Watered) (Rail movements: 1.45 & 4.40 +41yds, 2.20 +37yds, 2.55, 3.30 & 5.15 +29yds and 4.05 +15yds)",
     "weather": "Mostly sunny",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-04/889466",
+        "horses": [
+          {
+            "horseName": "Brentford Hope",
+            "horseProfileUrl": "/profile/horse/2868204/brentford-hope/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:55",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-04/889465",
+        "horses": [
+          {
+            "horseName": "Blues Singer",
+            "horseProfileUrl": "/profile/horse/5740913/blues-singer/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
       {
         "raceTime": "4:40",
         "raceCardUrl": "/racecards/32/aintree/2025-04-04/889464",
@@ -17,6 +39,22 @@
             "raceNumber": "(6)"
           }
         ]
+      },
+      {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/32/aintree/2025-04-04/889467",
+        "horses": [
+          {
+            "horseName": "Lario",
+            "horseProfileUrl": "/profile/horse/4642733/lario/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Lump Sum",
+            "horseProfileUrl": "/profile/horse/4638954/lump-sum/",
+            "raceNumber": "(1)"
+          }
+        ]
       }
     ]
   },
@@ -24,10 +62,27 @@
     "courseName": "Bath",
     "raceCardsCourseUrl": "/racecards/2025-04-04#bath",
     "raceCardsCourseMeetingsUrl": "/racecards/5/bath/2025-04-04",
-    "going": "GOOD TO FIRM, Good in places (GoingStick 7.8) (Rail movements: 1.55, 4.15, 4.50 & 5.25 +11yds)",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.8) (Rail movements: 1.55, 4.15, 4.50 & 5.25 +11yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "Sprints - Centre; 1m & 1m6f - Inside; 1m3f - Outside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/5/bath/2025-04-04/889307",
+        "horses": [
+          {
+            "horseName": "Johnjay",
+            "horseProfileUrl": "/profile/horse/4686970/johnjay/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Alyara",
+            "horseProfileUrl": "/profile/horse/3521645/alyara/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Dundalk (AW)",
@@ -36,16 +91,39 @@
     "going": "POLYTRACK: STANDARD",
     "weather": "Partly cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "7:45",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-04-04/892085",
+        "horses": [
+          {
+            "horseName": "Jerpoint Abbey",
+            "horseProfileUrl": "/profile/horse/6528839/jerpoint-abbey/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Leicester",
     "raceCardsCourseUrl": "/racecards/2025-04-04#leicester",
     "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-04-04",
-    "going": "GOOD, Good to firm in places (GoingStick 7.3) (Selective watering) (Rail movements: 3.17 & 4.27 +15yds)",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.2) (Watered) (Rail movements: 3.17 & 4.27 +15yds)",
     "weather": "Mostly sunny",
     "stallsPosition": "Straight - Stands' side; Round - Inside",
     "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/30/leicester/2025-04-04/889317",
+        "horses": [
+          {
+            "horseName": "Regal Guest",
+            "horseProfileUrl": "/profile/horse/6323500/regal-guest/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
       {
         "raceTime": "2:40",
         "raceCardUrl": "/racecards/30/leicester/2025-04-04/889314",
@@ -66,15 +144,141 @@
     "going": "TAPETA: STANDARD",
     "weather": "Clear",
     "stallsPosition": "5f - Centre; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-04/889613",
+        "horses": [
+          {
+            "horseName": "Stellenbosch",
+            "horseProfileUrl": "/profile/horse/6005910/stellenbosch/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Halcyonic",
+            "horseProfileUrl": "/profile/horse/7355939/halcyonic/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:50",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-04/889611",
+        "horses": [
+          {
+            "horseName": "Little Boy Blue",
+            "horseProfileUrl": "/profile/horse/1550181/little-boy-blue/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:20",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-04/889615",
+        "horses": [
+          {
+            "horseName": "Miss Campanella",
+            "horseProfileUrl": "/profile/horse/5968915/miss-campanella/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-04/889612",
+        "horses": [
+          {
+            "horseName": "Devilwala",
+            "horseProfileUrl": "/profile/horse/3161580/devilwala/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-04/892263",
+        "horses": [
+          {
+            "horseName": "Royal Jet",
+            "horseProfileUrl": "/profile/horse/4438481/royal-jet/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Wexford",
     "raceCardsCourseUrl": "/racecards/2025-04-04#wexford",
     "raceCardsCourseMeetingsUrl": "/racecards/201/wexford/2025-04-04",
-    "going": "GOOD TO YIELDING (Watering)",
+    "going": "YIELDING (Watering)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/201/wexford/2025-04-04/892075",
+        "horses": [
+          {
+            "horseName": "Music Of Life",
+            "horseProfileUrl": "/profile/horse/5793406/music-of-life/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Misty Milan",
+            "horseProfileUrl": "/profile/horse/5428895/misty-milan/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Menas Miracle",
+            "horseProfileUrl": "/profile/horse/6763620/menas-miracle/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/201/wexford/2025-04-04/892076",
+        "horses": [
+          {
+            "horseName": "Now So Jake",
+            "horseProfileUrl": "/profile/horse/4622429/now-so-jake/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/201/wexford/2025-04-04/892077",
+        "horses": [
+          {
+            "horseName": "Maidenstreetprince",
+            "horseProfileUrl": "/profile/horse/3908430/maidenstreetprince/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/201/wexford/2025-04-04/892080",
+        "horses": [
+          {
+            "horseName": "Katzoff",
+            "horseProfileUrl": "/profile/horse/2537445/katzoff/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Get It Right",
+            "horseProfileUrl": "/profile/horse/4275951/get-it-right/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Better Than Heaven",
+            "horseProfileUrl": "/profile/horse/3046840/better-than-heaven/",
+            "raceNumber": "(17)"
+          }
+        ]
+      }
+    ]
   }
 ]

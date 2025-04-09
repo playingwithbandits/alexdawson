@@ -1,0 +1,130 @@
+{
+  "date": "2025-04-08",
+  "tips": [
+    {
+      "time": "14:02",
+      "horse": "Strong Warrior",
+      "isNap": false
+    },
+    {
+      "time": "14:32",
+      "horse": "Letmeseethecolts",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Glory And Honour",
+      "isNap": false
+    },
+    {
+      "time": "16:07",
+      "horse": "Dark Cloud Rising",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "Mrs Trump",
+      "isNap": false
+    },
+    {
+      "time": "17:12",
+      "horse": "Partisan Hero",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Stanhope",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Mississippi River",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Poetic Sound",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Billie Frechette",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Nobler",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Heliogabalus",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "All Right By Me",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Double Digits",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "New Invention",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Finn Lough",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Imperial Jade",
+      "isNap": true
+    },
+    {
+      "time": "16:25",
+      "horse": "Looking Splendid",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Rob Roy Macgregor",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "I Can Boogy",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Alondra",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Party Bear",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Nazuki",
+      "isNap": true
+    },
+    {
+      "time": "20:00",
+      "horse": "Copper Mountain",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Platinum Crystal",
+      "isNap": false
+    }
+  ]
+}

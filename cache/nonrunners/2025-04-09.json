@@ -1,0 +1,103 @@
+[
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-04-09#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-04-09",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.9) (Watered)",
+    "weather": "Cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-09#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-04-09",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Clear",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-04-09/890638",
+        "horses": [
+          {
+            "horseName": "True Colors",
+            "horseProfileUrl": "/profile/horse/7276579/true-colors/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:40",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-04-09/890637",
+        "horses": [
+          {
+            "horseName": "Tadreeb",
+            "horseProfileUrl": "/profile/horse/3092794/tadreeb/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-04-09#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-04-09",
+    "going": "GOOD TO FIRM, Good in places (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:48",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-04-09/892310",
+        "horses": [
+          {
+            "horseName": "The Real Screamer",
+            "horseProfileUrl": "/profile/horse/5933571/the-real-screamer/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-04-09#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-04-09",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.1) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "(Outer track) 5f, 6f & 1m - Centre; 1m2f & 1m6f - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Taunton",
+    "raceCardsCourseUrl": "/racecards/2025-04-09#taunton",
+    "raceCardsCourseMeetingsUrl": "/racecards/73/taunton/2025-04-09",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.9) (Watering) (Rail movements: 2.25, 2.55, 3.25, 4.25 & 5.30 -12yds, 3.55 +132yds and 5.00 +108yds)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/73/taunton/2025-04-09/890455",
+        "horses": [
+          {
+            "horseName": "Mofasa",
+            "horseProfileUrl": "/profile/horse/3877104/mofasa/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-04-09#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-04-09",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "date": "2025-04-09",
+  "tips": [
+    {
+      "horseName": "Basman Palace",
+      "time": "14:25",
+      "rating": 85
+    },
+    {
+      "horseName": "Phoenix Risen",
+      "time": "15:25",
+      "rating": 78.3
+    },
+    {
+      "horseName": "Anytrixwilldo",
+      "time": "15:55",
+      "rating": 79.3
+    },
+    {
+      "horseName": "Tiny Tetley",
+      "time": "16:25",
+      "rating": 79
+    },
+    {
+      "horseName": "Bumpy Evans",
+      "time": "16:58",
+      "rating": 86
+    }
+  ]
+}

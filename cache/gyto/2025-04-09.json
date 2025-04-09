@@ -1,0 +1,175 @@
+{
+  "date": "2025-04-09",
+  "tips": [
+    {
+      "time": "13:48",
+      "horse": "Butterfly Wings",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Stay True",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Migdam",
+      "isNap": false
+    },
+    {
+      "time": "15:18",
+      "horse": "No Such Thing",
+      "isNap": false
+    },
+    {
+      "time": "15:48",
+      "horse": "Mutasarref",
+      "isNap": false
+    },
+    {
+      "time": "16:18",
+      "horse": "Comfort Line",
+      "isNap": false
+    },
+    {
+      "time": "16:53",
+      "horse": "Hastily",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Higher Kingdom",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Storm Free",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Looking For Lynda",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Munsif",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "It'S Only Fun",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Align The Stars",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "War Hawk",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Fat Gladiator",
+      "isNap": false
+    },
+    {
+      "time": "14:13",
+      "horse": "Stroxx",
+      "isNap": false
+    },
+    {
+      "time": "14:43",
+      "horse": "Until Dawn",
+      "isNap": false
+    },
+    {
+      "time": "15:13",
+      "horse": "Flying Scotsman",
+      "isNap": false
+    },
+    {
+      "time": "15:43",
+      "horse": "Tawasol",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Kisskodi",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Mister Sox",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Basman Palace",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Nardaran",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Taritino",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Spotty Dog",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Tiny Tetley",
+      "isNap": false
+    },
+    {
+      "time": "16:58",
+      "horse": "Unspeakable",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Big Boy Barney",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Viamarie",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Life Is Beautiful",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Cosmic Year",
+      "isNap": true
+    },
+    {
+      "time": "19:10",
+      "horse": "Bermuda Princess",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Adversary",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "West Wickham",
+      "isNap": false
+    }
+  ]
+}

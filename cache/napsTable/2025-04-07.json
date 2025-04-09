@@ -1,0 +1,299 @@
+{
+  "date": "2025-04-07",
+  "tips": [
+    {
+      "time": "15:27",
+      "horse": "Mr King",
+      "tipster": "Melissa Jones",
+      "score": "13.8"
+    },
+    {
+      "time": "20:30",
+      "horse": "Egoiste",
+      "tipster": "Jason Heavey",
+      "score": "12.7"
+    },
+    {
+      "time": "15:45",
+      "horse": "Tread Softly Now",
+      "tipster": "RP Ratings",
+      "score": "12.6"
+    },
+    {
+      "time": "19:00",
+      "horse": "Chifa",
+      "tipster": "Newsboy",
+      "score": "11.6"
+    },
+    {
+      "time": "16:27",
+      "horse": "Highwaygrey",
+      "tipster": "Rory Paddock",
+      "score": "9.0"
+    },
+    {
+      "time": "19:00",
+      "horse": "Al Ameen",
+      "tipster": "Rob Wright",
+      "score": "8.3"
+    },
+    {
+      "time": "15:27",
+      "horse": "Cruyff Turn",
+      "tipster": "Steve Mullington",
+      "score": "6.2"
+    },
+    {
+      "time": "20:30",
+      "horse": "Nowhere",
+      "tipster": "Karl Hedley",
+      "score": "5.8"
+    },
+    {
+      "time": "15:05",
+      "horse": "Angle Land",
+      "tipster": "Chris Connolly",
+      "score": "4.3"
+    },
+    {
+      "time": "15:05",
+      "horse": "Gustav Graves",
+      "tipster": "Farringdon",
+      "score": "3.6"
+    },
+    {
+      "time": "15:27",
+      "horse": "Barefoot Warrior",
+      "tipster": "The North",
+      "score": "1.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Atlantic Gamble",
+      "tipster": "Andrew Mount",
+      "score": "-4.0"
+    },
+    {
+      "time": "15:15",
+      "horse": "Prince Des Fichaux",
+      "tipster": "The Punt",
+      "score": "-4.5"
+    },
+    {
+      "time": "14:15",
+      "horse": "High Dancer",
+      "tipster": "Glendale",
+      "score": "-5.2"
+    },
+    {
+      "time": "17:00",
+      "horse": "Hawkesbury Legend",
+      "tipster": "Luke Tucker",
+      "score": "-5.8"
+    },
+    {
+      "time": "16:05",
+      "horse": "Charlatan",
+      "tipster": "Matt Polley",
+      "score": "-5.8"
+    },
+    {
+      "time": "19:30",
+      "horse": "Carbine Harvester",
+      "tipster": "Lee Sobot",
+      "score": "-6.7"
+    },
+    {
+      "time": "14:57",
+      "horse": "Pallas Lord",
+      "tipster": "Robin Goodfellow",
+      "score": "-9.9"
+    },
+    {
+      "time": "14:57",
+      "horse": "Roaring Ralph",
+      "tipster": "Jim Delahunt",
+      "score": "-10.8"
+    },
+    {
+      "time": "14:57",
+      "horse": "Stratocracy",
+      "tipster": "Ian Gaughran",
+      "score": "-14.2"
+    },
+    {
+      "time": "13:45",
+      "horse": "Good To Be Alive",
+      "tipster": "Sam Hardy",
+      "score": "-12.6"
+    },
+    {
+      "time": "17:35",
+      "horse": "The Pug",
+      "tipster": "West Country",
+      "score": "-14.0"
+    },
+    {
+      "time": "19:00",
+      "horse": "Al Ameen",
+      "tipster": "Whistler",
+      "score": "-14.0"
+    },
+    {
+      "time": "15:27",
+      "horse": "Barefoot Warrior",
+      "tipster": "Marlborough",
+      "score": "-13.2"
+    },
+    {
+      "time": "16:35",
+      "horse": "Forest Spirit",
+      "tipster": "The Brigadier",
+      "score": "-14.9"
+    },
+    {
+      "time": "14:45",
+      "horse": "Andys Flame",
+      "tipster": "The Score",
+      "score": "-15.0"
+    },
+    {
+      "time": "14:15",
+      "horse": "High Dancer",
+      "tipster": "Garry Owen",
+      "score": "-15.8"
+    },
+    {
+      "time": "15:15",
+      "horse": "Cadell",
+      "tipster": "Dean Kilbryde",
+      "score": "-16.9"
+    },
+    {
+      "time": "14:57",
+      "horse": "Pallas Lord",
+      "tipster": "Rory Delargy",
+      "score": "-21.6"
+    },
+    {
+      "time": "15:27",
+      "horse": "Great Blasket",
+      "tipster": "Ben Morgan",
+      "score": "-23.2"
+    },
+    {
+      "time": "19:30",
+      "horse": "Carbine Harvester",
+      "tipster": "Postdata",
+      "score": "-23.6"
+    },
+    {
+      "time": "14:35",
+      "horse": "Manara",
+      "tipster": "Rockavon",
+      "score": "-24.1"
+    },
+    {
+      "time": "15:57",
+      "horse": "Convergent",
+      "tipster": "Mercury",
+      "score": "-24.8"
+    },
+    {
+      "time": "16:35",
+      "horse": "Forest Spirit",
+      "tipster": "Spotlight",
+      "score": "-23.1"
+    },
+    {
+      "time": "16:53",
+      "horse": "Trad Jazz",
+      "tipster": "Computeform",
+      "score": "-26.8"
+    },
+    {
+      "time": "15:27",
+      "horse": "Mr King",
+      "tipster": "Ross Shepherd",
+      "score": "-27.0"
+    },
+    {
+      "time": "16:45",
+      "horse": "Lester Mail",
+      "tipster": "Jeffrey Ross",
+      "score": "-27.1"
+    },
+    {
+      "time": "17:25",
+      "horse": "Dixieland Blues",
+      "tipster": "The Duke",
+      "score": "-29.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Hieronymus",
+      "tipster": "Templegate",
+      "score": "-31.4"
+    },
+    {
+      "time": "20:30",
+      "horse": "Egoiste",
+      "tipster": "The Judge",
+      "score": "-33.0"
+    },
+    {
+      "time": "15:15",
+      "horse": "Breakdance Kid",
+      "tipster": "On The Nose",
+      "score": "-33.3"
+    },
+    {
+      "time": "15:05",
+      "horse": "Jojo Rabbit",
+      "tipster": "Jon Freeman",
+      "score": "-35.3"
+    },
+    {
+      "time": "15:05",
+      "horse": "Jojo Rabbit",
+      "tipster": "Chris Wright",
+      "score": "-39.5"
+    },
+    {
+      "time": "15:15",
+      "horse": "Music Of Tara",
+      "tipster": "Brian Flanagan",
+      "score": "-39.6"
+    },
+    {
+      "time": "15:27",
+      "horse": "Mr King",
+      "tipster": "Moorestyle",
+      "score": "-42.2"
+    },
+    {
+      "time": "15:27",
+      "horse": "Barefoot Warrior",
+      "tipster": "Tipman Tips",
+      "score": "-42.2"
+    },
+    {
+      "time": "15:35",
+      "horse": "Excellent Believe",
+      "tipster": "Fortunatus",
+      "score": "-47.5"
+    },
+    {
+      "time": "18:00",
+      "horse": "Mister Rizz",
+      "tipster": "Lambourn",
+      "score": "-49.4"
+    },
+    {
+      "time": "14:15",
+      "horse": "High Dancer",
+      "tipster": "Adrian Wall",
+      "score": "-51.2"
+    }
+  ]
+}

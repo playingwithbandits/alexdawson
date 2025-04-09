@@ -1,0 +1,40 @@
+{
+  "date": "2025-04-04",
+  "tips": [
+    {
+      "horseName": "Handstands",
+      "time": "13:45",
+      "rating": 79.7
+    },
+    {
+      "horseName": "Be Aware",
+      "time": "14:20",
+      "rating": 72.9
+    },
+    {
+      "horseName": "Romeo Coolio",
+      "time": "14:55",
+      "rating": 82.9
+    },
+    {
+      "horseName": "Jonbon (FR)",
+      "time": "15:30",
+      "rating": 78.9
+    },
+    {
+      "horseName": "Blue Lord (FR)",
+      "time": "16:05",
+      "rating": 68.5
+    },
+    {
+      "horseName": "Califet En Vol",
+      "time": "16:40",
+      "rating": 73.7
+    },
+    {
+      "horseName": "Jack Hyde",
+      "time": "17:15",
+      "rating": 66.5
+    }
+  ]
+}

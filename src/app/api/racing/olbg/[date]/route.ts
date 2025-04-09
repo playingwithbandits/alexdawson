@@ -263,12 +263,12 @@ export async function GET(
     const cachedData = await fs.readFile(cacheFile, "utf-8");
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
-    if (date > today) {
-      return NextResponse.json({
-        date,
-        tips: [],
-      });
-    }
+    // if (date > today) {
+    //   return NextResponse.json({
+    //     date,
+    //     tips: [],
+    //   });
+    // }
 
     // Check if it's today but before 10:30am
     // if (date === today && now < cutoffTime) {

@@ -1,0 +1,131 @@
+[
+  {
+    "courseName": "Kelso",
+    "raceCardsCourseUrl": "/racecards/2025-04-07#kelso",
+    "raceCardsCourseMeetingsUrl": "/racecards/27/kelso/2025-04-07",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.5) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/27/kelso/2025-04-07/890443",
+        "horses": [
+          {
+            "horseName": "Sam's Choice",
+            "horseProfileUrl": "/profile/horse/3087854/sams-choice/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/27/kelso/2025-04-07/890444",
+        "horses": [
+          {
+            "horseName": "Blame Rose",
+            "horseProfileUrl": "/profile/horse/4116014/blame-rose/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Lexie's Moon",
+            "horseProfileUrl": "/profile/horse/4853579/lexies-moon/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-07#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-04-07",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Sunny",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-04-07/890618",
+        "horses": [
+          {
+            "horseName": "Maui Breeze",
+            "horseProfileUrl": "/profile/horse/58956189/maui-breeze/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Redcar",
+    "raceCardsCourseUrl": "/racecards/2025-04-07#redcar",
+    "raceCardsCourseMeetingsUrl": "/racecards/47/redcar/2025-04-07",
+    "going": "GOOD",
+    "weather": "Sunny",
+    "stallsPosition": "Straight course - Stands' side; Round course - Inside",
+    "races": [
+      {
+        "raceTime": "2:27",
+        "raceCardUrl": "/racecards/47/redcar/2025-04-07/890311",
+        "horses": [
+          {
+            "horseName": "Treble Winners",
+            "horseProfileUrl": "/profile/horse/6079180/treble-winners/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/47/redcar/2025-04-07/890310",
+        "horses": [
+          {
+            "horseName": "Hawkesbury Legend",
+            "horseProfileUrl": "/profile/horse/6807891/hawkesbury-legend/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-07#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-04-07",
+    "going": "TAPETA: STANDARD",
+    "weather": "Sunny",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-07/890629",
+        "horses": [
+          {
+            "horseName": "Till It Shines",
+            "horseProfileUrl": "/profile/horse/5861969/till-it-shines/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Keeneland",
+    "raceCardsCourseUrl": "/racecards/2025-04-07#keeneland",
+    "raceCardsCourseMeetingsUrl": "/racecards/301/keeneland/2025-04-07",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW) (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-04-07#wolverhampton-aw-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1330/wolverhampton-aw-gb/2025-04-07",
+    "going": "TAPETA: STANDARD",
+    "weather": "Sunny",
+    "stallsPosition": "Inside",
+    "races": []
+  }
+]

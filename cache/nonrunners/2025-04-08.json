@@ -1,0 +1,114 @@
+[
+  {
+    "courseName": "Carlisle",
+    "raceCardsCourseUrl": "/racecards/2025-04-08#carlisle",
+    "raceCardsCourseMeetingsUrl": "/racecards/8/carlisle/2025-04-08",
+    "going": "GOOD (GoingStick: Chase 6.7, Hurdle 6.5) (Watering) (Inner Hurdle course)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/8/carlisle/2025-04-08/890453",
+        "horses": [
+          {
+            "horseName": "Keepkalmandkarryon",
+            "horseProfileUrl": "/profile/horse/5447340/keepkalmandkarryon/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/8/carlisle/2025-04-08/890450",
+        "horses": [
+          {
+            "horseName": "Gipsy Lee Rose",
+            "horseProfileUrl": "/profile/horse/1888990/gipsy-lee-rose/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Navan",
+    "raceCardsCourseUrl": "/racecards/2025-04-08#navan",
+    "raceCardsCourseMeetingsUrl": "/racecards/193/navan/2025-04-08",
+    "going": "GOOD, Good to firm in places (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/193/navan/2025-04-08/892327",
+        "horses": [
+          {
+            "horseName": "Jazz Forever",
+            "horseProfileUrl": "/profile/horse/4701426/jazz-forever/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-04-08#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-04-08",
+    "going": "GOOD (GoingStick: 7.7) (Watering) (Rail movements: 2.32, 3.02 & 5.12 +2yds)",
+    "weather": "Sunny",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "3:02",
+        "raceCardUrl": "/racecards/46/pontefract/2025-04-08/890314",
+        "horses": [
+          {
+            "horseName": "Golden Flame",
+            "horseProfileUrl": "/profile/horse/3096983/golden-flame/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:32",
+        "raceCardUrl": "/racecards/46/pontefract/2025-04-08/890312",
+        "horses": [
+          {
+            "horseName": "Alzahir",
+            "horseProfileUrl": "/profile/horse/4336823/alzahir/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-08#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-04-08",
+    "going": "TAPETA: STANDARD",
+    "weather": "Sunny",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Deauville",
+    "raceCardsCourseUrl": "/racecards/2025-04-08#deauville",
+    "raceCardsCourseMeetingsUrl": "/racecards/206/deauville/2025-04-08",
+    "going": "POLYTRACK: STANDARD; TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Keeneland",
+    "raceCardsCourseUrl": "/racecards/2025-04-08#keeneland",
+    "raceCardsCourseMeetingsUrl": "/racecards/301/keeneland/2025-04-08",
+    "going": "DIRT: MUDDY; TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
