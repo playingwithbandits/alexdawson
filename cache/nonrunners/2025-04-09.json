@@ -3,8 +3,8 @@
     "courseName": "Catterick",
     "raceCardsCourseUrl": "/racecards/2025-04-09#catterick",
     "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-04-09",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.9) (Watered)",
-    "weather": "Cloudy",
+    "going": "GOOD, Good to firm in places (Watered)",
+    "weather": "Sunny spells",
     "stallsPosition": "Inside",
     "races": []
   },
@@ -20,6 +20,11 @@
         "raceTime": "5:40",
         "raceCardUrl": "/racecards/1079/kempton-aw/2025-04-09/890638",
         "horses": [
+          {
+            "horseName": "Miss Chester",
+            "horseProfileUrl": "/profile/horse/7378595/miss-chester/",
+            "raceNumber": "(9)"
+          },
           {
             "horseName": "True Colors",
             "horseProfileUrl": "/profile/horse/7276579/true-colors/",
@@ -37,6 +42,28 @@
             "raceNumber": "(8)"
           }
         ]
+      },
+      {
+        "raceTime": "7:10",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-04-09/890639",
+        "horses": [
+          {
+            "horseName": "Kensington Agent",
+            "horseProfileUrl": "/profile/horse/3648390/kensington-agent/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-04-09/890642",
+        "horses": [
+          {
+            "horseName": "Rumba Bay",
+            "horseProfileUrl": "/profile/horse/58950405/rumba-bay/",
+            "raceNumber": "(5)"
+          }
+        ]
       }
     ]
   },
@@ -44,7 +71,7 @@
     "courseName": "Leopardstown",
     "raceCardsCourseUrl": "/racecards/2025-04-09#leopardstown",
     "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-04-09",
-    "going": "GOOD TO FIRM, Good in places (Watering)",
+    "going": "GOOD (Watered)",
     "weather": "Sunny",
     "stallsPosition": "",
     "races": [
@@ -53,9 +80,63 @@
         "raceCardUrl": "/racecards/187/leopardstown/2025-04-09/892310",
         "horses": [
           {
+            "horseName": "Rain",
+            "horseProfileUrl": "/profile/horse/4340199/rain/",
+            "raceNumber": "(18)"
+          },
+          {
             "horseName": "The Real Screamer",
             "horseProfileUrl": "/profile/horse/5933571/the-real-screamer/",
             "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Out On Friday",
+            "horseProfileUrl": "/profile/horse/2349890/out-on-friday/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:18",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-04-09/892311",
+        "horses": [
+          {
+            "horseName": "Jet Warrior",
+            "horseProfileUrl": "/profile/horse/7378568/jet-warrior/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:48",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-04-09/892312",
+        "horses": [
+          {
+            "horseName": "This Songisforyou",
+            "horseProfileUrl": "/profile/horse/4467750/this-songisforyou/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:53",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-04-09/892314",
+        "horses": [
+          {
+            "horseName": "Hastily",
+            "horseProfileUrl": "/profile/horse/3526616/hastily/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-04-09/892315",
+        "horses": [
+          {
+            "horseName": "Knockmore Prince",
+            "horseProfileUrl": "/profile/horse/4303531/knockmore-prince/",
+            "raceNumber": "(11)"
           }
         ]
       }
@@ -65,19 +146,58 @@
     "courseName": "Nottingham",
     "raceCardsCourseUrl": "/racecards/2025-04-09#nottingham",
     "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-04-09",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.1) (Watering)",
-    "weather": "Partly cloudy",
+    "going": "GOOD (Good to firm in places; watered; 7.0)",
+    "weather": "Sunny",
     "stallsPosition": "(Outer track) 5f, 6f & 1m - Centre; 1m2f & 1m6f - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/40/nottingham/2025-04-09/890330",
+        "horses": [
+          {
+            "horseName": "Special Acclaim",
+            "horseProfileUrl": "/profile/horse/7293768/special-acclaim/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/40/nottingham/2025-04-09/890329",
+        "horses": [
+          {
+            "horseName": "Fiery Dawn",
+            "horseProfileUrl": "/profile/horse/5705821/fiery-dawn/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Cameron Highlander",
+            "horseProfileUrl": "/profile/horse/7222365/cameron-highlander/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Taunton",
     "raceCardsCourseUrl": "/racecards/2025-04-09#taunton",
     "raceCardsCourseMeetingsUrl": "/racecards/73/taunton/2025-04-09",
-    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.9) (Watering) (Rail movements: 2.25, 2.55, 3.25, 4.25 & 5.30 -12yds, 3.55 +132yds and 5.00 +108yds)",
+    "going": "GOOD TO FIRM (Good in places; watered; 7.3)",
     "weather": "Sunny",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/73/taunton/2025-04-09/890459",
+        "horses": [
+          {
+            "horseName": "Orchestra",
+            "horseProfileUrl": "/profile/horse/4455661/orchestra/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
       {
         "raceTime": "4:25",
         "raceCardUrl": "/racecards/73/taunton/2025-04-09/890455",
@@ -88,6 +208,33 @@
             "raceNumber": "(2)"
           }
         ]
+      },
+      {
+        "raceTime": "4:58",
+        "raceCardUrl": "/racecards/73/taunton/2025-04-09/890457",
+        "horses": [
+          {
+            "horseName": "Bumpy Evans",
+            "horseProfileUrl": "/profile/horse/4540833/bumpy-evans/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/73/taunton/2025-04-09/890461",
+        "horses": [
+          {
+            "horseName": "Olivia's Secret",
+            "horseProfileUrl": "/profile/horse/6928464/olivias-secret/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Big Boy Barney",
+            "horseProfileUrl": "/profile/horse/5845777/big-boy-barney/",
+            "raceNumber": "(1)"
+          }
+        ]
       }
     ]
   },
@@ -95,9 +242,143 @@
     "courseName": "Happy Valley",
     "raceCardsCourseUrl": "/racecards/2025-04-09#happy-valley",
     "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-04-09",
-    "going": "TURF: GOOD",
+    "going": "TURF: GOOD changed to GOOD TO FIRM after Race 1 (11.40am)",
     "weather": "",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "11:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-09/892429",
+        "horses": [
+          {
+            "horseName": "Apolar Fighter",
+            "horseProfileUrl": "/profile/horse/5730978/apolar-fighter/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Tsuen Wan Glory",
+            "horseProfileUrl": "/profile/horse/4091065/tsuen-wan-glory/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-09/892430",
+        "horses": [
+          {
+            "horseName": "Solar River",
+            "horseProfileUrl": "/profile/horse/6042347/solar-river/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Glory B",
+            "horseProfileUrl": "/profile/horse/5509231/glory-b/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-09/892431",
+        "horses": [
+          {
+            "horseName": "All Are Mine",
+            "horseProfileUrl": "/profile/horse/4270001/all-are-mine/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Pegasus General",
+            "horseProfileUrl": "/profile/horse/3404011/pegasus-general/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-09/892432",
+        "horses": [
+          {
+            "horseName": "Robot Knight",
+            "horseProfileUrl": "/profile/horse/5608545/robot-knight/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "King Show",
+            "horseProfileUrl": "/profile/horse/6737353/king-show/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-09/892434",
+        "horses": [
+          {
+            "horseName": "Casa Rubick",
+            "horseProfileUrl": "/profile/horse/7395132/casa-rubick/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Yiu Cheung Victory",
+            "horseProfileUrl": "/profile/horse/7117346/yiu-cheung-victory/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-09/892435",
+        "horses": [
+          {
+            "horseName": "Night Purosangue",
+            "horseProfileUrl": "/profile/horse/6537145/night-purosangue/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Positive Smile",
+            "horseProfileUrl": "/profile/horse/5184144/positive-smile/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-09/892437",
+        "horses": [
+          {
+            "horseName": "Denfield",
+            "horseProfileUrl": "/profile/horse/4827256/denfield/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Regal Gem",
+            "horseProfileUrl": "/profile/horse/5845569/regal-gem/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nantes",
+    "raceCardsCourseUrl": "/racecards/2025-04-09#nantes",
+    "raceCardsCourseMeetingsUrl": "/racecards/279/nantes/2025-04-09",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:27",
+        "raceCardUrl": "/racecards/279/nantes/2025-04-09/893090",
+        "horses": [
+          {
+            "horseName": "Meteor Shower",
+            "horseProfileUrl": "/profile/horse/7160454/meteor-shower/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
   }
 ]
