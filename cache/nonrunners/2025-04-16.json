@@ -1,0 +1,222 @@
+[
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-04-16#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-04-16",
+    "going": "GOOD (GoingStick 7.1)",
+    "weather": "Showers",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/6/beverley/2025-04-16/890409",
+        "horses": [
+          {
+            "horseName": "Ours De Soleil",
+            "horseProfileUrl": "/profile/horse/7205065/ours-de-soleil/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Stardinia",
+            "horseProfileUrl": "/profile/horse/7409479/stardinia/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:32",
+        "raceCardUrl": "/racecards/6/beverley/2025-04-16/890405",
+        "horses": [
+          {
+            "horseName": "Encircle",
+            "horseProfileUrl": "/profile/horse/5598861/encircle/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:07",
+        "raceCardUrl": "/racecards/6/beverley/2025-04-16/890407",
+        "horses": [
+          {
+            "horseName": "Rose Of New Jersey",
+            "horseProfileUrl": "/profile/horse/5946991/rose-of-new-jersey/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cheltenham",
+    "raceCardsCourseUrl": "/racecards/2025-04-16#cheltenham",
+    "raceCardsCourseMeetingsUrl": "/racecards/11/cheltenham/2025-04-16",
+    "going": "New Course - GOOD (GoingStick 7.1) (Watering) (Rail movements: 1.30 & 2.05 +57yds, 3.50 +76yds and 5.00 +38yds)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:30",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-16/890559",
+        "horses": [
+          {
+            "horseName": "Groovy Blue",
+            "horseProfileUrl": "/profile/horse/5419090/groovy-blue/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-16/890555",
+        "horses": [
+          {
+            "horseName": "Grandads Cottage",
+            "horseProfileUrl": "/profile/horse/2523529/grandads-cottage/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-04-16#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-04-16",
+    "going": "SOFT (Watered) (Rail Movements: 4.37, 5.12 & 6.45 +41yds, 5.45 +55yds, 6.15 +62yds, 7.15 +83yds and 7.45 +28yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:37",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-16/893197",
+        "horses": [
+          {
+            "horseName": "Deep Purple",
+            "horseProfileUrl": "/profile/horse/5045996/deep-purple/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Drayton Flyer",
+            "horseProfileUrl": "/profile/horse/6907622/drayton-flyer/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-16/893200",
+        "horses": [
+          {
+            "horseName": "Queens Venture",
+            "horseProfileUrl": "/profile/horse/5689584/queens-venture/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-16/893202",
+        "horses": [
+          {
+            "horseName": "Doonbeg Don",
+            "horseProfileUrl": "/profile/horse/4737876/doonbeg-don/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "The Dream Goes On",
+            "horseProfileUrl": "/profile/horse/5398603/the-dream-goes-on/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-16/893198",
+        "horses": [
+          {
+            "horseName": "Getalead",
+            "horseProfileUrl": "/profile/horse/2928033/getalead/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "West To The Bridge",
+            "horseProfileUrl": "/profile/horse/1673070/west-to-the-bridge/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-16/893201",
+        "horses": [
+          {
+            "horseName": "Pennant Legacy",
+            "horseProfileUrl": "/profile/horse/5968905/pennant-legacy/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Gowran Park",
+    "raceCardsCourseUrl": "/racecards/2025-04-16#gowran-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/184/gowran-park/2025-04-16",
+    "going": "GOOD TO YIELDING, Good in places",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newmarket",
+    "raceCardsCourseUrl": "/racecards/2025-04-16#newmarket",
+    "raceCardsCourseMeetingsUrl": "/racecards/38/newmarket/2025-04-16",
+    "going": "GOOD TO SOFT (GoingStick 7.0)",
+    "weather": "Showers",
+    "stallsPosition": "(Far side course) Centre",
+    "races": [
+      {
+        "raceTime": "1:50",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-16/890392",
+        "horses": [
+          {
+            "horseName": "Diligently",
+            "horseProfileUrl": "/profile/horse/5870114/diligently/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "The Dragon King",
+            "horseProfileUrl": "/profile/horse/5764774/the-dragon-king/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Dark Cloud Rising",
+            "horseProfileUrl": "/profile/horse/5845556/dark-cloud-rising/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-16/890391",
+        "horses": [
+          {
+            "horseName": "Gorak",
+            "horseProfileUrl": "/profile/horse/3705604/gorak/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-04-16#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-04-16",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

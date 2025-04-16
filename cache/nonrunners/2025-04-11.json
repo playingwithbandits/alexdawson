@@ -1,0 +1,367 @@
+[
+  {
+    "courseName": "Ayr",
+    "raceCardsCourseUrl": "/racecards/2025-04-11#ayr",
+    "raceCardsCourseMeetingsUrl": "/racecards/3/ayr/2025-04-11",
+    "going": "GOOD TO SOFT (Watered; Chs 6.3; Hdl 5.9)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/3/ayr/2025-04-11/890498",
+        "horses": [
+          {
+            "horseName": "Theme Tune",
+            "horseProfileUrl": "/profile/horse/2984468/theme-tune/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/3/ayr/2025-04-11/890495",
+        "horses": [
+          {
+            "horseName": "Walk On Quest",
+            "horseProfileUrl": "/profile/horse/4922496/walk-on-quest/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/3/ayr/2025-04-11/890499",
+        "horses": [
+          {
+            "horseName": "From The Clouds",
+            "horseProfileUrl": "/profile/horse/4129114/from-the-clouds/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ballinrobe",
+    "raceCardsCourseUrl": "/racecards/2025-04-11#ballinrobe",
+    "raceCardsCourseMeetingsUrl": "/racecards/175/ballinrobe/2025-04-11",
+    "going": "GOOD (Good to yielding in places; watered)",
+    "weather": "Brightsunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-04-11/892447",
+        "horses": [
+          {
+            "horseName": "Sandy Roe",
+            "horseProfileUrl": "/profile/horse/58953281/sandy-roe/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:12",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-04-11/892448",
+        "horses": [
+          {
+            "horseName": "Pourquoi Poi",
+            "horseProfileUrl": "/profile/horse/7276513/pourquoi-poi/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Ballykinlar",
+            "horseProfileUrl": "/profile/horse/5412938/ballykinlar/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Red Or White",
+            "horseProfileUrl": "/profile/horse/7339086/red-or-white/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:47",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-04-11/892449",
+        "horses": [
+          {
+            "horseName": "Garrybello",
+            "horseProfileUrl": "/profile/horse/4257309/garrybello/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Zoffanien",
+            "horseProfileUrl": "/profile/horse/3100484/zoffanien/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:17",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-04-11/892450",
+        "horses": [
+          {
+            "horseName": "She Is Electric",
+            "horseProfileUrl": "/profile/horse/3666388/she-is-electric/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Neon Diamond",
+            "horseProfileUrl": "/profile/horse/5428916/neon-diamond/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:47",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-04-11/892451",
+        "horses": [
+          {
+            "horseName": "Kalnoo",
+            "horseProfileUrl": "/profile/horse/4146704/kalnoo/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Bella Union",
+            "horseProfileUrl": "/profile/horse/4105582/bella-union/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Manhattan Brook",
+            "horseProfileUrl": "/profile/horse/5492844/manhattan-brook/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Sir Carnegie",
+            "horseProfileUrl": "/profile/horse/6166356/sir-carnegie/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:47",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-04-11/892453",
+        "horses": [
+          {
+            "horseName": "Never Late",
+            "horseProfileUrl": "/profile/horse/7395191/never-late/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Springhill Warrior",
+            "horseProfileUrl": "/profile/horse/7200344/springhill-warrior/",
+            "raceNumber": "(18)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Dundalk (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-11#dundalk-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1138/dundalk-aw/2025-04-11",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-04-11/892460",
+        "horses": [
+          {
+            "horseName": "Harriet Eagle",
+            "horseProfileUrl": "/profile/horse/5102048/harriet-eagle/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-04-11/892462",
+        "horses": [
+          {
+            "horseName": "Flynn Ryder",
+            "horseProfileUrl": "/profile/horse/5884455/flynn-ryder/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/1138/dundalk-aw/2025-04-11/892463",
+        "horses": [
+          {
+            "horseName": "Dynamite Defense",
+            "horseProfileUrl": "/profile/horse/5831367/dynamite-defense/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Higher Kingdom",
+            "horseProfileUrl": "/profile/horse/2645439/higher-kingdom/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Flier",
+            "horseProfileUrl": "/profile/horse/3880918/flier/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Cu Chulainn",
+            "horseProfileUrl": "/profile/horse/3811186/cu-chulainn/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Fontwell",
+    "raceCardsCourseUrl": "/racecards/2025-04-11#fontwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/20/fontwell/2025-04-11",
+    "going": "GOOD (Good to soft in places; watered; 5.6)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/20/fontwell/2025-04-11/890484",
+        "horses": [
+          {
+            "horseName": "Gorcombe And Wise",
+            "horseProfileUrl": "/profile/horse/6979105/gorcombe-and-wise/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/20/fontwell/2025-04-11/890482",
+        "horses": [
+          {
+            "horseName": "All Authorized",
+            "horseProfileUrl": "/profile/horse/4980115/all-authorized/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:25",
+        "raceCardUrl": "/racecards/20/fontwell/2025-04-11/890483",
+        "horses": [
+          {
+            "horseName": "Kalif d'Airy",
+            "horseProfileUrl": "/profile/horse/5541791/kalif-dairy/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Huntingdon",
+    "raceCardsCourseUrl": "/racecards/2025-04-11#huntingdon",
+    "raceCardsCourseMeetingsUrl": "/racecards/26/huntingdon/2025-04-11",
+    "going": "GOOD (Watered; 7.4)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:38",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-04-11/892335",
+        "horses": [
+          {
+            "horseName": "Good Bye",
+            "horseProfileUrl": "/profile/horse/2109276/good-bye/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-04-11#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-04-11",
+    "going": "GOOD (Good to firm in places; watered; 5.0)",
+    "weather": "Sunny",
+    "stallsPosition": "1m2f & 2m110y - Inside; Remainder - Centre;",
+    "races": [
+      {
+        "raceTime": "2:27",
+        "raceCardUrl": "/racecards/36/newbury/2025-04-11/890338",
+        "horses": [
+          {
+            "horseName": "Lodge",
+            "horseProfileUrl": "/profile/horse/6564391/lodge/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/36/newbury/2025-04-11/890333",
+        "horses": [
+          {
+            "horseName": "Blazeon Five",
+            "horseProfileUrl": "/profile/horse/3666416/blazeon-five/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/36/newbury/2025-04-11/890335",
+        "horses": [
+          {
+            "horseName": "Bob Mali",
+            "horseProfileUrl": "/profile/horse/5817985/bob-mali/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sedgefield",
+    "raceCardsCourseUrl": "/racecards/2025-04-11#sedgefield",
+    "raceCardsCourseMeetingsUrl": "/racecards/57/sedgefield/2025-04-11",
+    "going": "GOOD (Watered; 5.2) changing to GOOD (Good to soft in places) after Race 2 (4.50)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-04-11/890489",
+        "horses": [
+          {
+            "horseName": "Maggies Boy",
+            "horseProfileUrl": "/profile/horse/5499901/maggies-boy/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-04-11/890493",
+        "horses": [
+          {
+            "horseName": "Bodygroove",
+            "horseProfileUrl": "/profile/horse/4642867/bodygroove/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Keeneland",
+    "raceCardsCourseUrl": "/racecards/2025-04-11#keeneland",
+    "raceCardsCourseMeetingsUrl": "/racecards/301/keeneland/2025-04-11",
+    "going": "TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

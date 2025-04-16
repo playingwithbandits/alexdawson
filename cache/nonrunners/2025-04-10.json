@@ -1,0 +1,214 @@
+[
+  {
+    "courseName": "Hereford",
+    "raceCardsCourseUrl": "/racecards/2025-04-10#hereford",
+    "raceCardsCourseMeetingsUrl": "/racecards/24/hereford/2025-04-10",
+    "going": "GOOD, Good to firm in places on Chase course (GoingStick: Chase 7.9, Hurdle 7.7) (Watered) (Rail movements: 2.00 & 4.20 +126yds, 2.35 & 4.53 +21yds, 3.10 +14yds and 3.45 & 5.23 +107yds)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:35",
+        "raceCardUrl": "/racecards/24/hereford/2025-04-10/890462",
+        "horses": [
+          {
+            "horseName": "Red Hugh",
+            "horseProfileUrl": "/profile/horse/4609247/red-hugh/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:23",
+        "raceCardUrl": "/racecards/24/hereford/2025-04-10/890467",
+        "horses": [
+          {
+            "horseName": "Mighty Gesture",
+            "horseProfileUrl": "/profile/horse/6741748/mighty-gesture/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Limerick",
+    "raceCardsCourseUrl": "/racecards/2025-04-10#limerick",
+    "raceCardsCourseMeetingsUrl": "/racecards/188/limerick/2025-04-10",
+    "going": "GOOD TO YIELDING (Watered)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:52",
+        "raceCardUrl": "/racecards/188/limerick/2025-04-10/892317",
+        "horses": [
+          {
+            "horseName": "Mujeres Isla",
+            "horseProfileUrl": "/profile/horse/6802976/mujeres-isla/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Old Kenmare",
+            "horseProfileUrl": "/profile/horse/6855090/old-kenmare/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:27",
+        "raceCardUrl": "/racecards/188/limerick/2025-04-10/892318",
+        "horses": [
+          {
+            "horseName": "Nowwhatdoyouthink",
+            "horseProfileUrl": "/profile/horse/4922497/nowwhatdoyouthink/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/188/limerick/2025-04-10/892321",
+        "horses": [
+          {
+            "horseName": "Backonthegoagain",
+            "horseProfileUrl": "/profile/horse/5864651/backonthegoagain/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Connemara Shore",
+            "horseProfileUrl": "/profile/horse/5727942/connemara-shore/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Real Empire",
+            "horseProfileUrl": "/profile/horse/5592531/real-empire/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Heidi's Frontiere",
+            "horseProfileUrl": "/profile/horse/5021491/heidis-frontiere/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-10#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-04-10",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 1m - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "3:02",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-04-10/890644",
+        "horses": [
+          {
+            "horseName": "Guns And Flowers",
+            "horseProfileUrl": "/profile/horse/4963767/guns-and-flowers/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Disclosure",
+            "horseProfileUrl": "/profile/horse/5405228/disclosure/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-04-10/890648",
+        "horses": [
+          {
+            "horseName": "Rebel Star",
+            "horseProfileUrl": "/profile/horse/6451030/rebel-star/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Street Life",
+            "horseProfileUrl": "/profile/horse/2456551/street-life/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:53",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-04-10/890649",
+        "horses": [
+          {
+            "horseName": "Northern Blaze",
+            "horseProfileUrl": "/profile/horse/6074553/northern-blaze/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-10#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-04-10",
+    "going": "TAPETA: STANDARD",
+    "weather": "Clear",
+    "stallsPosition": "1m2f & 1m4f - Outside; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-04-10/890653",
+        "horses": [
+          {
+            "horseName": "Cadarn",
+            "horseProfileUrl": "/profile/horse/5635907/cadarn/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-04-10/890652",
+        "horses": [
+          {
+            "horseName": "Princess Pw",
+            "horseProfileUrl": "/profile/horse/6675656/princess-pw/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-04-10/890651",
+        "horses": [
+          {
+            "horseName": "William Dewhirst",
+            "horseProfileUrl": "/profile/horse/4652641/william-dewhirst/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newton Abbot",
+    "raceCardsCourseUrl": "/racecards/2025-04-10#newton-abbot",
+    "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-04-10",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.3) (Watered) (Rail Movements: 2.45 & 3.20 +96yds, 3.55 +124yds and 5.05 +76yds)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/39/newton-abbot/2025-04-10/890472",
+        "horses": [
+          {
+            "horseName": "Stage Show",
+            "horseProfileUrl": "/profile/horse/4431802/stage-show/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  }
+]

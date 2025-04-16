@@ -69,7 +69,8 @@ export function HorseNameRow({
   title,
   showOnlyBest,
 }: HorseNameRowProps) {
-  if (!highlight2 && showOnlyBest) {
+  const isAGoodBet = highlight1 || highlight2;
+  if (showOnlyBest && !isAGoodBet) {
     return <></>;
   }
   return (

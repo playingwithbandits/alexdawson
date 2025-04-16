@@ -1,0 +1,140 @@
+{
+  "date": "2025-04-13",
+  "tips": [
+    {
+      "time": "13:43",
+      "horse": "Keep On Cobbling",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Martalmix'Jac",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Blackacre",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Jackpot Cash",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Magical Annie",
+      "isNap": true
+    },
+    {
+      "time": "16:28",
+      "horse": "Bardenstown Lad",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Nastya",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Mount Frisco",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Tell Nobody Nothin",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Bella Union",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Pied Piper",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Step Out",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Made In The Woods",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Qualimita",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Kasanova'S Dream",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Fairyland Opera",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "C'Est Rien",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Cheerful Chap",
+      "isNap": false
+    },
+    {
+      "time": "16:52",
+      "horse": "Enjoy The Dream",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Prince Of Air",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Code Purple",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Dickensian",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Eternal Sunshine",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Letsbefrank",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Marhaba Ghaiyyath",
+      "isNap": true
+    },
+    {
+      "time": "18:15",
+      "horse": "Jonny Concrete",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "New Image",
+      "isNap": false
+    }
+  ]
+}

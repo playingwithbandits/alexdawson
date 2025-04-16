@@ -1,0 +1,95 @@
+{
+  "date": "2025-04-15",
+  "tips": [
+    {
+      "time": "13:50",
+      "horse": "Physique",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Ottoman Fleet",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Verse Of Love",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "Twilight Star",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Victory Queen",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Treasure Fleet",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Faitque De L'Isle",
+      "isNap": true
+    },
+    {
+      "time": "14:40",
+      "horse": "Stardhem",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Aazza",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Art Of Diplomacy",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Kankin",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Luminoso",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Little She",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Norflondonforever",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Invincible Melody",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Brightwalton",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Al Ameen",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Federated",
+      "isNap": false
+    }
+  ]
+}

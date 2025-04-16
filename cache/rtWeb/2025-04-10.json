@@ -1,0 +1,45 @@
+{
+  "date": "2025-04-10",
+  "tips": [
+    {
+      "horseName": "Iris Des Issards",
+      "time": "14:45",
+      "rating": 84.3
+    },
+    {
+      "horseName": "Musique De Fee",
+      "time": "15:55",
+      "rating": 80.6
+    },
+    {
+      "horseName": "Jaramillo",
+      "time": "16:30",
+      "rating": 82.9
+    },
+    {
+      "horseName": "Everyonesgame",
+      "time": "14:35",
+      "rating": 77.9
+    },
+    {
+      "horseName": "Pittsburg",
+      "time": "15:10",
+      "rating": 78.7
+    },
+    {
+      "horseName": "Time Interval",
+      "time": "15:45",
+      "rating": 77.6
+    },
+    {
+      "horseName": "My Virtue",
+      "time": "16:20",
+      "rating": 74.2
+    },
+    {
+      "horseName": "Cave Article",
+      "time": "16:53",
+      "rating": 79.1
+    }
+  ]
+}

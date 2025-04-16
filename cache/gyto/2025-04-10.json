@@ -1,0 +1,165 @@
+{
+  "date": "2025-04-10",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Court In A Storm",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Everyonesgame",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Pittsburg",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Hola Hermosa",
+      "isNap": false
+    },
+    {
+      "time": "16:53",
+      "horse": "Side Stepper",
+      "isNap": false
+    },
+    {
+      "time": "17:23",
+      "horse": "Sinchi Roca",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Yes Indeed",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Iris Des Issards",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Mighty Fleur",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Coconut Twist",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Jaramillo",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Josh Central",
+      "isNap": false
+    },
+    {
+      "time": "14:17",
+      "horse": "Janes Harbour",
+      "isNap": false
+    },
+    {
+      "time": "14:52",
+      "horse": "Tingarran Express",
+      "isNap": false
+    },
+    {
+      "time": "15:27",
+      "horse": "The Dancing Tree",
+      "isNap": false
+    },
+    {
+      "time": "16:02",
+      "horse": "Jonny Carrol",
+      "isNap": false
+    },
+    {
+      "time": "16:37",
+      "horse": "My Friend The Wind",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Flemens Intrest",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Amina",
+      "isNap": false
+    },
+    {
+      "time": "14:27",
+      "horse": "Harpsichord",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Disclosure",
+      "isNap": false
+    },
+    {
+      "time": "15:37",
+      "horse": "Annsar",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Mister Mojito",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Recon Mission",
+      "isNap": false
+    },
+    {
+      "time": "17:18",
+      "horse": "Ancient State",
+      "isNap": true
+    },
+    {
+      "time": "17:00",
+      "horse": "King Chaos",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Bruce Banner",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Sogannie",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Jowddah",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Francis Drake",
+      "isNap": true
+    },
+    {
+      "time": "20:00",
+      "horse": "Rooska",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Just Typical",
+      "isNap": false
+    }
+  ]
+}

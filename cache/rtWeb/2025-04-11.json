@@ -1,0 +1,35 @@
+{
+  "date": "2025-04-11",
+  "tips": [
+    {
+      "horseName": "Willie Shake Hands",
+      "time": "16:15",
+      "rating": 80.2
+    },
+    {
+      "horseName": "Mutual Respect (IRE)",
+      "time": "16:50",
+      "rating": 77.8
+    },
+    {
+      "horseName": "Trailblazer",
+      "time": "17:25",
+      "rating": 82.1
+    },
+    {
+      "horseName": "Redbridge Rambler",
+      "time": "17:55",
+      "rating": 80
+    },
+    {
+      "horseName": "Suitably Surprised",
+      "time": "18:25",
+      "rating": 77.4
+    },
+    {
+      "horseName": "Hold Onto The Line",
+      "time": "18:55",
+      "rating": 84.6
+    }
+  ]
+}

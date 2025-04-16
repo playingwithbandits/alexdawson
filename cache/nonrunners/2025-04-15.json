@@ -1,0 +1,69 @@
+[
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-15#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-04-15",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-04-15/890659",
+        "horses": [
+          {
+            "horseName": "Sugarloaf Lenny",
+            "horseProfileUrl": "/profile/horse/5065579/sugarloaf-lenny/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newmarket",
+    "raceCardsCourseUrl": "/racecards/2025-04-15#newmarket",
+    "raceCardsCourseMeetingsUrl": "/racecards/38/newmarket/2025-04-15",
+    "going": "GOOD (GoingStick: 7.0) (Watered)",
+    "weather": "Cloudy",
+    "stallsPosition": "(Far side course) Centre",
+    "races": []
+  },
+  {
+    "courseName": "Southwell",
+    "raceCardsCourseUrl": "/racecards/2025-04-15#southwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/61/southwell/2025-04-15",
+    "going": "GOOD (GoingStick: 5.8) (Watering) (Rail movements: 2.05, 3.50, 4.25 & 5.00 +345yds, 2.40 +283yds and 3.15 +204yds)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/61/southwell/2025-04-15/890545",
+        "horses": [
+          {
+            "horseName": "Martalmix'jac",
+            "horseProfileUrl": "/profile/horse/3935883/martalmixjac/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Faitque de L'Isle",
+            "horseProfileUrl": "/profile/horse/3471299/faitque-de-lisle/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/61/southwell/2025-04-15/890543",
+        "horses": [
+          {
+            "horseName": "Cluain Aodha",
+            "horseProfileUrl": "/profile/horse/3999611/cluain-aodha/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  }
+]

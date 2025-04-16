@@ -1,0 +1,197 @@
+[
+  {
+    "courseName": "Hexham",
+    "raceCardsCourseUrl": "/racecards/2025-04-14#hexham",
+    "raceCardsCourseMeetingsUrl": "/racecards/25/hexham/2025-04-14",
+    "going": "GOOD, Good to soft in places (GoingStick: 5.9) (Watering) (Rail Movements: 2.18, 3.18 & 5.20 +192yds, 2.48 +121yds, 3.48 & 4.48 +206yds and 4.18 +292yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:18",
+        "raceCardUrl": "/racecards/25/hexham/2025-04-14/890532",
+        "horses": [
+          {
+            "horseName": "Benmore",
+            "horseProfileUrl": "/profile/horse/6719013/benmore/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Drop Kick",
+            "horseProfileUrl": "/profile/horse/7169771/drop-kick/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-04-14#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-04-14",
+    "going": "GOOD (Watered) (Rail movements: 3.35, 4.05 & 4.35 +2yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/46/pontefract/2025-04-14/890379",
+        "horses": [
+          {
+            "horseName": "Call Me By My Name",
+            "horseProfileUrl": "/profile/horse/7400066/call-me-by-my-name/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/46/pontefract/2025-04-14/890381",
+        "horses": [
+          {
+            "horseName": "Piranha Rama",
+            "horseProfileUrl": "/profile/horse/5845536/piranha-rama/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Kilteel",
+            "horseProfileUrl": "/profile/horse/5884237/kilteel/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/46/pontefract/2025-04-14/890376",
+        "horses": [
+          {
+            "horseName": "Partisan Hero",
+            "horseProfileUrl": "/profile/horse/4642852/partisan-hero/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:35",
+        "raceCardUrl": "/racecards/46/pontefract/2025-04-14/890380",
+        "horses": [
+          {
+            "horseName": "Zephlyn",
+            "horseProfileUrl": "/profile/horse/4359263/zephlyn/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tramore",
+    "raceCardsCourseUrl": "/racecards/2025-04-14#tramore",
+    "raceCardsCourseMeetingsUrl": "/racecards/200/tramore/2025-04-14",
+    "going": "YIELDING (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/200/tramore/2025-04-14/893083",
+        "horses": [
+          {
+            "horseName": "Knockaneleigh Girl",
+            "horseProfileUrl": "/profile/horse/4867638/knockaneleigh-girl/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/200/tramore/2025-04-14/893084",
+        "horses": [
+          {
+            "horseName": "Long Gone",
+            "horseProfileUrl": "/profile/horse/5848823/long-gone/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "The Store Boy",
+            "horseProfileUrl": "/profile/horse/7404618/the-store-boy/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/200/tramore/2025-04-14/893085",
+        "horses": [
+          {
+            "horseName": "Real Empire",
+            "horseProfileUrl": "/profile/horse/5592531/real-empire/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:55",
+        "raceCardUrl": "/racecards/200/tramore/2025-04-14/893086",
+        "horses": [
+          {
+            "horseName": "Stumblin In",
+            "horseProfileUrl": "/profile/horse/5692670/stumblin-in/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Close Enough",
+            "horseProfileUrl": "/profile/horse/3438098/close-enough/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Letters To Juliet",
+            "horseProfileUrl": "/profile/horse/5203855/letters-to-juliet/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:25",
+        "raceCardUrl": "/racecards/200/tramore/2025-04-14/893087",
+        "horses": [
+          {
+            "horseName": "Starzov",
+            "horseProfileUrl": "/profile/horse/4272434/starzov/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Warwick",
+    "raceCardsCourseUrl": "/racecards/2025-04-14#warwick",
+    "raceCardsCourseMeetingsUrl": "/racecards/85/warwick/2025-04-14",
+    "going": "GOOD (GoingStick: 7.1) (Watering) (Inner Hurdle Track)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:10",
+        "raceCardUrl": "/racecards/85/warwick/2025-04-14/890539",
+        "horses": [
+          {
+            "horseName": "Blue Universe",
+            "horseProfileUrl": "/profile/horse/4570872/blue-universe/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chantilly",
+    "raceCardsCourseUrl": "/racecards/2025-04-14#chantilly",
+    "raceCardsCourseMeetingsUrl": "/racecards/204/chantilly/2025-04-14",
+    "going": "POLYTRACK: STANDARD; TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

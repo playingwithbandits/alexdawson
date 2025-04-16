@@ -28,6 +28,7 @@ interface PicksRaceRowProps {
   rtWebTips: RtWebTip[] | undefined;
   olbgTips: OLBGTip[] | undefined;
   showOnlyBest: boolean;
+  countToBeHigherThan?: number;
 }
 
 export function PicksRaceRow({
@@ -43,6 +44,7 @@ export function PicksRaceRow({
   rtWebTips,
   olbgTips,
   showOnlyBest,
+  countToBeHigherThan: propCountToBeHigherThan = 3,
 }: PicksRaceRowProps) {
   console.log("CompactRaceRow", {
     isTodayOrPast,
@@ -164,9 +166,8 @@ export function PicksRaceRow({
   // - GYTO tips
   // - Naps table tips (sorted by score)
   // Filter out any empty strings or undefined values
-  const allNames: string[] = [
-    ...aiTopPicks?.map((x) => x.name),
-    ...rpPredictions?.map((x) => x.name),
+
+  const tipsterSiteNames: string[] = [
     rpVerdictPick ? rpVerdictPick : "",
     ...(rpVerdictAllOthers || []),
     ...(atrTipSelections?.map((x) => x.horse) || []),
@@ -174,6 +175,13 @@ export function PicksRaceRow({
     gytoTipSelectionObj ? gytoTipSelectionObj.horse : "--",
     ...(napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || []),
     ...(rtWebTipSelections?.map((x) => x.horseName) || []),
+  ];
+
+  const allNames: string[] = [
+    ...tipsterSiteNames,
+    ...aiTopPicks?.map((x) => x.name),
+    ...rpPredictions?.map((x) => x.name),
+
     ...(olbgTipsWithNap?.map((x) => x.horseName) || []),
     ...(olbgTipsWithEw?.map((x) => x.horseName) || []),
     ...(olbgTipsWithWin?.map((x) => x.horseName) || []),
@@ -207,8 +215,7 @@ export function PicksRaceRow({
   const aiTopPicksWeighted =
     aiTopPicks?.map((x) => {
       const scorePercentage =
-        ((x.score?.total?.percentage || 0) - worseAiPercentageScore) /
-        ((topAiPercentage || 100) - worseAiPercentageScore);
+        (x.score?.total?.percentage || 0) / (topAiPercentage || 100);
       return [x.name, 1 * scorePercentage] as [string, number];
     }) || [];
 
@@ -217,9 +224,7 @@ export function PicksRaceRow({
       // const scorePercentage =
       //   ((x.score || 0) - worseRpPredictionScore) / rpPredictionScoreGap;
 
-      const scorePercentage =
-        (x.score - worseRpPredictionScore || 0) /
-        (100 - worseRpPredictionScore);
+      const scorePercentage = (x.score || 0) / 100;
       return [x.name, 1 * scorePercentage] as [string, number];
     }) || [];
 
@@ -338,6 +343,8 @@ export function PicksRaceRow({
 
   //const topScorePerc = Math.max(...nameCountsWithPerc?.map((x) => x[2]));
   //const topScorePerc20Perc = topScorePerc * 0.8;
+
+  const countToBeHigherThan = propCountToBeHigherThan;
 
   return (
     <div
@@ -700,7 +707,46 @@ export function PicksRaceRow({
                   ?.score?.total?.percentage || 0
               ).toFixed(2) + "%";
 
+            const aiPerc =
+              aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
+                ?.score?.total?.percentage || 0;
+            const aiPercWithin20Percent =
+              aiPerc >= (topAiPercentage || 100) * 0.8;
+
+            const olbgNapCount = olbgTipsWithNap
+              ?.filter((x) => x.napTips >= 1)
+              ?.some((x) => cleanName(x.horseName) === cleanName(name));
+
+            const olbgCommentCount = olbgTipsWithComment
+              ?.filter((x) => x.commentCount >= 1)
+              ?.some((x) => cleanName(x.horseName) === cleanName(name));
+
+            const rpPredPerc =
+              rpPredictions?.find((x) => cleanName(x.name) === cleanName(name))
+                ?.score || 0;
+
+            const rpPredPercWithin20Percent = rpPredPerc >= 80;
+
+            const olbgNapGood = olbgNapCount && olbgCommentCount;
+            const aiGood = aiPercWithin20Percent && aiPerc >= 40;
+            const rpPredGood = rpPredPercWithin20Percent;
+
+            const mentionedByTipsterArr = tipsterSiteNames?.filter(
+              (x) => cleanName(x) === cleanName(name)
+            );
+
+            const mentionedByTipster = mentionedByTipsterArr?.length > 0;
+
             const paraGraph = [
+              [
+                olbgNapGood && `<span style='color: #00ffff'>OLBG</span>`,
+                aiGood && `<span style='color: #00ffff'>AI</span>`,
+                rpPredGood && `<span style='color: #00ffff'>RP</span>`,
+                mentionedByTipster &&
+                  `<span style='color: #00ffff'>Tipster-${mentionedByTipsterArr?.length}</span>`,
+              ]
+                .filter(Boolean)
+                .join(" "),
               scoreSummary,
               aiSummary,
               olbgSummary
@@ -730,20 +776,6 @@ export function PicksRaceRow({
               ?.filter((x) => x)
               .join("\n\n");
 
-            const aiPerc =
-              aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
-                ?.score?.total?.percentage || 0;
-            const aiPercWithin10Percent =
-              aiPerc >= (topAiPercentage || 100) - 5;
-
-            const olbgNapCount = olbgTipsWithNap
-              ?.filter((x) => x.napTips >= 1)
-              ?.some((x) => cleanName(x.horseName) === cleanName(name));
-
-            const olbgCommentCount = olbgTipsWithComment
-              ?.filter((x) => x.commentCount >= 1)
-              ?.some((x) => cleanName(x.horseName) === cleanName(name));
-
             return (
               <HorseNameRow
                 key={race.time + x_i}
@@ -758,20 +790,22 @@ export function PicksRaceRow({
                   //   olbgNap ? "Yes" : "No"
                   // }`
                 }
-                oddsHighlight={odds > 6 && aiPercWithin10Percent}
+                oddsHighlight={odds > 6}
                 isNonRunner={isNonRunner(race.time, name)}
                 greyedOut={count < 2}
                 title={paraGraph}
-                highlight1={count >= 4}
-                highlight2={
-                  count >= 3 &&
-                  olbgNapCount &&
-                  olbgCommentCount &&
-                  aiPercWithin10Percent &&
-                  aiPerc >= 30 &&
-                  perc >= 25
+                highlight1={
+                  [olbgNapGood, rpPredGood, aiGood, mentionedByTipster].filter(
+                    Boolean
+                  ).length >= 3
                 }
-                showOnlyBest={showOnlyBest}
+                highlight2={[
+                  olbgNapGood,
+                  rpPredGood,
+                  aiGood,
+                  mentionedByTipster,
+                ].every(Boolean)}
+                showOnlyBest={showOnlyBest && count >= countToBeHigherThan}
               />
             );
           })}

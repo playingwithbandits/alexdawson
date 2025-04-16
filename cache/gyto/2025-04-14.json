@@ -1,0 +1,130 @@
+{
+  "date": "2025-04-14",
+  "tips": [
+    {
+      "time": "14:05",
+      "horse": "Supreme Dancer",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Haberdash",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Kilteel",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Partisan Hero",
+      "isNap": true
+    },
+    {
+      "time": "16:35",
+      "horse": "Zephlyn",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Minshaar",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Emperor Caradoc",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Benmore",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Backbyjet",
+      "isNap": false
+    },
+    {
+      "time": "15:18",
+      "horse": "Smart Decision",
+      "isNap": false
+    },
+    {
+      "time": "15:48",
+      "horse": "Halfway House Lad",
+      "isNap": false
+    },
+    {
+      "time": "16:48",
+      "horse": "Deep Charm",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Japetus",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Routine Excellence",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "The Store Boy",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Itsalonglongroad",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Our Zebo",
+      "isNap": false
+    },
+    {
+      "time": "18:25",
+      "horse": "Joueuse Royale",
+      "isNap": false
+    },
+    {
+      "time": "18:55",
+      "horse": "Wyoming Baby",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "Last Round",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Lady Jago",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Orbys River",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "I'Ve Madeupmymind",
+      "isNap": true
+    },
+    {
+      "time": "18:40",
+      "horse": "Tiger Jet",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Lumi Plugin",
+      "isNap": false
+    }
+  ]
+}

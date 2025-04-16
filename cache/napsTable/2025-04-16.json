@@ -1,0 +1,299 @@
+{
+  "date": "2025-04-16",
+  "tips": [
+    {
+      "time": "15:50",
+      "horse": "Mr Hope Street",
+      "tipster": "Melissa Jones",
+      "score": "24.1"
+    },
+    {
+      "time": "17:45",
+      "horse": "Felicie Du Maquis",
+      "tipster": "RP Ratings",
+      "score": "12.5"
+    },
+    {
+      "time": "14:05",
+      "horse": "Ballytechno",
+      "tipster": "Jason Heavey",
+      "score": "9.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Game Colours",
+      "tipster": "Rob Wright",
+      "score": "8.1"
+    },
+    {
+      "time": "14:05",
+      "horse": "East India Express",
+      "tipster": "Newsboy",
+      "score": "7.0"
+    },
+    {
+      "time": "17:27",
+      "horse": "Gangster Granny",
+      "tipster": "Rory Paddock",
+      "score": "6.9"
+    },
+    {
+      "time": "14:05",
+      "horse": "Ballytechno",
+      "tipster": "Karl Hedley",
+      "score": "6.1"
+    },
+    {
+      "time": "15:50",
+      "horse": "Long Draw",
+      "tipster": "Chris Connolly",
+      "score": "3.7"
+    },
+    {
+      "time": "13:40",
+      "horse": "Anaisa",
+      "tipster": "Steve Mullington",
+      "score": "3.1"
+    },
+    {
+      "time": "14:40",
+      "horse": "Classic Getaway",
+      "tipster": "Lee Sobot",
+      "score": "-0.5"
+    },
+    {
+      "time": "15:15",
+      "horse": "Jumping Jet",
+      "tipster": "Farringdon",
+      "score": "-2.3"
+    },
+    {
+      "time": "15:35",
+      "horse": "The Watcher",
+      "tipster": "The North",
+      "score": "-4.2"
+    },
+    {
+      "time": "16:25",
+      "horse": "Manothepeople",
+      "tipster": "The Score",
+      "score": "-4.1"
+    },
+    {
+      "time": "13:50",
+      "horse": "Majestic Wave",
+      "tipster": "The Punt",
+      "score": "-6.2"
+    },
+    {
+      "time": "14:40",
+      "horse": "Classic Getaway",
+      "tipster": "Luke Tucker",
+      "score": "-7.0"
+    },
+    {
+      "time": "13:40",
+      "horse": "Sand Lily",
+      "tipster": "Andrew Mount",
+      "score": "-9.5"
+    },
+    {
+      "time": "15:35",
+      "horse": "New Century",
+      "tipster": "Glendale",
+      "score": "-9.5"
+    },
+    {
+      "time": "15:35",
+      "horse": "Opera Ballo",
+      "tipster": "Ian Gaughran",
+      "score": "-12.2"
+    },
+    {
+      "time": "18:15",
+      "horse": "Brulure Noire",
+      "tipster": "Matt Polley",
+      "score": "-11.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "Hang In There",
+      "tipster": "Sam Hardy",
+      "score": "-13.5"
+    },
+    {
+      "time": "15:50",
+      "horse": "Guard The Moon",
+      "tipster": "West Country",
+      "score": "-16.3"
+    },
+    {
+      "time": "17:20",
+      "horse": "Fifty Nifty",
+      "tipster": "Robin Goodfellow",
+      "score": "-14.8"
+    },
+    {
+      "time": "15:15",
+      "horse": "Ask Brewster",
+      "tipster": "Whistler",
+      "score": "-16.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "O'Moore Park",
+      "tipster": "Jim Delahunt",
+      "score": "-15.8"
+    },
+    {
+      "time": "14:25",
+      "horse": "Hard Endeavor",
+      "tipster": "The Brigadier",
+      "score": "-15.7"
+    },
+    {
+      "time": "15:35",
+      "horse": "Field Of Gold",
+      "tipster": "Garry Owen",
+      "score": "-16.0"
+    },
+    {
+      "time": "16:00",
+      "horse": "Kokanee",
+      "tipster": "Marlborough",
+      "score": "-15.9"
+    },
+    {
+      "time": "16:25",
+      "horse": "Moroder",
+      "tipster": "Postdata",
+      "score": "-20.6"
+    },
+    {
+      "time": "15:35",
+      "horse": "Opera Ballo",
+      "tipster": "Dean Kilbryde",
+      "score": "-21.6"
+    },
+    {
+      "time": "15:15",
+      "horse": "Ajp Kingdom",
+      "tipster": "Rockavon",
+      "score": "-23.3"
+    },
+    {
+      "time": "13:50",
+      "horse": "Double Rush",
+      "tipster": "Rory Delargy",
+      "score": "-24.4"
+    },
+    {
+      "time": "17:12",
+      "horse": "Pyleigh Master",
+      "tipster": "Jeffrey Ross",
+      "score": "-25.6"
+    },
+    {
+      "time": "15:50",
+      "horse": "Long Draw",
+      "tipster": "Mercury",
+      "score": "-26.3"
+    },
+    {
+      "time": "13:30",
+      "horse": "Toad Hall",
+      "tipster": "Computeform",
+      "score": "-26.3"
+    },
+    {
+      "time": "13:50",
+      "horse": "Double Rush",
+      "tipster": "Spotlight",
+      "score": "-25.3"
+    },
+    {
+      "time": "17:20",
+      "horse": "Miss Information",
+      "tipster": "Ben Morgan",
+      "score": "-27.5"
+    },
+    {
+      "time": "15:00",
+      "horse": "Apollo One",
+      "tipster": "Templegate",
+      "score": "-28.9"
+    },
+    {
+      "time": "17:20",
+      "horse": "Jumby",
+      "tipster": "The Duke",
+      "score": "-30.1"
+    },
+    {
+      "time": "15:35",
+      "horse": "Opera Ballo",
+      "tipster": "The Judge",
+      "score": "-29.0"
+    },
+    {
+      "time": "14:05",
+      "horse": "Disco Annie",
+      "tipster": "On The Nose",
+      "score": "-29.3"
+    },
+    {
+      "time": "13:50",
+      "horse": "Defence Minister",
+      "tipster": "Ross Shepherd",
+      "score": "-31.1"
+    },
+    {
+      "time": "14:40",
+      "horse": "Riskintheground",
+      "tipster": "Jon Freeman",
+      "score": "-36.2"
+    },
+    {
+      "time": "16:25",
+      "horse": "What Path",
+      "tipster": "Moorestyle",
+      "score": "-40.4"
+    },
+    {
+      "time": "14:32",
+      "horse": "No Such Thing",
+      "tipster": "Brian Flanagan",
+      "score": "-39.5"
+    },
+    {
+      "time": "13:50",
+      "horse": "Double Rush",
+      "tipster": "Chris Wright",
+      "score": "-42.9"
+    },
+    {
+      "time": "15:35",
+      "horse": "Aomori City",
+      "tipster": "Tipman Tips",
+      "score": "-45.4"
+    },
+    {
+      "time": "16:45",
+      "horse": "Spanish Voice",
+      "tipster": "Fortunatus",
+      "score": "-47.1"
+    },
+    {
+      "time": "14:40",
+      "horse": "Bhaloo",
+      "tipster": "Lambourn",
+      "score": "-51.3"
+    },
+    {
+      "time": "15:35",
+      "horse": "Opera Ballo",
+      "tipster": "Adrian Wall",
+      "score": "-52.3"
+    }
+  ]
+}

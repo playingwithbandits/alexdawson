@@ -1,0 +1,269 @@
+[
+  {
+    "courseName": "Down Royal",
+    "raceCardsCourseUrl": "/racecards/2025-04-13#down-royal",
+    "raceCardsCourseMeetingsUrl": "/racecards/180/down-royal/2025-04-13",
+    "going": "GOOD (Watering)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/180/down-royal/2025-04-13/892574",
+        "horses": [
+          {
+            "horseName": "There's Always One",
+            "horseProfileUrl": "/profile/horse/7329752/theres-always-one/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/180/down-royal/2025-04-13/892577",
+        "horses": [
+          {
+            "horseName": "Jersey Des Brosses",
+            "horseProfileUrl": "/profile/horse/4867607/jersey-des-brosses/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Musselburgh",
+    "raceCardsCourseUrl": "/racecards/2025-04-13#musselburgh",
+    "raceCardsCourseMeetingsUrl": "/racecards/16/musselburgh/2025-04-13",
+    "going": "GOOD (GoingStick: 6.7) (Watered) (Rail movements: 3.45, 5.15, 5.45, 6.15 & 6.45 -4yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f - Stands' side; Remainder - Inner",
+    "races": [
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-04-13/890374",
+        "horses": [
+          {
+            "horseName": "Volenti",
+            "horseProfileUrl": "/profile/horse/3958772/volenti/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-04-13/890368",
+        "horses": [
+          {
+            "horseName": "Liamarty Dreams",
+            "horseProfileUrl": "/profile/horse/3437689/liamarty-dreams/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Stratford",
+    "raceCardsCourseUrl": "/racecards/2025-04-13#stratford",
+    "raceCardsCourseMeetingsUrl": "/racecards/67/stratford/2025-04-13",
+    "going": "GOOD, Good to firm in places (GoingStick: Chase 6.4, Hurdle 7.4) (Watered) (Rail movements: 2.18 & 4.28 +54yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/67/stratford/2025-04-13/890518",
+        "horses": [
+          {
+            "horseName": "Quite The Getaway",
+            "horseProfileUrl": "/profile/horse/4794079/quite-the-getaway/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tramore",
+    "raceCardsCourseUrl": "/racecards/2025-04-13#tramore",
+    "raceCardsCourseMeetingsUrl": "/racecards/200/tramore/2025-04-13",
+    "going": "Chase course - GOOD TO YIELDING; Hurdle course - YIELDING, Good in places (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/200/tramore/2025-04-13/892584",
+        "horses": [
+          {
+            "horseName": "Kalanisi Dubh",
+            "horseProfileUrl": "/profile/horse/3413905/kalanisi-dubh/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/200/tramore/2025-04-13/892585",
+        "horses": [
+          {
+            "horseName": "Cheerful Chap",
+            "horseProfileUrl": "/profile/horse/4157793/cheerful-chap/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:52",
+        "raceCardUrl": "/racecards/200/tramore/2025-04-13/892586",
+        "horses": [
+          {
+            "horseName": "Be Fierce",
+            "horseProfileUrl": "/profile/horse/4001853/be-fierce/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Dusseldorf",
+    "raceCardsCourseUrl": "/racecards/2025-04-13#dusseldorf",
+    "raceCardsCourseMeetingsUrl": "/racecards/240/dusseldorf/2025-04-13",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Hanshin",
+    "raceCardsCourseUrl": "/racecards/2025-04-13#hanshin",
+    "raceCardsCourseMeetingsUrl": "/racecards/491/hanshin/2025-04-13",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Longchamp",
+    "raceCardsCourseUrl": "/racecards/2025-04-13#longchamp",
+    "raceCardsCourseMeetingsUrl": "/racecards/211/longchamp/2025-04-13",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-04-13#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-04-13",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "10:15",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-13/893108",
+        "horses": [
+          {
+            "horseName": "Master Trillion",
+            "horseProfileUrl": "/profile/horse/6555294/master-trillion/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-13/893110",
+        "horses": [
+          {
+            "horseName": "Cheval Valiant",
+            "horseProfileUrl": "/profile/horse/3502409/cheval-valiant/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "E Universe",
+            "horseProfileUrl": "/profile/horse/4877229/e-universe/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-13/893111",
+        "horses": [
+          {
+            "horseName": "Gallant Goody",
+            "horseProfileUrl": "/profile/horse/5371975/gallant-goody/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Lapras",
+            "horseProfileUrl": "/profile/horse/5176388/lapras/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-13/893112",
+        "horses": [
+          {
+            "horseName": "Arden",
+            "horseProfileUrl": "/profile/horse/7073216/arden/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Majestic Delight",
+            "horseProfileUrl": "/profile/horse/7307980/majestic-delight/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:05",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-13/893114",
+        "horses": [
+          {
+            "horseName": "Sandman",
+            "horseProfileUrl": "/profile/horse/7409346/sandman/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Never Too Soon",
+            "horseProfileUrl": "/profile/horse/3083656/never-too-soon/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:40",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-13/893115",
+        "horses": [
+          {
+            "horseName": "Forerunner",
+            "horseProfileUrl": "/profile/horse/4785142/forerunner/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Strathpeffer",
+            "horseProfileUrl": "/profile/horse/4785147/strathpeffer/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:40",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-13/893117",
+        "horses": [
+          {
+            "horseName": "Cheval Victorious",
+            "horseProfileUrl": "/profile/horse/5439128/cheval-victorious/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
+  }
+]

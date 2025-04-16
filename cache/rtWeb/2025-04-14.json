@@ -1,0 +1,35 @@
+{
+  "date": "2025-04-14",
+  "tips": [
+    {
+      "horseName": "Lady Jago",
+      "time": "17:10",
+      "rating": 90.1
+    },
+    {
+      "horseName": "Iskar DAiry",
+      "time": "17:40",
+      "rating": 79.4
+    },
+    {
+      "horseName": "Audacious Annie",
+      "time": "18:10",
+      "rating": 85.7
+    },
+    {
+      "horseName": "Tiger Jet",
+      "time": "18:40",
+      "rating": 84.2
+    },
+    {
+      "horseName": "Graham (IRE)",
+      "time": "19:10",
+      "rating": 82.1
+    },
+    {
+      "horseName": "Queens Wish",
+      "time": "19:40",
+      "rating": 78.7
+    }
+  ]
+}

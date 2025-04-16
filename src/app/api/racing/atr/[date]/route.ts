@@ -178,7 +178,7 @@ export async function GET(
 
       //console.log(`Parsing tips for course: ${course}`);
       const atrRaces = await parseCoursePage(courseHtml, "#tab-atr");
-      const timeformRaces = await parseCoursePage(courseHtml, "#tab-timeform");
+      const timeformRaces = await parseCoursePage(courseHtml, "#tab-quantum");
       console.log("atrRaces", atrRaces);
       console.log("timeformRaces", timeformRaces);
       if (atrRaces.length) {

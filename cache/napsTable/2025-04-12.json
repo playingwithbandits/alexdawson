@@ -1,0 +1,299 @@
+{
+  "date": "2025-04-12",
+  "tips": [
+    {
+      "time": "13:10",
+      "horse": "The Other Mozzie",
+      "tipster": "Melissa Jones",
+      "score": "20.6"
+    },
+    {
+      "time": "15:35",
+      "horse": "Wiseguy",
+      "tipster": "RP Ratings",
+      "score": "14.2"
+    },
+    {
+      "time": "14:15",
+      "horse": "Kabral Du Mathan",
+      "tipster": "Jason Heavey",
+      "score": "12.3"
+    },
+    {
+      "time": "15:12",
+      "horse": "James McHenry",
+      "tipster": "Rob Wright",
+      "score": "9.8"
+    },
+    {
+      "time": "15:35",
+      "horse": "Spanish Harlem",
+      "tipster": "Rory Paddock",
+      "score": "9.7"
+    },
+    {
+      "time": "15:35",
+      "horse": "Wiseguy",
+      "tipster": "Newsboy",
+      "score": "9.0"
+    },
+    {
+      "time": "15:55",
+      "horse": "Preminision",
+      "tipster": "Steve Mullington",
+      "score": "5.2"
+    },
+    {
+      "time": "15:35",
+      "horse": "Captain Cody",
+      "tipster": "Karl Hedley",
+      "score": "2.4"
+    },
+    {
+      "time": "13:10",
+      "horse": "Malystic",
+      "tipster": "Chris Connolly",
+      "score": "1.5"
+    },
+    {
+      "time": "15:35",
+      "horse": "Chosen Witness",
+      "tipster": "Lee Sobot",
+      "score": "0.3"
+    },
+    {
+      "time": "15:12",
+      "horse": "Urban Lion",
+      "tipster": "Farringdon",
+      "score": "0.2"
+    },
+    {
+      "time": "14:15",
+      "horse": "Kihavah",
+      "tipster": "The North",
+      "score": "-1.5"
+    },
+    {
+      "time": "17:50",
+      "horse": "Archivist",
+      "tipster": "The Punt",
+      "score": "-4.8"
+    },
+    {
+      "time": "14:35",
+      "horse": "Rogue Allegiance",
+      "tipster": "Luke Tucker",
+      "score": "-7.0"
+    },
+    {
+      "time": "14:15",
+      "horse": "Ooh Betty",
+      "tipster": "Andrew Mount",
+      "score": "-7.1"
+    },
+    {
+      "time": "15:35",
+      "horse": "Rock My Way",
+      "tipster": "Glendale",
+      "score": "-7.1"
+    },
+    {
+      "time": "14:35",
+      "horse": "Al Qudra",
+      "tipster": "Ian Gaughran",
+      "score": "-9.7"
+    },
+    {
+      "time": "15:35",
+      "horse": "The Kniphand",
+      "tipster": "Matt Polley",
+      "score": "-8.7"
+    },
+    {
+      "time": "15:35",
+      "horse": "Magna Sam",
+      "tipster": "The Score",
+      "score": "-9.4"
+    },
+    {
+      "time": "15:35",
+      "horse": "Henry's Friend",
+      "tipster": "West Country",
+      "score": "-14.0"
+    },
+    {
+      "time": "15:12",
+      "horse": "Metal Merchant",
+      "tipster": "Robin Goodfellow",
+      "score": "-12.7"
+    },
+    {
+      "time": "15:12",
+      "horse": "Cogitate",
+      "tipster": "Jim Delahunt",
+      "score": "-13.7"
+    },
+    {
+      "time": "15:35",
+      "horse": "Flash De Touzaine",
+      "tipster": "The Brigadier",
+      "score": "-13.6"
+    },
+    {
+      "time": "15:35",
+      "horse": "Magna Sam",
+      "tipster": "Whistler",
+      "score": "-14.3"
+    },
+    {
+      "time": "13:43",
+      "horse": "Ideal Des Bordes",
+      "tipster": "Sam Hardy",
+      "score": "-14.4"
+    },
+    {
+      "time": "15:35",
+      "horse": "Rock My Way",
+      "tipster": "Garry Owen",
+      "score": "-15.9"
+    },
+    {
+      "time": "13:25",
+      "horse": "Sunway",
+      "tipster": "Marlborough",
+      "score": "-15.8"
+    },
+    {
+      "time": "15:35",
+      "horse": "Rock My Way",
+      "tipster": "Postdata",
+      "score": "-18.6"
+    },
+    {
+      "time": "13:25",
+      "horse": "Bellum Justum",
+      "tipster": "Dean Kilbryde",
+      "score": "-19.6"
+    },
+    {
+      "time": "13:43",
+      "horse": "Eyed",
+      "tipster": "Rockavon",
+      "score": "-21.4"
+    },
+    {
+      "time": "14:55",
+      "horse": "Rockola Vogue",
+      "tipster": "Rory Delargy",
+      "score": "-24.1"
+    },
+    {
+      "time": "15:35",
+      "horse": "Sail Away",
+      "tipster": "Mercury",
+      "score": "-25.6"
+    },
+    {
+      "time": "14:15",
+      "horse": "Kabral Du Mathan",
+      "tipster": "Ben Morgan",
+      "score": "-25.7"
+    },
+    {
+      "time": "16:45",
+      "horse": "Queensbury Boy",
+      "tipster": "Jeffrey Ross",
+      "score": "-25.8"
+    },
+    {
+      "time": "13:25",
+      "horse": "Sunway",
+      "tipster": "Computeform",
+      "score": "-26.2"
+    },
+    {
+      "time": "15:35",
+      "horse": "Famous Bridge",
+      "tipster": "Spotlight",
+      "score": "-25.5"
+    },
+    {
+      "time": "14:35",
+      "horse": "Rashabar",
+      "tipster": "Templegate",
+      "score": "-27.5"
+    },
+    {
+      "time": "15:35",
+      "horse": "Surrey Quest",
+      "tipster": "On The Nose",
+      "score": "-28.0"
+    },
+    {
+      "time": "15:35",
+      "horse": "Chosen Witness",
+      "tipster": "Ross Shepherd",
+      "score": "-29.3"
+    },
+    {
+      "time": "15:12",
+      "horse": "Metal Merchant",
+      "tipster": "The Judge",
+      "score": "-29.3"
+    },
+    {
+      "time": "15:35",
+      "horse": "Olympic Man",
+      "tipster": "The Duke",
+      "score": "-30.9"
+    },
+    {
+      "time": "15:35",
+      "horse": "Brandt",
+      "tipster": "Jon Freeman",
+      "score": "-35.0"
+    },
+    {
+      "time": "15:35",
+      "horse": "Spanish Harlem",
+      "tipster": "Brian Flanagan",
+      "score": "-41.2"
+    },
+    {
+      "time": "15:35",
+      "horse": "Macdermott",
+      "tipster": "Chris Wright",
+      "score": "-41.4"
+    },
+    {
+      "time": "15:35",
+      "horse": "Grozni",
+      "tipster": "Moorestyle",
+      "score": "-44.1"
+    },
+    {
+      "time": "15:12",
+      "horse": "James McHenry",
+      "tipster": "Tipman Tips",
+      "score": "-44.0"
+    },
+    {
+      "time": "13:43",
+      "horse": "Whistle Stop Tour",
+      "tipster": "Fortunatus",
+      "score": "-46.0"
+    },
+    {
+      "time": "14:00",
+      "horse": "Formal",
+      "tipster": "Lambourn",
+      "score": "-51.1"
+    },
+    {
+      "time": "13:43",
+      "horse": "Loughglynn",
+      "tipster": "Adrian Wall",
+      "score": "-51.1"
+    }
+  ]
+}

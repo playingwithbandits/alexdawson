@@ -1,0 +1,170 @@
+{
+  "date": "2025-04-16",
+  "tips": [
+    {
+      "time": "13:30",
+      "horse": "Jax Junior",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "East India Express",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Moon D'Orange",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Ask Brewster",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Mr Hope Street",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Does He Know",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Continuance",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Sioux Perfect",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Azure Angel",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Albegone",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Adoon Valley",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Lightening Mann",
+      "isNap": false
+    },
+    {
+      "time": "16:32",
+      "horse": "Freddy Robinson",
+      "isNap": false
+    },
+    {
+      "time": "17:07",
+      "horse": "Beltadaay",
+      "isNap": false
+    },
+    {
+      "time": "17:37",
+      "horse": "Crown'S Lady",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Defence Minister",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Caughtredhanded",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Romantic Style",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "Blazing Spirit",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Valedictory",
+      "isNap": false
+    },
+    {
+      "time": "13:57",
+      "horse": "Nancy J",
+      "isNap": false
+    },
+    {
+      "time": "14:32",
+      "horse": "Aston Value",
+      "isNap": false
+    },
+    {
+      "time": "15:07",
+      "horse": "Joyful Princess",
+      "isNap": false
+    },
+    {
+      "time": "15:42",
+      "horse": "Reponse Finale",
+      "isNap": false
+    },
+    {
+      "time": "16:17",
+      "horse": "Neo Smart",
+      "isNap": false
+    },
+    {
+      "time": "16:52",
+      "horse": "Hasten Slowly",
+      "isNap": false
+    },
+    {
+      "time": "17:27",
+      "horse": "Los Toldos",
+      "isNap": false
+    },
+    {
+      "time": "17:12",
+      "horse": "Pyleigh Master",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "I Am The Moon",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Art Of Diplomacy",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Ninth Loch",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Bampton Star",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Just Aidan",
+      "isNap": true
+    }
+  ]
+}

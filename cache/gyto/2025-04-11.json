@@ -1,0 +1,225 @@
+{
+  "date": "2025-04-11",
+  "tips": [
+    {
+      "time": "13:30",
+      "horse": "Inappropriate",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Roxanne",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Histrionic",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Leader In The Park",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Asta La Pasta",
+      "isNap": false
+    },
+    {
+      "time": "16:58",
+      "horse": "Below The Radar",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Twist Of Fatecatch",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Nollyador",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Wasthatok",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Kalif D'Airy",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Ivane",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Bluenose Belle",
+      "isNap": false
+    },
+    {
+      "time": "13:52",
+      "horse": "Siren Suit",
+      "isNap": false
+    },
+    {
+      "time": "14:27",
+      "horse": "Breckenbrough",
+      "isNap": false
+    },
+    {
+      "time": "15:03",
+      "horse": "Serenity Prayer",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Charging Thunder",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Huscal",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Sir Les Patterson",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Sage Conseil",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Mutual Respect",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Redbridge Rambler",
+      "isNap": true
+    },
+    {
+      "time": "18:25",
+      "horse": "Suitably Surprised",
+      "isNap": false
+    },
+    {
+      "time": "18:55",
+      "horse": "Hold Onto The Line",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "Swingforthefence",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Whatsyourproblem",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Greenways",
+      "isNap": false
+    },
+    {
+      "time": "17:38",
+      "horse": "Jack The Savage",
+      "isNap": false
+    },
+    {
+      "time": "18:08",
+      "horse": "Hystery Bere",
+      "isNap": false
+    },
+    {
+      "time": "18:38",
+      "horse": "Sangiovese",
+      "isNap": true
+    },
+    {
+      "time": "19:08",
+      "horse": "Havefunontherun",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Pure Logic",
+      "isNap": false
+    },
+    {
+      "time": "17:12",
+      "horse": "Holy See",
+      "isNap": false
+    },
+    {
+      "time": "17:47",
+      "horse": "Glenashling",
+      "isNap": false
+    },
+    {
+      "time": "18:17",
+      "horse": "Straight Home",
+      "isNap": false
+    },
+    {
+      "time": "18:47",
+      "horse": "It'S Time Again",
+      "isNap": false
+    },
+    {
+      "time": "19:17",
+      "horse": "Ahead Of The Posse",
+      "isNap": false
+    },
+    {
+      "time": "19:47",
+      "horse": "Blazing Duke",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "First Approach",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Beano Power",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Jorge Alvares",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Macadam'S Rock",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Monkstown",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Quickshot",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Doctor Grace",
+      "isNap": false
+    }
+  ]
+}
