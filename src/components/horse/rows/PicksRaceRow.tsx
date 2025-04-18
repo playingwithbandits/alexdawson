@@ -731,6 +731,8 @@ export function PicksRaceRow({
             const aiGood = aiPercWithin20Percent && aiPerc >= 40;
             const rpPredGood = rpPredPercWithin20Percent;
 
+            const hasOlbgComment = Boolean(olbgCommentCount);
+
             const mentionedByTipsterArr = tipsterSiteNames?.filter(
               (x) => cleanName(x) === cleanName(name)
             );
@@ -794,10 +796,11 @@ export function PicksRaceRow({
                 isNonRunner={isNonRunner(race.time, name)}
                 greyedOut={count < 2}
                 title={paraGraph}
+                highlight3={aiGood && rpPredGood && hasOlbgComment}
                 highlight1={
-                  [olbgNapGood, rpPredGood, aiGood, mentionedByTipster].filter(
-                    Boolean
-                  ).length >= 3
+                  aiGood &&
+                  [olbgNapGood, rpPredGood, mentionedByTipster].filter(Boolean)
+                    .length >= 2
                 }
                 highlight2={[
                   olbgNapGood,
@@ -805,7 +808,8 @@ export function PicksRaceRow({
                   aiGood,
                   mentionedByTipster,
                 ].every(Boolean)}
-                showOnlyBest={showOnlyBest && count >= countToBeHigherThan}
+                showOnlyBest={showOnlyBest}
+                shownCountToBeHigherThan={count >= countToBeHigherThan}
               />
             );
           })}

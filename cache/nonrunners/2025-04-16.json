@@ -3,8 +3,8 @@
     "courseName": "Beverley",
     "raceCardsCourseUrl": "/racecards/2025-04-16#beverley",
     "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-04-16",
-    "going": "GOOD (GoingStick 7.1)",
-    "weather": "Showers",
+    "going": "GOOD (7.0)",
+    "weather": "Light cloud",
     "stallsPosition": "Inside",
     "races": [
       {
@@ -20,6 +20,27 @@
             "horseName": "Stardinia",
             "horseProfileUrl": "/profile/horse/7409479/stardinia/",
             "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Dakota Dawn",
+            "horseProfileUrl": "/profile/horse/7409472/dakota-dawn/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/6/beverley/2025-04-16/890403",
+        "horses": [
+          {
+            "horseName": "King Of Tonga",
+            "horseProfileUrl": "/profile/horse/2080897/king-of-tonga/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Azure Angel",
+            "horseProfileUrl": "/profile/horse/4570883/azure-angel/",
+            "raceNumber": "(1)"
           }
         ]
       },
@@ -44,6 +65,17 @@
             "raceNumber": "(13)"
           }
         ]
+      },
+      {
+        "raceTime": "5:37",
+        "raceCardUrl": "/racecards/6/beverley/2025-04-16/890406",
+        "horses": [
+          {
+            "horseName": "Astronomica",
+            "horseProfileUrl": "/profile/horse/4556224/astronomica/",
+            "raceNumber": "(7)"
+          }
+        ]
       }
     ]
   },
@@ -51,8 +83,8 @@
     "courseName": "Cheltenham",
     "raceCardsCourseUrl": "/racecards/2025-04-16#cheltenham",
     "raceCardsCourseMeetingsUrl": "/racecards/11/cheltenham/2025-04-16",
-    "going": "New Course - GOOD (GoingStick 7.1) (Watering) (Rail movements: 1.30 & 2.05 +57yds, 3.50 +76yds and 5.00 +38yds)",
-    "weather": "Showers",
+    "going": "New Course - GOOD (Watered; 7.1)",
+    "weather": "Sunny spells",
     "stallsPosition": "",
     "races": [
       {
@@ -63,6 +95,44 @@
             "horseName": "Groovy Blue",
             "horseProfileUrl": "/profile/horse/5419090/groovy-blue/",
             "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Pleasington",
+            "horseProfileUrl": "/profile/horse/5412824/pleasington/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-16/890557",
+        "horses": [
+          {
+            "horseName": "American Sniper",
+            "horseProfileUrl": "/profile/horse/4144676/american-sniper/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-16/890558",
+        "horses": [
+          {
+            "horseName": "Valleres",
+            "horseProfileUrl": "/profile/horse/2903487/valleres/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-16/890556",
+        "horses": [
+          {
+            "horseName": "Guard The Moon",
+            "horseProfileUrl": "/profile/horse/5418902/guard-the-moon/",
+            "raceNumber": "(9)"
           }
         ]
       },
@@ -83,7 +153,7 @@
     "courseName": "Ffos Las",
     "raceCardsCourseUrl": "/racecards/2025-04-16#ffos-las",
     "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-04-16",
-    "going": "SOFT (Watered) (Rail Movements: 4.37, 5.12 & 6.45 +41yds, 5.45 +55yds, 6.15 +62yds, 7.15 +83yds and 7.45 +28yds)",
+    "going": "SOFT (GoingStick: 5.6) (Rail Movements: 4.37, 5.12 & 6.45 +41yds, 5.45 +55yds, 6.15 +62yds, 7.15 +83yds and 7.45 +28yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
     "races": [
@@ -91,6 +161,11 @@
         "raceTime": "4:37",
         "raceCardUrl": "/racecards/1212/ffos-las/2025-04-16/893197",
         "horses": [
+          {
+            "horseName": "Buckna",
+            "horseProfileUrl": "/profile/horse/5727949/buckna/",
+            "raceNumber": "(2)"
+          },
           {
             "horseName": "Deep Purple",
             "horseProfileUrl": "/profile/horse/5045996/deep-purple/",
@@ -100,6 +175,17 @@
             "horseName": "Drayton Flyer",
             "horseProfileUrl": "/profile/horse/6907622/drayton-flyer/",
             "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:12",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-16/893238",
+        "horses": [
+          {
+            "horseName": "Golan Loop",
+            "horseProfileUrl": "/profile/horse/5884304/golan-loop/",
+            "raceNumber": "(3)"
           }
         ]
       },
@@ -163,17 +249,109 @@
     "courseName": "Gowran Park",
     "raceCardsCourseUrl": "/racecards/2025-04-16#gowran-park",
     "raceCardsCourseMeetingsUrl": "/racecards/184/gowran-park/2025-04-16",
-    "going": "GOOD TO YIELDING, Good in places",
+    "going": "YIELDING",
     "weather": "Showers",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "1:57",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-16/893128",
+        "horses": [
+          {
+            "horseName": "Nancy J",
+            "horseProfileUrl": "/profile/horse/6238184/nancy-j/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:07",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-16/893130",
+        "horses": [
+          {
+            "horseName": "Joyful Princess",
+            "horseProfileUrl": "/profile/horse/6087978/joyful-princess/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Calrissiana",
+            "horseProfileUrl": "/profile/horse/6429636/calrissiana/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:42",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-16/893131",
+        "horses": [
+          {
+            "horseName": "Dowth",
+            "horseProfileUrl": "/profile/horse/6350085/dowth/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:17",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-16/893132",
+        "horses": [
+          {
+            "horseName": "Marakesh",
+            "horseProfileUrl": "/profile/horse/6314154/marakesh/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Mallavelly",
+            "horseProfileUrl": "/profile/horse/5336295/mallavelly/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Neo Smart",
+            "horseProfileUrl": "/profile/horse/5005729/neo-smart/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:52",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-16/893133",
+        "horses": [
+          {
+            "horseName": "Barretstown",
+            "horseProfileUrl": "/profile/horse/3119663/barretstown/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Mastastroque",
+            "horseProfileUrl": "/profile/horse/5859133/mastastroque/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Stiorra",
+            "horseProfileUrl": "/profile/horse/6300757/stiorra/",
+            "raceNumber": "(19)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:27",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-16/893134",
+        "horses": [
+          {
+            "horseName": "Forlio",
+            "horseProfileUrl": "/profile/horse/4396738/forlio/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Newmarket",
     "raceCardsCourseUrl": "/racecards/2025-04-16#newmarket",
     "raceCardsCourseMeetingsUrl": "/racecards/38/newmarket/2025-04-16",
-    "going": "GOOD TO SOFT (GoingStick 7.0)",
-    "weather": "Showers",
+    "going": "GOOD TO SOFT (6.2) changing to GOOD after Race 1 (1.50)",
+    "weather": "mostly sunny",
     "stallsPosition": "(Far side course) Centre",
     "races": [
       {
@@ -194,6 +372,22 @@
             "horseName": "Dark Cloud Rising",
             "horseProfileUrl": "/profile/horse/5845556/dark-cloud-rising/",
             "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Defence Minister",
+            "horseProfileUrl": "/profile/horse/6314170/defence-minister/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-16/890395",
+        "horses": [
+          {
+            "horseName": "Lady Of The Isles",
+            "horseProfileUrl": "/profile/horse/6552271/lady-of-the-isles/",
+            "raceNumber": "(3)"
           }
         ]
       },
@@ -214,9 +408,117 @@
     "courseName": "Happy Valley",
     "raceCardsCourseUrl": "/racecards/2025-04-16#happy-valley",
     "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-04-16",
-    "going": "TURF: GOOD",
+    "going": "TURF: GOOD TO FIRM",
     "weather": "",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "11:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-16/893239",
+        "horses": [
+          {
+            "horseName": "Speedy Fortune",
+            "horseProfileUrl": "/profile/horse/4670924/speedy-fortune/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Gimme Five",
+            "horseProfileUrl": "/profile/horse/5676537/gimme-five/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-16/893241",
+        "horses": [
+          {
+            "horseName": "Wah May Wai Wai",
+            "horseProfileUrl": "/profile/horse/5203872/wah-may-wai-wai/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Truly Fluke",
+            "horseProfileUrl": "/profile/horse/7338978/truly-fluke/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-16/893243",
+        "horses": [
+          {
+            "horseName": "Radiant Swift",
+            "horseProfileUrl": "/profile/horse/7426925/radiant-swift/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "The Auspicious",
+            "horseProfileUrl": "/profile/horse/6737358/the-auspicious/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-16/893244",
+        "horses": [
+          {
+            "horseName": "Shinyu Kokoroe",
+            "horseProfileUrl": "/profile/horse/6161716/shinyu-kokoroe/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-16/893245",
+        "horses": [
+          {
+            "horseName": "Swagger Bro",
+            "horseProfileUrl": "/profile/horse/6768163/swagger-bro/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Fortune Whiskey",
+            "horseProfileUrl": "/profile/horse/4599515/fortune-whiskey/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-16/893246",
+        "horses": [
+          {
+            "horseName": "Top Peak",
+            "horseProfileUrl": "/profile/horse/5526376/top-peak/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Jubilant Winner",
+            "horseProfileUrl": "/profile/horse/6074490/jubilant-winner/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-04-16/893247",
+        "horses": [
+          {
+            "horseName": "Money Catcher",
+            "horseProfileUrl": "/profile/horse/3443221/money-catcher/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Ragga Bomb",
+            "horseProfileUrl": "/profile/horse/5147970/ragga-bomb/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
   }
 ]

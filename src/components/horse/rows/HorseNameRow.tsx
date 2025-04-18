@@ -16,6 +16,8 @@ interface HorseNameRowProps {
   highlight2?: boolean;
   title?: string;
   showOnlyBest: boolean;
+  shownCountToBeHigherThan: boolean;
+  highlight3?: boolean;
 }
 
 const getTrophy = (position: string) => {
@@ -68,7 +70,13 @@ export function HorseNameRow({
   highlight2,
   title,
   showOnlyBest,
+  shownCountToBeHigherThan,
+  highlight3,
 }: HorseNameRowProps) {
+  if (showOnlyBest && !shownCountToBeHigherThan) {
+    return <></>;
+  }
+
   const isAGoodBet = highlight1 || highlight2;
   if (showOnlyBest && !isAGoodBet) {
     return <></>;
@@ -78,7 +86,9 @@ export function HorseNameRow({
       <div
         className={`flex justify-between ${greyedOut ? "text-gray-500" : ""} ${
           highlight1 && !highlight2 ? "text-[#f2f92c]" : ""
-        } ${highlight2 ? "text-[#ff881f]" : ""}`}
+        } ${highlight2 ? "text-[#ff881f]" : ""} ${
+          highlight3 ? "text-[#00ff00]" : ""
+        }`}
       >
         <span>
           {getTrophy(getHorsePosition(horseName, results, time))}

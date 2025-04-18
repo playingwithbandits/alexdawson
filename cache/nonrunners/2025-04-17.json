@@ -1,0 +1,385 @@
+[
+  {
+    "courseName": "Cheltenham",
+    "raceCardsCourseUrl": "/racecards/2025-04-17#cheltenham",
+    "raceCardsCourseMeetingsUrl": "/racecards/11/cheltenham/2025-04-17",
+    "going": "GOOD (Watered; 6.7)",
+    "weather": "Sunny spells with occasional light showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-17/890561",
+        "horses": [
+          {
+            "horseName": "Lady Jago",
+            "horseProfileUrl": "/profile/horse/4979958/lady-jago/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-17/890563",
+        "horses": [
+          {
+            "horseName": "Batwomen",
+            "horseProfileUrl": "/profile/horse/4315510/batwomen/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Epinephrine",
+            "horseProfileUrl": "/profile/horse/5366153/epinephrine/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Springs A Girl",
+            "horseProfileUrl": "/profile/horse/5322903/springs-a-girl/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Sunday Soldier",
+            "horseProfileUrl": "/profile/horse/4447772/sunday-soldier/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-17/890562",
+        "horses": [
+          {
+            "horseName": "Mighty Moth",
+            "horseProfileUrl": "/profile/horse/4794080/mighty-moth/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-17/890566",
+        "horses": [
+          {
+            "horseName": "Metkayina",
+            "horseProfileUrl": "/profile/horse/5383923/metkayina/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-04-17/890567",
+        "horses": [
+          {
+            "horseName": "Ladies Day",
+            "horseProfileUrl": "/profile/horse/7374136/ladies-day/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Loveatfirstglance",
+            "horseProfileUrl": "/profile/horse/6855093/loveatfirstglance/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Clonmel",
+    "raceCardsCourseUrl": "/racecards/2025-04-17#clonmel",
+    "raceCardsCourseMeetingsUrl": "/racecards/177/clonmel/2025-04-17",
+    "going": "GOOD TO YIELDING",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/177/clonmel/2025-04-17/893137",
+        "horses": [
+          {
+            "horseName": "Kates Choice",
+            "horseProfileUrl": "/profile/horse/5906650/kates-choice/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/177/clonmel/2025-04-17/893138",
+        "horses": [
+          {
+            "horseName": "Volez Vous",
+            "horseProfileUrl": "/profile/horse/5492845/volez-vous/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Pepperpots",
+            "horseProfileUrl": "/profile/horse/5428945/pepperpots/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/177/clonmel/2025-04-17/893139",
+        "horses": [
+          {
+            "horseName": "Duke Otto",
+            "horseProfileUrl": "/profile/horse/3247348/duke-otto/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-04-17#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-04-17",
+    "going": "GOOD TO SOFT, Soft in places (GoingStick 5.9) (Rail movements: 5.45 +82yds and 6.15, 6.45, 7.15 & 7.45 +55yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:37",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-17/893207",
+        "horses": [
+          {
+            "horseName": "Jimmyjeroo",
+            "horseProfileUrl": "/profile/horse/4547875/jimmyjeroo/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:12",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-17/893204",
+        "horses": [
+          {
+            "horseName": "Stratagem",
+            "horseProfileUrl": "/profile/horse/2883458/stratagem/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Don Alvaro",
+            "horseProfileUrl": "/profile/horse/3262885/don-alvaro/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Karuma Grey",
+            "horseProfileUrl": "/profile/horse/4159565/karuma-grey/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-17/893206",
+        "horses": [
+          {
+            "horseName": "Boskill Borden",
+            "horseProfileUrl": "/profile/horse/4879071/boskill-borden/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Les's Jersey Royal",
+            "horseProfileUrl": "/profile/horse/5643982/less-jersey-royal/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-17/893203",
+        "horses": [
+          {
+            "horseName": "Jackstell",
+            "horseProfileUrl": "/profile/horse/4980009/jackstell/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-17/893205",
+        "horses": [
+          {
+            "horseName": "Goblet Of Fire",
+            "horseProfileUrl": "/profile/horse/4455656/goblet-of-fire/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Another Fine Mess",
+            "horseProfileUrl": "/profile/horse/5419092/another-fine-mess/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-04-17/893208",
+        "horses": [
+          {
+            "horseName": "Zamek",
+            "horseProfileUrl": "/profile/horse/7395217/zamek/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newmarket",
+    "raceCardsCourseUrl": "/racecards/2025-04-17#newmarket",
+    "raceCardsCourseMeetingsUrl": "/racecards/38/newmarket/2025-04-17",
+    "going": "GOOD (7.0)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "(Far side course) Centre",
+    "races": [
+      {
+        "raceTime": "1:50",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-17/890401",
+        "horses": [
+          {
+            "horseName": "Silent Storm",
+            "horseProfileUrl": "/profile/horse/7413942/silent-storm/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Regal Guest",
+            "horseProfileUrl": "/profile/horse/6323500/regal-guest/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-17/890396",
+        "horses": [
+          {
+            "horseName": "Skukuza",
+            "horseProfileUrl": "/profile/horse/5176444/skukuza/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Desperate Dan",
+            "horseProfileUrl": "/profile/horse/5900731/desperate-dan/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-17/890397",
+        "horses": [
+          {
+            "horseName": "Tiger Mask",
+            "horseProfileUrl": "/profile/horse/5973543/tiger-mask/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-17/890398",
+        "horses": [
+          {
+            "horseName": "Fair Wind",
+            "horseProfileUrl": "/profile/horse/4175570/fair-wind/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-17/890400",
+        "horses": [
+          {
+            "horseName": "Final Night",
+            "horseProfileUrl": "/profile/horse/6894103/final-night/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/38/newmarket/2025-04-17/893295",
+        "horses": [
+          {
+            "horseName": "Montpellier Green",
+            "horseProfileUrl": "/profile/horse/5708619/montpellier-green/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ripon",
+    "raceCardsCourseUrl": "/racecards/2025-04-17#ripon",
+    "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-04-17",
+    "going": "GOOD (Good to firm in places; 8.2)",
+    "weather": "Sunny intervals",
+    "stallsPosition": "Straight - Stands' side; 1m & 1m2f - Inside; 1m4f - Centre",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/49/ripon/2025-04-17/890416",
+        "horses": [
+          {
+            "horseName": "Kennedys Pass",
+            "horseProfileUrl": "/profile/horse/7413948/kennedys-pass/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:35",
+        "raceCardUrl": "/racecards/49/ripon/2025-04-17/890415",
+        "horses": [
+          {
+            "horseName": "Emerald Island",
+            "horseProfileUrl": "/profile/horse/6473554/emerald-island/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:42",
+        "raceCardUrl": "/racecards/49/ripon/2025-04-17/890410",
+        "horses": [
+          {
+            "horseName": "Wobwobwob",
+            "horseProfileUrl": "/profile/horse/3161578/wobwobwob/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/49/ripon/2025-04-17/890411",
+        "horses": [
+          {
+            "horseName": "High Point",
+            "horseProfileUrl": "/profile/horse/5021312/high-point/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Baryshnikov",
+            "horseProfileUrl": "/profile/horse/2241073/baryshnikov/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Longchamp",
+    "raceCardsCourseUrl": "/racecards/2025-04-17#longchamp",
+    "raceCardsCourseMeetingsUrl": "/racecards/211/longchamp/2025-04-17",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
