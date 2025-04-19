@@ -1,0 +1,100 @@
+{
+  "date": "2025-04-18",
+  "tips": [
+    {
+      "time": "13:15",
+      "horse": "Bowmark",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Cloud Cover",
+      "isNap": true
+    },
+    {
+      "time": "15:00",
+      "horse": "Valiant Force",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "We Never Stop",
+      "isNap": false
+    },
+    {
+      "time": "16:07",
+      "horse": "Old Harrovian",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "Tribal Star",
+      "isNap": false
+    },
+    {
+      "time": "13:30",
+      "horse": "Shahbaz",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Mr Baloo",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Blue Prince",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Cajetan",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Dance Time",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Vocal Legend",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Angle Land",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Split Elevens",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Amaysmont",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Caballo De Mar",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Sky Majesty",
+      "isNap": true
+    },
+    {
+      "time": "17:00",
+      "horse": "Westernesse",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Dalmally",
+      "isNap": false
+    }
+  ]
+}

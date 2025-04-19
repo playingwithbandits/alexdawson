@@ -1,0 +1,127 @@
+[
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-18#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-04-18",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-18/890671",
+        "horses": [
+          {
+            "horseName": "Prefer The Sister",
+            "horseProfileUrl": "/profile/horse/5737954/prefer-the-sister/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Poetic Force",
+            "horseProfileUrl": "/profile/horse/1028267/poetic-force/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:25",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-18/893419",
+        "horses": [
+          {
+            "horseName": "Mashaan",
+            "horseProfileUrl": "/profile/horse/3217626/mashaan/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-18/890667",
+        "horses": [
+          {
+            "horseName": "Cardano",
+            "horseProfileUrl": "/profile/horse/2469501/cardano/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-18/890665",
+        "horses": [
+          {
+            "horseName": "Uncle Don",
+            "horseProfileUrl": "/profile/horse/6046814/uncle-don/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-04-18/890670",
+        "horses": [
+          {
+            "horseName": "Shielas Well",
+            "horseProfileUrl": "/profile/horse/6023320/shielas-well/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Phrygia",
+            "horseProfileUrl": "/profile/horse/6949244/phrygia/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-18#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-04-18",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Sunny",
+    "stallsPosition": "1m - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-04-18/890674",
+        "horses": [
+          {
+            "horseName": "Sommelier",
+            "horseProfileUrl": "/profile/horse/4826997/sommelier/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-04-18/890678",
+        "horses": [
+          {
+            "horseName": "Tuco Salamanca",
+            "horseProfileUrl": "/profile/horse/6278712/tuco-salamanca/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-18#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-04-18",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; 1m2f - Outside; 2m - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Saint-Cloud",
+    "raceCardsCourseUrl": "/racecards/2025-04-18#saint-cloud",
+    "raceCardsCourseMeetingsUrl": "/racecards/219/saint-cloud/2025-04-18",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
