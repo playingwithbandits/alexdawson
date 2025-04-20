@@ -717,6 +717,10 @@ export function PicksRaceRow({
               ?.filter((x) => x.napTips >= 1)
               ?.some((x) => cleanName(x.horseName) === cleanName(name));
 
+            const olbgExpertCount = olbgTipsWithExpert
+              ?.filter((x) => x.expertCount >= 1)
+              ?.some((x) => cleanName(x.horseName) === cleanName(name));
+
             const olbgCommentCount = olbgTipsWithComment
               ?.filter((x) => x.commentCount >= 1)
               ?.some((x) => cleanName(x.horseName) === cleanName(name));
@@ -730,6 +734,7 @@ export function PicksRaceRow({
             const olbgNapGood = olbgNapCount && olbgCommentCount;
             const aiGood = aiPercWithin20Percent && aiPerc >= 40;
             const rpPredGood = rpPredPercWithin20Percent;
+            const olbgExpertGood = olbgExpertCount && olbgCommentCount;
 
             const hasOlbgComment = Boolean(olbgCommentCount);
 
@@ -741,7 +746,9 @@ export function PicksRaceRow({
 
             const paraGraph = [
               [
-                olbgNapGood && `<span style='color: #00ffff'>OLBG</span>`,
+                olbgNapGood && `<span style='color: #00ffff'>OLBG Nap</span>`,
+                olbgExpertGood &&
+                  `<span style='color: #00ffff'>OLBG Expert</span>`,
                 aiGood && `<span style='color: #00ffff'>AI</span>`,
                 rpPredGood && `<span style='color: #00ffff'>RP</span>`,
                 mentionedByTipster &&
@@ -799,10 +806,15 @@ export function PicksRaceRow({
                 highlight3={aiGood && rpPredGood && hasOlbgComment}
                 highlight1={
                   aiGood &&
-                  [olbgNapGood, rpPredGood, mentionedByTipster].filter(Boolean)
-                    .length >= 2
+                  [
+                    olbgNapGood,
+                    olbgExpertGood,
+                    rpPredGood,
+                    mentionedByTipster,
+                  ].filter(Boolean).length >= 2
                 }
                 highlight2={[
+                  olbgExpertGood,
                   olbgNapGood,
                   rpPredGood,
                   aiGood,
