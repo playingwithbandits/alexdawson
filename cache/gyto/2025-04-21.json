@@ -1,0 +1,295 @@
+{
+  "date": "2025-04-21",
+  "tips": [
+    {
+      "time": "13:15",
+      "horse": "Chosen Thyme",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Romella",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Coming Up Easy",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "The Great Unknown",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "West Of Carrig",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Lifetime Ambition",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Generous Risk",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Simply Natural",
+      "isNap": false
+    },
+    {
+      "time": "13:25",
+      "horse": "Romieu",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Lady Of The Garr",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Tickets",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Media Mogul",
+      "isNap": true
+    },
+    {
+      "time": "16:15",
+      "horse": "Cadarn",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Flamborough Head",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Mayday Mayday",
+      "isNap": false
+    },
+    {
+      "time": "13:35",
+      "horse": "Love Olivia",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Boasty",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Sweet Cicely",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Autumn Angel",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Midnightattheoasis",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Bold Suitor",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Match Anthem",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Life On The Rocks",
+      "isNap": false
+    },
+    {
+      "time": "13:49",
+      "horse": "Pragnell",
+      "isNap": false
+    },
+    {
+      "time": "14:24",
+      "horse": "Zaochen Enki",
+      "isNap": false
+    },
+    {
+      "time": "14:59",
+      "horse": "El Muchacho",
+      "isNap": false
+    },
+    {
+      "time": "15:34",
+      "horse": "Sageburg County",
+      "isNap": false
+    },
+    {
+      "time": "16:07",
+      "horse": "El Curamach",
+      "isNap": false
+    },
+    {
+      "time": "16:44",
+      "horse": "Impecunious",
+      "isNap": false
+    },
+    {
+      "time": "17:19",
+      "horse": "Old Park Star",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Zamek",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Gwennie May Star",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Norn Iron",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Excelero",
+      "isNap": false
+    },
+    {
+      "time": "16:19",
+      "horse": "Lady Jago",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Public Enemy",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Emerald Poet",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Whimsy",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Blue Lemons",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Farmers Lodge",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Kopeck De Mee",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Heart Wood",
+      "isNap": true
+    },
+    {
+      "time": "17:00",
+      "horse": "Haiti Couleurs",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Folly Master",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Shuttle Diplomacy",
+      "isNap": false
+    },
+    {
+      "time": "14:13",
+      "horse": "Stormin Crossgales",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Under The Sun",
+      "isNap": false
+    },
+    {
+      "time": "15:23",
+      "horse": "Auntie Maggie",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Diamond Koda",
+      "isNap": false
+    },
+    {
+      "time": "16:33",
+      "horse": "Ronnies Reflection",
+      "isNap": false
+    },
+    {
+      "time": "17:08",
+      "horse": "Jack N Jones",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Modern Style",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Top Of The Class",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Ahlain",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Coup De Force",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Study Up",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Lazzar",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Grey Fox",
+      "isNap": false
+    }
+  ]
+}

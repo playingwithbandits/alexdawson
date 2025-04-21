@@ -811,7 +811,7 @@ export function PicksRaceRow({
                     olbgExpertGood,
                     rpPredGood,
                     mentionedByTipster,
-                  ].filter(Boolean).length >= 2
+                  ].filter(Boolean).length >= 3
                 }
                 highlight2={[
                   olbgExpertGood,

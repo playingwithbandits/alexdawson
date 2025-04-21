@@ -1,0 +1,56 @@
+[
+  {
+    "courseName": "Epsom",
+    "raceCardsCourseUrl": "/racecards/2025-04-22#epsom",
+    "raceCardsCourseMeetingsUrl": "/racecards/17/epsom/2025-04-22",
+    "going": "GOOD, Good to firm in places on Sprint course (GoingStick: Sprint 7.1, Round 6.9) (Watering) (Rail Movements: 2.10, 2.45, 3.20, 3.55, 4.25 & 5.00 +40yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "5f - Stands' side; 1m4f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Fairyhouse",
+    "raceCardsCourseUrl": "/racecards/2025-04-22#fairyhouse",
+    "raceCardsCourseMeetingsUrl": "/racecards/182/fairyhouse/2025-04-22",
+    "going": "SOFT, Soft to heavy in places",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Hereford",
+    "raceCardsCourseUrl": "/racecards/2025-04-22#hereford",
+    "raceCardsCourseMeetingsUrl": "/racecards/24/hereford/2025-04-22",
+    "going": "GOOD (GoingStick: Chase 7.4, Hurdle 6.9) (Watering) (Rail Movements: 5.10 +40yds, 5.43, 7.13 & 7.43 +34yds and 6.13 & 6.43 +31yds)",
+    "weather": "Scattered showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Kelso",
+    "raceCardsCourseUrl": "/racecards/2025-04-22#kelso",
+    "raceCardsCourseMeetingsUrl": "/racecards/27/kelso/2025-04-22",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.6) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Thirsk",
+    "raceCardsCourseUrl": "/racecards/2025-04-22#thirsk",
+    "raceCardsCourseMeetingsUrl": "/racecards/80/thirsk/2025-04-22",
+    "going": "GOOD TO FIRM, Good in places (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Centre; 1m4f - Stands' side; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-04-22#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-04-22",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.2) (Watered)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": []
+  }
+]

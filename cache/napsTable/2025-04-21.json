@@ -1,0 +1,293 @@
+{
+  "date": "2025-04-21",
+  "tips": [
+    {
+      "time": "17:00",
+      "horse": "Kinturk Kalanisi",
+      "tipster": "Melissa Jones",
+      "score": "21.1"
+    },
+    {
+      "time": "17:00",
+      "horse": "Panda Boy",
+      "tipster": "Rory Paddock",
+      "score": "17.8"
+    },
+    {
+      "time": "14:35",
+      "horse": "Aucunrisque",
+      "tipster": "RP Ratings",
+      "score": "14.1"
+    },
+    {
+      "time": "15:50",
+      "horse": "Staffordshire Knot",
+      "tipster": "Farringdon",
+      "score": "13.9"
+    },
+    {
+      "time": "16:55",
+      "horse": "Dickens",
+      "tipster": "Jason Heavey",
+      "score": "10.5"
+    },
+    {
+      "time": "16:05",
+      "horse": "North View",
+      "tipster": "Rob Wright",
+      "score": "7.1"
+    },
+    {
+      "time": "18:20",
+      "horse": "Moel Arthur",
+      "tipster": "Newsboy",
+      "score": "6.0"
+    },
+    {
+      "time": "14:55",
+      "horse": "Crown Board",
+      "tipster": "Chris Connolly",
+      "score": "5.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Will Do",
+      "tipster": "Karl Hedley",
+      "score": "3.5"
+    },
+    {
+      "time": "17:00",
+      "horse": "Another Choice",
+      "tipster": "Steve Mullington",
+      "score": "-0.2"
+    },
+    {
+      "time": "14:05",
+      "horse": "Solsbury Hill",
+      "tipster": "The Score",
+      "score": "-2.7"
+    },
+    {
+      "time": "17:40",
+      "horse": "Folly Master",
+      "tipster": "Lee Sobot",
+      "score": "-3.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Bushmans Pass",
+      "tipster": "Luke Tucker",
+      "score": "-4.0"
+    },
+    {
+      "time": "16:15",
+      "horse": "Barley",
+      "tipster": "The North",
+      "score": "-4.3"
+    },
+    {
+      "time": "15:50",
+      "horse": "Lantry Lady",
+      "tipster": "The Punt",
+      "score": "-7.0"
+    },
+    {
+      "time": "14:55",
+      "horse": "Exoplanet",
+      "tipster": "Andrew Mount",
+      "score": "-8.6"
+    },
+    {
+      "time": "14:35",
+      "horse": "Jpr One",
+      "tipster": "Glendale",
+      "score": "-10.3"
+    },
+    {
+      "time": "17:55",
+      "horse": "Manalishi",
+      "tipster": "Whistler",
+      "score": "-12.8"
+    },
+    {
+      "time": "17:00",
+      "horse": "Sequestered",
+      "tipster": "Matt Polley",
+      "score": "-12.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Kinturk Kalanisi",
+      "tipster": "Ian Gaughran",
+      "score": "-14.6"
+    },
+    {
+      "time": "14:35",
+      "horse": "Westport Cove",
+      "tipster": "Garry Owen",
+      "score": "-13.2"
+    },
+    {
+      "time": "16:05",
+      "horse": "North View",
+      "tipster": "Marlborough",
+      "score": "-13.5"
+    },
+    {
+      "time": "17:00",
+      "horse": "Will Do",
+      "tipster": "Sam Hardy",
+      "score": "-15.6"
+    },
+    {
+      "time": "16:44",
+      "horse": "Hawk Stone",
+      "tipster": "West Country",
+      "score": "-17.9"
+    },
+    {
+      "time": "17:00",
+      "horse": "Haiti Couleurs",
+      "tipster": "Jim Delahunt",
+      "score": "-17.9"
+    },
+    {
+      "time": "14:55",
+      "horse": "Botanical",
+      "tipster": "Robin Goodfellow",
+      "score": "-17.3"
+    },
+    {
+      "time": "14:55",
+      "horse": "Crown Board",
+      "tipster": "The Brigadier",
+      "score": "-18.2"
+    },
+    {
+      "time": "16:20",
+      "horse": "Saint Sam",
+      "tipster": "Dean Kilbryde",
+      "score": "-18.5"
+    },
+    {
+      "time": "15:10",
+      "horse": "Norn Iron",
+      "tipster": "Jeffrey Ross",
+      "score": "-20.6"
+    },
+    {
+      "time": "15:45",
+      "horse": "Excelero",
+      "tipster": "Rockavon",
+      "score": "-20.8"
+    },
+    {
+      "time": "16:20",
+      "horse": "Heart Wood",
+      "tipster": "Mercury",
+      "score": "-22.4"
+    },
+    {
+      "time": "13:55",
+      "horse": "Ustath",
+      "tipster": "Postdata",
+      "score": "-23.0"
+    },
+    {
+      "time": "17:00",
+      "horse": "Bioluminescence",
+      "tipster": "Rory Delargy",
+      "score": "-24.3"
+    },
+    {
+      "time": "14:35",
+      "horse": "Jpr One",
+      "tipster": "Spotlight",
+      "score": "-23.3"
+    },
+    {
+      "time": "16:19",
+      "horse": "Lady Jago",
+      "tipster": "Computeform",
+      "score": "-25.1"
+    },
+    {
+      "time": "17:00",
+      "horse": "Another Choice",
+      "tipster": "On The Nose",
+      "score": "-27.8"
+    },
+    {
+      "time": "17:00",
+      "horse": "Haiti Couleurs",
+      "tipster": "Ben Morgan",
+      "score": "-29.3"
+    },
+    {
+      "time": "17:00",
+      "horse": "Kinturk Kalanisi",
+      "tipster": "Jon Freeman",
+      "score": "-30.3"
+    },
+    {
+      "time": "14:35",
+      "horse": "Westport Cove",
+      "tipster": "Templegate",
+      "score": "-31.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "Cruyff Turn",
+      "tipster": "The Duke",
+      "score": "-32.2"
+    },
+    {
+      "time": "17:00",
+      "horse": "Better Days Ahead",
+      "tipster": "Ross Shepherd",
+      "score": "-32.8"
+    },
+    {
+      "time": "17:00",
+      "horse": "Will Do",
+      "tipster": "Brian Flanagan",
+      "score": "-40.3"
+    },
+    {
+      "time": "17:00",
+      "horse": "Panda Boy",
+      "tipster": "Fortunatus",
+      "score": "-41.5"
+    },
+    {
+      "time": "17:00",
+      "horse": "Will Do",
+      "tipster": "Moorestyle",
+      "score": "-42.2"
+    },
+    {
+      "time": "17:00",
+      "horse": "Sa Majeste",
+      "tipster": "Chris Wright",
+      "score": "-42.7"
+    },
+    {
+      "time": "16:05",
+      "horse": "Supreme King",
+      "tipster": "Tipman Tips",
+      "score": "-44.3"
+    },
+    {
+      "time": "14:35",
+      "horse": "Teddy Blue",
+      "tipster": "Lambourn",
+      "score": "-48.1"
+    },
+    {
+      "time": "14:35",
+      "horse": "Asta La Pasta",
+      "tipster": "Adrian Wall",
+      "score": "-53.5"
+    }
+  ]
+}

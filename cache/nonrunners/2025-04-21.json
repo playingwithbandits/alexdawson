@@ -1,0 +1,487 @@
+[
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-04-21",
+    "going": "GOOD, Good to soft in places (GoingStick: Chase 6.7, Hurdle 6.2) (Watering) (Rail Movements: 1.49 & 4.44 +48yds and 2.24, 2.59, 3.34, 4.07 & 5.19 +24yds)",
+    "weather": "Scattered showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:49",
+        "raceCardUrl": "/racecards/12/chepstow/2025-04-21/891678",
+        "horses": [
+          {
+            "horseName": "Glance Of Glory",
+            "horseProfileUrl": "/profile/horse/7426991/glance-of-glory/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:59",
+        "raceCardUrl": "/racecards/12/chepstow/2025-04-21/891676",
+        "horses": [
+          {
+            "horseName": "Alto Alto",
+            "horseProfileUrl": "/profile/horse/3457998/alto-alto/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:07",
+        "raceCardUrl": "/racecards/12/chepstow/2025-04-21/891677",
+        "horses": [
+          {
+            "horseName": "Another Fine Mess",
+            "horseProfileUrl": "/profile/horse/5419092/another-fine-mess/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:44",
+        "raceCardUrl": "/racecards/12/chepstow/2025-04-21/891680",
+        "horses": [
+          {
+            "horseName": "Lightonthewing",
+            "horseProfileUrl": "/profile/horse/2935719/lightonthewing/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cork",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#cork",
+    "raceCardsCourseMeetingsUrl": "/racecards/596/cork/2025-04-21",
+    "going": "YIELDING, Yielding to soft in places on Hurdle course",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:15",
+        "raceCardUrl": "/racecards/596/cork/2025-04-21/893443",
+        "horses": [
+          {
+            "horseName": "Chosen Thyme",
+            "horseProfileUrl": "/profile/horse/3558232/chosen-thyme/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Miss Penny Copper",
+            "horseProfileUrl": "/profile/horse/5764663/miss-penny-copper/",
+            "raceNumber": "(20)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:50",
+        "raceCardUrl": "/racecards/596/cork/2025-04-21/893444",
+        "horses": [
+          {
+            "horseName": "Fourcardrun",
+            "horseProfileUrl": "/profile/horse/5785005/fourcardrun/",
+            "raceNumber": "(23)"
+          },
+          {
+            "horseName": "Cullagh Pride",
+            "horseProfileUrl": "/profile/horse/4982072/cullagh-pride/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Old Kenmare",
+            "horseProfileUrl": "/profile/horse/6855090/old-kenmare/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "No Big Deal",
+            "horseProfileUrl": "/profile/horse/4857569/no-big-deal/",
+            "raceNumber": "(22)"
+          },
+          {
+            "horseName": "Good Bye Milan",
+            "horseProfileUrl": "/profile/horse/3687253/good-bye-milan/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/596/cork/2025-04-21/893445",
+        "horses": [
+          {
+            "horseName": "Captains Nephew",
+            "horseProfileUrl": "/profile/horse/4159577/captains-nephew/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Gaelic Arc",
+            "horseProfileUrl": "/profile/horse/3256729/gaelic-arc/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/596/cork/2025-04-21/893446",
+        "horses": [
+          {
+            "horseName": "Iorens",
+            "horseProfileUrl": "/profile/horse/4231676/iorens/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "The Great Unknown",
+            "horseProfileUrl": "/profile/horse/5007808/the-great-unknown/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/596/cork/2025-04-21/893447",
+        "horses": [
+          {
+            "horseName": "Chiefs Kingdom",
+            "horseProfileUrl": "/profile/horse/4231771/chiefs-kingdom/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "I Am Rocco",
+            "horseProfileUrl": "/profile/horse/4059484/i-am-rocco/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "I Masked Du Potier",
+            "horseProfileUrl": "/profile/horse/5073336/i-masked-du-potier/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/596/cork/2025-04-21/893448",
+        "horses": [
+          {
+            "horseName": "Lifetime Ambition",
+            "horseProfileUrl": "/profile/horse/2644701/lifetime-ambition/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/596/cork/2025-04-21/893449",
+        "horses": [
+          {
+            "horseName": "Johnny K",
+            "horseProfileUrl": "/profile/horse/5826655/johnny-k/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Kilbuny Supersonic",
+            "horseProfileUrl": "/profile/horse/5689577/kilbuny-supersonic/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Fairyhouse",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#fairyhouse",
+    "raceCardsCourseMeetingsUrl": "/racecards/182/fairyhouse/2025-04-21",
+    "going": "SOFT, Soft to heavy in places",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/182/fairyhouse/2025-04-21/893451",
+        "horses": [
+          {
+            "horseName": "Kaptain Bay",
+            "horseProfileUrl": "/profile/horse/5256289/kaptain-bay/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Aurea Fortuna",
+            "horseProfileUrl": "/profile/horse/5521366/aurea-fortuna/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Read To Return",
+            "horseProfileUrl": "/profile/horse/3575200/read-to-return/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Solsbury Hill",
+            "horseProfileUrl": "/profile/horse/5870141/solsbury-hill/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Putapoundinthejar",
+            "horseProfileUrl": "/profile/horse/5746471/putapoundinthejar/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/182/fairyhouse/2025-04-21/893453",
+        "horses": [
+          {
+            "horseName": "Hamsiyann",
+            "horseProfileUrl": "/profile/horse/4522940/hamsiyann/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Mordor",
+            "horseProfileUrl": "/profile/horse/4622306/mordor/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Win Some Lose Some",
+            "horseProfileUrl": "/profile/horse/4967872/win-some-lose-some/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/182/fairyhouse/2025-04-21/893454",
+        "horses": [
+          {
+            "horseName": "Kopeck De Mee",
+            "horseProfileUrl": "/profile/horse/5526358/kopeck-de-mee/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Beacon Edge",
+            "horseProfileUrl": "/profile/horse/2297812/beacon-edge/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/182/fairyhouse/2025-04-21/893455",
+        "horses": [
+          {
+            "horseName": "Ash Tree Meadow",
+            "horseProfileUrl": "/profile/horse/3272446/ash-tree-meadow/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/182/fairyhouse/2025-04-21/891387",
+        "horses": [
+          {
+            "horseName": "Tullybeg",
+            "horseProfileUrl": "/profile/horse/2630783/tullybeg/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Hasthing",
+            "horseProfileUrl": "/profile/horse/4662545/hasthing/",
+            "raceNumber": "(29)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Fakenham",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#fakenham",
+    "raceCardsCourseMeetingsUrl": "/racecards/18/fakenham/2025-04-21",
+    "going": "GOOD (GoingStick 5.8) (Watered) (Rail Movements: 2.13 +185yds, 2.38, 3.23 & 5.08 136yds, 3.58 +141yds and 4.33 +221yds)",
+    "weather": "Scattered showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:48",
+        "raceCardUrl": "/racecards/18/fakenham/2025-04-21/891686",
+        "horses": [
+          {
+            "horseName": "Popa Rich",
+            "horseProfileUrl": "/profile/horse/6224714/popa-rich/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:58",
+        "raceCardUrl": "/racecards/18/fakenham/2025-04-21/891682",
+        "horses": [
+          {
+            "horseName": "Police Academy",
+            "horseProfileUrl": "/profile/horse/4189580/police-academy/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-04-21",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Showers",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Plumpton",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#plumpton",
+    "raceCardsCourseMeetingsUrl": "/racecards/44/plumpton/2025-04-21",
+    "going": "GOOD, Good to soft in places on Hurdle course (GoingStick: Chase 7.0, Hurdle 6.8) (Watering) (Rail Movements: 2.00 -13yds, 2.35 +99yds, 3.10 & 4.55 -8yds, 3.45 & 5.35 -11yds and 4.19 +148yds)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-21/891670",
+        "horses": [
+          {
+            "horseName": "Copshill Lad",
+            "horseProfileUrl": "/profile/horse/4129100/copshill-lad/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-21/891669",
+        "horses": [
+          {
+            "horseName": "Confinentic",
+            "horseProfileUrl": "/profile/horse/6046667/confinentic/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Authentic Legacy",
+            "horseProfileUrl": "/profile/horse/5541788/authentic-legacy/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-21/891673",
+        "horses": [
+          {
+            "horseName": "He's A Latchico",
+            "horseProfileUrl": "/profile/horse/3228343/hes-a-latchico/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-21/891671",
+        "horses": [
+          {
+            "horseName": "Fortune Timmy",
+            "horseProfileUrl": "/profile/horse/6833891/fortune-timmy/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Redcar",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#redcar",
+    "raceCardsCourseMeetingsUrl": "/racecards/47/redcar/2025-04-21",
+    "going": "GOOD TO FIRM (GoingStick: 10.1) (Watered)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight course - Stands' side; Round course - Inside",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/47/redcar/2025-04-21/891445",
+        "horses": [
+          {
+            "horseName": "Garifullina",
+            "horseProfileUrl": "/profile/horse/4634806/garifullina/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/47/redcar/2025-04-21/891447",
+        "horses": [
+          {
+            "horseName": "Crackinthunder",
+            "horseProfileUrl": "/profile/horse/6701901/crackinthunder/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-04-21",
+    "going": "TAPETA: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "1:35",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-21/891795",
+        "horses": [
+          {
+            "horseName": "Acceptance",
+            "horseProfileUrl": "/profile/horse/7431637/acceptance/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Senorita Vega",
+            "horseProfileUrl": "/profile/horse/7355925/senorita-vega/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-21/891794",
+        "horses": [
+          {
+            "horseName": "Elland Road Girl",
+            "horseProfileUrl": "/profile/horse/6064592/elland-road-girl/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-21/891797",
+        "horses": [
+          {
+            "horseName": "Bernie The Bear",
+            "horseProfileUrl": "/profile/horse/4395020/bernie-the-bear/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cologne",
+    "raceCardsCourseUrl": "/racecards/2025-04-21#cologne",
+    "raceCardsCourseMeetingsUrl": "/racecards/226/cologne/2025-04-21",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
