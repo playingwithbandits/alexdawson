@@ -1,0 +1,345 @@
+[
+  {
+    "courseName": "Bath",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#bath",
+    "raceCardsCourseMeetingsUrl": "/racecards/5/bath/2025-04-20",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.7) (Rail movements: 2.01, 2.31, 4.51 & 5.26 +11yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f10y - Centre; 1m - Inside; Remainder - Outside",
+    "races": [
+      {
+        "raceTime": "2:31",
+        "raceCardUrl": "/racecards/5/bath/2025-04-20/890425",
+        "horses": [
+          {
+            "horseName": "Caelan",
+            "horseProfileUrl": "/profile/horse/5242333/caelan/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:41",
+        "raceCardUrl": "/racecards/5/bath/2025-04-20/890423",
+        "horses": [
+          {
+            "horseName": "Sophia's Starlight",
+            "horseProfileUrl": "/profile/horse/4436503/sophias-starlight/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Balmoral Lady",
+            "horseProfileUrl": "/profile/horse/5048070/balmoral-lady/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Queen All Star",
+            "horseProfileUrl": "/profile/horse/6233858/queen-all-star/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Sea Emily Run",
+            "horseProfileUrl": "/profile/horse/5920283/sea-emily-run/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:16",
+        "raceCardUrl": "/racecards/5/bath/2025-04-20/890424",
+        "horses": [
+          {
+            "horseName": "Cloud King",
+            "horseProfileUrl": "/profile/horse/5154271/cloud-king/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:26",
+        "raceCardUrl": "/racecards/5/bath/2025-04-20/890429",
+        "horses": [
+          {
+            "horseName": "Bintshuaa",
+            "horseProfileUrl": "/profile/horse/6265750/bintshuaa/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Sheephavenbaystory",
+            "horseProfileUrl": "/profile/horse/6224690/sheephavenbaystory/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cork",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#cork",
+    "raceCardsCourseMeetingsUrl": "/racecards/596/cork/2025-04-20",
+    "going": "SOFT, yielding to soft (hurdle), Yielding, yielding to soft (chase)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:12",
+        "raceCardUrl": "/racecards/596/cork/2025-04-20/893322",
+        "horses": [
+          {
+            "horseName": "Pourquoi Poi",
+            "horseProfileUrl": "/profile/horse/7276513/pourquoi-poi/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Fairyhouse",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#fairyhouse",
+    "raceCardsCourseMeetingsUrl": "/racecards/182/fairyhouse/2025-04-20",
+    "going": "SOFT TO HEAVY",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:22",
+        "raceCardUrl": "/racecards/182/fairyhouse/2025-04-20/893317",
+        "horses": [
+          {
+            "horseName": "Lynchy Boy",
+            "horseProfileUrl": "/profile/horse/5711181/lynchy-boy/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/182/fairyhouse/2025-04-20/891971",
+        "horses": [
+          {
+            "horseName": "Sixandahalf",
+            "horseProfileUrl": "/profile/horse/5727945/sixandahalf/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Market Rasen",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#market-rasen",
+    "raceCardsCourseMeetingsUrl": "/racecards/35/market-rasen/2025-04-20",
+    "going": "GOOD (GoingStick: 7.4) (Watering) (Rail movements: 2.35 +234yds, 3.10, 4.20, 4.55 & 5.30 +189yds and 3.45 +246yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-04-20/890604",
+        "horses": [
+          {
+            "horseName": "New Invention",
+            "horseProfileUrl": "/profile/horse/7139138/new-invention/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-04-20/890607",
+        "horses": [
+          {
+            "horseName": "Click On The Link",
+            "horseProfileUrl": "/profile/horse/4938747/click-on-the-link/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Plumpton",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#plumpton",
+    "raceCardsCourseMeetingsUrl": "/racecards/44/plumpton/2025-04-20",
+    "going": "GOOD, Good to soft in places on Hurdle course (GoingStick: Chase 7.2, Hurdle 6.8) (Watering) (Rail movements: 1.50, 2.55 & 5.15 -44yds, 2.20 & 4.40 +66yds, 3.30 +99yds and 4.05 -32yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:50",
+        "raceCardUrl": "/racecards/44/plumpton/2025-04-20/890613",
+        "horses": [
+          {
+            "horseName": "Calli Black",
+            "horseProfileUrl": "/profile/horse/4350652/calli-black/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-04-20",
+    "going": "TAPETA: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f - Centre; Remainder - Inner",
+    "races": [
+      {
+        "raceTime": "3:17",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-20/893527",
+        "horses": [
+          {
+            "horseName": "Making A Move",
+            "horseProfileUrl": "/profile/horse/5770484/making-a-move/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:37",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-20/890695",
+        "horses": [
+          {
+            "horseName": "Mattice",
+            "horseProfileUrl": "/profile/horse/3526627/mattice/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Auteuil",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#auteuil",
+    "raceCardsCourseMeetingsUrl": "/racecards/205/auteuil/2025-04-20",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Fukushima",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#fukushima",
+    "raceCardsCourseMeetingsUrl": "/racecards/780/fukushima/2025-04-20",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Nakayama",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#nakayama",
+    "raceCardsCourseMeetingsUrl": "/racecards/514/nakayama/2025-04-20",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Oaklawn Park",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#oaklawn-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/466/oaklawn-park/2025-04-20",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Santa Anita",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#santa-anita",
+    "raceCardsCourseMeetingsUrl": "/racecards/257/santa-anita/2025-04-20",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:08",
+        "raceCardUrl": "/racecards/257/santa-anita/2025-04-20/893584",
+        "horses": [
+          {
+            "horseName": "Sun Of Hill",
+            "horseProfileUrl": "/profile/horse/5237882/sun-of-hill/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-04-20#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-04-20",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-20/893464",
+        "horses": [
+          {
+            "horseName": "Smart Beauty",
+            "horseProfileUrl": "/profile/horse/4741450/smart-beauty/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Link",
+            "horseProfileUrl": "/profile/horse/5692564/link/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-20/893466",
+        "horses": [
+          {
+            "horseName": "Bucephalas",
+            "horseProfileUrl": "/profile/horse/5376136/bucephalas/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Smart Fighter",
+            "horseProfileUrl": "/profile/horse/5091222/smart-fighter/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-20/893467",
+        "horses": [
+          {
+            "horseName": "Magniac",
+            "horseProfileUrl": "/profile/horse/4361085/magniac/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Rising Force",
+            "horseProfileUrl": "/profile/horse/7324687/rising-force/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-20/893468",
+        "horses": [
+          {
+            "horseName": "Carryon Smiling",
+            "horseProfileUrl": "/profile/horse/6613650/carryon-smiling/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Celtic Times",
+            "horseProfileUrl": "/profile/horse/3481810/celtic-times/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  }
+]
