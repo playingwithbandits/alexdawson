@@ -1,0 +1,195 @@
+{
+  "date": "2025-04-22",
+  "tips": [
+    {
+      "time": "13:35",
+      "horse": "Almaty Star",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Trinity College",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Miller Spirit",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "The King'S Falcon",
+      "isNap": true
+    },
+    {
+      "time": "16:25",
+      "horse": "Celeborn",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Kracking",
+      "isNap": false
+    },
+    {
+      "time": "14:23",
+      "horse": "Alkuwarrior",
+      "isNap": false
+    },
+    {
+      "time": "14:58",
+      "horse": "Queen Of Thieves",
+      "isNap": false
+    },
+    {
+      "time": "15:33",
+      "horse": "Sonic Pioneer",
+      "isNap": false
+    },
+    {
+      "time": "16:08",
+      "horse": "Rebel Star",
+      "isNap": false
+    },
+    {
+      "time": "16:38",
+      "horse": "The Feminine Urge",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Gincident",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Ryehill",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Shecouldbeanything",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Secrecies Of Stone",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Kainsbourg",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Fishery Lane",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Kalix Delabarriere",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Jo'S Secret",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Fiver Friday",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Winds Of Winter",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Pure Surf",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Super Citizen",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Jimmy Hurdstrom",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Abate",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Jan Steen",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Four Fifty",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Highland Olly",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Harlem Nights",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Path To Dubai",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Fuji Mountain",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Captain Vallo",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Mr Zee",
+      "isNap": false
+    },
+    {
+      "time": "17:43",
+      "horse": "God Of Fire",
+      "isNap": false
+    },
+    {
+      "time": "18:13",
+      "horse": "Camino Rocio",
+      "isNap": false
+    },
+    {
+      "time": "18:43",
+      "horse": "Chestnut Pete",
+      "isNap": false
+    },
+    {
+      "time": "19:13",
+      "horse": "Goblet Of Fire",
+      "isNap": false
+    },
+    {
+      "time": "19:43",
+      "horse": "Race To Base",
+      "isNap": false
+    }
+  ]
+}

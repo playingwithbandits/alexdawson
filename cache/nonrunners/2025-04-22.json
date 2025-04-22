@@ -24,7 +24,19 @@
     "going": "GOOD (GoingStick: Chase 7.4, Hurdle 6.9) (Watering) (Rail Movements: 5.10 +40yds, 5.43, 7.13 & 7.43 +34yds and 6.13 & 6.43 +31yds)",
     "weather": "Scattered showers",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:43",
+        "raceCardUrl": "/racecards/24/hereford/2025-04-22/891690",
+        "horses": [
+          {
+            "horseName": "Urblereagh",
+            "horseProfileUrl": "/profile/horse/3923522/urblereagh/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Kelso",
@@ -51,6 +63,18 @@
     "going": "GOOD, Good to firm in places (GoingStick: 6.2) (Watered)",
     "weather": "Light rain",
     "stallsPosition": "Straight - Centre; Round - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:08",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-04-22/891466",
+        "horses": [
+          {
+            "horseName": "Gogo Yubari",
+            "horseProfileUrl": "/profile/horse/5154274/gogo-yubari/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
   }
 ]
