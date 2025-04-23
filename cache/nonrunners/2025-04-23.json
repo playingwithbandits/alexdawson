@@ -1,0 +1,77 @@
+[
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-04-23#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-04-23",
+    "going": "GOOD TO FIRM (GoingStick: 8.5) (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Gowran Park",
+    "raceCardsCourseUrl": "/racecards/2025-04-23#gowran-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/184/gowran-park/2025-04-23",
+    "going": "HEAVY",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-23#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-04-23",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f & 1m - Outside; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Ludlow",
+    "raceCardsCourseUrl": "/racecards/2025-04-23#ludlow",
+    "raceCardsCourseMeetingsUrl": "/racecards/34/ludlow/2025-04-23",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.7) (Watered) (Rail Movements: 2.38 & 5.15 +35yds, 3.08 & 4.10 +70yds and 3.38 & 4.40 +90yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:08",
+        "raceCardUrl": "/racecards/34/ludlow/2025-04-23/891701",
+        "horses": [
+          {
+            "horseName": "Gasmani",
+            "horseProfileUrl": "/profile/horse/4950371/gasmani/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Perth",
+    "raceCardsCourseUrl": "/racecards/2025-04-23#perth",
+    "raceCardsCourseMeetingsUrl": "/racecards/41/perth/2025-04-23",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 5.9) (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Taunton",
+    "raceCardsCourseUrl": "/racecards/2025-04-23#taunton",
+    "raceCardsCourseMeetingsUrl": "/racecards/73/taunton/2025-04-23",
+    "going": "GOOD TO FIRM (GoingStick: 6.6) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-04-23#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-04-23",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

@@ -1,0 +1,287 @@
+{
+  "date": "2025-04-23",
+  "tips": [
+    {
+      "time": "13:48",
+      "horse": "Mary Stanford",
+      "tipster": "Melissa Jones",
+      "score": "19.6"
+    },
+    {
+      "time": "16:30",
+      "horse": "Handmedownmybible",
+      "tipster": "Rory Paddock",
+      "score": "16.4"
+    },
+    {
+      "time": "14:38",
+      "horse": "Brendas Asking",
+      "tipster": "RP Ratings",
+      "score": "12.8"
+    },
+    {
+      "time": "19:50",
+      "horse": "Big Bard",
+      "tipster": "Jason Heavey",
+      "score": "9.2"
+    },
+    {
+      "time": "16:22",
+      "horse": "Hay Meadow",
+      "tipster": "Rob Wright",
+      "score": "8.2"
+    },
+    {
+      "time": "14:18",
+      "horse": "Denemethy",
+      "tipster": "Newsboy",
+      "score": "4.8"
+    },
+    {
+      "time": "18:30",
+      "horse": "Deal Em High",
+      "tipster": "Chris Connolly",
+      "score": "4.3"
+    },
+    {
+      "time": "16:35",
+      "horse": "Dubai Venture",
+      "tipster": "Karl Hedley",
+      "score": "2.3"
+    },
+    {
+      "time": "14:00",
+      "horse": "Ifonlytheycudtalk",
+      "tipster": "Steve Mullington",
+      "score": "-1.4"
+    },
+    {
+      "time": "17:25",
+      "horse": "Handlethekettle",
+      "tipster": "Luke Tucker",
+      "score": "-1.5"
+    },
+    {
+      "time": "14:48",
+      "horse": "Dedicated Hero",
+      "tipster": "The Score",
+      "score": "-3.3"
+    },
+    {
+      "time": "18:20",
+      "horse": "Rogue Impact",
+      "tipster": "Lee Sobot",
+      "score": "-4.8"
+    },
+    {
+      "time": "17:32",
+      "horse": "Follow Charlie",
+      "tipster": "Andrew Mount",
+      "score": "-5.2"
+    },
+    {
+      "time": "19:50",
+      "horse": "Unavailable",
+      "tipster": "The Punt",
+      "score": "-8.1"
+    },
+    {
+      "time": "15:18",
+      "horse": "Fun Fun Fun",
+      "tipster": "Glendale",
+      "score": "-11.3"
+    },
+    {
+      "time": "15:18",
+      "horse": "Coco Mademoiselle",
+      "tipster": "Whistler",
+      "score": "-13.9"
+    },
+    {
+      "time": "16:04",
+      "horse": "Red Mirage",
+      "tipster": "Ian Gaughran",
+      "score": "-15.2"
+    },
+    {
+      "time": "18:42",
+      "horse": "Ribee",
+      "tipster": "Matt Polley",
+      "score": "-13.7"
+    },
+    {
+      "time": "14:48",
+      "horse": "Horaces Pearl",
+      "tipster": "Jim Delahunt",
+      "score": "-14.4"
+    },
+    {
+      "time": "14:48",
+      "horse": "Go West",
+      "tipster": "Garry Owen",
+      "score": "-14.2"
+    },
+    {
+      "time": "15:48",
+      "horse": "Pay The Piper",
+      "tipster": "Sam Hardy",
+      "score": "-14.6"
+    },
+    {
+      "time": "19:20",
+      "horse": "Union Island",
+      "tipster": "Marlborough",
+      "score": "-14.5"
+    },
+    {
+      "time": "14:48",
+      "horse": "Go West",
+      "tipster": "The Brigadier",
+      "score": "-16.2"
+    },
+    {
+      "time": "16:22",
+      "horse": "Sunday Soldier",
+      "tipster": "West Country",
+      "score": "-19.0"
+    },
+    {
+      "time": "15:38",
+      "horse": "Ultra Beat",
+      "tipster": "Robin Goodfellow",
+      "score": "-18.3"
+    },
+    {
+      "time": "14:48",
+      "horse": "Horaces Pearl",
+      "tipster": "Dean Kilbryde",
+      "score": "-19.5"
+    },
+    {
+      "time": "17:15",
+      "horse": "The Egyptian Ginge",
+      "tipster": "Jeffrey Ross",
+      "score": "-20.9"
+    },
+    {
+      "time": "14:18",
+      "horse": "Rattling Road",
+      "tipster": "Rockavon",
+      "score": "-21.7"
+    },
+    {
+      "time": "16:22",
+      "horse": "Hay Meadow",
+      "tipster": "Mercury",
+      "score": "-23.3"
+    },
+    {
+      "time": "15:08",
+      "horse": "Thankyourluckystar",
+      "tipster": "Postdata",
+      "score": "-23.9"
+    },
+    {
+      "time": "17:10",
+      "horse": "Dream Deal",
+      "tipster": "Rory Delargy",
+      "score": "-25.2"
+    },
+    {
+      "time": "15:48",
+      "horse": "Etalon",
+      "tipster": "Spotlight",
+      "score": "-24.2"
+    },
+    {
+      "time": "14:48",
+      "horse": "Mister Meggit",
+      "tipster": "Ben Morgan",
+      "score": "-25.6"
+    },
+    {
+      "time": "15:18",
+      "horse": "Fun Fun Fun",
+      "tipster": "Computeform",
+      "score": "-26.0"
+    },
+    {
+      "time": "17:10",
+      "horse": "Mojomaker",
+      "tipster": "The Duke",
+      "score": "-28.7"
+    },
+    {
+      "time": "14:00",
+      "horse": "Glory Fighter",
+      "tipster": "On The Nose",
+      "score": "-28.7"
+    },
+    {
+      "time": "17:50",
+      "horse": "Golden Dove",
+      "tipster": "The Judge",
+      "score": "-29.6"
+    },
+    {
+      "time": "14:18",
+      "horse": "Rattling Road",
+      "tipster": "Jon Freeman",
+      "score": "-31.1"
+    },
+    {
+      "time": "13:48",
+      "horse": "Kevin's Pride",
+      "tipster": "Templegate",
+      "score": "-31.9"
+    },
+    {
+      "time": "16:22",
+      "horse": "Little Miss Dante",
+      "tipster": "Ross Shepherd",
+      "score": "-33.6"
+    },
+    {
+      "time": "15:38",
+      "horse": "Carrigeen Castle",
+      "tipster": "Brian Flanagan",
+      "score": "-41.0"
+    },
+    {
+      "time": "14:48",
+      "horse": "Gale Mahler",
+      "tipster": "Fortunatus",
+      "score": "-42.2"
+    },
+    {
+      "time": "17:10",
+      "horse": "Mojomaker",
+      "tipster": "Moorestyle",
+      "score": "-42.9"
+    },
+    {
+      "time": "16:04",
+      "horse": "Jenni",
+      "tipster": "Chris Wright",
+      "score": "-43.0"
+    },
+    {
+      "time": "18:50",
+      "horse": "Startling",
+      "tipster": "Tipman Tips",
+      "score": "-45.0"
+    },
+    {
+      "time": "17:15",
+      "horse": "Uptown Lass",
+      "tipster": "Lambourn",
+      "score": "-48.7"
+    },
+    {
+      "time": "15:18",
+      "horse": "Fun Fun Fun",
+      "tipster": "Adrian Wall",
+      "score": "-54.1"
+    }
+  ]
+}
