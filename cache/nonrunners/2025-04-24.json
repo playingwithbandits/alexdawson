@@ -1,0 +1,214 @@
+[
+  {
+    "courseName": "Bangor-on-Dee",
+    "raceCardsCourseUrl": "/racecards/2025-04-24#bangor-on-dee",
+    "raceCardsCourseMeetingsUrl": "/racecards/4/bangor-on-dee/2025-04-24",
+    "going": "SOFT, Good to soft in places on the Hurdle course (GoingStick: Chase 4.8; Hurdle 6.1) (Watered) (Rail movements: 5.10, 7.10, 7.40 & 8.10 +76yds, 5.40 +48yds, 6.10 +96yds and 6.40 +62yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-04-24/891738",
+        "horses": [
+          {
+            "horseName": "Ronnies Rules",
+            "horseProfileUrl": "/profile/horse/5652628/ronnies-rules/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Paddys Policy",
+            "horseProfileUrl": "/profile/horse/5727956/paddys-policy/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:10",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-04-24/891735",
+        "horses": [
+          {
+            "horseName": "Queens Wish",
+            "horseProfileUrl": "/profile/horse/5385907/queens-wish/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Land Of Moon",
+            "horseProfileUrl": "/profile/horse/5488226/land-of-moon/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-04-24/891737",
+        "horses": [
+          {
+            "horseName": "Carved In Stone",
+            "horseProfileUrl": "/profile/horse/5419095/carved-in-stone/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-04-24#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-04-24",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.2)",
+    "weather": "Cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/6/beverley/2025-04-24/891478",
+        "horses": [
+          {
+            "horseName": "Emeralds Pride",
+            "horseProfileUrl": "/profile/horse/3588748/emeralds-pride/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/6/beverley/2025-04-24/891476",
+        "horses": [
+          {
+            "horseName": "Mr Fantastic",
+            "horseProfileUrl": "/profile/horse/5708621/mr-fantastic/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:47",
+        "raceCardUrl": "/racecards/6/beverley/2025-04-24/891477",
+        "horses": [
+          {
+            "horseName": "Doomsday",
+            "horseProfileUrl": "/profile/horse/3638600/doomsday/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Crowd Quake",
+            "horseProfileUrl": "/profile/horse/6759100/crowd-quake/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-24#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-04-24",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Kilbeggan",
+    "raceCardsCourseUrl": "/racecards/2025-04-24#kilbeggan",
+    "raceCardsCourseMeetingsUrl": "/racecards/203/kilbeggan/2025-04-24",
+    "going": "GOOD TO YIELDING",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/203/kilbeggan/2025-04-24/893668",
+        "horses": [
+          {
+            "horseName": "Sharetheknowledge",
+            "horseProfileUrl": "/profile/horse/5007813/sharetheknowledge/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Perth",
+    "raceCardsCourseUrl": "/racecards/2025-04-24#perth",
+    "raceCardsCourseMeetingsUrl": "/racecards/41/perth/2025-04-24",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 5.8) (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Tipperary",
+    "raceCardsCourseUrl": "/racecards/2025-04-24#tipperary",
+    "raceCardsCourseMeetingsUrl": "/racecards/202/tipperary/2025-04-24",
+    "going": "YIELDING TO SOFT",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Warwick",
+    "raceCardsCourseUrl": "/racecards/2025-04-24#warwick",
+    "raceCardsCourseMeetingsUrl": "/racecards/85/warwick/2025-04-24",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.5) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:37",
+        "raceCardUrl": "/racecards/85/warwick/2025-04-24/891739",
+        "horses": [
+          {
+            "horseName": "Land Genie",
+            "horseProfileUrl": "/profile/horse/4668978/land-genie/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:47",
+        "raceCardUrl": "/racecards/85/warwick/2025-04-24/891745",
+        "horses": [
+          {
+            "horseName": "Jollie Dame",
+            "horseProfileUrl": "/profile/horse/7324758/jollie-dame/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Queensworthy",
+            "horseProfileUrl": "/profile/horse/6701960/queensworthy/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Orderoftheday",
+            "horseProfileUrl": "/profile/horse/5764654/orderoftheday/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Longchamp",
+    "raceCardsCourseUrl": "/racecards/2025-04-24#longchamp",
+    "raceCardsCourseMeetingsUrl": "/racecards/211/longchamp/2025-04-24",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:13",
+        "raceCardUrl": "/racecards/211/longchamp/2025-04-24/893694",
+        "horses": [
+          {
+            "horseName": "Zalari",
+            "horseProfileUrl": "/profile/horse/6433734/zalari/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  }
+]

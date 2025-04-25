@@ -1,0 +1,240 @@
+{
+  "date": "2025-04-25",
+  "tips": [
+    {
+      "time": "13:15",
+      "horse": "Star Chorus",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Seraph Gabriel",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Dancing Gemini",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Windlord",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "Music Piece",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Sing Us A Song",
+      "isNap": false
+    },
+    {
+      "time": "13:32",
+      "horse": "Spadestep",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Wal Buck'S",
+      "isNap": false
+    },
+    {
+      "time": "15:17",
+      "horse": "Whistle Stop Tour",
+      "isNap": true
+    },
+    {
+      "time": "15:52",
+      "horse": "Felicie Du Maquis",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Scorsese",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Wilstar",
+      "isNap": false
+    },
+    {
+      "time": "13:42",
+      "horse": "Wannabe Royal",
+      "isNap": false
+    },
+    {
+      "time": "14:17",
+      "horse": "Hostility",
+      "isNap": false
+    },
+    {
+      "time": "14:52",
+      "horse": "Ocean Manifest",
+      "isNap": false
+    },
+    {
+      "time": "15:27",
+      "horse": "Migdam",
+      "isNap": false
+    },
+    {
+      "time": "16:02",
+      "horse": "Nahori",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Masoun",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Diamond Exchange",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Master Garvey",
+      "isNap": false
+    },
+    {
+      "time": "13:58",
+      "horse": "Private Island",
+      "isNap": false
+    },
+    {
+      "time": "14:33",
+      "horse": "Elements Of Fire",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Carlton And Co",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Amayretto",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Corolla Point",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Last Shamardal",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Dothan",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Onyx Storm",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Magic Day",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "St Cuthbert'S Cave",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Stumblin In",
+      "isNap": false
+    },
+    {
+      "time": "18:25",
+      "horse": "Look To The West",
+      "isNap": false
+    },
+    {
+      "time": "18:55",
+      "horse": "Three In A Row",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "Ho My Lord",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "The Bluesman",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Musical Slave",
+      "isNap": false
+    },
+    {
+      "time": "18:05",
+      "horse": "Ballybreeze",
+      "isNap": false
+    },
+    {
+      "time": "18:35",
+      "horse": "Courageous Strike",
+      "isNap": false
+    },
+    {
+      "time": "19:05",
+      "horse": "King Of Records",
+      "isNap": false
+    },
+    {
+      "time": "19:35",
+      "horse": "Revels Hill",
+      "isNap": false
+    },
+    {
+      "time": "20:05",
+      "horse": "Florencethemachine",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Miss Goldfire",
+      "isNap": false
+    },
+    {
+      "time": "17:47",
+      "horse": "Sangiovese",
+      "isNap": false
+    },
+    {
+      "time": "18:17",
+      "horse": "Sunshine Diamond",
+      "isNap": false
+    },
+    {
+      "time": "18:47",
+      "horse": "Dear Ralphy",
+      "isNap": false
+    },
+    {
+      "time": "19:17",
+      "horse": "Fortunate Fella",
+      "isNap": false
+    },
+    {
+      "time": "19:47",
+      "horse": "Decorated",
+      "isNap": false
+    }
+  ]
+}

@@ -3,10 +3,44 @@
     "courseName": "Catterick",
     "raceCardsCourseUrl": "/racecards/2025-04-23#catterick",
     "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-04-23",
-    "going": "GOOD TO FIRM (GoingStick: 8.5) (Watered)",
+    "going": "GOOD TO FIRM (GoingStick: 8.4) (Watered)",
     "weather": "Mostly cloudy",
     "stallsPosition": "Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/10/catterick/2025-04-23/891470",
+        "horses": [
+          {
+            "horseName": "J Street",
+            "horseProfileUrl": "/profile/horse/5708703/j-street/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/10/catterick/2025-04-23/891471",
+        "horses": [
+          {
+            "horseName": "Cayman Dancer",
+            "horseProfileUrl": "/profile/horse/7152225/cayman-dancer/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:04",
+        "raceCardUrl": "/racecards/10/catterick/2025-04-23/891469",
+        "horses": [
+          {
+            "horseName": "Red Mirage",
+            "horseProfileUrl": "/profile/horse/3241292/red-mirage/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Gowran Park",
@@ -15,7 +49,41 @@
     "going": "HEAVY",
     "weather": "Mostly cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:57",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-23/893478",
+        "horses": [
+          {
+            "horseName": "Storm Piece",
+            "horseProfileUrl": "/profile/horse/6287951/storm-piece/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-23/893481",
+        "horses": [
+          {
+            "horseName": "Tai Tam Bay",
+            "horseProfileUrl": "/profile/horse/5125874/tai-tam-bay/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:42",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-04-23/893483",
+        "horses": [
+          {
+            "horseName": "Bishopton",
+            "horseProfileUrl": "/profile/horse/6260990/bishopton/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Lingfield (AW)",
@@ -24,13 +92,36 @@
     "going": "POLYTRACK: STANDARD",
     "weather": "Mostly cloudy",
     "stallsPosition": "5f & 1m - Outside; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-04-23/891803",
+        "horses": [
+          {
+            "horseName": "In A Hurry",
+            "horseProfileUrl": "/profile/horse/6074420/in-a-hurry/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:20",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-04-23/891804",
+        "horses": [
+          {
+            "horseName": "Sweet Sister",
+            "horseProfileUrl": "/profile/horse/5048108/sweet-sister/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Ludlow",
     "raceCardsCourseUrl": "/racecards/2025-04-23#ludlow",
     "raceCardsCourseMeetingsUrl": "/racecards/34/ludlow/2025-04-23",
-    "going": "GOOD, Good to soft in places (GoingStick: 6.7) (Watered) (Rail Movements: 2.38 & 5.15 +35yds, 3.08 & 4.10 +70yds and 3.38 & 4.40 +90yds)",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 5.6) (Watered) (Rail Movements: 2.38 & 5.15 +35yds, 3.08 & 4.10 +70yds and 3.38 & 4.40 +90yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
     "races": [
@@ -42,6 +133,38 @@
             "horseName": "Gasmani",
             "horseProfileUrl": "/profile/horse/4950371/gasmani/",
             "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Butler's Brief",
+            "horseProfileUrl": "/profile/horse/2630714/butlers-brief/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:38",
+        "raceCardUrl": "/racecards/34/ludlow/2025-04-23/891700",
+        "horses": [
+          {
+            "horseName": "Tommys Charm",
+            "horseProfileUrl": "/profile/horse/5385923/tommys-charm/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Carrigeen Castle",
+            "horseProfileUrl": "/profile/horse/3309321/carrigeen-castle/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/34/ludlow/2025-04-23/891702",
+        "horses": [
+          {
+            "horseName": "Broomfield Gale",
+            "horseProfileUrl": "/profile/horse/4825000/broomfield-gale/",
+            "raceNumber": "(7)"
           }
         ]
       }
@@ -51,19 +174,86 @@
     "courseName": "Perth",
     "raceCardsCourseUrl": "/racecards/2025-04-23#perth",
     "raceCardsCourseMeetingsUrl": "/racecards/41/perth/2025-04-23",
-    "going": "GOOD TO SOFT, Good in places (GoingStick: 5.9) (Watering)",
+    "going": "GOOD TO SOFT (GoingStick: 5.8) (Watered)",
     "weather": "Cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "1:48",
+        "raceCardUrl": "/racecards/41/perth/2025-04-23/891718",
+        "horses": [
+          {
+            "horseName": "Colvin",
+            "horseProfileUrl": "/profile/horse/7276511/colvin/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Saint Malinas",
+            "horseProfileUrl": "/profile/horse/5671331/saint-malinas/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:22",
+        "raceCardUrl": "/racecards/41/perth/2025-04-23/891716",
+        "horses": [
+          {
+            "horseName": "Bleu Lagune",
+            "horseProfileUrl": "/profile/horse/5884468/bleu-lagune/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Taunton",
     "raceCardsCourseUrl": "/racecards/2025-04-23#taunton",
     "raceCardsCourseMeetingsUrl": "/racecards/73/taunton/2025-04-23",
-    "going": "GOOD TO FIRM (GoingStick: 6.6) (Watering)",
+    "going": "GOOD TO FIRM (GoingStick: 6.5) (Watered) (Rail Movements: All races -12yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/73/taunton/2025-04-23/891710",
+        "horses": [
+          {
+            "horseName": "Jacksbar",
+            "horseProfileUrl": "/profile/horse/5495170/jacksbar/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Zarhanya",
+            "horseProfileUrl": "/profile/horse/5831485/zarhanya/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/73/taunton/2025-04-23/893460",
+        "horses": [
+          {
+            "horseName": "Bradman",
+            "horseProfileUrl": "/profile/horse/5289590/bradman/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/73/taunton/2025-04-23/893461",
+        "horses": [
+          {
+            "horseName": "Top Tier Gossip",
+            "horseProfileUrl": "/profile/horse/6547832/top-tier-gossip/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Happy Valley",

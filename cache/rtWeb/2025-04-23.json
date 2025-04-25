@@ -1,0 +1,30 @@
+{
+  "date": "2025-04-23",
+  "tips": [
+    {
+      "horseName": "Handlethekettle",
+      "time": "17:25",
+      "rating": 86.4
+    },
+    {
+      "horseName": "Jacksbar",
+      "time": "18:00",
+      "rating": 80.9
+    },
+    {
+      "horseName": "Lara Kaleo",
+      "time": "18:30",
+      "rating": 82.3
+    },
+    {
+      "horseName": "Taritino",
+      "time": "19:00",
+      "rating": 82
+    },
+    {
+      "horseName": "Him Malaya",
+      "time": "19:30",
+      "rating": 79.3
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "date": "2025-04-24",
+  "tips": [
+    {
+      "time": "13:35",
+      "horse": "Buckna",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Ceolwulf",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Hecouldbetheone",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Brother Boris",
+      "isNap": false
+    },
+    {
+      "time": "15:37",
+      "horse": "Snipe",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Abingworth",
+      "isNap": false
+    },
+    {
+      "time": "16:47",
+      "horse": "Pioneer Pete",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "South Parade",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Cloth Of Gold",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Mr Fantastic",
+      "isNap": false
+    },
+    {
+      "time": "15:47",
+      "horse": "Mr Jetman",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Alfie Boy",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Mister Daydream",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Precious Spartan",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Magic Mccolgan",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Kapal Layar",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Lady In The Park",
+      "isNap": false
+    },
+    {
+      "time": "15:59",
+      "horse": "Hidden History",
+      "isNap": true
+    },
+    {
+      "time": "16:33",
+      "horse": "Heltenham",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Klitschko",
+      "isNap": false
+    },
+    {
+      "time": "17:36",
+      "horse": "Trailblazer",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Sup Of Red",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Viamonte",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Tomarlo",
+      "isNap": false
+    },
+    {
+      "time": "17:32",
+      "horse": "Hurricane Ivor",
+      "isNap": false
+    },
+    {
+      "time": "18:02",
+      "horse": "Movin And Groovin",
+      "isNap": false
+    },
+    {
+      "time": "18:32",
+      "horse": "Treasure Planet",
+      "isNap": false
+    },
+    {
+      "time": "19:02",
+      "horse": "Cloud Seeker",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Half Past Tipsy",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Falcon Park",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Ar Nos Na Gaoithe",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Sharetheknowledge",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Fool Me Once",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Sip Sip Hooray",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Riskaway",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Groovy Blue",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Hunter Legend",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Chuggy",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Konfusion",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Crystal Glance",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Regal And Royal",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Tracking Treasure",
+      "isNap": false
+    },
+    {
+      "time": "18:25",
+      "horse": "Inns Of Fear",
+      "isNap": true
+    },
+    {
+      "time": "18:55",
+      "horse": "Flag Of St George",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "Triggered",
+      "isNap": false
+    },
+    {
+      "time": "19:55",
+      "horse": "Smokey Malone",
+      "isNap": false
+    },
+    {
+      "time": "20:25",
+      "horse": "Woodhay Whisper",
+      "isNap": false
+    }
+  ]
+}
