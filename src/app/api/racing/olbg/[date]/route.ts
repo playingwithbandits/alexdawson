@@ -20,12 +20,19 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
   const response = await fetch(
     "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/UK/2"
   );
+
+  const responseIre = await fetch(
+    "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/IE/2"
+  );
+
   //console.log("✅ Fetched OLBG page");
 
   const html = await response.text();
+  const htmlIre = await responseIre.text();
   //console.log("📄 Got HTML response");
 
   const $ = cheerio.load(html);
+  const $Ire = cheerio.load(htmlIre);
   //console.log("🔧 Loaded HTML into Cheerio");
 
   // Create a map to store aggregated tips by horse
@@ -100,6 +107,17 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
       console.error(`❌ Error fetching ${option.value}:`, error);
     }
   }
+
+  $Ire("#tipsListingContainer-Match .h-rst-lnk").each((_, element) => {
+    const value = $Ire(element).text().trim();
+    const href = $Ire(element).attr("href") || "";
+    if (value && href) {
+      raceLinks.push({
+        value,
+        href: `https://alexdawson.co.uk/getP.php?q=https://www.olbg.com${href}`,
+      });
+    }
+  });
 
   const uniqueUrls = [...new Set(raceLinks.map((link) => link.href))];
   //console.log("🔗 Unique URLs:", uniqueUrls);

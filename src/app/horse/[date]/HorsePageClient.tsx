@@ -113,6 +113,37 @@ export const UK_COURSES = [
   "southport",
   "thurles",
 ];
+
+export const IRISH_COURSES = [
+  "ballinrobe",
+  "bellewstown",
+  "clare",
+  "clonmel",
+  "cork",
+  "curragh",
+  "down royal",
+  "dundalk",
+  "fairyhouse",
+  "galway",
+  "gowran park",
+  "kilbeggan",
+  "killarney",
+  "laytown",
+  "leopardstown",
+  "limerick",
+  "listowel",
+  "naas",
+  "navan",
+  "punchestown",
+  "roscommon",
+  "sligo",
+  "thurles",
+  "tipperary",
+  "tralee",
+  "tramore",
+  "wexford",
+];
+
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
 }

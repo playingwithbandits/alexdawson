@@ -3,7 +3,7 @@ import { writeFile } from "fs/promises";
 import { join } from "path";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
-import { UK_COURSES } from "@/app/horse/[date]/HorsePageClient";
+import { IRISH_COURSES, UK_COURSES } from "@/app/horse/[date]/HorsePageClient";
 
 export async function POST(request: Request) {
   try {
@@ -30,9 +30,13 @@ export async function POST(request: Request) {
 
       //console.log(`Processing course: ${courseName}`);
       const ukCourseKeys = UK_COURSES.map((course) => placeToPlaceKey(course));
+      const irishCourseKeys = IRISH_COURSES.map((course) =>
+        placeToPlaceKey(course)
+      );
       const isUkCourse = courseName && ukCourseKeys.includes(courseName);
+      const isIrishCourse = courseName && irishCourseKeys.includes(courseName);
       //console.log(`Is UK course: ${isUkCourse}`);
-      return isUkCourse;
+      return isUkCourse || isIrishCourse;
     });
     //console.log(`Filtered to ${ukElements.length} UK courses`);
 
