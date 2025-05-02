@@ -16,7 +16,7 @@ interface HorseNameRowProps {
   highlight2?: boolean;
   title?: string;
   showOnlyBest: boolean;
-  shownCountToBeHigherThan: boolean;
+  shownCountToBeHigherThan?: boolean;
   highlight3?: boolean;
 }
 
@@ -77,7 +77,7 @@ export function HorseNameRow({
     return <></>;
   }
 
-  const isAGoodBet = highlight1 || highlight2;
+  const isAGoodBet = highlight1 || highlight2 || highlight3;
   if (showOnlyBest && !isAGoodBet) {
     return <></>;
   }

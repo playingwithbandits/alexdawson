@@ -1,0 +1,311 @@
+{
+  "date": "2025-04-28",
+  "tips": [
+    {
+      "time": "20:05",
+      "horse": "Antiphon",
+      "tipster": "Matt Polley",
+      "score": "600.0"
+    },
+    {
+      "time": "16:05",
+      "horse": "Yaaser",
+      "tipster": "Garry Owen",
+      "score": "350.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "First Officer",
+      "tipster": "The Judge",
+      "score": "350.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Expert Witness",
+      "tipster": "Marlborough",
+      "score": "350.0"
+    },
+    {
+      "time": "17:40",
+      "horse": "Gloriously Glam",
+      "tipster": "Adrian Wall",
+      "score": "200.0"
+    },
+    {
+      "time": "14:00",
+      "horse": "Ramon Di Loria",
+      "tipster": "Rockavon",
+      "score": "200.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Tycoon",
+      "tipster": "Newmarket",
+      "score": "150.0"
+    },
+    {
+      "time": "16:40",
+      "horse": "City Of Strangers",
+      "tipster": "Computeform",
+      "score": "150.0"
+    },
+    {
+      "time": "15:45",
+      "horse": "Go Go Boots",
+      "tipster": "Lee Sobot",
+      "score": "150.0"
+    },
+    {
+      "time": "16:40",
+      "horse": "City Of Strangers",
+      "tipster": "Ratings Hub",
+      "score": "150.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Tycoon",
+      "tipster": "The Score",
+      "score": "150.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Expert Witness",
+      "tipster": "Tipman Tips",
+      "score": "150.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Promethean",
+      "tipster": "The Brigadier",
+      "score": "150.0"
+    },
+    {
+      "time": "17:50",
+      "horse": "Wyvern",
+      "tipster": "Jason Heavey",
+      "score": "150.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Tycoon",
+      "tipster": "Mercury",
+      "score": "150.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Fast Steps",
+      "tipster": "West Country",
+      "score": "0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Tycoon",
+      "tipster": "Melissa Jones",
+      "score": "0"
+    },
+    {
+      "time": "15:30",
+      "horse": "Sea Regal",
+      "tipster": "On The Nose",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:15",
+      "horse": "Sax Appeal",
+      "tipster": "Andrew Mount",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:45",
+      "horse": "Diamondonthehill",
+      "tipster": "Postdata",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:13",
+      "horse": "Crystal Guard",
+      "tipster": "Chris Connolly",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:40",
+      "horse": "City Of Strangers",
+      "tipster": "Whistler",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:05",
+      "horse": "Red Mirage",
+      "tipster": "Moorestyle",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:00",
+      "horse": "Ramon Di Loria",
+      "tipster": "Newsboy",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:30",
+      "horse": "Can't Stop Now",
+      "tipster": "Glendale",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:00",
+      "horse": "Society Of Honor",
+      "tipster": "Steve Mullington",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:30",
+      "horse": "Rosemary's Rose",
+      "tipster": "Chris Wright",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:30",
+      "horse": "In A Hurry",
+      "tipster": "Jon Freeman",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:30",
+      "horse": "Bin Ajwad",
+      "tipster": "Sam Hardy",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:30",
+      "horse": "Bin Ajwad",
+      "tipster": "Luke Tucker",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:00",
+      "horse": "Rory",
+      "tipster": "Rory Paddock",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:00",
+      "horse": "Ramon Di Loria",
+      "tipster": "RP Ratings",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:20",
+      "horse": "Calanthe",
+      "tipster": "The Duke",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:10",
+      "horse": "Four Blondes",
+      "tipster": "Brian Flanagan",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Promethean",
+      "tipster": "Spotlight",
+      "score": "-100.0"
+    },
+    {
+      "time": "20:50",
+      "horse": "Synergism",
+      "tipster": "Robin Goodfellow",
+      "score": "-100.0"
+    },
+    {
+      "time": "20:20",
+      "horse": "Azure Angel",
+      "tipster": "Rory Delargy",
+      "score": "-100.0"
+    },
+    {
+      "time": "20:20",
+      "horse": "Aberama Gold",
+      "tipster": "The North",
+      "score": "-100.0"
+    },
+    {
+      "time": "19:20",
+      "horse": "Mythical Bird",
+      "tipster": "Jeffrey Ross",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:50",
+      "horse": "Faster Bee",
+      "tipster": "Farringdon",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:30",
+      "horse": "Promethean",
+      "tipster": "Rob Wright",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Tycoon",
+      "tipster": "Templegate",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:10",
+      "horse": "Laugh A Minute",
+      "tipster": "Ian Gaughran",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Tycoon",
+      "tipster": "Dean Kilbryde",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:30",
+      "horse": "Bondi",
+      "tipster": "Ben Morgan",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:25",
+      "horse": "Style King",
+      "tipster": "Karl Hedley",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:25",
+      "horse": "Cupola",
+      "tipster": "Lambourn",
+      "score": "-100.0"
+    },
+    {
+      "time": "19:40",
+      "horse": "Mississippi River",
+      "tipster": "Jim Delahunt",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:40",
+      "horse": "My Mate Alfie",
+      "tipster": "Fortunatus",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:40",
+      "horse": "My Mate Alfie",
+      "tipster": "The Punt",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:00",
+      "horse": "Inanna",
+      "tipster": "Ross Shepherd",
+      "score": "-100.0"
+    }
+  ]
+}

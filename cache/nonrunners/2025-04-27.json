@@ -1,0 +1,269 @@
+[
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-04-27",
+    "going": "TAPETA: STANDARD changing to STANDARD TO SLOW after Race 2 (3.45)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-27/891822",
+        "horses": [
+          {
+            "horseName": "Viennoise",
+            "horseProfileUrl": "/profile/horse/5021421/viennoise/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-04-27/891823",
+        "horses": [
+          {
+            "horseName": "Rare Change",
+            "horseProfileUrl": "/profile/horse/5708625/rare-change/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wetherby",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#wetherby",
+    "raceCardsCourseMeetingsUrl": "/racecards/87/wetherby/2025-04-27",
+    "going": "GOOD TO FIRM (Good in places; watered; 8.3)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f 110y - Outside; 1m2f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/87/wetherby/2025-04-27/893511",
+        "horses": [
+          {
+            "horseName": "Star Cast",
+            "horseProfileUrl": "/profile/horse/6215485/star-cast/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/87/wetherby/2025-04-27/891529",
+        "horses": [
+          {
+            "horseName": "Morning Angel",
+            "horseProfileUrl": "/profile/horse/5870127/morning-angel/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/87/wetherby/2025-04-27/891525",
+        "horses": [
+          {
+            "horseName": "Albeseeingyer",
+            "horseProfileUrl": "/profile/horse/4277867/albeseeingyer/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Beauty Nation",
+            "horseProfileUrl": "/profile/horse/6171100/beauty-nation/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Highfield Sunshine",
+            "horseProfileUrl": "/profile/horse/5982523/highfield-sunshine/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/87/wetherby/2025-04-27/891531",
+        "horses": [
+          {
+            "horseName": "Storm Kitty",
+            "horseProfileUrl": "/profile/horse/7250776/storm-kitty/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Mission In Malton",
+            "horseProfileUrl": "/profile/horse/5845565/mission-in-malton/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/87/wetherby/2025-04-27/891530",
+        "horses": [
+          {
+            "horseName": "Miss Willows",
+            "horseProfileUrl": "/profile/horse/3978090/miss-willows/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Havana Touch",
+            "horseProfileUrl": "/profile/horse/5134066/havana-touch/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Naval Academy",
+            "horseProfileUrl": "/profile/horse/4522982/naval-academy/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Capannelle",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#capannelle",
+    "raceCardsCourseMeetingsUrl": "/racecards/275/capannelle/2025-04-27",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Krefeld",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#krefeld",
+    "raceCardsCourseMeetingsUrl": "/racecards/236/krefeld/2025-04-27",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Kyoto",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#kyoto",
+    "raceCardsCourseMeetingsUrl": "/racecards/504/kyoto/2025-04-27",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Longchamp",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#longchamp",
+    "raceCardsCourseMeetingsUrl": "/racecards/211/longchamp/2025-04-27",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Santa Anita",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#santa-anita",
+    "raceCardsCourseMeetingsUrl": "/racecards/257/santa-anita/2025-04-27",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:08",
+        "raceCardUrl": "/racecards/257/santa-anita/2025-04-27/894357",
+        "horses": [
+          {
+            "horseName": "Lunar Impact",
+            "horseProfileUrl": "/profile/horse/4843471/lunar-impact/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Baltic Fire",
+            "horseProfileUrl": "/profile/horse/5301515/baltic-fire/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-04-27",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "10:20",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-27/894277",
+        "horses": [
+          {
+            "horseName": "Eason",
+            "horseProfileUrl": "/profile/horse/3986064/eason/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Kolachi",
+            "horseProfileUrl": "/profile/horse/5283738/kolachi/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "10:55",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-27/894269",
+        "horses": [
+          {
+            "horseName": "Mask Rider",
+            "horseProfileUrl": "/profile/horse/4961903/mask-rider/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Silo",
+            "horseProfileUrl": "/profile/horse/5200354/silo/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-27/894270",
+        "horses": [
+          {
+            "horseName": "Spirit Of Peace",
+            "horseProfileUrl": "/profile/horse/6855052/spirit-of-peace/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "King Oberon",
+            "horseProfileUrl": "/profile/horse/5518963/king-oberon/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-04-27/894271",
+        "horses": [
+          {
+            "horseName": "Gor Gor",
+            "horseProfileUrl": "/profile/horse/7471039/gor-gor/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Star Brose",
+            "horseProfileUrl": "/profile/horse/7307979/star-brose/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tokyo",
+    "raceCardsCourseUrl": "/racecards/2025-04-27#tokyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/315/tokyo/2025-04-27",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

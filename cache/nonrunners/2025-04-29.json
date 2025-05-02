@@ -1,0 +1,85 @@
+[
+  {
+    "courseName": "Brighton",
+    "raceCardsCourseUrl": "/racecards/2025-04-29#brighton",
+    "raceCardsCourseMeetingsUrl": "/racecards/7/brighton/2025-04-29",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 7.0) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "1m2f & 1m4f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/7/brighton/2025-04-29/891556",
+        "horses": [
+          {
+            "horseName": "Boy George",
+            "horseProfileUrl": "/profile/horse/2695139/boy-george/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-04-29#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-04-29",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.9) (Watering) (Outer track) (Rail Movements: 3.18 +12yds and 3.53, 4.28, 5.03 & 5.38 +6yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:08",
+        "raceCardUrl": "/racecards/40/nottingham/2025-04-29/891550",
+        "horses": [
+          {
+            "horseName": "King Of The Jungle",
+            "horseProfileUrl": "/profile/horse/4980113/king-of-the-jungle/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Punchestown",
+    "raceCardsCourseUrl": "/racecards/2025-04-29#punchestown",
+    "raceCardsCourseMeetingsUrl": "/racecards/195/punchestown/2025-04-29",
+    "going": "YIELDING (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-29#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-04-29",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-29/891845",
+        "horses": [
+          {
+            "horseName": "Breccia",
+            "horseProfileUrl": "/profile/horse/3505946/breccia/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-29/891847",
+        "horses": [
+          {
+            "horseName": "Penny's Spirit",
+            "horseProfileUrl": "/profile/horse/6759112/pennys-spirit/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  }
+]

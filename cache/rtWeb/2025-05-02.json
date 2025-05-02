@@ -1,0 +1,30 @@
+{
+  "date": "2025-05-02",
+  "tips": [
+    {
+      "horseName": "Barton Snow",
+      "time": "16:35",
+      "rating": 82.4
+    },
+    {
+      "horseName": "Fairly Famous",
+      "time": "17:45",
+      "rating": 75
+    },
+    {
+      "horseName": "Gracchus De Balme (FR)",
+      "time": "18:20",
+      "rating": 83.8
+    },
+    {
+      "horseName": "Jefferys Cross",
+      "time": "19:30",
+      "rating": 72.7
+    },
+    {
+      "horseName": "Take All",
+      "time": "20:05",
+      "rating": 75.9
+    }
+  ]
+}

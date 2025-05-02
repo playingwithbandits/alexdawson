@@ -43,16 +43,27 @@ async function parseTipsPage(html: string) {
     )
     .first();
 
-  if (!ukPanel.length) {
+  const irishPanel = $(".flush-first--1 .panel")
+    .filter((_, panel) =>
+      $(panel).find(".panel-header h2").text().includes("Irish Racing Tips")
+    )
+    .first();
+
+  if (!ukPanel.length && !irishPanel.length) {
     //console.log("No UK Racing Tips panel found");
     return [];
   }
 
-  const links = ukPanel
-    .find(".a--plain")
-    .map((_, el) => $(el).attr("href"))
-    .get()
-    .filter(Boolean);
+  const links = [
+    ...ukPanel
+      .find(".a--plain")
+      .map((_, el) => $(el).attr("href"))
+      .get(),
+    ...irishPanel
+      .find(".a--plain")
+      .map((_, el) => $(el).attr("href"))
+      .get(),
+  ].filter(Boolean);
 
   //console.log(`Found ${links.length} course links`);
   return links;

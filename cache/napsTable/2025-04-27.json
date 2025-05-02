@@ -1,0 +1,293 @@
+{
+  "date": "2025-04-27",
+  "tips": [
+    {
+      "time": "16:30",
+      "horse": "Jojo Rabbit",
+      "tipster": "Rory Paddock",
+      "score": "18.9"
+    },
+    {
+      "time": "17:30",
+      "horse": "Havana Touch",
+      "tipster": "Melissa Jones",
+      "score": "16.7"
+    },
+    {
+      "time": "18:15",
+      "horse": "Rohaan",
+      "tipster": "Farringdon",
+      "score": "11.7"
+    },
+    {
+      "time": "15:15",
+      "horse": "How Impressive",
+      "tipster": "RP Ratings",
+      "score": "11.0"
+    },
+    {
+      "time": "17:15",
+      "horse": "Dixieland Blues",
+      "tipster": "Jason Heavey",
+      "score": "9.6"
+    },
+    {
+      "time": "16:00",
+      "horse": "Never Let Go",
+      "tipster": "Rob Wright",
+      "score": "7.2"
+    },
+    {
+      "time": "14:30",
+      "horse": "Coma Cluster",
+      "tipster": "Newsboy",
+      "score": "2.4"
+    },
+    {
+      "time": "16:30",
+      "horse": "Jojo Rabbit",
+      "tipster": "Chris Connolly",
+      "score": "1.8"
+    },
+    {
+      "time": "15:15",
+      "horse": "How Impressive",
+      "tipster": "Karl Hedley",
+      "score": "-0.2"
+    },
+    {
+      "time": "15:45",
+      "horse": "Tourist",
+      "tipster": "Luke Tucker",
+      "score": "-2.2"
+    },
+    {
+      "time": "16:15",
+      "horse": "Russian Crescendo",
+      "tipster": "Steve Mullington",
+      "score": "-3.9"
+    },
+    {
+      "time": "17:15",
+      "horse": "Dixieland Blues",
+      "tipster": "The Score",
+      "score": "-5.0"
+    },
+    {
+      "time": "17:15",
+      "horse": "Dixieland Blues",
+      "tipster": "Lee Sobot",
+      "score": "-5.8"
+    },
+    {
+      "time": "17:30",
+      "horse": "Northbound",
+      "tipster": "The North",
+      "score": "-6.8"
+    },
+    {
+      "time": "16:30",
+      "horse": "Glory Hyde",
+      "tipster": "Andrew Mount",
+      "score": "-7.4"
+    },
+    {
+      "time": "18:45",
+      "horse": "Charging Thunder",
+      "tipster": "Glendale",
+      "score": "-9.1"
+    },
+    {
+      "time": "18:15",
+      "horse": "Rohaan",
+      "tipster": "The Punt",
+      "score": "-10.2"
+    },
+    {
+      "time": "14:00",
+      "horse": "Clermont Ferrand",
+      "tipster": "Whistler",
+      "score": "-11.9"
+    },
+    {
+      "time": "15:15",
+      "horse": "King Of Ithaca",
+      "tipster": "Robin Goodfellow",
+      "score": "-12.2"
+    },
+    {
+      "time": "15:30",
+      "horse": "Power Of Gold",
+      "tipster": "Ian Gaughran",
+      "score": "-16.9"
+    },
+    {
+      "time": "15:30",
+      "horse": "Candonomore",
+      "tipster": "Matt Polley",
+      "score": "-15.2"
+    },
+    {
+      "time": "17:45",
+      "horse": "Hammer The Hammer",
+      "tipster": "Garry Owen",
+      "score": "-15.7"
+    },
+    {
+      "time": "17:45",
+      "horse": "Hammer The Hammer",
+      "tipster": "Marlborough",
+      "score": "-15.5"
+    },
+    {
+      "time": "17:45",
+      "horse": "Scatter Penny",
+      "tipster": "Jim Delahunt",
+      "score": "-16.4"
+    },
+    {
+      "time": "18:15",
+      "horse": "Rohaan",
+      "tipster": "Sam Hardy",
+      "score": "-16.6"
+    },
+    {
+      "time": "17:15",
+      "horse": "Dixieland Blues",
+      "tipster": "The Brigadier",
+      "score": "-18.2"
+    },
+    {
+      "time": "17:15",
+      "horse": "Dixieland Blues",
+      "tipster": "Mercury",
+      "score": "-20.1"
+    },
+    {
+      "time": "17:15",
+      "horse": "Venezuelan",
+      "tipster": "Jeffrey Ross",
+      "score": "-20.3"
+    },
+    {
+      "time": "16:30",
+      "horse": "Yazaman",
+      "tipster": "Dean Kilbryde",
+      "score": "-21.4"
+    },
+    {
+      "time": "15:45",
+      "horse": "Tourist",
+      "tipster": "Spotlight",
+      "score": "-21.4"
+    },
+    {
+      "time": "18:45",
+      "horse": "Caballo De Mar",
+      "tipster": "Rockavon",
+      "score": "-23.1"
+    },
+    {
+      "time": "17:15",
+      "horse": "Dixieland Blues",
+      "tipster": "Computeform",
+      "score": "-23.3"
+    },
+    {
+      "time": "16:00",
+      "horse": "Manila Thriller",
+      "tipster": "Postdata",
+      "score": "-25.7"
+    },
+    {
+      "time": "18:45",
+      "horse": "Manxman",
+      "tipster": "The Duke",
+      "score": "-26.8"
+    },
+    {
+      "time": "16:30",
+      "horse": "Jojo Rabbit",
+      "tipster": "Jon Freeman",
+      "score": "-26.9"
+    },
+    {
+      "time": "17:00",
+      "horse": "Respiro Solitario",
+      "tipster": "Rory Delargy",
+      "score": "-27.0"
+    },
+    {
+      "time": "18:15",
+      "horse": "Bergerac",
+      "tipster": "Ben Morgan",
+      "score": "-27.4"
+    },
+    {
+      "time": "14:30",
+      "horse": "Rock Camelot",
+      "tipster": "On The Nose",
+      "score": "-30.3"
+    },
+    {
+      "time": "17:45",
+      "horse": "Hammer The Hammer",
+      "tipster": "The Judge",
+      "score": "-30.8"
+    },
+    {
+      "time": "16:15",
+      "horse": "Overture",
+      "tipster": "Templegate",
+      "score": "-33.1"
+    },
+    {
+      "time": "15:45",
+      "horse": "Lil Guff",
+      "tipster": "Ross Shepherd",
+      "score": "-35.2"
+    },
+    {
+      "time": "16:00",
+      "horse": "Never Let Go",
+      "tipster": "Brian Flanagan",
+      "score": "-38.6"
+    },
+    {
+      "time": "16:30",
+      "horse": "Yazaman",
+      "tipster": "Moorestyle",
+      "score": "-44.0"
+    },
+    {
+      "time": "15:15",
+      "horse": "King Of Ithaca",
+      "tipster": "Fortunatus",
+      "score": "-43.5"
+    },
+    {
+      "time": "17:15",
+      "horse": "Dixieland Blues",
+      "tipster": "Tipman Tips",
+      "score": "-43.1"
+    },
+    {
+      "time": "17:45",
+      "horse": "Mr Cool",
+      "tipster": "Chris Wright",
+      "score": "-44.0"
+    },
+    {
+      "time": "16:45",
+      "horse": "Waardah",
+      "tipster": "Lambourn",
+      "score": "-46.9"
+    },
+    {
+      "time": "18:45",
+      "horse": "Caballo De Mar",
+      "tipster": "Adrian Wall",
+      "score": "-54.2"
+    }
+  ]
+}

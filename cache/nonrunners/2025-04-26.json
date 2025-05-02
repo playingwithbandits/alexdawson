@@ -1,0 +1,352 @@
+[
+  {
+    "courseName": "Doncaster",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#doncaster",
+    "raceCardsCourseMeetingsUrl": "/racecards/15/doncaster/2025-04-26",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 7.1) (Watered)",
+    "weather": "Cloudy",
+    "stallsPosition": "Stands' side",
+    "races": []
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-04-26",
+    "going": "GOOD, Good to firm in places (GoingStick 7.0) (Rail Movements: 1.30 +43yds, 2.00 & 3.15 +45yds and 2.40, 4.55 & 5.25 +23yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "6f & 1m2f  - Centre; 7f & 1m - Inside; 1m4f - Outside",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/23/haydock/2025-04-26/891506",
+        "horses": [
+          {
+            "horseName": "Distinction",
+            "horseProfileUrl": "/profile/horse/3098702/distinction/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "High Point",
+            "horseProfileUrl": "/profile/horse/5021312/high-point/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/23/haydock/2025-04-26/891504",
+        "horses": [
+          {
+            "horseName": "Thunder Roar",
+            "horseProfileUrl": "/profile/horse/3837478/thunder-roar/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/23/haydock/2025-04-26/894262",
+        "horses": [
+          {
+            "horseName": "Solar Bentley",
+            "horseProfileUrl": "/profile/horse/5431086/solar-bentley/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leicester",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#leicester",
+    "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-04-26",
+    "going": "GOOD, Good to firm in places (GoingStick 6.5) (Watered) (Rail Movements: 2.35 & 3.10 +15yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "Straight - Stands' side; 1m2f - Inside",
+    "races": [
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/30/leicester/2025-04-26/891515",
+        "horses": [
+          {
+            "horseName": "Mamma Maria",
+            "horseProfileUrl": "/profile/horse/6215482/mamma-maria/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/30/leicester/2025-04-26/891517",
+        "horses": [
+          {
+            "horseName": "The Cola Kid",
+            "horseProfileUrl": "/profile/horse/2975517/the-cola-kid/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Navan",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#navan",
+    "raceCardsCourseMeetingsUrl": "/racecards/193/navan/2025-04-26",
+    "going": "SOFT",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Ripon",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#ripon",
+    "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-04-26",
+    "going": "GOOD (GoingStick 7.8) (Watered) (Rail Movements: 4.35, 7.05, 5.35 & 6.35 +12yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "Straight & 2m - Stands' side; 1m4f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/49/ripon/2025-04-26/891524",
+        "horses": [
+          {
+            "horseName": "Malinga The Slinga",
+            "horseProfileUrl": "/profile/horse/7445336/malinga-the-slinga/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/49/ripon/2025-04-26/891520",
+        "horses": [
+          {
+            "horseName": "Mr Hampstead",
+            "horseProfileUrl": "/profile/horse/5147957/mr-hampstead/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:35",
+        "raceCardUrl": "/racecards/49/ripon/2025-04-26/891521",
+        "horses": [
+          {
+            "horseName": "Havana Prince",
+            "horseProfileUrl": "/profile/horse/4977918/havana-prince/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sandown",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#sandown",
+    "raceCardsCourseMeetingsUrl": "/racecards/54/sandown/2025-04-26",
+    "going": "GOOD, Good to soft in places on Hurdle course (GoingStick: Chase 6.1, Hurdle 5.0) (Watered) (Rail Movements: 1.20, 3.00 & 4.45 +25yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:20",
+        "raceCardUrl": "/racecards/54/sandown/2025-04-26/891760",
+        "horses": [
+          {
+            "horseName": "Big Ginge",
+            "horseProfileUrl": "/profile/horse/5577184/big-ginge/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-04-26",
+    "going": "TAPETA: STANDARD",
+    "weather": "Cloudy",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-26/891816",
+        "horses": [
+          {
+            "horseName": "Vamp",
+            "horseProfileUrl": "/profile/horse/5982372/vamp/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-26/891819",
+        "horses": [
+          {
+            "horseName": "Savalas",
+            "horseProfileUrl": "/profile/horse/1462634/savalas/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ascot (Aus)",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#ascot-aus",
+    "raceCardsCourseMeetingsUrl": "/racecards/518/ascot-aus/2025-04-26",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Eagle Farm",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#eagle-farm",
+    "raceCardsCourseMeetingsUrl": "/racecards/468/eagle-farm/2025-04-26",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:58",
+        "raceCardUrl": "/racecards/468/eagle-farm/2025-04-26/894241",
+        "horses": [
+          {
+            "horseName": "Headbanger",
+            "horseProfileUrl": "/profile/horse/7466811/headbanger/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Star Cheval",
+            "horseProfileUrl": "/profile/horse/7466809/star-cheval/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Don't Tellyafather",
+            "horseProfileUrl": "/profile/horse/7457833/dont-tellyafather/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:08",
+        "raceCardUrl": "/racecards/468/eagle-farm/2025-04-26/894242",
+        "horses": [
+          {
+            "horseName": "Sheraquay",
+            "horseProfileUrl": "/profile/horse/5942518/sheraquay/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Maragical",
+            "horseProfileUrl": "/profile/horse/7466815/maragical/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Lovey Dovey",
+            "horseProfileUrl": "/profile/horse/7395140/lovey-dovey/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Morphettville",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#morphettville",
+    "raceCardsCourseMeetingsUrl": "/racecards/462/morphettville/2025-04-26",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:07",
+        "raceCardUrl": "/racecards/462/morphettville/2025-04-26/894244",
+        "horses": [
+          {
+            "horseName": "Just Kick",
+            "horseProfileUrl": "/profile/horse/7466824/just-kick/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:42",
+        "raceCardUrl": "/racecards/462/morphettville/2025-04-26/894336",
+        "horses": [
+          {
+            "horseName": "Honor Galore",
+            "horseProfileUrl": "/profile/horse/5156452/honor-galore/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:17",
+        "raceCardUrl": "/racecards/462/morphettville/2025-04-26/894245",
+        "horses": [
+          {
+            "horseName": "Tel Aviv",
+            "horseProfileUrl": "/profile/horse/6957204/tel-aviv/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Garnacho",
+            "horseProfileUrl": "/profile/horse/6456156/garnacho/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:52",
+        "raceCardUrl": "/racecards/462/morphettville/2025-04-26/894337",
+        "horses": [
+          {
+            "horseName": "Scillato",
+            "horseProfileUrl": "/profile/horse/6224740/scillato/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:27",
+        "raceCardUrl": "/racecards/462/morphettville/2025-04-26/894338",
+        "horses": [
+          {
+            "horseName": "Grey Ice",
+            "horseProfileUrl": "/profile/horse/5313288/grey-ice/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Talisay",
+            "horseProfileUrl": "/profile/horse/5652697/talisay/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:42",
+        "raceCardUrl": "/racecards/462/morphettville/2025-04-26/893693",
+        "horses": [
+          {
+            "horseName": "Jasmin Rouge",
+            "horseProfileUrl": "/profile/horse/6291919/jasmin-rouge/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tokyo",
+    "raceCardsCourseUrl": "/racecards/2025-04-26#tokyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/315/tokyo/2025-04-26",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

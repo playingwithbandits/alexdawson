@@ -1,0 +1,85 @@
+{
+  "date": "2025-04-27",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Clermont Ferrand",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Beatrice Shilling",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Gloriously Sassy",
+      "isNap": true
+    },
+    {
+      "time": "15:30",
+      "horse": "Paris Lights",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Bowerchalke",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "First Company",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "West Kirby",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Miss Willows",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Drifts Away",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Tourist",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Overture",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Morrophore",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Dixieland Blues",
+      "isNap": true
+    },
+    {
+      "time": "17:45",
+      "horse": "Wheels Of Fire",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Westmorian",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Caballo De Mar",
+      "isNap": false
+    }
+  ]
+}

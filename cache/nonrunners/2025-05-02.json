@@ -1,0 +1,308 @@
+[
+  {
+    "courseName": "Cheltenham",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#cheltenham",
+    "raceCardsCourseMeetingsUrl": "/racecards/11/cheltenham/2025-05-02",
+    "going": "GOOD (GoingStick 6.5) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/11/cheltenham/2025-05-02/891768",
+        "horses": [
+          {
+            "horseName": "Dusart",
+            "horseProfileUrl": "/profile/horse/3277146/dusart/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-05-02",
+    "going": "GOOD (GoingStick 7.2) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 6f - Stands' side; 1m3f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "1:25",
+        "raceCardUrl": "/racecards/21/goodwood/2025-05-02/891610",
+        "horses": [
+          {
+            "horseName": "Goldenstateofmind",
+            "horseProfileUrl": "/profile/horse/7204901/goldenstateofmind/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Burdett Estate",
+            "horseProfileUrl": "/profile/horse/7484078/burdett-estate/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/21/goodwood/2025-05-02/891612",
+        "horses": [
+          {
+            "horseName": "Hebridean Nomad",
+            "horseProfileUrl": "/profile/horse/5293186/hebridean-nomad/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Musselburgh",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#musselburgh",
+    "raceCardsCourseMeetingsUrl": "/racecards/16/musselburgh/2025-05-02",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.9) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f - Stands' side; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-05-02/891602",
+        "horses": [
+          {
+            "horseName": "Typewritten",
+            "horseProfileUrl": "/profile/horse/3982465/typewritten/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-05-02/891606",
+        "horses": [
+          {
+            "horseName": "Tickets",
+            "horseProfileUrl": "/profile/horse/3437974/tickets/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-05-02/891601",
+        "horses": [
+          {
+            "horseName": "Code Purple",
+            "horseProfileUrl": "/profile/horse/3749592/code-purple/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-05-02",
+    "going": "TAPETA: STANDARD",
+    "weather": "Cloudy",
+    "stallsPosition": "Straight - Centre; 2m - Inside",
+    "races": [
+      {
+        "raceTime": "6:13",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-05-02/891870",
+        "horses": [
+          {
+            "horseName": "Satyress",
+            "horseProfileUrl": "/profile/horse/7484083/satyress/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:48",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-05-02/891871",
+        "horses": [
+          {
+            "horseName": "English Harbour",
+            "horseProfileUrl": "/profile/horse/5842802/english-harbour/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Havana Chance",
+            "horseProfileUrl": "/profile/horse/7374166/havana-chance/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:20",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-05-02/891868",
+        "horses": [
+          {
+            "horseName": "Eden Storm",
+            "horseProfileUrl": "/profile/horse/4175294/eden-storm/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-05-02/891873",
+        "horses": [
+          {
+            "horseName": "Flash The Dash",
+            "horseProfileUrl": "/profile/horse/3437845/flash-the-dash/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newmarket",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#newmarket",
+    "raceCardsCourseMeetingsUrl": "/racecards/38/newmarket/2025-05-02",
+    "going": "GOOD (GoingStick: 7.1) (Watered)",
+    "weather": "Sunny",
+    "stallsPosition": "(Stands' side course) Centre",
+    "races": [
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/38/newmarket/2025-05-02/891625",
+        "horses": [
+          {
+            "horseName": "Three On Thursday",
+            "horseProfileUrl": "/profile/horse/6092544/three-on-thursday/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:45",
+        "raceCardUrl": "/racecards/38/newmarket/2025-05-02/891622",
+        "horses": [
+          {
+            "horseName": "Devil's Advocate",
+            "horseProfileUrl": "/profile/horse/6482628/devils-advocate/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:55",
+        "raceCardUrl": "/racecards/38/newmarket/2025-05-02/891626",
+        "horses": [
+          {
+            "horseName": "Brave Mission",
+            "horseProfileUrl": "/profile/horse/6161667/brave-mission/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/38/newmarket/2025-05-02/891624",
+        "horses": [
+          {
+            "horseName": "Tarkhan",
+            "horseProfileUrl": "/profile/horse/5005657/tarkhan/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Punchestown",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#punchestown",
+    "raceCardsCourseMeetingsUrl": "/racecards/195/punchestown/2025-05-02",
+    "going": "YIELDING",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/195/punchestown/2025-05-02/894421",
+        "horses": [
+          {
+            "horseName": "Cosmic Blizzard",
+            "horseProfileUrl": "/profile/horse/4880950/cosmic-blizzard/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Go Frankie",
+            "horseProfileUrl": "/profile/horse/4609252/go-frankie/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/195/punchestown/2025-05-02/894423",
+        "horses": [
+          {
+            "horseName": "Shecouldbeanything",
+            "horseProfileUrl": "/profile/horse/4247992/shecouldbeanything/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/195/punchestown/2025-05-02/894424",
+        "horses": [
+          {
+            "horseName": "Cleatus Poolaw",
+            "horseProfileUrl": "/profile/horse/4711751/cleatus-poolaw/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "What's Up Darling",
+            "horseProfileUrl": "/profile/horse/4144664/whats-up-darling/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chantilly",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#chantilly",
+    "raceCardsCourseMeetingsUrl": "/racecards/204/chantilly/2025-05-02",
+    "going": "POLYTRACK: STANDARD; TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Churchill Downs",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#churchill-downs",
+    "raceCardsCourseMeetingsUrl": "/racecards/308/churchill-downs/2025-05-02",
+    "going": "DIRT: FAST; TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Palermo",
+    "raceCardsCourseUrl": "/racecards/2025-05-02#palermo",
+    "raceCardsCourseMeetingsUrl": "/racecards/601/palermo/2025-05-02",
+    "going": "DIRT: STANDARD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:25",
+        "raceCardUrl": "/racecards/601/palermo/2025-05-02/894742",
+        "horses": [
+          {
+            "horseName": "Barbacoa Key",
+            "horseProfileUrl": "/profile/horse/7507839/barbacoa-key/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,305 @@
+{
+  "date": "2025-04-29",
+  "tips": [
+    {
+      "time": "15:30",
+      "horse": "It's Tim",
+      "tipster": "Marlborough",
+      "score": "525.0"
+    },
+    {
+      "time": "16:28",
+      "horse": "Francophone",
+      "tipster": "Tipman Tips",
+      "score": "425.0"
+    },
+    {
+      "time": "17:38",
+      "horse": "Double Red",
+      "tipster": "Garry Owen",
+      "score": "400.0"
+    },
+    {
+      "time": "20:00",
+      "horse": "Sydney Seabreeze",
+      "tipster": "Rockavon",
+      "score": "250.0"
+    },
+    {
+      "time": "18:25",
+      "horse": "Naallat",
+      "tipster": "Matt Polley",
+      "score": "250.0"
+    },
+    {
+      "time": "17:53",
+      "horse": "Crown's Lady",
+      "tipster": "The Duke",
+      "score": "125.0"
+    },
+    {
+      "time": "16:50",
+      "horse": "Lecky Watson",
+      "tipster": "The Judge",
+      "score": "125.0"
+    },
+    {
+      "time": "14:20",
+      "horse": "Shaw Park",
+      "tipster": "RP Ratings",
+      "score": "100.0"
+    },
+    {
+      "time": "17:15",
+      "horse": "Comedian Leader",
+      "tipster": "Newsboy",
+      "score": "100.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Fact To File",
+      "tipster": "The Score",
+      "score": "97.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Fact To File",
+      "tipster": "Mercury",
+      "score": "97.0"
+    },
+    {
+      "time": "19:30",
+      "horse": "Tapis Rouge",
+      "tipster": "Newmarket",
+      "score": "97.0"
+    },
+    {
+      "time": "16:15",
+      "horse": "Kopek Des Bordes",
+      "tipster": "Lee Sobot",
+      "score": "84.0"
+    },
+    {
+      "time": "15:05",
+      "horse": "Timmy Tuesday",
+      "tipster": "Adrian Wall",
+      "score": "50.0"
+    },
+    {
+      "time": "17:45",
+      "horse": "Anglesey Lad",
+      "tipster": "Postdata",
+      "score": "37.5"
+    },
+    {
+      "time": "15:18",
+      "horse": "Expressionless",
+      "tipster": "The Brigadier",
+      "score": "25.0"
+    },
+    {
+      "time": "15:05",
+      "horse": "Rocheval",
+      "tipster": "Jason Heavey",
+      "score": "25.0"
+    },
+    {
+      "time": "16:15",
+      "horse": "Kopek Des Bordes",
+      "tipster": "Computeform",
+      "score": "25.0"
+    },
+    {
+      "time": "16:15",
+      "horse": "Kopek Des Bordes",
+      "tipster": "Ratings Hub",
+      "score": "25.0"
+    },
+    {
+      "time": "14:30",
+      "horse": "Haggard",
+      "tipster": "Melissa Jones",
+      "score": "44.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "Ascending Lark",
+      "tipster": "Dean Kilbryde",
+      "score": "-28.0"
+    },
+    {
+      "time": "15:18",
+      "horse": "Expressionless",
+      "tipster": "Templegate",
+      "score": "-28.0"
+    },
+    {
+      "time": "21:00",
+      "horse": "Pessoa",
+      "tipster": "West Country",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:03",
+      "horse": "Adorla Of Achill",
+      "tipster": "Robin Goodfellow",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:05",
+      "horse": "Almuhit",
+      "tipster": "Andrew Mount",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:38",
+      "horse": "Double Red",
+      "tipster": "Chris Wright",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:28",
+      "horse": "Rose Prick",
+      "tipster": "Ross Shepherd",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:28",
+      "horse": "Francophone",
+      "tipster": "Glendale",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:08",
+      "horse": "Zaman Daar",
+      "tipster": "Farringdon",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:18",
+      "horse": "Expressionless",
+      "tipster": "Rob Wright",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:18",
+      "horse": "Expressionless",
+      "tipster": "Whistler",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:18",
+      "horse": "Expressionless",
+      "tipster": "On The Nose",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:18",
+      "horse": "Expressionless",
+      "tipster": "The Punt",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:05",
+      "horse": "Santorini Star",
+      "tipster": "Chris Connolly",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:20",
+      "horse": "Enpassant",
+      "tipster": "Rory Paddock",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:38",
+      "horse": "Time Tells All",
+      "tipster": "Moorestyle",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:25",
+      "horse": "Pina Sonata",
+      "tipster": "Jeffrey Ross",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "Ascending Lark",
+      "tipster": "Karl Hedley",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "Ascending Lark",
+      "tipster": "Lambourn",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "God Of Thunder",
+      "tipster": "Ben Morgan",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "Lark In The Mornin",
+      "tipster": "Jim Delahunt",
+      "score": "-100.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "Serienmond",
+      "tipster": "Jon Freeman",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:15",
+      "horse": "Kopek Des Bordes",
+      "tipster": "Steve Mullington",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:50",
+      "horse": "Ballyburn",
+      "tipster": "Fortunatus",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:50",
+      "horse": "Lecky Watson",
+      "tipster": "Rory Delargy",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:50",
+      "horse": "Lecky Watson",
+      "tipster": "Sam Hardy",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Fact To File",
+      "tipster": "Brian Flanagan",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:00",
+      "horse": "Solness",
+      "tipster": "Luke Tucker",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:53",
+      "horse": "Crown's Lady",
+      "tipster": "Spotlight",
+      "score": "-100.0"
+    },
+    {
+      "time": "20:30",
+      "horse": "Baileys Jubilation",
+      "tipster": "The North",
+      "score": "-100.0"
+    }
+  ]
+}

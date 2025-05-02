@@ -1,0 +1,227 @@
+[
+  {
+    "courseName": "Ayr",
+    "raceCardsCourseUrl": "/racecards/2025-04-28#ayr",
+    "raceCardsCourseMeetingsUrl": "/racecards/3/ayr/2025-04-28",
+    "going": "GOOD (GoingStick 7.7) (Rail Movements: 2.30, 3.30 & 4.05 +12yds and 5.13 +18yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "5f, 5 1/2f & 6f - Centre; 7f & 1m2f - Outside; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-28#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-04-28",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Mostly sunny",
+    "stallsPosition": "1m - Outside; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Naas",
+    "raceCardsCourseUrl": "/racecards/2025-04-28#naas",
+    "raceCardsCourseMeetingsUrl": "/racecards/192/naas/2025-04-28",
+    "going": "YIELDING, Good to yielding in places on Straight course",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/192/naas/2025-04-28/894248",
+        "horses": [
+          {
+            "horseName": "Spring Is Here",
+            "horseProfileUrl": "/profile/horse/7436391/spring-is-here/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/192/naas/2025-04-28/894249",
+        "horses": [
+          {
+            "horseName": "Sarahmae",
+            "horseProfileUrl": "/profile/horse/6233843/sarahmae/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:10",
+        "raceCardUrl": "/racecards/192/naas/2025-04-28/894250",
+        "horses": [
+          {
+            "horseName": "Real Force",
+            "horseProfileUrl": "/profile/horse/2617653/real-force/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:40",
+        "raceCardUrl": "/racecards/192/naas/2025-04-28/894251",
+        "horses": [
+          {
+            "horseName": "Magical Vision",
+            "horseProfileUrl": "/profile/horse/3560259/magical-vision/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:10",
+        "raceCardUrl": "/racecards/192/naas/2025-04-28/894252",
+        "horses": [
+          {
+            "horseName": "Monsunaty",
+            "horseProfileUrl": "/profile/horse/6296537/monsunaty/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/192/naas/2025-04-28/894253",
+        "horses": [
+          {
+            "horseName": "Mister Adam",
+            "horseProfileUrl": "/profile/horse/6671049/mister-adam/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:10",
+        "raceCardUrl": "/racecards/192/naas/2025-04-28/894254",
+        "horses": [
+          {
+            "horseName": "Dynamite Defense",
+            "horseProfileUrl": "/profile/horse/5831367/dynamite-defense/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-04-28#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-04-28",
+    "going": "GOOD TO FIRM (GoingStick 7.9) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f, 6f,1m2f & 1m3f - Centre; 1m - Inside",
+    "races": [
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/93/windsor/2025-04-28/891542",
+        "horses": [
+          {
+            "horseName": "Em Four",
+            "horseProfileUrl": "/profile/horse/6701907/em-four/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/93/windsor/2025-04-28/891544",
+        "horses": [
+          {
+            "horseName": "Postman's Park",
+            "horseProfileUrl": "/profile/horse/4728082/postmans-park/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/93/windsor/2025-04-28/891543",
+        "horses": [
+          {
+            "horseName": "Noble Horizon",
+            "horseProfileUrl": "/profile/horse/6803075/noble-horizon/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/93/windsor/2025-04-28/891539",
+        "horses": [
+          {
+            "horseName": "Croeso Cymraeg",
+            "horseProfileUrl": "/profile/horse/2116175/croeso-cymraeg/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Dancing In Paris",
+            "horseProfileUrl": "/profile/horse/4568964/dancing-in-paris/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/93/windsor/2025-04-28/891545",
+        "horses": [
+          {
+            "horseName": "Helaali",
+            "horseProfileUrl": "/profile/horse/6111531/helaali/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:05",
+        "raceCardUrl": "/racecards/93/windsor/2025-04-28/891540",
+        "horses": [
+          {
+            "horseName": "Ancient Times",
+            "horseProfileUrl": "/profile/horse/3142198/ancient-times/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-04-28#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-04-28",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "8:50",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-04-28/891839",
+        "horses": [
+          {
+            "horseName": "Synergism",
+            "horseProfileUrl": "/profile/horse/6550733/synergism/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield (AW) (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-04-28#lingfield-aw-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1321/lingfield-aw-gb/2025-04-28",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Santa Anita",
+    "raceCardsCourseUrl": "/racecards/2025-04-28#santa-anita",
+    "raceCardsCourseMeetingsUrl": "/racecards/257/santa-anita/2025-04-28",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

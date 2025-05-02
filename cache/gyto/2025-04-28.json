@@ -1,0 +1,170 @@
+{
+  "date": "2025-04-28",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Inanna",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Bin Ajwad",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Mr Nippy",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Spirit Of Acklam",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "City Of Strangers",
+      "isNap": true
+    },
+    {
+      "time": "17:13",
+      "horse": "Flying Scotsman",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "The Colorist",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "State Flag",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Kitty Furnival",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Go Go Boots",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "City Of Poets",
+      "isNap": true
+    },
+    {
+      "time": "16:50",
+      "horse": "General Assembly",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Calanthe",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Cupola",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Al Shababi",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Sea Founder",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Dancing In Paris",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Kinetic",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Blue Train",
+      "isNap": false
+    },
+    {
+      "time": "20:05",
+      "horse": "Torfrida",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Simply Astounding",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Miracle Beauty",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Cuban Grey",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "My Mate Alfie",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Guarded",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Tribal Nation",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Storm Eric",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Trusty Scout",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Gordon Norse",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "I Follow Rivers",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Colors Of Freedom",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Azure Angel",
+      "isNap": false
+    },
+    {
+      "time": "20:50",
+      "horse": "Synergism",
+      "isNap": false
+    }
+  ]
+}

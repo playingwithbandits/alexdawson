@@ -346,6 +346,12 @@ export function PicksRaceRow({
 
   const countToBeHigherThan = propCountToBeHigherThan;
 
+  const horsesCount = race.horses?.filter(
+    (x) => !isNonRunner(race.time, x.name)
+  ).length;
+
+  const isEwable = horsesCount > 7;
+
   return (
     <div
       className={`flex justify-between p-1 rounded ${
@@ -710,8 +716,8 @@ export function PicksRaceRow({
             const aiPerc =
               aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score?.total?.percentage || 0;
-            const aiPercWithin20Percent =
-              aiPerc >= (topAiPercentage || 100) * 0.8;
+            const aiPercWithin10Percent =
+              aiPerc >= (topAiPercentage || 100) * 0.9;
 
             const olbgNapCount = olbgTipsWithNap
               ?.filter((x) => x.napTips >= 1)
@@ -729,11 +735,11 @@ export function PicksRaceRow({
               rpPredictions?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score || 0;
 
-            const rpPredPercWithin20Percent = rpPredPerc >= 80;
+            const rpPredPercWithin10Percent = rpPredPerc >= 90;
 
             const olbgNapGood = olbgNapCount && olbgCommentCount;
-            const aiGood = aiPercWithin20Percent && aiPerc >= 40;
-            const rpPredGood = rpPredPercWithin20Percent;
+            const aiGood = aiPercWithin10Percent && aiPerc >= 40;
+            const rpPredGood = rpPredPercWithin10Percent;
             const olbgExpertGood = olbgExpertCount && olbgCommentCount;
 
             const hasOlbgComment = Boolean(olbgCommentCount);
@@ -799,11 +805,11 @@ export function PicksRaceRow({
                   //   olbgNap ? "Yes" : "No"
                   // }`
                 }
-                oddsHighlight={odds > 6}
+                oddsHighlight={isEwable}
                 isNonRunner={isNonRunner(race.time, name)}
-                greyedOut={count < 2}
+                //greyedOut={count < 2}
                 title={paraGraph}
-                highlight3={aiGood && rpPredGood && hasOlbgComment}
+                highlight3={aiGood && rpPredGood}
                 highlight1={
                   aiGood &&
                   [
@@ -811,10 +817,9 @@ export function PicksRaceRow({
                     olbgExpertGood,
                     rpPredGood,
                     mentionedByTipster,
-                  ].filter(Boolean).length >= 3
+                  ].filter(Boolean).length >= 2
                 }
                 highlight2={[
-                  olbgExpertGood,
                   olbgNapGood,
                   rpPredGood,
                   aiGood,
