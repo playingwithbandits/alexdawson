@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     const doc = parser.parseFromString(html, "text/html");
     const elements = doc.querySelectorAll(".RC-accordion");
     // Filter for UK courses only
-    //console.log(`Found ${elements.length} total courses`);
+    console.log(`Found ${elements.length} total courses`);
     const ukElements = Array.from(elements).filter((element) => {
       const courseName = placeToPlaceKey(
         element
@@ -36,9 +36,14 @@ export async function POST(request: Request) {
       const isUkCourse = courseName && ukCourseKeys.includes(courseName);
       const isIrishCourse = courseName && irishCourseKeys.includes(courseName);
       //console.log(`Is UK course: ${isUkCourse}`);
+
+      console.log(
+        `Course: ${courseName}, UK: ${isUkCourse}, Irish: ${isIrishCourse}`
+      );
       return isUkCourse || isIrishCourse;
     });
     //console.log(`Filtered to ${ukElements.length} UK courses`);
+    console.log(`Filtered to ${ukElements.length} courses`, ukElements);
 
     const meetings = await parseMeetings(ukElements);
 

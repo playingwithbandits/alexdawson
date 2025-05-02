@@ -38,7 +38,7 @@ const getHorsePosition = (
   results: RaceResults | undefined,
   time: string
 ) => {
-  console.log("Getting position for horse:", horseName);
+  //console.log("Getting position for horse:", horseName);
   const raceResult = results?.results.find(
     (r) => normalizeTime(r.time) === normalizeTime(time)
   );

@@ -805,7 +805,9 @@ export function PicksRaceRow({
                   //   olbgNap ? "Yes" : "No"
                   // }`
                 }
-                oddsHighlight={isEwable}
+                oddsHighlight={
+                  aiGood && rpPredGood && isEwable && odds > 10 && count >= 1.25
+                }
                 isNonRunner={isNonRunner(race.time, name)}
                 //greyedOut={count < 2}
                 title={paraGraph}

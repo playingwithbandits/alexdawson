@@ -275,7 +275,7 @@ export function HorsePageClient({ date }: { date: string }) {
             return;
           }
 
-          //console.log("🔍 Checking cache for date:", date);
+          console.log("🔍 Checking cache for date:", date);
 
           // Try to get cached data from file
           const cacheResponse = await fetch(`/api/racing?date=${date}`);
@@ -288,7 +288,7 @@ export function HorsePageClient({ date }: { date: string }) {
             return;
           }
 
-          //console.log("❌ No cache found, fetching fresh data");
+          console.log("❌ No cache found, fetching fresh data");
 
           const response = await fetch(
             `/getP.php?q=${encodeURIComponent(getPageUrl(date))}`
@@ -305,7 +305,7 @@ export function HorsePageClient({ date }: { date: string }) {
             ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))"
           );
 
-          //console.log(`Found ${meetingElements.length} total courses`);
+          console.log(`Found ${meetingElements.length} total courses`);
           const ukElements = Array.from(meetingElements).filter((element) => {
             const courseName = placeToPlaceKey(
               element
@@ -315,17 +315,29 @@ export function HorsePageClient({ date }: { date: string }) {
                 .trim() || ""
             );
 
-            //console.log(`Processing course: ${courseName}`);
+            console.log(`Processing course: ${courseName}`);
             const ukCourseKeys = UK_COURSES.map((course) =>
               placeToPlaceKey(course)
             );
+            const irishCourseKeys = IRISH_COURSES.map((course) =>
+              placeToPlaceKey(course)
+            );
             const isUkCourse = courseName && ukCourseKeys.includes(courseName);
-            //console.log(`Is UK course: ${isUkCourse}`);
-            return isUkCourse;
+            const isIrishCourse =
+              courseName && irishCourseKeys.includes(courseName);
+            console.log(`Is UK course: ${isUkCourse}`);
+            console.log(`Is Irish course: ${isIrishCourse}`);
+            console.log(
+              `Course: ${courseName}, UK: ${isUkCourse}, Irish: ${isIrishCourse}`
+            );
+            return isUkCourse || isIrishCourse;
           });
-          //console.log(`Filtered to ${ukElements.length} UK courses`);
+          console.log(
+            `Filtered to ${ukElements.length} UK courses`,
+            ukElements
+          );
 
-          //console.log("🔍 Meeting elements:", ukElements);
+          console.log("🔍 Meeting elements:", ukElements);
 
           const parsedMeetings = await parseMeetings(Array.from(ukElements));
           //console.log("✨ Successfully parsed meetings data");
