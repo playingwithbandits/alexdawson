@@ -609,10 +609,38 @@ export interface RtWebTip {
   time: string;
   rating: number;
 }
-
 export interface RtWebData {
   date: string;
   tips: RtWebTip[];
+}
+
+export interface SharpTip {
+  horseName: string;
+  track: string;
+  earlySpeed: number;
+  ability: number;
+  jockey: number;
+  trainer: number;
+  going: number;
+  course: number;
+  pedigree: number;
+  owner: number;
+  sharpRating: number;
+  oddsRating: number;
+  topSharp200InRace: boolean;
+  raceFavourite: boolean;
+  wonLastRace: boolean;
+  leadEarlyLastRace: boolean;
+  wonCourse: boolean;
+  wonDistance: boolean;
+  wonClass: boolean;
+  wonGoing: boolean;
+  jockeyName: string;
+  trainerName: string;
+}
+export interface SharpData {
+  date: string;
+  tips: SharpTip[];
 }
 
 export interface GytoTip {

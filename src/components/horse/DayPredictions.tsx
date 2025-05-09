@@ -15,6 +15,7 @@ import {
   NonRunnerMeeting,
   RtWebTip,
   OLBGTip,
+  SharpTip,
 } from "@/types/racing";
 import { HorseRow } from "./HorseRow";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
@@ -48,6 +49,7 @@ interface DayPredictionsProps {
   liveOdds: LiveOdds[];
   rtWebTips: RtWebTip[] | undefined;
   olbgTips: OLBGTip[] | undefined;
+  sharpTips: SharpTip[] | undefined;
 }
 
 export const normalizeTime = (time: string) => {
@@ -71,6 +73,7 @@ export function DayPredictions({
   liveOdds,
   rtWebTips,
   olbgTips,
+  sharpTips,
 }: DayPredictionsProps) {
   console.log("nonRunners", nonRunners);
   console.log("liveOdds", liveOdds);
@@ -659,6 +662,7 @@ export function DayPredictions({
                       liveOdds={liveOdds}
                       rtWebTips={rtWebTips}
                       olbgTips={olbgTips}
+                      sharpTips={sharpTips}
                       showOnlyBest={showOnlyBest}
                       countToBeHigherThan={countToBeHigherThan}
                     />

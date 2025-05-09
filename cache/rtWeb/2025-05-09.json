@@ -1,0 +1,90 @@
+{
+  "date": "2025-05-09",
+  "tips": [
+    {
+      "horseName": "Bluenose Belle (USA)",
+      "time": "14:10",
+      "rating": 78.6
+    },
+    {
+      "horseName": "All Well And Good",
+      "time": "14:45",
+      "rating": 88.7
+    },
+    {
+      "horseName": "Cloudy Wednesday",
+      "time": "15:15",
+      "rating": 81.1
+    },
+    {
+      "horseName": "Cant Beat History",
+      "time": "15:50",
+      "rating": 78
+    },
+    {
+      "horseName": "Scrum Diddly",
+      "time": "16:23",
+      "rating": 70.5
+    },
+    {
+      "horseName": "Iron Heart",
+      "time": "17:00",
+      "rating": 80.5
+    },
+    {
+      "horseName": "Chestnut Pete",
+      "time": "16:55",
+      "rating": 82.1
+    },
+    {
+      "horseName": "Golden De Coeur (FR)",
+      "time": "17:30",
+      "rating": 73.4
+    },
+    {
+      "horseName": "Could Be Trouble (IRE)",
+      "time": "18:05",
+      "rating": 75.8
+    },
+    {
+      "horseName": "The Dream Goes On",
+      "time": "18:40",
+      "rating": 79.6
+    },
+    {
+      "horseName": "Captain Attridge",
+      "time": "19:15",
+      "rating": 71.9
+    },
+    {
+      "horseName": "Man Of The Sea (IRE)",
+      "time": "19:50",
+      "rating": 72.6
+    },
+    {
+      "horseName": "Power Fizz",
+      "time": "13:50",
+      "rating": 77.2
+    },
+    {
+      "horseName": "Akkadian Thunder",
+      "time": "15:25",
+      "rating": 73.5
+    },
+    {
+      "horseName": "Tuco Salamanca",
+      "time": "16:00",
+      "rating": 71.3
+    },
+    {
+      "horseName": "I Am Me",
+      "time": "16:35",
+      "rating": 70.9
+    },
+    {
+      "horseName": "Orchestra (IRE)",
+      "time": "17:10",
+      "rating": 78.5
+    }
+  ]
+}

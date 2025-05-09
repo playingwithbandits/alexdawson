@@ -1,0 +1,177 @@
+[
+  {
+    "courseName": "Ascot",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#ascot",
+    "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-05-10",
+    "going": "GOOD TO FIRM (GoingStick: Stands' side: 7.4, Centre: 7.5, Far side: 7.3. Round Course: 6.5) (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/2/ascot/2025-05-10/892679",
+        "horses": [
+          {
+            "horseName": "Mafnood",
+            "horseProfileUrl": "/profile/horse/5055488/mafnood/",
+            "raceNumber": "(19)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/2/ascot/2025-05-10/892681",
+        "horses": [
+          {
+            "horseName": "Kotari",
+            "horseProfileUrl": "/profile/horse/4310815/kotari/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cork",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#cork",
+    "raceCardsCourseMeetingsUrl": "/racecards/596/cork/2025-05-10",
+    "going": "GOOD, Good to yielding in places (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/596/cork/2025-05-10/894883",
+        "horses": [
+          {
+            "horseName": "Chosen Comrade",
+            "horseProfileUrl": "/profile/horse/7200368/chosen-comrade/",
+            "raceNumber": "(18)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-05-10",
+    "going": "Hurdle course - GOOD; Flat course - GOOD TO FIRM, Good in places (Inside track) (GoingStick: Hurdle 7.4, Flat 7.7) (Watered) (Rail movements: 1.00 +145yds, 1.35 & 2.10 +72yds, 2.45, 3.20 & 3.55 +23yds and 4.30 +43yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "7f & 1m - Inside; 1m4f - Outside",
+    "races": []
+  },
+  {
+    "courseName": "Hexham",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#hexham",
+    "raceCardsCourseMeetingsUrl": "/racecards/25/hexham/2025-05-10",
+    "going": "GOOD, Good to soft in places (GoingStick 6.6) (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Leicester",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#leicester",
+    "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-05-10",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 7.5) (Watering) (Rail movements: 6.30, 8.00 & 8.30 +15yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-05-10",
+    "going": "GOOD TO FIRM (GoingStick 7.9) (Watering) (Rail Movements: 1.15, 1.50, 2.25 & 3.00 +4yds)",
+    "weather": "Sunny",
+    "stallsPosition": "1m3f - Outside; 1m2f - Inside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Naas",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#naas",
+    "raceCardsCourseMeetingsUrl": "/racecards/192/naas/2025-05-10",
+    "going": "GOOD, Good to firm in places (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-05-10",
+    "going": "GOOD, Good to firm in places (GoingStick 7.0) (Watered) (Outer track) (Rail movements: 1.20 +18yds and 3.05 & 3.40 +12yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "5f, 6f & 1m - Centre; 1m6f - Inside",
+    "races": [
+      {
+        "raceTime": "1:20",
+        "raceCardUrl": "/racecards/40/nottingham/2025-05-10/892695",
+        "horses": [
+          {
+            "horseName": "The Crafty Mole",
+            "horseProfileUrl": "/profile/horse/5270621/the-crafty-mole/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/40/nottingham/2025-05-10/892693",
+        "horses": [
+          {
+            "horseName": "Kitaro Kich",
+            "horseProfileUrl": "/profile/horse/4580180/kitaro-kich/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Warwick",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#warwick",
+    "raceCardsCourseMeetingsUrl": "/racecards/85/warwick/2025-05-10",
+    "going": "GOOD (GoingStick 7.0) (Watering) (Inner hurdle track)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Morphettville",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#morphettville",
+    "raceCardsCourseMeetingsUrl": "/racecards/462/morphettville/2025-05-10",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Percy Warner Park",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#percy-warner-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/314/percy-warner-park/2025-05-10",
+    "going": "TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-05-10",
+    "going": "DIRT: STANDARD; TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Tokyo",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#tokyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/315/tokyo/2025-05-10",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

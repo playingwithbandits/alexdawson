@@ -8,10 +8,11 @@ import {
   LiveOdds,
   RtWebTip,
   OLBGTip,
+  SharpTip,
 } from "@/types/racing";
 import { normalizeTime } from "../DayPredictions";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
-import { horseNameToKey } from "@/lib/racing/scores/funcs";
+import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 import { HorseNameRow } from "./HorseNameRow";
 
 interface PicksRaceRowProps {
@@ -29,6 +30,7 @@ interface PicksRaceRowProps {
   olbgTips: OLBGTip[] | undefined;
   showOnlyBest: boolean;
   countToBeHigherThan?: number;
+  sharpTips: SharpTip[] | undefined;
 }
 
 export function PicksRaceRow({
@@ -45,6 +47,7 @@ export function PicksRaceRow({
   olbgTips,
   showOnlyBest,
   countToBeHigherThan: propCountToBeHigherThan = 3,
+  sharpTips,
 }: PicksRaceRowProps) {
   console.log("CompactRaceRow", {
     isTodayOrPast,
@@ -57,6 +60,7 @@ export function PicksRaceRow({
     napsTableTips,
     rtWebTips,
     olbgTips,
+    sharpTips,
   });
 
   const olbgTipsForRace = olbgTips?.filter((tip) => {
@@ -157,6 +161,16 @@ export function PicksRaceRow({
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
   );
 
+  const horseNamesInRace = race.horses?.map((y) => horseNameToKey(y.name));
+  const currentTrack = placeToPlaceKey(meeting.venue);
+  const sharpTipSelections = sharpTips
+    ?.filter(
+      (r) =>
+        horseNamesInRace.includes(horseNameToKey(r.horseName)) &&
+        placeToPlaceKey(r.track) === currentTrack
+    )
+    .sort((a, b) => b.sharpRating - a.sharpRating);
+
   // Combine all horse names from different sources:
   // - AI top picks based on percentage threshold
   // - Racing Post predictions
@@ -175,6 +189,7 @@ export function PicksRaceRow({
     gytoTipSelectionObj ? gytoTipSelectionObj.horse : "--",
     ...(napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || []),
     ...(rtWebTipSelections?.map((x) => x.horseName) || []),
+    ...(sharpTipSelections?.map((x) => x.horseName) || []),
   ];
 
   const allNames: string[] = [
@@ -187,6 +202,7 @@ export function PicksRaceRow({
     ...(olbgTipsWithWin?.map((x) => x.horseName) || []),
     ...(olbgTipsWithExpert?.map((x) => x.horseName) || []),
     ...(olbgTipsWithComment?.map((x) => x.horseName) || []),
+    ...(sharpTipSelections?.map((x) => x.horseName) || []),
   ].filter((x) => x !== "" && x !== undefined && x !== "--");
 
   console.log(
@@ -206,6 +222,7 @@ export function PicksRaceRow({
       "12": olbgTipsWithWin?.map((x) => x.horseName) || [],
       "13": olbgTipsWithExpert?.map((x) => x.horseName) || [],
       "14": olbgTipsWithComment?.map((x) => x.horseName) || [],
+      "15": sharpTipSelections?.map((x) => x.horseName) || [],
     },
     race.time,
     gytoTips,
@@ -286,6 +303,11 @@ export function PicksRaceRow({
       (x) => [x.horseName, 0.25 * x.commentCount] as [string, number]
     ) || [];
 
+  const sharpTipsWeighted =
+    sharpTipSelections?.map(
+      (x) => [x.horseName, x.sharpRating / 10] as [string, number]
+    ) || [];
+
   const weightedScores = [
     ...aiTopPicksWeighted,
     ...rpPredictionsWeighted,
@@ -301,6 +323,7 @@ export function PicksRaceRow({
     ...olbgWinTipsWeighted,
     ...olbgExpertTipsWeighted,
     ...olbgCommentTipsWeighted,
+    ...sharpTipsWeighted,
   ];
 
   const nameCounts = weightedScores
@@ -630,6 +653,61 @@ export function PicksRaceRow({
             />
           ))}
         </div>
+
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpTipsWeighted[x_i][1]}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>` +
+                  x.sharpRating,
+                `<span style='color: #666'>Odds Rating:</span>` + x.oddsRating,
+                "\n",
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>` +
+                  x.earlySpeed?.toFixed(2),
+                `<span style='color: #666'>Ability:</span>` +
+                  x.ability?.toFixed(2),
+                `<span style='color: #666'>Jockey:</span>` +
+                  x.jockey?.toFixed(2),
+                `<span style='color: #666'>Trainer:</span>` +
+                  x.trainer?.toFixed(2),
+                `<span style='color: #666'>Going:</span>` + x.going?.toFixed(2),
+                `<span style='color: #666'>Course:</span>` +
+                  x.course?.toFixed(2),
+                `<span style='color: #666'>Pedigree:</span>` +
+                  x.pedigree?.toFixed(2),
+                `<span style='color: #666'>Owner:</span>` + x.owner?.toFixed(2),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
         <div className="flex flex-col col-span-2 gap-2">
           {nameCountsWithPerc?.map(([name, count, perc], x_i) => {
             const odds =
@@ -717,7 +795,7 @@ export function PicksRaceRow({
               aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score?.total?.percentage || 0;
             const aiPercWithin10Percent =
-              aiPerc >= (topAiPercentage || 100) * 0.9;
+              aiPerc >= (topAiPercentage || 100) * 0.66;
 
             const olbgNapCount = olbgTipsWithNap
               ?.filter((x) => x.napTips >= 1)
@@ -735,14 +813,19 @@ export function PicksRaceRow({
               rpPredictions?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score || 0;
 
-            const rpPredPercWithin10Percent = rpPredPerc >= 90;
+            const rpPredPercWithin10Percent = rpPredPerc >= 75;
 
             const olbgNapGood = olbgNapCount && olbgCommentCount;
-            const aiGood = aiPercWithin10Percent && aiPerc >= 40;
+            const aiGood = aiPercWithin10Percent && aiPerc >= 33;
             const rpPredGood = rpPredPercWithin10Percent;
             const olbgExpertGood = olbgExpertCount && olbgCommentCount;
 
             const hasOlbgComment = Boolean(olbgCommentCount);
+
+            const sharpRatingGood =
+              (sharpTipSelections?.find(
+                (x) => cleanName(x.horseName) === cleanName(name)
+              )?.sharpRating || 0) >= 3.3;
 
             const mentionedByTipsterArr = tipsterSiteNames?.filter(
               (x) => cleanName(x) === cleanName(name)
@@ -759,9 +842,10 @@ export function PicksRaceRow({
                 rpPredGood && `<span style='color: #00ffff'>RP</span>`,
                 mentionedByTipster &&
                   `<span style='color: #00ffff'>Tipster-${mentionedByTipsterArr?.length}</span>`,
+                sharpRatingGood && `<span style='color: #00ffff'>Sharp</span>`,
               ]
                 .filter(Boolean)
-                .join(" "),
+                .join(" | "),
               scoreSummary,
               aiSummary,
               olbgSummary
@@ -819,13 +903,15 @@ export function PicksRaceRow({
                     olbgExpertGood,
                     rpPredGood,
                     mentionedByTipster,
-                  ].filter(Boolean).length >= 2
+                    sharpRatingGood,
+                  ].filter(Boolean).length >= 3
                 }
                 highlight2={[
-                  olbgNapGood,
+                  //olbgNapGood,
                   rpPredGood,
                   aiGood,
                   mentionedByTipster,
+                  sharpRatingGood,
                 ].every(Boolean)}
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}

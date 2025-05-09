@@ -8,6 +8,8 @@ import {
   NonRunnerMeeting,
   RtWebData,
   OLBGTips,
+  SharpTip,
+  SharpData,
 } from "@/types/racing";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -161,6 +163,7 @@ export function HorsePageClient({ date }: { date: string }) {
   const [liveOdds] = useState<LiveOdds[]>([]);
   const [rtWebTips, setRtWebTips] = useState<RtWebData | undefined>(undefined);
   const [olbgTips, setOLBGTips] = useState<OLBGTips | undefined>(undefined);
+  const [sharpTips, setSharpTips] = useState<SharpData | undefined>(undefined);
   const { data: results, isLoading: resultsLoading } = useResults(date);
 
   // Add function to fetch live odds
@@ -253,6 +256,11 @@ export function HorsePageClient({ date }: { date: string }) {
         const rtWebResponse = await fetch(`/api/racing/rtWeb/${date}`);
         const rtWebData = await rtWebResponse.json();
         setRtWebTips(rtWebData);
+
+        // Fetch sharp tips
+        const sharpResponse = await fetch(`/api/racing/sharp/${date}`);
+        const sharpData = await sharpResponse.json();
+        setSharpTips(sharpData);
 
         // Fetch OLBG tips
         const olbgResponse = await fetch(`/api/racing/olbg/${date}`);
@@ -393,6 +401,7 @@ export function HorsePageClient({ date }: { date: string }) {
       liveOdds={liveOdds}
       rtWebTips={rtWebTips?.tips}
       olbgTips={olbgTips?.tips}
+      sharpTips={sharpTips?.tips}
     />
   );
 }

@@ -10,6 +10,7 @@ import {
   NonRunnerMeeting,
   RtWebTip,
   OLBGTip,
+  SharpTip,
 } from "@/types/racing";
 
 interface LiveOdds {
@@ -30,6 +31,7 @@ interface DashboardContentProps {
   liveOdds: LiveOdds[];
   rtWebTips: RtWebTip[] | undefined;
   olbgTips: OLBGTip[] | undefined;
+  sharpTips: SharpTip[] | undefined;
 }
 
 export function DashboardContent({
@@ -43,6 +45,7 @@ export function DashboardContent({
   liveOdds,
   rtWebTips,
   olbgTips,
+  sharpTips,
 }: DashboardContentProps) {
   return (
     <DayPredictions
@@ -56,6 +59,7 @@ export function DashboardContent({
       liveOdds={liveOdds}
       rtWebTips={rtWebTips}
       olbgTips={olbgTips}
+      sharpTips={sharpTips}
     />
   );
 }
