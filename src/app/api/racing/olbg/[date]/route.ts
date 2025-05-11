@@ -273,7 +273,7 @@ export async function GET(
   const date = await Promise.resolve(params.date);
   const today = new Date().toISOString().split("T")[0];
   const cutoffTime = new Date();
-  cutoffTime.setHours(10, 30, 0, 0);
+  cutoffTime.setHours(7, 30, 0, 0);
 
   const cacheFile = path.join(CACHE_DIR, `${date}.json`);
   try {

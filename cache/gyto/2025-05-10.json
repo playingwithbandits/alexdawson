@@ -1,0 +1,310 @@
+{
+  "date": "2025-05-10",
+  "tips": [
+    {
+      "time": "13:00",
+      "horse": "Tiny Tetley",
+      "isNap": false
+    },
+    {
+      "time": "13:35",
+      "horse": "Givemefive",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Jules Winfield",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Boston Run",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Ziggy'S Condor",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Tiber Flow",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Navalanche",
+      "isNap": false
+    },
+    {
+      "time": "13:15",
+      "horse": "Giselle",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Power Of Destiny",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Prince Of The Seas",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Cathedral",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "Prince Of India",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Protest Rally",
+      "isNap": false
+    },
+    {
+      "time": "13:20",
+      "horse": "It'S Tim",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Hidden Verse",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Nad Alshiba Green",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Signcastle City",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Triple Double A",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Haymaker",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Emperor Caradoc",
+      "isNap": false
+    },
+    {
+      "time": "13:25",
+      "horse": "First Approach",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Beano Power",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Evening Blues",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Prime Sign",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Gazelle D'Or",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Kalixa",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Heather",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Bond International",
+      "isNap": false
+    },
+    {
+      "time": "13:30",
+      "horse": "Celestial King",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Rainbows Edge",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Cape Breton",
+      "isNap": true
+    },
+    {
+      "time": "16:25",
+      "horse": "Morrophore",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Arnaz",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Sondad",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Yosemite Gold",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Chortal",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Cameletta Vega",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Crowsatedappletart",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "The Nagger Reidy",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Nytol",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Kiln Time",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Woodland Adventure",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Beny Nahar Road",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Hostile Hotelier",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Wallace Olinger",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Saint Malinas",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Quick Sharpener",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "Delta Blues Belle",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Moghitha",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Ideal Guest",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Beauld As Brass",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Delicacy",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Indian Spirit",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Candonomore",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Life On The Rocks",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Serious Chat",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Doyen Quest",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Moonlight Artist",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Cobbler'S Boy",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Deep Purple",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Diamond Ambition",
+      "isNap": false
+    }
+  ]
+}

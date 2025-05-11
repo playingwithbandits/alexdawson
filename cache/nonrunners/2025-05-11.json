@@ -1,0 +1,309 @@
+[
+  {
+    "courseName": "Killarney",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#killarney",
+    "raceCardsCourseMeetingsUrl": "/racecards/185/killarney/2025-05-11",
+    "going": "GOOD (Good to yielding in places, watered) changing to GOOD TO YIELDING after Race 2 (1.55)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:20",
+        "raceCardUrl": "/racecards/185/killarney/2025-05-11/894924",
+        "horses": [
+          {
+            "horseName": "Tremaine",
+            "horseProfileUrl": "/profile/horse/5258554/tremaine/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Meteor Storm",
+            "horseProfileUrl": "/profile/horse/5287719/meteor-storm/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/185/killarney/2025-05-11/894925",
+        "horses": [
+          {
+            "horseName": "Akmaam",
+            "horseProfileUrl": "/profile/horse/3199990/akmaam/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Bubba Yeats",
+            "horseProfileUrl": "/profile/horse/3526797/bubba-yeats/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "County Final",
+            "horseProfileUrl": "/profile/horse/7525357/county-final/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/185/killarney/2025-05-11/894926",
+        "horses": [
+          {
+            "horseName": "Speculatrix",
+            "horseProfileUrl": "/profile/horse/4893407/speculatrix/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Mozzies Sister",
+            "horseProfileUrl": "/profile/horse/4908788/mozzies-sister/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/185/killarney/2025-05-11/894931",
+        "horses": [
+          {
+            "horseName": "Hartur d'Arc",
+            "horseProfileUrl": "/profile/horse/3891077/hartur-darc/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-05-11",
+    "going": "GOOD (Good to firm in places, watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-05-11/894909",
+        "horses": [
+          {
+            "horseName": "Valencia",
+            "horseProfileUrl": "/profile/horse/6092532/valencia/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-05-11/894914",
+        "horses": [
+          {
+            "horseName": "Sidiza",
+            "horseProfileUrl": "/profile/horse/5915794/sidiza/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ludlow",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#ludlow",
+    "raceCardsCourseMeetingsUrl": "/racecards/34/ludlow/2025-05-11",
+    "going": "GOOD (GoingStick: 6.9) (Watered) (Rail movements: 2.05 +100yds, 2.40 & 3.50 +65yds, 3.15 +70yds, 4.25 +105yds and 5.00 +130yds)",
+    "weather": "Thunderstorms",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/34/ludlow/2025-05-11/892936",
+        "horses": [
+          {
+            "horseName": "Regal Renaissance",
+            "horseProfileUrl": "/profile/horse/4305460/regal-renaissance/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/34/ludlow/2025-05-11/892940",
+        "horses": [
+          {
+            "horseName": "Tchoupinminzac",
+            "horseProfileUrl": "/profile/horse/3707495/tchoupinminzac/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/34/ludlow/2025-05-11/892939",
+        "horses": [
+          {
+            "horseName": "No Post On Sundays",
+            "horseProfileUrl": "/profile/horse/5313330/no-post-on-sundays/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-05-11",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Round - Outside; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "4:35",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-05-11/893046",
+        "horses": [
+          {
+            "horseName": "Bulldog Spirit",
+            "horseProfileUrl": "/profile/horse/4597235/bulldog-spirit/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-05-11/893047",
+        "horses": [
+          {
+            "horseName": "Isla Kai",
+            "horseProfileUrl": "/profile/horse/3212559/isla-kai/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-05-11/893051",
+        "horses": [
+          {
+            "horseName": "Law Degree",
+            "horseProfileUrl": "/profile/horse/5809774/law-degree/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-05-11/893045",
+        "horses": [
+          {
+            "horseName": "The Caltonian",
+            "horseProfileUrl": "/profile/horse/4998715/the-caltonian/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Plumpton",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#plumpton",
+    "raceCardsCourseMeetingsUrl": "/racecards/44/plumpton/2025-05-11",
+    "going": "GOOD, Good to soft in places on Hurdle course (GoingStick: Chase 7.4, Hurdle 7.0) (Watered) (Rail Movements: 1.50 & 3.35 +13yds, 2.25, 4.10 & 5.20 +16yds, 3.00 +126yds and 4.45 +189yds)",
+    "weather": "Cloudy with sunny spells",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/44/plumpton/2025-05-11/892945",
+        "horses": [
+          {
+            "horseName": "Playaway Girl",
+            "horseProfileUrl": "/profile/horse/6550857/playaway-girl/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "The Wise Traveller",
+            "horseProfileUrl": "/profile/horse/3333288/the-wise-traveller/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/44/plumpton/2025-05-11/892943",
+        "horses": [
+          {
+            "horseName": "Birdman Bob",
+            "horseProfileUrl": "/profile/horse/3902250/birdman-bob/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/44/plumpton/2025-05-11/892946",
+        "horses": [
+          {
+            "horseName": "Early Morning Dew",
+            "horseProfileUrl": "/profile/horse/3248551/early-morning-dew/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/44/plumpton/2025-05-11/892941",
+        "horses": [
+          {
+            "horseName": "Milan Bridge",
+            "horseProfileUrl": "/profile/horse/3448771/milan-bridge/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hoppegarten",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#hoppegarten",
+    "raceCardsCourseMeetingsUrl": "/racecards/440/hoppegarten/2025-05-11",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Longchamp",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#longchamp",
+    "raceCardsCourseMeetingsUrl": "/racecards/211/longchamp/2025-05-11",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Northam",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#northam",
+    "raceCardsCourseMeetingsUrl": "/racecards/1380/northam/2025-05-11",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "San Siro",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#san-siro",
+    "raceCardsCourseMeetingsUrl": "/racecards/243/san-siro/2025-05-11",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Tokyo",
+    "raceCardsCourseUrl": "/racecards/2025-05-11#tokyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/315/tokyo/2025-05-11",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

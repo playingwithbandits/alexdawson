@@ -3,7 +3,7 @@
     "courseName": "Ascot",
     "raceCardsCourseUrl": "/racecards/2025-05-10#ascot",
     "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-05-10",
-    "going": "GOOD TO FIRM (GoingStick: Stands' side: 7.4, Centre: 7.5, Far side: 7.3. Round Course: 6.5) (Watering)",
+    "going": "GOOD TO FIRM (GoingStick: Stands' side: 7.4, Centre: 7.4, Far side: 7.3. Round Course: 6.0) (Watered)",
     "weather": "Mostly sunny",
     "stallsPosition": "Straight - Centre; Round - Inside",
     "races": [
@@ -11,6 +11,11 @@
         "raceTime": "2:40",
         "raceCardUrl": "/racecards/2/ascot/2025-05-10/892679",
         "horses": [
+          {
+            "horseName": "No Retreat",
+            "horseProfileUrl": "/profile/horse/5418923/no-retreat/",
+            "raceNumber": "(8)"
+          },
           {
             "horseName": "Mafnood",
             "horseProfileUrl": "/profile/horse/5055488/mafnood/",
@@ -23,9 +28,25 @@
         "raceCardUrl": "/racecards/2/ascot/2025-05-10/892681",
         "horses": [
           {
+            "horseName": "Vaynor",
+            "horseProfileUrl": "/profile/horse/3437737/vaynor/",
+            "raceNumber": "(12)"
+          },
+          {
             "horseName": "Kotari",
             "horseProfileUrl": "/profile/horse/4310815/kotari/",
             "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/2/ascot/2025-05-10/895438",
+        "horses": [
+          {
+            "horseName": "Collusion",
+            "horseProfileUrl": "/profile/horse/5516363/collusion/",
+            "raceNumber": "(11)"
           }
         ]
       }
@@ -39,6 +60,39 @@
     "weather": "Mostly sunny",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "3:25",
+        "raceCardUrl": "/racecards/596/cork/2025-05-10/894880",
+        "horses": [
+          {
+            "horseName": "Derby Rock",
+            "horseProfileUrl": "/profile/horse/6125813/derby-rock/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/596/cork/2025-05-10/895437",
+        "horses": [
+          {
+            "horseName": "General Clermont",
+            "horseProfileUrl": "/profile/horse/3048681/general-clermont/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:35",
+        "raceCardUrl": "/racecards/596/cork/2025-05-10/894881",
+        "horses": [
+          {
+            "horseName": "Foxy Rock",
+            "horseProfileUrl": "/profile/horse/4853613/foxy-rock/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
       {
         "raceTime": "5:45",
         "raceCardUrl": "/racecards/596/cork/2025-05-10/894883",
@@ -56,34 +110,81 @@
     "courseName": "Haydock",
     "raceCardsCourseUrl": "/racecards/2025-05-10#haydock",
     "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-05-10",
-    "going": "Hurdle course - GOOD; Flat course - GOOD TO FIRM, Good in places (Inside track) (GoingStick: Hurdle 7.4, Flat 7.7) (Watered) (Rail movements: 1.00 +145yds, 1.35 & 2.10 +72yds, 2.45, 3.20 & 3.55 +23yds and 4.30 +43yds)",
+    "going": "Hurdle course - GOOD; Flat course - GOOD TO FIRM, Good in places (Inside track) (GoingStick: Hurdle 7.6, Flat 7.5) (Watered) (Rail movements: 1.00 +145yds, 1.35 & 2.10 +72yds, 2.45, 3.20 & 3.55 +23yds and 4.30 +43yds)",
     "weather": "Mostly sunny",
     "stallsPosition": "7f & 1m - Inside; 1m4f - Outside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "1:35",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-10/892920",
+        "horses": [
+          {
+            "horseName": "Lanesborough",
+            "horseProfileUrl": "/profile/horse/5557899/lanesborough/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Hexham",
     "raceCardsCourseUrl": "/racecards/2025-05-10#hexham",
     "raceCardsCourseMeetingsUrl": "/racecards/25/hexham/2025-05-10",
-    "going": "GOOD, Good to soft in places (GoingStick 6.6) (Watering)",
+    "going": "GOOD, Good to soft in places (GoingStick 6.6) (Watered)",
     "weather": "Mostly sunny",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/25/hexham/2025-05-10/892923",
+        "horses": [
+          {
+            "horseName": "Torosay",
+            "horseProfileUrl": "/profile/horse/4630802/torosay/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:50",
+        "raceCardUrl": "/racecards/25/hexham/2025-05-10/892926",
+        "horses": [
+          {
+            "horseName": "Saint Malinas",
+            "horseProfileUrl": "/profile/horse/5671331/saint-malinas/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Leicester",
     "raceCardsCourseUrl": "/racecards/2025-05-10#leicester",
     "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-05-10",
-    "going": "GOOD TO FIRM, Good in places (GoingStick 7.5) (Watering) (Rail movements: 6.30, 8.00 & 8.30 +15yds)",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 7.4) (Watered) (Rail movements: 6.30, 8.00 & 8.30 +15yds)",
     "weather": "Mostly sunny",
     "stallsPosition": "Straight - Stands' side; Round - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/30/leicester/2025-05-10/892707",
+        "horses": [
+          {
+            "horseName": "Blossom In The Air",
+            "horseProfileUrl": "/profile/horse/7395212/blossom-in-the-air/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Lingfield",
     "raceCardsCourseUrl": "/racecards/2025-05-10#lingfield",
     "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-05-10",
-    "going": "GOOD TO FIRM (GoingStick 7.9) (Watering) (Rail Movements: 1.15, 1.50, 2.25 & 3.00 +4yds)",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 7.6) (Watered) (Rail Movements: 1.15, 1.50, 2.25 & 3.00 +4yds)",
     "weather": "Sunny",
     "stallsPosition": "1m3f - Outside; 1m2f - Inside; Remainder - Centre",
     "races": []
@@ -101,7 +202,7 @@
     "courseName": "Nottingham",
     "raceCardsCourseUrl": "/racecards/2025-05-10#nottingham",
     "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-05-10",
-    "going": "GOOD, Good to firm in places (GoingStick 7.0) (Watered) (Outer track) (Rail movements: 1.20 +18yds and 3.05 & 3.40 +12yds)",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 7.2) (Watered) (Outer track) (Rail movements: 1.20 +18yds and 3.05 & 3.40 +12yds)",
     "weather": "Mostly sunny",
     "stallsPosition": "5f, 6f & 1m - Centre; 1m6f - Inside",
     "races": [
@@ -133,8 +234,80 @@
     "courseName": "Warwick",
     "raceCardsCourseUrl": "/racecards/2025-05-10#warwick",
     "raceCardsCourseMeetingsUrl": "/racecards/85/warwick/2025-05-10",
-    "going": "GOOD (GoingStick 7.0) (Watering) (Inner hurdle track)",
+    "going": "GOOD (GoingStick 7.0) (Watering) (Inner hurdle track) (Rail Movements: 5.40 -31yds, 6.10 +70yds, 6.40 +88yds and 7.15, 7.45 & 8.15 -15yds)",
     "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Gold Coast",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#gold-coast",
+    "raceCardsCourseMeetingsUrl": "/racecards/861/gold-coast/2025-05-10",
+    "going": "TURF: SOFT (HEAVY from Race 6)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:53",
+        "raceCardUrl": "/racecards/861/gold-coast/2025-05-10/895560",
+        "horses": [
+          {
+            "horseName": "Isti Star",
+            "horseProfileUrl": "/profile/horse/7466814/isti-star/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Lucky Lass",
+            "horseProfileUrl": "/profile/horse/7547239/lucky-lass/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Koolatah Queen",
+            "horseProfileUrl": "/profile/horse/6949184/koolatah-queen/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:32",
+        "raceCardUrl": "/racecards/861/gold-coast/2025-05-10/895562",
+        "horses": [
+          {
+            "horseName": "Duck Egg Blue",
+            "horseProfileUrl": "/profile/horse/5906590/duck-egg-blue/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Blitzum",
+            "horseProfileUrl": "/profile/horse/5915742/blitzum/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Dream Smart",
+            "horseProfileUrl": "/profile/horse/5408617/dream-smart/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:08",
+        "raceCardUrl": "/racecards/861/gold-coast/2025-05-10/895563",
+        "horses": [
+          {
+            "horseName": "Port Lockroy",
+            "horseProfileUrl": "/profile/horse/5232430/port-lockroy/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kyoto",
+    "raceCardsCourseUrl": "/racecards/2025-05-10#kyoto",
+    "raceCardsCourseMeetingsUrl": "/racecards/504/kyoto/2025-05-10",
+    "going": "",
+    "weather": "",
     "stallsPosition": "",
     "races": []
   },
@@ -145,7 +318,56 @@
     "going": "TURF: GOOD",
     "weather": "",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:27",
+        "raceCardUrl": "/racecards/462/morphettville/2025-05-10/895400",
+        "horses": [
+          {
+            "horseName": "Millennium Blade",
+            "horseProfileUrl": "/profile/horse/7530014/millennium-blade/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Morgana",
+            "horseProfileUrl": "/profile/horse/7530032/morgana/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Swoboda",
+            "horseProfileUrl": "/profile/horse/7530033/swoboda/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:37",
+        "raceCardUrl": "/racecards/462/morphettville/2025-05-10/895559",
+        "horses": [
+          {
+            "horseName": "Bon Fete",
+            "horseProfileUrl": "/profile/horse/6097175/bon-fete/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:52",
+        "raceCardUrl": "/racecards/462/morphettville/2025-05-10/895401",
+        "horses": [
+          {
+            "horseName": "Dakota Lee",
+            "horseProfileUrl": "/profile/horse/7462295/dakota-lee/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "New York Lustre",
+            "horseProfileUrl": "/profile/horse/7530037/new-york-lustre/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Percy Warner Park",
@@ -163,7 +385,88 @@
     "going": "DIRT: STANDARD; TURF: GOOD",
     "weather": "",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-10/895439",
+        "horses": [
+          {
+            "horseName": "Double Bingo",
+            "horseProfileUrl": "/profile/horse/5820819/double-bingo/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Windicator Family",
+            "horseProfileUrl": "/profile/horse/5342111/windicator-family/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-10/895441",
+        "horses": [
+          {
+            "horseName": "Bingo Babe",
+            "horseProfileUrl": "/profile/horse/6768157/bingo-babe/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Dancing Classics",
+            "horseProfileUrl": "/profile/horse/7534494/dancing-classics/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-10/895442",
+        "horses": [
+          {
+            "horseName": "Sugar Ball",
+            "horseProfileUrl": "/profile/horse/4827250/sugar-ball/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Big Stride",
+            "horseProfileUrl": "/profile/horse/7378506/big-stride/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-10/895443",
+        "horses": [
+          {
+            "horseName": "Leslie",
+            "horseProfileUrl": "/profile/horse/4045810/leslie/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Yoda's Choice",
+            "horseProfileUrl": "/profile/horse/5668419/yodas-choice/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-10/895444",
+        "horses": [
+          {
+            "horseName": "Telecom Power",
+            "horseProfileUrl": "/profile/horse/5357810/telecom-power/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Aeroinvincible",
+            "horseProfileUrl": "/profile/horse/5692566/aeroinvincible/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Tokyo",

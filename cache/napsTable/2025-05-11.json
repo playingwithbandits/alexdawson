@@ -1,0 +1,311 @@
+{
+  "date": "2025-05-11",
+  "tips": [
+    {
+      "time": "18:15",
+      "horse": "Knights Gold",
+      "tipster": "The Judge",
+      "score": "111.4"
+    },
+    {
+      "time": "15:25",
+      "horse": "Cougar",
+      "tipster": "The North",
+      "score": "100.9"
+    },
+    {
+      "time": "17:45",
+      "horse": "Eldrickjones",
+      "tipster": "Chris Connolly",
+      "score": "81.3"
+    },
+    {
+      "time": "18:45",
+      "horse": "Ferrous",
+      "tipster": "Lambourn",
+      "score": "73.6"
+    },
+    {
+      "time": "16:35",
+      "horse": "Steel Tiger",
+      "tipster": "Rockavon",
+      "score": "58.9"
+    },
+    {
+      "time": "18:45",
+      "horse": "City House",
+      "tipster": "Garry Owen",
+      "score": "63.2"
+    },
+    {
+      "time": "16:40",
+      "horse": "Eyetrap",
+      "tipster": "Farringdon",
+      "score": "53.6"
+    },
+    {
+      "time": "16:00",
+      "horse": "Tilted Kilt",
+      "tipster": "On The Nose",
+      "score": "52.9"
+    },
+    {
+      "time": "15:25",
+      "horse": "Londoner",
+      "tipster": "Matt Polley",
+      "score": "35.7"
+    },
+    {
+      "time": "18:45",
+      "horse": "Willem Twee",
+      "tipster": "Dean Kilbryde",
+      "score": "35.4"
+    },
+    {
+      "time": "17:45",
+      "horse": "Apotheosis",
+      "tipster": "The Brigadier",
+      "score": "30.7"
+    },
+    {
+      "time": "16:35",
+      "horse": "Humble Spark",
+      "tipster": "Marlborough",
+      "score": "27.9"
+    },
+    {
+      "time": "16:00",
+      "horse": "Gunship",
+      "tipster": "Glendale",
+      "score": "13.9"
+    },
+    {
+      "time": "15:30",
+      "horse": "Delacroix",
+      "tipster": "Lee Sobot",
+      "score": "13.0"
+    },
+    {
+      "time": "15:30",
+      "horse": "Delacroix",
+      "tipster": "Fortunatus",
+      "score": "11.2"
+    },
+    {
+      "time": "14:20",
+      "horse": "Vespertilio",
+      "tipster": "Ratings Hub",
+      "score": "10.4"
+    },
+    {
+      "time": "14:20",
+      "horse": "Fiery Lucy",
+      "tipster": "Mercury",
+      "score": "10.4"
+    },
+    {
+      "time": "16:35",
+      "horse": "Steel Tiger",
+      "tipster": "Newmarket",
+      "score": "8.5"
+    },
+    {
+      "time": "15:25",
+      "horse": "Mighty Quiet",
+      "tipster": "Whistler",
+      "score": "4.2"
+    },
+    {
+      "time": "14:50",
+      "horse": "Sea Legend",
+      "tipster": "Melissa Jones",
+      "score": "-3.2"
+    },
+    {
+      "time": "13:45",
+      "horse": "Dabashan",
+      "tipster": "Luke Tucker",
+      "score": "-7.7"
+    },
+    {
+      "time": "14:25",
+      "horse": "Forlano",
+      "tipster": "Ross Shepherd",
+      "score": "-7.8"
+    },
+    {
+      "time": "16:00",
+      "horse": "Gunship",
+      "tipster": "Tipman Tips",
+      "score": "-11.9"
+    },
+    {
+      "time": "16:45",
+      "horse": "Sea Invasion",
+      "tipster": "Templegate",
+      "score": "-13.8"
+    },
+    {
+      "time": "14:50",
+      "horse": "Sea Legend",
+      "tipster": "RP Ratings",
+      "score": "-14.3"
+    },
+    {
+      "time": "18:45",
+      "horse": "Strike Red",
+      "tipster": "Chris Wright",
+      "score": "-15.2"
+    },
+    {
+      "time": "16:45",
+      "horse": "Camino Rocio",
+      "tipster": "Robin Goodfellow",
+      "score": "-16.4"
+    },
+    {
+      "time": "17:00",
+      "horse": "Casting Aspersions",
+      "tipster": "Computeform",
+      "score": "-23.1"
+    },
+    {
+      "time": "14:25",
+      "horse": "I'm Your Buckaroo",
+      "tipster": "Karl Hedley",
+      "score": "-30.8"
+    },
+    {
+      "time": "16:00",
+      "horse": "Sword Of Wessex",
+      "tipster": "The Duke",
+      "score": "-28.9"
+    },
+    {
+      "time": "14:20",
+      "horse": "Fiery Lucy",
+      "tipster": "The Score",
+      "score": "-30.6"
+    },
+    {
+      "time": "17:45",
+      "horse": "Grand Karat",
+      "tipster": "The Punt",
+      "score": "-33.7"
+    },
+    {
+      "time": "15:50",
+      "horse": "Auntie Maggie",
+      "tipster": "Jason Heavey",
+      "score": "-31.4"
+    },
+    {
+      "time": "16:45",
+      "horse": "Sea Invasion",
+      "tipster": "West Country",
+      "score": "-37.5"
+    },
+    {
+      "time": "16:00",
+      "horse": "Gunship",
+      "tipster": "Newsboy",
+      "score": "-35.0"
+    },
+    {
+      "time": "17:45",
+      "horse": "Grand Karat",
+      "tipster": "Spotlight",
+      "score": "-37.2"
+    },
+    {
+      "time": "16:00",
+      "horse": "Gunship",
+      "tipster": "Postdata",
+      "score": "-50.0"
+    },
+    {
+      "time": "15:35",
+      "horse": "Turpin Gold",
+      "tipster": "Ben Morgan",
+      "score": "-46.4"
+    },
+    {
+      "time": "13:50",
+      "horse": "Machete Beach",
+      "tipster": "Steve Mullington",
+      "score": "-49.3"
+    },
+    {
+      "time": "16:50",
+      "horse": "Panda Boy",
+      "tipster": "Brian Flanagan",
+      "score": "-51.8"
+    },
+    {
+      "time": "15:40",
+      "horse": "Pied Piper",
+      "tipster": "Sam Hardy",
+      "score": "-60.6"
+    },
+    {
+      "time": "18:45",
+      "horse": "Sergeant Wilko",
+      "tipster": "Andrew Mount",
+      "score": "-61.8"
+    },
+    {
+      "time": "13:50",
+      "horse": "Slade Shore",
+      "tipster": "Jeffrey Ross",
+      "score": "-68.1"
+    },
+    {
+      "time": "14:20",
+      "horse": "Chantez",
+      "tipster": "Moorestyle",
+      "score": "-64.3"
+    },
+    {
+      "time": "14:20",
+      "horse": "Fiery Lucy",
+      "tipster": "Ian Gaughran",
+      "score": "-69.9"
+    },
+    {
+      "time": "14:20",
+      "horse": "Chantez",
+      "tipster": "Adrian Wall",
+      "score": "-78.6"
+    },
+    {
+      "time": "18:45",
+      "horse": "Strike Red",
+      "tipster": "Rory Paddock",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:00",
+      "horse": "Gunship",
+      "tipster": "Rob Wright",
+      "score": "-100.0"
+    },
+    {
+      "time": "18:45",
+      "horse": "The Caltonian",
+      "tipster": "Jim Delahunt",
+      "score": "-100.0"
+    },
+    {
+      "time": "17:45",
+      "horse": "Eldrickjones",
+      "tipster": "Rory Delargy",
+      "score": "-100.0"
+    },
+    {
+      "time": "16:00",
+      "horse": "Gunship",
+      "tipster": "Jon Freeman",
+      "score": "-100.0"
+    }
+  ]
+}

@@ -14,6 +14,42 @@ async function ensureDirectoryExists(dir: string) {
     await fs.mkdir(dir, { recursive: true });
   }
 }
+export function replaceSingleQuotesSafely(input: string): string {
+  let output = "";
+  let inDoubleQuote = false;
+  let i = 0;
+
+  while (i < input.length) {
+    const char = input[i];
+
+    if (char === '"') {
+      inDoubleQuote = !inDoubleQuote;
+      output += char;
+      i++;
+    } else if (char === "'" && !inDoubleQuote) {
+      const start = i + 1;
+      let j = start;
+
+      // Find the matching closing single quote
+      while (j < input.length && input[j] !== "'") j++;
+
+      if (input[j] === "'") {
+        const inner = input.slice(start, j);
+        output += `"${inner}"`;
+        i = j + 1;
+      } else {
+        // Unmatched single quote — just add it
+        output += char;
+        i++;
+      }
+    } else {
+      output += char;
+      i++;
+    }
+  }
+
+  return output;
+}
 
 async function fetchAndParseTips(): Promise<SharpTip[]> {
   console.log("Fetching sharp betting tips...");
@@ -53,30 +89,7 @@ async function fetchAndParseTips(): Promise<SharpTip[]> {
     // Parse the extracted JSON string
     const pyString = scriptText.substring(startIndex, endIndex).trim();
 
-    const jsonString = pyString
-      .replace(/'/g, (match, offset, str) => {
-        // 1) opening of a single‐letter quote:   'N'
-        if (str[offset + 2] === "'" && /[A-Za-z]/.test(str[offset + 1]!)) {
-          return "'";
-        }
-        // 2) closing of a single‐letter quote:   'N'
-        if (
-          offset >= 2 &&
-          str[offset - 2] === "'" &&
-          /[A-Za-z]/.test(str[offset - 1]!)
-        ) {
-          return "'";
-        }
-        // 3) internal apostrophe in a word:  O'Meara, don't
-        const prev = str[offset - 1] || "";
-        const next = str[offset + 1] || "";
-        if (/[A-Za-z]/.test(prev) && /[A-Za-z]/.test(next)) {
-          return "'";
-        }
-        // 4) all other cases → replace
-        return `"`;
-      })
-      .trim(); // Remove leading/trailing whitespace
+    const jsonString = replaceSingleQuotesSafely(pyString).trim(); // Remove leading/trailing whitespace
 
     // Parse the resulting JSON string
     console.log("jsonString", jsonString);
@@ -163,7 +176,7 @@ export async function GET(
   const today = new Date().toISOString().split("T")[0];
   const now = new Date();
   const cutoffTime = new Date();
-  cutoffTime.setHours(10, 30, 0, 0);
+  cutoffTime.setHours(7, 30, 0, 0);
 
   // Check if requested date is in the future
   if (date > today) {

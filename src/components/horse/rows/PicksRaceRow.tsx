@@ -303,10 +303,16 @@ export function PicksRaceRow({
       (x) => [x.horseName, 0.25 * x.commentCount] as [string, number]
     ) || [];
 
+  const topSharpRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.sharpRating),
+    0
+  );
   const sharpTipsWeighted =
-    sharpTipSelections?.map(
-      (x) => [x.horseName, x.sharpRating / 10] as [string, number]
-    ) || [];
+    sharpTipSelections?.map((x) => {
+      const scorePercentage = (x.sharpRating || 0) / (topSharpRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
 
   const weightedScores = [
     ...aiTopPicksWeighted,
@@ -374,6 +380,8 @@ export function PicksRaceRow({
   ).length;
 
   const isEwable = horsesCount > 7;
+
+  const topScoreCount = Math.max(...nameCountsWithPerc?.map((x) => x[1]));
 
   return (
     <div
@@ -710,6 +718,8 @@ export function PicksRaceRow({
         </div>
         <div className="flex flex-col col-span-2 gap-2">
           {nameCountsWithPerc?.map(([name, count, perc], x_i) => {
+            const countGood = count >= topScoreCount * 0.8;
+
             const odds =
               race.bettingForecast?.find(
                 (y) => cleanName(y.horseName) === cleanName(name)
@@ -795,7 +805,7 @@ export function PicksRaceRow({
               aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score?.total?.percentage || 0;
             const aiPercWithin10Percent =
-              aiPerc >= (topAiPercentage || 100) * 0.66;
+              aiPerc >= (topAiPercentage || 100) * 0.8;
 
             const olbgNapCount = olbgTipsWithNap
               ?.filter((x) => x.napTips >= 1)
@@ -813,10 +823,10 @@ export function PicksRaceRow({
               rpPredictions?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score || 0;
 
-            const rpPredPercWithin10Percent = rpPredPerc >= 75;
+            const rpPredPercWithin10Percent = rpPredPerc >= 80;
 
             const olbgNapGood = olbgNapCount && olbgCommentCount;
-            const aiGood = aiPercWithin10Percent && aiPerc >= 33;
+            const aiGood = aiPercWithin10Percent && aiPerc >= 40;
             const rpPredGood = rpPredPercWithin10Percent;
             const olbgExpertGood = olbgExpertCount && olbgCommentCount;
 
@@ -825,7 +835,7 @@ export function PicksRaceRow({
             const sharpRatingGood =
               (sharpTipSelections?.find(
                 (x) => cleanName(x.horseName) === cleanName(name)
-              )?.sharpRating || 0) >= 3.3;
+              )?.sharpRating || 0) >= 5;
 
             const mentionedByTipsterArr = tipsterSiteNames?.filter(
               (x) => cleanName(x) === cleanName(name)
@@ -889,30 +899,29 @@ export function PicksRaceRow({
                   //   olbgNap ? "Yes" : "No"
                   // }`
                 }
-                oddsHighlight={
-                  aiGood && rpPredGood && isEwable && odds > 10 && count >= 1.25
-                }
+                oddsHighlight={countGood && isEwable && odds >= 8}
                 isNonRunner={isNonRunner(race.time, name)}
                 //greyedOut={count < 2}
                 title={paraGraph}
-                highlight3={aiGood && rpPredGood}
-                highlight1={
-                  aiGood &&
-                  [
-                    olbgNapGood,
-                    olbgExpertGood,
-                    rpPredGood,
-                    mentionedByTipster,
-                    sharpRatingGood,
-                  ].filter(Boolean).length >= 3
-                }
-                highlight2={[
-                  //olbgNapGood,
-                  rpPredGood,
-                  aiGood,
-                  mentionedByTipster,
-                  sharpRatingGood,
-                ].every(Boolean)}
+                // highlight3={aiGood && rpPredGood}
+                // highlight1={
+                //   aiGood &&
+                //   [
+                //     olbgNapGood,
+                //     olbgExpertGood,
+                //     rpPredGood,
+                //     mentionedByTipster,
+                //     sharpRatingGood,
+                //   ].filter(Boolean).length >= 3
+                // }
+                // highlight2={[
+                //   //olbgNapGood,
+                //   rpPredGood,
+                //   aiGood,
+                //   mentionedByTipster,
+                //   sharpRatingGood,
+                // ].every(Boolean)}
+                highlight2={countGood}
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
               />
