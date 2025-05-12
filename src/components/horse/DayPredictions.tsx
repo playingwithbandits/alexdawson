@@ -134,7 +134,7 @@ export function DayPredictions({
             (b.score?.total?.percentage || 0) -
             (a.score?.total?.percentage || 0)
         )[0];
-
+        if (!topScorer) return [];
         const selection = horseNameToKey(topScorer.name);
 
         if (isNonRunner(race.time, selection)) {
@@ -184,7 +184,7 @@ export function DayPredictions({
                 (b.score?.total?.percentage || 0) -
                 (a.score?.total?.percentage || 0)
             )[0];
-
+          if (!topScorer) return [];
           const selection = horseNameToKey(topScorer?.name);
 
           if (isNonRunner(race.time, selection)) {
@@ -818,7 +818,7 @@ function DetailedRaceRow({
     )
     .at(0);
 
-  if (!topScorer?.score) return null;
+  if (!topScorer || !topScorer?.score) return null;
 
   return (
     <div className="p-4 border-b hover:bg-gray-50/5">
