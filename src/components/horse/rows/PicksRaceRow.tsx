@@ -189,7 +189,6 @@ export function PicksRaceRow({
     gytoTipSelectionObj ? gytoTipSelectionObj.horse : "--",
     ...(napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || []),
     ...(rtWebTipSelections?.map((x) => x.horseName) || []),
-    ...(sharpTipSelections?.map((x) => x.horseName) || []),
   ];
 
   const allNames: string[] = [
@@ -307,9 +306,138 @@ export function PicksRaceRow({
     (acc, x) => Math.max(acc, x.sharpRating),
     0
   );
+
+  const topSharpSpeedRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.earlySpeed || 0),
+    0
+  );
+
+  const topSharpAbilityRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.ability || 0),
+    0
+  );
+
+  const topSharpJockeyRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.jockey || 0),
+    0
+  );
+
+  const topSharpTrainerRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.trainer || 0),
+    0
+  );
+
+  const topSharpGoingRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.going || 0),
+    0
+  );
+
+  const topSharpCourseRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.course || 0),
+    0
+  );
+
+  const topSharpPedigreeRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.pedigree || 0),
+    0
+  );
+
+  const topSharpOwnerRating = sharpTipSelections?.reduce(
+    (acc, x) => Math.max(acc, x.owner || 0),
+    0
+  );
+
+  const averageSharpTotalsRatingArr = sharpTipSelections?.map((x) => {
+    const arr = [
+      x.earlySpeed || 0,
+      x.ability || 0,
+      x.jockey || 0,
+      x.trainer || 0,
+      x.going || 0,
+      x.course || 0,
+      x.pedigree || 0,
+      x.owner || 0,
+    ];
+    return {
+      horseName: x.horseName,
+      average: arr.reduce((acc, curr) => acc + curr, 0) / arr.length,
+    };
+  });
+
+  const topAverageSharpTotalsRating = averageSharpTotalsRatingArr?.reduce(
+    (acc, x) => Math.max(acc, x.average),
+    0
+  );
+
   const sharpTipsWeighted =
     sharpTipSelections?.map((x) => {
       const scorePercentage = (x.sharpRating || 0) / (topSharpRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpSpeedRatingWeighted =
+    sharpTipSelections?.map((x) => {
+      const scorePercentage =
+        (x.earlySpeed || 0) / (topSharpSpeedRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpAbilityRatingWeighted =
+    sharpTipSelections?.map((x) => {
+      const scorePercentage = (x.ability || 0) / (topSharpAbilityRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpJockeyRatingWeighted =
+    sharpTipSelections?.map((x) => {
+      const scorePercentage = (x.jockey || 0) / (topSharpJockeyRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpTrainerRatingWeighted =
+    sharpTipSelections?.map((x) => {
+      const scorePercentage = (x.trainer || 0) / (topSharpTrainerRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpGoingRatingWeighted =
+    sharpTipSelections?.map((x) => {
+      const scorePercentage = (x.going || 0) / (topSharpGoingRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpCourseRatingWeighted =
+    sharpTipSelections?.map((x) => {
+      const scorePercentage = (x.course || 0) / (topSharpCourseRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpPedigreeRatingWeighted =
+    sharpTipSelections?.map((x) => {
+      const scorePercentage =
+        (x.pedigree || 0) / (topSharpPedigreeRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpOwnerRatingWeighted =
+    sharpTipSelections?.map((x) => {
+      const scorePercentage = (x.owner || 0) / (topSharpOwnerRating || 100);
+
+      return [x.horseName, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const sharpTotalAverageRatingWeighted =
+    averageSharpTotalsRatingArr?.map((x) => {
+      const scorePercentage =
+        (x.average || 0) / (topAverageSharpTotalsRating || 100);
 
       return [x.horseName, 1 * scorePercentage] as [string, number];
     }) || [];
@@ -330,6 +458,15 @@ export function PicksRaceRow({
     ...olbgExpertTipsWeighted,
     ...olbgCommentTipsWeighted,
     ...sharpTipsWeighted,
+    ...sharpSpeedRatingWeighted,
+    ...sharpAbilityRatingWeighted,
+    ...sharpJockeyRatingWeighted,
+    ...sharpTrainerRatingWeighted,
+    ...sharpGoingRatingWeighted,
+    ...sharpCourseRatingWeighted,
+    ...sharpPedigreeRatingWeighted,
+    ...sharpOwnerRatingWeighted,
+    ...sharpTotalAverageRatingWeighted,
   ];
 
   const nameCounts = weightedScores
@@ -661,7 +798,6 @@ export function PicksRaceRow({
             />
           ))}
         </div>
-
         <div className="flex flex-col gap-2">
           {sharpTipSelections?.map((x, x_i) => (
             <HorseNameRow
@@ -669,14 +805,83 @@ export function PicksRaceRow({
               horseName={x.horseName || ""}
               results={results}
               time={race.time}
-              odds={sharpTipsWeighted[x_i][1]}
+              odds={sharpSpeedRatingWeighted[x_i][1]}
+              highlight3={sharpSpeedRatingWeighted[x_i][1] >= 0.75}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
-                `<span style='color: #666'>Sharp Rating:</span>` +
-                  x.sharpRating,
-                `<span style='color: #666'>Odds Rating:</span>` + x.oddsRating,
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
                 "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
                 [
                   x.topSharp200InRace &&
                     `<span style='color: #00ffff'>Top 200</span>`,
@@ -694,21 +899,978 @@ export function PicksRaceRow({
                 ]
                   .filter(Boolean)
                   .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpAbilityRatingWeighted[x_i][1]}
+              highlight3={sharpAbilityRatingWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
-                `<span style='color: #666'>Early Speed:</span>` +
-                  x.earlySpeed?.toFixed(2),
-                `<span style='color: #666'>Ability:</span>` +
-                  x.ability?.toFixed(2),
-                `<span style='color: #666'>Jockey:</span>` +
-                  x.jockey?.toFixed(2),
-                `<span style='color: #666'>Trainer:</span>` +
-                  x.trainer?.toFixed(2),
-                `<span style='color: #666'>Going:</span>` + x.going?.toFixed(2),
-                `<span style='color: #666'>Course:</span>` +
-                  x.course?.toFixed(2),
-                `<span style='color: #666'>Pedigree:</span>` +
-                  x.pedigree?.toFixed(2),
-                `<span style='color: #666'>Owner:</span>` + x.owner?.toFixed(2),
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpJockeyRatingWeighted[x_i][1]}
+              highlight3={sharpJockeyRatingWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpTrainerRatingWeighted[x_i][1]}
+              highlight3={sharpTrainerRatingWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpGoingRatingWeighted[x_i][1]}
+              highlight3={sharpGoingRatingWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpCourseRatingWeighted[x_i][1]}
+              highlight3={sharpCourseRatingWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpPedigreeRatingWeighted[x_i][1]}
+              highlight3={sharpPedigreeRatingWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpOwnerRatingWeighted[x_i][1]}
+              highlight3={sharpOwnerRatingWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpTotalAverageRatingWeighted[x_i][1]}
+              highlight3={sharpTotalAverageRatingWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
+              ]
+                ?.filter((x) => x)
+                .join("\n")}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {sharpTipSelections?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.horseName || ""}
+              results={results}
+              time={race.time}
+              odds={sharpTipsWeighted[x_i][1]}
+              highlight3={sharpTipsWeighted[x_i][1] >= 0.75}
+              title={[
+                x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
+                "\n",
+                `<span style='color: #666'>Sharp Rating:</span>${x.sharpRating} <span style='color: #666'>Race Max:</span>${topSharpRating} <span style='color: #666'>Race Max:</span>${sharpTipsWeighted[x_i][1]}`,
+                `<span style='color: #666'>Sharp Rating:</span>${x.oddsRating} <span style='color: #666'>Race Max:</span>----<span style='color: #666'>Race Max:</span>----`,
+
+                "\n",
+                `<span style='color: #666'>Early Speed:</span>${x.earlySpeed?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpSpeedRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpSpeedRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Ability:</span>${x.ability?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpAbilityRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpAbilityRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Jockey:</span>${x.jockey?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpJockeyRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpJockeyRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Trainer:</span>${x.trainer?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpTrainerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTrainerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Going:</span>${x.going?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpGoingRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpGoingRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Course:</span>${x.course?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpCourseRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpCourseRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Pedigree:</span>${x.pedigree?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpPedigreeRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpPedigreeRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                `<span style='color: #666'>Owner:</span>${x.owner?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topSharpOwnerRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpOwnerRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+
+                "\n",
+
+                `<span style='color: #666'>Average:</span>${averageSharpTotalsRatingArr?.[
+                  x_i
+                ]?.average?.toFixed(
+                  2
+                )} <span style='color: #666'>Race Max:</span>${topAverageSharpTotalsRating?.toFixed(
+                  2
+                )} <span style='color: #666'>Weighted to be:</span>${
+                  sharpTotalAverageRatingWeighted[x_i][1]?.toFixed(2) || 0
+                }`,
+                [
+                  x.topSharp200InRace &&
+                    `<span style='color: #00ffff'>Top 200</span>`,
+                  x.wonClass && `<span style='color: #00ffff'>Class</span>`,
+                  x.wonCourse && `<span style='color: #00ffff'>Course</span>`,
+                  x.wonDistance &&
+                    `<span style='color: #00ffff'>Distance</span>`,
+                  x.wonGoing && `<span style='color: #00ffff'>Going</span>`,
+                  x.wonLastRace &&
+                    `<span style='color: #00ffff'>LastRace</span>`,
+                  x.leadEarlyLastRace &&
+                    `<span style='color: #00ffff'>LedEarlyLastRace</span>`,
+                  x.raceFavourite &&
+                    `<span style='color: #00ffff'>Favourite</span>`,
+                ]
+                  .filter(Boolean)
+                  .join(" | "),
               ]
                 ?.filter((x) => x)
                 .join("\n")}
@@ -718,8 +1880,6 @@ export function PicksRaceRow({
         </div>
         <div className="flex flex-col col-span-2 gap-2">
           {nameCountsWithPerc?.map(([name, count, perc], x_i) => {
-            const countGood = count >= topScoreCount * 0.8;
-
             const odds =
               race.bettingForecast?.find(
                 (y) => cleanName(y.horseName) === cleanName(name)
@@ -799,13 +1959,18 @@ export function PicksRaceRow({
               (
                 aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
                   ?.score?.total?.percentage || 0
-              ).toFixed(2) + "%";
+              ).toFixed(2) +
+              "%" +
+              " : " +
+              topAiPercentage +
+              " : " +
+              (topAiPercentage || 100) * 0.75;
 
             const aiPerc =
               aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score?.total?.percentage || 0;
             const aiPercWithin10Percent =
-              aiPerc >= (topAiPercentage || 100) * 0.8;
+              aiPerc >= (topAiPercentage || 100) * 0.75;
 
             const olbgNapCount = olbgTipsWithNap
               ?.filter((x) => x.napTips >= 1)
@@ -823,19 +1988,21 @@ export function PicksRaceRow({
               rpPredictions?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score || 0;
 
-            const rpPredPercWithin10Percent = rpPredPerc >= 80;
+            const countGood = count >= topScoreCount * 0.8;
+
+            const rpPredPercWithin10Percent = rpPredPerc >= 75;
 
             const olbgNapGood = olbgNapCount && olbgCommentCount;
-            const aiGood = aiPercWithin10Percent && aiPerc >= 40;
+            const aiGood = aiPercWithin10Percent;
             const rpPredGood = rpPredPercWithin10Percent;
             const olbgExpertGood = olbgExpertCount && olbgCommentCount;
 
             const hasOlbgComment = Boolean(olbgCommentCount);
 
             const sharpRatingGood =
-              (sharpTipSelections?.find(
-                (x) => cleanName(x.horseName) === cleanName(name)
-              )?.sharpRating || 0) >= 5;
+              (sharpTipsWeighted?.find(
+                (x) => cleanName(x[0]) === cleanName(name)
+              )?.[1] || 0) >= 0.5;
 
             const mentionedByTipsterArr = tipsterSiteNames?.filter(
               (x) => cleanName(x) === cleanName(name)
@@ -921,6 +2088,7 @@ export function PicksRaceRow({
                 //   mentionedByTipster,
                 //   sharpRatingGood,
                 // ].every(Boolean)}
+                //highlight1={countGood}
                 highlight2={countGood}
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
