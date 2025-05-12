@@ -1,0 +1,65 @@
+[
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-05-13#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-05-13",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.4) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-05-13#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-05-13",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.4) (Watering)",
+    "weather": "Showers",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Killarney",
+    "raceCardsCourseUrl": "/racecards/2025-05-13#killarney",
+    "raceCardsCourseMeetingsUrl": "/racecards/185/killarney/2025-05-13",
+    "going": "GOOD TO YIELDING (Watered)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sedgefield",
+    "raceCardsCourseUrl": "/racecards/2025-05-13#sedgefield",
+    "raceCardsCourseMeetingsUrl": "/racecards/57/sedgefield/2025-05-13",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.4) (Watering) (Rail Movements: 6.10 & 7.10 -79yds and 7.40 & 8.10 -68yds)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sligo",
+    "raceCardsCourseUrl": "/racecards/2025-05-13#sligo",
+    "raceCardsCourseMeetingsUrl": "/racecards/197/sligo/2025-05-13",
+    "going": "GOOD (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Worcester",
+    "raceCardsCourseUrl": "/racecards/2025-05-13#worcester",
+    "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-05-13",
+    "going": "GOOD (GoingStick: 7.6) (Watering) (Rail movements: 2.00, 4.00, 4.30, 5.05 & 5.35 +93yds and 3.00 & 3.30 +60yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Chepstow (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-05-13#chepstow-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1322/chepstow-gb/2025-05-13",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

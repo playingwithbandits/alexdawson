@@ -2089,7 +2089,7 @@ export function PicksRaceRow({
                 //   sharpRatingGood,
                 // ].every(Boolean)}
                 //highlight1={countGood}
-                highlight2={countGood}
+                highlight2={countGood && hasOlbgComment}
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
               />

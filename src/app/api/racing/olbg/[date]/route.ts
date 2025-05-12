@@ -16,7 +16,7 @@ async function ensureDirectoryExists(dir: string) {
 }
 
 async function fetchAndParseTips(): Promise<OLBGTip[]> {
-  //console.log("🔍 Fetching OLBG tips...");
+  console.log("🔍 Fetching OLBG tips...");
   const response = await fetch(
     "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/UK/2"
   );
@@ -25,15 +25,15 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
     "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/IE/2"
   );
 
-  //console.log("✅ Fetched OLBG page");
+  console.log("✅ Fetched OLBG page");
 
   const html = await response.text();
   const htmlIre = await responseIre.text();
-  //console.log("📄 Got HTML response");
+  console.log("📄 Got HTML response");
 
   const $ = cheerio.load(html);
   const $Ire = cheerio.load(htmlIre);
-  //console.log("🔧 Loaded HTML into Cheerio");
+  console.log("🔧 Loaded HTML into Cheerio");
 
   // Create a map to store aggregated tips by horse
   const tipsMap = new Map<
@@ -59,14 +59,14 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
   const raceLinks: { value: string; href: string }[] = [];
 
   // Find the specific dropdown containing All Races options
-  $(".has-dwn.is-def").each((_, dropdown) => {
+  $(`[itemprop="itemListElement"]`).each((_, dropdown) => {
     const dropdownText = $(dropdown).find("a").text().trim();
     if (
       dropdownText.includes("All Races") &&
       !dropdownText.includes("Next Races")
     ) {
       $(dropdown)
-        .find(".dwn.restrict li a")
+        .find("li a")
         .each((_, link) => {
           const value = $(link).attr("title") || $(link).text().trim();
           const href = $(link).attr("href") || "";
@@ -82,21 +82,25 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
 
   const limitedRacesOptions = allRacesOptions; //.slice(0, 1);
 
-  //console.log("📊 Found race options:", allRacesOptions);
+  console.log("📊 Found race options:", allRacesOptions);
 
   // Fetch content from each URL in allRacesOptions
   for (const option of limitedRacesOptions) {
-    //          console.log(`🔍 Fetching content from: ${option.value}`);
+    console.log(`🔍 Fetching content from: ${option.value}`);
     try {
       const raceResponse = await fetch(option.href);
       const raceHtml = await raceResponse.text();
       const $race = cheerio.load(raceHtml);
 
       // Find all .h-rst-lnk elements within the tipsListingContainer-Match div
-      $race("#tipsListingContainer-Match .h-rst-lnk").each((_, element) => {
+      //console.log("🔍 raceHtml", raceHtml);
+      $race(".tip .ev a").each((_, element) => {
         const value = $race(element).text().trim();
         const href = $race(element).attr("href") || "";
+        console.log("🔍 tip .ev a Value:", value);
+        console.log("🔍 tip .ev a Href:", href);
         if (value && href) {
+          console.log("🔍 tip .ev a push:", value);
           raceLinks.push({
             value,
             href: `https://alexdawson.co.uk/getP.php?q=https://www.olbg.com${href}`,
@@ -107,8 +111,8 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
       console.error(`❌ Error fetching ${option.value}:`, error);
     }
   }
-
-  $Ire("#tipsListingContainer-Match .h-rst-lnk").each((_, element) => {
+  console.log("🔍 raceLinks", raceLinks);
+  $Ire(".tip .ev a").each((_, element) => {
     const value = $Ire(element).text().trim();
     const href = $Ire(element).attr("href") || "";
     if (value && href) {
@@ -118,15 +122,26 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
       });
     }
   });
-
-  const uniqueUrls = [...new Set(raceLinks.map((link) => link.href))];
+  console.log("🔍 raceLinks", raceLinks);
+  const uniqueUrls = [
+    ...new Set(
+      raceLinks.map((link) =>
+        link.href?.replace(
+          "https://www.olbg.comhttps://www.olbg.com/",
+          "https://www.olbg.com/"
+        )
+      )
+    ),
+  ];
+  console.log("🔍 uniqueUrls", uniqueUrls);
   //console.log("🔗 Unique URLs:", uniqueUrls);
   const filteredUrls = uniqueUrls.filter(
     (url) => !url.includes("https://www.olbg.comhttps://www.olbg.com/")
   );
+  console.log("🔍 filteredUrls", filteredUrls);
   //console.log("🔗 Filtered URLs:", filteredUrls);
   const limitedFilteredUrls = filteredUrls; //.slice(0, 1);
-  //console.log("🔗 Race URLs:", raceUrls);
+  console.log("🔗 Race URLs:", limitedFilteredUrls);
   // Fetch content from each URL and parse tips
   for (const url of limitedFilteredUrls) {
     console.log("🔍 Fetching content from:", url);
@@ -136,13 +151,13 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
       const $ = cheerio.load(html);
 
       // Find the eventsListingContainer
-      const eventsContainer = $("#eventsListingContainer");
+      const eventsContainer = $(".l-list");
 
       //console.log("🔍 Events container:", eventsContainer);
       if (!eventsContainer.length) continue;
 
       // Find all tip elements
-      eventsContainer.find(".tip.t-grd-2").each((_, tipElement) => {
+      eventsContainer.find("a.grd.block").each((_, tipElement) => {
         const $tip = $(tipElement);
 
         // Extract horse name
@@ -166,8 +181,8 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
         };
 
         // Extract win tips count and total
-        const winTipsText = $tip.find(".rw.win.tips b").text();
-        const winTipsMatch = winTipsText.match(/(\d+)\/(\d+)/);
+        const winTipsText = $tip.find(".rw.win b").text();
+        const winTipsMatch = winTipsText.match(/(\d+)\s*\/\s*(\d+)*/i);
         if (winTipsMatch) {
           horseEntry.winTips = parseInt(winTipsMatch[1]);
           horseEntry.winTotal = parseInt(winTipsMatch[2]);
@@ -178,8 +193,8 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
         }
 
         // Extract EW tips count and total
-        const ewTipsText = $tip.find(".rw.ew.tips b").text();
-        const ewTipsMatch = ewTipsText.match(/(\d+)\/(\d+)/);
+        const ewTipsText = $tip.find(".rw.ew b").text();
+        const ewTipsMatch = ewTipsText.match(/(\d+)\s*\/\s*(\d+)*/i);
         if (ewTipsMatch) {
           horseEntry.ewTips = parseInt(ewTipsMatch[1]);
           horseEntry.ewTotal = parseInt(ewTipsMatch[2]);
@@ -190,8 +205,8 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
         }
 
         // Extract NAP tips count and total
-        const napTipsText = $tip.find(".rw.nap.tips b").text();
-        const napTipsMatch = napTipsText.match(/(\d+)\/(\d+)/);
+        const napTipsText = $tip.find(".rw.nap b").text();
+        const napTipsMatch = napTipsText.match(/(\d+)\s*\/\s*(\d+)*/i);
         if (napTipsMatch) {
           horseEntry.napTips = parseInt(napTipsMatch[1]);
           horseEntry.napTotal = parseInt(napTipsMatch[2]);
@@ -203,13 +218,21 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
 
         // Extract expert count
         const expertCount = parseInt(
-          $tip.find(".rw.win.tips .exp").text().match(/(\d+)/)?.[1] || "0"
+          $tip
+            .find(".rw.win .i-ui-crown")
+            .parent()
+            .text()
+            .match(/(\d+)/)?.[1] || "0"
         );
         horseEntry.expertCount = expertCount;
 
         // Extract comment count
         const commentCount = parseInt(
-          $tip.find(".rw.win.tips .cmts").text().match(/(\d+)/)?.[1] || "0"
+          $tip
+            .find(".rw.win .i-ui-comments")
+            .parent()
+            .text()
+            .match(/(\d+)/)?.[1] || "0"
         );
         horseEntry.commentCount = commentCount;
 
@@ -221,7 +244,7 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
           //console.log("🔍 Next element:", nextElement.html());
           const nextElementHtml = nextElement.html() || "";
           const $nextElement = cheerio.load(nextElementHtml);
-          const commentElement = $nextElement(".rw.h-readable");
+          const commentElement = $nextElement(`[role="tooltip"] p`);
           const comment = commentElement.text().trim();
 
           // console.log("🔍 Comment element:", commentElement.html());
@@ -271,9 +294,6 @@ export async function GET(
   { params }: { params: { date: string } }
 ) {
   const date = await Promise.resolve(params.date);
-  const today = new Date().toISOString().split("T")[0];
-  const cutoffTime = new Date();
-  cutoffTime.setHours(7, 30, 0, 0);
 
   const cacheFile = path.join(CACHE_DIR, `${date}.json`);
   try {
@@ -281,21 +301,6 @@ export async function GET(
     const cachedData = await fs.readFile(cacheFile, "utf-8");
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
-    // if (date > today) {
-    //   return NextResponse.json({
-    //     date,
-    //     tips: [],
-    //   });
-    // }
-
-    // Check if it's today but before 10:30am
-    // if (date === today && now < cutoffTime) {
-    //   return NextResponse.json({
-    //     date,
-    //     tips: [],
-    //   });
-    // }
-
     if (date) {
       const tips = await fetchAndParseTips();
 
