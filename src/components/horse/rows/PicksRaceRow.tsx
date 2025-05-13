@@ -2096,6 +2096,8 @@ export function PicksRaceRow({
                   sharpRatingGood &&
                   rpPredGood
                 }
+                // highlight3={olbgNapGood}
+                // highlight2={olbgNapGood && rpPredGood && aiGood}
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
               />
