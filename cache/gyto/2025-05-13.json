@@ -1,0 +1,190 @@
+{
+  "date": "2025-05-13",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Abingworth",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Doyouknowwhatimean",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Reckless Spending",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Coastal Command",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Hard Dealt",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "The Wire Flyer",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Our Lil",
+      "isNap": false
+    },
+    {
+      "time": "14:12",
+      "horse": "Poatan",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Larchill Lass",
+      "isNap": false
+    },
+    {
+      "time": "15:12",
+      "horse": "Keldeo",
+      "isNap": false
+    },
+    {
+      "time": "15:42",
+      "horse": "Alfie Boy",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Zappata",
+      "isNap": true
+    },
+    {
+      "time": "14:20",
+      "horse": "Fishermans Cottage",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Sinj",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Dappled Light",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Diamond Cottage",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Mojomaker",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Seraphic",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Gun Carriage",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Faiyum",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Queen Of Thunder",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "Mogwli",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Ice Jet",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Sign From Above",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Comic Book",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Kamino Bello",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Two Become One",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "High Honour",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Irina'S Path",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Smackwater Jack",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "The Miracle Man",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Paymelater",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Jackpot Cash",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Solent Gateway",
+      "isNap": true
+    },
+    {
+      "time": "18:40",
+      "horse": "Delpotro",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Gavin",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Dartmouth Castle",
+      "isNap": false
+    }
+  ]
+}

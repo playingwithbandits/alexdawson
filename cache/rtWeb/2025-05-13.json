@@ -1,0 +1,25 @@
+{
+  "date": "2025-05-13",
+  "tips": [
+    {
+      "horseName": "Solent Gateway",
+      "time": "18:10",
+      "rating": 87.2
+    },
+    {
+      "horseName": "Conquer The Breeze",
+      "time": "18:40",
+      "rating": 77
+    },
+    {
+      "horseName": "Feach Amach",
+      "time": "19:10",
+      "rating": 81.8
+    },
+    {
+      "horseName": "Gavin",
+      "time": "19:40",
+      "rating": 90.7
+    }
+  ]
+}

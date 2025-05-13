@@ -1988,7 +1988,7 @@ export function PicksRaceRow({
               rpPredictions?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score || 0;
 
-            const countGood = count >= topScoreCount * 0.8;
+            const countGood = count >= topScoreCount * 0.75;
 
             const rpPredPercWithin10Percent = rpPredPerc >= 75;
 
@@ -2000,9 +2000,9 @@ export function PicksRaceRow({
             const hasOlbgComment = Boolean(olbgCommentCount);
 
             const sharpRatingGood =
-              (sharpTipsWeighted?.find(
+              (sharpTotalAverageRatingWeighted?.find(
                 (x) => cleanName(x[0]) === cleanName(name)
-              )?.[1] || 0) >= 0.5;
+              )?.[1] || 0) >= 0.75;
 
             const mentionedByTipsterArr = tipsterSiteNames?.filter(
               (x) => cleanName(x) === cleanName(name)
@@ -2089,7 +2089,13 @@ export function PicksRaceRow({
                 //   sharpRatingGood,
                 // ].every(Boolean)}
                 //highlight1={countGood}
-                highlight2={countGood && hasOlbgComment}
+                highlight2={
+                  countGood &&
+                  aiGood &&
+                  olbgNapGood &&
+                  sharpRatingGood &&
+                  rpPredGood
+                }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
               />

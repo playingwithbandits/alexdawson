@@ -3,19 +3,65 @@
     "courseName": "Beverley",
     "raceCardsCourseUrl": "/racecards/2025-05-13#beverley",
     "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-05-13",
-    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.4) (Watering)",
+    "going": "GOOD TO FIRM (Good in places; 7.3; watered)",
     "weather": "Sunny",
     "stallsPosition": "Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:42",
+        "raceCardUrl": "/racecards/6/beverley/2025-05-13/892731",
+        "horses": [
+          {
+            "horseName": "Cosmos Raj",
+            "horseProfileUrl": "/profile/horse/3423161/cosmos-raj/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:42",
+        "raceCardUrl": "/racecards/6/beverley/2025-05-13/892733",
+        "horses": [
+          {
+            "horseName": "Belle Amie",
+            "horseProfileUrl": "/profile/horse/7183164/belle-amie/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Chepstow",
     "raceCardsCourseUrl": "/racecards/2025-05-13#chepstow",
     "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-05-13",
-    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.4) (Watering)",
-    "weather": "Showers",
+    "going": "GOOD (Good to firm in places; 7.1; watered)",
+    "weather": "Cloudy with sunny spells",
     "stallsPosition": "Straight - Stands' side; Round - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/12/chepstow/2025-05-13/892739",
+        "horses": [
+          {
+            "horseName": "Torbay",
+            "horseProfileUrl": "/profile/horse/7530055/torbay/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/12/chepstow/2025-05-13/892740",
+        "horses": [
+          {
+            "horseName": "Innisfree Pearl",
+            "horseProfileUrl": "/profile/horse/5991301/innisfree-pearl/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Killarney",
@@ -24,16 +70,84 @@
     "going": "GOOD TO YIELDING (Watered)",
     "weather": "Showers",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "6:20",
+        "raceCardUrl": "/racecards/185/killarney/2025-05-13/895514",
+        "horses": [
+          {
+            "horseName": "Ocean Manifest",
+            "horseProfileUrl": "/profile/horse/5385897/ocean-manifest/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:50",
+        "raceCardUrl": "/racecards/185/killarney/2025-05-13/895515",
+        "horses": [
+          {
+            "horseName": "Cu Chulainn",
+            "horseProfileUrl": "/profile/horse/3811186/cu-chulainn/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:50",
+        "raceCardUrl": "/racecards/185/killarney/2025-05-13/895517",
+        "horses": [
+          {
+            "horseName": "Lord Erskine",
+            "horseProfileUrl": "/profile/horse/974071/lord-erskine/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Sedgefield",
     "raceCardsCourseUrl": "/racecards/2025-05-13#sedgefield",
     "raceCardsCourseMeetingsUrl": "/racecards/57/sedgefield/2025-05-13",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.4) (Watering) (Rail Movements: 6.10 & 7.10 -79yds and 7.40 & 8.10 -68yds)",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.6) (Watering) (Rail Movements: 6.10 & 7.10 -79yds and 7.40 & 8.10 -68yds)",
     "weather": "Sunny",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-05-13/892955",
+        "horses": [
+          {
+            "horseName": "Art Of Diplomacy",
+            "horseProfileUrl": "/profile/horse/2389778/art-of-diplomacy/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:40",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-05-13/892957",
+        "horses": [
+          {
+            "horseName": "Nonbinding",
+            "horseProfileUrl": "/profile/horse/3526804/nonbinding/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:10",
+        "raceCardUrl": "/racecards/57/sedgefield/2025-05-13/892958",
+        "horses": [
+          {
+            "horseName": "Park Hind",
+            "horseProfileUrl": "/profile/horse/3385811/park-hind/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Sligo",
@@ -42,16 +156,110 @@
     "going": "GOOD (Watering)",
     "weather": "Mostly sunny",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/197/sligo/2025-05-13/895489",
+        "horses": [
+          {
+            "horseName": "Jumble Light",
+            "horseProfileUrl": "/profile/horse/4952192/jumble-light/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/197/sligo/2025-05-13/895490",
+        "horses": [
+          {
+            "horseName": "Klassman",
+            "horseProfileUrl": "/profile/horse/5428934/klassman/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Smackwater Jack",
+            "horseProfileUrl": "/profile/horse/1913964/smackwater-jack/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Run Away Merida",
+            "horseProfileUrl": "/profile/horse/6679752/run-away-merida/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/197/sligo/2025-05-13/895491",
+        "horses": [
+          {
+            "horseName": "Lets Do This",
+            "horseProfileUrl": "/profile/horse/3984156/lets-do-this/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "The Miracle Man",
+            "horseProfileUrl": "/profile/horse/4086870/the-miracle-man/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/197/sligo/2025-05-13/895492",
+        "horses": [
+          {
+            "horseName": "Hillfort Manor",
+            "horseProfileUrl": "/profile/horse/7534555/hillfort-manor/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Worcester",
     "raceCardsCourseUrl": "/racecards/2025-05-13#worcester",
     "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-05-13",
-    "going": "GOOD (GoingStick: 7.6) (Watering) (Rail movements: 2.00, 4.00, 4.30, 5.05 & 5.35 +93yds and 3.00 & 3.30 +60yds)",
+    "going": "GOOD (7.3; watered)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/101/worcester/2025-05-13/892966",
+        "horses": [
+          {
+            "horseName": "Bushstreet Bowman",
+            "horseProfileUrl": "/profile/horse/7530058/bushstreet-bowman/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/101/worcester/2025-05-13/895579",
+        "horses": [
+          {
+            "horseName": "Benjimun Bunnie",
+            "horseProfileUrl": "/profile/horse/7530059/benjimun-bunnie/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/101/worcester/2025-05-13/892965",
+        "horses": [
+          {
+            "horseName": "Clover Pass",
+            "horseProfileUrl": "/profile/horse/4369889/clover-pass/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Chepstow (GB)",
