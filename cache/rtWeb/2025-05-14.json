@@ -1,0 +1,35 @@
+{
+  "date": "2025-05-14",
+  "tips": [
+    {
+      "horseName": "Courageous Strike",
+      "time": "14:19",
+      "rating": 95
+    },
+    {
+      "horseName": "Ventara",
+      "time": "14:50",
+      "rating": 71.2
+    },
+    {
+      "horseName": "Dancingontheedge",
+      "time": "15:22",
+      "rating": 81.8
+    },
+    {
+      "horseName": "American Land",
+      "time": "15:55",
+      "rating": 84.1
+    },
+    {
+      "horseName": "Somespring Special",
+      "time": "16:30",
+      "rating": 77.2
+    },
+    {
+      "horseName": "Bardenstown Lad",
+      "time": "17:05",
+      "rating": 87.9
+    }
+  ]
+}

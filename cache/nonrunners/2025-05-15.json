@@ -1,0 +1,77 @@
+[
+  {
+    "courseName": "Clonmel",
+    "raceCardsCourseUrl": "/racecards/2025-05-15#clonmel",
+    "raceCardsCourseMeetingsUrl": "/racecards/177/clonmel/2025-05-15",
+    "going": "GOOD (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Fontwell",
+    "raceCardsCourseUrl": "/racecards/2025-05-15#fontwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/20/fontwell/2025-05-15",
+    "going": "GOOD, Good to soft in places (GoingStick 5.9) (Watering) (Rail Movements: All races +18yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-05-15#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-05-15",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Perth",
+    "raceCardsCourseUrl": "/racecards/2025-05-15#perth",
+    "raceCardsCourseMeetingsUrl": "/racecards/41/perth/2025-05-15",
+    "going": "GOOD (GoingStick: 7.4) (Watering) (Rail movements: 2.18, 3.53 & 5.02 +61yds, 2.50 +64yds, 3.21 +75yds and 4.27 +50yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Salisbury",
+    "raceCardsCourseUrl": "/racecards/2025-05-15#salisbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/52/salisbury/2025-05-15",
+    "going": "GOOD TO FIRM (GoingStick: 8.9) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 6f - Far side ; 1m2f - Inside; 1m4f - Stands' side; 1m6f - Flag",
+    "races": []
+  },
+  {
+    "courseName": "York",
+    "raceCardsCourseUrl": "/racecards/2025-05-15#york",
+    "raceCardsCourseMeetingsUrl": "/racecards/107/york/2025-05-15",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: Overall 7.0; Home straight: Far side 7.1, Centre 7.1, Stands' side 7.0) (Watering) (Rail Movements: 2.24 +28yds and 3.13, 3.45 & 5.25 +32yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f & 6f - Far Side; 1m4f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:18",
+        "raceCardUrl": "/racecards/107/york/2025-05-15/892763",
+        "horses": [
+          {
+            "horseName": "Treasure Isle",
+            "horseProfileUrl": "/profile/horse/5845521/treasure-isle/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Longchamp",
+    "raceCardsCourseUrl": "/racecards/2025-05-15#longchamp",
+    "raceCardsCourseMeetingsUrl": "/racecards/211/longchamp/2025-05-15",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

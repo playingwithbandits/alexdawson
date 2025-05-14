@@ -2090,13 +2090,11 @@ export function PicksRaceRow({
                 // ].every(Boolean)}
                 //highlight1={countGood}
                 highlight2={
-                  sharpRatingGood && (aiGood || rpPredGood)
-                  //countGood &&
-                  // aiGood &&
-                  // hasOlbgComment &&
-                  // olbgNapGood &&
-                  // sharpRatingGood &&
-                  // rpPredGood
+                  aiGood &&
+                  hasOlbgComment &&
+                  olbgNapGood &&
+                  sharpRatingGood &&
+                  rpPredGood
                 }
                 // highlight3={olbgNapGood}
                 // highlight2={olbgNapGood && rpPredGood && aiGood}

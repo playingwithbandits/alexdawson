@@ -95,16 +95,29 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
       // Find all .h-rst-lnk elements within the tipsListingContainer-Match div
       //console.log("🔍 raceHtml", raceHtml);
       $race(".tip .ev a").each((_, element) => {
+        const time = $race(element).parent().find("time").attr("datetime");
+        console.log("🕒 Found time:", time);
+
+        const timeIsSameDay =
+          time && new Date(time).toDateString() === new Date().toDateString();
+        console.log("🔍 tip .ev a timeIsSameDay:", timeIsSameDay);
+        if (!timeIsSameDay) {
+          console.log("🔍 tip .ev a timeIsSameDay:", timeIsSameDay);
+          return;
+        }
+
         const value = $race(element).text().trim();
         const href = $race(element).attr("href") || "";
         console.log("🔍 tip .ev a Value:", value);
         console.log("🔍 tip .ev a Href:", href);
-        if (value && href) {
+        if (value && href && !timeIsSameDay && false) {
           console.log("🔍 tip .ev a push:", value);
           raceLinks.push({
             value,
             href: `https://alexdawson.co.uk/getP.php?q=https://www.olbg.com${href}`,
           });
+        } else {
+          console.log("🔍 tip .ev a rejected:", href);
         }
       });
     } catch (error) {
@@ -259,7 +272,7 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
         tipsMap.set(horseName, horseEntry);
       });
 
-      console.log("🔍 Fetched:", url, tipsMap);
+      console.log("🔍 Fetched:", url);
     } catch (error) {
       console.error(`Error fetching tips from ${url}:`, error);
     }
