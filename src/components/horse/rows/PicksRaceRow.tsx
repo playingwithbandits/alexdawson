@@ -74,12 +74,47 @@ export function PicksRaceRow({
     );
   });
 
-  const olbgRaceInfoForRace = olbgRaceInfoArr?.find(
-    (info) =>
-      placeToPlaceKey(info.track) === placeToPlaceKey(meeting.venue) &&
-      normalizeTime(info.time) === normalizeTime(race.time)
+  const olbgRaceInfoForRace = olbgRaceInfoArr?.find((info) => {
+    const olbgTrack = placeToPlaceKey(info.track);
+    const meetingTrack = placeToPlaceKey(meeting.venue);
+    const olbgTime = normalizeTime(info.time);
+    const raceTime = normalizeTime(race.time);
+
+    const trackMatch = olbgTrack === meetingTrack;
+    const timeMatch = olbgTime === raceTime;
+    const fullCheck = trackMatch && timeMatch;
+
+    // console.log("olbgRaceInfoForRace", {
+    //   olbgTrack,
+    //   meetingTrack,
+    //   olbgTime,
+    //   raceTime,
+    //   fullCheck,
+    // });
+    return fullCheck;
+  });
+  //console.log("olbgRaceInfoForRace", olbgRaceInfoForRace);
+
+  // const olbgRaceInfoRunnersSameLengthIsh =
+  //   Math.abs(
+  //     (olbgRaceInfoForRace?.names?.length || 0) - (race?.horses?.length || 0)
+  //   ) <= 2;
+
+  const horseNameKeys = race?.horses?.map((x) => horseNameToKey(x.name));
+  const olbgNameKeys = olbgRaceInfoForRace?.names?.map((x) =>
+    horseNameToKey(x)
   );
-  console.log("olbgRaceInfoForRace", olbgRaceInfoForRace);
+  const olbgHasMostlySameRunners = horseNameKeys
+    ?.filter((x) => !isNonRunner(race.time, x))
+    ?.every((x) => olbgNameKeys?.includes(x));
+
+  // console.log("olbgHasMostlySameRunners", {
+  //   olbgRaceInfoForRace,
+  //   olbgNameKeys,
+  //   horseNameKeys,
+  //   olbgHasMostlySameRunners,
+  //   olbgRaceInfoRunnersSameLengthIsh,
+  // });
 
   const olbgTipsWithNap = olbgTipsForRace?.filter((x) => x.napTips > 0);
   const olbgTipsWithEw = olbgTipsForRace?.filter((x) => x.ewTips > 0);
@@ -538,7 +573,13 @@ export function PicksRaceRow({
       }`}
     >
       <div className="flex gap-[0.1rem] w-20 items-center">
-        <span className="font-semibold w-8 text-xs">{race.time}</span>
+        <span
+          className={`font-semibold w-8 text-xs ${
+            !olbgHasMostlySameRunners ? "text-red-500" : ""
+          }`}
+        >
+          {race.time}
+        </span>
       </div>
 
       <div

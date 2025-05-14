@@ -51,6 +51,7 @@ export const placeToPlaceKey = (m_place: string) => {
       .replace("(ire)", "")
       .replace("-ire", "")
       .replace(" ire", "")
+      .replace(/-$/g, "")
 
       .replace(/\s+/g, "-")
       .trim();
