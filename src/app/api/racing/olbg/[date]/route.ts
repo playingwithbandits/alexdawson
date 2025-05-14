@@ -4,7 +4,6 @@ import path from "path";
 import { OLBGRaceInfo, OLBGTip, OLBGTips } from "@/types/racing";
 import * as cheerio from "cheerio";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
-import { normalizeTime } from "@/components/horse/DayPredictions";
 
 const CACHE_DIR = path.join(process.cwd(), "cache", "olbg");
 
@@ -15,6 +14,16 @@ async function ensureDirectoryExists(dir: string) {
     await fs.mkdir(dir, { recursive: true });
   }
 }
+
+export const normalizeTime = (time: string) => {
+  // Convert "1:35" to "13:35" format
+  const [hours, minutes] = time.split(":");
+  const hour = parseInt(hours);
+  if (hour < 12) {
+    return `${hour + 12}:${minutes}`;
+  }
+  return time;
+};
 
 async function fetchAndParseTips(
   date: string
