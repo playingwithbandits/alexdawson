@@ -9,6 +9,7 @@ import {
   RtWebTip,
   OLBGTip,
   SharpTip,
+  OLBGRaceInfo,
 } from "@/types/racing";
 import { normalizeTime } from "../DayPredictions";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
@@ -31,6 +32,7 @@ interface PicksRaceRowProps {
   showOnlyBest: boolean;
   countToBeHigherThan?: number;
   sharpTips: SharpTip[] | undefined;
+  olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
 export function PicksRaceRow({
@@ -48,6 +50,7 @@ export function PicksRaceRow({
   showOnlyBest,
   countToBeHigherThan: propCountToBeHigherThan = 3,
   sharpTips,
+  olbgRaceInfoArr,
 }: PicksRaceRowProps) {
   console.log("CompactRaceRow", {
     isTodayOrPast,
@@ -61,6 +64,7 @@ export function PicksRaceRow({
     rtWebTips,
     olbgTips,
     sharpTips,
+    olbgRaceInfoArr,
   });
 
   const olbgTipsForRace = olbgTips?.filter((tip) => {
@@ -69,6 +73,13 @@ export function PicksRaceRow({
       (horse) => horseNameToKey(horse.name) === tipHorseKey
     );
   });
+
+  const olbgRaceInfoForRace = olbgRaceInfoArr?.find(
+    (info) =>
+      placeToPlaceKey(info.track) === placeToPlaceKey(meeting.venue) &&
+      normalizeTime(info.time) === normalizeTime(race.time)
+  );
+  console.log("olbgRaceInfoForRace", olbgRaceInfoForRace);
 
   const olbgTipsWithNap = olbgTipsForRace?.filter((x) => x.napTips > 0);
   const olbgTipsWithEw = olbgTipsForRace?.filter((x) => x.ewTips > 0);

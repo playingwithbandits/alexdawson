@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
-import { OLBGTip, OLBGTips } from "@/types/racing";
+import { OLBGRaceInfo, OLBGTip, OLBGTips } from "@/types/racing";
 import * as cheerio from "cheerio";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
+import { normalizeTime } from "@/components/horse/DayPredictions";
 
 const CACHE_DIR = path.join(process.cwd(), "cache", "olbg");
 
@@ -15,7 +16,11 @@ async function ensureDirectoryExists(dir: string) {
   }
 }
 
-async function fetchAndParseTips(date: string): Promise<OLBGTip[]> {
+async function fetchAndParseTips(
+  date: string
+): Promise<{ tips: OLBGTip[]; olbgRaceInfoArr: OLBGRaceInfo[] }> {
+  const olbgRaceInfoArr: OLBGRaceInfo[] = [];
+
   console.log("🔍 Fetching OLBG tips...");
   const response = await fetch(
     "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/UK/2"
@@ -160,8 +165,10 @@ async function fetchAndParseTips(date: string): Promise<OLBGTip[]> {
   for (const url of limitedFilteredUrls) {
     console.log("🔍 Fetching content from:", url);
     try {
-      // Add delay between fetches to avoid rate limiting
-      await new Promise((resolve) => setTimeout(resolve, 5000));
+      await new Promise((resolve) =>
+        setTimeout(resolve, 5000 + Math.floor(Math.random() * 5000))
+      );
+      const lilNameArr: string[] = [];
       const response = await fetch(url);
       const html = await response.text();
       const $ = cheerio.load(html);
@@ -179,6 +186,8 @@ async function fetchAndParseTips(date: string): Promise<OLBGTip[]> {
         // Extract horse name
         const horseName = cleanName($tip.find(".rw.slct h4").text().trim());
         if (!horseName) return;
+
+        lilNameArr.push(horseName);
 
         // Get or create horse entry in map
         const horseEntry = tipsMap.get(horseName) || {
@@ -275,6 +284,22 @@ async function fetchAndParseTips(date: string): Promise<OLBGTip[]> {
         tipsMap.set(horseName, horseEntry);
       });
 
+      const trackAndTime = url.split("/").slice(-2)[0];
+      const trackAndTimeSplit = trackAndTime.split("_");
+      const time = normalizeTime(trackAndTimeSplit[0]);
+      const trackName = trackAndTimeSplit[1];
+
+      const olbgRaceInfoObj: OLBGRaceInfo = {
+        date,
+        trackAndTime,
+        track: trackName,
+        names: lilNameArr,
+        count: lilNameArr.length,
+        url,
+        time,
+      };
+      olbgRaceInfoArr.push(olbgRaceInfoObj);
+
       console.log("🔍 Fetched:", url);
     } catch (error) {
       console.error(`Error fetching tips from ${url}:`, error);
@@ -304,7 +329,7 @@ async function fetchAndParseTips(date: string): Promise<OLBGTip[]> {
   console.log("🔗 Filtered URLs:", filteredUrls);
   //console.log("✨ Parsed tips:", tips);
 
-  return tips;
+  return { tips, olbgRaceInfoArr };
 }
 
 export async function GET(
@@ -320,11 +345,12 @@ export async function GET(
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
     if (date) {
-      const tips = await fetchAndParseTips(params.date);
+      const { tips, olbgRaceInfoArr } = await fetchAndParseTips(params.date);
 
       const olbgTips: OLBGTips = {
         date,
         tips,
+        olbgRaceInfoArr,
       };
 
       //Save to cache
@@ -350,6 +376,7 @@ export async function GET(
     return NextResponse.json({
       date,
       tips: [],
+      olbgRaceInfoArr: [],
     });
   }
 }

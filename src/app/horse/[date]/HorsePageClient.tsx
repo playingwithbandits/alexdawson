@@ -8,7 +8,6 @@ import {
   NonRunnerMeeting,
   RtWebData,
   OLBGTips,
-  SharpTip,
   SharpData,
 } from "@/types/racing";
 import { Loader2 } from "lucide-react";
@@ -401,6 +400,7 @@ export function HorsePageClient({ date }: { date: string }) {
       liveOdds={liveOdds}
       rtWebTips={rtWebTips?.tips}
       olbgTips={olbgTips?.tips}
+      olbgRaceInfoArr={olbgTips?.olbgRaceInfoArr}
       sharpTips={sharpTips?.tips}
     />
   );

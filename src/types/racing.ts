@@ -695,6 +695,16 @@ export interface LiveOdds {
   course: string;
 }
 
+export interface OLBGRaceInfo {
+  date: string;
+  trackAndTime: string;
+  track: string;
+  names: string[];
+  count: number;
+  url: string;
+  time: string;
+}
+
 export interface OLBGTip {
   horseName: string;
   winTips: number;
@@ -714,4 +724,5 @@ export interface OLBGTip {
 export interface OLBGTips {
   date: string;
   tips: OLBGTip[];
+  olbgRaceInfoArr?: OLBGRaceInfo[];
 }
