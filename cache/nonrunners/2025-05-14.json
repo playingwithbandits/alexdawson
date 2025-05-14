@@ -1,0 +1,193 @@
+[
+  {
+    "courseName": "Bath",
+    "raceCardsCourseUrl": "/racecards/2025-05-14#bath",
+    "raceCardsCourseMeetingsUrl": "/racecards/5/bath/2025-05-14",
+    "going": "FIRM (GoingStick: 8.9) (Selective bowsering) (Rail Movements: 6.10, 6.42, 7.12, 7.42 & 8.12 +5yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Sprints - Centre; 1m - Inside; Remainder - Outside",
+    "races": [
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/5/bath/2025-05-14/892743",
+        "horses": [
+          {
+            "horseName": "Dandy Orton",
+            "horseProfileUrl": "/profile/horse/7534582/dandy-orton/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:42",
+        "raceCardUrl": "/racecards/5/bath/2025-05-14/892749",
+        "horses": [
+          {
+            "horseName": "Me Tarzan",
+            "horseProfileUrl": "/profile/horse/6120962/me-tarzan/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "D Day Major Winter",
+            "horseProfileUrl": "/profile/horse/6838441/d-day-major-winter/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:12",
+        "raceCardUrl": "/racecards/5/bath/2025-05-14/892747",
+        "horses": [
+          {
+            "horseName": "Crafter",
+            "horseProfileUrl": "/profile/horse/3605505/crafter/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:12",
+        "raceCardUrl": "/racecards/5/bath/2025-05-14/892748",
+        "horses": [
+          {
+            "horseName": "Aroof",
+            "horseProfileUrl": "/profile/horse/6649584/aroof/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newton Abbot",
+    "raceCardsCourseUrl": "/racecards/2025-05-14#newton-abbot",
+    "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-05-14",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.9) (Watering) (Rail movements: 2.19 & 5.40 +56yds, 2.50 & 3.55 +69yds, 3.22 & 5.05 +37yds and 4.30 +31yds)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:19",
+        "raceCardUrl": "/racecards/39/newton-abbot/2025-05-14/892970",
+        "horses": [
+          {
+            "horseName": "Hector's Hope",
+            "horseProfileUrl": "/profile/horse/4672799/hectors-hope/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Lewis Barnes",
+            "horseProfileUrl": "/profile/horse/5428906/lewis-barnes/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Sure To Be Sure",
+            "horseProfileUrl": "/profile/horse/6604745/sure-to-be-sure/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Perth",
+    "raceCardsCourseUrl": "/racecards/2025-05-14#perth",
+    "raceCardsCourseMeetingsUrl": "/racecards/41/perth/2025-05-14",
+    "going": "GOOD (GoingStick: 7.4) (Watering) (Rail Movements: 6.00, 8.30 & 9.00 +75yds, 6.30 +61yds, 7.00 +105yds and 7.30 & 8.00 +64yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/41/perth/2025-05-14/892977",
+        "horses": [
+          {
+            "horseName": "I'm Too Tired",
+            "horseProfileUrl": "/profile/horse/4666926/im-too-tired/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tipperary",
+    "raceCardsCourseUrl": "/racecards/2025-05-14#tipperary",
+    "raceCardsCourseMeetingsUrl": "/racecards/202/tipperary/2025-05-14",
+    "going": "GOOD TO YIELDING (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-05-14#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-05-14",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.1) (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-05-14/892751",
+        "horses": [
+          {
+            "horseName": "Petula",
+            "horseProfileUrl": "/profile/horse/5708918/petula/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:42",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-05-14/892753",
+        "horses": [
+          {
+            "horseName": "Help Me Rhonda",
+            "horseProfileUrl": "/profile/horse/5147976/help-me-rhonda/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "York",
+    "raceCardsCourseUrl": "/racecards/2025-05-14#york",
+    "raceCardsCourseMeetingsUrl": "/racecards/107/york/2025-05-14",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: Overall 6.9; Home straight: Far side 7.0, Centre 7.0, Stands' side 6.9) (Watering) (Rail Movements: 2.10, 3.45 & 5.25 +22yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Straight - Far side; 1m4f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Compiegne",
+    "raceCardsCourseUrl": "/racecards/2025-05-14#compiegne",
+    "raceCardsCourseMeetingsUrl": "/racecards/291/compiegne/2025-05-14",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-05-14#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-05-14",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-05-14/895589",
+        "horses": [
+          {
+            "horseName": "Star Performer",
+            "horseProfileUrl": "/profile/horse/7339019/star-performer/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  }
+]

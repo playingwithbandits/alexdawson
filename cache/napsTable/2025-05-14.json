@@ -1,0 +1,311 @@
+{
+  "date": "2025-05-14",
+  "tips": [
+    {
+      "time": "14:10",
+      "horse": "Marhaba The Champ",
+      "tipster": "Chris Connolly",
+      "score": "190.5"
+    },
+    {
+      "time": "17:25",
+      "horse": "Capla Lazarus",
+      "tipster": "The Judge",
+      "score": "74.1"
+    },
+    {
+      "time": "14:42",
+      "horse": "Glenfinnan",
+      "tipster": "The North",
+      "score": "65.5"
+    },
+    {
+      "time": "16:18",
+      "horse": "Red Sand",
+      "tipster": "Lambourn",
+      "score": "57.5"
+    },
+    {
+      "time": "15:45",
+      "horse": "Whirl",
+      "tipster": "Fortunatus",
+      "score": "51.6"
+    },
+    {
+      "time": "19:00",
+      "horse": "Happy Index",
+      "tipster": "Ratings Hub",
+      "score": "37.2"
+    },
+    {
+      "time": "15:13",
+      "horse": "Night Raider",
+      "tipster": "Glendale",
+      "score": "35.8"
+    },
+    {
+      "time": "14:10",
+      "horse": "See Hector",
+      "tipster": "Farringdon",
+      "score": "34.4"
+    },
+    {
+      "time": "14:42",
+      "horse": "Two Tribes",
+      "tipster": "Rockavon",
+      "score": "30.9"
+    },
+    {
+      "time": "15:45",
+      "horse": "Serenity Prayer",
+      "tipster": "Garry Owen",
+      "score": "32.6"
+    },
+    {
+      "time": "15:13",
+      "horse": "Inisherin",
+      "tipster": "Templegate",
+      "score": "26.9"
+    },
+    {
+      "time": "14:10",
+      "horse": "Marhaba The Champ",
+      "tipster": "The Brigadier",
+      "score": "26.2"
+    },
+    {
+      "time": "17:25",
+      "horse": "Great Bedwyn",
+      "tipster": "On The Nose",
+      "score": "25.9"
+    },
+    {
+      "time": "14:42",
+      "horse": "Commanche Falls",
+      "tipster": "Matt Polley",
+      "score": "24.7"
+    },
+    {
+      "time": "15:45",
+      "horse": "Whirl",
+      "tipster": "Lee Sobot",
+      "score": "23.2"
+    },
+    {
+      "time": "15:45",
+      "horse": "Go Go Boots",
+      "tipster": "Marlborough",
+      "score": "11.9"
+    },
+    {
+      "time": "14:10",
+      "horse": "Marhaba The Champ",
+      "tipster": "Dean Kilbryde",
+      "score": "10.0"
+    },
+    {
+      "time": "15:13",
+      "horse": "Elite Status",
+      "tipster": "Mercury",
+      "score": "-1.4"
+    },
+    {
+      "time": "15:00",
+      "horse": "Sunlit Uplands",
+      "tipster": "Newmarket",
+      "score": "-1.6"
+    },
+    {
+      "time": "15:13",
+      "horse": "Elite Status",
+      "tipster": "Ben Morgan",
+      "score": "-5.9"
+    },
+    {
+      "time": "14:10",
+      "horse": "Stressfree",
+      "tipster": "Tipman Tips",
+      "score": "-12.0"
+    },
+    {
+      "time": "16:18",
+      "horse": "Jolly Roger",
+      "tipster": "Karl Hedley",
+      "score": "-15.0"
+    },
+    {
+      "time": "16:18",
+      "horse": "Red Sand",
+      "tipster": "Melissa Jones",
+      "score": "-16.1"
+    },
+    {
+      "time": "15:45",
+      "horse": "Tattycoram",
+      "tipster": "Whistler",
+      "score": "-15.3"
+    },
+    {
+      "time": "17:40",
+      "horse": "Takeonedayatatime",
+      "tipster": "Computeform",
+      "score": "-17.8"
+    },
+    {
+      "time": "14:42",
+      "horse": "Dark Thirty",
+      "tipster": "Robin Goodfellow",
+      "score": "-21.9"
+    },
+    {
+      "time": "15:45",
+      "horse": "Smoken",
+      "tipster": "Luke Tucker",
+      "score": "-25.0"
+    },
+    {
+      "time": "14:42",
+      "horse": "Korker",
+      "tipster": "Ross Shepherd",
+      "score": "-25.1"
+    },
+    {
+      "time": "14:50",
+      "horse": "Ventara",
+      "tipster": "West Country",
+      "score": "-30.0"
+    },
+    {
+      "time": "20:20",
+      "horse": "Angelo Dundee",
+      "tipster": "Brian Flanagan",
+      "score": "-27.9"
+    },
+    {
+      "time": "16:18",
+      "horse": "Gallant",
+      "tipster": "Rory Delargy",
+      "score": "-31.3"
+    },
+    {
+      "time": "20:12",
+      "horse": "Penn Avenue",
+      "tipster": "RP Ratings",
+      "score": "-29.4"
+    },
+    {
+      "time": "16:18",
+      "horse": "Red Sand",
+      "tipster": "Chris Wright",
+      "score": "-30.2"
+    },
+    {
+      "time": "15:13",
+      "horse": "Night Raider",
+      "tipster": "Newsboy",
+      "score": "-31.1"
+    },
+    {
+      "time": "18:42",
+      "horse": "Havana Club",
+      "tipster": "Postdata",
+      "score": "-38.4"
+    },
+    {
+      "time": "15:13",
+      "horse": "Night Raider",
+      "tipster": "The Score",
+      "score": "-39.3"
+    },
+    {
+      "time": "14:42",
+      "horse": "Commanche Falls",
+      "tipster": "The Duke",
+      "score": "-41.5"
+    },
+    {
+      "time": "14:10",
+      "horse": "La Pulga",
+      "tipster": "The Punt",
+      "score": "-46.1"
+    },
+    {
+      "time": "16:18",
+      "horse": "Red Sand",
+      "tipster": "Jason Heavey",
+      "score": "-43.5"
+    },
+    {
+      "time": "15:45",
+      "horse": "Serenity Prayer",
+      "tipster": "Ian Gaughran",
+      "score": "-47.4"
+    },
+    {
+      "time": "16:18",
+      "horse": "Gallant",
+      "tipster": "Spotlight",
+      "score": "-48.3"
+    },
+    {
+      "time": "17:25",
+      "horse": "Molinari",
+      "tipster": "Steve Mullington",
+      "score": "-48.8"
+    },
+    {
+      "time": "14:42",
+      "horse": "Bergerac",
+      "tipster": "Moorestyle",
+      "score": "-54.4"
+    },
+    {
+      "time": "17:40",
+      "horse": "Takeonedayatatime",
+      "tipster": "Jeffrey Ross",
+      "score": "-59.2"
+    },
+    {
+      "time": "15:45",
+      "horse": "Miss Tonnerre",
+      "tipster": "Jon Freeman",
+      "score": "-58.1"
+    },
+    {
+      "time": "15:13",
+      "horse": "Elite Status",
+      "tipster": "Sam Hardy",
+      "score": "-59.0"
+    },
+    {
+      "time": "15:13",
+      "horse": "Elite Status",
+      "tipster": "Andrew Mount",
+      "score": "-68.5"
+    },
+    {
+      "time": "16:18",
+      "horse": "Gallant",
+      "tipster": "Rob Wright",
+      "score": "-83.6"
+    },
+    {
+      "time": "17:45",
+      "horse": "Whispering Hopes",
+      "tipster": "Adrian Wall",
+      "score": "-82.4"
+    },
+    {
+      "time": "14:42",
+      "horse": "Two Tribes",
+      "tipster": "Jim Delahunt",
+      "score": "-100.0"
+    },
+    {
+      "time": "14:42",
+      "horse": "First Folio",
+      "tipster": "Rory Paddock",
+      "score": "-100.0"
+    }
+  ]
+}

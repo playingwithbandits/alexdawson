@@ -806,7 +806,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpSpeedRatingWeighted[x_i][1]}
-              highlight3={sharpSpeedRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpSpeedRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -914,7 +914,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpAbilityRatingWeighted[x_i][1]}
-              highlight3={sharpAbilityRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpAbilityRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1022,7 +1022,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpJockeyRatingWeighted[x_i][1]}
-              highlight3={sharpJockeyRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpJockeyRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1130,7 +1130,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpTrainerRatingWeighted[x_i][1]}
-              highlight3={sharpTrainerRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpTrainerRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1238,7 +1238,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpGoingRatingWeighted[x_i][1]}
-              highlight3={sharpGoingRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpGoingRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1346,7 +1346,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpCourseRatingWeighted[x_i][1]}
-              highlight3={sharpCourseRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpCourseRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1454,7 +1454,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpPedigreeRatingWeighted[x_i][1]}
-              highlight3={sharpPedigreeRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpPedigreeRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1562,7 +1562,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpOwnerRatingWeighted[x_i][1]}
-              highlight3={sharpOwnerRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpOwnerRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1670,7 +1670,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpTotalAverageRatingWeighted[x_i][1]}
-              highlight3={sharpTotalAverageRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpTotalAverageRatingWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1778,7 +1778,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpTipsWeighted[x_i][1]}
-              highlight3={sharpTipsWeighted[x_i][1] >= 0.75}
+              highlight3={sharpTipsWeighted[x_i][1] >= 0.8}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -2002,7 +2002,7 @@ export function PicksRaceRow({
             const sharpRatingGood =
               (sharpTotalAverageRatingWeighted?.find(
                 (x) => cleanName(x[0]) === cleanName(name)
-              )?.[1] || 0) >= 0.75;
+              )?.[1] || 0) >= 0.8;
 
             const mentionedByTipsterArr = tipsterSiteNames?.filter(
               (x) => cleanName(x) === cleanName(name)
@@ -2090,11 +2090,13 @@ export function PicksRaceRow({
                 // ].every(Boolean)}
                 //highlight1={countGood}
                 highlight2={
-                  countGood &&
-                  aiGood &&
-                  olbgNapGood &&
-                  sharpRatingGood &&
-                  rpPredGood
+                  sharpRatingGood && (aiGood || rpPredGood)
+                  //countGood &&
+                  // aiGood &&
+                  // hasOlbgComment &&
+                  // olbgNapGood &&
+                  // sharpRatingGood &&
+                  // rpPredGood
                 }
                 // highlight3={olbgNapGood}
                 // highlight2={olbgNapGood && rpPredGood && aiGood}

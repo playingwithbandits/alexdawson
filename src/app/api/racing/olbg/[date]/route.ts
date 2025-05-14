@@ -258,6 +258,8 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
 
         tipsMap.set(horseName, horseEntry);
       });
+
+      console.log("🔍 Fetched:", url, tipsMap);
     } catch (error) {
       console.error(`Error fetching tips from ${url}:`, error);
     }
