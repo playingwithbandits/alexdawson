@@ -15,7 +15,7 @@ async function ensureDirectoryExists(dir: string) {
   }
 }
 
-async function fetchAndParseTips(): Promise<OLBGTip[]> {
+async function fetchAndParseTips(date: string): Promise<OLBGTip[]> {
   console.log("🔍 Fetching OLBG tips...");
   const response = await fetch(
     "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/UK/2"
@@ -96,21 +96,21 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
       //console.log("🔍 raceHtml", raceHtml);
       $race(".tip .ev a").each((_, element) => {
         const time = $race(element).parent().find("time").attr("datetime");
-        console.log("🕒 Found time:", time);
+        //console.log("🕒 Found time:", time);
 
         const timeIsSameDay =
-          time && new Date(time).toDateString() === new Date().toDateString();
-        console.log("🔍 tip .ev a timeIsSameDay:", timeIsSameDay);
-        if (!timeIsSameDay) {
-          console.log("🔍 tip .ev a timeIsSameDay:", timeIsSameDay);
-          return;
-        }
+          time &&
+          new Date(time).toDateString() === new Date(date).toDateString();
 
         const value = $race(element).text().trim();
         const href = $race(element).attr("href") || "";
-        console.log("🔍 tip .ev a Value:", value);
-        console.log("🔍 tip .ev a Href:", href);
-        if (value && href && !timeIsSameDay && false) {
+        //console.log("🔍 tip .ev a Value:", value);
+        //console.log("🔍 tip .ev a Href:", href);
+        if (!timeIsSameDay) {
+          console.log("🔍 tip .ev a rejected as not the same day:", href, time);
+          return;
+        }
+        if (value && href && timeIsSameDay) {
           console.log("🔍 tip .ev a push:", value);
           raceLinks.push({
             value,
@@ -155,10 +155,13 @@ async function fetchAndParseTips(): Promise<OLBGTip[]> {
   //console.log("🔗 Filtered URLs:", filteredUrls);
   const limitedFilteredUrls = filteredUrls; //.slice(0, 1);
   console.log("🔗 Race URLs:", limitedFilteredUrls);
+
   // Fetch content from each URL and parse tips
   for (const url of limitedFilteredUrls) {
     console.log("🔍 Fetching content from:", url);
     try {
+      // Add delay between fetches to avoid rate limiting
+      await new Promise((resolve) => setTimeout(resolve, 5000));
       const response = await fetch(url);
       const html = await response.text();
       const $ = cheerio.load(html);
@@ -317,7 +320,7 @@ export async function GET(
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
     if (date) {
-      const tips = await fetchAndParseTips();
+      const tips = await fetchAndParseTips(params.date);
 
       const olbgTips: OLBGTips = {
         date,
