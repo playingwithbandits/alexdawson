@@ -1,0 +1,165 @@
+{
+  "date": "2025-05-19",
+  "tips": [
+    {
+      "time": "13:45",
+      "horse": "Kawthar",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Calafiori",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Early Release",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Analogical",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Cadarn",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Deputy",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Mister Sky Blue",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Venetian Sun",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Jonny Concrete",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Trojan Sun",
+      "isNap": true
+    },
+    {
+      "time": "16:30",
+      "horse": "Latynina",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Crown'S Lady",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Harry Palmer",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "No Such Thing",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Spinning Around",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Sierra De Gredos",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Mocking",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Thrifty Of Digby",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Ozark Daze",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Onemoredance",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Nogo'S Dream",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Blue Bolt",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "Regal Envoy",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Kingkeer",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Kingmaker",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Crowd Quake",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Corsican Caper",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Hattal",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Flash Harry",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Medinilla",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Natsumi",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Lady Wingalong",
+      "isNap": false
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "date": "2025-05-21",
+  "tips": [
+    {
+      "time": "19:30",
+      "horse": "Roundabout Silver",
+      "tipster": "Chris Connolly",
+      "score": "143.3"
+    },
+    {
+      "time": "14:30",
+      "horse": "Underwriter",
+      "tipster": "Fortunatus",
+      "score": "69.5"
+    },
+    {
+      "time": "17:40",
+      "horse": "Cosi Bello",
+      "tipster": "Glendale",
+      "score": "52.3"
+    },
+    {
+      "time": "16:15",
+      "horse": "Ukantango",
+      "tipster": "Ratings Hub",
+      "score": "41.2"
+    },
+    {
+      "time": "20:40",
+      "horse": "Cornish Storm",
+      "tipster": "On The Nose",
+      "score": "37.1"
+    },
+    {
+      "time": "20:10",
+      "horse": "Drama",
+      "tipster": "Templegate",
+      "score": "34.5"
+    },
+    {
+      "time": "18:20",
+      "horse": "Pierre Royal",
+      "tipster": "Lee Sobot",
+      "score": "28.3"
+    },
+    {
+      "time": "14:00",
+      "horse": "Nelson Gay",
+      "tipster": "The Judge",
+      "score": "28.7"
+    },
+    {
+      "time": "16:42",
+      "horse": "Sir Garfield",
+      "tipster": "Ben Morgan",
+      "score": "22.8"
+    },
+    {
+      "time": "15:00",
+      "horse": "Woohoo",
+      "tipster": "The North",
+      "score": "22.3"
+    },
+    {
+      "time": "16:42",
+      "horse": "Leap Day",
+      "tipster": "Garry Owen",
+      "score": "20.9"
+    },
+    {
+      "time": "16:05",
+      "horse": "Pol Roger",
+      "tipster": "RP Ratings",
+      "score": "18.3"
+    },
+    {
+      "time": "17:00",
+      "horse": "Soi Dao",
+      "tipster": "Postdata",
+      "score": "13.7"
+    },
+    {
+      "time": "17:35",
+      "horse": "Vape",
+      "tipster": "Dean Kilbryde",
+      "score": "12.4"
+    },
+    {
+      "time": "18:40",
+      "horse": "A Major Payne",
+      "tipster": "Matt Polley",
+      "score": "12.2"
+    },
+    {
+      "time": "17:40",
+      "horse": "Deira Storm",
+      "tipster": "Lambourn",
+      "score": "9.6"
+    },
+    {
+      "time": "17:45",
+      "horse": "Inventress",
+      "tipster": "Mercury",
+      "score": "6.1"
+    },
+    {
+      "time": "15:22",
+      "horse": "Sir Albert",
+      "tipster": "The Brigadier",
+      "score": "5.1"
+    },
+    {
+      "time": "15:10",
+      "horse": "Rukaana",
+      "tipster": "West Country",
+      "score": "2.7"
+    },
+    {
+      "time": "15:00",
+      "horse": "Woohoo",
+      "tipster": "Rockavon",
+      "score": "-3.3"
+    },
+    {
+      "time": "17:25",
+      "horse": "Getalead",
+      "tipster": "Computeform",
+      "score": "-4.0"
+    },
+    {
+      "time": "16:42",
+      "horse": "Roaring Ralph",
+      "tipster": "Farringdon",
+      "score": "-6.5"
+    },
+    {
+      "time": "19:00",
+      "horse": "Mr Ubiquitous",
+      "tipster": "Marlborough",
+      "score": "-7.0"
+    },
+    {
+      "time": "17:25",
+      "horse": "Getalead",
+      "tipster": "Melissa Jones",
+      "score": "-9.1"
+    },
+    {
+      "time": "17:40",
+      "horse": "Deira Storm",
+      "tipster": "Luke Tucker",
+      "score": "-10.9"
+    },
+    {
+      "time": "14:30",
+      "horse": "Sudbury Hill",
+      "tipster": "Newmarket",
+      "score": "-21.6"
+    },
+    {
+      "time": "19:40",
+      "horse": "Nibras Angel",
+      "tipster": "Karl Hedley",
+      "score": "-26.7"
+    },
+    {
+      "time": "16:05",
+      "horse": "Glasses Up",
+      "tipster": "Tipman Tips",
+      "score": "-29.7"
+    },
+    {
+      "time": "15:00",
+      "horse": "South Shore",
+      "tipster": "Robin Goodfellow",
+      "score": "-31.5"
+    },
+    {
+      "time": "16:25",
+      "horse": "Sassy Sprezzatura",
+      "tipster": "The Score",
+      "score": "-32.3"
+    },
+    {
+      "time": "17:40",
+      "horse": "Cosi Bello",
+      "tipster": "Jon Freeman",
+      "score": "-32.9"
+    },
+    {
+      "time": "19:30",
+      "horse": "Devasboy",
+      "tipster": "Moorestyle",
+      "score": "-34.4"
+    },
+    {
+      "time": "18:00",
+      "horse": "Pop Dancer",
+      "tipster": "Newsboy",
+      "score": "-37.6"
+    },
+    {
+      "time": "20:20",
+      "horse": "You Make Me Smile",
+      "tipster": "Brian Flanagan",
+      "score": "-36.5"
+    },
+    {
+      "time": "14:00",
+      "horse": "Eternal Sunshine",
+      "tipster": "Jason Heavey",
+      "score": "-38.5"
+    },
+    {
+      "time": "15:22",
+      "horse": "Sir Albert",
+      "tipster": "Ross Shepherd",
+      "score": "-40.6"
+    },
+    {
+      "time": "15:30",
+      "horse": "Abduction",
+      "tipster": "Whistler",
+      "score": "-41.1"
+    },
+    {
+      "time": "19:40",
+      "horse": "Pressure's On",
+      "tipster": "The Punt",
+      "score": "-49.5"
+    },
+    {
+      "time": "17:40",
+      "horse": "Cosi Bello",
+      "tipster": "Jeffrey Ross",
+      "score": "-51.0"
+    },
+    {
+      "time": "16:25",
+      "horse": "Step Along",
+      "tipster": "Rory Delargy",
+      "score": "-52.2"
+    },
+    {
+      "time": "15:55",
+      "horse": "Rosenpur",
+      "tipster": "Chris Wright",
+      "score": "-50.5"
+    },
+    {
+      "time": "20:10",
+      "horse": "Drama",
+      "tipster": "Spotlight",
+      "score": "-53.8"
+    },
+    {
+      "time": "20:10",
+      "horse": "Tan Rapido",
+      "tipster": "The Duke",
+      "score": "-58.5"
+    },
+    {
+      "time": "15:40",
+      "horse": "Pride Of Paris",
+      "tipster": "Steve Mullington",
+      "score": "-62.1"
+    },
+    {
+      "time": "19:00",
+      "horse": "Muy Muy Loco",
+      "tipster": "Ian Gaughran",
+      "score": "-63.4"
+    },
+    {
+      "time": "17:40",
+      "horse": "Cosi Bello",
+      "tipster": "Rob Wright",
+      "score": "-69.4"
+    },
+    {
+      "time": "19:40",
+      "horse": "Pressure's On",
+      "tipster": "Andrew Mount",
+      "score": "-70.8"
+    },
+    {
+      "time": "16:15",
+      "horse": "Sayva",
+      "tipster": "Sam Hardy",
+      "score": "-71.0"
+    },
+    {
+      "time": "16:05",
+      "horse": "Sea Legend",
+      "tipster": "Jim Delahunt",
+      "score": "-80.4"
+    },
+    {
+      "time": "17:45",
+      "horse": "Edge Of Seventeen",
+      "tipster": "Adrian Wall",
+      "score": "-87.5"
+    },
+    {
+      "time": "15:55",
+      "horse": "Connie's Rose",
+      "tipster": "Rory Paddock",
+      "score": "-100.0"
+    }
+  ]
+}

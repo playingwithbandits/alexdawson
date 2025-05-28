@@ -1,0 +1,311 @@
+{
+  "date": "2025-05-28",
+  "tips": [
+    {
+      "time": "16:00",
+      "horse": "Digital",
+      "tipster": "Chris Connolly",
+      "score": "94.6"
+    },
+    {
+      "time": "15:00",
+      "horse": "Arkenstaar",
+      "tipster": "Fortunatus",
+      "score": "54.3"
+    },
+    {
+      "time": "15:10",
+      "horse": "In A Hurry",
+      "tipster": "Glendale",
+      "score": "51.8"
+    },
+    {
+      "time": "14:30",
+      "horse": "Sands Of Indi",
+      "tipster": "Farringdon",
+      "score": "38.3"
+    },
+    {
+      "time": "20:52",
+      "horse": "Kingdom Of Stars",
+      "tipster": "The Brigadier",
+      "score": "37.4"
+    },
+    {
+      "time": "17:03",
+      "horse": "Trojan Soldier",
+      "tipster": "Ratings Hub",
+      "score": "28.6"
+    },
+    {
+      "time": "20:10",
+      "horse": "Lermoos Legend",
+      "tipster": "Templegate",
+      "score": "27.2"
+    },
+    {
+      "time": "14:48",
+      "horse": "Mr Le Philosophe",
+      "tipster": "Lee Sobot",
+      "score": "26.8"
+    },
+    {
+      "time": "20:52",
+      "horse": "Kingdom Of Stars",
+      "tipster": "Ben Morgan",
+      "score": "25.7"
+    },
+    {
+      "time": "19:22",
+      "horse": "Critical Aclaim",
+      "tipster": "Lambourn",
+      "score": "16.5"
+    },
+    {
+      "time": "14:40",
+      "horse": "Orbaan",
+      "tipster": "The Judge",
+      "score": "17.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "Park Street",
+      "tipster": "RP Ratings",
+      "score": "14.6"
+    },
+    {
+      "time": "19:52",
+      "horse": "Chilli Queen",
+      "tipster": "Rockavon",
+      "score": "14.5"
+    },
+    {
+      "time": "19:52",
+      "horse": "Silver Nightfall",
+      "tipster": "On The Nose",
+      "score": "9.7"
+    },
+    {
+      "time": "15:40",
+      "horse": "Casilli",
+      "tipster": "Dean Kilbryde",
+      "score": "7.8"
+    },
+    {
+      "time": "15:00",
+      "horse": "Arkenstaar",
+      "tipster": "The North",
+      "score": "8.0"
+    },
+    {
+      "time": "18:40",
+      "horse": "Shantwopointfive",
+      "tipster": "Mercury",
+      "score": "7.2"
+    },
+    {
+      "time": "15:30",
+      "horse": "Dothan",
+      "tipster": "Tipman Tips",
+      "score": "6.4"
+    },
+    {
+      "time": "16:30",
+      "horse": "King's Scholar",
+      "tipster": "Garry Owen",
+      "score": "3.5"
+    },
+    {
+      "time": "17:03",
+      "horse": "Trojan Soldier",
+      "tipster": "Marlborough",
+      "score": "2.5"
+    },
+    {
+      "time": "14:48",
+      "horse": "Mr Le Philosophe",
+      "tipster": "Computeform",
+      "score": "0.4"
+    },
+    {
+      "time": "16:10",
+      "horse": "Dr Rio",
+      "tipster": "Rory Delargy",
+      "score": "-5.0"
+    },
+    {
+      "time": "16:40",
+      "horse": "Laser Focus",
+      "tipster": "Postdata",
+      "score": "-8.2"
+    },
+    {
+      "time": "15:10",
+      "horse": "In A Hurry",
+      "tipster": "Jon Freeman",
+      "score": "-9.4"
+    },
+    {
+      "time": "16:00",
+      "horse": "Oriental Prince",
+      "tipster": "Newsboy",
+      "score": "-10.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Park Street",
+      "tipster": "Matt Polley",
+      "score": "-14.0"
+    },
+    {
+      "time": "18:22",
+      "horse": "Fort Campbell",
+      "tipster": "Newmarket",
+      "score": "-16.0"
+    },
+    {
+      "time": "16:48",
+      "horse": "Cap Du Mathan",
+      "tipster": "West Country",
+      "score": "-18.1"
+    },
+    {
+      "time": "19:40",
+      "horse": "Coqolino",
+      "tipster": "Melissa Jones",
+      "score": "-24.0"
+    },
+    {
+      "time": "14:48",
+      "horse": "Mr Le Philosophe",
+      "tipster": "Jason Heavey",
+      "score": "-24.6"
+    },
+    {
+      "time": "18:40",
+      "horse": "Rioja Alta",
+      "tipster": "Karl Hedley",
+      "score": "-28.1"
+    },
+    {
+      "time": "15:30",
+      "horse": "Dothan",
+      "tipster": "Luke Tucker",
+      "score": "-29.3"
+    },
+    {
+      "time": "18:30",
+      "horse": "Telnobody",
+      "tipster": "Brian Flanagan",
+      "score": "-32.8"
+    },
+    {
+      "time": "17:18",
+      "horse": "Stella Hogan",
+      "tipster": "Robin Goodfellow",
+      "score": "-36.6"
+    },
+    {
+      "time": "15:30",
+      "horse": "Dothan",
+      "tipster": "Spotlight",
+      "score": "-37.2"
+    },
+    {
+      "time": "15:40",
+      "horse": "Casilli",
+      "tipster": "The Score",
+      "score": "-39.4"
+    },
+    {
+      "time": "19:52",
+      "horse": "Personal Best",
+      "tipster": "Moorestyle",
+      "score": "-37.1"
+    },
+    {
+      "time": "14:18",
+      "horse": "Sharp Glance",
+      "tipster": "Jeffrey Ross",
+      "score": "-45.0"
+    },
+    {
+      "time": "16:00",
+      "horse": "Digital",
+      "tipster": "Ross Shepherd",
+      "score": "-45.1"
+    },
+    {
+      "time": "18:22",
+      "horse": "Dr Strangelove",
+      "tipster": "Rob Wright",
+      "score": "-50.4"
+    },
+    {
+      "time": "16:18",
+      "horse": "Al Sayah",
+      "tipster": "The Punt",
+      "score": "-51.3"
+    },
+    {
+      "time": "15:40",
+      "horse": "Casilli",
+      "tipster": "The Duke",
+      "score": "-52.3"
+    },
+    {
+      "time": "20:22",
+      "horse": "Haku",
+      "tipster": "Whistler",
+      "score": "-54.8"
+    },
+    {
+      "time": "14:40",
+      "horse": "Park Street",
+      "tipster": "Chris Wright",
+      "score": "-55.5"
+    },
+    {
+      "time": "15:30",
+      "horse": "Dothan",
+      "tipster": "Ian Gaughran",
+      "score": "-59.8"
+    },
+    {
+      "time": "15:40",
+      "horse": "Casilli",
+      "tipster": "Jim Delahunt",
+      "score": "-63.3"
+    },
+    {
+      "time": "14:18",
+      "horse": "Jack N Jones",
+      "tipster": "Steve Mullington",
+      "score": "-68.9"
+    },
+    {
+      "time": "17:52",
+      "horse": "Nandita",
+      "tipster": "Sam Hardy",
+      "score": "-67.0"
+    },
+    {
+      "time": "14:00",
+      "horse": "Dakota Dawn",
+      "tipster": "Andrew Mount",
+      "score": "-77.4"
+    },
+    {
+      "time": "19:00",
+      "horse": "Banana Three",
+      "tipster": "Adrian Wall",
+      "score": "-83.6"
+    },
+    {
+      "time": "14:40",
+      "horse": "Finbar's Lad",
+      "tipster": "Rory Paddock",
+      "score": "-85.6"
+    }
+  ]
+}

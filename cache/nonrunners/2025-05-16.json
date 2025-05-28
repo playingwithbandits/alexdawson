@@ -1,0 +1,74 @@
+[
+  {
+    "courseName": "Aintree",
+    "raceCardsCourseUrl": "/racecards/2025-05-16#aintree",
+    "raceCardsCourseMeetingsUrl": "/racecards/32/aintree/2025-05-16",
+    "going": "GOOD (GoingStick 5.7) (Watering) (Rail movements: 5.10, 6.20, 7.30, 8.05 & 8.40 +8yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Hamilton",
+    "raceCardsCourseUrl": "/racecards/2025-05-16#hamilton",
+    "raceCardsCourseMeetingsUrl": "/racecards/22/hamilton/2025-05-16",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 8.1) (Watering) (Rail movements: 6.40, 7.15, 7.50 & 8.25 +8yds)",
+    "weather": "Showers",
+    "stallsPosition": "1m & 1m1f - Inside; Remainder - Stands' side",
+    "races": []
+  },
+  {
+    "courseName": "Kilbeggan",
+    "raceCardsCourseUrl": "/racecards/2025-05-16#kilbeggan",
+    "raceCardsCourseMeetingsUrl": "/racecards/203/kilbeggan/2025-05-16",
+    "going": "GOOD (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-05-16#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-05-16",
+    "going": "GOOD, Good to firm in places (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-05-16#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-05-16",
+    "going": "GOOD, Good to firm in places (GoingStick: 5.9) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "1m2f & 1m4f - Inside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Newmarket",
+    "raceCardsCourseUrl": "/racecards/2025-05-16#newmarket",
+    "raceCardsCourseMeetingsUrl": "/racecards/38/newmarket/2025-05-16",
+    "going": "GOOD (GoingStick: 7.2) (Watered)",
+    "weather": "Sunny",
+    "stallsPosition": "(Stands' side course) 1m4f - Centre; Remainder - Stands' side",
+    "races": []
+  },
+  {
+    "courseName": "York",
+    "raceCardsCourseUrl": "/racecards/2025-05-16#york",
+    "raceCardsCourseMeetingsUrl": "/racecards/107/york/2025-05-16",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: Overall 6.8; Home straight: Far side 6.9, Centre 7.0, Stands' side 6.9) (Watered) (Rail movements: 2.42 & 3.45 +43yds and 3.13 & 4.55 +36yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f - Far side; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Chantilly",
+    "raceCardsCourseUrl": "/racecards/2025-05-16#chantilly",
+    "raceCardsCourseMeetingsUrl": "/racecards/204/chantilly/2025-05-16",
+    "going": "POLYTRACK: STANDARD; TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

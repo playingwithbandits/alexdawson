@@ -1,0 +1,161 @@
+[
+  {
+    "courseName": "Cork",
+    "raceCardsCourseUrl": "/racecards/2025-05-20#cork",
+    "raceCardsCourseMeetingsUrl": "/racecards/596/cork/2025-05-20",
+    "going": "GOOD, Good to firm in places (Watering)",
+    "weather": "Showers",
+    "stallsPosition": "Sprints - Centre",
+    "races": [
+      {
+        "raceTime": "5:50",
+        "raceCardUrl": "/racecards/596/cork/2025-05-20/895831",
+        "horses": [
+          {
+            "horseName": "Dark Ace",
+            "horseProfileUrl": "/profile/horse/6460916/dark-ace/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:50",
+        "raceCardUrl": "/racecards/596/cork/2025-05-20/895833",
+        "horses": [
+          {
+            "horseName": "Edmond Halley",
+            "horseProfileUrl": "/profile/horse/5884242/edmond-halley/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hexham",
+    "raceCardsCourseUrl": "/racecards/2025-05-20#hexham",
+    "raceCardsCourseMeetingsUrl": "/racecards/25/hexham/2025-05-20",
+    "going": "GOOD (GoingStick: 6.9) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:58",
+        "raceCardUrl": "/racecards/25/hexham/2025-05-20/894070",
+        "horses": [
+          {
+            "horseName": "Somebody's Fortune",
+            "horseProfileUrl": "/profile/horse/4910544/somebodys-fortune/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:28",
+        "raceCardUrl": "/racecards/25/hexham/2025-05-20/894066",
+        "horses": [
+          {
+            "horseName": "The Jeweller's Pet",
+            "horseProfileUrl": "/profile/horse/5034752/the-jewellers-pet/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Huntingdon",
+    "raceCardsCourseUrl": "/racecards/2025-05-20#huntingdon",
+    "raceCardsCourseMeetingsUrl": "/racecards/26/huntingdon/2025-05-20",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.6) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "8:40",
+        "raceCardUrl": "/racecards/26/huntingdon/2025-05-20/894078",
+        "horses": [
+          {
+            "horseName": "Right Hand Of God",
+            "horseProfileUrl": "/profile/horse/2894301/right-hand-of-god/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-05-20#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-05-20",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.3) (Watering) (Rail movements: 2.10, 2.40 & 3.10 +8yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m1f & 1m2f - Inside; Remaidner - Centre",
+    "races": [
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/31/lingfield/2025-05-20/893802",
+        "horses": [
+          {
+            "horseName": "Muscika",
+            "horseProfileUrl": "/profile/horse/1044719/muscika/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-05-20#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-05-20",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.1) (Watered) (Outer track) (Rail Movements: 2.32 +24yds and 3.32, 4.02, 4.32 & 5.05 +18yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 1m - Centre; 1m2f & 2m - Inside",
+    "races": [
+      {
+        "raceTime": "3:32",
+        "raceCardUrl": "/racecards/40/nottingham/2025-05-20/893810",
+        "horses": [
+          {
+            "horseName": "Raedwald",
+            "horseProfileUrl": "/profile/horse/5845568/raedwald/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:32",
+        "raceCardUrl": "/racecards/40/nottingham/2025-05-20/893809",
+        "horses": [
+          {
+            "horseName": "Only One Blue",
+            "horseProfileUrl": "/profile/horse/6363106/only-one-blue/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell",
+    "raceCardsCourseUrl": "/racecards/2025-05-20#southwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/61/southwell/2025-05-20",
+    "going": "GOOD (GoingStick: 6.6) (Watering) (Rail movements: 2.50 & 5.25 +217yds, 3.20, 3.50 & 4.20 +132yds and 4.50 +170yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/61/southwell/2025-05-20/894083",
+        "horses": [
+          {
+            "horseName": "The Last Drop",
+            "horseProfileUrl": "/profile/horse/5398579/the-last-drop/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  }
+]

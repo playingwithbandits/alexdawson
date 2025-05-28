@@ -1,0 +1,195 @@
+{
+  "date": "2025-05-21",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Eternal Sunshine",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Underwriter",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "King Of The Jungle",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Garden Oasis",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Hosanna Power",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "Inanna",
+      "isNap": false
+    },
+    {
+      "time": "17:17",
+      "horse": "Beltane",
+      "isNap": false
+    },
+    {
+      "time": "14:22",
+      "horse": "Ammes",
+      "isNap": false
+    },
+    {
+      "time": "14:52",
+      "horse": "Phaedra",
+      "isNap": false
+    },
+    {
+      "time": "15:22",
+      "horse": "Italica",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Rosenpur",
+      "isNap": true
+    },
+    {
+      "time": "16:25",
+      "horse": "Bust A Moon",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Candy Warhol",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "The Long Walk",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Mr Le Philosophe",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Pride Of Paris",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Time Interval",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "A Dublin Job",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Crystal Glance",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Believe The Storm",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Cosi Bello",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "A La Louche",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Radiant Beauty",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Museum Piece",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Al Ameen",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Marinakis",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Comfort Line",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Inventress",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Pierre Royal",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "Harry The Rogue",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Deressa",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Empress Alma",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "You Make Me Smile",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Pop Dancer",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Immediate Effect",
+      "isNap": true
+    },
+    {
+      "time": "19:00",
+      "horse": "Mr Ubiquitous",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Comedian Leader",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Sea Of Charm",
+      "isNap": false
+    }
+  ]
+}

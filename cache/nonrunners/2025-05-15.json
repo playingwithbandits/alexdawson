@@ -62,6 +62,17 @@
             "raceNumber": "(6)"
           }
         ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/107/york/2025-05-15/892765",
+        "horses": [
+          {
+            "horseName": "Spaceman",
+            "horseProfileUrl": "/profile/horse/7493157/spaceman/",
+            "raceNumber": "(10)"
+          }
+        ]
       }
     ]
   },

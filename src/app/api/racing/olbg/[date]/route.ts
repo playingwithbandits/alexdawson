@@ -175,7 +175,7 @@ async function fetchAndParseTips(
     console.log("🔍 Fetching content from:", url);
     try {
       await new Promise((resolve) =>
-        setTimeout(resolve, 5000 + Math.floor(Math.random() * 5000))
+        setTimeout(resolve, 2000 + Math.floor(Math.random() * 2000))
       );
       const lilNameArr: string[] = [];
       const response = await fetch(url);
@@ -367,17 +367,17 @@ export async function GET(
       await fs.writeFile(cacheFile, JSON.stringify(olbgTips, null, 2));
 
       // Also save to next day's cache file if it doesn't exist
-      const nextDate = new Date(date);
-      nextDate.setDate(nextDate.getDate() + 1);
-      const nextDateString = nextDate.toISOString().split("T")[0];
-      const nextCacheFile = path.join(CACHE_DIR, `${nextDateString}.json`);
+      // const nextDate = new Date(date);
+      // nextDate.setDate(nextDate.getDate() + 1);
+      // const nextDateString = nextDate.toISOString().split("T")[0];
+      // const nextCacheFile = path.join(CACHE_DIR, `${nextDateString}.json`);
 
-      try {
-        await fs.access(nextCacheFile);
-      } catch {
-        // Next day's file doesn't exist, so create it
-        await fs.writeFile(nextCacheFile, JSON.stringify(olbgTips, null, 2));
-      }
+      // try {
+      //   await fs.access(nextCacheFile);
+      // } catch {
+      //   // Next day's file doesn't exist, so create it
+      //   await fs.writeFile(nextCacheFile, JSON.stringify(olbgTips, null, 2));
+      // }
 
       return NextResponse.json(olbgTips);
     }

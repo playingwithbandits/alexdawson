@@ -1,0 +1,311 @@
+{
+  "date": "2025-05-19",
+  "tips": [
+    {
+      "time": "16:30",
+      "horse": "Latynina",
+      "tipster": "Chris Connolly",
+      "score": "124.5"
+    },
+    {
+      "time": "17:50",
+      "horse": "Rising Empire",
+      "tipster": "Fortunatus",
+      "score": "77.3"
+    },
+    {
+      "time": "17:00",
+      "horse": "Heavenly Heather",
+      "tipster": "The Judge",
+      "score": "41.0"
+    },
+    {
+      "time": "17:15",
+      "horse": "Mister Sky Blue",
+      "tipster": "The North",
+      "score": "34.0"
+    },
+    {
+      "time": "16:45",
+      "horse": "Willolarupi",
+      "tipster": "Ratings Hub",
+      "score": "31.3"
+    },
+    {
+      "time": "15:30",
+      "horse": "Jonny Concrete",
+      "tipster": "Garry Owen",
+      "score": "32.4"
+    },
+    {
+      "time": "18:50",
+      "horse": "Regal Envoy",
+      "tipster": "Templegate",
+      "score": "28.6"
+    },
+    {
+      "time": "18:50",
+      "horse": "Regal Envoy",
+      "tipster": "Glendale",
+      "score": "25.4"
+    },
+    {
+      "time": "20:20",
+      "horse": "Crowd Quake",
+      "tipster": "Lee Sobot",
+      "score": "25.2"
+    },
+    {
+      "time": "20:00",
+      "horse": "Medinilla",
+      "tipster": "On The Nose",
+      "score": "22.3"
+    },
+    {
+      "time": "16:15",
+      "horse": "One More Dream",
+      "tipster": "Dean Kilbryde",
+      "score": "23.1"
+    },
+    {
+      "time": "18:20",
+      "horse": "Electrifarhh",
+      "tipster": "Lambourn",
+      "score": "20.0"
+    },
+    {
+      "time": "16:15",
+      "horse": "Happier",
+      "tipster": "Matt Polley",
+      "score": "17.3"
+    },
+    {
+      "time": "18:50",
+      "horse": "Regal Envoy",
+      "tipster": "Ben Morgan",
+      "score": "15.9"
+    },
+    {
+      "time": "15:45",
+      "horse": "Cadarn",
+      "tipster": "RP Ratings",
+      "score": "13.6"
+    },
+    {
+      "time": "17:50",
+      "horse": "Rising Empire",
+      "tipster": "The Brigadier",
+      "score": "7.0"
+    },
+    {
+      "time": "17:15",
+      "horse": "Flamborough Head",
+      "tipster": "Postdata",
+      "score": "7.3"
+    },
+    {
+      "time": "21:00",
+      "horse": "Sustained",
+      "tipster": "Farringdon",
+      "score": "2.4"
+    },
+    {
+      "time": "17:00",
+      "horse": "Crown's Lady",
+      "tipster": "Marlborough",
+      "score": "1.9"
+    },
+    {
+      "time": "19:20",
+      "horse": "Cavalry Call",
+      "tipster": "Rockavon",
+      "score": "1.1"
+    },
+    {
+      "time": "15:45",
+      "horse": "Cadarn",
+      "tipster": "Mercury",
+      "score": "-1.9"
+    },
+    {
+      "time": "18:20",
+      "horse": "Chinkara",
+      "tipster": "Luke Tucker",
+      "score": "-2.4"
+    },
+    {
+      "time": "19:10",
+      "horse": "Aeon's Aegis",
+      "tipster": "Computeform",
+      "score": "-12.7"
+    },
+    {
+      "time": "19:30",
+      "horse": "Your Love",
+      "tipster": "Newmarket",
+      "score": "-18.0"
+    },
+    {
+      "time": "17:50",
+      "horse": "Dapper Charm",
+      "tipster": "Karl Hedley",
+      "score": "-19.8"
+    },
+    {
+      "time": "15:30",
+      "horse": "Sacred Falls",
+      "tipster": "Tipman Tips",
+      "score": "-23.3"
+    },
+    {
+      "time": "16:15",
+      "horse": "One Of Our Own",
+      "tipster": "Moorestyle",
+      "score": "-28.4"
+    },
+    {
+      "time": "20:30",
+      "horse": "Rock N Roll Rocket",
+      "tipster": "Melissa Jones",
+      "score": "-33.7"
+    },
+    {
+      "time": "19:20",
+      "horse": "Fast Steps",
+      "tipster": "West Country",
+      "score": "-32.1"
+    },
+    {
+      "time": "19:10",
+      "horse": "The Real Screamer",
+      "tipster": "Brian Flanagan",
+      "score": "-30.7"
+    },
+    {
+      "time": "15:45",
+      "horse": "Cadarn",
+      "tipster": "Robin Goodfellow",
+      "score": "-35.4"
+    },
+    {
+      "time": "15:15",
+      "horse": "Analogical",
+      "tipster": "Whistler",
+      "score": "-35.5"
+    },
+    {
+      "time": "19:20",
+      "horse": "Macari",
+      "tipster": "Newsboy",
+      "score": "-34.8"
+    },
+    {
+      "time": "17:50",
+      "horse": "Rising Empire",
+      "tipster": "Jason Heavey",
+      "score": "-40.5"
+    },
+    {
+      "time": "17:50",
+      "horse": "Rising Empire",
+      "tipster": "Ross Shepherd",
+      "score": "-42.9"
+    },
+    {
+      "time": "15:30",
+      "horse": "Mostar Dreams",
+      "tipster": "The Score",
+      "score": "-43.8"
+    },
+    {
+      "time": "17:30",
+      "horse": "Yellow Dream",
+      "tipster": "The Punt",
+      "score": "-44.7"
+    },
+    {
+      "time": "16:15",
+      "horse": "One More Dream",
+      "tipster": "Rory Delargy",
+      "score": "-47.6"
+    },
+    {
+      "time": "15:00",
+      "horse": "Water Of Leith",
+      "tipster": "Chris Wright",
+      "score": "-46.0"
+    },
+    {
+      "time": "19:30",
+      "horse": "Flash Harry",
+      "tipster": "Jeffrey Ross",
+      "score": "-52.4"
+    },
+    {
+      "time": "17:15",
+      "horse": "Makes Me Wonder",
+      "tipster": "Spotlight",
+      "score": "-51.7"
+    },
+    {
+      "time": "17:15",
+      "horse": "Mister Sky Blue",
+      "tipster": "The Duke",
+      "score": "-54.8"
+    },
+    {
+      "time": "16:00",
+      "horse": "Bodygroove",
+      "tipster": "Steve Mullington",
+      "score": "-58.5"
+    },
+    {
+      "time": "14:45",
+      "horse": "Early Release",
+      "tipster": "Ian Gaughran",
+      "score": "-60.0"
+    },
+    {
+      "time": "18:50",
+      "horse": "Regal Envoy",
+      "tipster": "Jon Freeman",
+      "score": "-67.6"
+    },
+    {
+      "time": "18:50",
+      "horse": "Existent",
+      "tipster": "Sam Hardy",
+      "score": "-68.3"
+    },
+    {
+      "time": "19:50",
+      "horse": "Dalmally",
+      "tipster": "Jim Delahunt",
+      "score": "-78.6"
+    },
+    {
+      "time": "17:50",
+      "horse": "Rising Empire",
+      "tipster": "Andrew Mount",
+      "score": "-75.7"
+    },
+    {
+      "time": "20:20",
+      "horse": "Crowd Quake",
+      "tipster": "Rob Wright",
+      "score": "-87.5"
+    },
+    {
+      "time": "17:10",
+      "horse": "Oscar's Luck",
+      "tipster": "Adrian Wall",
+      "score": "-86.4"
+    },
+    {
+      "time": "17:15",
+      "horse": "I Got Know How",
+      "tipster": "Rory Paddock",
+      "score": "-100.0"
+    }
+  ]
+}

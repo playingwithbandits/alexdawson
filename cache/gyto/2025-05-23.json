@@ -1,0 +1,235 @@
+{
+  "date": "2025-05-23",
+  "tips": [
+    {
+      "time": "13:40",
+      "horse": "Kensington Agent",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Fortification",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Southbank",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Piranha Rama",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Bosphorus Rose",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Mrembo",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Dappled Light",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Ocean Heights",
+      "isNap": true
+    },
+    {
+      "time": "14:25",
+      "horse": "Fitzella",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Wild Desert",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Tsuki",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Glenridding",
+      "isNap": false
+    },
+    {
+      "time": "17:17",
+      "horse": "Must Believe",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Sovereign Spell",
+      "isNap": true
+    },
+    {
+      "time": "15:15",
+      "horse": "Santorini Star",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Liberty Lane",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Apotheosis",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Fort George",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Marching Mac",
+      "isNap": false
+    },
+    {
+      "time": "16:48",
+      "horse": "Barranco",
+      "isNap": false
+    },
+    {
+      "time": "17:23",
+      "horse": "Northern Bound",
+      "isNap": false
+    },
+    {
+      "time": "17:57",
+      "horse": "I'M A Starman",
+      "isNap": false
+    },
+    {
+      "time": "18:32",
+      "horse": "Jomig Des Bois",
+      "isNap": false
+    },
+    {
+      "time": "19:02",
+      "horse": "Manala",
+      "isNap": false
+    },
+    {
+      "time": "19:32",
+      "horse": "Jorah",
+      "isNap": false
+    },
+    {
+      "time": "20:02",
+      "horse": "High Fibre",
+      "isNap": false
+    },
+    {
+      "time": "20:32",
+      "horse": "Monsant",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Jazz De Cotte",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Roaring Potter",
+      "isNap": false
+    },
+    {
+      "time": "18:05",
+      "horse": "Sights Unseen",
+      "isNap": false
+    },
+    {
+      "time": "18:37",
+      "horse": "Darkened",
+      "isNap": false
+    },
+    {
+      "time": "19:07",
+      "horse": "Squire Ohara",
+      "isNap": false
+    },
+    {
+      "time": "19:37",
+      "horse": "Ontheropes",
+      "isNap": false
+    },
+    {
+      "time": "20:07",
+      "horse": "Better Times",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Sup Of Red",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Back Down Under",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Collecting Coin",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "I Am Superman",
+      "isNap": false
+    },
+    {
+      "time": "19:55",
+      "horse": "Bonus Time",
+      "isNap": false
+    },
+    {
+      "time": "20:25",
+      "horse": "Free Solo",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Hover On The Wind",
+      "isNap": false
+    },
+    {
+      "time": "18:47",
+      "horse": "Farough",
+      "isNap": false
+    },
+    {
+      "time": "19:17",
+      "horse": "King'S Hand",
+      "isNap": false
+    },
+    {
+      "time": "19:47",
+      "horse": "Eva Rosie",
+      "isNap": false
+    },
+    {
+      "time": "20:17",
+      "horse": "Vibrant Pearl",
+      "isNap": false
+    },
+    {
+      "time": "20:47",
+      "horse": "My Honey B",
+      "isNap": false
+    }
+  ]
+}

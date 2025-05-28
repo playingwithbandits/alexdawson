@@ -1,0 +1,205 @@
+{
+  "date": "2025-05-28",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Storm Force",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Moutai",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Swift Salian",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Dothan",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Oriental Prince",
+      "isNap": true
+    },
+    {
+      "time": "16:30",
+      "horse": "Savrola",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Bell Shot",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Rogue Invader",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Casilli",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Panama City",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Sawgrass",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Lady Bouquet",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Sharp Glance",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Market House",
+      "isNap": false
+    },
+    {
+      "time": "15:18",
+      "horse": "Illogical Logic",
+      "isNap": false
+    },
+    {
+      "time": "15:48",
+      "horse": "Investment Manager",
+      "isNap": false
+    },
+    {
+      "time": "16:18",
+      "horse": "Al Sayah",
+      "isNap": false
+    },
+    {
+      "time": "16:48",
+      "horse": "Cap Du Mathan",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Beacon Edge",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Farfromnowhere",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Onebrightbluerose",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Telnobody",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Son Of Anarchy",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Tag Man",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Kyle Valley",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Thedeviluno",
+      "isNap": false
+    },
+    {
+      "time": "17:18",
+      "horse": "Between Me And U",
+      "isNap": false
+    },
+    {
+      "time": "18:22",
+      "horse": "Kyoto",
+      "isNap": false
+    },
+    {
+      "time": "18:52",
+      "horse": "Both Of Us",
+      "isNap": false
+    },
+    {
+      "time": "19:22",
+      "horse": "Binhareer",
+      "isNap": true
+    },
+    {
+      "time": "19:52",
+      "horse": "Silver Nightfall",
+      "isNap": false
+    },
+    {
+      "time": "20:22",
+      "horse": "Turquino",
+      "isNap": false
+    },
+    {
+      "time": "20:52",
+      "horse": "Gooloogong",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Spit Spot",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Winds Of Winter",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Shantwopointfive",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Golden Maverick",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Coqolino",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "El Jefe",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Linelee King",
+      "isNap": false
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "date": "2025-05-20",
+  "tips": [
+    {
+      "time": "14:10",
+      "horse": "Gincident",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Cayman Dancer",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "In A Hurry",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Profit Refused",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "Hello Luna",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Honour Your Dreams",
+      "isNap": false
+    },
+    {
+      "time": "14:32",
+      "horse": "Godsend",
+      "isNap": false
+    },
+    {
+      "time": "15:02",
+      "horse": "Banana",
+      "isNap": false
+    },
+    {
+      "time": "15:32",
+      "horse": "King'S Charter",
+      "isNap": true
+    },
+    {
+      "time": "16:02",
+      "horse": "North Star",
+      "isNap": false
+    },
+    {
+      "time": "16:32",
+      "horse": "Native Spirit",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Ghost Hunter",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Eremenko",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Christian Bruce",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Dartmouth Rose",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Fox'S Socks",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Rogue Legend",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Bobbi Rosa",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "An Laochmor",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "No Alibi",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Dark Viper",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Gardone",
+      "isNap": false
+    },
+    {
+      "time": "17:58",
+      "horse": "Rumble B",
+      "isNap": false
+    },
+    {
+      "time": "18:28",
+      "horse": "Willie Shake Hands",
+      "isNap": false
+    },
+    {
+      "time": "18:58",
+      "horse": "Deep Strato",
+      "isNap": false
+    },
+    {
+      "time": "19:28",
+      "horse": "Kicksaftersix",
+      "isNap": false
+    },
+    {
+      "time": "19:58",
+      "horse": "Pike Road",
+      "isNap": false
+    },
+    {
+      "time": "20:28",
+      "horse": "Hardy Du Seuil",
+      "isNap": false
+    },
+    {
+      "time": "20:58",
+      "horse": "Grand Scheme",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Alvesta",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Noisy Jazz",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Shadows In The Sky",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Kitesurfer",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Doc Mccoy",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Coolagh Park",
+      "isNap": false
+    }
+  ]
+}

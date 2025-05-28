@@ -1,0 +1,92 @@
+[
+  {
+    "courseName": "Carlisle",
+    "raceCardsCourseUrl": "/racecards/2025-05-19#carlisle",
+    "raceCardsCourseMeetingsUrl": "/racecards/8/carlisle/2025-05-19",
+    "going": "GOOD TO FIRM (GoingStick: 7.1) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Redcar",
+    "raceCardsCourseUrl": "/racecards/2025-05-19#redcar",
+    "raceCardsCourseMeetingsUrl": "/racecards/47/redcar/2025-05-19",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 9.3) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight course - Stands' side; Round course - Inside",
+    "races": [
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/47/redcar/2025-05-19/895914",
+        "horses": [
+          {
+            "horseName": "Deputy",
+            "horseProfileUrl": "/profile/horse/3098287/deputy/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Roscommon",
+    "raceCardsCourseUrl": "/racecards/2025-05-19#roscommon",
+    "raceCardsCourseMeetingsUrl": "/racecards/196/roscommon/2025-05-19",
+    "going": "GOOD, Good to firm in places (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-05-19#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-05-19",
+    "going": "GOOD TO FIRM (GoingStick: 7.3) (Watering) (Rail Movements: 6.20, 7.20, 7.50 & 8.20 +26yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m - Inside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-05-19#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-05-19",
+    "going": "TAPETA: STANDARD",
+    "weather": "Showers",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-05-19/894176",
+        "horses": [
+          {
+            "horseName": "Animate",
+            "horseProfileUrl": "/profile/horse/4389449/animate/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Saint-Cloud",
+    "raceCardsCourseUrl": "/racecards/2025-05-19#saint-cloud",
+    "raceCardsCourseMeetingsUrl": "/racecards/219/saint-cloud/2025-05-19",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/219/saint-cloud/2025-05-19/895881",
+        "horses": [
+          {
+            "horseName": "Mme Jourdain",
+            "horseProfileUrl": "/profile/horse/5417188/mme-jourdain/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  }
+]

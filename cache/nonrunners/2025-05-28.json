@@ -1,0 +1,212 @@
+[
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-05-28#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-05-28",
+    "going": "GOOD (GoingStick: 6.8)",
+    "weather": "Showers",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/6/beverley/2025-05-28/893957",
+        "horses": [
+          {
+            "horseName": "Sassy Glory",
+            "horseProfileUrl": "/profile/horse/5176441/sassy-glory/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cartmel",
+    "raceCardsCourseUrl": "/racecards/2025-05-28#cartmel",
+    "raceCardsCourseMeetingsUrl": "/racecards/9/cartmel/2025-05-28",
+    "going": "GOOD TO SOFT, Soft in places (GoingStick: 6.2)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/9/cartmel/2025-05-28/894148",
+        "horses": [
+          {
+            "horseName": "Jysuis",
+            "horseProfileUrl": "/profile/horse/5608569/jysuis/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:10",
+        "raceCardUrl": "/racecards/9/cartmel/2025-05-28/894150",
+        "horses": [
+          {
+            "horseName": "Fairland",
+            "horseProfileUrl": "/profile/horse/4348693/fairland/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:10",
+        "raceCardUrl": "/racecards/9/cartmel/2025-05-28/896696",
+        "horses": [
+          {
+            "horseName": "Dalyotin",
+            "horseProfileUrl": "/profile/horse/2601780/dalyotin/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:10",
+        "raceCardUrl": "/racecards/9/cartmel/2025-05-28/894146",
+        "horses": [
+          {
+            "horseName": "Neigh Botha",
+            "horseProfileUrl": "/profile/horse/4138512/neigh-botha/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hamilton",
+    "raceCardsCourseUrl": "/racecards/2025-05-28#hamilton",
+    "raceCardsCourseMeetingsUrl": "/racecards/22/hamilton/2025-05-28",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.9) (Rail movements: 2.30, 3.00, 4.30 & 5.03 +8yds)",
+    "weather": "Showers",
+    "stallsPosition": "1m - Inside; Remainder - Stands' side",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/22/hamilton/2025-05-28/893964",
+        "horses": [
+          {
+            "horseName": "Dakota Dawn",
+            "horseProfileUrl": "/profile/horse/7409472/dakota-dawn/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/22/hamilton/2025-05-28/893965",
+        "horses": [
+          {
+            "horseName": "Harswell Duke",
+            "horseProfileUrl": "/profile/horse/3189705/harswell-duke/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Al Mudhaffar",
+            "horseProfileUrl": "/profile/horse/5646974/al-mudhaffar/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/22/hamilton/2025-05-28/893962",
+        "horses": [
+          {
+            "horseName": "Minnie Wildes",
+            "horseProfileUrl": "/profile/horse/6296588/minnie-wildes/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/22/hamilton/2025-05-28/893961",
+        "horses": [
+          {
+            "horseName": "Tokyo Bay",
+            "horseProfileUrl": "/profile/horse/5021340/tokyo-bay/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Clansman",
+            "horseProfileUrl": "/profile/horse/3152116/clansman/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:03",
+        "raceCardUrl": "/racecards/22/hamilton/2025-05-28/893966",
+        "horses": [
+          {
+            "horseName": "Jedhi Knight",
+            "horseProfileUrl": "/profile/horse/7191399/jedhi-knight/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-05-28#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-05-28",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Showers",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "6:22",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-05-28/894211",
+        "horses": [
+          {
+            "horseName": "Kyoto",
+            "horseProfileUrl": "/profile/horse/6134853/kyoto/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newton Abbot",
+    "raceCardsCourseUrl": "/racecards/2025-05-28#newton-abbot",
+    "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-05-28",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.1) (Watering) (Rail Movements: 2.18 +42yds, 2.48 +53yds, 3.18 & 4.48 +12yds, 3.48 +18yds and 4.18 +62yds)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:48",
+        "raceCardUrl": "/racecards/39/newton-abbot/2025-05-28/894155",
+        "horses": [
+          {
+            "horseName": "Market House",
+            "horseProfileUrl": "/profile/horse/4728070/market-house/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wexford",
+    "raceCardsCourseUrl": "/racecards/2025-05-28#wexford",
+    "raceCardsCourseMeetingsUrl": "/racecards/201/wexford/2025-05-28",
+    "going": "GOOD, Good to yielding in places (Watered)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-05-28#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-05-28",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

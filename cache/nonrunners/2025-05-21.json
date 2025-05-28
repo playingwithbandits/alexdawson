@@ -1,0 +1,113 @@
+[
+  {
+    "courseName": "Ayr",
+    "raceCardsCourseUrl": "/racecards/2025-05-21#ayr",
+    "raceCardsCourseMeetingsUrl": "/racecards/3/ayr/2025-05-21",
+    "going": "GOOD TO FIRM, Good in places (Watering) (Rail movements: 3.30, 4.05, 4.42 & 5.17 +15yds)",
+    "weather": "Sunny",
+    "stallsPosition": "5f & 6f - Centre; 7f & 1m2f - Outside; 1m - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Brighton",
+    "raceCardsCourseUrl": "/racecards/2025-05-21#brighton",
+    "raceCardsCourseMeetingsUrl": "/racecards/7/brighton/2025-05-21",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.5) (Watering)",
+    "weather": "Light rain",
+    "stallsPosition": "1m - Inside; 1m4f - Outside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/7/brighton/2025-05-21/893824",
+        "horses": [
+          {
+            "horseName": "Miakoda",
+            "horseProfileUrl": "/profile/horse/5845564/miakoda/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-05-21#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-05-21",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.2) (Watering)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Gowran Park",
+    "raceCardsCourseUrl": "/racecards/2025-05-21#gowran-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/184/gowran-park/2025-05-21",
+    "going": "GOOD (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:50",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-05-21/895848",
+        "horses": [
+          {
+            "horseName": "Sub Rosa",
+            "horseProfileUrl": "/profile/horse/4618302/sub-rosa/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-05-21#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-05-21",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Light rain",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "6:10",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-05-21/894188",
+        "horses": [
+          {
+            "horseName": "Bintshuaa",
+            "horseProfileUrl": "/profile/horse/6265750/bintshuaa/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Warwick",
+    "raceCardsCourseUrl": "/racecards/2025-05-21#warwick",
+    "raceCardsCourseMeetingsUrl": "/racecards/85/warwick/2025-05-21",
+    "going": "GOOD (GoingStick: 6.3) (Watering) (Rail Movements: 3.40 +88yds and 4.50 +70yds) (Inner Hurdle track)",
+    "weather": "Scattered showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/85/warwick/2025-05-21/894090",
+        "horses": [
+          {
+            "horseName": "Dreams Fled Away",
+            "horseProfileUrl": "/profile/horse/4107663/dreams-fled-away/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-05-21#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-05-21",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

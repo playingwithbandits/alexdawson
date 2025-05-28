@@ -1,0 +1,190 @@
+{
+  "date": "2025-05-15",
+  "tips": [
+    {
+      "time": "13:55",
+      "horse": "First Company",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Media Mogul",
+      "isNap": true
+    },
+    {
+      "time": "14:58",
+      "horse": "Charlie Boyo",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Jagetme",
+      "isNap": false
+    },
+    {
+      "time": "16:03",
+      "horse": "Gladius",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Cloaks Of Gold",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Shagraan",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Blue For You",
+      "isNap": false
+    },
+    {
+      "time": "15:13",
+      "horse": "See The Fire",
+      "isNap": true
+    },
+    {
+      "time": "15:45",
+      "horse": "The Lion In Winter",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Tadej",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Merchant",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "The Last Cloud",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Peejaybee",
+      "isNap": false
+    },
+    {
+      "time": "15:21",
+      "horse": "Wasdell Dundalk",
+      "isNap": false
+    },
+    {
+      "time": "15:53",
+      "horse": "Bel Amigo",
+      "isNap": false
+    },
+    {
+      "time": "16:27",
+      "horse": "Stumps Or Slips",
+      "isNap": false
+    },
+    {
+      "time": "17:02",
+      "horse": "Zhanma Enki",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Cafe Con Leche",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Trasna Na Pairce",
+      "isNap": false
+    },
+    {
+      "time": "18:18",
+      "horse": "Bite That",
+      "isNap": false
+    },
+    {
+      "time": "18:48",
+      "horse": "Duke Otto",
+      "isNap": false
+    },
+    {
+      "time": "19:18",
+      "horse": "Belle The Tigress",
+      "isNap": false
+    },
+    {
+      "time": "19:48",
+      "horse": "Glenashling",
+      "isNap": false
+    },
+    {
+      "time": "20:18",
+      "horse": "Mustang Mozzie",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "She Is For Me Boys",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Mount Olympus",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Rock On Rita",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Golden Ambition",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Fox Wallace",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Hard Stare",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Afloat",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Belgravian",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Chilli Salt",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Warrnambool",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Gaiety Musical",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Moel Arthur",
+      "isNap": false
+    }
+  ]
+}

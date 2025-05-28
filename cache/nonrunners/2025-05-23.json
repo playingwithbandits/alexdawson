@@ -1,0 +1,349 @@
+[
+  {
+    "courseName": "Bath",
+    "raceCardsCourseUrl": "/racecards/2025-05-23#bath",
+    "raceCardsCourseMeetingsUrl": "/racecards/5/bath/2025-05-23",
+    "going": "FIRM (Good to firm in places; 8.0)",
+    "weather": "Sunny intervals",
+    "stallsPosition": "Sprints - Centre; 1m - Inside; 1m2f - Outside",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/5/bath/2025-05-23/893862",
+        "horses": [
+          {
+            "horseName": "Miss Ayala",
+            "horseProfileUrl": "/profile/horse/7520211/miss-ayala/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/5/bath/2025-05-23/893858",
+        "horses": [
+          {
+            "horseName": "Autumn Angel",
+            "horseProfileUrl": "/profile/horse/3701261/autumn-angel/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:25",
+        "raceCardUrl": "/racecards/5/bath/2025-05-23/893860",
+        "horses": [
+          {
+            "horseName": "Over Spiced",
+            "horseProfileUrl": "/profile/horse/5837057/over-spiced/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Lady Dorchester",
+            "horseProfileUrl": "/profile/horse/5708978/lady-dorchester/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Piranha Rama",
+            "horseProfileUrl": "/profile/horse/5845536/piranha-rama/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/5/bath/2025-05-23/893861",
+        "horses": [
+          {
+            "horseName": "Bintnouf",
+            "horseProfileUrl": "/profile/horse/7457905/bintnouf/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:35",
+        "raceCardUrl": "/racecards/5/bath/2025-05-23/893863",
+        "horses": [
+          {
+            "horseName": "Night Bear",
+            "horseProfileUrl": "/profile/horse/2914648/night-bear/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/5/bath/2025-05-23/893864",
+        "horses": [
+          {
+            "horseName": "Eye Of The Water",
+            "horseProfileUrl": "/profile/horse/1956418/eye-of-the-water/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Curragh",
+    "raceCardsCourseUrl": "/racecards/2025-05-23#curragh",
+    "raceCardsCourseMeetingsUrl": "/racecards/178/curragh/2025-05-23",
+    "going": "GOOD, Good to firm in places (Watering) (Racing on Stands' side)",
+    "weather": "Rain",
+    "stallsPosition": "Sprints - Centre",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/178/curragh/2025-05-23/895972",
+        "horses": [
+          {
+            "horseName": "Saturn Seven",
+            "horseProfileUrl": "/profile/horse/5019597/saturn-seven/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:20",
+        "raceCardUrl": "/racecards/178/curragh/2025-05-23/895973",
+        "horses": [
+          {
+            "horseName": "Among The Pines",
+            "horseProfileUrl": "/profile/horse/7457872/among-the-pines/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:55",
+        "raceCardUrl": "/racecards/178/curragh/2025-05-23/895974",
+        "horses": [
+          {
+            "horseName": "Dawn Spirit",
+            "horseProfileUrl": "/profile/horse/6604808/dawn-spirit/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:25",
+        "raceCardUrl": "/racecards/178/curragh/2025-05-23/895975",
+        "horses": [
+          {
+            "horseName": "Erosandpsyche",
+            "horseProfileUrl": "/profile/horse/3332122/erosandpsyche/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:25",
+        "raceCardUrl": "/racecards/178/curragh/2025-05-23/895977",
+        "horses": [
+          {
+            "horseName": "Dark Viper",
+            "horseProfileUrl": "/profile/horse/4839353/dark-viper/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Bucaneer's Spirit",
+            "horseProfileUrl": "/profile/horse/5426828/bucaneers-spirit/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Downpatrick",
+    "raceCardsCourseUrl": "/racecards/2025-05-23#downpatrick",
+    "raceCardsCourseMeetingsUrl": "/racecards/179/downpatrick/2025-05-23",
+    "going": "GOOD (Selective watering)",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-05-23/895964",
+        "horses": [
+          {
+            "horseName": "Slea Head",
+            "horseProfileUrl": "/profile/horse/7365372/slea-head/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Rynok Square",
+            "horseProfileUrl": "/profile/horse/7499462/rynok-square/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:37",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-05-23/895967",
+        "horses": [
+          {
+            "horseName": "Speranza Wilde",
+            "horseProfileUrl": "/profile/horse/4725800/speranza-wilde/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:07",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-05-23/895970",
+        "horses": [
+          {
+            "horseName": "Land The Plane",
+            "horseProfileUrl": "/profile/horse/7200349/land-the-plane/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Found Beau",
+            "horseProfileUrl": "/profile/horse/7148041/found-beau/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-05-23#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-05-23",
+    "going": "GOOD (Watered; 7.0)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f, 6f, 7f, & 1m - Centre; 1m4f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/21/goodwood/2025-05-23/893876",
+        "horses": [
+          {
+            "horseName": "Sovereign Spell",
+            "horseProfileUrl": "/profile/horse/7488307/sovereign-spell/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/21/goodwood/2025-05-23/893877",
+        "horses": [
+          {
+            "horseName": "Sea Founder",
+            "horseProfileUrl": "/profile/horse/6161662/sea-founder/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-05-23#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-05-23",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.5) (Watered) (Rail Movements: 1.50 & 5.17 +28yds and 3.35, 4.10 & 4.45 +6yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "6f & 1m2f  - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-23/893848",
+        "horses": [
+          {
+            "horseName": "Blues And Royals",
+            "horseProfileUrl": "/profile/horse/7578905/blues-and-royals/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-23/893851",
+        "horses": [
+          {
+            "horseName": "Yehudi",
+            "horseProfileUrl": "/profile/horse/5951753/yehudi/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-05-23#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-05-23",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 8.3) (Rail Movements: 7.17, 7.47 & 8.47 +2yds) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "7:17",
+        "raceCardUrl": "/racecards/46/pontefract/2025-05-23/893868",
+        "horses": [
+          {
+            "horseName": "King's Hand",
+            "horseProfileUrl": "/profile/horse/6296575/kings-hand/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:47",
+        "raceCardUrl": "/racecards/46/pontefract/2025-05-23/893867",
+        "horses": [
+          {
+            "horseName": "Milteye",
+            "horseProfileUrl": "/profile/horse/4662594/milteye/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Worcester",
+    "raceCardsCourseUrl": "/racecards/2025-05-23#worcester",
+    "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-05-23",
+    "going": "GOOD (GoingStick: 7.3) (Watering) (Rail Movements: 4.48, 7.32, 8.02 & 8.32 +114yds and 5.23, 5.57, 6.32 & 7.02 +189yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:02",
+        "raceCardUrl": "/racecards/101/worcester/2025-05-23/894101",
+        "horses": [
+          {
+            "horseName": "Our Pink Lady",
+            "horseProfileUrl": "/profile/horse/4361106/our-pink-lady/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Chabadatika",
+            "horseProfileUrl": "/profile/horse/4624500/chabadatika/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Dontworrywegotthis",
+            "horseProfileUrl": "/profile/horse/5884490/dontworrywegotthis/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:32",
+        "raceCardUrl": "/racecards/101/worcester/2025-05-23/894099",
+        "horses": [
+          {
+            "horseName": "Squire Danagher",
+            "horseProfileUrl": "/profile/horse/4528295/squire-danagher/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  }
+]

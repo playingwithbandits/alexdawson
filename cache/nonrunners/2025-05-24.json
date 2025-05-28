@@ -1,0 +1,128 @@
+[
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-05-24",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.3) (Watered)",
+    "weather": "Showers",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/6/beverley/2025-05-24/893887",
+        "horses": [
+          {
+            "horseName": "Daring Legend",
+            "horseProfileUrl": "/profile/horse/5021302/daring-legend/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cartmel",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#cartmel",
+    "raceCardsCourseMeetingsUrl": "/racecards/9/cartmel/2025-05-24",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.0) (Watering)",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-05-24",
+    "going": "GOOD TO FIRM (GoingStick: 8.5) (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Curragh",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#curragh",
+    "raceCardsCourseMeetingsUrl": "/racecards/178/curragh/2025-05-24",
+    "going": "GOOD, Good to firm in places (Watering) (Racing on Stands' side)",
+    "weather": "Rain",
+    "stallsPosition": "Sprints - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-05-24",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.0) (Watering) (Rail Movements: 1.30 +5yds and 2.05, 3.15, 3.45 & 4.20 +3yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "5f, 6f & 7f - Centre; 1m2f & 1m6f - Inside; 1m3f - Outside",
+    "races": []
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-05-24",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.8) (Outer track) (Rail Movements: 4.40 +28yds)",
+    "weather": "Showers",
+    "stallsPosition": "5f, 6f & 1m2f - Centre; 1m & 2m - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Salisbury",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#salisbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/52/salisbury/2025-05-24",
+    "going": "GOOD TO FIRM (GoingStick 8.5) (Watered)",
+    "weather": "Cloudy",
+    "stallsPosition": "5f, 6f, 7f & 1m - Far side; 1m2f - Inside",
+    "races": [
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/52/salisbury/2025-05-24/893901",
+        "horses": [
+          {
+            "horseName": "Button It",
+            "horseProfileUrl": "/profile/horse/7431636/button-it/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-05-24",
+    "going": "GOOD TO FIRM (GoingStick: 7.1) (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "5f, 6f & 1m3f - Centre; 1m - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Bordeaux Le Bouscat",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#bordeaux-le-bouscat",
+    "raceCardsCourseMeetingsUrl": "/racecards/519/bordeaux-le-bouscat/2025-05-24",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Doomben",
+    "raceCardsCourseUrl": "/racecards/2025-05-24#doomben",
+    "raceCardsCourseMeetingsUrl": "/racecards/467/doomben/2025-05-24",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:57",
+        "raceCardUrl": "/racecards/467/doomben/2025-05-24/896528",
+        "horses": [
+          {
+            "horseName": "Floating",
+            "horseProfileUrl": "/profile/horse/4150409/floating/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  }
+]

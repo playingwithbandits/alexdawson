@@ -1,0 +1,311 @@
+{
+  "date": "2025-05-23",
+  "tips": [
+    {
+      "time": "13:50",
+      "horse": "Highwaygrey",
+      "tipster": "Chris Connolly",
+      "score": "124.5"
+    },
+    {
+      "time": "15:50",
+      "horse": "Silver Knott",
+      "tipster": "Glendale",
+      "score": "67.5"
+    },
+    {
+      "time": "19:25",
+      "horse": "I Am Superman",
+      "tipster": "Fortunatus",
+      "score": "64.5"
+    },
+    {
+      "time": "14:50",
+      "horse": "Savalas",
+      "tipster": "The Judge",
+      "score": "35.7"
+    },
+    {
+      "time": "15:15",
+      "horse": "Santorini Star",
+      "tipster": "Templegate",
+      "score": "33.3"
+    },
+    {
+      "time": "14:40",
+      "horse": "Mr Hampstead",
+      "tipster": "On The Nose",
+      "score": "31.6"
+    },
+    {
+      "time": "19:25",
+      "horse": "Keke",
+      "tipster": "Ratings Hub",
+      "score": "30.3"
+    },
+    {
+      "time": "20:02",
+      "horse": "High Fibre",
+      "tipster": "Lee Sobot",
+      "score": "28.9"
+    },
+    {
+      "time": "15:50",
+      "horse": "Liberty Lane",
+      "tipster": "Farringdon",
+      "score": "26.0"
+    },
+    {
+      "time": "15:50",
+      "horse": "Silver Knott",
+      "tipster": "Ben Morgan",
+      "score": "21.1"
+    },
+    {
+      "time": "18:32",
+      "horse": "Jomig Des Bois",
+      "tipster": "The North",
+      "score": "20.9"
+    },
+    {
+      "time": "15:15",
+      "horse": "Beset",
+      "tipster": "Garry Owen",
+      "score": "11.2"
+    },
+    {
+      "time": "15:15",
+      "horse": "Santorini Star",
+      "tipster": "RP Ratings",
+      "score": "8.8"
+    },
+    {
+      "time": "15:15",
+      "horse": "Bas Bleu",
+      "tipster": "Lambourn",
+      "score": "7.4"
+    },
+    {
+      "time": "17:17",
+      "horse": "Carlyle Square",
+      "tipster": "Marlborough",
+      "score": "5.8"
+    },
+    {
+      "time": "14:25",
+      "horse": "Fitzella",
+      "tipster": "Mercury",
+      "score": "4.5"
+    },
+    {
+      "time": "17:30",
+      "horse": "Rocking Ends",
+      "tipster": "Postdata",
+      "score": "3.8"
+    },
+    {
+      "time": "15:00",
+      "horse": "Maw Lam",
+      "tipster": "Dean Kilbryde",
+      "score": "3.4"
+    },
+    {
+      "time": "19:17",
+      "horse": "Cangofar",
+      "tipster": "Matt Polley",
+      "score": "3.2"
+    },
+    {
+      "time": "15:50",
+      "horse": "Liberty Lane",
+      "tipster": "Tipman Tips",
+      "score": "1.4"
+    },
+    {
+      "time": "18:47",
+      "horse": "Farough",
+      "tipster": "The Brigadier",
+      "score": "0.9"
+    },
+    {
+      "time": "16:55",
+      "horse": "Arctic Grey",
+      "tipster": "Rockavon",
+      "score": "-2.6"
+    },
+    {
+      "time": "20:02",
+      "horse": "High Fibre",
+      "tipster": "West Country",
+      "score": "-5.9"
+    },
+    {
+      "time": "20:02",
+      "horse": "High Fibre",
+      "tipster": "Computeform",
+      "score": "-8.0"
+    },
+    {
+      "time": "15:50",
+      "horse": "Silver Knott",
+      "tipster": "Jon Freeman",
+      "score": "-11.2"
+    },
+    {
+      "time": "20:32",
+      "horse": "Battle Of Omdurman",
+      "tipster": "Melissa Jones",
+      "score": "-17.0"
+    },
+    {
+      "time": "17:17",
+      "horse": "Carlyle Square",
+      "tipster": "Luke Tucker",
+      "score": "-18.0"
+    },
+    {
+      "time": "16:35",
+      "horse": "Trojan Truth",
+      "tipster": "Moorestyle",
+      "score": "-25.0"
+    },
+    {
+      "time": "15:25",
+      "horse": "Cindy Lou Who",
+      "tipster": "Rory Delargy",
+      "score": "-26.0"
+    },
+    {
+      "time": "14:05",
+      "horse": "Alvin",
+      "tipster": "Newmarket",
+      "score": "-27.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Manxman",
+      "tipster": "Karl Hedley",
+      "score": "-29.8"
+    },
+    {
+      "time": "16:55",
+      "horse": "Fort George",
+      "tipster": "The Score",
+      "score": "-35.2"
+    },
+    {
+      "time": "15:50",
+      "horse": "Liberty Lane",
+      "tipster": "Newsboy",
+      "score": "-34.1"
+    },
+    {
+      "time": "16:48",
+      "horse": "Barranco",
+      "tipster": "Robin Goodfellow",
+      "score": "-37.0"
+    },
+    {
+      "time": "15:00",
+      "horse": "Unequal Love",
+      "tipster": "The Punt",
+      "score": "-41.5"
+    },
+    {
+      "time": "20:07",
+      "horse": "Noble Name",
+      "tipster": "Brian Flanagan",
+      "score": "-41.3"
+    },
+    {
+      "time": "19:02",
+      "horse": "Manala",
+      "tipster": "Jason Heavey",
+      "score": "-43.2"
+    },
+    {
+      "time": "15:00",
+      "horse": "Frost At Dawn",
+      "tipster": "Ross Shepherd",
+      "score": "-45.4"
+    },
+    {
+      "time": "14:40",
+      "horse": "Trooper Bisdee",
+      "tipster": "Whistler",
+      "score": "-45.8"
+    },
+    {
+      "time": "14:40",
+      "horse": "Mr Hampstead",
+      "tipster": "Spotlight",
+      "score": "-48.0"
+    },
+    {
+      "time": "20:02",
+      "horse": "High Fibre",
+      "tipster": "Jeffrey Ross",
+      "score": "-48.9"
+    },
+    {
+      "time": "15:00",
+      "horse": "Brazilian Rose",
+      "tipster": "Chris Wright",
+      "score": "-54.3"
+    },
+    {
+      "time": "20:17",
+      "horse": "Kodi's Queen",
+      "tipster": "Steve Mullington",
+      "score": "-63.7"
+    },
+    {
+      "time": "14:40",
+      "horse": "Mr Hampstead",
+      "tipster": "The Duke",
+      "score": "-61.7"
+    },
+    {
+      "time": "19:47",
+      "horse": "Made All",
+      "tipster": "Rob Wright",
+      "score": "-65.9"
+    },
+    {
+      "time": "19:25",
+      "horse": "Collective Power",
+      "tipster": "Ian Gaughran",
+      "score": "-66.4"
+    },
+    {
+      "time": "19:47",
+      "horse": "Made All",
+      "tipster": "Andrew Mount",
+      "score": "-73.0"
+    },
+    {
+      "time": "15:00",
+      "horse": "Unequal Love",
+      "tipster": "Sam Hardy",
+      "score": "-73.2"
+    },
+    {
+      "time": "15:00",
+      "horse": "Prime Art",
+      "tipster": "Jim Delahunt",
+      "score": "-82.0"
+    },
+    {
+      "time": "16:35",
+      "horse": "Galactic Glow",
+      "tipster": "Rory Paddock",
+      "score": "-82.7"
+    },
+    {
+      "time": "17:10",
+      "horse": "Glitter And Glory",
+      "tipster": "Adrian Wall",
+      "score": "-88.0"
+    }
+  ]
+}
