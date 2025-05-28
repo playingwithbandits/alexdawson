@@ -1,0 +1,30 @@
+{
+  "date": "2025-05-28",
+  "tips": [
+    {
+      "horseName": "Stella Hogan",
+      "time": "17:18",
+      "rating": 72.8
+    },
+    {
+      "horseName": "Critical Aclaim",
+      "time": "19:22",
+      "rating": 73.2
+    },
+    {
+      "horseName": "Kinetic",
+      "time": "19:52",
+      "rating": 73.9
+    },
+    {
+      "horseName": "Haku",
+      "time": "20:22",
+      "rating": 73.2
+    },
+    {
+      "horseName": "Orchestra (IRE)",
+      "time": "20:52",
+      "rating": 74.8
+    }
+  ]
+}

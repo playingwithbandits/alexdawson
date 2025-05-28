@@ -3,7 +3,7 @@
     "courseName": "Beverley",
     "raceCardsCourseUrl": "/racecards/2025-05-28#beverley",
     "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-05-28",
-    "going": "GOOD (GoingStick: 6.8)",
+    "going": "GOOD (GoingStick: 6.9)",
     "weather": "Showers",
     "stallsPosition": "Inside",
     "races": [
@@ -17,6 +17,17 @@
             "raceNumber": "(11)"
           }
         ]
+      },
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/6/beverley/2025-05-28/893959",
+        "horses": [
+          {
+            "horseName": "Golden Rainbow",
+            "horseProfileUrl": "/profile/horse/3521632/golden-rainbow/",
+            "raceNumber": "(1)"
+          }
+        ]
       }
     ]
   },
@@ -24,7 +35,7 @@
     "courseName": "Cartmel",
     "raceCardsCourseUrl": "/racecards/2025-05-28#cartmel",
     "raceCardsCourseMeetingsUrl": "/racecards/9/cartmel/2025-05-28",
-    "going": "GOOD TO SOFT, Soft in places (GoingStick: 6.2)",
+    "going": "GOOD TO SOFT, Soft in places (GoingStick: 6.0) (Rail movements: 5.40, 6.10 & 8.10 +48yds, 6.40, 7.10 & 7.40 +60yds and 8.40 +72yds)",
     "weather": "Showers",
     "stallsPosition": "",
     "races": [
@@ -58,6 +69,11 @@
             "horseName": "Dalyotin",
             "horseProfileUrl": "/profile/horse/2601780/dalyotin/",
             "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Vroomoz Eile",
+            "horseProfileUrl": "/profile/horse/4938762/vroomoz-eile/",
+            "raceNumber": "(8)"
           }
         ]
       },
@@ -65,6 +81,16 @@
         "raceTime": "8:10",
         "raceCardUrl": "/racecards/9/cartmel/2025-05-28/894146",
         "horses": [
+          {
+            "horseName": "Judicial Review",
+            "horseProfileUrl": "/profile/horse/4288029/judicial-review/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Ensel Du Perche",
+            "horseProfileUrl": "/profile/horse/2581125/ensel-du-perche/",
+            "raceNumber": "(8)"
+          },
           {
             "horseName": "Neigh Botha",
             "horseProfileUrl": "/profile/horse/4138512/neigh-botha/",
@@ -78,7 +104,7 @@
     "courseName": "Hamilton",
     "raceCardsCourseUrl": "/racecards/2025-05-28#hamilton",
     "raceCardsCourseMeetingsUrl": "/racecards/22/hamilton/2025-05-28",
-    "going": "GOOD, Good to soft in places (GoingStick: 7.9) (Rail movements: 2.30, 3.00, 4.30 & 5.03 +8yds)",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.6) (Rail movements: 2.30, 3.00, 4.30 & 5.03 +8yds)",
     "weather": "Showers",
     "stallsPosition": "1m - Inside; Remainder - Stands' side",
     "races": [
@@ -167,6 +193,17 @@
             "raceNumber": "(6)"
           }
         ]
+      },
+      {
+        "raceTime": "8:22",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-05-28/894208",
+        "horses": [
+          {
+            "horseName": "Federated",
+            "horseProfileUrl": "/profile/horse/4982050/federated/",
+            "raceNumber": "(12)"
+          }
+        ]
       }
     ]
   },
@@ -174,7 +211,7 @@
     "courseName": "Newton Abbot",
     "raceCardsCourseUrl": "/racecards/2025-05-28#newton-abbot",
     "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-05-28",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.1) (Watering) (Rail Movements: 2.18 +42yds, 2.48 +53yds, 3.18 & 4.48 +12yds, 3.48 +18yds and 4.18 +62yds)",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.0) (Watered) (Rail Movements: 2.18 +42yds, 2.48 +53yds, 3.18 & 4.48 +12yds, 3.48 +18yds and 4.18 +62yds)",
     "weather": "Showers",
     "stallsPosition": "",
     "races": [
@@ -186,6 +223,16 @@
             "horseName": "Market House",
             "horseProfileUrl": "/profile/horse/4728070/market-house/",
             "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Holy Legend",
+            "horseProfileUrl": "/profile/horse/4977912/holy-legend/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Crystal Mer",
+            "horseProfileUrl": "/profile/horse/4721649/crystal-mer/",
+            "raceNumber": "(7)"
           }
         ]
       }
@@ -198,15 +245,212 @@
     "going": "GOOD, Good to yielding in places (Watered)",
     "weather": "Showers",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/201/wexford/2025-05-28/896604",
+        "horses": [
+          {
+            "horseName": "Robindevidastar",
+            "horseProfileUrl": "/profile/horse/3015471/robindevidastar/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/201/wexford/2025-05-28/896606",
+        "horses": [
+          {
+            "horseName": "Monnow Valley",
+            "horseProfileUrl": "/profile/horse/4313183/monnow-valley/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "The Derry Girl",
+            "horseProfileUrl": "/profile/horse/4201386/the-derry-girl/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Only One Plan",
+            "horseProfileUrl": "/profile/horse/4027311/only-one-plan/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/201/wexford/2025-05-28/896695",
+        "horses": [
+          {
+            "horseName": "Stormy Jenn",
+            "horseProfileUrl": "/profile/horse/3142164/stormy-jenn/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Splendid Choice",
+            "horseProfileUrl": "/profile/horse/4967870/splendid-choice/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Falcon Park",
+            "horseProfileUrl": "/profile/horse/3325895/falcon-park/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/201/wexford/2025-05-28/896609",
+        "horses": [
+          {
+            "horseName": "Royal Cave",
+            "horseProfileUrl": "/profile/horse/5009835/royal-cave/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Give Him A Chance",
+            "horseProfileUrl": "/profile/horse/5708505/give-him-a-chance/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Malton Groove",
+            "horseProfileUrl": "/profile/horse/3918344/malton-groove/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/201/wexford/2025-05-28/896610",
+        "horses": [
+          {
+            "horseName": "Anniewithan E",
+            "horseProfileUrl": "/profile/horse/7597378/anniewithan-e/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Kamikaz Du Plessis",
+            "horseProfileUrl": "/profile/horse/5689548/kamikaz-du-plessis/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Big Ned",
+            "horseProfileUrl": "/profile/horse/7272331/big-ned/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Happy Valley",
     "raceCardsCourseUrl": "/racecards/2025-05-28#happy-valley",
     "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-05-28",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "11:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-05-28/896701",
+        "horses": [
+          {
+            "horseName": "Oriental Tycoon",
+            "horseProfileUrl": "/profile/horse/4328516/oriental-tycoon/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Solar Up",
+            "horseProfileUrl": "/profile/horse/5539598/solar-up/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-05-28/896702",
+        "horses": [
+          {
+            "horseName": "Ace Talent",
+            "horseProfileUrl": "/profile/horse/4670925/ace-talent/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Vantastic Choice",
+            "horseProfileUrl": "/profile/horse/4612856/vantastic-choice/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-05-28/896703",
+        "horses": [
+          {
+            "horseName": "Bright Inheritance",
+            "horseProfileUrl": "/profile/horse/4185045/bright-inheritance/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Firefoot",
+            "horseProfileUrl": "/profile/horse/5702814/firefoot/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-05-28/896704",
+        "horses": [
+          {
+            "horseName": "All's Well",
+            "horseProfileUrl": "/profile/horse/7360501/alls-well/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Candlelight Dinner",
+            "horseProfileUrl": "/profile/horse/5708553/candlelight-dinner/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Pinjarra Scarpside",
+    "raceCardsCourseUrl": "/racecards/2025-05-28#pinjarra-scarpside",
+    "raceCardsCourseMeetingsUrl": "/racecards/1694/pinjarra-scarpside/2025-05-28",
     "going": "TURF: GOOD",
     "weather": "",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "8:52",
+        "raceCardUrl": "/racecards/1694/pinjarra-scarpside/2025-05-28/896862",
+        "horses": [
+          {
+            "horseName": "Another Chino",
+            "horseProfileUrl": "/profile/horse/5002187/another-chino/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "River Rubicon",
+            "horseProfileUrl": "/profile/horse/5393997/river-rubicon/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Western Empire",
+            "horseProfileUrl": "/profile/horse/3305760/western-empire/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Kaptain Kaos",
+            "horseProfileUrl": "/profile/horse/3947440/kaptain-kaos/",
+            "raceNumber": "(19)"
+          }
+        ]
+      }
+    ]
   }
 ]
