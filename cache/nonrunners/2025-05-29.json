@@ -1,0 +1,195 @@
+[
+  {
+    "courseName": "Carlisle",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#carlisle",
+    "raceCardsCourseMeetingsUrl": "/racecards/8/carlisle/2025-05-29",
+    "going": "GOOD TO SOFT (Rail movements: 7.50 +14yds and 8.20 & 8.50 +16yds)",
+    "weather": "Showers",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "7:20",
+        "raceCardUrl": "/racecards/8/carlisle/2025-05-29/893990",
+        "horses": [
+          {
+            "horseName": "Glorious Angel",
+            "horseProfileUrl": "/profile/horse/4076547/glorious-angel/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Fairyhouse",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#fairyhouse",
+    "raceCardsCourseMeetingsUrl": "/racecards/182/fairyhouse/2025-05-29",
+    "going": "GOOD, Good to firm in places",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Limerick",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#limerick",
+    "raceCardsCourseMeetingsUrl": "/racecards/188/limerick/2025-05-29",
+    "going": "GOOD, Good to firm in places (Watering)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-05-29",
+    "going": "POLYTRACK: STANDARD; TURF: GOOD TO FIRM, Good in places (GoingStick: 6.6) (Watering)",
+    "weather": "Showers",
+    "stallsPosition": "2m & 1m2f - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/31/lingfield-aw/2025-05-29/894216",
+        "horses": [
+          {
+            "horseName": "Born Ruler",
+            "horseProfileUrl": "/profile/horse/4001871/born-ruler/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/31/lingfield-aw/2025-05-29/894215",
+        "horses": [
+          {
+            "horseName": "Model Yuko",
+            "horseProfileUrl": "/profile/horse/6215350/model-yuko/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Treasured Angel",
+            "horseProfileUrl": "/profile/horse/7355938/treasured-angel/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/31/lingfield/2025-05-29/893968",
+        "horses": [
+          {
+            "horseName": "Sea Poetry",
+            "horseProfileUrl": "/profile/horse/6278683/sea-poetry/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Lady Of The Isles",
+            "horseProfileUrl": "/profile/horse/6552271/lady-of-the-isles/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ripon",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#ripon",
+    "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-05-29",
+    "going": "GOOD, good to soft in places (Watered) (Rail movements: 2.50, 3.50, 4.55 & 5.30 +12yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Stands side; Round - Inside; 1m4f - Centre",
+    "races": [
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/49/ripon/2025-05-29/893971",
+        "horses": [
+          {
+            "horseName": "Big Meeting",
+            "horseProfileUrl": "/profile/horse/3571531/big-meeting/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/49/ripon/2025-05-29/893974",
+        "horses": [
+          {
+            "horseName": "Golden Prosperity",
+            "horseProfileUrl": "/profile/horse/3612354/golden-prosperity/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sandown",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#sandown",
+    "raceCardsCourseMeetingsUrl": "/racecards/54/sandown/2025-05-29",
+    "going": "GOOD (GoingStick: Round 6.4, Sprint 6.7) (Watered)",
+    "weather": "Cloudy",
+    "stallsPosition": "5f - Far side; 2m - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "6:05",
+        "raceCardUrl": "/racecards/54/sandown/2025-05-29/893982",
+        "horses": [
+          {
+            "horseName": "Looks Fantastic",
+            "horseProfileUrl": "/profile/horse/6626285/looks-fantastic/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-05-29",
+    "going": "SOFT, Good to soft in places (GoingStick: 5.0)",
+    "weather": "Showers",
+    "stallsPosition": "Straight - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-05-29/893988",
+        "horses": [
+          {
+            "horseName": "Almizan",
+            "horseProfileUrl": "/profile/horse/5973428/almizan/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Baden-Baden",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#baden-baden",
+    "raceCardsCourseMeetingsUrl": "/racecards/207/baden-baden/2025-05-29",
+    "going": "TURF: SOFT (Good to soft in places)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Le Lion-D'Angers",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#le-lion-dangers",
+    "raceCardsCourseMeetingsUrl": "/racecards/313/le-lion-dangers/2025-05-29",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-05-29#lingfield-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1337/lingfield-gb/2025-05-29",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.6) (Watering)",
+    "weather": "Showers",
+    "stallsPosition": "Centre",
+    "races": []
+  }
+]

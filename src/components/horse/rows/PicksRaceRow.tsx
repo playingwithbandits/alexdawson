@@ -2153,8 +2153,8 @@ export function PicksRaceRow({
                 // }
                 highlight2={
                   hasOlbgComment &&
-                  olbgNapGood &&
-                  olbgExpertGood &&
+                  //olbgNapGood &&
+                  //olbgExpertGood &&
                   rpPredGood &&
                   aiGood &&
                   sharpRatingGood
