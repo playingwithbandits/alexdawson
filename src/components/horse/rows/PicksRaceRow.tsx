@@ -2156,8 +2156,8 @@ export function PicksRaceRow({
                   //olbgNapGood &&
                   //olbgExpertGood &&
                   rpPredGood &&
-                  aiGood &&
-                  sharpRatingGood
+                  aiGood
+                  //sharpRatingGood
                 }
                 //highlight3={countGood}
                 showOnlyBest={showOnlyBest}
