@@ -35,6 +35,22 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
+const THRESHOLD = 0.9;
+
+const goodFormCode = (code: string, runners: number) => {
+  if (runners < 5) {
+    return ["1"].includes(code);
+  }
+  if (runners < 8) {
+    return ["1", "2"].includes(code);
+  }
+  if (runners < 12) {
+    return ["1", "2", "3"].includes(code);
+  }
+
+  return ["1", "2", "3", "4"].includes(code);
+};
+
 export function PicksRaceRow({
   isTodayOrPast,
   index,
@@ -65,6 +81,22 @@ export function PicksRaceRow({
     olbgTips,
     sharpTips,
     olbgRaceInfoArr,
+  });
+
+  const has2ndPlaceLastTimeOut = race.horses.map((horse) => {
+    const formObj = horse.formObj?.form || [];
+    const lastRaceObj = formObj[0] || {};
+    const lastCode = lastRaceObj?.raceOutcomeCode || "";
+    const lastRunners = lastRaceObj?.noOfRunners || 0;
+    const lastTimeOutGood =
+      formObj?.length > 0 ? goodFormCode(lastCode, lastRunners) : null;
+
+    return {
+      name: horseNameToKey(horse.name),
+      lastCode,
+      lastRunners,
+      lastTimeOutGood,
+    };
   });
 
   const olbgTipsForRace = olbgTips?.filter((tip) => {
@@ -858,7 +890,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpSpeedRatingWeighted[x_i][1]}
-              highlight3={sharpSpeedRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpSpeedRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -966,7 +998,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpAbilityRatingWeighted[x_i][1]}
-              highlight3={sharpAbilityRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpAbilityRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1074,7 +1106,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpJockeyRatingWeighted[x_i][1]}
-              highlight3={sharpJockeyRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpJockeyRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1182,7 +1214,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpTrainerRatingWeighted[x_i][1]}
-              highlight3={sharpTrainerRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpTrainerRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1290,7 +1322,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpGoingRatingWeighted[x_i][1]}
-              highlight3={sharpGoingRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpGoingRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1398,7 +1430,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpCourseRatingWeighted[x_i][1]}
-              highlight3={sharpCourseRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpCourseRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1506,7 +1538,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpPedigreeRatingWeighted[x_i][1]}
-              highlight3={sharpPedigreeRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpPedigreeRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1614,7 +1646,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpOwnerRatingWeighted[x_i][1]}
-              highlight3={sharpOwnerRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpOwnerRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1722,7 +1754,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpTotalAverageRatingWeighted[x_i][1]}
-              highlight3={sharpTotalAverageRatingWeighted[x_i][1] >= 0.75}
+              highlight3={sharpTotalAverageRatingWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -1830,7 +1862,7 @@ export function PicksRaceRow({
               results={results}
               time={race.time}
               odds={sharpTipsWeighted[x_i][1]}
-              highlight3={sharpTipsWeighted[x_i][1] >= 0.75}
+              highlight3={sharpTipsWeighted[x_i][1] >= THRESHOLD}
               title={[
                 x.horseName + ", " + x.jockeyName + ", " + x.trainerName,
                 "\n",
@@ -2014,13 +2046,13 @@ export function PicksRaceRow({
               " : " +
               topAiPercentage +
               " : " +
-              (topAiPercentage || 100) * 0.75;
+              (topAiPercentage || 100) * THRESHOLD;
 
             const aiPerc =
               aiTopPicks?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score?.total?.percentage || 0;
             const aiPercWithin10Percent =
-              aiPerc >= (topAiPercentage || 100) * 0.75;
+              aiPerc >= (topAiPercentage || 100) * THRESHOLD;
 
             const olbgNapCount = olbgTipsWithNap
               ?.filter((x) => x.napTips >= 1)
@@ -2038,9 +2070,9 @@ export function PicksRaceRow({
               rpPredictions?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score || 0;
 
-            const countGood = count >= topScoreCount * 0.75;
+            const countGood = count >= topScoreCount * THRESHOLD;
 
-            const rpPredPercWithin10Percent = rpPredPerc >= 75;
+            const rpPredPercWithin10Percent = rpPredPerc >= THRESHOLD * 100;
 
             const olbgNapGood = olbgNapCount && olbgCommentCount;
             const aiGood = aiPercWithin10Percent;
@@ -2052,7 +2084,7 @@ export function PicksRaceRow({
             const sharpRatingGood =
               (sharpTotalAverageRatingWeighted?.find(
                 (x) => cleanName(x[0]) === cleanName(name)
-              )?.[1] || 0) >= 0.75;
+              )?.[1] || 0) >= THRESHOLD;
 
             const mentionedByTipsterArr = tipsterSiteNames?.filter(
               (x) => cleanName(x) === cleanName(name)
@@ -2060,7 +2092,16 @@ export function PicksRaceRow({
 
             const mentionedByTipster = mentionedByTipsterArr?.length > 0;
 
+            const horsehas2ndPlaceLastTimeOutObj = has2ndPlaceLastTimeOut?.find(
+              (x) => horseNameToKey(x.name) === horseNameToKey(name)
+            );
+
             const paraGraph = [
+              `${horsehas2ndPlaceLastTimeOutObj?.lastCode} | ${
+                horsehas2ndPlaceLastTimeOutObj?.lastRunners
+              } | ${
+                horsehas2ndPlaceLastTimeOutObj?.lastTimeOutGood ? "Yes" : "No"
+              }`,
               [
                 olbgNapGood && `<span style='color: #00ffff'>OLBG Nap</span>`,
                 olbgExpertGood &&
@@ -2152,12 +2193,14 @@ export function PicksRaceRow({
                 //   rpPredGood && aiGood
                 // }
                 highlight2={
-                  hasOlbgComment &&
-                  //olbgNapGood &&
-                  //olbgExpertGood &&
+                  countGood &&
+                  //hasOlbgComment &&
+                  // //olbgNapGood &&
+                  // //olbgExpertGood &&
                   rpPredGood &&
-                  aiGood
-                  //sharpRatingGood
+                  aiGood &&
+                  //Boolean(horsehas2ndPlaceLastTimeOutObj?.lastTimeOutGood)
+                  sharpRatingGood
                 }
                 //highlight3={countGood}
                 showOnlyBest={showOnlyBest}

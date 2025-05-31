@@ -1,0 +1,480 @@
+[
+  {
+    "courseName": "Brighton",
+    "raceCardsCourseUrl": "/racecards/2025-05-30#brighton",
+    "raceCardsCourseMeetingsUrl": "/racecards/7/brighton/2025-05-30",
+    "going": "GOOD",
+    "weather": "Sunny intervals",
+    "stallsPosition": "1m2f & 1m4f - Outside; 1m - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/7/brighton/2025-05-30/894008",
+        "horses": [
+          {
+            "horseName": "Dark Sorceress",
+            "horseProfileUrl": "/profile/horse/5968897/dark-sorceress/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/7/brighton/2025-05-30/894002",
+        "horses": [
+          {
+            "horseName": "Ectocross",
+            "horseProfileUrl": "/profile/horse/4580182/ectocross/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Carlisle",
+    "raceCardsCourseUrl": "/racecards/2025-05-30#carlisle",
+    "raceCardsCourseMeetingsUrl": "/racecards/8/carlisle/2025-05-30",
+    "going": "GOOD TO SOFT (Soft in places; 5.4)",
+    "weather": "Overcast dry",
+    "stallsPosition": "1m3f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/8/carlisle/2025-05-30/893995",
+        "horses": [
+          {
+            "horseName": "Hellcat",
+            "horseProfileUrl": "/profile/horse/7436653/hellcat/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/8/carlisle/2025-05-30/894000",
+        "horses": [
+          {
+            "horseName": "Lady Celia",
+            "horseProfileUrl": "/profile/horse/2713047/lady-celia/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/8/carlisle/2025-05-30/893998",
+        "horses": [
+          {
+            "horseName": "Dibble Dabble",
+            "horseProfileUrl": "/profile/horse/5226918/dibble-dabble/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Educate",
+            "horseProfileUrl": "/profile/horse/5476933/educate/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/8/carlisle/2025-05-30/893999",
+        "horses": [
+          {
+            "horseName": "Braes Of Doune",
+            "horseProfileUrl": "/profile/horse/3668349/braes-of-doune/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Saisons d'Or",
+            "horseProfileUrl": "/profile/horse/1547597/saisons-dor/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Bowman",
+            "horseProfileUrl": "/profile/horse/3096167/bowman/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/8/carlisle/2025-05-30/896863",
+        "horses": [
+          {
+            "horseName": "Drafted",
+            "horseProfileUrl": "/profile/horse/4273975/drafted/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-05-30#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-05-30",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 7.8) (Rail Movements: 6.53, 8.03 & 8.38 +12yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "8:38",
+        "raceCardUrl": "/racecards/10/catterick/2025-05-30/894011",
+        "horses": [
+          {
+            "horseName": "Starsong",
+            "horseProfileUrl": "/profile/horse/3705544/starsong/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-05-30#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-05-30",
+    "going": "GOOD (Good to soft in places; 6.8)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "2:55",
+        "raceCardUrl": "/racecards/12/chepstow/2025-05-30/894017",
+        "horses": [
+          {
+            "horseName": "Team Player",
+            "horseProfileUrl": "/profile/horse/7570751/team-player/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Flame Dancer",
+            "horseProfileUrl": "/profile/horse/7609894/flame-dancer/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:25",
+        "raceCardUrl": "/racecards/12/chepstow/2025-05-30/894016",
+        "horses": [
+          {
+            "horseName": "The Coffee Pod",
+            "horseProfileUrl": "/profile/horse/5216541/the-coffee-pod/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/12/chepstow/2025-05-30/894021",
+        "horses": [
+          {
+            "horseName": "Jack Andrea",
+            "horseProfileUrl": "/profile/horse/6032320/jack-andrea/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/12/chepstow/2025-05-30/894018",
+        "horses": [
+          {
+            "horseName": "Zouligan",
+            "horseProfileUrl": "/profile/horse/7547281/zouligan/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/12/chepstow/2025-05-30/894019",
+        "horses": [
+          {
+            "horseName": "Roach Power",
+            "horseProfileUrl": "/profile/horse/3638598/roach-power/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Create",
+            "horseProfileUrl": "/profile/horse/4350742/create/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Down Royal",
+    "raceCardsCourseUrl": "/racecards/2025-05-30#down-royal",
+    "raceCardsCourseMeetingsUrl": "/racecards/180/down-royal/2025-05-30",
+    "going": "GOOD",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/180/down-royal/2025-05-30/896722",
+        "horses": [
+          {
+            "horseName": "Angelight",
+            "horseProfileUrl": "/profile/horse/6139099/angelight/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:58",
+        "raceCardUrl": "/racecards/180/down-royal/2025-05-30/896723",
+        "horses": [
+          {
+            "horseName": "Gegenpressing",
+            "horseProfileUrl": "/profile/horse/3423095/gegenpressing/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Loingseoir",
+            "horseProfileUrl": "/profile/horse/2885156/loingseoir/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Distillate",
+            "horseProfileUrl": "/profile/horse/4299525/distillate/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:33",
+        "raceCardUrl": "/racecards/180/down-royal/2025-05-30/896724",
+        "horses": [
+          {
+            "horseName": "Ms Olivia",
+            "horseProfileUrl": "/profile/horse/6087971/ms-olivia/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Kilgharrahs Love",
+            "horseProfileUrl": "/profile/horse/6256641/kilgharrahs-love/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Esque Elegance",
+            "horseProfileUrl": "/profile/horse/6256639/esque-elegance/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:08",
+        "raceCardUrl": "/racecards/180/down-royal/2025-05-30/896725",
+        "horses": [
+          {
+            "horseName": "Cristal Clere",
+            "horseProfileUrl": "/profile/horse/2951965/cristal-clere/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:43",
+        "raceCardUrl": "/racecards/180/down-royal/2025-05-30/896726",
+        "horses": [
+          {
+            "horseName": "Among The Pines",
+            "horseProfileUrl": "/profile/horse/7457872/among-the-pines/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Diesel Deans",
+            "horseProfileUrl": "/profile/horse/7339093/diesel-deans/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Rosemount",
+            "horseProfileUrl": "/profile/horse/6635762/rosemount/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:18",
+        "raceCardUrl": "/racecards/180/down-royal/2025-05-30/896727",
+        "horses": [
+          {
+            "horseName": "Diva Time",
+            "horseProfileUrl": "/profile/horse/6692967/diva-time/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-05-30#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-05-30",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.7) (Rail movements: 5.30, 6.05 & 8.25 +18yds, 6.40, 7.15 & 7.50 +6yds) (Outer track)",
+    "weather": "Scattered showers",
+    "stallsPosition": "7f & 1m - Inside; 1m4f - Outside",
+    "races": [
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-30/894025",
+        "horses": [
+          {
+            "horseName": "Warning Sign",
+            "horseProfileUrl": "/profile/horse/4265157/warning-sign/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Tokyo Bay",
+            "horseProfileUrl": "/profile/horse/5021340/tokyo-bay/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:40",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-30/894023",
+        "horses": [
+          {
+            "horseName": "On The Inlet",
+            "horseProfileUrl": "/profile/horse/7605832/on-the-inlet/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Deported",
+            "horseProfileUrl": "/profile/horse/7592663/deported/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Dodge City",
+            "horseProfileUrl": "/profile/horse/7520199/dodge-city/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:50",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-30/894027",
+        "horses": [
+          {
+            "horseName": "Mischief Rule",
+            "horseProfileUrl": "/profile/horse/7609899/mischief-rule/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Stratford",
+    "raceCardsCourseUrl": "/racecards/2025-05-30#stratford",
+    "raceCardsCourseMeetingsUrl": "/racecards/67/stratford/2025-05-30",
+    "going": "GOOD (GoingStick: 5.9) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/67/stratford/2025-05-30/894158",
+        "horses": [
+          {
+            "horseName": "Hung Jury",
+            "horseProfileUrl": "/profile/horse/3272366/hung-jury/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:10",
+        "raceCardUrl": "/racecards/67/stratford/2025-05-30/894160",
+        "horses": [
+          {
+            "horseName": "Go On Chez",
+            "horseProfileUrl": "/profile/horse/3232318/go-on-chez/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tramore",
+    "raceCardsCourseUrl": "/racecards/2025-05-30#tramore",
+    "raceCardsCourseMeetingsUrl": "/racecards/200/tramore/2025-05-30",
+    "going": "GOOD, Good to yielding in places (Selective watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/200/tramore/2025-05-30/896717",
+        "horses": [
+          {
+            "horseName": "Two Become One",
+            "horseProfileUrl": "/profile/horse/4963750/two-become-one/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:20",
+        "raceCardUrl": "/racecards/200/tramore/2025-05-30/896718",
+        "horses": [
+          {
+            "horseName": "Bob The Builder",
+            "horseProfileUrl": "/profile/horse/3654142/bob-the-builder/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Bite That",
+            "horseProfileUrl": "/profile/horse/3481837/bite-that/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Tea It Is",
+            "horseProfileUrl": "/profile/horse/4334964/tea-it-is/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Mother Ship",
+            "horseProfileUrl": "/profile/horse/5751512/mother-ship/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:55",
+        "raceCardUrl": "/racecards/200/tramore/2025-05-30/896719",
+        "horses": [
+          {
+            "horseName": "Pidoyne",
+            "horseProfileUrl": "/profile/horse/3490622/pidoyne/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Newtown Rambler",
+            "horseProfileUrl": "/profile/horse/5864649/newtown-rambler/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/200/tramore/2025-05-30/896720",
+        "horses": [
+          {
+            "horseName": "Maybe Someday",
+            "horseProfileUrl": "/profile/horse/7613478/maybe-someday/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  }
+]

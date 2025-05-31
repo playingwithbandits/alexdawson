@@ -1,0 +1,260 @@
+{
+  "date": "2025-05-30",
+  "tips": [
+    {
+      "time": "13:45",
+      "horse": "Reel Her In",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Bravo Hotel",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Happier",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Promise Time",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Educate",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Golden Goose",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Spirit Of Bowland",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Curtiz",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Pomme Pomme",
+      "isNap": true
+    },
+    {
+      "time": "15:25",
+      "horse": "So Smart",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Paragon",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "El Matador",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Marchetti",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Woodhay Whisper",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Corniche Girl",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Time Patrol",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Voix De Bocelli",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Shady Bay",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Havana Mojito",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Port Hedland",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Tomarlo",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Vanderbilt House",
+      "isNap": false
+    },
+    {
+      "time": "17:58",
+      "horse": "Dynamic Force",
+      "isNap": false
+    },
+    {
+      "time": "18:33",
+      "horse": "Remember The Bear",
+      "isNap": false
+    },
+    {
+      "time": "19:08",
+      "horse": "Goodie Two Shoes",
+      "isNap": false
+    },
+    {
+      "time": "19:43",
+      "horse": "Seo Linn",
+      "isNap": false
+    },
+    {
+      "time": "20:18",
+      "horse": "Broadstone",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Roxboro River",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Serienmond",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Clarens",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Sip Sip Hooray",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Bite That",
+      "isNap": false
+    },
+    {
+      "time": "19:55",
+      "horse": "Bowensonfire",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Love Me Tender",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Ribble River",
+      "isNap": false
+    },
+    {
+      "time": "18:05",
+      "horse": "Pole Star",
+      "isNap": true
+    },
+    {
+      "time": "18:40",
+      "horse": "Brotherhood Of Man",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Jarham",
+      "isNap": false
+    },
+    {
+      "time": "20:25",
+      "horse": "Crackergee",
+      "isNap": false
+    },
+    {
+      "time": "17:43",
+      "horse": "Homestrait",
+      "isNap": false
+    },
+    {
+      "time": "18:18",
+      "horse": "Cheerleader",
+      "isNap": false
+    },
+    {
+      "time": "18:53",
+      "horse": "Star Legend",
+      "isNap": false
+    },
+    {
+      "time": "19:28",
+      "horse": "Albegone",
+      "isNap": false
+    },
+    {
+      "time": "20:03",
+      "horse": "Pianoforte",
+      "isNap": false
+    },
+    {
+      "time": "20:38",
+      "horse": "Mersea",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Barton Snow",
+      "isNap": false
+    },
+    {
+      "time": "18:25",
+      "horse": "Famous Clermont",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Kings Jet",
+      "isNap": false
+    },
+    {
+      "time": "19:35",
+      "horse": "Jeffery'S Cross",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Rebel Dawn Rising",
+      "isNap": false
+    },
+    {
+      "time": "20:45",
+      "horse": "Joker De Mai",
+      "isNap": false
+    }
+  ]
+}
