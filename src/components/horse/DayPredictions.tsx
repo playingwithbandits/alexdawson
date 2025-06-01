@@ -653,6 +653,7 @@ export function DayPredictions({
                   {meeting.races.map((race, index) => (
                     <PicksRaceRow
                       key={race.time}
+                      date={date}
                       isTodayOrPast={isTodayOrPast}
                       index={index}
                       race={race}

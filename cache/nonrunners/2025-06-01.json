@@ -1,0 +1,213 @@
+[
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-06-01",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-06-01/894226",
+        "horses": [
+          {
+            "horseName": "Environment Amigo",
+            "horseProfileUrl": "/profile/horse/5733260/environment-amigo/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-06-01/894225",
+        "horses": [
+          {
+            "horseName": "Grand Karat",
+            "horseProfileUrl": "/profile/horse/5162490/grand-karat/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-06-01/894227",
+        "horses": [
+          {
+            "horseName": "Thyer",
+            "horseProfileUrl": "/profile/horse/5162466/thyer/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Fakenham",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#fakenham",
+    "raceCardsCourseMeetingsUrl": "/racecards/18/fakenham/2025-06-01",
+    "going": "GOOD (GoingStick: 6.2) (Watering) (Rail movements: 2.30 & 4.05 +136yds, 3.00 +213yds, 3.35 +148yds, 4.35 +185yds and 5.05 +170yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/18/fakenham/2025-06-01/894173",
+        "horses": [
+          {
+            "horseName": "Junior Des Mottes",
+            "horseProfileUrl": "/profile/horse/4922434/junior-des-mottes/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kilbeggan",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#kilbeggan",
+    "raceCardsCourseMeetingsUrl": "/racecards/203/kilbeggan/2025-06-01",
+    "going": "GOOD TO YIELDING",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Listowel",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#listowel",
+    "raceCardsCourseMeetingsUrl": "/racecards/190/listowel/2025-06-01",
+    "going": "GOOD TO YIELDING, Good in places",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:02",
+        "raceCardUrl": "/racecards/190/listowel/2025-06-01/896797",
+        "horses": [
+          {
+            "horseName": "Sanctijude",
+            "horseProfileUrl": "/profile/horse/7618341/sanctijude/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Innumerable",
+            "horseProfileUrl": "/profile/horse/7324737/innumerable/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:37",
+        "raceCardUrl": "/racecards/190/listowel/2025-06-01/896798",
+        "horses": [
+          {
+            "horseName": "Struck By Her",
+            "horseProfileUrl": "/profile/horse/7466844/struck-by-her/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-06-01",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 6.3)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "(Outer track) 5f & 1m - Centre; 1m6f - Inside",
+    "races": [
+      {
+        "raceTime": "2:55",
+        "raceCardUrl": "/racecards/40/nottingham/2025-06-01/894060",
+        "horses": [
+          {
+            "horseName": "Zaramara",
+            "horseProfileUrl": "/profile/horse/7475656/zaramara/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/40/nottingham/2025-06-01/894061",
+        "horses": [
+          {
+            "horseName": "Rogue Supremacy",
+            "horseProfileUrl": "/profile/horse/7613490/rogue-supremacy/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Baden-Baden",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#baden-baden",
+    "raceCardsCourseMeetingsUrl": "/racecards/207/baden-baden/2025-06-01",
+    "going": "TURF: SOFT (Good to soft in places)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:30",
+        "raceCardUrl": "/racecards/207/baden-baden/2025-06-01/896881",
+        "horses": [
+          {
+            "horseName": "Atoso",
+            "horseProfileUrl": "/profile/horse/5343942/atoso/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chantilly",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#chantilly",
+    "raceCardsCourseMeetingsUrl": "/racecards/204/chantilly/2025-06-01",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Kyoto",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#kyoto",
+    "raceCardsCourseMeetingsUrl": "/racecards/504/kyoto/2025-06-01",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Santa Anita",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#santa-anita",
+    "raceCardsCourseMeetingsUrl": "/racecards/257/santa-anita/2025-06-01",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:08",
+        "raceCardUrl": "/racecards/257/santa-anita/2025-06-01/897015",
+        "horses": [
+          {
+            "horseName": "Vlahos",
+            "horseProfileUrl": "/profile/horse/5875789/vlahos/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tokyo",
+    "raceCardsCourseUrl": "/racecards/2025-06-01#tokyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/315/tokyo/2025-06-01",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

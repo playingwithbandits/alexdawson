@@ -19,6 +19,7 @@ import { HorseNameRow } from "./HorseNameRow";
 interface PicksRaceRowProps {
   isTodayOrPast: boolean;
   index: number;
+  date: string;
   race: Race;
   meeting: Meeting;
   results: RaceResults | undefined;
@@ -35,7 +36,7 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
-const THRESHOLD = 0.9;
+const THRESHOLD = 0.66;
 
 const goodFormCode = (code: string, runners: number) => {
   if (runners < 5) {
@@ -54,6 +55,7 @@ const goodFormCode = (code: string, runners: number) => {
 export function PicksRaceRow({
   isTodayOrPast,
   index,
+  date,
   race,
   meeting,
   results,
@@ -96,6 +98,70 @@ export function PicksRaceRow({
       lastCode,
       lastRunners,
       lastTimeOutGood,
+    };
+  });
+
+  const eyecatcherLastTimeOut = race.horses.map((horse) => {
+    const formObj = horse.formObj?.form || [];
+    const lastRaceObj = formObj[0] || {};
+    const rpCloseUpComment = lastRaceObj?.rpCloseUpComment || "";
+    const eyecatcherTerms = ["eyecatcher", "eye catcher", "eye-catcher"];
+    const matchedTerms = eyecatcherTerms.filter((term) =>
+      rpCloseUpComment.toLowerCase().includes(term)
+    );
+    const dateOfLastRace = lastRaceObj?.raceDatetime;
+    const dateOfRace = new Date(date);
+    const days = dateOfLastRace
+      ? Math.abs(dateOfRace.getTime() - new Date(dateOfLastRace).getTime()) /
+        (1000 * 60 * 60 * 24)
+      : null;
+    const daysSinceLastRace = days !== null ? days < 60 : false;
+    const eyecatcher = daysSinceLastRace && matchedTerms.length > 0;
+
+    return {
+      name: horseNameToKey(horse.name),
+      rpCloseUpComment,
+      eyecatcher,
+      days,
+    };
+  });
+
+  const hadHamperedLastTimeOut = race.horses.map((horse) => {
+    const formObj = horse.formObj?.form || [];
+    const lastRaceObj = formObj[0] || {};
+    const rpCloseUpComment = lastRaceObj?.rpCloseUpComment || "";
+    const hamperedTerms = [
+      "hampered",
+      "blocked",
+      "clear run",
+      "interference",
+      "impeded",
+      "squeezed",
+      "tight",
+      "short of room",
+      "waiting for",
+      "nowhere to go",
+      "boxed in",
+    ];
+    const matchedTerms = hamperedTerms.filter((term) =>
+      rpCloseUpComment.toLowerCase().includes(term)
+    );
+
+    const dateOfLastRace = lastRaceObj?.raceDatetime;
+    const dateOfRace = new Date(date);
+    const days = dateOfLastRace
+      ? Math.abs(dateOfRace.getTime() - new Date(dateOfLastRace).getTime()) /
+        (1000 * 60 * 60 * 24)
+      : null;
+    const daysSinceLastRace = days !== null ? days < 60 : false;
+    const hampered = daysSinceLastRace && matchedTerms.length > 0;
+
+    return {
+      name: horseNameToKey(horse.name),
+      rpCloseUpComment,
+      hampered,
+      matchedTerms,
+      days,
     };
   });
 
@@ -2096,11 +2162,39 @@ export function PicksRaceRow({
               (x) => horseNameToKey(x.name) === horseNameToKey(name)
             );
 
+            const horsehadHamperedLastTimeOutObj = hadHamperedLastTimeOut?.find(
+              (x) => horseNameToKey(x.name) === horseNameToKey(name)
+            );
+
+            const horseEyecatcherLastTimeOutObj = eyecatcherLastTimeOut?.find(
+              (x) => horseNameToKey(x.name) === horseNameToKey(name)
+            );
+
             const paraGraph = [
-              `${horsehas2ndPlaceLastTimeOutObj?.lastCode} | ${
+              `${horsehadHamperedLastTimeOutObj?.rpCloseUpComment} | ${
                 horsehas2ndPlaceLastTimeOutObj?.lastRunners
               } | ${
                 horsehas2ndPlaceLastTimeOutObj?.lastTimeOutGood ? "Yes" : "No"
+              }`,
+              `Hampered: ${
+                horsehadHamperedLastTimeOutObj?.hampered
+                  ? "Yes" +
+                    " | " +
+                    horsehadHamperedLastTimeOutObj?.rpCloseUpComment +
+                    " | " +
+                    horsehadHamperedLastTimeOutObj?.matchedTerms +
+                    " | " +
+                    horsehadHamperedLastTimeOutObj?.days
+                  : "No"
+              }`,
+              `Eyecatcher: ${
+                horseEyecatcherLastTimeOutObj?.eyecatcher
+                  ? "Yes" +
+                    " | " +
+                    horseEyecatcherLastTimeOutObj?.rpCloseUpComment +
+                    " | " +
+                    horseEyecatcherLastTimeOutObj?.days
+                  : "No"
               }`,
               [
                 olbgNapGood && `<span style='color: #00ffff'>OLBG Nap</span>`,
@@ -2141,7 +2235,7 @@ export function PicksRaceRow({
                 : undefined,
             ]
               ?.filter((x) => x)
-              .join("\n\n");
+              .join("\n");
 
             return (
               <HorseNameRow
@@ -2195,12 +2289,14 @@ export function PicksRaceRow({
                 highlight2={
                   countGood &&
                   //hasOlbgComment &&
-                  // //olbgNapGood &&
-                  // //olbgExpertGood &&
-                  rpPredGood &&
-                  aiGood &&
+                  //olbgNapGood &&
+                  //olbgExpertGood &&
+                  //rpPredGood &&
+                  //aiGood &&
                   //Boolean(horsehas2ndPlaceLastTimeOutObj?.lastTimeOutGood)
-                  sharpRatingGood
+                  (Boolean(horsehadHamperedLastTimeOutObj?.hampered) ||
+                    Boolean(horseEyecatcherLastTimeOutObj?.eyecatcher))
+                  //sharpRatingGood
                 }
                 //highlight3={countGood}
                 showOnlyBest={showOnlyBest}

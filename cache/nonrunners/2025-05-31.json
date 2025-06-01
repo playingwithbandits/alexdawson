@@ -1,0 +1,520 @@
+[
+  {
+    "courseName": "Chester",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#chester",
+    "raceCardsCourseMeetingsUrl": "/racecards/13/chester/2025-05-31",
+    "going": "GOOD (GoingStick: 7.3) (Rail movements: 1.35, 2.10, 2.45 & 4.30 +37yds, 3.20 +72yds, 3.55 +60yds and 5.05 +49yds)",
+    "weather": "Showers",
+    "stallsPosition": "1m2f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/13/chester/2025-05-31/894037",
+        "horses": [
+          {
+            "horseName": "Surrey Belle",
+            "horseProfileUrl": "/profile/horse/4810999/surrey-belle/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/13/chester/2025-05-31/894041",
+        "horses": [
+          {
+            "horseName": "Educating Rita",
+            "horseProfileUrl": "/profile/horse/5845665/educating-rita/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Convo",
+            "horseProfileUrl": "/profile/horse/5770499/convo/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/13/chester/2025-05-31/896899",
+        "horses": [
+          {
+            "horseName": "Top Bins",
+            "horseProfileUrl": "/profile/horse/5708820/top-bins/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-05-31",
+    "going": "GOOD (GoingStick: 6.7) (Rail movements: 1.13 & 2.58 +21yds, 3.33, 4.08 & 4.43 +6yds) (Outer track)",
+    "weather": "Showers",
+    "stallsPosition": "5f & 6f  - Centre; 7f & 1m - Inside; 1m4f - Outside",
+    "races": [
+      {
+        "raceTime": "1:13",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-31/894031",
+        "horses": [
+          {
+            "horseName": "Chillingham",
+            "horseProfileUrl": "/profile/horse/4213785/chillingham/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Postileo",
+            "horseProfileUrl": "/profile/horse/2394521/postileo/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:48",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-31/894032",
+        "horses": [
+          {
+            "horseName": "Wodao",
+            "horseProfileUrl": "/profile/horse/4245956/wodao/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:23",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-31/894030",
+        "horses": [
+          {
+            "horseName": "Fahrenheit Seven",
+            "horseProfileUrl": "/profile/horse/5787812/fahrenheit-seven/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:08",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-31/894033",
+        "horses": [
+          {
+            "horseName": "Lexington Belle",
+            "horseProfileUrl": "/profile/horse/5127993/lexington-belle/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:43",
+        "raceCardUrl": "/racecards/23/haydock/2025-05-31/894034",
+        "horses": [
+          {
+            "horseName": "Best Rate",
+            "horseProfileUrl": "/profile/horse/5708962/best-rate/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Niminy Piminy",
+            "horseProfileUrl": "/profile/horse/6807921/niminy-piminy/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Caledonian",
+            "horseProfileUrl": "/profile/horse/6175552/caledonian/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-05-31",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.2) (Watering) (Rail movements: 5.40 & 6.10 +4yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "1m2f - Inside; 1m3f - Outside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Listowel",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#listowel",
+    "raceCardsCourseMeetingsUrl": "/racecards/190/listowel/2025-05-31",
+    "going": "GOOD",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/190/listowel/2025-05-31/896793",
+        "horses": [
+          {
+            "horseName": "Shing Shilla",
+            "horseProfileUrl": "/profile/horse/58956393/shing-shilla/",
+            "raceNumber": "(21)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-05-31",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "6:55",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-05-31/894218",
+        "horses": [
+          {
+            "horseName": "Giorgio M",
+            "horseProfileUrl": "/profile/horse/5325178/giorgio-m/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Stratford",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#stratford",
+    "raceCardsCourseMeetingsUrl": "/racecards/67/stratford/2025-05-31",
+    "going": "GOOD (GoingStick 5.9) (Watering) (Rail movements: 5.30 & 9.00 +48yds, 6.00 -87yds, 6.30 & 7.00 +36yds, 7.30 +60yds, 8.00 -156yds and 8.30 -138yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/67/stratford/2025-05-31/894169",
+        "horses": [
+          {
+            "horseName": "Formel Park",
+            "horseProfileUrl": "/profile/horse/5708543/formel-park/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/67/stratford/2025-05-31/896900",
+        "horses": [
+          {
+            "horseName": "Pomeriggio",
+            "horseProfileUrl": "/profile/horse/5019605/pomeriggio/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tramore",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#tramore",
+    "raceCardsCourseMeetingsUrl": "/racecards/200/tramore/2025-05-31",
+    "going": "GOOD, Good to yielding in places (Selective watering)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "8:15",
+        "raceCardUrl": "/racecards/200/tramore/2025-05-31/896789",
+        "horses": [
+          {
+            "horseName": "Wild Mandate",
+            "horseProfileUrl": "/profile/horse/5098065/wild-mandate/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "York",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#york",
+    "raceCardsCourseMeetingsUrl": "/racecards/107/york/2025-05-31",
+    "going": "GOOD, Good to firm in places (GoingStick: Overall 6.7; Home straight: Far side 6.8, Centre 6.8, Stands' side 6.7) (Rail Movements: 3.15 & 4.25 +22yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 6f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "1:30",
+        "raceCardUrl": "/racecards/107/york/2025-05-31/894053",
+        "horses": [
+          {
+            "horseName": "Protest Rally",
+            "horseProfileUrl": "/profile/horse/4175415/protest-rally/",
+            "raceNumber": "(18)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/107/york/2025-05-31/894052",
+        "horses": [
+          {
+            "horseName": "Harry Did",
+            "horseProfileUrl": "/profile/horse/5368094/harry-did/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Auteuil",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#auteuil",
+    "raceCardsCourseMeetingsUrl": "/racecards/205/auteuil/2025-05-31",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/205/auteuil/2025-05-31/896917",
+        "horses": [
+          {
+            "horseName": "Saint Langis",
+            "horseProfileUrl": "/profile/horse/3552440/saint-langis/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Celtic Warrior",
+            "horseProfileUrl": "/profile/horse/3495467/celtic-warrior/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Baden-Baden",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#baden-baden",
+    "raceCardsCourseMeetingsUrl": "/racecards/207/baden-baden/2025-05-31",
+    "going": "TURF: SOFT (Good to soft in places)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Eagle Farm",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#eagle-farm",
+    "raceCardsCourseMeetingsUrl": "/racecards/468/eagle-farm/2025-05-31",
+    "going": "TURF: SOFT (HEAVY from Race 5)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:28",
+        "raceCardUrl": "/racecards/468/eagle-farm/2025-05-31/896994",
+        "horses": [
+          {
+            "horseName": "Osmose",
+            "horseProfileUrl": "/profile/horse/3763229/osmose/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Grebeni",
+            "horseProfileUrl": "/profile/horse/4420186/grebeni/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Rising Pacific",
+            "horseProfileUrl": "/profile/horse/4847271/rising-pacific/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Sibaaq",
+            "horseProfileUrl": "/profile/horse/3098708/sibaaq/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:03",
+        "raceCardUrl": "/racecards/468/eagle-farm/2025-05-31/896873",
+        "horses": [
+          {
+            "horseName": "The Bear",
+            "horseProfileUrl": "/profile/horse/6916242/the-bear/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Hidden Achievement",
+            "horseProfileUrl": "/profile/horse/7530026/hidden-achievement/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Thee Creek",
+            "horseProfileUrl": "/profile/horse/7339002/thee-creek/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Green Spring",
+            "horseProfileUrl": "/profile/horse/7551734/green-spring/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Prince Tycoon",
+            "horseProfileUrl": "/profile/horse/7520150/prince-tycoon/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Navy Pilot",
+            "horseProfileUrl": "/profile/horse/7267834/navy-pilot/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Fabulantes",
+            "horseProfileUrl": "/profile/horse/7488255/fabulantes/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:13",
+        "raceCardUrl": "/racecards/468/eagle-farm/2025-05-31/896875",
+        "horses": [
+          {
+            "horseName": "Rothfire",
+            "horseProfileUrl": "/profile/horse/3094790/rothfire/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Ameena",
+            "horseProfileUrl": "/profile/horse/5674124/ameena/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:52",
+        "raceCardUrl": "/racecards/468/eagle-farm/2025-05-31/896876",
+        "horses": [
+          {
+            "horseName": "Eclair Encore",
+            "horseProfileUrl": "/profile/horse/6010491/eclair-encore/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Saint Emilion",
+            "horseProfileUrl": "/profile/horse/6555328/saint-emilion/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kyoto",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#kyoto",
+    "raceCardsCourseMeetingsUrl": "/racecards/504/kyoto/2025-05-31",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-05-31#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-05-31",
+    "going": "DIRT: STANDARD; TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-31/896901",
+        "horses": [
+          {
+            "horseName": "Lucky Gold",
+            "horseProfileUrl": "/profile/horse/4033857/lucky-gold/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Shinkansen",
+            "horseProfileUrl": "/profile/horse/5023470/shinkansen/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-31/896904",
+        "horses": [
+          {
+            "horseName": "Patch Of Time",
+            "horseProfileUrl": "/profile/horse/5445558/patch-of-time/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Drala",
+            "horseProfileUrl": "/profile/horse/6582534/drala/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-31/896905",
+        "horses": [
+          {
+            "horseName": "Golden Brilliant",
+            "horseProfileUrl": "/profile/horse/7627124/golden-brilliant/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Star Satyr",
+            "horseProfileUrl": "/profile/horse/7409353/star-satyr/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-31/896906",
+        "horses": [
+          {
+            "horseName": "Hinokami Kagura",
+            "horseProfileUrl": "/profile/horse/5329127/hinokami-kagura/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Great Spirit",
+            "horseProfileUrl": "/profile/horse/5676532/great-spirit/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-31/896907",
+        "horses": [
+          {
+            "horseName": "California Star",
+            "horseProfileUrl": "/profile/horse/5829404/california-star/",
+            "raceNumber": ""
+          },
+          {
+            "horseName": "Flying Double",
+            "horseProfileUrl": "/profile/horse/6675581/flying-double/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:40",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-05-31/896911",
+        "horses": [
+          {
+            "horseName": "Target Audience",
+            "horseProfileUrl": "/profile/horse/6023308/target-audience/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  }
+]

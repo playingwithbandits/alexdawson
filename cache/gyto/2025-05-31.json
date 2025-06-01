@@ -1,0 +1,280 @@
+{
+  "date": "2025-05-31",
+  "tips": [
+    {
+      "time": "13:13",
+      "horse": "Steel Tiger",
+      "isNap": false
+    },
+    {
+      "time": "14:23",
+      "horse": "No Half Measures",
+      "isNap": false
+    },
+    {
+      "time": "14:58",
+      "horse": "Estrange",
+      "isNap": true
+    },
+    {
+      "time": "15:33",
+      "horse": "Alyanaabi",
+      "isNap": false
+    },
+    {
+      "time": "16:08",
+      "horse": "Mostar Dreams",
+      "isNap": false
+    },
+    {
+      "time": "16:43",
+      "horse": "Organ",
+      "isNap": false
+    },
+    {
+      "time": "13:30",
+      "horse": "Lucky Man",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Tadej",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Jm Jungle",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Art Design",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Munsif",
+      "isNap": true
+    },
+    {
+      "time": "17:00",
+      "horse": "Tele Red",
+      "isNap": false
+    },
+    {
+      "time": "13:35",
+      "horse": "Abloom",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Never So Brave",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Tricky Tel",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Dreams Adozen",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Box To Box",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Kimeko Glory",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Yellow Card",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Maughreen",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Sonnyboyliston",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Kara Sacre",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "A Nod To Getaway",
+      "isNap": false
+    },
+    {
+      "time": "16:13",
+      "horse": "Howdoyalikeherhome",
+      "isNap": false
+    },
+    {
+      "time": "16:48",
+      "horse": "Inchidaly Copper",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Poetic Twist",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Agent Mayfair",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Master Zack",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Sanat",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "L'Eagle Aid",
+      "isNap": false
+    },
+    {
+      "time": "18:25",
+      "horse": "Understudy",
+      "isNap": false
+    },
+    {
+      "time": "18:55",
+      "horse": "Kisdon Force",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "Latin",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Gaoth Chuil",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Priory Park",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Roman Parish",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Kainsbourg",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "May Call You Back",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Sunset Boulevard",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Liadawn",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Old Bridge",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Iskar D'Airy",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Northern Rose",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Fillyfudge",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Bethpage",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Stans The Man",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Village Master",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Impecunious",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Golden Phase",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Odin Legacy",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Twilight Star",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Private Project",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Blue Wonder",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "City Cyclone",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Mart",
+      "isNap": false
+    }
+  ]
+}

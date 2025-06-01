@@ -1,0 +1,311 @@
+{
+  "date": "2025-05-31",
+  "tips": [
+    {
+      "time": "14:40",
+      "horse": "Bergerac",
+      "tipster": "Chris Connolly",
+      "score": "76.9"
+    },
+    {
+      "time": "15:33",
+      "horse": "Alyanaabi",
+      "tipster": "Glendale",
+      "score": "46.5"
+    },
+    {
+      "time": "20:00",
+      "horse": "My Gift To You",
+      "tipster": "Fortunatus",
+      "score": "40.3"
+    },
+    {
+      "time": "14:40",
+      "horse": "Zayer",
+      "tipster": "Ratings Hub",
+      "score": "32.9"
+    },
+    {
+      "time": "13:13",
+      "horse": "Chillingham",
+      "tipster": "Farringdon",
+      "score": "25.8"
+    },
+    {
+      "time": "15:15",
+      "horse": "Sueno",
+      "tipster": "The Brigadier",
+      "score": "24.9"
+    },
+    {
+      "time": "15:15",
+      "horse": "Allonsy",
+      "tipster": "On The Nose",
+      "score": "21.2"
+    },
+    {
+      "time": "16:25",
+      "horse": "Munsif",
+      "tipster": "Lee Sobot",
+      "score": "20.7"
+    },
+    {
+      "time": "14:40",
+      "horse": "Duran",
+      "tipster": "Rockavon",
+      "score": "17.7"
+    },
+    {
+      "time": "14:40",
+      "horse": "Loom",
+      "tipster": "Templegate",
+      "score": "16.0"
+    },
+    {
+      "time": "14:40",
+      "horse": "Jm Jungle",
+      "tipster": "The North",
+      "score": "17.4"
+    },
+    {
+      "time": "15:33",
+      "horse": "Alyanaabi",
+      "tipster": "Ben Morgan",
+      "score": "14.6"
+    },
+    {
+      "time": "14:23",
+      "horse": "Balmoral Lady",
+      "tipster": "Lambourn",
+      "score": "14.2"
+    },
+    {
+      "time": "16:25",
+      "horse": "Cape Breton",
+      "tipster": "Postdata",
+      "score": "12.0"
+    },
+    {
+      "time": "16:25",
+      "horse": "Munsif",
+      "tipster": "Newmarket",
+      "score": "8.2"
+    },
+    {
+      "time": "14:23",
+      "horse": "Shagraan",
+      "tipster": "The Judge",
+      "score": "6.0"
+    },
+    {
+      "time": "16:25",
+      "horse": "Munsif",
+      "tipster": "Mercury",
+      "score": "4.7"
+    },
+    {
+      "time": "19:40",
+      "horse": "Knights Gold",
+      "tipster": "RP Ratings",
+      "score": "4.2"
+    },
+    {
+      "time": "15:33",
+      "horse": "Alyanaabi",
+      "tipster": "Garry Owen",
+      "score": "3.2"
+    },
+    {
+      "time": "15:50",
+      "horse": "Singoura",
+      "tipster": "Whistler",
+      "score": "0.2"
+    },
+    {
+      "time": "15:15",
+      "horse": "Term Of Endearment",
+      "tipster": "Dean Kilbryde",
+      "score": "-2.0"
+    },
+    {
+      "time": "17:00",
+      "horse": "Mums Tipple",
+      "tipster": "Marlborough",
+      "score": "-2.6"
+    },
+    {
+      "time": "14:45",
+      "horse": "Come On Over",
+      "tipster": "Tipman Tips",
+      "score": "-3.0"
+    },
+    {
+      "time": "17:20",
+      "horse": "Samba Train",
+      "tipster": "Computeform",
+      "score": "-3.4"
+    },
+    {
+      "time": "14:10",
+      "horse": "Never So Brave",
+      "tipster": "Robin Goodfellow",
+      "score": "-6.0"
+    },
+    {
+      "time": "21:00",
+      "horse": "Getaway With You",
+      "tipster": "West Country",
+      "score": "-10.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Bond Chairman",
+      "tipster": "Rory Delargy",
+      "score": "-10.9"
+    },
+    {
+      "time": "15:33",
+      "horse": "Spycatcher",
+      "tipster": "Newsboy",
+      "score": "-10.7"
+    },
+    {
+      "time": "14:10",
+      "horse": "Cerulean Bay",
+      "tipster": "Jon Freeman",
+      "score": "-12.1"
+    },
+    {
+      "time": "21:00",
+      "horse": "Scudamore",
+      "tipster": "Melissa Jones",
+      "score": "-20.0"
+    },
+    {
+      "time": "17:00",
+      "horse": "Lir Speciale",
+      "tipster": "Matt Polley",
+      "score": "-21.8"
+    },
+    {
+      "time": "15:15",
+      "horse": "Divina Grace",
+      "tipster": "Brian Flanagan",
+      "score": "-28.3"
+    },
+    {
+      "time": "19:30",
+      "horse": "Bethpage",
+      "tipster": "Jason Heavey",
+      "score": "-31.3"
+    },
+    {
+      "time": "15:33",
+      "horse": "Spycatcher",
+      "tipster": "Karl Hedley",
+      "score": "-34.8"
+    },
+    {
+      "time": "14:23",
+      "horse": "No Half Measures",
+      "tipster": "Luke Tucker",
+      "score": "-35.9"
+    },
+    {
+      "time": "14:23",
+      "horse": "Balmoral Lady",
+      "tipster": "Spotlight",
+      "score": "-42.9"
+    },
+    {
+      "time": "17:00",
+      "horse": "Delicacy",
+      "tipster": "The Score",
+      "score": "-45.1"
+    },
+    {
+      "time": "17:05",
+      "horse": "Too Don Juan",
+      "tipster": "Moorestyle",
+      "score": "-42.6"
+    },
+    {
+      "time": "17:30",
+      "horse": "Renoir",
+      "tipster": "Jeffrey Ross",
+      "score": "-45.7"
+    },
+    {
+      "time": "14:10",
+      "horse": "Never So Brave",
+      "tipster": "The Punt",
+      "score": "-45.1"
+    },
+    {
+      "time": "16:43",
+      "horse": "Sea Founder",
+      "tipster": "Rob Wright",
+      "score": "-50.5"
+    },
+    {
+      "time": "15:55",
+      "horse": "Box To Box",
+      "tipster": "Ross Shepherd",
+      "score": "-50.1"
+    },
+    {
+      "time": "14:58",
+      "horse": "Shaha",
+      "tipster": "Chris Wright",
+      "score": "-53.6"
+    },
+    {
+      "time": "14:40",
+      "horse": "Bergerac",
+      "tipster": "The Duke",
+      "score": "-56.5"
+    },
+    {
+      "time": "15:15",
+      "horse": "Sueno",
+      "tipster": "Ian Gaughran",
+      "score": "-63.6"
+    },
+    {
+      "time": "15:15",
+      "horse": "Scenic",
+      "tipster": "Jim Delahunt",
+      "score": "-66.7"
+    },
+    {
+      "time": "14:40",
+      "horse": "Loom",
+      "tipster": "Rory Paddock",
+      "score": "-69.3"
+    },
+    {
+      "time": "20:10",
+      "horse": "Francisco",
+      "tipster": "Andrew Mount",
+      "score": "-69.5"
+    },
+    {
+      "time": "14:58",
+      "horse": "Beautiful Love",
+      "tipster": "Steve Mullington",
+      "score": "-71.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Jm Jungle",
+      "tipster": "Sam Hardy",
+      "score": "-65.7"
+    },
+    {
+      "time": "18:15",
+      "horse": "Early Arrival",
+      "tipster": "Adrian Wall",
+      "score": "-85.1"
+    }
+  ]
+}
