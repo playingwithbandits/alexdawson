@@ -1,0 +1,120 @@
+{
+  "date": "2025-06-03",
+  "tips": [
+    {
+      "time": "14:17",
+      "horse": "Split Silk",
+      "isNap": false
+    },
+    {
+      "time": "14:47",
+      "horse": "Project Incheon",
+      "isNap": false
+    },
+    {
+      "time": "15:17",
+      "horse": "Explosion",
+      "isNap": false
+    },
+    {
+      "time": "15:47",
+      "horse": "Irish Dancer",
+      "isNap": false
+    },
+    {
+      "time": "16:17",
+      "horse": "Charming Princess",
+      "isNap": false
+    },
+    {
+      "time": "16:47",
+      "horse": "Jungle Land",
+      "isNap": false
+    },
+    {
+      "time": "17:47",
+      "horse": "Miss Show Down",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Delpotro",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Bective Abbey",
+      "isNap": true
+    },
+    {
+      "time": "15:30",
+      "horse": "Hard Market",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Zucayan",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Don Virginia",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Aazza",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Casual Encounter",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Beckford'S Folly",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Sugar Hill Babe",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Another Abbot",
+      "isNap": true
+    },
+    {
+      "time": "20:45",
+      "horse": "Me Tarzan",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Two B Tanned",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Noble Consort",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Raavi",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Deep Water Bay",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Forever Noah",
+      "isNap": false
+    }
+  ]
+}

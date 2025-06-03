@@ -436,3 +436,24 @@ export function isWithinTenPercent(
   const tenPercent = targetDistance * 0.1;
   return Math.abs(distance - targetDistance) <= tenPercent;
 }
+
+export const isGoodDistanceToWinner = (
+  raceDistance: number | undefined,
+  distanceCode: string | undefined
+) => {
+  if (!raceDistance || !distanceCode) return false;
+
+  const distanceToWinnerFloat = distanceToWinnerStrToFloat(distanceCode || "");
+
+  if (raceDistance <= 6) {
+    return distanceToWinnerFloat <= 4;
+  }
+  if (raceDistance <= 8) {
+    return distanceToWinnerFloat <= 5;
+  }
+  if (raceDistance <= 14) {
+    return distanceToWinnerFloat <= 6;
+  }
+
+  return distanceToWinnerFloat <= 8;
+};

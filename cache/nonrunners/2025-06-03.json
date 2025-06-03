@@ -1,0 +1,94 @@
+[
+  {
+    "courseName": "Leicester",
+    "raceCardsCourseUrl": "/racecards/2025-06-03#leicester",
+    "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-06-03",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.2) (Selective watering)",
+    "weather": "Scattered showers",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-06-03#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-06-03",
+    "going": "POLYTRACK: STANDARD; Turf course: GOOD, Good to firm in places (GoingStick: 6.8) (Watered)",
+    "weather": "Light rain",
+    "stallsPosition": "1m4f - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/31/lingfield-aw/2025-06-03/895351",
+        "horses": [
+          {
+            "horseName": "Guns And Flowers",
+            "horseProfileUrl": "/profile/horse/4963767/guns-and-flowers/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Prince Hector",
+            "horseProfileUrl": "/profile/horse/3469694/prince-hector/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:45",
+        "raceCardUrl": "/racecards/31/lingfield/2025-06-03/894990",
+        "horses": [
+          {
+            "horseName": "Blackbrook",
+            "horseProfileUrl": "/profile/horse/6523170/blackbrook/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Straighttothepoint",
+            "horseProfileUrl": "/profile/horse/6323517/straighttothepoint/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell",
+    "raceCardsCourseUrl": "/racecards/2025-06-03#southwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/61/southwell/2025-06-03",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.8) (Watered) (Rail movements: 2.30, 3.30 & 4.00 +94yds, 3.00 & 5.00 +185yds and 4.30 +138yds)",
+    "weather": "Scattered showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/61/southwell/2025-06-03/895246",
+        "horses": [
+          {
+            "horseName": "Montregard",
+            "horseProfileUrl": "/profile/horse/4871542/montregard/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/61/southwell/2025-06-03/895251",
+        "horses": [
+          {
+            "horseName": "Burlington Place",
+            "horseProfileUrl": "/profile/horse/7431612/burlington-place/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-03#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-06-03",
+    "going": "TAPETA: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": []
+  }
+]
