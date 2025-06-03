@@ -36,7 +36,7 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
-const THRESHOLD = 0.66;
+const THRESHOLD = 0.5;
 
 const goodFormCode = (code: string, runners: number) => {
   if (runners < 5) {
@@ -115,7 +115,7 @@ export function PicksRaceRow({
       ? Math.abs(dateOfRace.getTime() - new Date(dateOfLastRace).getTime()) /
         (1000 * 60 * 60 * 24)
       : null;
-    const daysSinceLastRace = days !== null ? days < 60 : false;
+    const daysSinceLastRace = days !== null ? days < 45 : false;
     const eyecatcher = daysSinceLastRace && matchedTerms.length > 0;
 
     return {
@@ -133,7 +133,9 @@ export function PicksRaceRow({
     const hamperedTerms = [
       "hampered",
       "blocked",
-      "clear run",
+      "not clear",
+      "no clear",
+      "not clear run",
       "interference",
       "impeded",
       "squeezed",
@@ -153,7 +155,7 @@ export function PicksRaceRow({
       ? Math.abs(dateOfRace.getTime() - new Date(dateOfLastRace).getTime()) /
         (1000 * 60 * 60 * 24)
       : null;
-    const daysSinceLastRace = days !== null ? days < 60 : false;
+    const daysSinceLastRace = days !== null ? days < 45 : false;
     const hampered = daysSinceLastRace && matchedTerms.length > 0;
 
     return {
@@ -2171,7 +2173,7 @@ export function PicksRaceRow({
             );
 
             const paraGraph = [
-              `${horsehadHamperedLastTimeOutObj?.rpCloseUpComment} | ${
+              `Last Runners:  ${horsehas2ndPlaceLastTimeOutObj?.lastCode} / ${
                 horsehas2ndPlaceLastTimeOutObj?.lastRunners
               } | ${
                 horsehas2ndPlaceLastTimeOutObj?.lastTimeOutGood ? "Yes" : "No"

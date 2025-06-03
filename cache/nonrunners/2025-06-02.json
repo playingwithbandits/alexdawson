@@ -1,0 +1,364 @@
+[
+  {
+    "courseName": "Brighton",
+    "raceCardsCourseUrl": "/racecards/2025-06-02#brighton",
+    "raceCardsCourseMeetingsUrl": "/racecards/7/brighton/2025-06-02",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.7) (Watered)",
+    "weather": "Sunny",
+    "stallsPosition": "1m2f - Outside; 1m - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/7/brighton/2025-06-02/894965",
+        "horses": [
+          {
+            "horseName": "Don't Fight It",
+            "horseProfileUrl": "/profile/horse/4257386/dont-fight-it/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/7/brighton/2025-06-02/894962",
+        "horses": [
+          {
+            "horseName": "Fascinating Lips",
+            "horseProfileUrl": "/profile/horse/3499193/fascinating-lips/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Sunset In Paris",
+            "horseProfileUrl": "/profile/horse/3207177/sunset-in-paris/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/7/brighton/2025-06-02/894966",
+        "horses": [
+          {
+            "horseName": "Snow Boots",
+            "horseProfileUrl": "/profile/horse/5162481/snow-boots/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Gowran Park",
+    "raceCardsCourseUrl": "/racecards/2025-06-02#gowran-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/184/gowran-park/2025-06-02",
+    "going": "GOOD (Watered)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:07",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-06-02/896885",
+        "horses": [
+          {
+            "horseName": "Sneddy Eddie",
+            "horseProfileUrl": "/profile/horse/4522996/sneddy-eddie/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Daymer Bay",
+            "horseProfileUrl": "/profile/horse/5021362/daymer-bay/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Asisaid",
+            "horseProfileUrl": "/profile/horse/4215684/asisaid/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:17",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-06-02/896996",
+        "horses": [
+          {
+            "horseName": "May Night",
+            "horseProfileUrl": "/profile/horse/2996822/may-night/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "El Bello",
+            "horseProfileUrl": "/profile/horse/3679956/el-bello/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Dazzling Spirit",
+            "horseProfileUrl": "/profile/horse/3125471/dazzling-spirit/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:52",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-06-02/896886",
+        "horses": [
+          {
+            "horseName": "Autumn Twist",
+            "horseProfileUrl": "/profile/horse/5216513/autumn-twist/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Barrogstown Girl",
+            "horseProfileUrl": "/profile/horse/5325173/barrogstown-girl/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Clever And Cute",
+            "horseProfileUrl": "/profile/horse/5889859/clever-and-cute/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Migdam",
+            "horseProfileUrl": "/profile/horse/3733018/migdam/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Burren Song",
+            "horseProfileUrl": "/profile/horse/3721405/burren-song/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:27",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-06-02/896887",
+        "horses": [
+          {
+            "horseName": "Presence",
+            "horseProfileUrl": "/profile/horse/5357865/presence/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Fast Tara",
+            "horseProfileUrl": "/profile/horse/4568933/fast-tara/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-06-02/896888",
+        "horses": [
+          {
+            "horseName": "Dun An Oir",
+            "horseProfileUrl": "/profile/horse/7298733/dun-an-oir/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Heartbreak Prince",
+            "horseProfileUrl": "/profile/horse/7583044/heartbreak-prince/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Mustang Mozzie",
+            "horseProfileUrl": "/profile/horse/6728421/mustang-mozzie/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Railgun",
+            "horseProfileUrl": "/profile/horse/7622791/railgun/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-06-02/896889",
+        "horses": [
+          {
+            "horseName": "Cabot Sq",
+            "horseProfileUrl": "/profile/horse/7298731/cabot-sq/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Listowel",
+    "raceCardsCourseUrl": "/racecards/2025-06-02#listowel",
+    "raceCardsCourseMeetingsUrl": "/racecards/190/listowel/2025-06-02",
+    "going": "GOOD (Watered)",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/190/listowel/2025-06-02/896890",
+        "horses": [
+          {
+            "horseName": "Toor Idaho",
+            "horseProfileUrl": "/profile/horse/7534573/toor-idaho/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Mile End",
+            "horseProfileUrl": "/profile/horse/4403169/mile-end/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/190/listowel/2025-06-02/896891",
+        "horses": [
+          {
+            "horseName": "Damoso",
+            "horseProfileUrl": "/profile/horse/7525300/damoso/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "The Happy Huntsman",
+            "horseProfileUrl": "/profile/horse/7618326/the-happy-huntsman/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/190/listowel/2025-06-02/896892",
+        "horses": [
+          {
+            "horseName": "Sidiriya",
+            "horseProfileUrl": "/profile/horse/3866967/sidiriya/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Classy Cc",
+            "horseProfileUrl": "/profile/horse/58958874/classy-cc/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Lilian Bland",
+            "horseProfileUrl": "/profile/horse/3447068/lilian-bland/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/190/listowel/2025-06-02/896893",
+        "horses": [
+          {
+            "horseName": "Lord Erskine",
+            "horseProfileUrl": "/profile/horse/974071/lord-erskine/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Mercury Mission",
+            "horseProfileUrl": "/profile/horse/4263200/mercury-mission/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Market Rasen",
+    "raceCardsCourseUrl": "/racecards/2025-06-02#market-rasen",
+    "raceCardsCourseMeetingsUrl": "/racecards/35/market-rasen/2025-06-02",
+    "going": "GOOD (GoingStick: 7.5) (Watering) (Rail movements: 1.40, 4.35 & 5.10 +138yds, 2.15 +180yds, 2.50 & 3.25 +186yds and 4.00 +135yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/35/market-rasen/2025-06-02/895240",
+        "horses": [
+          {
+            "horseName": "Tiny Tantrum",
+            "horseProfileUrl": "/profile/horse/3333210/tiny-tantrum/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Not What It Seems",
+            "horseProfileUrl": "/profile/horse/3154602/not-what-it-seems/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wetherby",
+    "raceCardsCourseUrl": "/racecards/2025-06-02#wetherby",
+    "raceCardsCourseMeetingsUrl": "/racecards/87/wetherby/2025-06-02",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 8.5) (Watered)",
+    "weather": "Cloudy",
+    "stallsPosition": "5.5f - Outside; 1m2f - Centre; 7f - Inside",
+    "races": [
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/87/wetherby/2025-06-02/894969",
+        "horses": [
+          {
+            "horseName": "Sinj",
+            "horseProfileUrl": "/profile/horse/7471078/sinj/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/87/wetherby/2025-06-02/894968",
+        "horses": [
+          {
+            "horseName": "Sunshine Soul",
+            "horseProfileUrl": "/profile/horse/5920301/sunshine-soul/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/87/wetherby/2025-06-02/894970",
+        "horses": [
+          {
+            "horseName": "King Of The Jungle",
+            "horseProfileUrl": "/profile/horse/4980113/king-of-the-jungle/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-06-02#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-06-02",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.6) (Watered) (Rail movements: 7.45, 8.15 & 8.45 +17yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "1m - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/93/windsor/2025-06-02/894973",
+        "horses": [
+          {
+            "horseName": "Balzarini",
+            "horseProfileUrl": "/profile/horse/5906636/balzarini/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Capannelle",
+    "raceCardsCourseUrl": "/racecards/2025-06-02#capannelle",
+    "raceCardsCourseMeetingsUrl": "/racecards/275/capannelle/2025-06-02",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

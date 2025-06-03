@@ -1,0 +1,200 @@
+{
+  "date": "2025-06-02",
+  "tips": [
+    {
+      "time": "13:32",
+      "horse": "Chocalho",
+      "isNap": false
+    },
+    {
+      "time": "14:07",
+      "horse": "Rochester Mike",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Heavens Gate",
+      "isNap": false
+    },
+    {
+      "time": "15:17",
+      "horse": "My Kurkum",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Action Plan",
+      "isNap": false
+    },
+    {
+      "time": "16:27",
+      "horse": "Its All Peachy",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Game Point",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Ventress",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Iron Heart",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Dapper Gent",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Letterston Lady",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Gwennie May Jem",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Buxted Reel",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "I'M A Believer",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "La Note Verte",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "North Winterfell",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "It'Sallabouteve",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Shraheen",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Blood Destiny",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Ontheropes",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Angelo Dundee",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Letter Of The Law",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Lazzar",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Scenario",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Twilight Guest",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Renesmee",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Anglesey Lad",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Alondra",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Blue Orbit",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Jettie'S Run",
+      "isNap": true
+    },
+    {
+      "time": "19:15",
+      "horse": "Mythical Composer",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Westridge",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Fravanco",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Vlad",
+      "isNap": true
+    },
+    {
+      "time": "18:30",
+      "horse": "Sinj",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Quirke On Parole",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Fortunate Star",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Bodorgan",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Atomic Mass",
+      "isNap": false
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "date": "2025-06-02",
+  "tips": [
+    {
+      "time": "15:35",
+      "horse": "Banksman",
+      "tipster": "Chris Connolly",
+      "score": "66.8"
+    },
+    {
+      "time": "18:45",
+      "horse": "Jettie's Run",
+      "tipster": "Glendale",
+      "score": "42.3"
+    },
+    {
+      "time": "19:15",
+      "horse": "Strong Warrior",
+      "tipster": "Fortunatus",
+      "score": "32.3"
+    },
+    {
+      "time": "19:15",
+      "horse": "Strong Warrior",
+      "tipster": "Postdata",
+      "score": "29.4"
+    },
+    {
+      "time": "20:45",
+      "horse": "Newfangled",
+      "tipster": "Lambourn",
+      "score": "26.3"
+    },
+    {
+      "time": "14:15",
+      "horse": "Iron Heart",
+      "tipster": "Ratings Hub",
+      "score": "25.5"
+    },
+    {
+      "time": "15:25",
+      "horse": "High Fibre",
+      "tipster": "Rockavon",
+      "score": "21.7"
+    },
+    {
+      "time": "19:45",
+      "horse": "Westridge",
+      "tipster": "Farringdon",
+      "score": "22.1"
+    },
+    {
+      "time": "18:00",
+      "horse": "Vlad",
+      "tipster": "The Brigadier",
+      "score": "17.8"
+    },
+    {
+      "time": "20:45",
+      "horse": "Atlantis Blue",
+      "tipster": "On The Nose",
+      "score": "14.3"
+    },
+    {
+      "time": "18:45",
+      "horse": "Jettie's Run",
+      "tipster": "Lee Sobot",
+      "score": "13.8"
+    },
+    {
+      "time": "20:45",
+      "horse": "Newfangled",
+      "tipster": "Templegate",
+      "score": "9.5"
+    },
+    {
+      "time": "18:30",
+      "horse": "Cotai Belle",
+      "tipster": "The North",
+      "score": "10.1"
+    },
+    {
+      "time": "15:25",
+      "horse": "Letterston Lady",
+      "tipster": "Ben Morgan",
+      "score": "8.3"
+    },
+    {
+      "time": "20:15",
+      "horse": "Trojan Truth",
+      "tipster": "Marlborough",
+      "score": "4.9"
+    },
+    {
+      "time": "18:00",
+      "horse": "Vlad",
+      "tipster": "Newmarket",
+      "score": "1.8"
+    },
+    {
+      "time": "17:00",
+      "horse": "Game Point",
+      "tipster": "Computeform",
+      "score": "0.5"
+    },
+    {
+      "time": "17:40",
+      "horse": "Kalahari Blue",
+      "tipster": "The Judge",
+      "score": "-0.2"
+    },
+    {
+      "time": "16:15",
+      "horse": "Blood Destiny",
+      "tipster": "Mercury",
+      "score": "-1.1"
+    },
+    {
+      "time": "15:35",
+      "horse": "Muy Muy Loco",
+      "tipster": "RP Ratings",
+      "score": "-1.8"
+    },
+    {
+      "time": "19:15",
+      "horse": "Rajaking",
+      "tipster": "Garry Owen",
+      "score": "-2.7"
+    },
+    {
+      "time": "19:15",
+      "horse": "Strong Warrior",
+      "tipster": "Whistler",
+      "score": "-2.8"
+    },
+    {
+      "time": "14:42",
+      "horse": "Deressa",
+      "tipster": "Rory Delargy",
+      "score": "-3.4"
+    },
+    {
+      "time": "20:30",
+      "horse": "Glistening Nights",
+      "tipster": "Dean Kilbryde",
+      "score": "-7.6"
+    },
+    {
+      "time": "15:00",
+      "horse": "Lazzar",
+      "tipster": "Tipman Tips",
+      "score": "-8.4"
+    },
+    {
+      "time": "20:00",
+      "horse": "Opal Storm",
+      "tipster": "Robin Goodfellow",
+      "score": "-11.4"
+    },
+    {
+      "time": "20:15",
+      "horse": "Jimmy Mark",
+      "tipster": "West Country",
+      "score": "-16.1"
+    },
+    {
+      "time": "14:25",
+      "horse": "Bear To Dream",
+      "tipster": "Newsboy",
+      "score": "-15.8"
+    },
+    {
+      "time": "19:15",
+      "horse": "Rajaking",
+      "tipster": "Jon Freeman",
+      "score": "-16.9"
+    },
+    {
+      "time": "17:15",
+      "horse": "Lynwood Lad",
+      "tipster": "Melissa Jones",
+      "score": "-24.9"
+    },
+    {
+      "time": "19:15",
+      "horse": "So Darn Hot",
+      "tipster": "Jason Heavey",
+      "score": "-24.0"
+    },
+    {
+      "time": "19:00",
+      "horse": "Catton Lady",
+      "tipster": "Matt Polley",
+      "score": "-26.3"
+    },
+    {
+      "time": "20:45",
+      "horse": "Newfangled",
+      "tipster": "Spotlight",
+      "score": "-27.6"
+    },
+    {
+      "time": "17:40",
+      "horse": "Kalahari Blue",
+      "tipster": "Luke Tucker",
+      "score": "-30.9"
+    },
+    {
+      "time": "15:05",
+      "horse": "It'sallabouteve",
+      "tipster": "Brian Flanagan",
+      "score": "-32.4"
+    },
+    {
+      "time": "15:25",
+      "horse": "Icare Allen",
+      "tipster": "Karl Hedley",
+      "score": "-38.7"
+    },
+    {
+      "time": "19:45",
+      "horse": "Silver Gunn",
+      "tipster": "Ross Shepherd",
+      "score": "-40.6"
+    },
+    {
+      "time": "15:25",
+      "horse": "High Fibre",
+      "tipster": "The Score",
+      "score": "-48.4"
+    },
+    {
+      "time": "15:35",
+      "horse": "Muy Muy Loco",
+      "tipster": "Moorestyle",
+      "score": "-45.8"
+    },
+    {
+      "time": "18:45",
+      "horse": "Jettie's Run",
+      "tipster": "Jeffrey Ross",
+      "score": "-48.9"
+    },
+    {
+      "time": "16:45",
+      "horse": "Local Bay",
+      "tipster": "The Punt",
+      "score": "-48.2"
+    },
+    {
+      "time": "20:30",
+      "horse": "Hamlet's Night",
+      "tipster": "Rob Wright",
+      "score": "-53.4"
+    },
+    {
+      "time": "16:27",
+      "horse": "Ob La Di",
+      "tipster": "Jim Delahunt",
+      "score": "-55.7"
+    },
+    {
+      "time": "20:30",
+      "horse": "Bodorgan",
+      "tipster": "The Duke",
+      "score": "-57.7"
+    },
+    {
+      "time": "14:25",
+      "horse": "Match Anthem",
+      "tipster": "Chris Wright",
+      "score": "-56.2"
+    },
+    {
+      "time": "16:10",
+      "horse": "Cryptos Dream",
+      "tipster": "Ian Gaughran",
+      "score": "-65.7"
+    },
+    {
+      "time": "15:25",
+      "horse": "Donnie Azoff",
+      "tipster": "Steve Mullington",
+      "score": "-68.7"
+    },
+    {
+      "time": "14:07",
+      "horse": "Magic Charm",
+      "tipster": "Rory Paddock",
+      "score": "-71.1"
+    },
+    {
+      "time": "20:00",
+      "horse": "Golden Rainbow",
+      "tipster": "Andrew Mount",
+      "score": "-71.3"
+    },
+    {
+      "time": "16:15",
+      "horse": "Blood Destiny",
+      "tipster": "Sam Hardy",
+      "score": "-67.6"
+    },
+    {
+      "time": "18:45",
+      "horse": "Jettie's Run",
+      "tipster": "Adrian Wall",
+      "score": "-86.0"
+    }
+  ]
+}
