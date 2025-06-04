@@ -19,6 +19,28 @@
         ]
       },
       {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/178/curragh/2025-06-04/896919",
+        "horses": [
+          {
+            "horseName": "Parkside Lad",
+            "horseProfileUrl": "/profile/horse/7583037/parkside-lad/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:50",
+        "raceCardUrl": "/racecards/178/curragh/2025-06-04/896920",
+        "horses": [
+          {
+            "horseName": "On The Way",
+            "horseProfileUrl": "/profile/horse/6889495/on-the-way/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
         "raceTime": "6:55",
         "raceCardUrl": "/racecards/178/curragh/2025-06-04/896922",
         "horses": [
@@ -28,6 +50,48 @@
             "raceNumber": "(12)"
           }
         ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/178/curragh/2025-06-04/896923",
+        "horses": [
+          {
+            "horseName": "Chally Chute",
+            "horseProfileUrl": "/profile/horse/4219788/chally-chute/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Vischio",
+            "horseProfileUrl": "/profile/horse/2941362/vischio/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "En Or",
+            "horseProfileUrl": "/profile/horse/3617894/en-or/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Riviera Queen",
+            "horseProfileUrl": "/profile/horse/5218328/riviera-queen/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/178/curragh/2025-06-04/896925",
+        "horses": [
+          {
+            "horseName": "White Clover",
+            "horseProfileUrl": "/profile/horse/5806677/white-clover/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Dynamic Force",
+            "horseProfileUrl": "/profile/horse/3575318/dynamic-force/",
+            "raceNumber": "(8)"
+          }
+        ]
       }
     ]
   },
@@ -35,34 +99,108 @@
     "courseName": "Newton Abbot",
     "raceCardsCourseUrl": "/racecards/2025-06-04#newton-abbot",
     "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-06-04",
-    "going": "GOOD (GoingStick: 6.6) (Watered) (Rail movements: 2.05 +44yds, 2.35 +45yds, 3.05, +34yds, 3.35 +51yds and 4.05, 4.35 & 5.05 +29yds)",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.9) (Watered) (Rail movements: 2.05 +44yds, 2.35 +45yds, 3.05 +34yds, 3.35 +51yds and 4.05, 4.35 & 5.05 +29yds)",
     "weather": "Scattered showers",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/39/newton-abbot/2025-06-04/895258",
+        "horses": [
+          {
+            "horseName": "Spent A Fortune",
+            "horseProfileUrl": "/profile/horse/7583070/spent-a-fortune/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Nottingham",
     "raceCardsCourseUrl": "/racecards/2025-06-04#nottingham",
     "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-06-04",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.3) (Outer track) (Rail Movements: 3.52, 4.22, 4.55 & 5.30 +6yds)",
+    "going": "GOOD (GoingStick: 6.9) (Outer track) (Rail Movements: 3.52, 4.22, 4.55 & 5.30 +6yds)",
     "weather": "Mostly cloudy",
     "stallsPosition": "1m2f - Inside; Remainder - Centre",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:52",
+        "raceCardUrl": "/racecards/40/nottingham/2025-06-04/894995",
+        "horses": [
+          {
+            "horseName": "Gleaming Echo",
+            "horseProfileUrl": "/profile/horse/7404607/gleaming-echo/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Thehunnebelllegacy",
+            "horseProfileUrl": "/profile/horse/7627184/thehunnebelllegacy/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:22",
+        "raceCardUrl": "/racecards/40/nottingham/2025-06-04/894991",
+        "horses": [
+          {
+            "horseName": "Desperate Dan",
+            "horseProfileUrl": "/profile/horse/5900731/desperate-dan/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/40/nottingham/2025-06-04/894992",
+        "horses": [
+          {
+            "horseName": "Landing Board",
+            "horseProfileUrl": "/profile/horse/6560246/landing-board/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Ripon",
     "raceCardsCourseUrl": "/racecards/2025-06-04#ripon",
     "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-06-04",
-    "going": "GOOD (GoingStick: 7.7) (Rail movements: 6.50, 7.22 & 8.52 +12yds)",
+    "going": "GOOD (GoingStick: 7.8) (Rail movements: 6.50, 7.22 & 8.52 +12yds)",
     "weather": "Mostly cloudy",
     "stallsPosition": "Straight - Stands' side; Round - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "6:50",
+        "raceCardUrl": "/racecards/49/ripon/2025-06-04/895001",
+        "horses": [
+          {
+            "horseName": "Sweet Princess",
+            "horseProfileUrl": "/profile/horse/6111574/sweet-princess/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:22",
+        "raceCardUrl": "/racecards/49/ripon/2025-06-04/894999",
+        "horses": [
+          {
+            "horseName": "Ey Up Its Jazz",
+            "horseProfileUrl": "/profile/horse/3597221/ey-up-its-jazz/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Warwick",
     "raceCardsCourseUrl": "/racecards/2025-06-04#warwick",
     "raceCardsCourseMeetingsUrl": "/racecards/85/warwick/2025-06-04",
-    "going": "GOOD (GoingStick: 7.0) (Watering) (Inner Hurdle track)",
+    "going": "GOOD (GoingStick: 7.0) (Watering) (Rail movements: 6.00 -61yds, 6.35, 7.10 & 8.10 -31yds) (Inner Hurdle track)",
     "weather": "Mostly cloudy",
     "stallsPosition": "",
     "races": [
@@ -74,6 +212,47 @@
             "horseName": "Moves Like Mason",
             "horseProfileUrl": "/profile/horse/6701935/moves-like-mason/",
             "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Doomben",
+    "raceCardsCourseUrl": "/racecards/2025-06-04#doomben",
+    "raceCardsCourseMeetingsUrl": "/racecards/467/doomben/2025-06-04",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:18",
+        "raceCardUrl": "/racecards/467/doomben/2025-06-04/897038",
+        "horses": [
+          {
+            "horseName": "Emirate",
+            "horseProfileUrl": "/profile/horse/58950353/emirate/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Goodlucktome",
+            "horseProfileUrl": "/profile/horse/6864521/goodlucktome/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Angel Capital",
+            "horseProfileUrl": "/profile/horse/5864740/angel-capital/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Merchant Gold",
+            "horseProfileUrl": "/profile/horse/7547249/merchant-gold/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Heavenly Impact",
+            "horseProfileUrl": "/profile/horse/5929099/heavenly-impact/",
+            "raceNumber": "(20)"
           }
         ]
       }

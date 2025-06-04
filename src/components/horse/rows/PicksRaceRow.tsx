@@ -132,6 +132,86 @@ export function PicksRaceRow({
     };
   });
 
+  const comfortableWithinDays = race.horses.map((horse) => {
+    const formObj = horse.formObj?.form || [];
+
+    const comfortableWithinDaysFormObj = formObj
+      .map((x) => {
+        const lastRaceObj = x || {};
+        const dateOfLastRace = lastRaceObj?.raceDatetime;
+        const dateOfRace = new Date(date);
+        const days = dateOfLastRace
+          ? Math.ceil(
+              Math.abs(
+                dateOfRace.getTime() - new Date(dateOfLastRace).getTime()
+              ) /
+                (1000 * 60 * 60 * 24)
+            )
+          : null;
+        const rpCloseUpComment = lastRaceObj?.rpCloseUpComment || "";
+        const comfortableTerms = [
+          "comfortable",
+          "well clear",
+          "easily",
+          "went clear",
+          "readily",
+          "kept on well",
+          "won going away",
+        ];
+        const matchedTerms = comfortableTerms.filter((term) =>
+          rpCloseUpComment.toLowerCase().includes(term)
+        );
+        if (matchedTerms.length > 0) {
+          return {
+            name: horseNameToKey(horse.name),
+            rpCloseUpComment,
+            days,
+            date: dateOfLastRace
+              ? new Date(dateOfLastRace)
+                  .toLocaleDateString("en-GB", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "2-digit",
+                  })
+                  .replace(/ /g, " ")
+              : null,
+            outcome: lastRaceObj?.raceOutcomeCode,
+            distance: lastRaceObj?.distanceFurlong,
+            distanceToWinner: lastRaceObj?.distanceToWinner,
+          };
+        }
+      })
+      ?.filter((x) => {
+        const days = x?.days;
+        return days && days !== null && days > 0
+          ? days < DAYS_THRESHOLD
+          : false;
+      })
+      .filter((x) => x !== undefined)
+      ?.filter((x) => {
+        const { outcome, distance, distanceToWinner } = x;
+
+        const distanceToWinnerGood = isGoodDistanceToWinner(
+          distance,
+          distanceToWinner || ""
+        );
+
+        const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
+
+        return isGoodOutcome;
+      });
+
+    const comfortableWithinDaysCount = comfortableWithinDaysFormObj.length;
+    const hasComfortableWithinDays = comfortableWithinDaysCount > 0;
+
+    return {
+      name: horseNameToKey(horse.name),
+      comfortableWithinDaysFormObj,
+      comfortableWithinDaysCount,
+      hasComfortableWithinDays,
+    };
+  });
+
   const eyecatcherWithinDays = race.horses.map((horse) => {
     const formObj = horse.formObj?.form || [];
 
@@ -235,6 +315,7 @@ export function PicksRaceRow({
           "waiting for",
           "nowhere to go",
           "boxed in",
+          "waiting for room",
         ];
         const matchedTerms = hamperedTerms.filter((term) =>
           rpCloseUpComment.toLowerCase().includes(term)
@@ -2292,6 +2373,10 @@ export function PicksRaceRow({
               (x) => horseNameToKey(x.name) === horseNameToKey(name)
             );
 
+            const horseComfortableWithinDaysObj = comfortableWithinDays?.find(
+              (x) => horseNameToKey(x.name) === horseNameToKey(name)
+            );
+
             // const horsehas2ndPlaceLastTimeOutObj = has2ndPlaceLastTimeOut?.find(
             //   (x) => horseNameToKey(x.name) === horseNameToKey(name)
             // );
@@ -2329,6 +2414,22 @@ export function PicksRaceRow({
                 })
                 .filter(Boolean)
                 .join("\n"),
+              `Comfortable: ${
+                horseComfortableWithinDaysObj?.hasComfortableWithinDays
+                  ? "Yes"
+                  : "No"
+              }`,
+              horseComfortableWithinDaysObj?.comfortableWithinDaysFormObj
+                ?.map((x) => {
+                  return (
+                    `<span style='color: #666'>${x?.date} (${x?.days}) (${x?.outcome}, ${x?.distance}, ${x?.distanceToWinner}): </span>` +
+                    x?.rpCloseUpComment
+                  );
+                })
+                .filter(Boolean)
+                .join("\n"),
+
+              // `Hampered: ${
               // `Hampered: ${
               //   horsehadHamperedLastTimeOutObj?.hampered
               //     ? "Yes" +
@@ -2452,7 +2553,8 @@ export function PicksRaceRow({
                   rpPredGood &&
                   aiGood &&
                   (horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                    horseHamperedObj?.hasHamperedWithinDays)
+                    horseHamperedObj?.hasHamperedWithinDays ||
+                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
                 //highlight3={countGood}
                 showOnlyBest={showOnlyBest}
