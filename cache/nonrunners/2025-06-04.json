@@ -1,0 +1,100 @@
+[
+  {
+    "courseName": "Curragh",
+    "raceCardsCourseUrl": "/racecards/2025-06-04#curragh",
+    "raceCardsCourseMeetingsUrl": "/racecards/178/curragh/2025-06-04",
+    "going": "GOOD (Stands' side track)",
+    "weather": "Scattered showers",
+    "stallsPosition": "Sprints - Centre",
+    "races": [
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/178/curragh/2025-06-04/896918",
+        "horses": [
+          {
+            "horseName": "Green Soul",
+            "horseProfileUrl": "/profile/horse/7204902/green-soul/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:55",
+        "raceCardUrl": "/racecards/178/curragh/2025-06-04/896922",
+        "horses": [
+          {
+            "horseName": "Onaqui",
+            "horseProfileUrl": "/profile/horse/7466849/onaqui/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newton Abbot",
+    "raceCardsCourseUrl": "/racecards/2025-06-04#newton-abbot",
+    "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-06-04",
+    "going": "GOOD (GoingStick: 6.6) (Watered) (Rail movements: 2.05 +44yds, 2.35 +45yds, 3.05, +34yds, 3.35 +51yds and 4.05, 4.35 & 5.05 +29yds)",
+    "weather": "Scattered showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-06-04#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-06-04",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.3) (Outer track) (Rail Movements: 3.52, 4.22, 4.55 & 5.30 +6yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "1m2f - Inside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Ripon",
+    "raceCardsCourseUrl": "/racecards/2025-06-04#ripon",
+    "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-06-04",
+    "going": "GOOD (GoingStick: 7.7) (Rail movements: 6.50, 7.22 & 8.52 +12yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Warwick",
+    "raceCardsCourseUrl": "/racecards/2025-06-04#warwick",
+    "raceCardsCourseMeetingsUrl": "/racecards/85/warwick/2025-06-04",
+    "going": "GOOD (GoingStick: 7.0) (Watering) (Inner Hurdle track)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:35",
+        "raceCardUrl": "/racecards/85/warwick/2025-06-04/895263",
+        "horses": [
+          {
+            "horseName": "Moves Like Mason",
+            "horseProfileUrl": "/profile/horse/6701935/moves-like-mason/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-06-04#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-06-04",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Saratoga",
+    "raceCardsCourseUrl": "/racecards/2025-06-04#saratoga",
+    "raceCardsCourseMeetingsUrl": "/racecards/445/saratoga/2025-06-04",
+    "going": "TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

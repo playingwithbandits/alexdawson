@@ -1,0 +1,160 @@
+{
+  "date": "2025-06-04",
+  "tips": [
+    {
+      "time": "14:05",
+      "horse": "Knights Affair",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Illogical Logic",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Fever Dream",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "All Under Control",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Stream Of Stars",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Seraphic",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Usyk",
+      "isNap": false
+    },
+    {
+      "time": "14:22",
+      "horse": "Side Deal",
+      "isNap": false
+    },
+    {
+      "time": "14:52",
+      "horse": "Zelaina",
+      "isNap": false
+    },
+    {
+      "time": "15:52",
+      "horse": "Dream Illusion",
+      "isNap": false
+    },
+    {
+      "time": "16:22",
+      "horse": "Boyfriend",
+      "isNap": true
+    },
+    {
+      "time": "16:55",
+      "horse": "Mukhtalif",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "La Fleur Petrus",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Amadeus Mozart",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Evening Blues",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Stella Alpina",
+      "isNap": true
+    },
+    {
+      "time": "18:20",
+      "horse": "Red Evolution",
+      "isNap": false
+    },
+    {
+      "time": "18:55",
+      "horse": "Royal Hollow",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Tribal Star",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Hugo'S Girl",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Velvet Skies",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Hostile Hotelier",
+      "isNap": false
+    },
+    {
+      "time": "18:35",
+      "horse": "Ice In The Veins",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Byzantium",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Shadows In The Sky",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Okavango Delta",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Great Profit",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "Orionis",
+      "isNap": false
+    },
+    {
+      "time": "19:22",
+      "horse": "Saisons D'Or",
+      "isNap": false
+    },
+    {
+      "time": "19:52",
+      "horse": "Emperor Caradoc",
+      "isNap": false
+    },
+    {
+      "time": "20:52",
+      "horse": "Precious Spartan",
+      "isNap": false
+    }
+  ]
+}

@@ -2434,9 +2434,7 @@ export function PicksRaceRow({
                 //   sharpRatingGood &&
                 //   rpPredGood
                 // }
-                highlight1={
-                  countGood && rpPredGood && aiGood && sharpRatingGood
-                }
+                highlight1={countGood && rpPredGood && aiGood}
                 highlight2={
                   countGood &&
                   rpPredGood &&
