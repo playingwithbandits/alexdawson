@@ -159,13 +159,13 @@ export function PicksRaceRow({
           "easily",
           "went clear",
           "readily",
-          "kept on well",
+          "well",
           "won going away",
           "pushed out",
           "cosily",
           "always doing enough",
           "gamely",
-          "kept on",
+
           "readily",
           "comfortably",
           "clear",
@@ -365,7 +365,6 @@ export function PicksRaceRow({
           "jammed",
           "trapped",
           "stuck",
-          "held up",
           "hit",
 
           "barged",
