@@ -373,11 +373,31 @@ export function PicksRaceRow({
 
           "squeeze",
           "unlucky",
+          "did well",
         ];
         const matchedTerms = hamperedTerms.filter((term) =>
           rpCloseUpComment.toLowerCase().includes(term)
         );
-        if (matchedTerms.length > 0) {
+
+        const alsoBadTerms = [
+          "no extra",
+          "never better",
+          "never dangerous",
+          "found little",
+          "no improvement",
+          "no impression",
+          "weakened",
+          "no chance",
+          "outpaced",
+          "hung",
+        ];
+
+        const matchedAlsoBadTerms = alsoBadTerms.filter((term) =>
+          rpCloseUpComment.toLowerCase().includes(term)
+        );
+
+        if (matchedTerms.length > 0 && matchedAlsoBadTerms.length === 0) {
+          //console.log("FilteredComment: ", rpCloseUpComment);
           return {
             name: horseNameToKey(horse.name),
             rpCloseUpComment,
