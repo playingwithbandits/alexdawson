@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
-import { Meeting, Race, Horse } from "@/types/racing";
+import { Meeting, Race, Horse, FormEntry } from "@/types/racing";
 
 async function extractFormComments() {
   const racingCacheDir = path.join(process.cwd(), "cache", "racing");
@@ -31,9 +31,12 @@ async function extractFormComments() {
     data.forEach((meeting: Meeting) => {
       meeting.races?.forEach((race: Race) => {
         race.horses?.forEach((horse: Horse) => {
-          if (horse.formObj?.form?.[0]?.rpCloseUpComment) {
-            allComments.push(horse.formObj.form[0].rpCloseUpComment);
-          }
+          const formObj = horse.formObj?.form || [];
+          formObj.forEach((form: FormEntry) => {
+            if (form.rpCloseUpComment) {
+              allComments.push(form.rpCloseUpComment);
+            }
+          });
         });
       });
     });
