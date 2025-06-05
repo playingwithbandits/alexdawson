@@ -42,9 +42,9 @@ interface PicksRaceRowProps {
 }
 
 const THRESHOLD = 0.6;
-const DAYS_THRESHOLD_COMFORTABLE = 30;
-const DAYS_THRESHOLD_EYECATCHER = 180;
-const DAYS_THRESHOLD_HAMPERED = 60;
+const DAYS_THRESHOLD_COMFORTABLE = 14;
+const DAYS_THRESHOLD_EYECATCHER = 365;
+const DAYS_THRESHOLD_HAMPERED = 30;
 
 const goodFormCode = (code: string, runners: number) => {
   if (runners < 5) {

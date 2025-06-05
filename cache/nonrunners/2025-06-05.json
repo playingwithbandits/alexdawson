@@ -1,0 +1,132 @@
+[
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-05#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-06-05",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "6:05",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-06-05/895363",
+        "horses": [
+          {
+            "horseName": "New York Bay",
+            "horseProfileUrl": "/profile/horse/5069220/new-york-bay/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-06-05#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-06-05",
+    "going": "GOOD TO SOFT (GoingStick: 7.1) (Rail movements: 6.15 & 9.00 -10yds, 7.20 -7yds and 7.55 -14yds)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:55",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-06-05/895270",
+        "horses": [
+          {
+            "horseName": "Pooroldmackley",
+            "horseProfileUrl": "/profile/horse/5630673/pooroldmackley/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-06-05/895269",
+        "horses": [
+          {
+            "horseName": "Jaitroplaclasse",
+            "horseProfileUrl": "/profile/horse/4664793/jaitroplaclasse/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hamilton",
+    "raceCardsCourseUrl": "/racecards/2025-06-05#hamilton",
+    "raceCardsCourseMeetingsUrl": "/racecards/22/hamilton/2025-06-05",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.6) (Rail movements: 3.12, 4.12 & 5.17 +8yds)",
+    "weather": "Light rain",
+    "stallsPosition": "1m5f, 1m4f, 6f & 5f - Stands side;  1m1f - Inside",
+    "races": [
+      {
+        "raceTime": "5:17",
+        "raceCardUrl": "/racecards/22/hamilton/2025-06-05/895010",
+        "horses": [
+          {
+            "horseName": "Hot Team",
+            "horseProfileUrl": "/profile/horse/2080896/hot-team/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Parish Record",
+            "horseProfileUrl": "/profile/horse/5099994/parish-record/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-06-05#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-06-05",
+    "going": "GOOD",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-05#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-06-05",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "1m - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-06-05/895366",
+        "horses": [
+          {
+            "horseName": "Mc Loven",
+            "horseProfileUrl": "/profile/horse/5132136/mc-loven/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Uttoxeter",
+    "raceCardsCourseUrl": "/racecards/2025-06-05#uttoxeter",
+    "raceCardsCourseMeetingsUrl": "/racecards/84/uttoxeter/2025-06-05",
+    "going": "GOOD (GoingStick: Chase 6.9, Hurdle 7.0) (Watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-06-05/895273",
+        "horses": [
+          {
+            "horseName": "Ernest Gray",
+            "horseProfileUrl": "/profile/horse/3417365/ernest-gray/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  }
+]

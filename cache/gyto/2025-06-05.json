@@ -1,0 +1,200 @@
+{
+  "date": "2025-06-05",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Deep Purple",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Ernest Gray",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Lady Jago",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Lipa K",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Salley Gardens",
+      "isNap": false
+    },
+    {
+      "time": "16:33",
+      "horse": "Auntie Maggie",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Reel Rosie",
+      "isNap": false
+    },
+    {
+      "time": "14:12",
+      "horse": "Blue Nguru",
+      "isNap": false
+    },
+    {
+      "time": "14:42",
+      "horse": "Parisiac",
+      "isNap": false
+    },
+    {
+      "time": "15:12",
+      "horse": "Spanish Hustle",
+      "isNap": false
+    },
+    {
+      "time": "16:12",
+      "horse": "Bubbles Wonky",
+      "isNap": false
+    },
+    {
+      "time": "16:43",
+      "horse": "Sir Garfield",
+      "isNap": false
+    },
+    {
+      "time": "17:17",
+      "horse": "Arch Legend",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Dubai Harbour",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Blewburton",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Threatening",
+      "isNap": true
+    },
+    {
+      "time": "16:25",
+      "horse": "Thoughtful Gift",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Mesaafi",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Minerva",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Shoot To Kill",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Acapulco Bay",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Green Impact",
+      "isNap": false
+    },
+    {
+      "time": "18:25",
+      "horse": "Pierre Royal",
+      "isNap": false
+    },
+    {
+      "time": "18:55",
+      "horse": "Pillar Of Hope",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Ard Na Mara",
+      "isNap": false
+    },
+    {
+      "time": "20:05",
+      "horse": "Wertpol",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Eclipser",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Nifty",
+      "isNap": true
+    },
+    {
+      "time": "18:05",
+      "horse": "Sullivan Bay",
+      "isNap": false
+    },
+    {
+      "time": "18:35",
+      "horse": "Yuvraaj",
+      "isNap": false
+    },
+    {
+      "time": "19:07",
+      "horse": "Sea The Wonder",
+      "isNap": false
+    },
+    {
+      "time": "20:17",
+      "horse": "Ornately",
+      "isNap": false
+    },
+    {
+      "time": "20:47",
+      "horse": "City Captain",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Do It Like A Dude",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Unspeakable",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Gavin",
+      "isNap": false
+    },
+    {
+      "time": "19:55",
+      "horse": "Ferret Jeeter",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "You Say Nothing",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Twist Of Fatecatch",
+      "isNap": false
+    }
+  ]
+}
