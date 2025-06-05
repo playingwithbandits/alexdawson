@@ -80,7 +80,7 @@ export function HorseNameRow({
     return <></>;
   }
 
-  const isAGoodBet = highlight1 || highlight2 || highlight3 || highlight4;
+  const isAGoodBet = highlight4; //highlight1 || highlight2 || highlight3 || highlight4;
   if (showOnlyBest && !isAGoodBet) {
     return <></>;
   }
