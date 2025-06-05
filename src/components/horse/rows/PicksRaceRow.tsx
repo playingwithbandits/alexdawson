@@ -42,7 +42,9 @@ interface PicksRaceRowProps {
 }
 
 const THRESHOLD = 0.6;
-const DAYS_THRESHOLD = 32;
+const DAYS_THRESHOLD_COMFORTABLE = 30;
+const DAYS_THRESHOLD_EYECATCHER = 180;
+const DAYS_THRESHOLD_HAMPERED = 60;
 
 const goodFormCode = (code: string, runners: number) => {
   if (runners < 5) {
@@ -184,7 +186,7 @@ export function PicksRaceRow({
       ?.filter((x) => {
         const days = x?.days;
         return days && days !== null && days > 0
-          ? days < DAYS_THRESHOLD
+          ? days < DAYS_THRESHOLD_COMFORTABLE
           : false;
       })
       .filter((x) => x !== undefined)
@@ -256,7 +258,7 @@ export function PicksRaceRow({
       ?.filter((x) => {
         const days = x?.days;
         return days && days !== null && days > 0
-          ? days < DAYS_THRESHOLD
+          ? days < DAYS_THRESHOLD_EYECATCHER
           : false;
       })
       .filter((x) => x !== undefined)
@@ -343,7 +345,7 @@ export function PicksRaceRow({
       ?.filter((x) => {
         const days = x?.days;
         return days && days !== null && days > 0
-          ? days < DAYS_THRESHOLD
+          ? days < DAYS_THRESHOLD_HAMPERED
           : false;
       })
       .filter((x) => x !== undefined)
