@@ -346,15 +346,23 @@ export async function GET(
   { params }: { params: { date: string } }
 ) {
   const date = await Promise.resolve(params.date);
+  console.log("🔍 Processing date:", date);
 
   const cacheFile = path.join(CACHE_DIR, `${date}.json`);
+  console.log("📁 Cache file path:", cacheFile);
+
   try {
     // Try to read from cache first
+    console.log("🔍 Checking cache...");
     const cachedData = await fs.readFile(cacheFile, "utf-8");
+    console.log("✅ Found cached data");
     return NextResponse.json(JSON.parse(cachedData));
   } catch {
+    console.log("❌ No cache found");
     if (date) {
+      console.log("🔄 Fetching fresh data...");
       const { tips, olbgRaceInfoArr } = await fetchAndParseTips(params.date);
+      console.log("✅ Successfully fetched tips");
 
       const olbgTips: OLBGTips = {
         date,
@@ -363,8 +371,10 @@ export async function GET(
       };
 
       //Save to cache
+      console.log("💾 Saving to cache...");
       await ensureDirectoryExists(CACHE_DIR);
       await fs.writeFile(cacheFile, JSON.stringify(olbgTips, null, 2));
+      console.log("✅ Successfully saved to cache");
 
       // Also save to next day's cache file if it doesn't exist
       // const nextDate = new Date(date);
@@ -382,6 +392,7 @@ export async function GET(
       return NextResponse.json(olbgTips);
     }
 
+    console.log("⚠️ No date provided, returning empty data");
     return NextResponse.json({
       date,
       tips: [],
@@ -395,13 +406,17 @@ export async function DELETE(
   { params }: { params: { date: string } }
 ) {
   const date = await Promise.resolve(params.date);
+  console.log("🗑️ Attempting to delete cache for date:", date);
+
   const cacheFile = path.join(CACHE_DIR, `${date}.json`);
+  console.log("📁 Cache file to delete:", cacheFile);
 
   try {
     await fs.unlink(cacheFile);
+    console.log("✅ Successfully deleted cache file");
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Error deleting OLBG data:", error);
+    console.error("❌ Error deleting OLBG data:", error);
     return NextResponse.json(
       { error: "Failed to delete OLBG data" },
       { status: 500 }

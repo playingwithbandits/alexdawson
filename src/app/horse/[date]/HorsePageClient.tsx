@@ -298,7 +298,9 @@ export function HorsePageClient({ date }: { date: string }) {
           console.log("❌ No cache found, fetching fresh data");
 
           const response = await fetch(
-            `/getP.php?q=${encodeURIComponent(getPageUrl(date))}`
+            `https://alexdawson.co.uk/getP.php?q=${encodeURIComponent(
+              getPageUrl(date)
+            )}`
           );
 
           console.log("🔍 Fetching from URL:", getPageUrl(date));
@@ -311,11 +313,16 @@ export function HorsePageClient({ date }: { date: string }) {
           const html = await response.text();
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, "text/html");
+
+          console.log("🔍 Parsed HTML data", response, doc, html);
           const meetingElements = doc.querySelectorAll(
             ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))"
           );
 
-          console.log(`Found ${meetingElements.length} total courses`);
+          console.log(
+            `Found ${meetingElements.length} total courses`,
+            meetingElements
+          );
           const ukElements = Array.from(meetingElements).filter((element) => {
             const courseName = placeToPlaceKey(
               element

@@ -20,8 +20,9 @@ export async function POST(request: Request) {
 
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
+    console.log("✅ Successfully parsed HTML data", html);
     const elements = doc.querySelectorAll(".RC-accordion");
-    console.log(`🔍 Found ${elements.length} total courses in HTML`);
+    console.log(`🔍 Found ${elements.length} total courses in HTML`, elements);
 
     // Filter for UK courses only
     console.log("🏇 Starting course filtering");
@@ -67,3 +68,4 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
+}
