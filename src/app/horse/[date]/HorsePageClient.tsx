@@ -301,6 +301,9 @@ export function HorsePageClient({ date }: { date: string }) {
             `/getP.php?q=${encodeURIComponent(getPageUrl(date))}`
           );
 
+          console.log("🔍 Fetching from URL:", getPageUrl(date));
+          console.log("🌐 Response status:", response.status);
+
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -347,8 +350,8 @@ export function HorsePageClient({ date }: { date: string }) {
           console.log("🔍 Meeting elements:", ukElements);
 
           const parsedMeetings = await parseMeetings(Array.from(ukElements));
-          //console.log("✨ Successfully parsed meetings data");
-          //console.log("📝 Saving to cache for date:", date);
+          console.log("✨ Successfully parsed meetings data");
+          console.log("📝 Saving to cache for date:", date);
 
           // Save to cache file
           await fetch(`/api/racing?date=${date}`, {
@@ -358,11 +361,11 @@ export function HorsePageClient({ date }: { date: string }) {
             },
             body: JSON.stringify(parsedMeetings),
           });
-          //console.log("💾 Cache saved successfully");
+          console.log("💾 Cache saved successfully");
 
           setMeetings(parsedMeetings);
         } else {
-          //console.log("📦 Using cached data");
+          console.log("📦 Using cached data");
           setMeetings(data);
         }
       } catch (err) {
