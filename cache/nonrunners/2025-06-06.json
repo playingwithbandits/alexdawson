@@ -3,7 +3,7 @@
     "courseName": "Bangor-on-Dee",
     "raceCardsCourseUrl": "/racecards/2025-06-06#bangor-on-dee",
     "raceCardsCourseMeetingsUrl": "/racecards/4/bangor-on-dee/2025-06-06",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.1) (Watering) (Rail movements: 1.40, 3.30 & 4.10 +92yds, 2.15 & 2.50 +64yds and 4.40 +116yds)",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.1) (Watered) (Rail movements: 1.40, 3.30 & 4.10 +92yds, 2.15 & 2.50 +64yds and 4.40 +116yds)",
     "weather": "Light rain",
     "stallsPosition": "",
     "races": []
@@ -15,7 +15,19 @@
     "going": "GOOD TO FIRM, Good in places (GoingStick: 7.1)",
     "weather": "Light rain",
     "stallsPosition": "1m & 1m6f - Inside; 1m2f - Outside; Sprints - Centre",
-    "races": []
+    "races": [
+      {
+        "raceTime": "6:20",
+        "raceCardUrl": "/racecards/5/bath/2025-06-06/895011",
+        "horses": [
+          {
+            "horseName": "Coyy",
+            "horseProfileUrl": "/profile/horse/7205111/coyy/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Clonmel",
@@ -39,7 +51,7 @@
     "courseName": "Epsom",
     "raceCardsCourseUrl": "/racecards/2025-06-06#epsom",
     "raceCardsCourseMeetingsUrl": "/racecards/17/epsom/2025-06-06",
-    "going": "GOOD (GoingStick: 6.9) (Watered) (Rail movements: 1.30 & 5.10 +11yds, 2.05 +9yds and 2.40, 3.15, 4.00 & 4.35 +14yds)",
+    "going": "GOOD, Good to soft in places (Rail movements: 1.30 & 5.10 +11yds, 2.05 +9yds and 2.40, 3.15, 4.00 & 4.35 +14yds)",
     "weather": "Light rain",
     "stallsPosition": "6f - Outside; 1m4f - Centre; Remainder - Inside",
     "races": []
@@ -57,10 +69,22 @@
     "courseName": "Goodwood",
     "raceCardsCourseUrl": "/racecards/2025-06-06#goodwood",
     "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-06-06",
-    "going": "GOOD (GoingStick: 7.3) (Rail Movements: 5.25, 5.59, 7.09 & 7.44 +10yds and 8.18 +5yds)",
+    "going": "GOOD (GoingStick: 7.1) (Rail Movements: 5.25, 5.59, 7.09 & 7.44 +10yds and 8.18 +5yds)",
     "weather": "Light rain",
     "stallsPosition": "1m1f - Inside; 1m4f - Outside; Remainder - Centre",
-    "races": []
+    "races": [
+      {
+        "raceTime": "7:09",
+        "raceCardUrl": "/racecards/21/goodwood/2025-06-06/895023",
+        "horses": [
+          {
+            "horseName": "Mighty Ruler",
+            "horseProfileUrl": "/profile/horse/6000780/mighty-ruler/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Thirsk",
