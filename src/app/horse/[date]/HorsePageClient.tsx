@@ -298,8 +298,10 @@ export function HorsePageClient({ date }: { date: string }) {
           console.log("❌ No cache found, fetching fresh data");
 
           const response = await fetch(
-            `https://alexdawson.co.uk/getP.php?q=${encodeURIComponent(
-              getPageUrl(date)
+            `/api/racing/proxy?url=${encodeURIComponent(
+              `https://alexdawson.co.uk/getP.php?q=${encodeURIComponent(
+                getPageUrl(date)
+              )}`
             )}`
           );
 

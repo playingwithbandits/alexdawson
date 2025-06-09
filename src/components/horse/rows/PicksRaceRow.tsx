@@ -368,7 +368,6 @@ export function PicksRaceRow({
           "hit",
 
           "barged",
-          "bumped",
           "bunched",
 
           "squeeze",
@@ -390,6 +389,7 @@ export function PicksRaceRow({
           "no chance",
           "outpaced",
           "hung",
+          "weak",
         ];
 
         const matchedAlsoBadTerms = alsoBadTerms.filter((term) =>

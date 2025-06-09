@@ -1,0 +1,430 @@
+[
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-06-08",
+    "going": "SOFT, Heavy in places (GoingStick: 5.7) (Rail Movements: 3.35, 4.10 & 4.45 +5yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 6f - Stands' side; 1m3f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "1:50",
+        "raceCardUrl": "/racecards/21/goodwood/2025-06-08/895080",
+        "horses": [
+          {
+            "horseName": "Cinque Verde",
+            "horseProfileUrl": "/profile/horse/4438488/cinque-verde/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/21/goodwood/2025-06-08/895082",
+        "horses": [
+          {
+            "horseName": "River Spey",
+            "horseProfileUrl": "/profile/horse/7627187/river-spey/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Stellar Sunrise",
+            "horseProfileUrl": "/profile/horse/7538895/stellar-sunrise/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "French Affair",
+            "horseProfileUrl": "/profile/horse/7436310/french-affair/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/21/goodwood/2025-06-08/895078",
+        "horses": [
+          {
+            "horseName": "Purple Rainbow",
+            "horseProfileUrl": "/profile/horse/6916299/purple-rainbow/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Miss Tonnerre",
+            "horseProfileUrl": "/profile/horse/6183972/miss-tonnerre/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/21/goodwood/2025-06-08/895079",
+        "horses": [
+          {
+            "horseName": "Youthful King",
+            "horseProfileUrl": "/profile/horse/3757027/youthful-king/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:45",
+        "raceCardUrl": "/racecards/21/goodwood/2025-06-08/895077",
+        "horses": [
+          {
+            "horseName": "Raja Raja",
+            "horseProfileUrl": "/profile/horse/5373994/raja-raja/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/21/goodwood/2025-06-08/895081",
+        "horses": [
+          {
+            "horseName": "Alcazan",
+            "horseProfileUrl": "/profile/horse/3319089/alcazan/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Perth",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#perth",
+    "raceCardsCourseMeetingsUrl": "/racecards/41/perth/2025-06-08",
+    "going": "GOOD (GoingStick: 7.5) (Watered) (Rail movements: 1.40 +100yds, 2.12 & 2.47 +80yds, 3.22 +63yds, 3.57 & 4.32 +99yds and 5.07 & 5.42 +120yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:47",
+        "raceCardUrl": "/racecards/41/perth/2025-06-08/895300",
+        "horses": [
+          {
+            "horseName": "Hourless",
+            "horseProfileUrl": "/profile/horse/4431792/hourless/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Simple Star",
+            "horseProfileUrl": "/profile/horse/3247363/simple-star/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Mack The Man",
+            "horseProfileUrl": "/profile/horse/1897883/mack-the-man/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:57",
+        "raceCardUrl": "/racecards/41/perth/2025-06-08/895297",
+        "horses": [
+          {
+            "horseName": "Young Buster",
+            "horseProfileUrl": "/profile/horse/3461205/young-buster/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:32",
+        "raceCardUrl": "/racecards/41/perth/2025-06-08/895299",
+        "horses": [
+          {
+            "horseName": "Everyday Champagne",
+            "horseProfileUrl": "/profile/horse/3349784/everyday-champagne/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:07",
+        "raceCardUrl": "/racecards/41/perth/2025-06-08/895301",
+        "horses": [
+          {
+            "horseName": "Thatsy",
+            "horseProfileUrl": "/profile/horse/1847684/thatsy/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:42",
+        "raceCardUrl": "/racecards/41/perth/2025-06-08/897670",
+        "horses": [
+          {
+            "horseName": "Tartan Cookie",
+            "horseProfileUrl": "/profile/horse/3386701/tartan-cookie/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Punchestown",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#punchestown",
+    "raceCardsCourseMeetingsUrl": "/racecards/195/punchestown/2025-06-08",
+    "going": "GOOD TO YIELDING (Watered)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/195/punchestown/2025-06-08/897138",
+        "horses": [
+          {
+            "horseName": "So Des Flos",
+            "horseProfileUrl": "/profile/horse/4753534/so-des-flos/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:35",
+        "raceCardUrl": "/racecards/195/punchestown/2025-06-08/897139",
+        "horses": [
+          {
+            "horseName": "Run For Harry",
+            "horseProfileUrl": "/profile/horse/4580244/run-for-harry/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Hands On",
+            "horseProfileUrl": "/profile/horse/5313176/hands-on/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Costanuci",
+            "horseProfileUrl": "/profile/horse/3986084/costanuci/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/195/punchestown/2025-06-08/897140",
+        "horses": [
+          {
+            "horseName": "Not May",
+            "horseProfileUrl": "/profile/horse/2887623/not-may/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Tamara Jane",
+            "horseProfileUrl": "/profile/horse/7648522/tamara-jane/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/195/punchestown/2025-06-08/897141",
+        "horses": [
+          {
+            "horseName": "Bob The Builder",
+            "horseProfileUrl": "/profile/horse/3654142/bob-the-builder/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Larkfield Lidaho",
+            "horseProfileUrl": "/profile/horse/7272333/larkfield-lidaho/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/195/punchestown/2025-06-08/897142",
+        "horses": [
+          {
+            "horseName": "Malton Groove",
+            "horseProfileUrl": "/profile/horse/3918344/malton-groove/",
+            "raceNumber": "(18)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hoppegarten",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#hoppegarten",
+    "raceCardsCourseMeetingsUrl": "/racecards/440/hoppegarten/2025-06-08",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Longchamp",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#longchamp",
+    "raceCardsCourseMeetingsUrl": "/racecards/211/longchamp/2025-06-08",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "San Siro",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#san-siro",
+    "raceCardsCourseMeetingsUrl": "/racecards/243/san-siro/2025-06-08",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Santa Anita",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#santa-anita",
+    "raceCardsCourseMeetingsUrl": "/racecards/257/santa-anita/2025-06-08",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:22",
+        "raceCardUrl": "/racecards/257/santa-anita/2025-06-08/897722",
+        "horses": [
+          {
+            "horseName": "Silent Law",
+            "horseProfileUrl": "/profile/horse/6492096/silent-law/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Thought Process",
+            "horseProfileUrl": "/profile/horse/6233835/thought-process/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Saratoga",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#saratoga",
+    "raceCardsCourseMeetingsUrl": "/racecards/445/saratoga/2025-06-08",
+    "going": "DIRT: FAST; TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-06-08",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "10:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-08/897615",
+        "horses": [
+          {
+            "horseName": "Foremost Teddy",
+            "horseProfileUrl": "/profile/horse/5616482/foremost-teddy/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Viva Chaleur",
+            "horseProfileUrl": "/profile/horse/3648383/viva-chaleur/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "10:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-08/897616",
+        "horses": [
+          {
+            "horseName": "Fight Time",
+            "horseProfileUrl": "/profile/horse/5598824/fight-time/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Regency Win Win",
+            "horseProfileUrl": "/profile/horse/7324686/regency-win-win/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "11:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-08/897617",
+        "horses": [
+          {
+            "horseName": "Cirrus Speed",
+            "horseProfileUrl": "/profile/horse/7657400/cirrus-speed/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Young Striker",
+            "horseProfileUrl": "/profile/horse/7055562/young-striker/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "11:35",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-08/897618",
+        "horses": [
+          {
+            "horseName": "Autumn Vibes",
+            "horseProfileUrl": "/profile/horse/7117340/autumn-vibes/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Strathpeffer",
+            "horseProfileUrl": "/profile/horse/4785147/strathpeffer/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-08/897612",
+        "horses": [
+          {
+            "horseName": "Smiling Emperor",
+            "horseProfileUrl": "/profile/horse/6042346/smiling-emperor/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Almighty Kick",
+            "horseProfileUrl": "/profile/horse/6027903/almighty-kick/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-08/897614",
+        "horses": [
+          {
+            "horseName": "Magic Cosmos",
+            "horseProfileUrl": "/profile/horse/7657396/magic-cosmos/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Rainbow Seven",
+            "horseProfileUrl": "/profile/horse/7471036/rainbow-seven/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tokyo",
+    "raceCardsCourseUrl": "/racecards/2025-06-08#tokyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/315/tokyo/2025-06-08",
+    "going": "DIRT: STANDARD; TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

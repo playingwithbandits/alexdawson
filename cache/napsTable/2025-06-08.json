@@ -1,0 +1,311 @@
+{
+  "date": "2025-06-08",
+  "tips": [
+    {
+      "time": "13:50",
+      "horse": "Mister Bluebird",
+      "tipster": "Chris Connolly",
+      "score": "42.4"
+    },
+    {
+      "time": "15:22",
+      "horse": "Schmilsson",
+      "tipster": "Glendale",
+      "score": "32.0"
+    },
+    {
+      "time": "16:10",
+      "horse": "Spirit Mixer",
+      "tipster": "Farringdon",
+      "score": "26.3"
+    },
+    {
+      "time": "16:45",
+      "horse": "Hamish",
+      "tipster": "The Judge",
+      "score": "18.6"
+    },
+    {
+      "time": "13:50",
+      "horse": "Fine Interview",
+      "tipster": "Marlborough",
+      "score": "15.1"
+    },
+    {
+      "time": "16:10",
+      "horse": "Morning Air",
+      "tipster": "Ben Morgan",
+      "score": "14.0"
+    },
+    {
+      "time": "17:20",
+      "horse": "Nariko",
+      "tipster": "Lee Sobot",
+      "score": "13.6"
+    },
+    {
+      "time": "16:55",
+      "horse": "Luker's Tipple",
+      "tipster": "Fortunatus",
+      "score": "12.9"
+    },
+    {
+      "time": "16:10",
+      "horse": "Zinc White",
+      "tipster": "The Brigadier",
+      "score": "9.8"
+    },
+    {
+      "time": "17:20",
+      "horse": "Racingbreaks Ryder",
+      "tipster": "Postdata",
+      "score": "9.5"
+    },
+    {
+      "time": "15:35",
+      "horse": "Quebella",
+      "tipster": "Lambourn",
+      "score": "7.8"
+    },
+    {
+      "time": "17:07",
+      "horse": "The Flying Poet",
+      "tipster": "Ratings Hub",
+      "score": "7.5"
+    },
+    {
+      "time": "14:47",
+      "horse": "The Last Cloud",
+      "tipster": "The North",
+      "score": "8.2"
+    },
+    {
+      "time": "14:47",
+      "horse": "The Last Cloud",
+      "tipster": "Rockavon",
+      "score": "3.9"
+    },
+    {
+      "time": "13:50",
+      "horse": "Fine Interview",
+      "tipster": "Rory Delargy",
+      "score": "3.4"
+    },
+    {
+      "time": "17:07",
+      "horse": "The Flying Poet",
+      "tipster": "Melissa Jones",
+      "score": "2.0"
+    },
+    {
+      "time": "15:35",
+      "horse": "Janey Mackers",
+      "tipster": "On The Nose",
+      "score": "-2.5"
+    },
+    {
+      "time": "17:42",
+      "horse": "Happy Index",
+      "tipster": "Mercury",
+      "score": "-2.9"
+    },
+    {
+      "time": "15:57",
+      "horse": "Young Buster",
+      "tipster": "West Country",
+      "score": "-5.0"
+    },
+    {
+      "time": "13:30",
+      "horse": "Spanish Harlem",
+      "tipster": "Computeform",
+      "score": "-5.9"
+    },
+    {
+      "time": "13:50",
+      "horse": "Cinque Verde",
+      "tipster": "Newsboy",
+      "score": "-6.2"
+    },
+    {
+      "time": "16:45",
+      "horse": "Hamish",
+      "tipster": "Templegate",
+      "score": "-6.1"
+    },
+    {
+      "time": "17:07",
+      "horse": "Man Of Action",
+      "tipster": "Garry Owen",
+      "score": "-6.4"
+    },
+    {
+      "time": "16:10",
+      "horse": "Aggagio",
+      "tipster": "RP Ratings",
+      "score": "-8.2"
+    },
+    {
+      "time": "15:35",
+      "horse": "Janey Mackers",
+      "tipster": "Whistler",
+      "score": "-9.9"
+    },
+    {
+      "time": "13:50",
+      "horse": "Fine Interview",
+      "tipster": "Newmarket",
+      "score": "-10.0"
+    },
+    {
+      "time": "16:45",
+      "horse": "Hamish",
+      "tipster": "Robin Goodfellow",
+      "score": "-11.6"
+    },
+    {
+      "time": "15:35",
+      "horse": "Miss Tonnerre",
+      "tipster": "Dean Kilbryde",
+      "score": "-14.4"
+    },
+    {
+      "time": "16:45",
+      "horse": "Hamish",
+      "tipster": "Tipman Tips",
+      "score": "-16.2"
+    },
+    {
+      "time": "16:10",
+      "horse": "Morning Air",
+      "tipster": "Jason Heavey",
+      "score": "-18.2"
+    },
+    {
+      "time": "17:20",
+      "horse": "Racingbreaks Ryder",
+      "tipster": "Matt Polley",
+      "score": "-22.3"
+    },
+    {
+      "time": "14:00",
+      "horse": "Lisnagar Fortune",
+      "tipster": "Brian Flanagan",
+      "score": "-30.0"
+    },
+    {
+      "time": "13:50",
+      "horse": "Fine Interview",
+      "tipster": "Jon Freeman",
+      "score": "-28.8"
+    },
+    {
+      "time": "14:12",
+      "horse": "Chichester",
+      "tipster": "Luke Tucker",
+      "score": "-34.6"
+    },
+    {
+      "time": "14:12",
+      "horse": "Gonnino",
+      "tipster": "Karl Hedley",
+      "score": "-36.6"
+    },
+    {
+      "time": "16:10",
+      "horse": "Spirit Mixer",
+      "tipster": "Ross Shepherd",
+      "score": "-36.0"
+    },
+    {
+      "time": "16:45",
+      "horse": "Bolster",
+      "tipster": "Jim Delahunt",
+      "score": "-36.6"
+    },
+    {
+      "time": "17:20",
+      "horse": "Nariko",
+      "tipster": "Spotlight",
+      "score": "-38.2"
+    },
+    {
+      "time": "14:25",
+      "horse": "Stellar Sunrise",
+      "tipster": "Jeffrey Ross",
+      "score": "-39.5"
+    },
+    {
+      "time": "16:10",
+      "horse": "Zinc White",
+      "tipster": "The Punt",
+      "score": "-46.7"
+    },
+    {
+      "time": "16:10",
+      "horse": "Victory Shout",
+      "tipster": "Moorestyle",
+      "score": "-48.3"
+    },
+    {
+      "time": "16:45",
+      "horse": "Bolster",
+      "tipster": "The Duke",
+      "score": "-52.1"
+    },
+    {
+      "time": "14:47",
+      "horse": "The Last Cloud",
+      "tipster": "Rob Wright",
+      "score": "-52.9"
+    },
+    {
+      "time": "17:20",
+      "horse": "Alcazan",
+      "tipster": "Chris Wright",
+      "score": "-51.7"
+    },
+    {
+      "time": "17:20",
+      "horse": "Nariko",
+      "tipster": "The Score",
+      "score": "-56.1"
+    },
+    {
+      "time": "14:00",
+      "horse": "Antrim Coast",
+      "tipster": "Ian Gaughran",
+      "score": "-60.9"
+    },
+    {
+      "time": "16:32",
+      "horse": "Hardy Diamond",
+      "tipster": "Sam Hardy",
+      "score": "-65.4"
+    },
+    {
+      "time": "16:45",
+      "horse": "Hamish",
+      "tipster": "Adrian Wall",
+      "score": "-67.0"
+    },
+    {
+      "time": "15:35",
+      "horse": "Miss Tonnerre",
+      "tipster": "Andrew Mount",
+      "score": "-69.3"
+    },
+    {
+      "time": "13:50",
+      "horse": "Eminency",
+      "tipster": "Rory Paddock",
+      "score": "-69.9"
+    },
+    {
+      "time": "15:22",
+      "horse": "Schmilsson",
+      "tipster": "Steve Mullington",
+      "score": "-73.5"
+    }
+  ]
+}
