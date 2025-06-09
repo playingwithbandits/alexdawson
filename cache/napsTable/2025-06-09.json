@@ -1,0 +1,299 @@
+{
+  "date": "2025-06-09",
+  "tips": [
+    {
+      "time": "20:50",
+      "horse": "The Good Biscuit",
+      "tipster": "Chris Connolly",
+      "score": "50.9"
+    },
+    {
+      "time": "19:00",
+      "horse": "Adrestia",
+      "tipster": "Glendale",
+      "score": "33.0"
+    },
+    {
+      "time": "19:50",
+      "horse": "Little Tiger",
+      "tipster": "Farringdon",
+      "score": "23.1"
+    },
+    {
+      "time": "17:30",
+      "horse": "Hk Fourteen",
+      "tipster": "The Judge",
+      "score": "20.6"
+    },
+    {
+      "time": "18:30",
+      "horse": "Nahraan",
+      "tipster": "Lee Sobot",
+      "score": "17.1"
+    },
+    {
+      "time": "20:20",
+      "horse": "Keep Warm",
+      "tipster": "The North",
+      "score": "13.1"
+    },
+    {
+      "time": "19:50",
+      "horse": "This Years Love",
+      "tipster": "Marlborough",
+      "score": "12.2"
+    },
+    {
+      "time": "19:00",
+      "horse": "Change Sings",
+      "tipster": "Ben Morgan",
+      "score": "11.3"
+    },
+    {
+      "time": "20:20",
+      "horse": "Willolarupi",
+      "tipster": "Garry Owen",
+      "score": "10.5"
+    },
+    {
+      "time": "20:00",
+      "horse": "Accentuate",
+      "tipster": "Fortunatus",
+      "score": "10.2"
+    },
+    {
+      "time": "17:15",
+      "horse": "Hover On The Wind",
+      "tipster": "Rockavon",
+      "score": "8.6"
+    },
+    {
+      "time": "20:00",
+      "horse": "Accentuate",
+      "tipster": "The Brigadier",
+      "score": "7.2"
+    },
+    {
+      "time": "17:03",
+      "horse": "Kranjcar",
+      "tipster": "Postdata",
+      "score": "6.8"
+    },
+    {
+      "time": "16:32",
+      "horse": "Bint Havana Gold",
+      "tipster": "Lambourn",
+      "score": "5.2"
+    },
+    {
+      "time": "19:08",
+      "horse": "Luckinthecity",
+      "tipster": "Ratings Hub",
+      "score": "5.0"
+    },
+    {
+      "time": "19:00",
+      "horse": "Woolhampton",
+      "tipster": "Rory Delargy",
+      "score": "0.8"
+    },
+    {
+      "time": "17:03",
+      "horse": "Bear To Dream",
+      "tipster": "Melissa Jones",
+      "score": "-0.5"
+    },
+    {
+      "time": "21:00",
+      "horse": "Live Each Day",
+      "tipster": "Templegate",
+      "score": "-3.7"
+    },
+    {
+      "time": "16:02",
+      "horse": "Buy The Dip",
+      "tipster": "RP Ratings",
+      "score": "-3.8"
+    },
+    {
+      "time": "21:00",
+      "horse": "Bay Of Dreams",
+      "tipster": "Computeform",
+      "score": "-4.4"
+    },
+    {
+      "time": "20:20",
+      "horse": "Keep Warm",
+      "tipster": "On The Nose",
+      "score": "-4.8"
+    },
+    {
+      "time": "17:45",
+      "horse": "Lily Pearl",
+      "tipster": "Mercury",
+      "score": "-5.2"
+    },
+    {
+      "time": "17:30",
+      "horse": "Secret Handsheikh",
+      "tipster": "Newsboy",
+      "score": "-6.2"
+    },
+    {
+      "time": "17:03",
+      "horse": "Kranjcar",
+      "tipster": "Robin Goodfellow",
+      "score": "-8.9"
+    },
+    {
+      "time": "18:30",
+      "horse": "Nahraan",
+      "tipster": "Whistler",
+      "score": "-12.1"
+    },
+    {
+      "time": "14:57",
+      "horse": "Dazzling Haze",
+      "tipster": "Newmarket",
+      "score": "-12.2"
+    },
+    {
+      "time": "14:57",
+      "horse": "Dazzling Haze",
+      "tipster": "Tipman Tips",
+      "score": "-13.5"
+    },
+    {
+      "time": "19:20",
+      "horse": "Highwaygrey",
+      "tipster": "Dean Kilbryde",
+      "score": "-14.4"
+    },
+    {
+      "time": "18:50",
+      "horse": "Queen Of Steel",
+      "tipster": "Jason Heavey",
+      "score": "-20.1"
+    },
+    {
+      "time": "20:50",
+      "horse": "Fierce",
+      "tipster": "Matt Polley",
+      "score": "-24.3"
+    },
+    {
+      "time": "19:38",
+      "horse": "Sea Aster",
+      "tipster": "Brian Flanagan",
+      "score": "-31.7"
+    },
+    {
+      "time": "14:57",
+      "horse": "Mission Classified",
+      "tipster": "Jon Freeman",
+      "score": "-30.5"
+    },
+    {
+      "time": "19:50",
+      "horse": "This Years Love",
+      "tipster": "Spotlight",
+      "score": "-33.4"
+    },
+    {
+      "time": "15:45",
+      "horse": "Carlton",
+      "tipster": "Luke Tucker",
+      "score": "-36.3"
+    },
+    {
+      "time": "19:00",
+      "horse": "Miraculous",
+      "tipster": "Karl Hedley",
+      "score": "-38.2"
+    },
+    {
+      "time": "18:00",
+      "horse": "Dictal",
+      "tipster": "Ross Shepherd",
+      "score": "-37.5"
+    },
+    {
+      "time": "20:20",
+      "horse": "One Night Thunder",
+      "tipster": "Jim Delahunt",
+      "score": "-38.1"
+    },
+    {
+      "time": "16:50",
+      "horse": "Granny Hawkins",
+      "tipster": "Rob Wright",
+      "score": "-46.8"
+    },
+    {
+      "time": "18:20",
+      "horse": "Educator",
+      "tipster": "The Punt",
+      "score": "-47.9"
+    },
+    {
+      "time": "17:15",
+      "horse": "Hover On The Wind",
+      "tipster": "The Score",
+      "score": "-50.8"
+    },
+    {
+      "time": "19:00",
+      "horse": "Woolhampton",
+      "tipster": "Moorestyle",
+      "score": "-49.5"
+    },
+    {
+      "time": "20:50",
+      "horse": "May Blossom",
+      "tipster": "Chris Wright",
+      "score": "-51.7"
+    },
+    {
+      "time": "17:15",
+      "horse": "Copper Knight",
+      "tipster": "The Duke",
+      "score": "-53.3"
+    },
+    {
+      "time": "18:38",
+      "horse": "Boston Rover",
+      "tipster": "Ian Gaughran",
+      "score": "-61.8"
+    },
+    {
+      "time": "17:20",
+      "horse": "Always Busy",
+      "tipster": "Adrian Wall",
+      "score": "-63.0"
+    },
+    {
+      "time": "18:20",
+      "horse": "Educator",
+      "tipster": "Andrew Mount",
+      "score": "-69.3"
+    },
+    {
+      "time": "19:00",
+      "horse": "Adrestia",
+      "tipster": "Sam Hardy",
+      "score": "-66.2"
+    },
+    {
+      "time": "18:50",
+      "horse": "Bodygroove",
+      "tipster": "Steve Mullington",
+      "score": "-69.9"
+    },
+    {
+      "time": "20:20",
+      "horse": "Sir Maxi",
+      "tipster": "Rory Paddock",
+      "score": "-70.7"
+    }
+  ]
+}

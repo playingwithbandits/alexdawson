@@ -1,0 +1,185 @@
+[
+  {
+    "courseName": "Brighton",
+    "raceCardsCourseUrl": "/racecards/2025-06-09#brighton",
+    "raceCardsCourseMeetingsUrl": "/racecards/7/brighton/2025-06-09",
+    "going": "GOOD TO FIRM (GoingStick: 6.8) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m4f - Outside; 1m - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/7/brighton/2025-06-09/895089",
+        "horses": [
+          {
+            "horseName": "James Park Woods",
+            "horseProfileUrl": "/profile/horse/2167294/james-park-woods/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-06-09#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-06-09",
+    "going": "GOOD, Good to soft in places (GoingStick 7.2) (Rail movements: 7.20, 7.50 & 8.20 +2yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "6:20",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-09/895090",
+        "horses": [
+          {
+            "horseName": "Clansman",
+            "horseProfileUrl": "/profile/horse/3152116/clansman/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Roscommon",
+    "raceCardsCourseUrl": "/racecards/2025-06-09#roscommon",
+    "raceCardsCourseMeetingsUrl": "/racecards/196/roscommon/2025-06-09",
+    "going": "GOOD (Selective watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Southwell",
+    "raceCardsCourseUrl": "/racecards/2025-06-09#southwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/61/southwell/2025-06-09",
+    "going": "GOOD (GoingStick: 6.5) (Selective watering) (Rail movements: 2.40 +261yds, 3.10 & 3.45 +160yds, and 4.15, 4.50 & 5.20 +261yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-06-09#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-06-09",
+    "going": "GOOD TO SOFT, Soft in places (GoingStick: 6.8) (Rail movements: 7.00, 8.00, 8.30 & 9.00 +26yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/93/windsor/2025-06-09/895097",
+        "horses": [
+          {
+            "horseName": "Priestess",
+            "horseProfileUrl": "/profile/horse/7020232/priestess/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/93/windsor/2025-06-09/895096",
+        "horses": [
+          {
+            "horseName": "Michaela's Boy",
+            "horseProfileUrl": "/profile/horse/4229840/michaelas-boy/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/93/windsor/2025-06-09/895101",
+        "horses": [
+          {
+            "horseName": "Almekarem",
+            "horseProfileUrl": "/profile/horse/7622797/almekarem/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/93/windsor/2025-06-09/897714",
+        "horses": [
+          {
+            "horseName": "Bella's Path",
+            "horseProfileUrl": "/profile/horse/7648492/bellas-path/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/93/windsor/2025-06-09/895098",
+        "horses": [
+          {
+            "horseName": "Kentucky Kingdom",
+            "horseProfileUrl": "/profile/horse/1796342/kentucky-kingdom/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Carp Kid",
+            "horseProfileUrl": "/profile/horse/1371557/carp-kid/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/93/windsor/2025-06-09/895102",
+        "horses": [
+          {
+            "horseName": "Divot",
+            "horseProfileUrl": "/profile/horse/6323499/divot/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cologne",
+    "raceCardsCourseUrl": "/racecards/2025-06-09#cologne",
+    "raceCardsCourseMeetingsUrl": "/racecards/226/cologne/2025-06-09",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/226/cologne/2025-06-09/897626",
+        "horses": [
+          {
+            "horseName": "Warasch",
+            "horseProfileUrl": "/profile/horse/7436622/warasch/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Saratoga",
+    "raceCardsCourseUrl": "/racecards/2025-06-09#saratoga",
+    "raceCardsCourseMeetingsUrl": "/racecards/445/saratoga/2025-06-09",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:12",
+        "raceCardUrl": "/racecards/445/saratoga/2025-06-09/897099",
+        "horses": [
+          {
+            "horseName": "Highway Robber",
+            "horseProfileUrl": "/profile/horse/4550171/highway-robber/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  }
+]
