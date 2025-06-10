@@ -446,17 +446,17 @@ export const isGoodDistanceToWinner = (
   const distanceToWinnerFloat = distanceToWinnerStrToFloat(distanceCode || "");
 
   if (raceDistance <= 6) {
-    return distanceToWinnerFloat <= 3;
-  }
-  if (raceDistance <= 8) {
-    return distanceToWinnerFloat <= 4;
-  }
-  if (raceDistance <= 10) {
     return distanceToWinnerFloat <= 5;
   }
-  if (raceDistance <= 16) {
+  if (raceDistance <= 8) {
     return distanceToWinnerFloat <= 6;
   }
+  if (raceDistance <= 10) {
+    return distanceToWinnerFloat <= 8;
+  }
+  if (raceDistance <= 16) {
+    return distanceToWinnerFloat <= 10;
+  }
 
-  return distanceToWinnerFloat <= 8;
+  return distanceToWinnerFloat <= 12;
 };

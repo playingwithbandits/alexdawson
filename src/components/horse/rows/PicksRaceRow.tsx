@@ -208,19 +208,19 @@ export function PicksRaceRow({
           ? days < DAYS_THRESHOLD_COMFORTABLE
           : false;
       })
-      .filter((x) => x !== undefined);
-    // ?.filter((x) => {
-    //   const { outcome, distance, distanceToWinner } = x;
+      .filter((x) => x !== undefined)
+      ?.filter((x) => {
+        const { outcome, distance, distanceToWinner } = x;
 
-    //   const distanceToWinnerGood = isGoodDistanceToWinner(
-    //     distance,
-    //     distanceToWinner || ""
-    //   );
+        const distanceToWinnerGood = isGoodDistanceToWinner(
+          distance,
+          distanceToWinner || ""
+        );
 
-    //   const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
+        const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
 
-    //   return isGoodOutcome;
-    // });
+        return isGoodOutcome;
+      });
 
     const comfortableWithinDaysCount = comfortableWithinDaysFormObj.length;
     const hasComfortableWithinDays = comfortableWithinDaysCount > 0;
@@ -280,19 +280,19 @@ export function PicksRaceRow({
           ? days < DAYS_THRESHOLD_EYECATCHER
           : false;
       })
-      .filter((x) => x !== undefined);
-    // ?.filter((x) => {
-    //   const { outcome, distance, distanceToWinner } = x;
+      .filter((x) => x !== undefined)
+      ?.filter((x) => {
+        const { outcome, distance, distanceToWinner } = x;
 
-    //   const distanceToWinnerGood = isGoodDistanceToWinner(
-    //     distance,
-    //     distanceToWinner || ""
-    //   );
+        const distanceToWinnerGood = isGoodDistanceToWinner(
+          distance,
+          distanceToWinner || ""
+        );
 
-    //   const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
+        const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
 
-    //   return isGoodOutcome;
-    // });
+        return isGoodOutcome;
+      });
 
     const eyecatcherWithinDaysCount = eyecatcherWithinDaysFormObj.length;
     const hasEyecatcherWithinDays = eyecatcherWithinDaysCount > 0;
@@ -425,19 +425,19 @@ export function PicksRaceRow({
           ? days < DAYS_THRESHOLD_HAMPERED
           : false;
       })
-      .filter((x) => x !== undefined);
-    // ?.filter((x) => {
-    //   const { outcome, distance, distanceToWinner } = x;
+      .filter((x) => x !== undefined)
+      ?.filter((x) => {
+        const { outcome, distance, distanceToWinner } = x;
 
-    //   const distanceToWinnerGood = isGoodDistanceToWinner(
-    //     distance,
-    //     distanceToWinner || ""
-    //   );
+        const distanceToWinnerGood = isGoodDistanceToWinner(
+          distance,
+          distanceToWinner || ""
+        );
 
-    //   const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
+        const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
 
-    //   return isGoodOutcome;
-    // });
+        return isGoodOutcome;
+      });
 
     const hamperedWithinDaysCount = hamperedWithinDaysFormObj.length;
     const hasHamperedWithinDays = hamperedWithinDaysCount > 0;
@@ -2630,8 +2630,8 @@ export function PicksRaceRow({
                 // }
                 highlight4={
                   // countGood2 &&
-                  // rpPredGood &&
-                  // aiGood &&
+                  //sharpRatingGood &&
+                  //aiGood &&
                   // sharpRatingGood &&
                   horseEyecatcherObj?.hasEyecatcherWithinDays ||
                   horseHamperedObj?.hasHamperedWithinDays ||
