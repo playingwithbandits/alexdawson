@@ -2623,7 +2623,8 @@ export function PicksRaceRow({
                 highlight3={
                   countGood2 &&
                   (horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                    horseHamperedObj?.hasHamperedWithinDays)
+                    horseHamperedObj?.hasHamperedWithinDays ||
+                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
                 highlight4={
                   countGood2 &&

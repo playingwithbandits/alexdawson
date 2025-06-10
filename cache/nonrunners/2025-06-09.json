@@ -8,6 +8,17 @@
     "stallsPosition": "1m4f - Outside; 1m - Inside; Remainder - Centre",
     "races": [
       {
+        "raceTime": "2:25",
+        "raceCardUrl": "/racecards/7/brighton/2025-06-09/895088",
+        "horses": [
+          {
+            "horseName": "Gogo Yubari",
+            "horseProfileUrl": "/profile/horse/5154274/gogo-yubari/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
         "raceTime": "3:30",
         "raceCardUrl": "/racecards/7/brighton/2025-06-09/895089",
         "horses": [
@@ -17,6 +28,17 @@
             "raceNumber": "(7)"
           }
         ]
+      },
+      {
+        "raceTime": "4:02",
+        "raceCardUrl": "/racecards/7/brighton/2025-06-09/895085",
+        "horses": [
+          {
+            "horseName": "Darvel",
+            "horseProfileUrl": "/profile/horse/3101958/darvel/",
+            "raceNumber": "(2)"
+          }
+        ]
       }
     ]
   },
@@ -24,7 +46,7 @@
     "courseName": "Pontefract",
     "raceCardsCourseUrl": "/racecards/2025-06-09#pontefract",
     "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-06-09",
-    "going": "GOOD, Good to soft in places (GoingStick 7.2) (Rail movements: 7.20, 7.50 & 8.20 +2yds)",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.6) (Rail movements: 7.20, 7.50 & 8.20 +2yds)",
     "weather": "Mostly cloudy",
     "stallsPosition": "Inside",
     "races": [
@@ -38,6 +60,44 @@
             "raceNumber": "(6)"
           }
         ]
+      },
+      {
+        "raceTime": "7:50",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-09/897713",
+        "horses": [
+          {
+            "horseName": "Young Fire",
+            "horseProfileUrl": "/profile/horse/1657488/young-fire/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Little Tiger",
+            "horseProfileUrl": "/profile/horse/4488808/little-tiger/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:20",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-09/895092",
+        "horses": [
+          {
+            "horseName": "Illusionist",
+            "horseProfileUrl": "/profile/horse/2645481/illusionist/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:50",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-09/897712",
+        "horses": [
+          {
+            "horseName": "Red Mirage",
+            "horseProfileUrl": "/profile/horse/3241292/red-mirage/",
+            "raceNumber": "(2)"
+          }
+        ]
       }
     ]
   },
@@ -45,16 +105,28 @@
     "courseName": "Roscommon",
     "raceCardsCourseUrl": "/racecards/2025-06-09#roscommon",
     "raceCardsCourseMeetingsUrl": "/racecards/196/roscommon/2025-06-09",
-    "going": "GOOD (Selective watering)",
+    "going": "GOOD",
     "weather": "Cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "6:38",
+        "raceCardUrl": "/racecards/196/roscommon/2025-06-09/897599",
+        "horses": [
+          {
+            "horseName": "Lady Nightingale",
+            "horseProfileUrl": "/profile/horse/5007811/lady-nightingale/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Southwell",
     "raceCardsCourseUrl": "/racecards/2025-06-09#southwell",
     "raceCardsCourseMeetingsUrl": "/racecards/61/southwell/2025-06-09",
-    "going": "GOOD (GoingStick: 6.5) (Selective watering) (Rail movements: 2.40 +261yds, 3.10 & 3.45 +160yds, and 4.15, 4.50 & 5.20 +261yds)",
+    "going": "GOOD (GoingStick: 6.7) (Watered) (Rail movements: 2.40 +261yds, 3.10 & 3.45 +160yds, and 4.15, 4.50 & 5.20 +261yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "",
     "races": []
@@ -63,7 +135,7 @@
     "courseName": "Windsor",
     "raceCardsCourseUrl": "/racecards/2025-06-09#windsor",
     "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-06-09",
-    "going": "GOOD TO SOFT, Soft in places (GoingStick: 6.8) (Rail movements: 7.00, 8.00, 8.30 & 9.00 +26yds)",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 7.2) (Rail movements: 7.00, 8.00, 8.30 & 9.00 +26yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "1m - Inside; Remainder - Centre",
     "races": [
@@ -75,6 +147,11 @@
             "horseName": "Priestess",
             "horseProfileUrl": "/profile/horse/7020232/priestess/",
             "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Gnocchi",
+            "horseProfileUrl": "/profile/horse/7648503/gnocchi/",
+            "raceNumber": "(6)"
           }
         ]
       },
