@@ -1,0 +1,99 @@
+[
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-06-10#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-06-10",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.5)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/10/catterick/2025-06-10/895107",
+        "horses": [
+          {
+            "horseName": "Diamond Alexander",
+            "horseProfileUrl": "/profile/horse/7339110/diamond-alexander/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Fontwell",
+    "raceCardsCourseUrl": "/racecards/2025-06-10#fontwell",
+    "raceCardsCourseMeetingsUrl": "/racecards/20/fontwell/2025-06-10",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.8) (Selective watering) (Rail movements:  6.20, 6.50, 7.20, 8.20 & 8.50 +24yds and 7.50 +36yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Salisbury",
+    "raceCardsCourseUrl": "/racecards/2025-06-10#salisbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/52/salisbury/2025-06-10",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 8.3) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "6f & 7f - Far side; 1m2f - Inside; 1m4f - Stands' side",
+    "races": [
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/52/salisbury/2025-06-10/895110",
+        "horses": [
+          {
+            "horseName": "Club Class",
+            "horseProfileUrl": "/profile/horse/6550750/club-class/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Lilly Lux",
+            "horseProfileUrl": "/profile/horse/5674144/lilly-lux/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sligo",
+    "raceCardsCourseUrl": "/racecards/2025-06-10#sligo",
+    "raceCardsCourseMeetingsUrl": "/racecards/197/sligo/2025-06-10",
+    "going": "GOOD (Watered)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-10#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-06-10",
+    "going": "TAPETA: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-06-10/895373",
+        "horses": [
+          {
+            "horseName": "Sunny Smile",
+            "horseProfileUrl": "/profile/horse/7436369/sunny-smile/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-06-10/897724",
+        "horses": [
+          {
+            "horseName": "Brave Display",
+            "horseProfileUrl": "/profile/horse/1039173/brave-display/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  }
+]

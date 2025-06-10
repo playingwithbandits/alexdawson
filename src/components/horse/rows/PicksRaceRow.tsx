@@ -42,7 +42,7 @@ interface PicksRaceRowProps {
 }
 
 const THRESHOLD = 0.6;
-const DAYS_THRESHOLD_COMFORTABLE = 7;
+const DAYS_THRESHOLD_COMFORTABLE = 21;
 const DAYS_THRESHOLD_EYECATCHER = 90;
 const DAYS_THRESHOLD_HAMPERED = 60;
 
@@ -168,7 +168,6 @@ export function PicksRaceRow({
 
           "readily",
           "comfortably",
-          "clear",
           "going easily",
           "travelled strongly",
           "quickened clear",
@@ -209,19 +208,19 @@ export function PicksRaceRow({
           ? days < DAYS_THRESHOLD_COMFORTABLE
           : false;
       })
-      .filter((x) => x !== undefined)
-      ?.filter((x) => {
-        const { outcome, distance, distanceToWinner } = x;
+      .filter((x) => x !== undefined);
+    // ?.filter((x) => {
+    //   const { outcome, distance, distanceToWinner } = x;
 
-        const distanceToWinnerGood = isGoodDistanceToWinner(
-          distance,
-          distanceToWinner || ""
-        );
+    //   const distanceToWinnerGood = isGoodDistanceToWinner(
+    //     distance,
+    //     distanceToWinner || ""
+    //   );
 
-        const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
+    //   const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
 
-        return isGoodOutcome;
-      });
+    //   return isGoodOutcome;
+    // });
 
     const comfortableWithinDaysCount = comfortableWithinDaysFormObj.length;
     const hasComfortableWithinDays = comfortableWithinDaysCount > 0;
@@ -281,19 +280,19 @@ export function PicksRaceRow({
           ? days < DAYS_THRESHOLD_EYECATCHER
           : false;
       })
-      .filter((x) => x !== undefined)
-      ?.filter((x) => {
-        const { outcome, distance, distanceToWinner } = x;
+      .filter((x) => x !== undefined);
+    // ?.filter((x) => {
+    //   const { outcome, distance, distanceToWinner } = x;
 
-        const distanceToWinnerGood = isGoodDistanceToWinner(
-          distance,
-          distanceToWinner || ""
-        );
+    //   const distanceToWinnerGood = isGoodDistanceToWinner(
+    //     distance,
+    //     distanceToWinner || ""
+    //   );
 
-        const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
+    //   const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
 
-        return isGoodOutcome;
-      });
+    //   return isGoodOutcome;
+    // });
 
     const eyecatcherWithinDaysCount = eyecatcherWithinDaysFormObj.length;
     const hasEyecatcherWithinDays = eyecatcherWithinDaysCount > 0;
@@ -390,6 +389,9 @@ export function PicksRaceRow({
           "outpaced",
           "hung",
           "weak",
+          "flat",
+          "never on terms",
+          "no improvement",
         ];
 
         const matchedAlsoBadTerms = alsoBadTerms.filter((term) =>
@@ -423,19 +425,19 @@ export function PicksRaceRow({
           ? days < DAYS_THRESHOLD_HAMPERED
           : false;
       })
-      .filter((x) => x !== undefined)
-      ?.filter((x) => {
-        const { outcome, distance, distanceToWinner } = x;
+      .filter((x) => x !== undefined);
+    // ?.filter((x) => {
+    //   const { outcome, distance, distanceToWinner } = x;
 
-        const distanceToWinnerGood = isGoodDistanceToWinner(
-          distance,
-          distanceToWinner || ""
-        );
+    //   const distanceToWinnerGood = isGoodDistanceToWinner(
+    //     distance,
+    //     distanceToWinner || ""
+    //   );
 
-        const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
+    //   const isGoodOutcome = outcome === "1" || distanceToWinnerGood;
 
-        return isGoodOutcome;
-      });
+    //   return isGoodOutcome;
+    // });
 
     const hamperedWithinDaysCount = hamperedWithinDaysFormObj.length;
     const hasHamperedWithinDays = hamperedWithinDaysCount > 0;
@@ -2612,27 +2614,28 @@ export function PicksRaceRow({
                 //   sharpRatingGood &&
                 //   rpPredGood
                 // }
-                highlight1={countGood && rpPredGood && aiGood}
-                highlight2={
-                  countGood &&
-                  rpPredGood &&
-                  aiGood &&
-                  sharpRatingGood &&
-                  olbgNapGood
-                }
-                highlight3={
-                  countGood2 &&
-                  (horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                    horseHamperedObj?.hasHamperedWithinDays ||
-                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
-                }
+                // highlight1={countGood && rpPredGood && aiGood}
+                // highlight2={
+                //   countGood &&
+                //   rpPredGood &&
+                //   aiGood &&
+                //   sharpRatingGood &&
+                //   olbgNapGood
+                // }
+                // highlight3={
+                //   countGood2 &&
+                //   (horseEyecatcherObj?.hasEyecatcherWithinDays ||
+                //     horseHamperedObj?.hasHamperedWithinDays ||
+                //     horseComfortableWithinDaysObj?.hasComfortableWithinDays)
+                // }
                 highlight4={
-                  countGood2 &&
-                  rpPredGood &&
-                  aiGood &&
-                  (horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                    horseHamperedObj?.hasHamperedWithinDays ||
-                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
+                  // countGood2 &&
+                  // rpPredGood &&
+                  // aiGood &&
+                  // sharpRatingGood &&
+                  horseEyecatcherObj?.hasEyecatcherWithinDays ||
+                  horseHamperedObj?.hasHamperedWithinDays ||
+                  horseComfortableWithinDaysObj?.hasComfortableWithinDays
                 }
                 //highlight3={countGood}
                 showOnlyBest={showOnlyBest}

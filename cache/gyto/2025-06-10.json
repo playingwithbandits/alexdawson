@@ -1,0 +1,165 @@
+{
+  "date": "2025-06-10",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Too Darn Good",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Sinj",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Safari Dream",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Marnier",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Crepe Suzette",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Piranha Rama",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Ninth Crusade",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Azure Zain",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Emaculate Soldier",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Anglesey Lad",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Sunset In Paris",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Anificas Beauty",
+      "isNap": true
+    },
+    {
+      "time": "17:50",
+      "horse": "Yesterday'S Gone",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Duskaura",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Vibrant Pearl",
+      "isNap": true
+    },
+    {
+      "time": "18:10",
+      "horse": "Laudable",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Novamay",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "My Harrison George",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Kalganov",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "B Associates",
+      "isNap": false
+    },
+    {
+      "time": "17:28",
+      "horse": "Embittered",
+      "isNap": false
+    },
+    {
+      "time": "17:58",
+      "horse": "Kates Choice",
+      "isNap": false
+    },
+    {
+      "time": "18:28",
+      "horse": "Tom Sarah Evelyn",
+      "isNap": false
+    },
+    {
+      "time": "18:58",
+      "horse": "Spick And Span",
+      "isNap": false
+    },
+    {
+      "time": "19:28",
+      "horse": "Our Zebo",
+      "isNap": false
+    },
+    {
+      "time": "19:58",
+      "horse": "Cornmarket",
+      "isNap": false
+    },
+    {
+      "time": "20:28",
+      "horse": "Al Arrivee",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "She Is For Me Boys",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Man Of The Sea",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Onethreefivenotout",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Market House",
+      "isNap": false
+    },
+    {
+      "time": "20:50",
+      "horse": "Trevor'S Lad",
+      "isNap": false
+    }
+  ]
+}

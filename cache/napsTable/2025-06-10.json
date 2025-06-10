@@ -1,0 +1,311 @@
+{
+  "date": "2025-06-10",
+  "tips": [
+    {
+      "time": "20:10",
+      "horse": "Desert Dream",
+      "tipster": "Chris Connolly",
+      "score": "47.4"
+    },
+    {
+      "time": "15:30",
+      "horse": "Revelance",
+      "tipster": "Glendale",
+      "score": "29.8"
+    },
+    {
+      "time": "15:00",
+      "horse": "Beau Jardine",
+      "tipster": "The Judge",
+      "score": "23.4"
+    },
+    {
+      "time": "17:50",
+      "horse": "Classic Cause",
+      "tipster": "Farringdon",
+      "score": "23.1"
+    },
+    {
+      "time": "20:28",
+      "horse": "Al Arrivee",
+      "tipster": "Lee Sobot",
+      "score": "17.1"
+    },
+    {
+      "time": "19:40",
+      "horse": "Corsican Caper",
+      "tipster": "Fortunatus",
+      "score": "13.2"
+    },
+    {
+      "time": "14:45",
+      "horse": "Comic Strip",
+      "tipster": "The Brigadier",
+      "score": "10.2"
+    },
+    {
+      "time": "20:40",
+      "horse": "Coconut Bay",
+      "tipster": "The North",
+      "score": "10.3"
+    },
+    {
+      "time": "19:10",
+      "horse": "Clasina",
+      "tipster": "Marlborough",
+      "score": "9.4"
+    },
+    {
+      "time": "14:30",
+      "horse": "King Of Chaos",
+      "tipster": "Ben Morgan",
+      "score": "8.7"
+    },
+    {
+      "time": "16:30",
+      "horse": "Crepe Suzette",
+      "tipster": "Garry Owen",
+      "score": "7.9"
+    },
+    {
+      "time": "19:10",
+      "horse": "Highfield Sunshine",
+      "tipster": "Rockavon",
+      "score": "6.0"
+    },
+    {
+      "time": "15:45",
+      "horse": "Educate",
+      "tipster": "Postdata",
+      "score": "4.2"
+    },
+    {
+      "time": "15:30",
+      "horse": "Dr Strangelove",
+      "tipster": "Lambourn",
+      "score": "2.8"
+    },
+    {
+      "time": "18:28",
+      "horse": "Quantum Boy",
+      "tipster": "Ratings Hub",
+      "score": "2.7"
+    },
+    {
+      "time": "15:00",
+      "horse": "Strike",
+      "tipster": "Rory Delargy",
+      "score": "-1.6"
+    },
+    {
+      "time": "20:20",
+      "horse": "Justice Roll",
+      "tipster": "Melissa Jones",
+      "score": "-3.0"
+    },
+    {
+      "time": "15:00",
+      "horse": "Safari Dream",
+      "tipster": "West Country",
+      "score": "-5.0"
+    },
+    {
+      "time": "15:30",
+      "horse": "Competizione",
+      "tipster": "Templegate",
+      "score": "-5.8"
+    },
+    {
+      "time": "20:10",
+      "horse": "Desert Dream",
+      "tipster": "RP Ratings",
+      "score": "-6.0"
+    },
+    {
+      "time": "17:10",
+      "horse": "Duskaura",
+      "tipster": "Computeform",
+      "score": "-6.7"
+    },
+    {
+      "time": "20:50",
+      "horse": "Coup De Gold",
+      "tipster": "On The Nose",
+      "score": "-7.0"
+    },
+    {
+      "time": "17:10",
+      "horse": "Duskaura",
+      "tipster": "Mercury",
+      "score": "-7.4"
+    },
+    {
+      "time": "15:45",
+      "horse": "Pysanka",
+      "tipster": "Newsboy",
+      "score": "-8.4"
+    },
+    {
+      "time": "18:50",
+      "horse": "Jack Sparrow Grey",
+      "tipster": "Robin Goodfellow",
+      "score": "-11.0"
+    },
+    {
+      "time": "18:50",
+      "horse": "Jack Sparrow Grey",
+      "tipster": "Whistler",
+      "score": "-11.5"
+    },
+    {
+      "time": "16:00",
+      "horse": "Triple Gee",
+      "tipster": "Matt Polley",
+      "score": "-12.7"
+    },
+    {
+      "time": "16:30",
+      "horse": "Crepe Suzette",
+      "tipster": "Newmarket",
+      "score": "-14.3"
+    },
+    {
+      "time": "15:45",
+      "horse": "Pysanka",
+      "tipster": "Tipman Tips",
+      "score": "-15.5"
+    },
+    {
+      "time": "19:50",
+      "horse": "Morfee",
+      "tipster": "Dean Kilbryde",
+      "score": "-16.4"
+    },
+    {
+      "time": "19:40",
+      "horse": "My Harrison George",
+      "tipster": "Jason Heavey",
+      "score": "-18.0"
+    },
+    {
+      "time": "15:00",
+      "horse": "Strike",
+      "tipster": "Luke Tucker",
+      "score": "-33.6"
+    },
+    {
+      "time": "15:30",
+      "horse": "Competizione",
+      "tipster": "Brian Flanagan",
+      "score": "-33.3"
+    },
+    {
+      "time": "15:30",
+      "horse": "Revelance",
+      "tipster": "Jon Freeman",
+      "score": "-32.0"
+    },
+    {
+      "time": "16:30",
+      "horse": "Crepe Suzette",
+      "tipster": "Spotlight",
+      "score": "-35.0"
+    },
+    {
+      "time": "19:58",
+      "horse": "Ladiam",
+      "tipster": "Karl Hedley",
+      "score": "-39.6"
+    },
+    {
+      "time": "16:30",
+      "horse": "Patagonia Girl",
+      "tipster": "Ross Shepherd",
+      "score": "-39.0"
+    },
+    {
+      "time": "15:30",
+      "horse": "Competizione",
+      "tipster": "Jeffrey Ross",
+      "score": "-41.0"
+    },
+    {
+      "time": "19:10",
+      "horse": "Highfield Sunshine",
+      "tipster": "Jim Delahunt",
+      "score": "-39.5"
+    },
+    {
+      "time": "19:10",
+      "horse": "Crown's Lady",
+      "tipster": "The Duke",
+      "score": "-46.1"
+    },
+    {
+      "time": "16:30",
+      "horse": "Crepe Suzette",
+      "tipster": "Rob Wright",
+      "score": "-48.0"
+    },
+    {
+      "time": "14:00",
+      "horse": "Too Darn Good",
+      "tipster": "The Punt",
+      "score": "-49.1"
+    },
+    {
+      "time": "15:00",
+      "horse": "Strike",
+      "tipster": "Ian Gaughran",
+      "score": "-50.8"
+    },
+    {
+      "time": "15:00",
+      "horse": "Safari Dream",
+      "tipster": "The Score",
+      "score": "-52.0"
+    },
+    {
+      "time": "16:15",
+      "horse": "Kameko Spirit",
+      "tipster": "Moorestyle",
+      "score": "-50.7"
+    },
+    {
+      "time": "15:00",
+      "horse": "Strike",
+      "tipster": "Chris Wright",
+      "score": "-52.8"
+    },
+    {
+      "time": "16:30",
+      "horse": "Crepe Suzette",
+      "tipster": "Adrian Wall",
+      "score": "-63.9"
+    },
+    {
+      "time": "14:00",
+      "horse": "Astrazar",
+      "tipster": "Andrew Mount",
+      "score": "-70.1"
+    },
+    {
+      "time": "15:00",
+      "horse": "Indian Creak",
+      "tipster": "Sam Hardy",
+      "score": "-67.0"
+    },
+    {
+      "time": "19:40",
+      "horse": "Myboymax",
+      "tipster": "Steve Mullington",
+      "score": "-70.6"
+    },
+    {
+      "time": "20:40",
+      "horse": "Sunny Orange",
+      "tipster": "Rory Paddock",
+      "score": "-71.4"
+    }
+  ]
+}
