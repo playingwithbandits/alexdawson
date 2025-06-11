@@ -1,0 +1,160 @@
+{
+  "date": "2025-06-11",
+  "tips": [
+    {
+      "time": "14:30",
+      "horse": "Colinski",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Way Of Life",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Sawgrass",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Tsuki",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Bella Taslina",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Amber Honey",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Heart Of Eternity",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Papa Cocktail",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "One For Harvey",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Signcastle City",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Banksman",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Iftikhaar",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Migdam",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Flying Fortress",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Pete'S Dream",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Anvika",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "Harry The Rogue",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Cherry Pink",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Dinamine",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Final Orders",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Green Team",
+      "isNap": true
+    },
+    {
+      "time": "18:10",
+      "horse": "Miss Honey",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Silent Love",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Walson'S Law",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Zizi",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Three Yorkshiremen",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Better And Better",
+      "isNap": true
+    },
+    {
+      "time": "19:30",
+      "horse": "Valiancy",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Wrestling Revenue",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Havana Rum",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "French Haven",
+      "isNap": false
+    }
+  ]
+}

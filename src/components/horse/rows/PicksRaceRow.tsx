@@ -2456,18 +2456,6 @@ export function PicksRaceRow({
               (x) => horseNameToKey(x.name) === horseNameToKey(name)
             );
 
-            // const horsehas2ndPlaceLastTimeOutObj = has2ndPlaceLastTimeOut?.find(
-            //   (x) => horseNameToKey(x.name) === horseNameToKey(name)
-            // );
-
-            // const horsehadHamperedLastTimeOutObj = hadHamperedLastTimeOut?.find(
-            //   (x) => horseNameToKey(x.name) === horseNameToKey(name)
-            // );
-
-            // const horseEyecatcherLastTimeOutObj = eyecatcherLastTimeOut?.find(
-            //   (x) => horseNameToKey(x.name) === horseNameToKey(name)
-            // );
-
             const paraGraph = [
               `Eyecatcher: ${
                 horseEyecatcherObj?.hasEyecatcherWithinDays ? "Yes" : "No"
@@ -2507,28 +2495,6 @@ export function PicksRaceRow({
                 })
                 .filter(Boolean)
                 .join("\n"),
-
-              // `Hampered: ${
-              // `Hampered: ${
-              //   horsehadHamperedLastTimeOutObj?.hampered
-              //     ? "Yes" +
-              //       " | " +
-              //       horsehadHamperedLastTimeOutObj?.rpCloseUpComment +
-              //       " | " +
-              //       horsehadHamperedLastTimeOutObj?.matchedTerms +
-              //       " | " +
-              //       horsehadHamperedLastTimeOutObj?.days
-              //     : "No"
-              // }`,
-              // `Eyecatcher: ${
-              //   horseEyecatcherLastTimeOutObj?.eyecatcher
-              //     ? "Yes" +
-              //       " | " +
-              //       horseEyecatcherLastTimeOutObj?.rpCloseUpComment +
-              //       " | " +
-              //       horseEyecatcherLastTimeOutObj?.days
-              //     : "No"
-              // }`,,
               [
                 olbgNapGood && `<span style='color: #00ffff'>OLBG Nap</span>`,
                 olbgExpertGood &&
@@ -2577,67 +2543,22 @@ export function PicksRaceRow({
                 results={results}
                 time={race.time}
                 odds={odds}
-                extraText={
-                  `${count.toFixed(1)} : ${perc}%`
-                  // +
-                  // ` : AI: ${aiPercWithin10Percent ? "Yes" : "No"}  olbgNap: ${
-                  //   olbgNap ? "Yes" : "No"
-                  // }`
-                }
+                extraText={`${count.toFixed(1)} : ${perc}%`}
                 oddsHighlight={countGood && isEwable && odds >= 12}
                 isNonRunner={isNonRunner(race.time, name)}
-                //greyedOut={count < 2}
                 title={paraGraph}
-                // highlight3={aiGood && rpPredGood}
-                // highlight1={
-                //   aiGood &&
-                //   [
-                //     olbgNapGood,
-                //     olbgExpertGood,
-                //     rpPredGood,
-                //     mentionedByTipster,
-                //     sharpRatingGood,
-                //   ].filter(Boolean).length >= 3
-                // }
-                // highlight2={[
-                //   //olbgNapGood,
-                //   rpPredGood,
-                //   aiGood,
-                //   mentionedByTipster,
-                //   sharpRatingGood,
-                // ].every(Boolean)}
-                //highlight1={countGood}
-                // highlight2={
-                //   aiGood &&
-                //   hasOlbgComment &&
-                //   olbgNapGood &&
-                //   sharpRatingGood &&
-                //   rpPredGood
-                // }
-                // highlight1={countGood && rpPredGood && aiGood}
-                // highlight2={
-                //   countGood &&
-                //   rpPredGood &&
-                //   aiGood &&
-                //   sharpRatingGood &&
-                //   olbgNapGood
-                // }
-                // highlight3={
-                //   countGood2 &&
-                //   (horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                //     horseHamperedObj?.hasHamperedWithinDays ||
-                //     horseComfortableWithinDaysObj?.hasComfortableWithinDays)
-                // }
-                highlight4={
-                  // countGood2 &&
-                  //sharpRatingGood &&
-                  //aiGood &&
-                  // sharpRatingGood &&
-                  horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                  horseHamperedObj?.hasHamperedWithinDays ||
-                  horseComfortableWithinDaysObj?.hasComfortableWithinDays
+                highlight3={
+                  countGood2 &&
+                  (horseEyecatcherObj?.hasEyecatcherWithinDays ||
+                    horseHamperedObj?.hasHamperedWithinDays ||
+                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
-                //highlight3={countGood}
+                highlight4={
+                  countGood &&
+                  (horseEyecatcherObj?.hasEyecatcherWithinDays ||
+                    horseHamperedObj?.hasHamperedWithinDays ||
+                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
+                }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
               />

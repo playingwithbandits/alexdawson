@@ -1,0 +1,120 @@
+[
+  {
+    "courseName": "Hamilton",
+    "raceCardsCourseUrl": "/racecards/2025-06-11#hamilton",
+    "raceCardsCourseMeetingsUrl": "/racecards/22/hamilton/2025-06-11",
+    "going": "GOOD (GoingStick: 7.8)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "1m - Inside; Remainder - Stands' side",
+    "races": [
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/22/hamilton/2025-06-11/895117",
+        "horses": [
+          {
+            "horseName": "Belsito",
+            "horseProfileUrl": "/profile/horse/4493018/belsito/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/22/hamilton/2025-06-11/895121",
+        "horses": [
+          {
+            "horseName": "One More Bottle",
+            "horseProfileUrl": "/profile/horse/5127975/one-more-bottle/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-11#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-06-11",
+    "going": "POLYTRACK: STANDARD TO SLOW (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-06-11/895377",
+        "horses": [
+          {
+            "horseName": "Massimo Blue",
+            "horseProfileUrl": "/profile/horse/6737432/massimo-blue/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Limerick",
+    "raceCardsCourseUrl": "/racecards/2025-06-11#limerick",
+    "raceCardsCourseMeetingsUrl": "/racecards/188/limerick/2025-06-11",
+    "going": "GOOD (Selective watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-06-11#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-06-11",
+    "going": "GOOD TO SOFT (GoingStick: 5.2) (Rail movements: 2.30, 3.00 & 3.30 +2yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "1m3f - Outside; 1m6f - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/31/lingfield/2025-06-11/895126",
+        "horses": [
+          {
+            "horseName": "Rose Of Spain",
+            "horseProfileUrl": "/profile/horse/7643450/rose-of-spain/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Going Again",
+            "horseProfileUrl": "/profile/horse/7592683/going-again/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-06-11#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-06-11",
+    "going": "GOOD (GoingStick: 5.4) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "Centre",
+    "races": [
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-06-11/895132",
+        "horses": [
+          {
+            "horseName": "Summer Of Light",
+            "horseProfileUrl": "/profile/horse/6143203/summer-of-light/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-06-11#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-06-11",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
