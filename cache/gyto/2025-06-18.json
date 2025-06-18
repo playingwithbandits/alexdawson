@@ -1,0 +1,160 @@
+{
+  "date": "2025-06-18",
+  "tips": [
+    {
+      "time": "14:05",
+      "horse": "Market House",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Sergeant Fury",
+      "isNap": false
+    },
+    {
+      "time": "15:13",
+      "horse": "Alshadhian",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Sir Galahad",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "A Dublin Job",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Fillyfudge",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Royal Fixation",
+      "isNap": false
+    },
+    {
+      "time": "15:23",
+      "horse": "Blue Anthem",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Lord Abama",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Daring Legend",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Match Play",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Jojo Rabbit",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Rosallion",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Gstaad",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Believing",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Field Of Gold",
+      "isNap": true
+    },
+    {
+      "time": "17:35",
+      "horse": "Sons And Lovers",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Caballo De Mar",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Infantry Officer",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Lokma",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Spirit Of Jenny",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Kipp Kelly",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Rumba Numba",
+      "isNap": true
+    },
+    {
+      "time": "20:00",
+      "horse": "Time Allowed",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Petra Celera",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Reverberate",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Comanche Warrior",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Dumfries",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Kitsune Power",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Little Ted",
+      "isNap": false
+    },
+    {
+      "time": "20:45",
+      "horse": "Triple Force",
+      "isNap": false
+    }
+  ]
+}

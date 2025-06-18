@@ -2547,13 +2547,12 @@ export function PicksRaceRow({
                 oddsHighlight={countGood && isEwable && odds >= 12}
                 isNonRunner={isNonRunner(race.time, name)}
                 title={paraGraph}
-                highlight1={countGood && sharpRatingGood}
+                //highlight1={countGood && sharpRatingGood}
                 highlight4={
-                  countGood &&
-                  sharpRatingGood &&
-                  (horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                    horseHamperedObj?.hasHamperedWithinDays ||
-                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
+                  countGood
+                  // (horseEyecatcherObj?.hasEyecatcherWithinDays ||
+                  //   horseHamperedObj?.hasHamperedWithinDays ||
+                  //   horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
