@@ -1,0 +1,93 @@
+[
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-12#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-06-12",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Scattered showers",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-06-12#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-06-12",
+    "going": "GOOD, Good to firm in places",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-06-12#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-06-12",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.1)",
+    "weather": "Light rain",
+    "stallsPosition": "1m2f & 1m4f - Inside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-06-12#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-06-12",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.9) (Watering) (Rail movements: 2.50, 3.25, 4.00 & 4.33 +6yds)",
+    "weather": "Light rain",
+    "stallsPosition": "(Outer track) 5f, 6f & 1m - Centre; 1m2f & 1m6f - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Worcester",
+    "raceCardsCourseUrl": "/racecards/2025-06-12#worcester",
+    "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-06-12",
+    "going": "GOOD (GoingStick: 7.3) (Watering)",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/101/worcester/2025-06-12/895319",
+        "horses": [
+          {
+            "horseName": "She Won't Mind",
+            "horseProfileUrl": "/profile/horse/4963755/she-wont-mind/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:40",
+        "raceCardUrl": "/racecards/101/worcester/2025-06-12/895322",
+        "horses": [
+          {
+            "horseName": "Midnight Espresso",
+            "horseProfileUrl": "/profile/horse/7661869/midnight-espresso/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Jazzoon",
+            "horseProfileUrl": "/profile/horse/7178950/jazzoon/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-06-12#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-06-12",
+    "going": "GOOD (GoingStick: 5.7) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Centre",
+    "races": []
+  },
+  {
+    "courseName": "Yarmouth (gb)",
+    "raceCardsCourseUrl": "/racecards/2025-06-12#yarmouth-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1720/yarmouth-gb/2025-06-12",
+    "going": "GOOD (GoingStick: 5.7) (Watered)",
+    "weather": "Showers",
+    "stallsPosition": "Centre",
+    "races": []
+  }
+]

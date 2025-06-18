@@ -1,0 +1,167 @@
+[
+  {
+    "courseName": "Ascot",
+    "raceCardsCourseUrl": "/racecards/2025-06-17#ascot",
+    "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-06-17",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: Stands' side 8.1, Centre 8.4, Far side 8.4, Round 7.2) (Watering) (Rail movements: 4.20 +7yds, 5.00, 5.35 & 6.10 +14yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-17/892843",
+        "horses": [
+          {
+            "horseName": "Sardinian Warrior",
+            "horseProfileUrl": "/profile/horse/5476931/sardinian-warrior/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-06-17#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-06-17",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.0) (Watering) (Rail movements: All races +7yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/6/beverley/2025-06-17/896112",
+        "horses": [
+          {
+            "horseName": "Grey Soul",
+            "horseProfileUrl": "/profile/horse/7597372/grey-soul/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-17#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-06-17",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f - Centre; Remainder - Inner",
+    "races": [
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-06-17/896470",
+        "horses": [
+          {
+            "horseName": "Infantry Officer",
+            "horseProfileUrl": "/profile/horse/5845636/infantry-officer/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Top Of Pleinmont",
+            "horseProfileUrl": "/profile/horse/6402378/top-of-pleinmont/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-06-17/896469",
+        "horses": [
+          {
+            "horseName": "Pixie Diva",
+            "horseProfileUrl": "/profile/horse/7686989/pixie-diva/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-06-17/896468",
+        "horses": [
+          {
+            "horseName": "Breakdancer",
+            "horseProfileUrl": "/profile/horse/6692993/breakdancer/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-06-17/896466",
+        "horses": [
+          {
+            "horseName": "Petra Celera",
+            "horseProfileUrl": "/profile/horse/4827024/petra-celera/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-06-17/896465",
+        "horses": [
+          {
+            "horseName": "Miss Yorkshire",
+            "horseProfileUrl": "/profile/horse/6609351/miss-yorkshire/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Stratford",
+    "raceCardsCourseUrl": "/racecards/2025-06-17#stratford",
+    "raceCardsCourseMeetingsUrl": "/racecards/67/stratford/2025-06-17",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.5) (Watering) (Rail movements: 2.05 & 2.40 +33yds, 3.13, 3.50 & 5.10 +27yds and 4.30 +42yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:13",
+        "raceCardUrl": "/racecards/67/stratford/2025-06-17/896397",
+        "horses": [
+          {
+            "horseName": "She Won't Mind",
+            "horseProfileUrl": "/profile/horse/4963755/she-wont-mind/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Thirsk",
+    "raceCardsCourseUrl": "/racecards/2025-06-17#thirsk",
+    "raceCardsCourseMeetingsUrl": "/racecards/80/thirsk/2025-06-17",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 9.9) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "7f - Inside; 1m4f - Stands' side; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/80/thirsk/2025-06-17/896118",
+        "horses": [
+          {
+            "horseName": "Runninwild",
+            "horseProfileUrl": "/profile/horse/3523608/runninwild/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/80/thirsk/2025-06-17/896116",
+        "horses": [
+          {
+            "horseName": "The Green Man",
+            "horseProfileUrl": "/profile/horse/4251644/the-green-man/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  }
+]

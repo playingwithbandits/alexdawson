@@ -1,0 +1,86 @@
+[
+  {
+    "courseName": "Chester",
+    "raceCardsCourseUrl": "/racecards/2025-06-13#chester",
+    "raceCardsCourseMeetingsUrl": "/racecards/13/chester/2025-06-13",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.5)",
+    "weather": "Cloudy",
+    "stallsPosition": "1m2f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/13/chester/2025-06-13/895165",
+        "horses": [
+          {
+            "horseName": "General Admission",
+            "horseProfileUrl": "/profile/horse/6482627/general-admission/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cork",
+    "raceCardsCourseUrl": "/racecards/2025-06-13#cork",
+    "raceCardsCourseMeetingsUrl": "/racecards/596/cork/2025-06-13",
+    "going": "GOOD",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Fairyhouse",
+    "raceCardsCourseUrl": "/racecards/2025-06-13#fairyhouse",
+    "raceCardsCourseMeetingsUrl": "/racecards/182/fairyhouse/2025-06-13",
+    "going": "GOOD",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-06-13#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-06-13",
+    "going": "GOOD (GoingStick: 7.2) (Rail movements: 8.20 +16yds)",
+    "weather": "Rain",
+    "stallsPosition": "Straight - Stands' side; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Market Rasen",
+    "raceCardsCourseUrl": "/racecards/2025-06-13#market-rasen",
+    "raceCardsCourseMeetingsUrl": "/racecards/35/market-rasen/2025-06-13",
+    "going": "GOOD (GoingStick: Chase 7.2; Hurdle 7.3) (Watering) (Rail Movements: 5.50 +198yds, 6.25, 7.35 & 8.10 +150yds and 7.00 & 8.45 +192yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newton Abbot",
+    "raceCardsCourseUrl": "/racecards/2025-06-13#newton-abbot",
+    "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-06-13",
+    "going": "GOOD TO SOFT, Soft in places (GoingStick: 6.5) (Rail Movements: 5.35 +125yds, 6.10, 8.25 & 9.00 +96yds, 6.45 +31yds, 7.20 +164yds and 7.55 +17yds)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sandown",
+    "raceCardsCourseUrl": "/racecards/2025-06-13#sandown",
+    "raceCardsCourseMeetingsUrl": "/racecards/54/sandown/2025-06-13",
+    "going": "GOOD (GoingStick: Sprint 6.2, Round 6.5) (Selective watering)",
+    "weather": "Light rain",
+    "stallsPosition": "5f - Far side; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "York",
+    "raceCardsCourseUrl": "/racecards/2025-06-13#york",
+    "raceCardsCourseMeetingsUrl": "/racecards/107/york/2025-06-13",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: Overall 6.7, Home Straight - Far Side 6.6, Centre 6.8, Stands' side 6.7) (Watering)",
+    "weather": "Light rain",
+    "stallsPosition": "5f & 6f - Centre; Remainder - Inside",
+    "races": []
+  }
+]
