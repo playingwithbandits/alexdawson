@@ -3,10 +3,21 @@
     "courseName": "Ascot",
     "raceCardsCourseUrl": "/racecards/2025-06-19#ascot",
     "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-06-19",
-    "going": "GOOD TO FIRM, Good in places on Round course (GoingStick: Stands' side 8.5, Centre 8.6, Far side 8.5, Round 7.4) (Watered)",
-    "weather": "Sunny",
+    "going": "GOOD TO FIRM (Good in places on Round course; watered; Stands' 8.9; Ctr 8.5; Far 8.7; Rnd 7.1)",
+    "weather": "Fine and warm",
     "stallsPosition": "Straight - Centre; Round - Inside",
     "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-19/896134",
+        "horses": [
+          {
+            "horseName": "London Boy",
+            "horseProfileUrl": "/profile/horse/7436316/london-boy/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
       {
         "raceTime": "5:00",
         "raceCardUrl": "/racecards/2/ascot/2025-06-19/896135",
@@ -28,6 +39,17 @@
             "raceNumber": "(1)"
           }
         ]
+      },
+      {
+        "raceTime": "6:10",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-19/896137",
+        "horses": [
+          {
+            "horseName": "Array",
+            "horseProfileUrl": "/profile/horse/5162486/array/",
+            "raceNumber": "(6)"
+          }
+        ]
       }
     ]
   },
@@ -35,10 +57,21 @@
     "courseName": "Chelmsford (AW)",
     "raceCardsCourseUrl": "/racecards/2025-06-19#chelmsford-aw",
     "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-06-19",
-    "going": "POLYTRACK: STANDARD",
-    "weather": "Sunny",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Hot and sunny",
     "stallsPosition": "6f - Centre; Remainder - inside",
     "races": [
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-06-19/896484",
+        "horses": [
+          {
+            "horseName": "Yellow Diamonds",
+            "horseProfileUrl": "/profile/horse/7551814/yellow-diamonds/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
       {
         "raceTime": "3:23",
         "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-06-19/896483",
@@ -56,18 +89,72 @@
     "courseName": "Leopardstown",
     "raceCardsCourseUrl": "/racecards/2025-06-19#leopardstown",
     "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-06-19",
-    "going": "GOOD TO YIELDING",
+    "going": "GOOD",
     "weather": "Partly cloudy",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "5:20",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-06-19/897890",
+        "horses": [
+          {
+            "horseName": "Rosato",
+            "horseProfileUrl": "/profile/horse/5301540/rosato/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
       {
         "raceTime": "5:53",
         "raceCardUrl": "/racecards/187/leopardstown/2025-06-19/897891",
         "horses": [
           {
+            "horseName": "James Henry",
+            "horseProfileUrl": "/profile/horse/4272378/james-henry/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Loingseoir",
+            "horseProfileUrl": "/profile/horse/2885156/loingseoir/",
+            "raceNumber": "(4)"
+          },
+          {
             "horseName": "Cordouan",
             "horseProfileUrl": "/profile/horse/3212558/cordouan/",
             "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-06-19/897893",
+        "horses": [
+          {
+            "horseName": "Oreeda",
+            "horseProfileUrl": "/profile/horse/6482610/oreeda/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-06-19/898026",
+        "horses": [
+          {
+            "horseName": "Fleetfootsoldier",
+            "horseProfileUrl": "/profile/horse/4701424/fleetfootsoldier/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-06-19/897894",
+        "horses": [
+          {
+            "horseName": "Good Onya Mate",
+            "horseProfileUrl": "/profile/horse/7643447/good-onya-mate/",
+            "raceNumber": "(5)"
           }
         ]
       }
@@ -91,6 +178,17 @@
             "raceNumber": "(2)"
           }
         ]
+      },
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-06-19/896479",
+        "horses": [
+          {
+            "horseName": "Spring",
+            "horseProfileUrl": "/profile/horse/5837073/spring/",
+            "raceNumber": "(4)"
+          }
+        ]
       }
     ]
   },
@@ -98,16 +196,28 @@
     "courseName": "Ripon",
     "raceCardsCourseUrl": "/racecards/2025-06-19#ripon",
     "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-06-19",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.9) (Watering)",
+    "going": "GOOD (Good to firm in places; watered; 8.0)",
     "weather": "Sunny",
     "stallsPosition": "1m4f - Centre; Round - Inside; Straight - Stands' side",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/49/ripon/2025-06-19/896168",
+        "horses": [
+          {
+            "horseName": "Irv",
+            "horseProfileUrl": "/profile/horse/2078885/irv/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Wetherby",
     "raceCardsCourseUrl": "/racecards/2025-06-19#wetherby",
     "raceCardsCourseMeetingsUrl": "/racecards/87/wetherby/2025-06-19",
-    "going": "GOOD TO FIRM (GoingStick: 9.2) (Watering)",
+    "going": "GOOD TO FIRM (GoingStick: 8.8) (Watered)",
     "weather": "Sunny",
     "stallsPosition": "5.5f - Outside; 1m2f - Centre; 7f & 1m - Inside",
     "races": [
@@ -121,8 +231,28 @@
             "raceNumber": "(4)"
           }
         ]
+      },
+      {
+        "raceTime": "7:20",
+        "raceCardUrl": "/racecards/87/wetherby/2025-06-19/896175",
+        "horses": [
+          {
+            "horseName": "Maris Angel",
+            "horseProfileUrl": "/profile/horse/5743646/maris-angel/",
+            "raceNumber": "(4)"
+          }
+        ]
       }
     ]
+  },
+  {
+    "courseName": "Dieppe",
+    "raceCardsCourseUrl": "/racecards/2025-06-19#dieppe",
+    "raceCardsCourseMeetingsUrl": "/racecards/436/dieppe/2025-06-19",
+    "going": "",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
   },
   {
     "courseName": "Longchamp",

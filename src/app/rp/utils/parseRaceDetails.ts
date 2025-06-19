@@ -95,10 +95,10 @@ export async function parseRaceDetails(
           ...formObj,
           form: formObj?.form?.filter(
             (x) =>
-              isValidOutcome(x.raceOutcomeCode) &&
-              x.officialRatingRanOff &&
-              x.officialRatingRanOff > 0 &&
-              x.raceClass !== null &&
+              // isValidOutcome(x.raceOutcomeCode) &&
+              // x.officialRatingRanOff &&
+              // x.officialRatingRanOff > 0 &&
+              // x.raceClass !== null &&
               new Date(x.raceDatetime || "") > twoYearsAgo
           ),
         },
