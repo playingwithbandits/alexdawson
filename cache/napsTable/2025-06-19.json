@@ -1,0 +1,293 @@
+{
+  "date": "2025-06-19",
+  "tips": [
+    {
+      "time": "15:05",
+      "horse": "Sing Us A Song",
+      "tipster": "Rory Delargy",
+      "score": "29.2"
+    },
+    {
+      "time": "16:20",
+      "horse": "Trawlerman",
+      "tipster": "Glendale",
+      "score": "28.8"
+    },
+    {
+      "time": "18:10",
+      "horse": "Roi De France",
+      "tipster": "Chris Connolly",
+      "score": "26.8"
+    },
+    {
+      "time": "17:35",
+      "horse": "Detain",
+      "tipster": "Templegate",
+      "score": "19.0"
+    },
+    {
+      "time": "18:10",
+      "horse": "Akkadian Thunder",
+      "tipster": "The North",
+      "score": "15.2"
+    },
+    {
+      "time": "16:20",
+      "horse": "Illinois",
+      "tipster": "Lee Sobot",
+      "score": "14.2"
+    },
+    {
+      "time": "15:05",
+      "horse": "Merchant",
+      "tipster": "Marlborough",
+      "score": "10.7"
+    },
+    {
+      "time": "16:20",
+      "horse": "Yashin",
+      "tipster": "Farringdon",
+      "score": "10.4"
+    },
+    {
+      "time": "17:35",
+      "horse": "High Stock",
+      "tipster": "Lambourn",
+      "score": "8.3"
+    },
+    {
+      "time": "16:20",
+      "horse": "Trawlerman",
+      "tipster": "The Judge",
+      "score": "6.0"
+    },
+    {
+      "time": "17:05",
+      "horse": "Dubai Beach",
+      "tipster": "Newmarket",
+      "score": "4.0"
+    },
+    {
+      "time": "16:20",
+      "horse": "Candelari",
+      "tipster": "Garry Owen",
+      "score": "3.4"
+    },
+    {
+      "time": "17:00",
+      "horse": "Brave Mission",
+      "tipster": "Melissa Jones",
+      "score": "0.1"
+    },
+    {
+      "time": "15:05",
+      "horse": "Sing Us A Song",
+      "tipster": "Rockavon",
+      "score": "-1.8"
+    },
+    {
+      "time": "14:30",
+      "horse": "Sandal's Song",
+      "tipster": "Dean Kilbryde",
+      "score": "-3.6"
+    },
+    {
+      "time": "18:10",
+      "horse": "Divine Libra",
+      "tipster": "Postdata",
+      "score": "-3.7"
+    },
+    {
+      "time": "15:40",
+      "horse": "Catalina Delcarpio",
+      "tipster": "Fortunatus",
+      "score": "-4.5"
+    },
+    {
+      "time": "17:00",
+      "horse": "Fearnot",
+      "tipster": "The Brigadier",
+      "score": "-5.8"
+    },
+    {
+      "time": "17:35",
+      "horse": "Tornado Alert",
+      "tipster": "Ben Morgan",
+      "score": "-6.7"
+    },
+    {
+      "time": "20:30",
+      "horse": "A Dream To Share",
+      "tipster": "Computeform",
+      "score": "-8.7"
+    },
+    {
+      "time": "14:30",
+      "horse": "Charles Darwin",
+      "tipster": "Ratings Hub",
+      "score": "-8.7"
+    },
+    {
+      "time": "17:35",
+      "horse": "High Stock",
+      "tipster": "Mercury",
+      "score": "-13.3"
+    },
+    {
+      "time": "18:10",
+      "horse": "Northern Express",
+      "tipster": "Matt Polley",
+      "score": "-16.9"
+    },
+    {
+      "time": "15:05",
+      "horse": "Sing Us A Song",
+      "tipster": "Whistler",
+      "score": "-16.6"
+    },
+    {
+      "time": "16:20",
+      "horse": "Illinois",
+      "tipster": "Robin Goodfellow",
+      "score": "-16.4"
+    },
+    {
+      "time": "17:00",
+      "horse": "Fearnot",
+      "tipster": "On The Nose",
+      "score": "-17.7"
+    },
+    {
+      "time": "15:05",
+      "horse": "Gunship",
+      "tipster": "RP Ratings",
+      "score": "-22.3"
+    },
+    {
+      "time": "15:40",
+      "horse": "Serenity Prayer",
+      "tipster": "Newsboy",
+      "score": "-24.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Raafedd",
+      "tipster": "Karl Hedley",
+      "score": "-24.6"
+    },
+    {
+      "time": "16:20",
+      "horse": "Candelari",
+      "tipster": "Spotlight",
+      "score": "-26.5"
+    },
+    {
+      "time": "18:10",
+      "horse": "Witch Hunter",
+      "tipster": "Jason Heavey",
+      "score": "-28.5"
+    },
+    {
+      "time": "14:30",
+      "horse": "Charles Darwin",
+      "tipster": "Tipman Tips",
+      "score": "-29.8"
+    },
+    {
+      "time": "15:05",
+      "horse": "The Cursor",
+      "tipster": "The Punt",
+      "score": "-34.9"
+    },
+    {
+      "time": "17:00",
+      "horse": "Teroomm",
+      "tipster": "Ross Shepherd",
+      "score": "-38.7"
+    },
+    {
+      "time": "15:40",
+      "horse": "Garden Of Eden",
+      "tipster": "Ian Gaughran",
+      "score": "-39.1"
+    },
+    {
+      "time": "17:35",
+      "horse": "Jackknife",
+      "tipster": "Jon Freeman",
+      "score": "-38.8"
+    },
+    {
+      "time": "14:30",
+      "horse": "First Legion",
+      "tipster": "Jeffrey Ross",
+      "score": "-44.5"
+    },
+    {
+      "time": "16:20",
+      "horse": "Candelari",
+      "tipster": "Brian Flanagan",
+      "score": "-42.9"
+    },
+    {
+      "time": "17:00",
+      "horse": "La Botte",
+      "tipster": "The Duke",
+      "score": "-44.6"
+    },
+    {
+      "time": "15:05",
+      "horse": "Merchant",
+      "tipster": "Rob Wright",
+      "score": "-43.0"
+    },
+    {
+      "time": "16:20",
+      "horse": "Illinois",
+      "tipster": "The Score",
+      "score": "-43.8"
+    },
+    {
+      "time": "18:10",
+      "horse": "Witch Hunter",
+      "tipster": "Moorestyle",
+      "score": "-46.7"
+    },
+    {
+      "time": "14:30",
+      "horse": "Charles Darwin",
+      "tipster": "Adrian Wall",
+      "score": "-50.0"
+    },
+    {
+      "time": "17:35",
+      "horse": "Arabian Force",
+      "tipster": "Jim Delahunt",
+      "score": "-50.0"
+    },
+    {
+      "time": "17:00",
+      "horse": "Teroomm",
+      "tipster": "Chris Wright",
+      "score": "-52.3"
+    },
+    {
+      "time": "16:20",
+      "horse": "Sweet William",
+      "tipster": "Sam Hardy",
+      "score": "-57.5"
+    },
+    {
+      "time": "15:05",
+      "horse": "Daiquiri Bay",
+      "tipster": "Andrew Mount",
+      "score": "-65.9"
+    },
+    {
+      "time": "16:20",
+      "horse": "Illinois",
+      "tipster": "Steve Mullington",
+      "score": "-72.3"
+    }
+  ]
+}

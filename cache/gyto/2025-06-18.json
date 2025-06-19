@@ -2,18 +2,73 @@
   "date": "2025-06-18",
   "tips": [
     {
-      "time": "14:05",
-      "horse": "Market House",
+      "time": "14:15",
+      "horse": "Gemini Man",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Awaafi",
+      "isNap": false
+    },
+    {
+      "time": "15:23",
+      "horse": "Woohoo",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Inanna",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Blufferonthebus",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Native Honey",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Desert Of The Sea",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Zelaina",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "Carmers",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Los Angeles",
+      "isNap": true
+    },
+    {
+      "time": "17:00",
+      "horse": "Treasure Time",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Rogue Legend",
       "isNap": false
     },
     {
       "time": "14:40",
-      "horse": "Sergeant Fury",
+      "horse": "Rocks Up Late",
       "isNap": false
     },
     {
-      "time": "15:13",
-      "horse": "Alshadhian",
+      "time": "15:15",
+      "horse": "Jet Smart",
       "isNap": false
     },
     {
@@ -23,137 +78,82 @@
     },
     {
       "time": "16:30",
-      "horse": "A Dublin Job",
+      "horse": "Impero",
       "isNap": false
     },
     {
       "time": "17:10",
-      "horse": "Fillyfudge",
+      "horse": "Twirling",
       "isNap": false
     },
     {
-      "time": "14:15",
-      "horse": "Royal Fixation",
+      "time": "17:40",
+      "horse": "Carlton",
       "isNap": false
     },
     {
-      "time": "15:23",
-      "horse": "Blue Anthem",
+      "time": "18:20",
+      "horse": "Star Legend",
       "isNap": false
     },
     {
-      "time": "16:00",
-      "horse": "Lord Abama",
-      "isNap": false
-    },
-    {
-      "time": "16:40",
-      "horse": "Daring Legend",
-      "isNap": false
-    },
-    {
-      "time": "17:20",
-      "horse": "Match Play",
-      "isNap": false
-    },
-    {
-      "time": "17:50",
-      "horse": "Jojo Rabbit",
-      "isNap": false
-    },
-    {
-      "time": "14:30",
-      "horse": "Rosallion",
-      "isNap": false
-    },
-    {
-      "time": "15:05",
-      "horse": "Gstaad",
-      "isNap": false
-    },
-    {
-      "time": "15:40",
-      "horse": "Believing",
-      "isNap": false
-    },
-    {
-      "time": "16:20",
-      "horse": "Field Of Gold",
-      "isNap": true
-    },
-    {
-      "time": "17:35",
-      "horse": "Sons And Lovers",
-      "isNap": false
-    },
-    {
-      "time": "18:10",
-      "horse": "Caballo De Mar",
-      "isNap": false
-    },
-    {
-      "time": "17:25",
-      "horse": "Infantry Officer",
-      "isNap": false
-    },
-    {
-      "time": "17:55",
-      "horse": "Lokma",
-      "isNap": false
-    },
-    {
-      "time": "18:30",
-      "horse": "Spirit Of Jenny",
-      "isNap": false
-    },
-    {
-      "time": "19:00",
-      "horse": "Kipp Kelly",
-      "isNap": false
-    },
-    {
-      "time": "19:30",
-      "horse": "Rumba Numba",
-      "isNap": true
-    },
-    {
-      "time": "20:00",
-      "horse": "Time Allowed",
-      "isNap": false
-    },
-    {
-      "time": "20:30",
-      "horse": "Petra Celera",
+      "time": "17:45",
+      "horse": "Apple'S Angel",
       "isNap": false
     },
     {
       "time": "18:15",
-      "horse": "Reverberate",
+      "horse": "Rory Rocket",
       "isNap": false
     },
     {
       "time": "18:45",
-      "horse": "Comanche Warrior",
+      "horse": "Tommytwohoots",
       "isNap": false
     },
     {
       "time": "19:15",
-      "horse": "Dumfries",
-      "isNap": false
+      "horse": "Sawgrass",
+      "isNap": true
     },
     {
       "time": "19:45",
-      "horse": "Kitsune Power",
+      "horse": "Golden Handshake",
       "isNap": false
     },
     {
       "time": "20:15",
-      "horse": "Little Ted",
+      "horse": "Glitter Code",
       "isNap": false
     },
     {
       "time": "20:45",
-      "horse": "Triple Force",
+      "horse": "Mr Trick",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Novelette",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "El Madar",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "On Key",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Jenubiyah",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Art Of Fox",
       "isNap": false
     }
   ]

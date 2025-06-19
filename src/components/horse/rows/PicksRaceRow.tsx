@@ -41,10 +41,10 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
-const THRESHOLD = 0.7;
-const DAYS_THRESHOLD_COMFORTABLE = 21;
-const DAYS_THRESHOLD_EYECATCHER = 90;
-const DAYS_THRESHOLD_HAMPERED = 60;
+const THRESHOLD = 0.8;
+const DAYS_THRESHOLD_COMFORTABLE = 14;
+const DAYS_THRESHOLD_EYECATCHER = 21;
+const DAYS_THRESHOLD_HAMPERED = 21;
 
 const goodFormCode = (code: string, runners: number) => {
   if (runners < 5) {
@@ -2421,7 +2421,7 @@ export function PicksRaceRow({
               rpPredictions?.find((x) => cleanName(x.name) === cleanName(name))
                 ?.score || 0;
 
-            const countGood = count >= topScoreCount * 0.85;
+            const countGood = count >= topScoreCount * 0.66;
             const countGood2 = count >= topScoreCount * 0.6;
 
             const rpPredPercWithin10Percent = rpPredPerc >= THRESHOLD * 100;
@@ -2549,10 +2549,14 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
-                  countGood
-                  // (horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                  //   horseHamperedObj?.hasHamperedWithinDays ||
-                  //   horseComfortableWithinDaysObj?.hasComfortableWithinDays)
+                  countGood &&
+                  aiGood &&
+                  rpPredGood &&
+                  sharpRatingGood &&
+                  (olbgNapGood ||
+                    horseEyecatcherObj?.hasEyecatcherWithinDays ||
+                    horseHamperedObj?.hasHamperedWithinDays ||
+                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}

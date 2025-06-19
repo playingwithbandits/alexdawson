@@ -1,0 +1,136 @@
+[
+  {
+    "courseName": "Ascot",
+    "raceCardsCourseUrl": "/racecards/2025-06-19#ascot",
+    "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-06-19",
+    "going": "GOOD TO FIRM, Good in places on Round course (GoingStick: Stands' side 8.5, Centre 8.6, Far side 8.5, Round 7.4) (Watered)",
+    "weather": "Sunny",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-19/896135",
+        "horses": [
+          {
+            "horseName": "Linwood",
+            "horseProfileUrl": "/profile/horse/5884228/linwood/",
+            "raceNumber": "(19)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-19/896133",
+        "horses": [
+          {
+            "horseName": "Al Shababi",
+            "horseProfileUrl": "/profile/horse/6582577/al-shababi/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chelmsford (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-19#chelmsford-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1083/chelmsford-aw/2025-06-19",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Sunny",
+    "stallsPosition": "6f - Centre; Remainder - inside",
+    "races": [
+      {
+        "raceTime": "3:23",
+        "raceCardUrl": "/racecards/1083/chelmsford-aw/2025-06-19/896483",
+        "horses": [
+          {
+            "horseName": "Almaty Star",
+            "horseProfileUrl": "/profile/horse/4575818/almaty-star/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-06-19#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-06-19",
+    "going": "GOOD TO YIELDING",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:53",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-06-19/897891",
+        "horses": [
+          {
+            "horseName": "Cordouan",
+            "horseProfileUrl": "/profile/horse/3212558/cordouan/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-19#lingfield-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/393/lingfield-aw/2025-06-19",
+    "going": "POLYTRACK: STANDARD",
+    "weather": "Sunny",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "6:38",
+        "raceCardUrl": "/racecards/393/lingfield-aw/2025-06-19/896477",
+        "horses": [
+          {
+            "horseName": "Orange Emperor",
+            "horseProfileUrl": "/profile/horse/7204794/orange-emperor/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ripon",
+    "raceCardsCourseUrl": "/racecards/2025-06-19#ripon",
+    "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-06-19",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.9) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "1m4f - Centre; Round - Inside; Straight - Stands' side",
+    "races": []
+  },
+  {
+    "courseName": "Wetherby",
+    "raceCardsCourseUrl": "/racecards/2025-06-19#wetherby",
+    "raceCardsCourseMeetingsUrl": "/racecards/87/wetherby/2025-06-19",
+    "going": "GOOD TO FIRM (GoingStick: 9.2) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "5.5f - Outside; 1m2f - Centre; 7f & 1m - Inside",
+    "races": [
+      {
+        "raceTime": "5:48",
+        "raceCardUrl": "/racecards/87/wetherby/2025-06-19/896172",
+        "horses": [
+          {
+            "horseName": "Warriors Choice",
+            "horseProfileUrl": "/profile/horse/7534591/warriors-choice/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Longchamp",
+    "raceCardsCourseUrl": "/racecards/2025-06-19#longchamp",
+    "raceCardsCourseMeetingsUrl": "/racecards/211/longchamp/2025-06-19",
+    "going": "TURF: SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
