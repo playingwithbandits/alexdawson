@@ -2550,9 +2550,9 @@ export function PicksRaceRow({
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
                   countGood &&
-                  aiGood &&
-                  rpPredGood &&
-                  sharpRatingGood &&
+                  //aiGood &&
+                  //rpPredGood &&
+                  //sharpRatingGood &&
                   (olbgNapGood ||
                     horseEyecatcherObj?.hasEyecatcherWithinDays ||
                     horseHamperedObj?.hasHamperedWithinDays ||

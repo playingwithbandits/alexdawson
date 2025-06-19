@@ -1,0 +1,56 @@
+[
+  {
+    "courseName": "Ascot",
+    "raceCardsCourseUrl": "/racecards/2025-06-20#ascot",
+    "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-06-20",
+    "going": "GOOD TO FIRM, Good in places on Round course (GoingStick: Stands' side 8.9, Centre 8.5, Far side 8.7, Round 7.1) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Down Royal",
+    "raceCardsCourseUrl": "/racecards/2025-06-20#down-royal",
+    "raceCardsCourseMeetingsUrl": "/racecards/180/down-royal/2025-06-20",
+    "going": "GOOD (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-06-20#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-06-20",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.2) (Watering) (Rail Movement: 7.38 +16yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f & 1m - Centre; 1m4f - Outside; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Market Rasen",
+    "raceCardsCourseUrl": "/racecards/2025-06-20#market-rasen",
+    "raceCardsCourseMeetingsUrl": "/racecards/35/market-rasen/2025-06-20",
+    "going": "GOOD (GoingStick: Chase 7.3; Hurdle 7.5) (Watering) (Rail Movement: 2.05, 2.40 & 5.05 +204yds, 3.13 +165yds, 3.50 & 5.45 +156yds and 4.25 +222yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newmarket (July)",
+    "raceCardsCourseUrl": "/racecards/2025-06-20#newmarket-july",
+    "raceCardsCourseMeetingsUrl": "/racecards/174/newmarket-july/2025-06-20",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.4) (Watering) (Rail movements: 6.37 & 8.25 +25yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Centre - (Far side course)",
+    "races": []
+  },
+  {
+    "courseName": "Redcar",
+    "raceCardsCourseUrl": "/racecards/2025-06-20#redcar",
+    "raceCardsCourseMeetingsUrl": "/racecards/47/redcar/2025-06-20",
+    "going": "GOOD TO FIRM (GoingStick: 9.7) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": []
+  }
+]
