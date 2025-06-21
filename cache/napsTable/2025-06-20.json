@@ -1,0 +1,311 @@
+{
+  "date": "2025-06-20",
+  "tips": [
+    {
+      "time": "15:05",
+      "horse": "Shadow Of Light",
+      "tipster": "Glendale",
+      "score": "32.4"
+    },
+    {
+      "time": "14:30",
+      "horse": "Ipanema Queen",
+      "tipster": "Rory Delargy",
+      "score": "26.6"
+    },
+    {
+      "time": "16:20",
+      "horse": "Falakeyah",
+      "tipster": "Chris Connolly",
+      "score": "24.3"
+    },
+    {
+      "time": "17:35",
+      "horse": "Zahrann",
+      "tipster": "Templegate",
+      "score": "16.8"
+    },
+    {
+      "time": "15:40",
+      "horse": "Almosh'her",
+      "tipster": "Marlborough",
+      "score": "16.4"
+    },
+    {
+      "time": "15:23",
+      "horse": "Marhaba Ghaiyyath",
+      "tipster": "The North",
+      "score": "12.9"
+    },
+    {
+      "time": "14:30",
+      "horse": "Signora",
+      "tipster": "Lee Sobot",
+      "score": "12.1"
+    },
+    {
+      "time": "15:05",
+      "horse": "Big Mojo",
+      "tipster": "The Judge",
+      "score": "10.0"
+    },
+    {
+      "time": "14:30",
+      "horse": "Tahalel",
+      "tipster": "Farringdon",
+      "score": "8.2"
+    },
+    {
+      "time": "15:05",
+      "horse": "Jonquil",
+      "tipster": "Lambourn",
+      "score": "6.2"
+    },
+    {
+      "time": "15:05",
+      "horse": "Shadow Of Light",
+      "tipster": "Newmarket",
+      "score": "5.8"
+    },
+    {
+      "time": "15:05",
+      "horse": "Babouche",
+      "tipster": "Garry Owen",
+      "score": "1.5"
+    },
+    {
+      "time": "17:35",
+      "horse": "Zahrann",
+      "tipster": "Melissa Jones",
+      "score": "-1.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Royal Rhythm",
+      "tipster": "West Country",
+      "score": "-3.4"
+    },
+    {
+      "time": "17:35",
+      "horse": "Zahrann",
+      "tipster": "Rockavon",
+      "score": "-3.7"
+    },
+    {
+      "time": "15:05",
+      "horse": "Babouche",
+      "tipster": "Dean Kilbryde",
+      "score": "-5.5"
+    },
+    {
+      "time": "18:10",
+      "horse": "Redorange",
+      "tipster": "Postdata",
+      "score": "-5.6"
+    },
+    {
+      "time": "18:10",
+      "horse": "Stormy Impact",
+      "tipster": "Fortunatus",
+      "score": "-6.4"
+    },
+    {
+      "time": "16:25",
+      "horse": "Whistleinthedark",
+      "tipster": "Computeform",
+      "score": "-7.5"
+    },
+    {
+      "time": "14:30",
+      "horse": "Signora",
+      "tipster": "Ratings Hub",
+      "score": "-7.4"
+    },
+    {
+      "time": "16:20",
+      "horse": "Falakeyah",
+      "tipster": "The Brigadier",
+      "score": "-7.6"
+    },
+    {
+      "time": "17:00",
+      "horse": "Miss Nightfall",
+      "tipster": "Ben Morgan",
+      "score": "-8.5"
+    },
+    {
+      "time": "17:35",
+      "horse": "Amiloc",
+      "tipster": "Mercury",
+      "score": "-14.9"
+    },
+    {
+      "time": "17:00",
+      "horse": "Zgharta",
+      "tipster": "Matt Polley",
+      "score": "-18.5"
+    },
+    {
+      "time": "17:35",
+      "horse": "Amiloc",
+      "tipster": "Whistler",
+      "score": "-18.2"
+    },
+    {
+      "time": "14:30",
+      "horse": "Gold Digger",
+      "tipster": "Robin Goodfellow",
+      "score": "-17.9"
+    },
+    {
+      "time": "17:35",
+      "horse": "Zahrann",
+      "tipster": "On The Nose",
+      "score": "-19.3"
+    },
+    {
+      "time": "14:30",
+      "horse": "Venetian Sun",
+      "tipster": "Luke Tucker",
+      "score": "-22.4"
+    },
+    {
+      "time": "15:40",
+      "horse": "French Duke",
+      "tipster": "RP Ratings",
+      "score": "-23.7"
+    },
+    {
+      "time": "15:05",
+      "horse": "Shadow Of Light",
+      "tipster": "Ian Gaughran",
+      "score": "-24.9"
+    },
+    {
+      "time": "16:20",
+      "horse": "Falakeyah",
+      "tipster": "Newsboy",
+      "score": "-26.0"
+    },
+    {
+      "time": "17:00",
+      "horse": "Betty Clover",
+      "tipster": "Karl Hedley",
+      "score": "-26.1"
+    },
+    {
+      "time": "16:20",
+      "horse": "Falakeyah",
+      "tipster": "Spotlight",
+      "score": "-27.9"
+    },
+    {
+      "time": "16:00",
+      "horse": "Clermont Ferrand",
+      "tipster": "Tipman Tips",
+      "score": "-28.1"
+    },
+    {
+      "time": "15:05",
+      "horse": "Babouche",
+      "tipster": "Jason Heavey",
+      "score": "-29.8"
+    },
+    {
+      "time": "16:20",
+      "horse": "Zarigana",
+      "tipster": "Rob Wright",
+      "score": "-36.4"
+    },
+    {
+      "time": "17:00",
+      "horse": "Oolong Poobong",
+      "tipster": "The Punt",
+      "score": "-36.1"
+    },
+    {
+      "time": "18:10",
+      "horse": "Realign",
+      "tipster": "Jon Freeman",
+      "score": "-38.8"
+    },
+    {
+      "time": "15:40",
+      "horse": "Siege Of Troy",
+      "tipster": "Ross Shepherd",
+      "score": "-39.9"
+    },
+    {
+      "time": "16:00",
+      "horse": "Venezuelan",
+      "tipster": "Jeffrey Ross",
+      "score": "-45.6"
+    },
+    {
+      "time": "15:05",
+      "horse": "Babouche",
+      "tipster": "Brian Flanagan",
+      "score": "-44.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "French Duke",
+      "tipster": "The Duke",
+      "score": "-45.7"
+    },
+    {
+      "time": "15:05",
+      "horse": "Shadow Of Light",
+      "tipster": "The Score",
+      "score": "-44.8"
+    },
+    {
+      "time": "18:10",
+      "horse": "Zayer",
+      "tipster": "Moorestyle",
+      "score": "-47.7"
+    },
+    {
+      "time": "15:05",
+      "horse": "Babouche",
+      "tipster": "Adrian Wall",
+      "score": "-47.8"
+    },
+    {
+      "time": "15:05",
+      "horse": "Babouche",
+      "tipster": "Jim Delahunt",
+      "score": "-50.9"
+    },
+    {
+      "time": "15:05",
+      "horse": "Big Mojo",
+      "tipster": "Chris Wright",
+      "score": "-53.2"
+    },
+    {
+      "time": "16:20",
+      "horse": "January",
+      "tipster": "Sam Hardy",
+      "score": "-58.3"
+    },
+    {
+      "time": "17:00",
+      "horse": "Silver Ghost",
+      "tipster": "Andrew Mount",
+      "score": "-66.5"
+    },
+    {
+      "time": "17:00",
+      "horse": "Never Let Go",
+      "tipster": "Steve Mullington",
+      "score": "-72.9"
+    },
+    {
+      "time": "14:15",
+      "horse": "Oscar's Sister",
+      "tipster": "Rory Paddock",
+      "score": "-75.9"
+    }
+  ]
+}

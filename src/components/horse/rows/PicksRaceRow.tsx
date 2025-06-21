@@ -778,14 +778,14 @@ export function PicksRaceRow({
 
   const averageSharpTotalsRatingArr = sharpTipSelections?.map((x) => {
     const arr = [
-      x.earlySpeed || 0,
-      x.ability || 0,
-      x.jockey || 0,
-      x.trainer || 0,
-      x.going || 0,
-      x.course || 0,
-      x.pedigree || 0,
-      x.owner || 0,
+      (x.earlySpeed || 0) / (topSharpSpeedRating || 100),
+      (x.ability || 0) / (topSharpAbilityRating || 100),
+      (x.jockey || 0) / (topSharpJockeyRating || 100),
+      (x.trainer || 0) / (topSharpTrainerRating || 100),
+      (x.going || 0) / (topSharpGoingRating || 100),
+      (x.course || 0) / (topSharpCourseRating || 100),
+      (x.pedigree || 0) / (topSharpPedigreeRating || 100),
+      (x.owner || 0) / (topSharpOwnerRating || 100),
     ];
     return {
       horseName: x.horseName,

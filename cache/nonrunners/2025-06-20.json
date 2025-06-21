@@ -3,17 +3,88 @@
     "courseName": "Ascot",
     "raceCardsCourseUrl": "/racecards/2025-06-20#ascot",
     "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-06-20",
-    "going": "GOOD TO FIRM, Good in places on Round course (GoingStick: Stands' side 8.9, Centre 8.5, Far side 8.7, Round 7.1) (Watering)",
-    "weather": "Mostly cloudy",
+    "going": "GOOD TO FIRM (GoingStick: Stands' side 8.9, Centre 8.5, Far side 8.7, Round 7.1) (Watering)",
+    "weather": "Sunny",
     "stallsPosition": "Straight - Centre; Round - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-20/892849",
+        "horses": [
+          {
+            "horseName": "Leovanni",
+            "horseProfileUrl": "/profile/horse/5982387/leovanni/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-20/896140",
+        "horses": [
+          {
+            "horseName": "Caviar Heights",
+            "horseProfileUrl": "/profile/horse/5123488/caviar-heights/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-20/896141",
+        "horses": [
+          {
+            "horseName": "Supermodel",
+            "horseProfileUrl": "/profile/horse/6487597/supermodel/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Trad Jazz",
+            "horseProfileUrl": "/profile/horse/6161664/trad-jazz/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Sweet Chariot",
+            "horseProfileUrl": "/profile/horse/5982404/sweet-chariot/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-20/896138",
+        "horses": [
+          {
+            "horseName": "Convergent",
+            "horseProfileUrl": "/profile/horse/6595663/convergent/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:10",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-20/896142",
+        "horses": [
+          {
+            "horseName": "Red Sand",
+            "horseProfileUrl": "/profile/horse/5884205/red-sand/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Vingegaard",
+            "horseProfileUrl": "/profile/horse/5708642/vingegaard/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Down Royal",
     "raceCardsCourseUrl": "/racecards/2025-06-20#down-royal",
     "raceCardsCourseMeetingsUrl": "/racecards/180/down-royal/2025-06-20",
     "going": "GOOD (Watering)",
-    "weather": "Mostly cloudy",
+    "weather": "Mostly sunny",
     "stallsPosition": "",
     "races": []
   },
@@ -39,7 +110,7 @@
     "courseName": "Newmarket (July)",
     "raceCardsCourseUrl": "/racecards/2025-06-20#newmarket-july",
     "raceCardsCourseMeetingsUrl": "/racecards/174/newmarket-july/2025-06-20",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.4) (Watering) (Rail movements: 6.37 & 8.25 +25yds)",
+    "going": "GOOD (GoingStick: 7.1) (Watering) (Rail movements: 6.37 & 8.25 +25yds)",
     "weather": "Mostly cloudy",
     "stallsPosition": "Centre - (Far side course)",
     "races": []
@@ -49,7 +120,7 @@
     "raceCardsCourseUrl": "/racecards/2025-06-20#redcar",
     "raceCardsCourseMeetingsUrl": "/racecards/47/redcar/2025-06-20",
     "going": "GOOD TO FIRM (GoingStick: 9.7) (Watering)",
-    "weather": "Partly cloudy",
+    "weather": "Mostly cloudy",
     "stallsPosition": "Straight - Centre; Round - Inside",
     "races": []
   }
