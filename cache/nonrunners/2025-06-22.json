@@ -1,0 +1,369 @@
+[
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-06-22",
+    "going": "GOOD TO SOFT (GoingStick: 6.8)",
+    "weather": "Light rain",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-06-22/896235",
+        "horses": [
+          {
+            "horseName": "Blenheim Lad",
+            "horseProfileUrl": "/profile/horse/4640731/blenheim-lad/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-06-22/896232",
+        "horses": [
+          {
+            "horseName": "Golden Redemption",
+            "horseProfileUrl": "/profile/horse/6759149/golden-redemption/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hexham",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#hexham",
+    "raceCardsCourseMeetingsUrl": "/racecards/25/hexham/2025-06-22",
+    "going": "GOOD (GoingStick: 7.0) (Watered) (Rail movements: 2.18 +107yds, 2.48 +138yds, 3.18 +168yds, 3.50 & 5.00 +113yds and 4.25 +139yds)",
+    "weather": "Sun cloud and rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/25/hexham/2025-06-22/896421",
+        "horses": [
+          {
+            "horseName": "Innovated",
+            "horseProfileUrl": "/profile/horse/3288765/innovated/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/25/hexham/2025-06-22/896422",
+        "horses": [
+          {
+            "horseName": "Coventry",
+            "horseProfileUrl": "/profile/horse/2394701/coventry/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Feach Amach",
+            "horseProfileUrl": "/profile/horse/4522956/feach-amach/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-06-22",
+    "going": "GOOD (Good to firm in places: watered, 8.2)",
+    "weather": "Light rain",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-22/896243",
+        "horses": [
+          {
+            "horseName": "Parish Councillor",
+            "horseProfileUrl": "/profile/horse/4739690/parish-councillor/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-22/896238",
+        "horses": [
+          {
+            "horseName": "Creatif",
+            "horseProfileUrl": "/profile/horse/5937889/creatif/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-22/896240",
+        "horses": [
+          {
+            "horseName": "Surrey Fire",
+            "horseProfileUrl": "/profile/horse/5357898/surrey-fire/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-22/896239",
+        "horses": [
+          {
+            "horseName": "Knicks",
+            "horseProfileUrl": "/profile/horse/5104289/knicks/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:25",
+        "raceCardUrl": "/racecards/46/pontefract/2025-06-22/896241",
+        "horses": [
+          {
+            "horseName": "Sir Maxi",
+            "horseProfileUrl": "/profile/horse/3142213/sir-maxi/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Churchill Downs",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#churchill-downs",
+    "raceCardsCourseMeetingsUrl": "/racecards/308/churchill-downs/2025-06-22",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:11",
+        "raceCardUrl": "/racecards/308/churchill-downs/2025-06-22/898580",
+        "horses": [
+          {
+            "horseName": "Marmalade Skye",
+            "horseProfileUrl": "/profile/horse/5657870/marmalade-skye/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Harbor Springs",
+            "horseProfileUrl": "/profile/horse/5820817/harbor-springs/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Dortmund",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#dortmund",
+    "raceCardsCourseMeetingsUrl": "/racecards/247/dortmund/2025-06-22",
+    "going": "TURF: GOOD (Good to firm in places)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/247/dortmund/2025-06-22/898478",
+        "horses": [
+          {
+            "horseName": "Calyx Rose",
+            "horseProfileUrl": "/profile/horse/5737977/calyx-rose/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hanshin",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#hanshin",
+    "raceCardsCourseMeetingsUrl": "/racecards/491/hanshin/2025-06-22",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "San Siro",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#san-siro",
+    "raceCardsCourseMeetingsUrl": "/racecards/243/san-siro/2025-06-22",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sha Tin",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#sha-tin",
+    "raceCardsCourseMeetingsUrl": "/racecards/416/sha-tin/2025-06-22",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "10:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898493",
+        "horses": [
+          {
+            "horseName": "Inno Super",
+            "horseProfileUrl": "/profile/horse/7597278/inno-super/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Tai Victory",
+            "horseProfileUrl": "/profile/horse/6069482/tai-victory/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "10:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898494",
+        "horses": [
+          {
+            "horseName": "Spangle Fortune",
+            "horseProfileUrl": "/profile/horse/3875235/spangle-fortune/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Yiu Cheung Victory",
+            "horseProfileUrl": "/profile/horse/7117346/yiu-cheung-victory/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "11:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898495",
+        "horses": [
+          {
+            "horseName": "Telecom Power",
+            "horseProfileUrl": "/profile/horse/5357810/telecom-power/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Sunny Sing Spirit",
+            "horseProfileUrl": "/profile/horse/7338971/sunny-sing-spirit/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:05",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898497",
+        "horses": [
+          {
+            "horseName": "Viva Taste",
+            "horseProfileUrl": "/profile/horse/7722753/viva-taste/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Raging Rapids",
+            "horseProfileUrl": "/profile/horse/7020680/raging-rapids/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Billion Two",
+            "horseProfileUrl": "/profile/horse/7409345/billion-two/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898499",
+        "horses": [
+          {
+            "horseName": "Pakistan Legacy",
+            "horseProfileUrl": "/profile/horse/6957197/pakistan-legacy/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Akashvani",
+            "horseProfileUrl": "/profile/horse/5708547/akashvani/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:45",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898490",
+        "horses": [
+          {
+            "horseName": "Winning Gold",
+            "horseProfileUrl": "/profile/horse/5539584/winning-gold/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Ka Ying Superb",
+            "horseProfileUrl": "/profile/horse/5787789/ka-ying-superb/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898491",
+        "horses": [
+          {
+            "horseName": "Find My Love",
+            "horseProfileUrl": "/profile/horse/3583178/find-my-love/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Samarkand",
+            "horseProfileUrl": "/profile/horse/3900191/samarkand/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898489",
+        "horses": [
+          {
+            "horseName": "Colonel",
+            "horseProfileUrl": "/profile/horse/2953195/colonel/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Exceed The Wish",
+            "horseProfileUrl": "/profile/horse/6613651/exceed-the-wish/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:30",
+        "raceCardUrl": "/racecards/416/sha-tin/2025-06-22/898492",
+        "horses": [
+          {
+            "horseName": "Silver Destiny",
+            "horseProfileUrl": "/profile/horse/5563316/silver-destiny/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Gluck Racer",
+            "horseProfileUrl": "/profile/horse/3354010/gluck-racer/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tokyo",
+    "raceCardsCourseUrl": "/racecards/2025-06-22#tokyo",
+    "raceCardsCourseMeetingsUrl": "/racecards/315/tokyo/2025-06-22",
+    "going": "TURF: GOOD TO FIRM; DIRT: STANDARD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

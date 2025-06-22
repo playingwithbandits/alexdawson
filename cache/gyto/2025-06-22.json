@@ -1,0 +1,100 @@
+{
+  "date": "2025-06-22",
+  "tips": [
+    {
+      "time": "14:10",
+      "horse": "Enchant",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Twilight Guest",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Creatif",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "isNap": true
+    },
+    {
+      "time": "16:15",
+      "horse": "Diamand De Vindecy",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Rare Change",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Adorla Of Achill",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Dickens",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Beny Nahar Road",
+      "isNap": false
+    },
+    {
+      "time": "15:18",
+      "horse": "Fortune The Brave",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Yapper Hill",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Marty Mcfly",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Feach Amach",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Shabu Shabu",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Jimmy Mark",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Magnetite",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Maybe Not",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Scenario",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Cornish Storm",
+      "isNap": true
+    }
+  ]
+}

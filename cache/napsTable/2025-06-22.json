@@ -1,0 +1,305 @@
+{
+  "date": "2025-06-22",
+  "tips": [
+    {
+      "time": "15:40",
+      "horse": "Karmology",
+      "tipster": "Chris Connolly",
+      "score": "74.3"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "Glendale",
+      "score": "27.4"
+    },
+    {
+      "time": "16:05",
+      "horse": "Pit Boss",
+      "tipster": "Rory Delargy",
+      "score": "21.8"
+    },
+    {
+      "time": "14:40",
+      "horse": "Parish Councillor",
+      "tipster": "The North",
+      "score": "13.4"
+    },
+    {
+      "time": "15:00",
+      "horse": "Nivelle's Magic",
+      "tipster": "Templegate",
+      "score": "12.5"
+    },
+    {
+      "time": "16:05",
+      "horse": "Hunky Dory",
+      "tipster": "Marlborough",
+      "score": "12.0"
+    },
+    {
+      "time": "17:25",
+      "horse": "Adorla Of Achill",
+      "tipster": "Lee Sobot",
+      "score": "8.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "The Judge",
+      "score": "5.9"
+    },
+    {
+      "time": "16:25",
+      "horse": "High Moon",
+      "tipster": "Farringdon",
+      "score": "3.9"
+    },
+    {
+      "time": "15:40",
+      "horse": "Bas Bleu",
+      "tipster": "Lambourn",
+      "score": "2.4"
+    },
+    {
+      "time": "14:40",
+      "horse": "Hawa Jumeirah",
+      "tipster": "Newmarket",
+      "score": "1.9"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "Garry Owen",
+      "score": "-2.2"
+    },
+    {
+      "time": "15:00",
+      "horse": "Jimmy Mark",
+      "tipster": "West Country",
+      "score": "-5.5"
+    },
+    {
+      "time": "16:40",
+      "horse": "Change Of Fortune",
+      "tipster": "Melissa Jones",
+      "score": "-5.7"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "Computeform",
+      "score": "-7.6"
+    },
+    {
+      "time": "17:25",
+      "horse": "Adorla Of Achill",
+      "tipster": "Rockavon",
+      "score": "-7.4"
+    },
+    {
+      "time": "16:05",
+      "horse": "Key Witness",
+      "tipster": "Ratings Hub",
+      "score": "-7.5"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "Dean Kilbryde",
+      "score": "-9.2"
+    },
+    {
+      "time": "15:10",
+      "horse": "Lieber Power",
+      "tipster": "Luke Tucker",
+      "score": "-9.5"
+    },
+    {
+      "time": "16:50",
+      "horse": "Intervention",
+      "tipster": "Postdata",
+      "score": "-9.2"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "Fortunatus",
+      "score": "-9.9"
+    },
+    {
+      "time": "15:10",
+      "horse": "Lieber Power",
+      "tipster": "The Brigadier",
+      "score": "-11.0"
+    },
+    {
+      "time": "16:05",
+      "horse": "Maybe Not",
+      "tipster": "Ben Morgan",
+      "score": "-11.8"
+    },
+    {
+      "time": "16:50",
+      "horse": "Partisan Hero",
+      "tipster": "Mercury",
+      "score": "-13.7"
+    },
+    {
+      "time": "14:30",
+      "horse": "Shabu Shabu",
+      "tipster": "Whistler",
+      "score": "-16.8"
+    },
+    {
+      "time": "15:18",
+      "horse": "Fortune The Brave",
+      "tipster": "Matt Polley",
+      "score": "-21.6"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "Robin Goodfellow",
+      "score": "-20.9"
+    },
+    {
+      "time": "16:05",
+      "horse": "Maybe Not",
+      "tipster": "On The Nose",
+      "score": "-22.2"
+    },
+    {
+      "time": "15:30",
+      "horse": "Magnetite",
+      "tipster": "Moorestyle",
+      "score": "-26.0"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "RP Ratings",
+      "score": "-26.5"
+    },
+    {
+      "time": "16:15",
+      "horse": "Diamand De Vindecy",
+      "tipster": "Ian Gaughran",
+      "score": "-27.7"
+    },
+    {
+      "time": "16:15",
+      "horse": "El Borracho",
+      "tipster": "Steve Mullington",
+      "score": "-29.7"
+    },
+    {
+      "time": "16:50",
+      "horse": "Partisan Hero",
+      "tipster": "Newsboy",
+      "score": "-28.8"
+    },
+    {
+      "time": "14:18",
+      "horse": "Huit Reflets",
+      "tipster": "Karl Hedley",
+      "score": "-28.8"
+    },
+    {
+      "time": "15:40",
+      "horse": "Santorini Star",
+      "tipster": "Spotlight",
+      "score": "-30.5"
+    },
+    {
+      "time": "15:10",
+      "horse": "Lieber Power",
+      "tipster": "Tipman Tips",
+      "score": "-30.7"
+    },
+    {
+      "time": "16:25",
+      "horse": "Royal Deeside",
+      "tipster": "Jason Heavey",
+      "score": "-32.3"
+    },
+    {
+      "time": "16:15",
+      "horse": "Captain Potter",
+      "tipster": "The Punt",
+      "score": "-33.9"
+    },
+    {
+      "time": "16:05",
+      "horse": "Maybe Not",
+      "tipster": "Rob Wright",
+      "score": "-38.7"
+    },
+    {
+      "time": "16:50",
+      "horse": "Native Instinct",
+      "tipster": "Jon Freeman",
+      "score": "-41.1"
+    },
+    {
+      "time": "16:25",
+      "horse": "Royal Deeside",
+      "tipster": "Ross Shepherd",
+      "score": "-42.1"
+    },
+    {
+      "time": "14:48",
+      "horse": "Beny Nahar Road",
+      "tipster": "Brian Flanagan",
+      "score": "-46.2"
+    },
+    {
+      "time": "16:50",
+      "horse": "Rare Change",
+      "tipster": "The Duke",
+      "score": "-47.8"
+    },
+    {
+      "time": "15:40",
+      "horse": "Meribella",
+      "tipster": "The Score",
+      "score": "-46.9"
+    },
+    {
+      "time": "15:18",
+      "horse": "Fortune The Brave",
+      "tipster": "Adrian Wall",
+      "score": "-46.5"
+    },
+    {
+      "time": "16:50",
+      "horse": "Knicks",
+      "tipster": "Jim Delahunt",
+      "score": "-52.7"
+    },
+    {
+      "time": "16:50",
+      "horse": "Intervention",
+      "tipster": "Chris Wright",
+      "score": "-54.9"
+    },
+    {
+      "time": "14:40",
+      "horse": "Twilight Guest",
+      "tipster": "Sam Hardy",
+      "score": "-59.8"
+    },
+    {
+      "time": "14:30",
+      "horse": "Shabu Shabu",
+      "tipster": "Andrew Mount",
+      "score": "-67.8"
+    },
+    {
+      "time": "15:10",
+      "horse": "Lieber Power",
+      "tipster": "Rory Paddock",
+      "score": "-76.9"
+    }
+  ]
+}
