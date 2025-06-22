@@ -1,0 +1,300 @@
+{
+  "date": "2025-06-21",
+  "tips": [
+    {
+      "time": "13:10",
+      "horse": "Try Storm Cat",
+      "isNap": false
+    },
+    {
+      "time": "13:43",
+      "horse": "Jungle Monarch",
+      "isNap": false
+    },
+    {
+      "time": "14:14",
+      "horse": "Glimmer Of Light",
+      "isNap": false
+    },
+    {
+      "time": "14:49",
+      "horse": "Mission Command",
+      "isNap": false
+    },
+    {
+      "time": "15:21",
+      "horse": "Azure Angel",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Sole Spirit",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Jesmond Dawn",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "Alfred Tennyson",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Misappropriation",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Mallavelly",
+      "isNap": false
+    },
+    {
+      "time": "15:27",
+      "horse": "Deuteronomy",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Queenstown",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Denim And Diamonds",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Junkyard Dog",
+      "isNap": false
+    },
+    {
+      "time": "14:03",
+      "horse": "Crowd Quake",
+      "isNap": false
+    },
+    {
+      "time": "14:38",
+      "horse": "Wild Desert",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "First Principle",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Tides Of War",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Scattering Light",
+      "isNap": false
+    },
+    {
+      "time": "14:08",
+      "horse": "Two For Joy",
+      "isNap": false
+    },
+    {
+      "time": "14:43",
+      "horse": "Angelo Pio",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Pinball Wizard",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Navy Waters",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Glen To Glen",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Jawhary",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Boxing Great",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Treanmor",
+      "isNap": true
+    },
+    {
+      "time": "15:05",
+      "horse": "Rebel'S Romance",
+      "isNap": true
+    },
+    {
+      "time": "15:40",
+      "horse": "Inisherin",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Jarraaf",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Sober",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Tactical Affair",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Obsessedwithyou",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Leading Force",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Solent Gateway",
+      "isNap": false
+    },
+    {
+      "time": "18:25",
+      "horse": "Getalead",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Spartan Warrior",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Whiteoak Duffy",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Sunny Smile",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Classy Al",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Creatif",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Enchanting",
+      "isNap": false
+    },
+    {
+      "time": "18:33",
+      "horse": "Harry Palmer",
+      "isNap": false
+    },
+    {
+      "time": "19:08",
+      "horse": "Giselles Izzy",
+      "isNap": false
+    },
+    {
+      "time": "19:38",
+      "horse": "Anthropologist",
+      "isNap": false
+    },
+    {
+      "time": "20:08",
+      "horse": "Woohoo",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Lenny'S Spirit",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Casual Encounter",
+      "isNap": false
+    },
+    {
+      "time": "18:53",
+      "horse": "Lovethiswayagain",
+      "isNap": false
+    },
+    {
+      "time": "19:23",
+      "horse": "Latynina",
+      "isNap": false
+    },
+    {
+      "time": "19:55",
+      "horse": "Buy The Dip",
+      "isNap": false
+    },
+    {
+      "time": "20:25",
+      "horse": "Desert Charm",
+      "isNap": false
+    },
+    {
+      "time": "20:55",
+      "horse": "Rusheen Boy",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Burj Zabeel",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Spherical",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Gold Dawn",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Duke'S Command",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Bodorgan",
+      "isNap": false
+    },
+    {
+      "time": "20:45",
+      "horse": "Pomme Pomme",
+      "isNap": false
+    }
+  ]
+}

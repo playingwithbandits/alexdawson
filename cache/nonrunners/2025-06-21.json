@@ -1,0 +1,216 @@
+[
+  {
+    "courseName": "Ascot",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#ascot",
+    "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-06-21",
+    "going": "GOOD TO FIRM (GoingStick: Stands' side 8.7, Centre 8.4, Far side 8.5, Round 7.1) (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-21/892850",
+        "horses": [
+          {
+            "horseName": "James's Delight",
+            "horseProfileUrl": "/profile/horse/5034730/jamess-delight/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-21/894064",
+        "horses": [
+          {
+            "horseName": "Symbol Of Honour",
+            "horseProfileUrl": "/profile/horse/5708637/symbol-of-honour/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/2/ascot/2025-06-21/896146",
+        "horses": [
+          {
+            "horseName": "The King's Falcon",
+            "horseProfileUrl": "/profile/horse/6478016/the-kings-falcon/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ayr",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#ayr",
+    "raceCardsCourseMeetingsUrl": "/racecards/3/ayr/2025-06-21",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 7.3) (Rail movements: 5.25 +17yds and 5.55 & 7.08 +15yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; 7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/3/ayr/2025-06-21/896215",
+        "horses": [
+          {
+            "horseName": "Homestrait",
+            "horseProfileUrl": "/profile/horse/7205118/homestrait/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Bangor-on-Dee",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#bangor-on-dee",
+    "raceCardsCourseMeetingsUrl": "/racecards/4/bangor-on-dee/2025-06-21",
+    "going": "GOOD, Good to firm in places (Watering) (Rail movements: 3.55 & 4.35 +68yds, 5.15 +86yds and 5.50, 6.25, 7.00 & 7.30 +96yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/4/bangor-on-dee/2025-06-21/896419",
+        "horses": [
+          {
+            "horseName": "Axel Bleue",
+            "horseProfileUrl": "/profile/horse/7015774/axel-bleue/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Down Royal",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#down-royal",
+    "raceCardsCourseMeetingsUrl": "/racecards/180/down-royal/2025-06-21",
+    "going": "GOOD (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-06-21",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.8) (Watered) (Outside course) (Rail Movements: 6.00 +28yds and 7.15, 7.45, 8.15 & 8.45 +13yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 1m2f - Centre; 7f & 1m - Inside; Remainder - Outside",
+    "races": [
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/23/haydock/2025-06-21/896223",
+        "horses": [
+          {
+            "horseName": "Port George",
+            "horseProfileUrl": "/profile/horse/6296586/port-george/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Limerick",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#limerick",
+    "raceCardsCourseMeetingsUrl": "/racecards/188/limerick/2025-06-21",
+    "going": "GOOD TO FIRM (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-06-21",
+    "going": "GOOD TO FIRM (GoingStick: 8.0) (Watering)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "1m3f - Outside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/31/lingfield/2025-06-21/896224",
+        "horses": [
+          {
+            "horseName": "Fleeting Moment",
+            "horseProfileUrl": "/profile/horse/6265753/fleeting-moment/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:55",
+        "raceCardUrl": "/racecards/31/lingfield/2025-06-21/896228",
+        "horses": [
+          {
+            "horseName": "Fai Fai",
+            "horseProfileUrl": "/profile/horse/3763201/fai-fai/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newmarket (July)",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#newmarket-july",
+    "raceCardsCourseMeetingsUrl": "/racecards/174/newmarket-july/2025-06-21",
+    "going": "GOOD TO FIRM (GoingStick: 7.1) (Watered) (Rail Movements: 4.25 +25yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Centre",
+    "races": [
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/174/newmarket-july/2025-06-21/896195",
+        "horses": [
+          {
+            "horseName": "Wolfpack",
+            "horseProfileUrl": "/profile/horse/6134859/wolfpack/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Suitcase Smith",
+            "horseProfileUrl": "/profile/horse/7708601/suitcase-smith/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/174/newmarket-july/2025-06-21/896192",
+        "horses": [
+          {
+            "horseName": "Jubilee Walk",
+            "horseProfileUrl": "/profile/horse/5021318/jubilee-walk/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Redcar",
+    "raceCardsCourseUrl": "/racecards/2025-06-21#redcar",
+    "raceCardsCourseMeetingsUrl": "/racecards/47/redcar/2025-06-21",
+    "going": "GOOD TO FIRM (GoingStick: 9.6) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "3:21",
+        "raceCardUrl": "/racecards/47/redcar/2025-06-21/896204",
+        "horses": [
+          {
+            "horseName": "Burning Cash",
+            "horseProfileUrl": "/profile/horse/3097921/burning-cash/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  }
+]
