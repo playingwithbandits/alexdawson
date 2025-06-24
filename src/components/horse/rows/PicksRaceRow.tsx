@@ -41,7 +41,7 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
-const THRESHOLD = 0.8;
+const THRESHOLD = 0.85;
 const DAYS_THRESHOLD_COMFORTABLE = 14;
 const DAYS_THRESHOLD_EYECATCHER = 21;
 const DAYS_THRESHOLD_HAMPERED = 21;
@@ -2550,10 +2550,10 @@ export function PicksRaceRow({
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
                   //countGood &&
-                  (aiGood &&
-                    //rpPredGood &&
-                    //sharpRatingGood &&
-                    olbgNapGood) ||
+                  //aiGood &&
+                  //rpPredGood &&
+                  //sharpRatingGood &&
+                  olbgNapGood ||
                   horseEyecatcherObj?.hasEyecatcherWithinDays ||
                   horseHamperedObj?.hasHamperedWithinDays ||
                   horseComfortableWithinDaysObj?.hasComfortableWithinDays

@@ -1,0 +1,135 @@
+{
+  "date": "2025-06-23",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "I Follow Rivers",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Antique Blue",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Rogue Dancer",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Con Te Partiro",
+      "isNap": false
+    },
+    {
+      "time": "16:03",
+      "horse": "Call Me Betty",
+      "isNap": true
+    },
+    {
+      "time": "17:05",
+      "horse": "Diamondsinthesand",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "Advertorial",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Coul Jane",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Miakoda",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "So Smart",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Jax Edge",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Lambournghini",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Darkened Edge",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Lady Plimsoll",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Nobler",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Janes Harbour",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Curroy Lady",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Positive Energy",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Elana Osario",
+      "isNap": false
+    },
+    {
+      "time": "17:17",
+      "horse": "Call Glory",
+      "isNap": false
+    },
+    {
+      "time": "17:52",
+      "horse": "Swiped",
+      "isNap": false
+    },
+    {
+      "time": "18:58",
+      "horse": "Nogo'S Dream",
+      "isNap": true
+    },
+    {
+      "time": "19:30",
+      "horse": "Orionis",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Infantry Officer",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Jet Black",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Chasing Gold",
+      "isNap": false
+    }
+  ]
+}

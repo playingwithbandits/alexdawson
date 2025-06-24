@@ -1,0 +1,59 @@
+[
+  {
+    "courseName": "Ballinrobe",
+    "raceCardsCourseUrl": "/racecards/2025-06-23#ballinrobe",
+    "raceCardsCourseMeetingsUrl": "/racecards/175/ballinrobe/2025-06-23",
+    "going": "GOOD (Selective watering) (Inner loop)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-06-23#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-06-23",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.9) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Centre",
+    "races": []
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-06-23#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-06-23",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.8) (Watering) (Rail movements: 6.25, 7.30, 8.00 & 8.30 +9yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f, 6f, 1m2f & 1m3f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-23#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-06-23",
+    "going": "TAPETA: STANDARD",
+    "weather": "Cloudy",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-06-23/896488",
+        "horses": [
+          {
+            "horseName": "Lady Diesel",
+            "horseProfileUrl": "/profile/horse/5982388/lady-diesel/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW) (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-06-23#wolverhampton-aw-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1330/wolverhampton-aw-gb/2025-06-23",
+    "going": "TAPETA: STANDARD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
