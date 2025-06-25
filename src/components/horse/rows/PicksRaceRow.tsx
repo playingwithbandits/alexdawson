@@ -2549,14 +2549,14 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
-                  //countGood &&
-                  //aiGood &&
-                  //rpPredGood &&
-                  //sharpRatingGood &&
-                  olbgNapGood ||
-                  horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                  horseHamperedObj?.hasHamperedWithinDays ||
-                  horseComfortableWithinDaysObj?.hasComfortableWithinDays
+                  countGood &&
+                  aiGood &&
+                  rpPredGood &&
+                  sharpRatingGood &&
+                  (olbgNapGood ||
+                    horseEyecatcherObj?.hasEyecatcherWithinDays ||
+                    horseHamperedObj?.hasHamperedWithinDays ||
+                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}

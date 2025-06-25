@@ -1,0 +1,105 @@
+[
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-06-24#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-06-24",
+    "going": "GOOD TO FIRM (GoingStick: 7.2) (Rail Movements: 2.15, 2.45, 3.15, 3.45, 4.15 & 4.45 +7yds)",
+    "weather": "Light rain",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Brighton",
+    "raceCardsCourseUrl": "/racecards/2025-06-24#brighton",
+    "raceCardsCourseMeetingsUrl": "/racecards/7/brighton/2025-06-24",
+    "going": "GOOD TO FIRM (GoingStick: 6.7) (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "1m - Inside; 1m2f - Outside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/7/brighton/2025-06-24/896269",
+        "horses": [
+          {
+            "horseName": "Coiled",
+            "horseProfileUrl": "/profile/horse/5708952/coiled/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/7/brighton/2025-06-24/896267",
+        "horses": [
+          {
+            "horseName": "Orchestral Wave",
+            "horseProfileUrl": "/profile/horse/6666851/orchestral-wave/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-06-24#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-06-24",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.1) (Watered) (Rail Movements: 5.40 & 7.15 +7yds)",
+    "weather": "Light rain",
+    "stallsPosition": "Round - Inside; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/36/newbury/2025-06-24/896273",
+        "horses": [
+          {
+            "horseName": "V Power",
+            "horseProfileUrl": "/profile/horse/4568903/v-power/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/36/newbury/2025-06-24/896271",
+        "horses": [
+          {
+            "horseName": "Anzac Day",
+            "horseProfileUrl": "/profile/horse/5366274/anzac-day/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newton Abbot",
+    "raceCardsCourseUrl": "/racecards/2025-06-24#newton-abbot",
+    "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-06-24",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.0) (Watering) (Rail movements: 5.57 & 6.27 +93yds, 6.57 +126yds, 7.27 +108yds and 8.27 +156yds)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "8:27",
+        "raceCardUrl": "/racecards/39/newton-abbot/2025-06-24/896428",
+        "horses": [
+          {
+            "horseName": "Pirates' Tale",
+            "horseProfileUrl": "/profile/horse/5383838/pirates-tale/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chantilly",
+    "raceCardsCourseUrl": "/racecards/2025-06-24#chantilly",
+    "raceCardsCourseMeetingsUrl": "/racecards/204/chantilly/2025-06-24",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

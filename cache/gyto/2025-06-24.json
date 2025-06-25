@@ -1,0 +1,125 @@
+{
+  "date": "2025-06-24",
+  "tips": [
+    {
+      "time": "14:15",
+      "horse": "Commander Of Life",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Hope Queen",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Gincident",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Forever Penywern",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Quirke On Parole",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Art Of Fox",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Perfect Parole",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Crimson Spirit",
+      "isNap": true
+    },
+    {
+      "time": "16:30",
+      "horse": "Miss Dandylion",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "French Martini",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Dibble Dabble",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Nor Zamin",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Orion'S Belt",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Anzac Day",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "This Farh",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Marlay Park",
+      "isNap": false
+    },
+    {
+      "time": "20:50",
+      "horse": "Sarafina Mshairi",
+      "isNap": false
+    },
+    {
+      "time": "17:57",
+      "horse": "Roadshow",
+      "isNap": false
+    },
+    {
+      "time": "18:27",
+      "horse": "Blue Tempus",
+      "isNap": false
+    },
+    {
+      "time": "18:57",
+      "horse": "Time To Bite",
+      "isNap": false
+    },
+    {
+      "time": "19:27",
+      "horse": "Kalize",
+      "isNap": false
+    },
+    {
+      "time": "19:57",
+      "horse": "Dancingontheedge",
+      "isNap": false
+    },
+    {
+      "time": "20:27",
+      "horse": "Keel Strand",
+      "isNap": false
+    },
+    {
+      "time": "20:57",
+      "horse": "Illogical Logic",
+      "isNap": false
+    }
+  ]
+}
