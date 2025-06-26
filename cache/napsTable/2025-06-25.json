@@ -1,0 +1,311 @@
+{
+  "date": "2025-06-25",
+  "tips": [
+    {
+      "time": "16:15",
+      "horse": "Galyx",
+      "tipster": "Chris Connolly",
+      "score": "72.1"
+    },
+    {
+      "time": "15:45",
+      "horse": "Verse Of Love",
+      "tipster": "Glendale",
+      "score": "20.5"
+    },
+    {
+      "time": "16:50",
+      "horse": "Crack Shot",
+      "tipster": "Rory Delargy",
+      "score": "20.3"
+    },
+    {
+      "time": "15:45",
+      "horse": "Saqqara Sands",
+      "tipster": "Templegate",
+      "score": "11.9"
+    },
+    {
+      "time": "14:45",
+      "horse": "Regional Rock",
+      "tipster": "Melissa Jones",
+      "score": "10.9"
+    },
+    {
+      "time": "16:50",
+      "horse": "Crack Shot",
+      "tipster": "Marlborough",
+      "score": "10.5"
+    },
+    {
+      "time": "16:50",
+      "horse": "Liamarty Dreams",
+      "tipster": "The North",
+      "score": "9.2"
+    },
+    {
+      "time": "15:25",
+      "horse": "Nifty",
+      "tipster": "Lambourn",
+      "score": "7.4"
+    },
+    {
+      "time": "16:50",
+      "horse": "Redarna",
+      "tipster": "The Judge",
+      "score": "5.4"
+    },
+    {
+      "time": "17:05",
+      "horse": "Theatre Of Flight",
+      "tipster": "West Country",
+      "score": "4.7"
+    },
+    {
+      "time": "16:15",
+      "horse": "Rogue Millions",
+      "tipster": "Lee Sobot",
+      "score": "2.4"
+    },
+    {
+      "time": "16:25",
+      "horse": "Asmen Warrior",
+      "tipster": "Ben Morgan",
+      "score": "2.2"
+    },
+    {
+      "time": "18:20",
+      "horse": "Letsbeatsepsis",
+      "tipster": "Farringdon",
+      "score": "0.6"
+    },
+    {
+      "time": "16:15",
+      "horse": "Rogue Millions",
+      "tipster": "Garry Owen",
+      "score": "-2.7"
+    },
+    {
+      "time": "19:30",
+      "horse": "Dubai Beach",
+      "tipster": "Newmarket",
+      "score": "-3.4"
+    },
+    {
+      "time": "18:40",
+      "horse": "Darzina",
+      "tipster": "Fortunatus",
+      "score": "-5.6"
+    },
+    {
+      "time": "17:10",
+      "horse": "Havana Anna",
+      "tipster": "Computeform",
+      "score": "-6.1"
+    },
+    {
+      "time": "20:00",
+      "horse": "Lunar Orbit",
+      "tipster": "Whistler",
+      "score": "-9.6"
+    },
+    {
+      "time": "17:05",
+      "horse": "Ikigai Star",
+      "tipster": "Dean Kilbryde",
+      "score": "-10.9"
+    },
+    {
+      "time": "20:50",
+      "horse": "Launceston",
+      "tipster": "Luke Tucker",
+      "score": "-11.3"
+    },
+    {
+      "time": "15:15",
+      "horse": "Epidavros",
+      "tipster": "Rockavon",
+      "score": "-12.3"
+    },
+    {
+      "time": "19:30",
+      "horse": "Dubai Beach",
+      "tipster": "Ratings Hub",
+      "score": "-12.2"
+    },
+    {
+      "time": "19:30",
+      "horse": "Dubai Beach",
+      "tipster": "The Brigadier",
+      "score": "-13.3"
+    },
+    {
+      "time": "20:30",
+      "horse": "Umbria",
+      "tipster": "Postdata",
+      "score": "-14.2"
+    },
+    {
+      "time": "17:10",
+      "horse": "Havana Anna",
+      "tipster": "Mercury",
+      "score": "-15.3"
+    },
+    {
+      "time": "18:00",
+      "horse": "Stella Hogan",
+      "tipster": "Robin Goodfellow",
+      "score": "-16.6"
+    },
+    {
+      "time": "20:00",
+      "horse": "Stellenbosch",
+      "tipster": "Karl Hedley",
+      "score": "-17.6"
+    },
+    {
+      "time": "15:55",
+      "horse": "Noel Fox",
+      "tipster": "On The Nose",
+      "score": "-19.8"
+    },
+    {
+      "time": "19:30",
+      "horse": "Stateira",
+      "tipster": "Rob Wright",
+      "score": "-21.4"
+    },
+    {
+      "time": "16:15",
+      "horse": "Rogue Millions",
+      "tipster": "Newsboy",
+      "score": "-23.1"
+    },
+    {
+      "time": "20:00",
+      "horse": "Padua",
+      "tipster": "Matt Polley",
+      "score": "-24.5"
+    },
+    {
+      "time": "18:00",
+      "horse": "Mahra's Love",
+      "tipster": "RP Ratings",
+      "score": "-25.3"
+    },
+    {
+      "time": "16:58",
+      "horse": "Tremorgio",
+      "tipster": "The Duke",
+      "score": "-26.8"
+    },
+    {
+      "time": "16:15",
+      "horse": "Rogue Millions",
+      "tipster": "Spotlight",
+      "score": "-26.9"
+    },
+    {
+      "time": "16:50",
+      "horse": "Sailthisshipalone",
+      "tipster": "Steve Mullington",
+      "score": "-29.9"
+    },
+    {
+      "time": "18:40",
+      "horse": "Faiyum",
+      "tipster": "Ian Gaughran",
+      "score": "-30.3"
+    },
+    {
+      "time": "15:15",
+      "horse": "Yermanthere",
+      "tipster": "Moorestyle",
+      "score": "-29.8"
+    },
+    {
+      "time": "15:45",
+      "horse": "Saqqara Sands",
+      "tipster": "Tipman Tips",
+      "score": "-29.8"
+    },
+    {
+      "time": "16:15",
+      "horse": "Rogue Millions",
+      "tipster": "Jason Heavey",
+      "score": "-30.9"
+    },
+    {
+      "time": "19:30",
+      "horse": "Dubai Beach",
+      "tipster": "The Punt",
+      "score": "-33.5"
+    },
+    {
+      "time": "14:15",
+      "horse": "She's Divine",
+      "tipster": "Jeffrey Ross",
+      "score": "-41.4"
+    },
+    {
+      "time": "16:50",
+      "horse": "Crack Shot",
+      "tipster": "Ross Shepherd",
+      "score": "-38.6"
+    },
+    {
+      "time": "16:03",
+      "horse": "Seymourjohn",
+      "tipster": "Adrian Wall",
+      "score": "-41.1"
+    },
+    {
+      "time": "17:10",
+      "horse": "Havana Anna",
+      "tipster": "Brian Flanagan",
+      "score": "-43.6"
+    },
+    {
+      "time": "16:50",
+      "horse": "Mr King",
+      "tipster": "Jon Freeman",
+      "score": "-44.2"
+    },
+    {
+      "time": "18:00",
+      "horse": "Mahra's Love",
+      "tipster": "The Score",
+      "score": "-49.7"
+    },
+    {
+      "time": "16:50",
+      "horse": "Mr King",
+      "tipster": "Jim Delahunt",
+      "score": "-54.4"
+    },
+    {
+      "time": "15:45",
+      "horse": "Verse Of Love",
+      "tipster": "Sam Hardy",
+      "score": "-54.3"
+    },
+    {
+      "time": "16:50",
+      "horse": "Redarna",
+      "tipster": "Chris Wright",
+      "score": "-57.3"
+    },
+    {
+      "time": "15:25",
+      "horse": "John Barleycorn",
+      "tipster": "Andrew Mount",
+      "score": "-69.5"
+    },
+    {
+      "time": "16:50",
+      "horse": "Liamarty Dreams",
+      "tipster": "Rory Paddock",
+      "score": "-78.1"
+    }
+  ]
+}

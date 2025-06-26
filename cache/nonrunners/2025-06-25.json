@@ -1,0 +1,476 @@
+[
+  {
+    "courseName": "Bath",
+    "raceCardsCourseUrl": "/racecards/2025-06-25#bath",
+    "raceCardsCourseMeetingsUrl": "/racecards/5/bath/2025-06-25",
+    "going": "FIRM (GoingStick: 8.2) (Selective bowsering) (Rail movements: 7.50, 8.20 & 8.50 +11yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "Sprints - Centre; 1m - Inside; 1m2f - Outside",
+    "races": [
+      {
+        "raceTime": "6:20",
+        "raceCardUrl": "/racecards/5/bath/2025-06-25/896282",
+        "horses": [
+          {
+            "horseName": "Letsbeatsepsis",
+            "horseProfileUrl": "/profile/horse/6224694/letsbeatsepsis/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Sun Keeper",
+            "horseProfileUrl": "/profile/horse/5884236/sun-keeper/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:20",
+        "raceCardUrl": "/racecards/5/bath/2025-06-25/896278",
+        "horses": [
+          {
+            "horseName": "Thapa Vc",
+            "horseProfileUrl": "/profile/horse/3164268/thapa-vc/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Carlisle",
+    "raceCardsCourseUrl": "/racecards/2025-06-25#carlisle",
+    "raceCardsCourseMeetingsUrl": "/racecards/8/carlisle/2025-06-25",
+    "going": "SOFT (Good to soft in places; 5.4)",
+    "weather": "Overcast dry",
+    "stallsPosition": "1m3f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/8/carlisle/2025-06-25/896287",
+        "horses": [
+          {
+            "horseName": "Boy Douglas",
+            "horseProfileUrl": "/profile/horse/4507205/boy-douglas/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/8/carlisle/2025-06-25/896286",
+        "horses": [
+          {
+            "horseName": "Capital Guarantee",
+            "horseProfileUrl": "/profile/horse/4672831/capital-guarantee/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-25#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-06-25",
+    "going": "POLYTRACK: STANDARD TO SLOW (Watered)",
+    "weather": "Cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-06-25/896498",
+        "horses": [
+          {
+            "horseName": "Insuspense",
+            "horseProfileUrl": "/profile/horse/6564380/insuspense/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Sychell",
+            "horseProfileUrl": "/profile/horse/5845618/sychell/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-06-25/896496",
+        "horses": [
+          {
+            "horseName": "Runswick",
+            "horseProfileUrl": "/profile/horse/7529972/runswick/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-06-25/896497",
+        "horses": [
+          {
+            "horseName": "Crown Of Light",
+            "horseProfileUrl": "/profile/horse/7713436/crown-of-light/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "From The Hip",
+            "horseProfileUrl": "/profile/horse/7722810/from-the-hip/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-06-25/896495",
+        "horses": [
+          {
+            "horseName": "Threatening",
+            "horseProfileUrl": "/profile/horse/6555390/threatening/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "The Outlaw",
+            "horseProfileUrl": "/profile/horse/5895607/the-outlaw/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-06-25/898603",
+        "horses": [
+          {
+            "horseName": "Soho Square",
+            "horseProfileUrl": "/profile/horse/6410534/soho-square/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-06-25/896499",
+        "horses": [
+          {
+            "horseName": "Devizes",
+            "horseProfileUrl": "/profile/horse/2527563/devizes/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Albert Lasker",
+            "horseProfileUrl": "/profile/horse/4924417/albert-lasker/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Naas",
+    "raceCardsCourseUrl": "/racecards/2025-06-25#naas",
+    "raceCardsCourseMeetingsUrl": "/racecards/192/naas/2025-06-25",
+    "going": "GOOD, Good to firm in places on Round course (Watered)",
+    "weather": "Light rain",
+    "stallsPosition": "Sprints - Centre",
+    "races": [
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/192/naas/2025-06-25/898513",
+        "horses": [
+          {
+            "horseName": "Raising The Flag",
+            "horseProfileUrl": "/profile/horse/6206833/raising-the-flag/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Hastily",
+            "horseProfileUrl": "/profile/horse/3526616/hastily/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:10",
+        "raceCardUrl": "/racecards/192/naas/2025-06-25/898514",
+        "horses": [
+          {
+            "horseName": "Gazelle d'Or",
+            "horseProfileUrl": "/profile/horse/58956113/gazelle-dor/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:40",
+        "raceCardUrl": "/racecards/192/naas/2025-06-25/898515",
+        "horses": [
+          {
+            "horseName": "Darzina",
+            "horseProfileUrl": "/profile/horse/6710729/darzina/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Tamam Desert",
+            "horseProfileUrl": "/profile/horse/6202596/tamam-desert/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/192/naas/2025-06-25/898517",
+        "horses": [
+          {
+            "horseName": "Jess Abi",
+            "horseProfileUrl": "/profile/horse/7713420/jess-abi/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Bel Espoir",
+            "horseProfileUrl": "/profile/horse/6640601/bel-espoir/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Salisbury",
+    "raceCardsCourseUrl": "/racecards/2025-06-25#salisbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/52/salisbury/2025-06-25",
+    "going": "GOOD TO FIRM (Watered; 8.6)",
+    "weather": "Overcast with sunny intervals",
+    "stallsPosition": "1m2f - Inside; 1m4f - Stands' side; Remainder - Far side",
+    "races": [
+      {
+        "raceTime": "2:55",
+        "raceCardUrl": "/racecards/52/salisbury/2025-06-25/896293",
+        "horses": [
+          {
+            "horseName": "Night On Earth",
+            "horseProfileUrl": "/profile/horse/3125461/night-on-earth/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:58",
+        "raceCardUrl": "/racecards/52/salisbury/2025-06-25/896291",
+        "horses": [
+          {
+            "horseName": "Criminal",
+            "horseProfileUrl": "/profile/horse/7390849/criminal/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Worcester",
+    "raceCardsCourseUrl": "/racecards/2025-06-25#worcester",
+    "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-06-25",
+    "going": "GOOD (Watered; 7.4)",
+    "weather": "Sunny spells",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:03",
+        "raceCardUrl": "/racecards/101/worcester/2025-06-25/896433",
+        "horses": [
+          {
+            "horseName": "Glajou",
+            "horseProfileUrl": "/profile/horse/2917842/glajou/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:33",
+        "raceCardUrl": "/racecards/101/worcester/2025-06-25/896435",
+        "horses": [
+          {
+            "horseName": "Invictus Allen",
+            "horseProfileUrl": "/profile/horse/4668928/invictus-allen/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:03",
+        "raceCardUrl": "/racecards/101/worcester/2025-06-25/898604",
+        "horses": [
+          {
+            "horseName": "Blazing Nelson",
+            "horseProfileUrl": "/profile/horse/5884312/blazing-nelson/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:33",
+        "raceCardUrl": "/racecards/101/worcester/2025-06-25/896437",
+        "horses": [
+          {
+            "horseName": "Shabano",
+            "horseProfileUrl": "/profile/horse/3605561/shabano/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Smart Casual",
+            "horseProfileUrl": "/profile/horse/4733694/smart-casual/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/101/worcester/2025-06-25/896436",
+        "horses": [
+          {
+            "horseName": "Alright Dai",
+            "horseProfileUrl": "/profile/horse/4725963/alright-dai/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-06-25#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-06-25",
+    "going": "TURF: GOOD TO FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "11:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-06-25/898594",
+        "horses": [
+          {
+            "horseName": "Dan Attack",
+            "horseProfileUrl": "/profile/horse/5023468/dan-attack/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Fairy Horse",
+            "horseProfileUrl": "/profile/horse/5692557/fairy-horse/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-06-25/898595",
+        "horses": [
+          {
+            "horseName": "Lucky Sam Gor",
+            "horseProfileUrl": "/profile/horse/7117335/lucky-sam-gor/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Vigor Elleegant",
+            "horseProfileUrl": "/profile/horse/6107009/vigor-elleegant/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "12:40",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-06-25/898596",
+        "horses": [
+          {
+            "horseName": "Rewarding Buddy",
+            "horseProfileUrl": "/profile/horse/6706334/rewarding-buddy/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Denfield",
+            "horseProfileUrl": "/profile/horse/4827256/denfield/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-06-25/898597",
+        "horses": [
+          {
+            "horseName": "Soaring Bronco",
+            "horseProfileUrl": "/profile/horse/5692559/soaring-bronco/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Jolly Companion",
+            "horseProfileUrl": "/profile/horse/4614896/jolly-companion/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-06-25/898599",
+        "horses": [
+          {
+            "horseName": "Autumn Delight",
+            "horseProfileUrl": "/profile/horse/5655606/autumn-delight/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Solar River",
+            "horseProfileUrl": "/profile/horse/6042347/solar-river/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-06-25/898600",
+        "horses": [
+          {
+            "horseName": "One And Only",
+            "horseProfileUrl": "/profile/horse/7643416/one-and-only/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Simple Hedge",
+            "horseProfileUrl": "/profile/horse/4982015/simple-hedge/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-06-25/898601",
+        "horses": [
+          {
+            "horseName": "Lovero",
+            "horseProfileUrl": "/profile/horse/4307284/lovero/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Rocket Spade",
+            "horseProfileUrl": "/profile/horse/3287615/rocket-spade/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/396/happy-valley/2025-06-25/898602",
+        "horses": [
+          {
+            "horseName": "Thriving Brothers",
+            "horseProfileUrl": "/profile/horse/5431174/thriving-brothers/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Golden Empire",
+            "horseProfileUrl": "/profile/horse/4033860/golden-empire/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  }
+]
