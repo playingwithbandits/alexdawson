@@ -2410,7 +2410,7 @@ export function PicksRaceRow({
               ?.some((x) => cleanName(x.horseName) === cleanName(name));
 
             const olbgExpertCount = olbgTipsWithExpert
-              ?.filter((x) => x.expertCount >= 1)
+              ?.filter((x) => x.expertCount >= 2)
               ?.some((x) => cleanName(x.horseName) === cleanName(name));
 
             const olbgCommentCount = olbgTipsWithComment
@@ -2549,11 +2549,12 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
-                  // aiGood &&
+                  aiGood &&
+                  rpPredGood &&
                   sharpRatingGood &&
-                  hasOlbgComment &&
                   (countGood ||
                     olbgNapGood ||
+                    olbgExpertCount ||
                     horseEyecatcherObj?.hasEyecatcherWithinDays ||
                     horseHamperedObj?.hasHamperedWithinDays ||
                     horseComfortableWithinDaysObj?.hasComfortableWithinDays)
