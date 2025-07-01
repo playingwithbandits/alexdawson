@@ -1,0 +1,195 @@
+{
+  "date": "2025-07-01",
+  "tips": [
+    {
+      "time": "13:48",
+      "horse": "Runcok",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Aeros Luck",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "May Call You Back",
+      "isNap": false
+    },
+    {
+      "time": "15:18",
+      "horse": "Inchidaly Copper",
+      "isNap": false
+    },
+    {
+      "time": "15:48",
+      "horse": "Birdsandthebees",
+      "isNap": false
+    },
+    {
+      "time": "16:18",
+      "horse": "Gaoth Chuil",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Arctic Gale",
+      "isNap": false
+    },
+    {
+      "time": "17:23",
+      "horse": "St Cuthbert'S Cave",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Big Fun",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Yakhabar",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Purple Martini",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Shine On Brendan",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Yaaser",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Wee Mary",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Bear To Dream",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Desert Beauty",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Buy The Dip",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Twilight Guest",
+      "isNap": true
+    },
+    {
+      "time": "17:15",
+      "horse": "Play Me",
+      "isNap": false
+    },
+    {
+      "time": "17:08",
+      "horse": "Glamazon",
+      "isNap": false
+    },
+    {
+      "time": "17:38",
+      "horse": "Beyond Dreams",
+      "isNap": false
+    },
+    {
+      "time": "18:08",
+      "horse": "Northern Attitude",
+      "isNap": false
+    },
+    {
+      "time": "18:38",
+      "horse": "Starford",
+      "isNap": false
+    },
+    {
+      "time": "19:08",
+      "horse": "Sidiza",
+      "isNap": false
+    },
+    {
+      "time": "19:38",
+      "horse": "Purple Lily",
+      "isNap": false
+    },
+    {
+      "time": "20:08",
+      "horse": "Sky Captain",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Belgravian",
+      "isNap": true
+    },
+    {
+      "time": "18:30",
+      "horse": "The Thames Boatman",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Pixie Diva",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Finbar'S Lad",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Anzac Day",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Fox Avatar",
+      "isNap": false
+    },
+    {
+      "time": "18:18",
+      "horse": "Finest View",
+      "isNap": false
+    },
+    {
+      "time": "18:48",
+      "horse": "Squire Danagher",
+      "isNap": false
+    },
+    {
+      "time": "19:18",
+      "horse": "Charlie My Boy",
+      "isNap": false
+    },
+    {
+      "time": "19:48",
+      "horse": "Doc Mccoy",
+      "isNap": false
+    },
+    {
+      "time": "20:18",
+      "horse": "Man Of The Sea",
+      "isNap": false
+    },
+    {
+      "time": "20:48",
+      "horse": "Jury Belle",
+      "isNap": false
+    }
+  ]
+}

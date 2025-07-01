@@ -1,0 +1,128 @@
+[
+  {
+    "courseName": "Hamilton",
+    "raceCardsCourseUrl": "/racecards/2025-06-26#hamilton",
+    "raceCardsCourseMeetingsUrl": "/racecards/22/hamilton/2025-06-26",
+    "going": "GOOD (GoingStick: 7.6) (Rail movements: 5.45, 7.45 & 8.15 +8yds)",
+    "weather": "Light rain",
+    "stallsPosition": "5f, 6f, 1m3f & 1m5f - Stands' side; 1m1f - Inside",
+    "races": [
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/22/hamilton/2025-06-26/896298",
+        "horses": [
+          {
+            "horseName": "Empress Olivia",
+            "horseProfileUrl": "/profile/horse/7686996/empress-olivia/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/22/hamilton/2025-06-26/896297",
+        "horses": [
+          {
+            "horseName": "Monks Dream",
+            "horseProfileUrl": "/profile/horse/5364293/monks-dream/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leicester",
+    "raceCardsCourseUrl": "/racecards/2025-06-26#leicester",
+    "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-06-26",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.1) (Watering)",
+    "weather": "Rain",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": [
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/30/leicester/2025-06-26/896310",
+        "horses": [
+          {
+            "horseName": "Excelerate",
+            "horseProfileUrl": "/profile/horse/7613486/excelerate/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/30/leicester/2025-06-26/896306",
+        "horses": [
+          {
+            "horseName": "Shaws Phoenix",
+            "horseProfileUrl": "/profile/horse/4924797/shaws-phoenix/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/30/leicester/2025-06-26/896307",
+        "horses": [
+          {
+            "horseName": "Aphrodites Rock",
+            "horseProfileUrl": "/profile/horse/5929147/aphrodites-rock/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-06-26#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-06-26",
+    "going": "TAPETA: STANDARD",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m2f - Outside; Straight - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Newmarket (July)",
+    "raceCardsCourseUrl": "/racecards/2025-06-26#newmarket-july",
+    "raceCardsCourseMeetingsUrl": "/racecards/174/newmarket-july/2025-06-26",
+    "going": "GOOD TO FIRM (GoingStick: 7.4) (Watering)",
+    "weather": "Light rain",
+    "stallsPosition": "(Far side course) Centre",
+    "races": [
+      {
+        "raceTime": "3:35",
+        "raceCardUrl": "/racecards/174/newmarket-july/2025-06-26/896317",
+        "horses": [
+          {
+            "horseName": "Awraad",
+            "horseProfileUrl": "/profile/horse/7400070/awraad/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-06-26#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-06-26",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.0) (Watering) (Rail movements: 2.12 & 2.47 +12yds and 5.07 +24yds)",
+    "weather": "Light rain",
+    "stallsPosition": "5f, 6f & 1m - Centre; 1m 2f & 1m 6f - Inside",
+    "races": [
+      {
+        "raceTime": "2:47",
+        "raceCardUrl": "/racecards/40/nottingham/2025-06-26/896313",
+        "horses": [
+          {
+            "horseName": "Opera Wave",
+            "horseProfileUrl": "/profile/horse/7457904/opera-wave/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  }
+]
