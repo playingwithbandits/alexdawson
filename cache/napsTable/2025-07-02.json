@@ -1,0 +1,305 @@
+{
+  "date": "2025-07-02",
+  "tips": [
+    {
+      "time": "21:00",
+      "horse": "Marlay Park",
+      "tipster": "Chris Connolly",
+      "score": "67.5"
+    },
+    {
+      "time": "20:10",
+      "horse": "A Lady Forever",
+      "tipster": "Rory Delargy",
+      "score": "20.4"
+    },
+    {
+      "time": "14:33",
+      "horse": "Summer Heat",
+      "tipster": "The Brigadier",
+      "score": "15.4"
+    },
+    {
+      "time": "19:23",
+      "horse": "Huscal",
+      "tipster": "Marlborough",
+      "score": "14.1"
+    },
+    {
+      "time": "14:33",
+      "horse": "First Principle",
+      "tipster": "Glendale",
+      "score": "10.1"
+    },
+    {
+      "time": "16:38",
+      "horse": "Topteam",
+      "tipster": "Lee Sobot",
+      "score": "7.9"
+    },
+    {
+      "time": "18:00",
+      "horse": "This Guy",
+      "tipster": "Lambourn",
+      "score": "7.8"
+    },
+    {
+      "time": "19:23",
+      "horse": "Alzahir",
+      "tipster": "Templegate",
+      "score": "6.3"
+    },
+    {
+      "time": "19:23",
+      "horse": "Alzahir",
+      "tipster": "The North",
+      "score": "6.4"
+    },
+    {
+      "time": "16:38",
+      "horse": "Rogue Impact",
+      "tipster": "Luke Tucker",
+      "score": "5.7"
+    },
+    {
+      "time": "16:38",
+      "horse": "Sir William",
+      "tipster": "Farringdon",
+      "score": "4.0"
+    },
+    {
+      "time": "17:13",
+      "horse": "Easy Peeler",
+      "tipster": "Melissa Jones",
+      "score": "1.7"
+    },
+    {
+      "time": "16:15",
+      "horse": "Hammer Dan",
+      "tipster": "West Country",
+      "score": "-0.9"
+    },
+    {
+      "time": "14:03",
+      "horse": "Tropical Dreamer",
+      "tipster": "Ben Morgan",
+      "score": "-0.9"
+    },
+    {
+      "time": "17:13",
+      "horse": "Kats Bob",
+      "tipster": "Whistler",
+      "score": "-1.5"
+    },
+    {
+      "time": "19:58",
+      "horse": "Sudu",
+      "tipster": "The Judge",
+      "score": "-6.2"
+    },
+    {
+      "time": "20:45",
+      "horse": "Arcimboldo",
+      "tipster": "Robin Goodfellow",
+      "score": "-7.2"
+    },
+    {
+      "time": "17:05",
+      "horse": "Kansas",
+      "tipster": "Computeform",
+      "score": "-10.3"
+    },
+    {
+      "time": "17:13",
+      "horse": "Easy Peeler",
+      "tipster": "Garry Owen",
+      "score": "-9.6"
+    },
+    {
+      "time": "17:25",
+      "horse": "Mr Le Philosophe",
+      "tipster": "Rockavon",
+      "score": "-10.2"
+    },
+    {
+      "time": "17:05",
+      "horse": "Kansas",
+      "tipster": "Mercury",
+      "score": "-11.0"
+    },
+    {
+      "time": "17:25",
+      "horse": "Gone In Sixty",
+      "tipster": "Newsboy",
+      "score": "-12.8"
+    },
+    {
+      "time": "14:33",
+      "horse": "First Principle",
+      "tipster": "Newmarket",
+      "score": "-14.0"
+    },
+    {
+      "time": "19:10",
+      "horse": "Rising Sky",
+      "tipster": "Fortunatus",
+      "score": "-14.6"
+    },
+    {
+      "time": "15:15",
+      "horse": "Woodland Adventure",
+      "tipster": "Ratings Hub",
+      "score": "-16.0"
+    },
+    {
+      "time": "17:48",
+      "horse": "Ifonlytheycudtalk",
+      "tipster": "Steve Mullington",
+      "score": "-19.1"
+    },
+    {
+      "time": "21:00",
+      "horse": "Marlay Park",
+      "tipster": "RP Ratings",
+      "score": "-20.5"
+    },
+    {
+      "time": "16:15",
+      "horse": "Tropical Speed",
+      "tipster": "Postdata",
+      "score": "-23.9"
+    },
+    {
+      "time": "19:00",
+      "horse": "Jax Edge",
+      "tipster": "Spotlight",
+      "score": "-23.3"
+    },
+    {
+      "time": "20:45",
+      "horse": "Black Smoke",
+      "tipster": "Ross Shepherd",
+      "score": "-23.7"
+    },
+    {
+      "time": "16:15",
+      "horse": "Hammer Dan",
+      "tipster": "Jason Heavey",
+      "score": "-24.0"
+    },
+    {
+      "time": "14:15",
+      "horse": "Catboy",
+      "tipster": "Karl Hedley",
+      "score": "-26.6"
+    },
+    {
+      "time": "19:23",
+      "horse": "Alzahir",
+      "tipster": "Ian Gaughran",
+      "score": "-29.3"
+    },
+    {
+      "time": "19:00",
+      "horse": "Chief Mankato",
+      "tipster": "On The Nose",
+      "score": "-28.4"
+    },
+    {
+      "time": "19:45",
+      "horse": "Magnolia Drive",
+      "tipster": "Brian Flanagan",
+      "score": "-30.6"
+    },
+    {
+      "time": "19:58",
+      "horse": "Sudu",
+      "tipster": "Rob Wright",
+      "score": "-30.0"
+    },
+    {
+      "time": "21:00",
+      "horse": "Diamondonthehill",
+      "tipster": "Tipman Tips",
+      "score": "-30.0"
+    },
+    {
+      "time": "21:00",
+      "horse": "Marlay Park",
+      "tipster": "Matt Polley",
+      "score": "-33.0"
+    },
+    {
+      "time": "15:33",
+      "horse": "Rapido Girl",
+      "tipster": "The Duke",
+      "score": "-34.0"
+    },
+    {
+      "time": "20:10",
+      "horse": "Fishermans Cottage",
+      "tipster": "Moorestyle",
+      "score": "-35.4"
+    },
+    {
+      "time": "14:03",
+      "horse": "Tropical Dreamer",
+      "tipster": "Jeffrey Ross",
+      "score": "-38.5"
+    },
+    {
+      "time": "17:13",
+      "horse": "Orne",
+      "tipster": "The Punt",
+      "score": "-34.9"
+    },
+    {
+      "time": "14:03",
+      "horse": "Tropical Dreamer",
+      "tipster": "Adrian Wall",
+      "score": "-39.5"
+    },
+    {
+      "time": "17:13",
+      "horse": "Kats Bob",
+      "tipster": "Jim Delahunt",
+      "score": "-43.4"
+    },
+    {
+      "time": "17:13",
+      "horse": "Manila Scouse",
+      "tipster": "Chris Wright",
+      "score": "-48.0"
+    },
+    {
+      "time": "19:58",
+      "horse": "Sudu",
+      "tipster": "The Score",
+      "score": "-48.2"
+    },
+    {
+      "time": "14:33",
+      "horse": "First Principle",
+      "tipster": "Jon Freeman",
+      "score": "-50.3"
+    },
+    {
+      "time": "18:10",
+      "horse": "First Approach",
+      "tipster": "Sam Hardy",
+      "score": "-59.2"
+    },
+    {
+      "time": "19:58",
+      "horse": "Sudu",
+      "tipster": "Rory Paddock",
+      "score": "-68.5"
+    },
+    {
+      "time": "14:03",
+      "horse": "Dandy Style",
+      "tipster": "Andrew Mount",
+      "score": "-68.9"
+    }
+  ]
+}

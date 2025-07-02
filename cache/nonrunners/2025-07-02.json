@@ -1,0 +1,94 @@
+[
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-07-02#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-07-02",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.3) (Watering)",
+    "weather": "Sunny",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Epsom",
+    "raceCardsCourseUrl": "/racecards/2025-07-02#epsom",
+    "raceCardsCourseMeetingsUrl": "/racecards/17/epsom/2025-07-02",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.3) (Watering) (Rail Movements: 6.20, 7.58 & 8.30 +7yds, 6.50 & 9.00 +5yds and 7.23 +3yds)",
+    "weather": "Showers",
+    "stallsPosition": "6f - Outside; 1m4f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Thirsk",
+    "raceCardsCourseUrl": "/racecards/2025-07-02#thirsk",
+    "raceCardsCourseMeetingsUrl": "/racecards/80/thirsk/2025-07-02",
+    "going": "GOOD TO FIRM, Good in places (Watered)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; Round - Inside; 1m4f - Stands' side",
+    "races": [
+      {
+        "raceTime": "2:03",
+        "raceCardUrl": "/racecards/80/thirsk/2025-07-02/897222",
+        "horses": [
+          {
+            "horseName": "Magic Stone",
+            "horseProfileUrl": "/profile/horse/7583056/magic-stone/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tipperary",
+    "raceCardsCourseUrl": "/racecards/2025-07-02#tipperary",
+    "raceCardsCourseMeetingsUrl": "/racecards/202/tipperary/2025-07-02",
+    "going": "GOOD (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/202/tipperary/2025-07-02/898722",
+        "horses": [
+          {
+            "horseName": "Betsen",
+            "horseProfileUrl": "/profile/horse/5005717/betsen/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Worcester",
+    "raceCardsCourseUrl": "/racecards/2025-07-02#worcester",
+    "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-07-02",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.7) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/101/worcester/2025-07-02/897481",
+        "horses": [
+          {
+            "horseName": "Squire Danagher",
+            "horseProfileUrl": "/profile/horse/4528295/squire-danagher/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/101/worcester/2025-07-02/897482",
+        "horses": [
+          {
+            "horseName": "Getuptheyard",
+            "horseProfileUrl": "/profile/horse/4922366/getuptheyard/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  }
+]
