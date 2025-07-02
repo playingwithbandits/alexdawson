@@ -17,6 +17,9 @@ import {
   parseDistance,
   placeToPlaceKey,
 } from "@/lib/racing/scores/funcs";
+import { calculateHorseScore4 } from "@/lib/racing/scores/calculateHorseScore4";
+import { fetchFormRaceDetails } from "./fetchFormRaceDetails";
+import { lastRaceToLastRaceStats } from "./lastRaceToLastRaceStats";
 
 export async function parseRaceDetails(
   html: string,
@@ -66,6 +69,13 @@ export async function parseRaceDetails(
     });
   }
 
+  const raceDistance = parseDistance(
+    doc
+      .querySelector(`[data-test-selector="RC-header__raceDistanceRound"]`)
+      ?.textContent?.replace(/\s+/g, " ")
+      .trim() || ""
+  );
+
   //console.log("🐎 Parsing horses...");
   // Parse horses from runner rows
   const rowsElements = doc.querySelectorAll(
@@ -86,11 +96,35 @@ export async function parseRaceDetails(
         : "";
       const formObj = await fetchHorseForm(profileUrl);
 
+      const name = horseNameToKey(
+        row.querySelector(".RC-runnerName")?.textContent?.trim() || ""
+      );
+
+      const formTableEle = row.querySelector(
+        `[data-test-selector="RC-runnerFormBody"]`
+      );
+      const formRows = formTableEle?.querySelectorAll("tr");
+      const latestFormRow = formRows?.[0];
+      const outcomeCell = latestFormRow?.querySelector(
+        '[data-test-selector="RC-runnerFormRow__outcome"]'
+      );
+      const outcomeLink = outcomeCell?.querySelector("a");
+      const lastRaceLink = outcomeLink?.href
+        ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+          new URL(outcomeLink.href).pathname
+        : "";
+      const lastRaceEle = lastRaceLink
+        ? await fetchFormRaceDetails(lastRaceLink)
+        : undefined;
+
+      const lastRaceStatsObj = lastRaceEle
+        ? lastRaceToLastRaceStats(lastRaceEle, name, raceDistance)
+        : undefined;
+
       return {
-        name: horseNameToKey(
-          row.querySelector(".RC-runnerName")?.textContent?.trim() || ""
-        ),
+        name,
         profileUrl,
+        lastRaceStats: lastRaceStatsObj,
         formObj: {
           ...formObj,
           form: formObj?.form?.filter(
@@ -168,6 +202,8 @@ export async function parseRaceDetails(
     })
   );
 
+  console.log("🐎 horses", horses);
+
   // Calculate relative scores for all horses in the race
   // Extract prize money from title or other elements
   const prizeMatch = doc
@@ -198,12 +234,7 @@ export async function parseRaceDetails(
         ?.textContent?.replace(/\s+/g, " ")
         .trim() || "",
     runners: horses.length,
-    distance: parseDistance(
-      doc
-        .querySelector(`[data-test-selector="RC-header__raceDistanceRound"]`)
-        ?.textContent?.replace(/\s+/g, " ")
-        .trim() || ""
-    ),
+    distance: raceDistance,
 
     class:
       parseInt(

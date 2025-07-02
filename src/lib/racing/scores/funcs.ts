@@ -460,3 +460,24 @@ export const isGoodDistanceToWinner = (
 
   return distanceToWinnerFloat <= 12;
 };
+
+export const distanceBeatenLengthsThreshold = (
+  raceDistance: number | undefined
+) => {
+  if (!raceDistance) return 0;
+
+  if (raceDistance <= 6) {
+    return 2;
+  }
+  if (raceDistance <= 8) {
+    return 3;
+  }
+  if (raceDistance <= 10) {
+    return 4;
+  }
+  if (raceDistance <= 16) {
+    return 6;
+  }
+
+  return 5;
+};

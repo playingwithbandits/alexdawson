@@ -26,9 +26,11 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
       );
 
       // Get all races for this meeting
-      const raceElements = element.querySelectorAll(
+      const raceElementsAll = element.querySelectorAll(
         '[data-test-selector="RC-courseCards__raceRow"]'
       );
+
+      const raceElements = Array.from(raceElementsAll);
 
       //console.log("Venue:", venueElement?.textContent);
       //console.log("Races found:", raceElements);

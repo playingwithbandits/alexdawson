@@ -47,4 +47,6 @@ export const RACING_SCORE_WEIGHTS: Record<
   ageProfile: 0.7, // Age vs race type suitability
   weather: 0.6, // Weather conditions impact
   timeOfDay: 0.6, // Performance by race timing
+
+  racedAgainst: 0.5,
 };
