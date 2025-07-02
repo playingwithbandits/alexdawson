@@ -41,9 +41,9 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
-const THRESHOLD = 0.85;
+const THRESHOLD = 0.8;
 const DAYS_THRESHOLD_COMFORTABLE = 14;
-const DAYS_THRESHOLD_EYECATCHER = 21;
+const DAYS_THRESHOLD_EYECATCHER = 45;
 const DAYS_THRESHOLD_HAMPERED = 21;
 
 const goodFormCode = (code: string, runners: number) => {
