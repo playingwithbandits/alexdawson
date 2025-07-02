@@ -42,7 +42,39 @@ export interface Bet {
   decimalOdds: number;
 }
 
+export interface LastRaceStatsRaceInfo {
+  avg: {
+    or: number;
+    rpr: number;
+    ts: number;
+    draw: number;
+    age: number;
+  };
+  max: {
+    or: number;
+    rpr: number;
+    ts: number;
+    draw: number;
+    age: number;
+  };
+  beatenAvg: {
+    or: number;
+    rpr: number;
+    ts: number;
+    draw: number;
+    age: number;
+  };
+  beatenMax: {
+    or: number;
+    rpr: number;
+    ts: number;
+    draw: number;
+    age: number;
+  };
+}
+
 export interface RaceStats {
+  lastRaceStatsRaceInfo: LastRaceStatsRaceInfo;
   avgOfficialRating: number;
   avgRating: number;
   avgTopSpeed: number;

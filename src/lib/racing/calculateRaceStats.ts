@@ -1,5 +1,7 @@
 import { avg, sum } from "@/lib/utils";
-import { Race, RaceStats, Horse } from "@/types/racing";
+import { Race, RaceStats, Horse, LastRaceStatsRaceInfo } from "@/types/racing";
+import { LastRaceStats } from "./scores/types";
+import { max } from "date-fns";
 
 interface RaceStatsInput {
   raceData: Partial<Race>;
@@ -18,8 +20,44 @@ export function calculateRaceStats({
   const classLevel = raceData.class || 0;
   const isHandicap = (raceData.title || "").toLowerCase().includes("handicap");
 
+  const lastRaceStatsArr: LastRaceStats[] = horses
+    .map((h) => h.lastRaceStats)
+    .filter((x) => x !== undefined);
+
+  const lastRaceStatsRaceInfo: LastRaceStatsRaceInfo = {
+    avg: {
+      or: avg(lastRaceStatsArr.map((l) => l.averages_all.or)) || 0,
+      rpr: avg(lastRaceStatsArr.map((l) => l.averages_all.rpr)) || 0,
+      ts: avg(lastRaceStatsArr.map((l) => l.averages_all.ts)) || 0,
+      draw: avg(lastRaceStatsArr.map((l) => l.averages_all.draw)) || 0,
+      age: avg(lastRaceStatsArr.map((l) => l.averages_all.age)) || 0,
+    },
+    max: {
+      or: avg(lastRaceStatsArr.map((l) => l.maxes_all.or)) || 0,
+      rpr: avg(lastRaceStatsArr.map((l) => l.maxes_all.rpr)) || 0,
+      ts: avg(lastRaceStatsArr.map((l) => l.maxes_all.ts)) || 0,
+      draw: avg(lastRaceStatsArr.map((l) => l.maxes_all.draw)) || 0,
+      age: avg(lastRaceStatsArr.map((l) => l.maxes_all.age)) || 0,
+    },
+    beatenAvg: {
+      or: avg(lastRaceStatsArr.map((l) => l.averages_beaten.or)) || 0,
+      rpr: avg(lastRaceStatsArr.map((l) => l.averages_beaten.rpr)) || 0,
+      ts: avg(lastRaceStatsArr.map((l) => l.averages_beaten.ts)) || 0,
+      draw: avg(lastRaceStatsArr.map((l) => l.averages_beaten.draw)) || 0,
+      age: avg(lastRaceStatsArr.map((l) => l.averages_beaten.age)) || 0,
+    },
+    beatenMax: {
+      or: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.or)) || 0,
+      rpr: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.rpr)) || 0,
+      ts: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.ts)) || 0,
+      draw: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.draw)) || 0,
+      age: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.age)) || 0,
+    },
+  };
+
   // Calculate aggregate stats
   const stats: RaceStats = {
+    lastRaceStatsRaceInfo,
     // Basic averages
     avgOfficialRating: avg(horses.map((h) => parseInt(h.officialRating) || 0)),
     avgRating: avg(horses.map((h) => parseInt(h.rating) || 0)),

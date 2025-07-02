@@ -4,38 +4,58 @@ export function calculateRacedAgainstScore({
   horse,
   raceStats,
 }: ScoreParams): ScoreComponent {
-  let score = 1;
-  const maxScore = 2;
+  let score = 0;
+  const maxScore = 12;
 
-  //const horseForm = horse.formObj?.form;
+  const { lastRaceStatsRaceInfo } = raceStats;
 
-  score++;
+  const {
+    runners_beaten,
+    averages_all,
+    maxes_all,
+    averages_beaten,
+    maxes_beaten,
+  } = horse.lastRaceStats || {};
 
-  // // Better than average OR
-  // if (Number(horse.officialRating) >= raceStats.avgOfficialRating) score++;
-  // // Significantly better OR (>10% above average)
-  // if (Number(horse.officialRating) >= raceStats.avgOfficialRating * 1.1)
-  //   score++;
-  // // Better than average RPR
-  // if (Number(horse.rating) >= raceStats.avgRating) score++;
-  // // Significantly better RPR (>10% above average)
-  // if (Number(horse.rating) >= raceStats.avgRating * 1.1) score++;
+  if ((averages_beaten?.or || 0) >= (lastRaceStatsRaceInfo.beatenAvg.or || 0)) {
+    score += 1;
+  }
+  if (
+    (averages_beaten?.rpr || 0) >= (lastRaceStatsRaceInfo.beatenAvg.rpr || 0)
+  ) {
+    score += 1;
+  }
+  if ((averages_beaten?.ts || 0) >= (lastRaceStatsRaceInfo.beatenAvg.ts || 0)) {
+    score += 1;
+  }
+  if ((maxes_beaten?.or || 0) >= (lastRaceStatsRaceInfo.beatenMax.or || 0)) {
+    score += 1;
+  }
+  if ((maxes_beaten?.rpr || 0) >= (lastRaceStatsRaceInfo.beatenMax.rpr || 0)) {
+    score += 1;
+  }
+  if ((maxes_beaten?.ts || 0) >= (lastRaceStatsRaceInfo.beatenMax.ts || 0)) {
+    score += 1;
+  }
 
-  // // Within top 25% of field by OR
-  // if (
-  //   Number(horse.officialRating) >=
-  //   raceStats.avgOfficialRating + raceStats.avgOfficialRating * 0.25
-  // )
-  //   score++;
-
-  // // Within top 25% of field by RPR
-  // if (Number(horse.rating) >= raceStats.avgRating + raceStats.avgRating * 0.25)
-  //   score++;
-
-  // // Top Speed comparison
-  // if (Number(horse.topSpeed) >= raceStats.avgTopSpeed) score++;
-  // // Significantly better Top Speed (>10% above average)
-  // if (Number(horse.topSpeed) >= raceStats.avgTopSpeed * 1.1) score++;
+  if ((averages_all?.or || 0) >= (lastRaceStatsRaceInfo.avg.or || 0)) {
+    score += 1;
+  }
+  if ((averages_all?.rpr || 0) >= (lastRaceStatsRaceInfo.avg.rpr || 0)) {
+    score += 1;
+  }
+  if ((averages_all?.ts || 0) >= (lastRaceStatsRaceInfo.avg.ts || 0)) {
+    score += 1;
+  }
+  if ((maxes_all?.or || 0) >= (lastRaceStatsRaceInfo.max.or || 0)) {
+    score += 1;
+  }
+  if ((maxes_all?.rpr || 0) >= (lastRaceStatsRaceInfo.max.rpr || 0)) {
+    score += 1;
+  }
+  if ((maxes_all?.ts || 0) >= (lastRaceStatsRaceInfo.max.ts || 0)) {
+    score += 1;
+  }
 
   return {
     score,
