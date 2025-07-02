@@ -2549,10 +2549,11 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
+                  countGood &&
                   aiGood &&
                   rpPredGood &&
-                  sharpRatingGood &&
-                  (countGood ||
+                  //sharpRatingGood &&
+                  (hasOlbgComment ||
                     olbgNapGood ||
                     olbgExpertCount ||
                     horseEyecatcherObj?.hasEyecatcherWithinDays ||

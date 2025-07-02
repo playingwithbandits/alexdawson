@@ -1,0 +1,136 @@
+[
+  {
+    "courseName": "Bellewstown",
+    "raceCardsCourseUrl": "/racecards/2025-07-03#bellewstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/176/bellewstown/2025-07-03",
+    "going": "GOOD (Selective watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:07",
+        "raceCardUrl": "/racecards/176/bellewstown/2025-07-03/898711",
+        "horses": [
+          {
+            "horseName": "Kilmood Susan",
+            "horseProfileUrl": "/profile/horse/5884459/kilmood-susan/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-07-03#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-07-03",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.0) (Watered) (Inner Track) (Rail movements: 4.10 +33yds and 4.42 & 5.17 +16yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f, 6f & 1m4f - Centre; 7f - Inside",
+    "races": [
+      {
+        "raceTime": "5:17",
+        "raceCardUrl": "/racecards/23/haydock/2025-07-03/897240",
+        "horses": [
+          {
+            "horseName": "Sunshine Mag",
+            "horseProfileUrl": "/profile/horse/7355940/sunshine-mag/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-07-03#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-07-03",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "5:11",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-07-03/897557",
+        "horses": [
+          {
+            "horseName": "Eightthreeone",
+            "horseProfileUrl": "/profile/horse/7493112/eightthreeone/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-07-03#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-07-03",
+    "going": "GOOD TO FIRM (GoingStick: 6.5) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m2f - Inside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Perth",
+    "raceCardsCourseUrl": "/racecards/2025-07-03#perth",
+    "raceCardsCourseMeetingsUrl": "/racecards/41/perth/2025-07-03",
+    "going": "GOOD (GoingStick: 7.6) (Watered) (Rail movements: 2.20 & 3.50 +111yds, 2.50 +91yds, 3.20 +94yds, 4.20 +115yds and 4.55 +132yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/41/perth/2025-07-03/897492",
+        "horses": [
+          {
+            "horseName": "Prince Abu",
+            "horseProfileUrl": "/profile/horse/3300556/prince-abu/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/41/perth/2025-07-03/897490",
+        "horses": [
+          {
+            "horseName": "Rewired",
+            "horseProfileUrl": "/profile/horse/3212574/rewired/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tipperary",
+    "raceCardsCourseUrl": "/racecards/2025-07-03#tipperary",
+    "raceCardsCourseMeetingsUrl": "/racecards/202/tipperary/2025-07-03",
+    "going": "GOOD TO YIELDING (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-07-03#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-07-03",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 5.8) (Selective watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; 1m2f - Inside",
+    "races": [
+      {
+        "raceTime": "2:32",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-07-03/897232",
+        "horses": [
+          {
+            "horseName": "Strategia",
+            "horseProfileUrl": "/profile/horse/4612991/strategia/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  }
+]
