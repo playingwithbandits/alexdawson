@@ -6,7 +6,7 @@ export const RACING_SCORE_WEIGHTS: Record<
   keyof HorseScore["components"],
   number
 > = {
-  racedAgainst: 10,
+  racedAgainst: 1.5,
 
   // Primary factors (1.4-1.5)
   ratings: 1.5, // Core ability indicator

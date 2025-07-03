@@ -3,10 +3,21 @@
     "courseName": "Bellewstown",
     "raceCardsCourseUrl": "/racecards/2025-07-03#bellewstown",
     "raceCardsCourseMeetingsUrl": "/racecards/176/bellewstown/2025-07-03",
-    "going": "GOOD (Selective watering)",
+    "going": "GOOD",
     "weather": "Light rain",
     "stallsPosition": "",
     "races": [
+      {
+        "raceTime": "6:32",
+        "raceCardUrl": "/racecards/176/bellewstown/2025-07-03/898710",
+        "horses": [
+          {
+            "horseName": "Rosie Frith",
+            "horseProfileUrl": "/profile/horse/7583038/rosie-frith/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
       {
         "raceTime": "7:07",
         "raceCardUrl": "/racecards/176/bellewstown/2025-07-03/898711",
@@ -24,7 +35,7 @@
     "courseName": "Haydock",
     "raceCardsCourseUrl": "/racecards/2025-07-03#haydock",
     "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-07-03",
-    "going": "GOOD, Good to firm in places (GoingStick: 7.0) (Watered) (Inner Track) (Rail movements: 4.10 +33yds and 4.42 & 5.17 +16yds)",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.1) (Watered) (Inner Track) (Rail movements: 4.10 +33yds and 4.42 & 5.17 +16yds)",
     "weather": "Partly cloudy",
     "stallsPosition": "5f, 6f & 1m4f - Centre; 7f - Inside",
     "races": [
@@ -50,6 +61,17 @@
     "stallsPosition": "Inside",
     "races": [
       {
+        "raceTime": "4:37",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-07-03/897555",
+        "horses": [
+          {
+            "horseName": "Satavia",
+            "horseProfileUrl": "/profile/horse/7516453/satavia/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
         "raceTime": "5:11",
         "raceCardUrl": "/racecards/1079/kempton-aw/2025-07-03/897557",
         "horses": [
@@ -59,6 +81,50 @@
             "raceNumber": "(4)"
           }
         ]
+      },
+      {
+        "raceTime": "5:48",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-07-03/897553",
+        "horses": [
+          {
+            "horseName": "Hieronymus",
+            "horseProfileUrl": "/profile/horse/2018855/hieronymus/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:23",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-07-03/898857",
+        "horses": [
+          {
+            "horseName": "Finsceal Luas",
+            "horseProfileUrl": "/profile/horse/5147913/finsceal-luas/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:08",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-07-03/898858",
+        "horses": [
+          {
+            "horseName": "Queen Of The Roses",
+            "horseProfileUrl": "/profile/horse/6465147/queen-of-the-roses/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:43",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-07-03/897554",
+        "horses": [
+          {
+            "horseName": "Jackson Street",
+            "horseProfileUrl": "/profile/horse/5172501/jackson-street/",
+            "raceNumber": "(12)"
+          }
+        ]
       }
     ]
   },
@@ -66,16 +132,50 @@
     "courseName": "Newbury",
     "raceCardsCourseUrl": "/racecards/2025-07-03#newbury",
     "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-07-03",
-    "going": "GOOD TO FIRM (GoingStick: 6.5) (Watering)",
+    "going": "GOOD TO FIRM (GoingStick: 6.4) (Watering)",
     "weather": "Partly cloudy",
     "stallsPosition": "1m2f - Inside; Remainder - Centre",
-    "races": []
+    "races": [
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/36/newbury/2025-07-03/897224",
+        "horses": [
+          {
+            "horseName": "Assiri Heights",
+            "horseProfileUrl": "/profile/horse/7762482/assiri-heights/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:25",
+        "raceCardUrl": "/racecards/36/newbury/2025-07-03/897227",
+        "horses": [
+          {
+            "horseName": "Yuvraaj",
+            "horseProfileUrl": "/profile/horse/6433779/yuvraaj/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "9:00",
+        "raceCardUrl": "/racecards/36/newbury/2025-07-03/897226",
+        "horses": [
+          {
+            "horseName": "Seventy",
+            "horseProfileUrl": "/profile/horse/5708632/seventy/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Perth",
     "raceCardsCourseUrl": "/racecards/2025-07-03#perth",
     "raceCardsCourseMeetingsUrl": "/racecards/41/perth/2025-07-03",
-    "going": "GOOD (GoingStick: 7.6) (Watered) (Rail movements: 2.20 & 3.50 +111yds, 2.50 +91yds, 3.20 +94yds, 4.20 +115yds and 4.55 +132yds)",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.6) (Watered) (Rail movements: 2.20 & 3.50 +111yds, 2.50 +91yds, 3.20 +94yds, 4.20 +115yds and 4.55 +132yds)",
     "weather": "Mostly cloudy",
     "stallsPosition": "",
     "races": [
@@ -100,6 +200,28 @@
             "raceNumber": "(1)"
           }
         ]
+      },
+      {
+        "raceTime": "3:50",
+        "raceCardUrl": "/racecards/41/perth/2025-07-03/897489",
+        "horses": [
+          {
+            "horseName": "Prince Nino",
+            "horseProfileUrl": "/profile/horse/3421856/prince-nino/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/41/perth/2025-07-03/897488",
+        "horses": [
+          {
+            "horseName": "Bumpy Evans",
+            "horseProfileUrl": "/profile/horse/4540833/bumpy-evans/",
+            "raceNumber": "(4)"
+          }
+        ]
       }
     ]
   },
@@ -110,13 +232,52 @@
     "going": "GOOD TO YIELDING (Watering)",
     "weather": "Mostly cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/202/tipperary/2025-07-03/898701",
+        "horses": [
+          {
+            "horseName": "Gimme A Buzz",
+            "horseProfileUrl": "/profile/horse/6514068/gimme-a-buzz/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Radar Ahead",
+            "horseProfileUrl": "/profile/horse/5315404/radar-ahead/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/202/tipperary/2025-07-03/898703",
+        "horses": [
+          {
+            "horseName": "Amboyna",
+            "horseProfileUrl": "/profile/horse/6111543/amboyna/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/202/tipperary/2025-07-03/898706",
+        "horses": [
+          {
+            "horseName": "Sugar In My Tea",
+            "horseProfileUrl": "/profile/horse/7657444/sugar-in-my-tea/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Yarmouth",
     "raceCardsCourseUrl": "/racecards/2025-07-03#yarmouth",
     "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-07-03",
-    "going": "GOOD TO FIRM, Good in places (GoingStick: 5.8) (Selective watering)",
+    "going": "GOOD, Good to firm in places (GoingStick: 5.6) (Watered)",
     "weather": "Partly cloudy",
     "stallsPosition": "Straight - Centre; 1m2f - Inside",
     "races": [
@@ -125,9 +286,30 @@
         "raceCardUrl": "/racecards/104/yarmouth/2025-07-03/897232",
         "horses": [
           {
+            "horseName": "Stella Hogan",
+            "horseProfileUrl": "/profile/horse/4990399/stella-hogan/",
+            "raceNumber": "(1)"
+          },
+          {
             "horseName": "Strategia",
             "horseProfileUrl": "/profile/horse/4612991/strategia/",
             "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-07-03/897233",
+        "horses": [
+          {
+            "horseName": "Match Anthem",
+            "horseProfileUrl": "/profile/horse/5767690/match-anthem/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Roman Emperor",
+            "horseProfileUrl": "/profile/horse/5082937/roman-emperor/",
+            "raceNumber": "(6)"
           }
         ]
       }
