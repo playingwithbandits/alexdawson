@@ -1,7 +1,6 @@
 import { avg, sum } from "@/lib/utils";
 import { Race, RaceStats, Horse, LastRaceStatsRaceInfo } from "@/types/racing";
 import { LastRaceStats } from "./scores/types";
-import { max } from "date-fns";
 
 interface RaceStatsInput {
   raceData: Partial<Race>;
@@ -24,34 +23,156 @@ export function calculateRaceStats({
     .map((h) => h.lastRaceStats)
     .filter((x) => x !== undefined);
 
+  console.log(
+    "🏁 Last Race Stats Arr timePerFurlong",
+    lastRaceStatsArr.map((l) => l.info?.timePerFurlong)
+  );
+
   const lastRaceStatsRaceInfo: LastRaceStatsRaceInfo = {
+    avgTimePerFurlong:
+      avg(
+        lastRaceStatsArr.map((l) => l.info?.timePerFurlong)?.filter(Boolean)
+      ) || 0,
+    minTimePerFurlong:
+      Math.min(
+        ...lastRaceStatsArr.map((l) => l.info?.timePerFurlong)?.filter(Boolean)
+      ) || 0,
+    maxTimePerFurlong:
+      Math.max(
+        ...lastRaceStatsArr.map((l) => l.info?.timePerFurlong)?.filter(Boolean)
+      ) || 0,
+
     avg: {
-      or: avg(lastRaceStatsArr.map((l) => l.averages_all.or)) || 0,
-      rpr: avg(lastRaceStatsArr.map((l) => l.averages_all.rpr)) || 0,
-      ts: avg(lastRaceStatsArr.map((l) => l.averages_all.ts)) || 0,
-      draw: avg(lastRaceStatsArr.map((l) => l.averages_all.draw)) || 0,
-      age: avg(lastRaceStatsArr.map((l) => l.averages_all.age)) || 0,
+      or:
+        avg(lastRaceStatsArr.map((l) => l.averages_all.or)?.filter(Boolean)) ||
+        0,
+      rpr:
+        avg(lastRaceStatsArr.map((l) => l.averages_all.rpr)?.filter(Boolean)) ||
+        0,
+      ts:
+        avg(lastRaceStatsArr.map((l) => l.averages_all.ts)?.filter(Boolean)) ||
+        0,
+      draw:
+        avg(
+          lastRaceStatsArr.map((l) => l.averages_all.draw)?.filter(Boolean)
+        ) || 0,
+      age:
+        avg(lastRaceStatsArr.map((l) => l.averages_all.age)?.filter(Boolean)) ||
+        0,
     },
+    maxOfAvgs: {
+      or:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_all.or)?.filter(Boolean)
+        ) || 0,
+      rpr:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_all.rpr)?.filter(Boolean)
+        ) || 0,
+      ts:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_all.ts)?.filter(Boolean)
+        ) || 0,
+      draw:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_all.draw)?.filter(Boolean)
+        ) || 0,
+      age:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_all.age)?.filter(Boolean)
+        ) || 0,
+    },
+
     max: {
-      or: avg(lastRaceStatsArr.map((l) => l.maxes_all.or)) || 0,
-      rpr: avg(lastRaceStatsArr.map((l) => l.maxes_all.rpr)) || 0,
-      ts: avg(lastRaceStatsArr.map((l) => l.maxes_all.ts)) || 0,
-      draw: avg(lastRaceStatsArr.map((l) => l.maxes_all.draw)) || 0,
-      age: avg(lastRaceStatsArr.map((l) => l.maxes_all.age)) || 0,
+      or:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_all.or)?.filter(Boolean)
+        ) || 0,
+      rpr:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_all.rpr)?.filter(Boolean)
+        ) || 0,
+      ts:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_all.ts)?.filter(Boolean)
+        ) || 0,
+      draw:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_all.draw)?.filter(Boolean)
+        ) || 0,
+      age:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_all.age)?.filter(Boolean)
+        ) || 0,
     },
     beatenAvg: {
-      or: avg(lastRaceStatsArr.map((l) => l.averages_beaten.or)) || 0,
-      rpr: avg(lastRaceStatsArr.map((l) => l.averages_beaten.rpr)) || 0,
-      ts: avg(lastRaceStatsArr.map((l) => l.averages_beaten.ts)) || 0,
-      draw: avg(lastRaceStatsArr.map((l) => l.averages_beaten.draw)) || 0,
-      age: avg(lastRaceStatsArr.map((l) => l.averages_beaten.age)) || 0,
+      or:
+        avg(
+          lastRaceStatsArr.map((l) => l.averages_beaten.or)?.filter(Boolean)
+        ) || 0,
+      rpr:
+        avg(
+          lastRaceStatsArr.map((l) => l.averages_beaten.rpr)?.filter(Boolean)
+        ) || 0,
+      ts:
+        avg(
+          lastRaceStatsArr.map((l) => l.averages_beaten.ts)?.filter(Boolean)
+        ) || 0,
+      draw:
+        avg(
+          lastRaceStatsArr.map((l) => l.averages_beaten.draw)?.filter(Boolean)
+        ) || 0,
+      age:
+        avg(
+          lastRaceStatsArr.map((l) => l.averages_beaten.age)?.filter(Boolean)
+        ) || 0,
+    },
+
+    beatenMaxOfAvgs: {
+      or:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_beaten.or)?.filter(Boolean)
+        ) || 0,
+      rpr:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_beaten.rpr)?.filter(Boolean)
+        ) || 0,
+      ts:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_beaten.ts)?.filter(Boolean)
+        ) || 0,
+      draw:
+        Math.max(
+          ...lastRaceStatsArr
+            .map((l) => l.averages_beaten.draw)
+            ?.filter(Boolean)
+        ) || 0,
+      age:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.averages_beaten.age)?.filter(Boolean)
+        ) || 0,
     },
     beatenMax: {
-      or: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.or)) || 0,
-      rpr: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.rpr)) || 0,
-      ts: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.ts)) || 0,
-      draw: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.draw)) || 0,
-      age: avg(lastRaceStatsArr.map((l) => l.maxes_beaten.age)) || 0,
+      or:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_beaten.or)?.filter(Boolean)
+        ) || 0,
+      rpr:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_beaten.rpr)?.filter(Boolean)
+        ) || 0,
+      ts:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_beaten.ts)?.filter(Boolean)
+        ) || 0,
+      draw:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_beaten.draw)?.filter(Boolean)
+        ) || 0,
+      age:
+        Math.max(
+          ...lastRaceStatsArr.map((l) => l.maxes_beaten.age)?.filter(Boolean)
+        ) || 0,
     },
   };
 

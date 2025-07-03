@@ -104,7 +104,18 @@ export async function parseRaceDetails(
         `[data-test-selector="RC-runnerFormBody"]`
       );
       const formRows = formTableEle?.querySelectorAll("tr");
-      const latestFormRow = formRows?.[0];
+
+      const formRowsValid = Array.from(formRows || [])?.filter((x) => {
+        const outcomeCell = x.querySelector(
+          '[data-test-selector="RC-runnerFormRow__outcome"]'
+        );
+        const outcomeText =
+          outcomeCell?.querySelector("a")?.textContent?.trim() || "";
+        const raceOutcomeCode = outcomeText.split("/")[0];
+        return isValidOutcome(raceOutcomeCode);
+      });
+
+      const latestFormRow = formRowsValid?.[0];
       const outcomeCell = latestFormRow?.querySelector(
         '[data-test-selector="RC-runnerFormRow__outcome"]'
       );
@@ -117,9 +128,49 @@ export async function parseRaceDetails(
         ? await fetchFormRaceDetails(lastRaceLink)
         : undefined;
 
+      const formRowValidDate =
+        latestFormRow
+          ?.querySelector('[data-test-selector="RC-runnerFormLink__results"]')
+          ?.getAttribute("href")
+          ?.split("/")?.[4] || undefined;
+
+      const matchingFormObj = formRowValidDate
+        ? formObj?.form?.find((x) => {
+            const date1 = x.raceDatetime
+              ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
+              : undefined;
+            const date2 = formRowValidDate
+              ? new Date(formRowValidDate || "").toISOString().split("T")[0]
+              : undefined;
+            return date1 === date2;
+          })
+        : formObj?.form?.[0];
+
+      const lastFormRowFromDistanceYard = matchingFormObj?.distanceYard || 0;
+      const lastFormRowDistanceFurlongAccurate =
+        lastFormRowFromDistanceYard * 0.00454545;
+
       const lastRaceStatsObj = lastRaceEle
-        ? lastRaceToLastRaceStats(lastRaceEle, name, raceDistance)
+        ? await lastRaceToLastRaceStats(
+            lastRaceEle,
+            name,
+            lastFormRowDistanceFurlongAccurate || raceDistance
+          )
         : undefined;
+
+      console.log(
+        "🏁 lastRaceToLastRaceStats",
+        {
+          lastRaceEle,
+          name,
+          lastFormRowDistanceFurlongAccurate,
+          raceDistance,
+        },
+        outcomeLink?.href,
+        lastRaceLink,
+        lastRaceEle,
+        lastRaceStatsObj
+      );
 
       return {
         name,

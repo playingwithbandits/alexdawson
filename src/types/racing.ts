@@ -43,6 +43,23 @@ export interface Bet {
 }
 
 export interface LastRaceStatsRaceInfo {
+  avgTimePerFurlong: number;
+  minTimePerFurlong: number;
+  maxTimePerFurlong: number;
+  maxOfAvgs: {
+    or: number;
+    rpr: number;
+    ts: number;
+    draw: number;
+    age: number;
+  };
+  beatenMaxOfAvgs: {
+    or: number;
+    rpr: number;
+    ts: number;
+    draw: number;
+    age: number;
+  };
   avg: {
     or: number;
     rpr: number;

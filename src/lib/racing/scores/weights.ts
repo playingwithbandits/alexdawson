@@ -6,6 +6,8 @@ export const RACING_SCORE_WEIGHTS: Record<
   keyof HorseScore["components"],
   number
 > = {
+  racedAgainst: 10,
+
   // Primary factors (1.4-1.5)
   ratings: 1.5, // Core ability indicator
   form: 1.5, // Recent performance
@@ -47,6 +49,4 @@ export const RACING_SCORE_WEIGHTS: Record<
   ageProfile: 0.7, // Age vs race type suitability
   weather: 0.6, // Weather conditions impact
   timeOfDay: 0.6, // Performance by race timing
-
-  racedAgainst: 0.5,
 };

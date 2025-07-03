@@ -32,6 +32,7 @@ import { calculateFieldSizeScore } from "./fieldSize";
 import { calculateTimeOfDayScore } from "./timeOfDay";
 import { calculateWeatherScore } from "./weather";
 import { calculateTravelDistanceScore } from "./travelDistance";
+import { calculateRacedAgainstScore } from "./score2/raceAgainst";
 
 export function calculateHorseScore3(props: ScoreParams): HorseScore {
   const ratings = calculateRatingsScore(props);
@@ -68,6 +69,7 @@ export function calculateHorseScore3(props: ScoreParams): HorseScore {
   const competitiveness = calculateCompetitivenessScore(props);
   const improvement = calculateImprovementScore(props);
   const bounce = calculateBounceScore(props);
+  const racedAgainst = calculateRacedAgainstScore(props);
 
   const components = {
     ratings,
@@ -102,6 +104,7 @@ export function calculateHorseScore3(props: ScoreParams): HorseScore {
     competitiveness,
     improvement,
     bounce,
+    racedAgainst,
   };
 
   const weightedScores = Object.entries(components).map(

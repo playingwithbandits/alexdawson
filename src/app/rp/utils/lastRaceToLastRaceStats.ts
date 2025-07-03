@@ -4,12 +4,13 @@ import {
   horseNameToKey,
 } from "@/lib/racing/scores/funcs";
 import { LastRaceRunner, LastRaceStats } from "@/lib/racing/scores/types";
+import { avg } from "@/lib/utils";
 
-export function lastRaceToLastRaceStats(
+export async function lastRaceToLastRaceStats(
   lastRaceEle: string,
   input_name: string,
   distanceF: number
-): LastRaceStats {
+): Promise<LastRaceStats> {
   const parser = new DOMParser();
   const doc = parser.parseFromString(lastRaceEle, "text/html");
 
@@ -50,22 +51,26 @@ export function lastRaceToLastRaceStats(
         : 0;
 
     // Get ratings
-    const or = parseInt(
-      row.querySelector('td[data-ending="OR"]')?.textContent?.trim() || "0"
-    );
-    const rpr = parseInt(
-      row.querySelector('td[data-ending="RPR"]')?.textContent?.trim() || "0"
-    );
-    const ts = parseInt(
-      row.querySelector('td[data-ending="TS"]')?.textContent?.trim() || "0"
-    );
+    const or =
+      parseInt(
+        row.querySelector('td[data-ending="OR"]')?.textContent?.trim() || "0"
+      ) || 0;
+    const rpr =
+      parseInt(
+        row.querySelector('td[data-ending="RPR"]')?.textContent?.trim() || "0"
+      ) || 0;
+    const ts =
+      parseInt(
+        row.querySelector('td[data-ending="TS"]')?.textContent?.trim() || "0"
+      ) || 0;
 
     // Get age
-    const age = parseInt(
-      row
-        .querySelector(".rp-horseTable__spanNarrow_age")
-        ?.textContent?.trim() || "0"
-    );
+    const age =
+      parseInt(
+        row
+          .querySelector(".rp-horseTable__spanNarrow_age")
+          ?.textContent?.trim() || "0"
+      ) || 0;
 
     // Get trainer
     const trainer =
@@ -120,51 +125,45 @@ export function lastRaceToLastRaceStats(
 
   // Calculate averages
   const averages = {
-    or: Math.round(runners.reduce((sum, r) => sum + r.or, 0) / runners.length),
-    rpr: Math.round(
-      runners.reduce((sum, r) => sum + r.rpr, 0) / runners.length
-    ),
-    ts: Math.round(runners.reduce((sum, r) => sum + r.ts, 0) / runners.length),
-    draw: Math.round(
-      runners.reduce((sum, r) => sum + r.draw, 0) / runners.length
-    ),
-    age: Math.round(
-      runners.reduce((sum, r) => sum + r.age, 0) / runners.length
-    ),
+    or: runners.length ? avg(runners.map((r) => r.or)?.filter(Boolean)) : 0,
+    rpr: runners.length ? avg(runners.map((r) => r.rpr)?.filter(Boolean)) : 0,
+    ts: runners.length ? avg(runners.map((r) => r.ts)?.filter(Boolean)) : 0,
+    draw: runners.length ? avg(runners.map((r) => r.draw)?.filter(Boolean)) : 0,
+    age: runners.length ? avg(runners.map((r) => r.age)?.filter(Boolean)) : 0,
   };
 
   const averages_beaten = {
-    or: Math.round(
-      runners_beaten.reduce((sum, r) => sum + r.or, 0) / runners_beaten.length
-    ),
-    rpr: Math.round(
-      runners_beaten.reduce((sum, r) => sum + r.rpr, 0) / runners_beaten.length
-    ),
-    ts: Math.round(
-      runners_beaten.reduce((sum, r) => sum + r.ts, 0) / runners_beaten.length
-    ),
-    draw: Math.round(
-      runners_beaten.reduce((sum, r) => sum + r.draw, 0) / runners_beaten.length
-    ),
-    age: Math.round(
-      runners_beaten.reduce((sum, r) => sum + r.age, 0) / runners_beaten.length
-    ),
+    or: runners_beaten.length
+      ? avg(runners_beaten.map((r) => r.or)?.filter(Boolean))
+      : 0,
+    rpr: runners_beaten.length
+      ? avg(runners_beaten.map((r) => r.rpr)?.filter(Boolean))
+      : 0,
+    ts: runners_beaten.length
+      ? avg(runners_beaten.map((r) => r.ts)?.filter(Boolean))
+      : 0,
+    draw: runners_beaten.length
+      ? avg(runners_beaten.map((r) => r.draw)?.filter(Boolean))
+      : 0,
+    age: runners_beaten.length
+      ? avg(runners_beaten.map((r) => r.age)?.filter(Boolean))
+      : 0,
   };
   // Calculate maxes
   const maxes = {
-    or: Math.max(...runners.map((r) => r.or)),
-    rpr: Math.max(...runners.map((r) => r.rpr)),
-    ts: Math.max(...runners.map((r) => r.ts)),
-    draw: Math.max(...runners.map((r) => r.draw)),
-    age: Math.max(...runners.map((r) => r.age)),
+    or: Math.max(...runners.map((r) => r.or)?.filter(Boolean)),
+    rpr: Math.max(...runners.map((r) => r.rpr)?.filter(Boolean)),
+    ts: Math.max(...runners.map((r) => r.ts)?.filter(Boolean)),
+    draw: Math.max(...runners.map((r) => r.draw)?.filter(Boolean)),
+    age: Math.max(...runners.map((r) => r.age)?.filter(Boolean)),
   };
 
   const maxes_beaten = {
-    or: Math.max(...runners_beaten.map((r) => r.or)),
-    rpr: Math.max(...runners_beaten.map((r) => r.rpr)),
-    ts: Math.max(...runners_beaten.map((r) => r.ts)),
-    draw: Math.max(...runners_beaten.map((r) => r.draw)),
-    age: Math.max(...runners_beaten.map((r) => r.age)),
+    or: Math.max(...runners_beaten.map((r) => r.or)?.filter(Boolean)),
+    rpr: Math.max(...runners_beaten.map((r) => r.rpr)?.filter(Boolean)),
+    ts: Math.max(...runners_beaten.map((r) => r.ts)?.filter(Boolean)),
+    draw: Math.max(...runners_beaten.map((r) => r.draw)?.filter(Boolean)),
+    age: Math.max(...runners_beaten.map((r) => r.age)?.filter(Boolean)),
   };
 
   const raceInfoEle = doc.querySelector(".rp-raceInfo");
@@ -179,15 +178,19 @@ export function lastRaceToLastRaceStats(
   let winningTimeStatus = "";
 
   if (winningTimeText) {
-    // Extract time value (e.g. "1m 10.20s")
-    const timeMatch = winningTimeText.match(/(\d+)m\s+(\d+\.\d+)s/);
-    if (timeMatch) {
-      const minutes = parseInt(timeMatch[1]);
-      const seconds = parseFloat(timeMatch[2]);
+    // Extract time value (e.g. "1m 10.20s" or "57.53s")
+    const timeMatchMinutes = winningTimeText.match(/(\d+)m\s+(\d+\.\d+)s/);
+    const timeMatchSeconds = winningTimeText.match(/^(\d+\.\d+)s/);
+
+    if (timeMatchMinutes) {
+      const minutes = parseInt(timeMatchMinutes[1]);
+      const seconds = parseFloat(timeMatchMinutes[2]);
       winningTimeSeconds = minutes * 60 + seconds;
+    } else if (timeMatchSeconds) {
+      winningTimeSeconds = parseFloat(timeMatchSeconds[1]);
     }
 
-    // Extract status (e.g. "(standard time)")
+    // Extract status (e.g. "(standard time)" or "(slow by 0.93s)")
     const statusMatch = winningTimeText.match(/\((.*?)\)/);
     if (statusMatch) {
       winningTimeStatus = statusMatch[1];
@@ -201,6 +204,23 @@ export function lastRaceToLastRaceStats(
     timePerFurlong: winningTimeSeconds / distanceF,
   };
 
+  console.log(
+    "🏁 Last Race To Last Race Stats",
+    {
+      input_name,
+      distanceF,
+      distanceBeaten,
+      distanceBeatenThreshold,
+    },
+    {
+      runners,
+      averages,
+      maxes,
+      runners_beaten,
+      averages_beaten,
+      maxes_beaten,
+    }
+  );
   return {
     runners_all: runners,
     averages_all: averages,

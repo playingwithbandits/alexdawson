@@ -41,7 +41,7 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
-const THRESHOLD = 0.8;
+const THRESHOLD = 0.9;
 const DAYS_THRESHOLD_COMFORTABLE = 14;
 const DAYS_THRESHOLD_EYECATCHER = 45;
 const DAYS_THRESHOLD_HAMPERED = 21;
@@ -91,47 +91,6 @@ export function PicksRaceRow({
     olbgTips,
     sharpTips,
     olbgRaceInfoArr,
-  });
-
-  const has2ndPlaceLastTimeOut = race.horses.map((horse) => {
-    const formObj = horse.formObj?.form || [];
-    const lastRaceObj = formObj[0] || {};
-    const lastCode = lastRaceObj?.raceOutcomeCode || "";
-    const lastRunners = lastRaceObj?.noOfRunners || 0;
-    const lastTimeOutGood =
-      formObj?.length > 0 ? goodFormCode(lastCode, lastRunners) : null;
-
-    return {
-      name: horseNameToKey(horse.name),
-      lastCode,
-      lastRunners,
-      lastTimeOutGood,
-    };
-  });
-
-  const eyecatcherLastTimeOut = race.horses.map((horse) => {
-    const formObj = horse.formObj?.form || [];
-    const lastRaceObj = formObj[0] || {};
-    const rpCloseUpComment = lastRaceObj?.rpCloseUpComment || "";
-    const eyecatcherTerms = ["eyecatcher", "eye catcher", "eye-catcher"];
-    const matchedTerms = eyecatcherTerms.filter((term) =>
-      rpCloseUpComment.toLowerCase().includes(term)
-    );
-    const dateOfLastRace = lastRaceObj?.raceDatetime;
-    const dateOfRace = new Date(date);
-    const days = dateOfLastRace
-      ? Math.abs(dateOfRace.getTime() - new Date(dateOfLastRace).getTime()) /
-        (1000 * 60 * 60 * 24)
-      : null;
-    const daysSinceLastRace = days !== null ? days < 45 : false;
-    const eyecatcher = daysSinceLastRace && matchedTerms.length > 0;
-
-    return {
-      name: horseNameToKey(horse.name),
-      rpCloseUpComment,
-      eyecatcher,
-      days,
-    };
   });
 
   const comfortableWithinDays = race.horses.map((horse) => {
@@ -528,11 +487,6 @@ export function PicksRaceRow({
   // .filter(
   //   (x) => x.score?.total?.percentage && x.score?.total?.percentage >= 50
   // );
-  const worseAiPercentageScore = Math.min(
-    ...race?.horses
-      ?.filter((x) => x.score?.total?.percentage)
-      ?.map((x) => x.score?.total?.percentage || 0)
-  );
 
   const rpPredictions = Object.values(race.predictions || {}).sort(
     (a, b) => (b.score || 0) - (a.score || 0)
@@ -631,6 +585,7 @@ export function PicksRaceRow({
     ...(olbgTipsWithExpert?.map((x) => x.horseName) || []),
     ...(olbgTipsWithComment?.map((x) => x.horseName) || []),
     ...(sharpTipSelections?.map((x) => x.horseName) || []),
+    ...race.horses?.map((x) => x.name),
   ].filter((x) => x !== "" && x !== undefined && x !== "--");
 
   console.log(
@@ -656,6 +611,73 @@ export function PicksRaceRow({
     gytoTips,
     allNames
   );
+
+  const picksWithFastTimePerFurlongWeighted =
+    race.horses?.map((x) => {
+      const lastRaceStats = x.lastRaceStats;
+      const { info } = lastRaceStats || {};
+      const { timePerFurlong } = info || {};
+      const minTimePerFurlong =
+        race.raceStats?.lastRaceStatsRaceInfo?.minTimePerFurlong || 0;
+      const maxTimePerFurlong = minTimePerFurlong + 4;
+
+      // If timePerFurlong equals minTimePerFurlong, score is 100%
+      // If timePerFurlong equals maxTimePerFurlong, score is 0%
+      // Otherwise scale between 0-100% based on position between min and max
+      const scorePercentage =
+        timePerFurlong && minTimePerFurlong && maxTimePerFurlong
+          ? Math.max(
+              0,
+              1 -
+                (timePerFurlong - minTimePerFurlong) /
+                  (maxTimePerFurlong - minTimePerFurlong)
+            )
+          : 0;
+
+      return [x.name, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const picksWithBestBeatenOrWeighted =
+    race.horses?.map((x) => {
+      const lastRaceStats = x.lastRaceStats;
+      const { averages_beaten } = lastRaceStats || {};
+
+      const beaten = averages_beaten?.or || 0;
+      const raceBeatenMax =
+        race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.or || 0;
+
+      const scorePercentage = (beaten || 0) / (raceBeatenMax || 100);
+
+      return [x.name, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const picksWithBestBeatenRprWeighted =
+    race.horses?.map((x) => {
+      const lastRaceStats = x.lastRaceStats;
+      const { averages_beaten } = lastRaceStats || {};
+
+      const beaten = averages_beaten?.rpr || 0;
+      const raceBeatenMax =
+        race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.rpr || 0;
+
+      const scorePercentage = (beaten || 0) / (raceBeatenMax || 100);
+
+      return [x.name, 1 * scorePercentage] as [string, number];
+    }) || [];
+
+  const picksWithBestBeatenTsWeighted =
+    race.horses?.map((x) => {
+      const lastRaceStats = x.lastRaceStats;
+      const { averages_beaten } = lastRaceStats || {};
+
+      const beaten = averages_beaten?.ts || 0;
+      const raceBeatenMax =
+        race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.ts || 0;
+
+      const scorePercentage = (beaten || 0) / (raceBeatenMax || 100);
+
+      return [x.name, 1 * scorePercentage] as [string, number];
+    }) || [];
 
   const aiTopPicksWeighted =
     aiTopPicks?.map((x) => {
@@ -896,6 +918,10 @@ export function PicksRaceRow({
     ...sharpPedigreeRatingWeighted,
     ...sharpOwnerRatingWeighted,
     ...sharpTotalAverageRatingWeighted,
+    ...picksWithFastTimePerFurlongWeighted,
+    ...picksWithBestBeatenOrWeighted,
+    ...picksWithBestBeatenRprWeighted,
+    ...picksWithBestBeatenTsWeighted,
   ];
 
   const nameCounts = weightedScores
@@ -970,6 +996,73 @@ export function PicksRaceRow({
       >
         <div className="flex flex-col gap-2">
           {aiTopPicks?.map((x, x_i) => {
+            const lastRaceStats = race.horses?.find(
+              (h) => h.name === x.name
+            )?.lastRaceStats;
+
+            const {
+              runners_all,
+              averages_all,
+              maxes_all,
+              runners_beaten,
+              averages_beaten,
+              maxes_beaten,
+              info,
+            } = lastRaceStats || {};
+
+            const {
+              winningTimeSeconds,
+              winningTimeStatus,
+              distanceF,
+              timePerFurlong,
+            } = info || {};
+
+            const avgTimeGood =
+              (timePerFurlong || 0) -
+                (race.raceStats?.lastRaceStatsRaceInfo?.avgTimePerFurlong ||
+                  0) <=
+              0;
+
+            const avgBeatenOrGood =
+              (averages_beaten?.or || 0) -
+                (race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.or || 0) *
+                  0.9 >=
+              0;
+            const avgBeatenRprGood =
+              (averages_beaten?.rpr || 0) -
+                (race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.rpr || 0) *
+                  0.9 >=
+              0;
+
+            const avgBeatenTsGood =
+              (averages_beaten?.ts || 0) -
+                (race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.ts || 0) *
+                  0.9 >=
+              0;
+
+            const lastRaceStatsText = [
+              `Time per furlong: <span style='color: ${
+                avgTimeGood ? "#2df8ff" : "#fff"
+              }'>${timePerFurlong?.toFixed(2)}</span> | ${
+                race.raceStats?.lastRaceStatsRaceInfo?.avgTimePerFurlong || 0
+              } (${(
+                (timePerFurlong || 0) -
+                (race.raceStats?.lastRaceStatsRaceInfo?.avgTimePerFurlong || 0)
+              ).toFixed(3)})`,
+
+              `OR: Avg <span style='color: ${
+                avgBeatenOrGood ? "#2df8ff" : "#fff"
+              }'>${averages_beaten?.or}</span>  | Max ${maxes_beaten?.or}`,
+              `RPR: Avg <span style='color: ${
+                avgBeatenRprGood ? "#2df8ff" : "#fff"
+              }'>${averages_beaten?.rpr}</span>  | Max ${maxes_beaten?.rpr}`,
+              `TS: Avg <span style='color: ${
+                avgBeatenTsGood ? "#2df8ff" : "#fff"
+              }'>${averages_beaten?.ts}</span>  | Max ${maxes_beaten?.ts}`,
+            ]
+              .filter((x) => x)
+              .join("\n");
+
             return (
               <HorseNameRow
                 key={race.time + x_i}
@@ -978,20 +1071,91 @@ export function PicksRaceRow({
                 time={race.time}
                 odds={aiTopPicksWeighted[x_i][1]}
                 isNonRunner={isNonRunner(race.time, x.name)}
-                title={
+                title={[
                   "AI Top Pick: " +
-                  x.name +
-                  " : " +
-                  x.score?.total?.percentage?.toFixed(1) +
-                  "%" +
-                  " : " +
-                  race?.raceExtraInfo?.comments[cleanName(x.name)]
-                }
+                    x.name +
+                    " : " +
+                    x.score?.total?.percentage?.toFixed(1) +
+                    "%" +
+                    " : " +
+                    race?.raceExtraInfo?.comments[cleanName(x.name)],
+                  "\n",
+                  lastRaceStatsText,
+                ]
+                  ?.filter((x) => x)
+                  .join("\n")}
                 showOnlyBest={showOnlyBest}
               />
             );
           })}
         </div>
+
+        <div className="flex flex-col gap-2">
+          {race.horses?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.name}
+              results={results}
+              time={race.time}
+              odds={picksWithFastTimePerFurlongWeighted[x_i][1]}
+              highlight3={
+                picksWithFastTimePerFurlongWeighted[x_i][1] >= THRESHOLD
+              }
+              isNonRunner={isNonRunner(race.time, x.name)}
+              title={`Fast Time per Furlong: ${x.lastRaceStats?.info?.timePerFurlong?.toFixed(
+                2
+              )}`}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-2">
+          {race.horses?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.name}
+              results={results}
+              time={race.time}
+              odds={picksWithBestBeatenOrWeighted[x_i][1]}
+              highlight3={picksWithBestBeatenOrWeighted[x_i][1] >= THRESHOLD}
+              isNonRunner={isNonRunner(race.time, x.name)}
+              title={`Best Beaten OR: ${x.lastRaceStats?.averages_beaten?.or} / ${race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.or}`}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {race.horses?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.name}
+              results={results}
+              time={race.time}
+              odds={picksWithBestBeatenRprWeighted[x_i][1]}
+              highlight3={picksWithBestBeatenRprWeighted[x_i][1] >= THRESHOLD}
+              isNonRunner={isNonRunner(race.time, x.name)}
+              title={`Best Beaten RPR: ${x.lastRaceStats?.averages_beaten?.rpr} / ${race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.rpr}`}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-2">
+          {race.horses?.map((x, x_i) => (
+            <HorseNameRow
+              key={race.time + x_i}
+              horseName={x.name}
+              results={results}
+              time={race.time}
+              odds={picksWithBestBeatenTsWeighted[x_i][1]}
+              highlight3={picksWithBestBeatenTsWeighted[x_i][1] >= THRESHOLD}
+              isNonRunner={isNonRunner(race.time, x.name)}
+              title={`Best Beaten TS: ${x.lastRaceStats?.averages_beaten?.ts} / ${race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.ts}`}
+              showOnlyBest={showOnlyBest}
+            />
+          ))}
+        </div>
+
         <div className="flex flex-col gap-2">
           {rpPredictions?.map((x, x_i) => (
             <HorseNameRow
@@ -2433,6 +2597,86 @@ export function PicksRaceRow({
 
             const hasOlbgComment = Boolean(olbgCommentCount);
 
+            const timePerFurlongGood = Boolean(
+              (picksWithFastTimePerFurlongWeighted?.find(
+                (x) => cleanName(x[0]) === cleanName(name)
+              )?.[1] || 0) >= THRESHOLD
+            );
+
+            const bestBeatenOrGood = Boolean(
+              (picksWithBestBeatenOrWeighted?.find(
+                (x) => cleanName(x[0]) === cleanName(name)
+              )?.[1] || 0) >= THRESHOLD
+            );
+
+            const bestBeatenRprGood = Boolean(
+              (picksWithBestBeatenRprWeighted?.find(
+                (x) => cleanName(x[0]) === cleanName(name)
+              )?.[1] || 0) >= THRESHOLD
+            );
+
+            const bestBeatenTsGood = Boolean(
+              (picksWithBestBeatenTsWeighted?.find(
+                (x) => cleanName(x[0]) === cleanName(name)
+              )?.[1] || 0) >= THRESHOLD
+            );
+
+            const lastRaceStats = race.horses?.find(
+              (h) => h.name === name
+            )?.lastRaceStats;
+
+            const {
+              runners_all,
+              averages_all,
+              maxes_all,
+              runners_beaten,
+              averages_beaten,
+              maxes_beaten,
+              info,
+            } = lastRaceStats || {};
+
+            const {
+              winningTimeSeconds,
+              winningTimeStatus,
+              distanceF,
+              timePerFurlong,
+            } = info || {};
+
+            const lastRaceStatsText = [
+              `Time per furlong: <span style='color: ${
+                timePerFurlongGood ? "#2df8ff" : "#fff"
+              }'>${timePerFurlong?.toFixed(2)}</span> | ${
+                race.raceStats?.lastRaceStatsRaceInfo?.avgTimePerFurlong || 0
+              } (${(
+                (timePerFurlong || 0) -
+                (race.raceStats?.lastRaceStatsRaceInfo?.avgTimePerFurlong || 0)
+              ).toFixed(3)})`,
+
+              `OR: Avg <span style='color: ${
+                bestBeatenOrGood ? "#2df8ff" : "#fff"
+              }'>${averages_beaten?.or}</span> (${
+                race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.or
+              }) | Max ${maxes_beaten?.or} (${
+                race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.or
+              })`,
+              `RPR: Avg <span style='color: ${
+                bestBeatenRprGood ? "#2df8ff" : "#fff"
+              }'>${averages_beaten?.rpr}</span> (${
+                race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.rpr
+              }) | Max ${maxes_beaten?.rpr} (${
+                race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.rpr
+              })`,
+              `TS: Avg <span style='color: ${
+                bestBeatenTsGood ? "#2df8ff" : "#fff"
+              }'>${averages_beaten?.ts}</span> (${
+                race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.ts
+              }) | Max ${maxes_beaten?.ts} (${
+                race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.ts
+              })`,
+            ]
+              .filter((x) => x)
+              .join("\n");
+
             const sharpRatingGood =
               (sharpTotalAverageRatingWeighted?.find(
                 (x) => cleanName(x[0]) === cleanName(name)
@@ -2532,6 +2776,7 @@ export function PicksRaceRow({
                 ? "<span style='color: #666'>RP Comment:</span>\n" +
                   rpHorseComment
                 : undefined,
+              lastRaceStatsText,
             ]
               ?.filter((x) => x)
               .join("\n");
@@ -2549,11 +2794,14 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
-                  countGood &&
                   aiGood &&
-                  rpPredGood &&
-                  //sharpRatingGood &&
-                  (hasOlbgComment ||
+                  timePerFurlongGood &&
+                  bestBeatenOrGood &&
+                  bestBeatenRprGood &&
+                  (rpPredGood ||
+                    sharpRatingGood ||
+                    countGood ||
+                    hasOlbgComment ||
                     olbgNapGood ||
                     olbgExpertCount ||
                     horseEyecatcherObj?.hasEyecatcherWithinDays ||

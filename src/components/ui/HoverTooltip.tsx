@@ -42,7 +42,7 @@ export function HoverTooltip({ content, children }: HoverTooltipProps) {
       {(isVisible || isPinned) && (
         <div
           ref={tooltipRef}
-          className="absolute z-50  bg-gray-900 text-white text-sm rounded shadow-lg w-[90vw] max-w-[600px]  whitespace-pre-wrap p-4"
+          className="absolute z-50  bg-gray-900 text-white text-sm rounded shadow-lg w-[90vw] max-w-[500px]  whitespace-pre-wrap p-4"
           style={{
             left: "50%",
             transform: "translateX(-50%)",
