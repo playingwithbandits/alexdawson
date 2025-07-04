@@ -113,7 +113,9 @@ export async function lastRaceToLastRaceStats(
   const distanceBeaten = currentHorse?.distanceBeaten || 0;
 
   const distanceBeatenThreshold =
-    distanceBeaten - distanceBeatenLengthsThreshold(distanceF);
+    currentHorse?.position === 1
+      ? 0
+      : distanceBeaten - distanceBeatenLengthsThreshold(distanceF);
 
   const runners_beaten: LastRaceRunner[] = [];
 
@@ -197,11 +199,26 @@ export async function lastRaceToLastRaceStats(
     }
   }
 
+  let timePerFurlong = 0;
+  timePerFurlong = winningTimeSeconds / distanceF;
+
+  if (
+    currentHorse?.position &&
+    currentHorse?.position > 1 &&
+    distanceBeaten > 0 &&
+    timePerFurlong > 0
+  ) {
+    const distanceBeatenInFurlongs = distanceBeaten / 11;
+
+    timePerFurlong =
+      timePerFurlong * (1 + distanceBeatenInFurlongs / distanceF);
+  }
+
   const info = {
     winningTimeSeconds,
     winningTimeStatus,
     distanceF,
-    timePerFurlong: winningTimeSeconds / distanceF,
+    timePerFurlong,
   };
 
   console.log(

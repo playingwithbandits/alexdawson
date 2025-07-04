@@ -43,6 +43,7 @@ interface PicksRaceRowProps {
 }
 
 const THRESHOLD = 0.7;
+const THRESHOLD_RATING = 0.8;
 const THRESHOLD_BEATEN_RPR = 0.9;
 const DAYS_THRESHOLD_COMFORTABLE = 14;
 const DAYS_THRESHOLD_EYECATCHER = 45;
@@ -1127,8 +1128,12 @@ export function PicksRaceRow({
                   results={results}
                   time={race.time}
                   odds={picksWithFastTimePerFurlongWeighted[x_i][1]}
-                  highlight3={
+                  highlight2={
                     picksWithFastTimePerFurlongWeighted[x_i][1] >= THRESHOLD
+                  }
+                  highlight3={
+                    picksWithFastTimePerFurlongWeighted[x_i][1] >=
+                    THRESHOLD_RATING
                   }
                   isNonRunner={isNonRunner(race.time, x.name)}
                   title={`Fast Time per Furlong: ${x.lastRaceStats?.info?.timePerFurlong?.toFixed(
@@ -1147,8 +1152,11 @@ export function PicksRaceRow({
                   results={results}
                   time={race.time}
                   odds={picksWithBestBeatenOrWeighted[x_i][1]}
-                  highlight3={
+                  highlight2={
                     picksWithBestBeatenOrWeighted[x_i][1] >= THRESHOLD
+                  }
+                  highlight3={
+                    picksWithBestBeatenOrWeighted[x_i][1] >= THRESHOLD_RATING
                   }
                   isNonRunner={isNonRunner(race.time, x.name)}
                   title={`Best Beaten OR: ${x.lastRaceStats?.averages_beaten?.or} / ${race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.or}`}
@@ -1207,8 +1215,11 @@ export function PicksRaceRow({
                   results={results}
                   time={race.time}
                   odds={picksWithBestBeatenTsWeighted[x_i][1]}
-                  highlight3={
+                  highlight2={
                     picksWithBestBeatenTsWeighted[x_i][1] >= THRESHOLD
+                  }
+                  highlight3={
+                    picksWithBestBeatenTsWeighted[x_i][1] >= THRESHOLD_RATING
                   }
                   isNonRunner={isNonRunner(race.time, x.name)}
                   title={`Best Beaten TS: ${x.lastRaceStats?.averages_beaten?.ts} / ${race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.ts}`}
@@ -2680,13 +2691,13 @@ export function PicksRaceRow({
             const timePerFurlongGood = Boolean(
               (picksWithFastTimePerFurlongWeighted?.find(
                 (x) => cleanName(x[0]) === cleanName(name)
-              )?.[1] || 0) >= THRESHOLD
+              )?.[1] || 0) >= THRESHOLD_RATING
             );
 
             const bestBeatenOrGood = Boolean(
               (picksWithBestBeatenOrWeighted?.find(
                 (x) => cleanName(x[0]) === cleanName(name)
-              )?.[1] || 0) >= THRESHOLD
+              )?.[1] || 0) >= THRESHOLD_RATING
             );
 
             const bestBeatenRprGood = Boolean(
@@ -2704,7 +2715,7 @@ export function PicksRaceRow({
             const bestBeatenTsGood = Boolean(
               (picksWithBestBeatenTsWeighted?.find(
                 (x) => cleanName(x[0]) === cleanName(name)
-              )?.[1] || 0) >= THRESHOLD
+              )?.[1] || 0) >= THRESHOLD_RATING
             );
 
             const lastRaceStats = race.horses?.find(
@@ -2882,6 +2893,8 @@ export function PicksRaceRow({
                 highlight4={
                   countGood &&
                   timePerFurlongGood &&
+                  bestBeatenOrGood &&
+                  bestBeatenTsGood &&
                   bestBeatenRprGood &&
                   bestBeatenRprMaxGood &&
                   (aiGood ||

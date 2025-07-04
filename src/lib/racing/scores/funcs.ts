@@ -466,16 +466,16 @@ export const distanceBeatenLengthsThreshold = (
 ) => {
   if (!raceDistance) return 0;
 
-  if (raceDistance <= 6) {
+  if (raceDistance <= 7) {
     return 2;
   }
-  if (raceDistance <= 8) {
+  if (raceDistance <= 9) {
     return 3;
   }
-  if (raceDistance <= 10) {
+  if (raceDistance <= 11) {
     return 4;
   }
-  if (raceDistance <= 16) {
+  if (raceDistance <= 17) {
     return 6;
   }
 
