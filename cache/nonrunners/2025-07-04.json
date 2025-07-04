@@ -1,0 +1,129 @@
+[
+  {
+    "courseName": "Bangor-on-Dee",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#bangor-on-dee",
+    "raceCardsCourseMeetingsUrl": "/racecards/4/bangor-on-dee/2025-07-04",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.6) (Watering)",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Bellewstown",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#bellewstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/176/bellewstown/2025-07-04",
+    "going": "GOOD",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-07-04",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.9) (Watering to maintain) (Rail movements: 6.50, 7.25, 8.00 & 8.35 +7yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Doncaster",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#doncaster",
+    "raceCardsCourseMeetingsUrl": "/racecards/15/doncaster/2025-07-04",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.0) (Watered) (Rail movements: 2.50 & 3.25 +18yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "Inner",
+    "races": []
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-07-04",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.1) (Inner Track) (Rail movements: 6.05 +33yds, 6.40 +38yds, 7.15, 7.50 & 8.25 +16yds)",
+    "weather": "Light rain",
+    "stallsPosition": "5f, 1m2f, 1m4f - Centre; 7f - Inside",
+    "races": [
+      {
+        "raceTime": "7:50",
+        "raceCardUrl": "/racecards/23/haydock/2025-07-04/897244",
+        "horses": [
+          {
+            "horseName": "Twilight Ice",
+            "horseProfileUrl": "/profile/horse/5598690/twilight-ice/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newton Abbot",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#newton-abbot",
+    "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-07-04",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.9) (Watering) (Rail movements: 1.58, 2.33, 3.08 +82yds, 3.43 +17yds, 4.18 +61yds and 4.53+28yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Sandown",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#sandown",
+    "raceCardsCourseMeetingsUrl": "/racecards/54/sandown/2025-07-04",
+    "going": "GOOD, Good to firm in places (GoingStick: Round 7.2, Sprint 6.5) (Watering) (Rail movements: 1.50, 2.25, 4.10, 4.45 & 5.20 +12yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f - Far side; 2m - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Wexford",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#wexford",
+    "raceCardsCourseMeetingsUrl": "/racecards/201/wexford/2025-07-04",
+    "going": "GOOD (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-04/899278",
+        "horses": [
+          {
+            "horseName": "Theanniversary Man",
+            "horseProfileUrl": "/profile/horse/5063767/theanniversary-man/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-04/898847",
+        "horses": [
+          {
+            "horseName": "Strong Link",
+            "horseProfileUrl": "/profile/horse/5727983/strong-link/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-04/898850",
+        "horses": [
+          {
+            "horseName": "Beechroad Winnie",
+            "horseProfileUrl": "/profile/horse/3272436/beechroad-winnie/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Saratoga",
+    "raceCardsCourseUrl": "/racecards/2025-07-04#saratoga",
+    "raceCardsCourseMeetingsUrl": "/racecards/445/saratoga/2025-07-04",
+    "going": "DIRT: FAST; TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

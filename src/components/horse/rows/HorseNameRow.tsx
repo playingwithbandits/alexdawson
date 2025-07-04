@@ -20,6 +20,7 @@ interface HorseNameRowProps {
   shownCountToBeHigherThan?: boolean;
   highlight3?: boolean;
   highlight4?: boolean;
+  bg?: string;
 }
 
 const getTrophy = (position: string) => {
@@ -75,6 +76,7 @@ export function HorseNameRow({
   shownCountToBeHigherThan,
   highlight3,
   highlight4,
+  bg,
 }: HorseNameRowProps) {
   if (showOnlyBest && !shownCountToBeHigherThan) {
     return <></>;
@@ -102,6 +104,7 @@ export function HorseNameRow({
           isHighlight3 ? "text-[#ff881f]" : "",
           isHighlight4 ? "text-[#2df8ff]" : ""
         )}
+        style={{ backgroundColor: bg }}
       >
         <span>
           {getTrophy(getHorsePosition(horseName, results, time))}

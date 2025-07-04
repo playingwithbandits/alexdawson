@@ -28,6 +28,7 @@ import { calculateROI } from "@/lib/racing/calculateROI";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
 import { CompactRaceRow } from "./rows/CompactRaceRow";
 import { PicksRaceRow } from "./rows/PicksRaceRow";
+import { twMerge } from "tailwind-merge";
 
 export type ViewMode = "list" | "table" | "compact" | "detailed" | "picks";
 
@@ -649,7 +650,12 @@ export function DayPredictions({
                     {meeting.going}
                   </p>
                 </div>
-                <div className="space-y-1">
+                <div
+                  className={twMerge(
+                    "space-y-6",
+                    showOnlyBest ? "space-y-1" : ""
+                  )}
+                >
                   {meeting.races.map((race, index) => (
                     <PicksRaceRow
                       key={race.time}

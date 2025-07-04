@@ -1,0 +1,255 @@
+{
+  "date": "2025-07-04",
+  "tips": [
+    {
+      "time": "13:35",
+      "horse": "The Man'S Room",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Prince Of Air",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Hatfield Hammer",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Stay Gold",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Harsh",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "She'S A Fine Wine",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "May Call You Back",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "North Moon",
+      "isNap": false
+    },
+    {
+      "time": "13:43",
+      "horse": "Absolute Star",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Trefor",
+      "isNap": true
+    },
+    {
+      "time": "14:50",
+      "horse": "Prince Quattro",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Hornsea Bay",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Boyne Lady",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Raft Up",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "A Major Payne",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Publish",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Staya",
+      "isNap": true
+    },
+    {
+      "time": "16:10",
+      "horse": "Checkandchallenge",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Coltrane",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Pendragon",
+      "isNap": false
+    },
+    {
+      "time": "13:58",
+      "horse": "Isle Of Sark",
+      "isNap": false
+    },
+    {
+      "time": "14:33",
+      "horse": "Keel Strand",
+      "isNap": false
+    },
+    {
+      "time": "15:08",
+      "horse": "Dancingontheedge",
+      "isNap": false
+    },
+    {
+      "time": "15:43",
+      "horse": "Feel The Pinch",
+      "isNap": false
+    },
+    {
+      "time": "16:18",
+      "horse": "Seeyouinmydreams",
+      "isNap": false
+    },
+    {
+      "time": "16:53",
+      "horse": "Jony Max",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Grand Dante",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Allsortz",
+      "isNap": false
+    },
+    {
+      "time": "17:49",
+      "horse": "Heliogabalus",
+      "isNap": false
+    },
+    {
+      "time": "18:22",
+      "horse": "Viamonte",
+      "isNap": false
+    },
+    {
+      "time": "18:57",
+      "horse": "My Girl Sioux",
+      "isNap": false
+    },
+    {
+      "time": "19:32",
+      "horse": "Juniper Sling",
+      "isNap": false
+    },
+    {
+      "time": "20:07",
+      "horse": "Celtic Druid",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Cotai Belle",
+      "isNap": false
+    },
+    {
+      "time": "18:05",
+      "horse": "Kingmaker",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Romantic Spirit",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Artanis",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Indian Springs",
+      "isNap": false
+    },
+    {
+      "time": "17:42",
+      "horse": "Soca Star",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Good Earth",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "Toy Soldier",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "Optimatum",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Triple Force",
+      "isNap": false
+    },
+    {
+      "time": "20:35",
+      "horse": "Dumfries",
+      "isNap": false
+    },
+    {
+      "time": "17:56",
+      "horse": "Happy Index",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Dothejive",
+      "isNap": false
+    },
+    {
+      "time": "19:05",
+      "horse": "Sharp Glance",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Lipa K",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Land Girl'S Luck",
+      "isNap": false
+    },
+    {
+      "time": "20:50",
+      "horse": "Donald Jump",
+      "isNap": false
+    }
+  ]
+}
