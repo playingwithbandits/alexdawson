@@ -42,9 +42,9 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
-const THRESHOLD = 0.7;
-const THRESHOLD_RATING = 0.8;
-const THRESHOLD_BEATEN_RPR = 0.9;
+const THRESHOLD = 0.75;
+const THRESHOLD_RATING = 0.85;
+const THRESHOLD_BEATEN_RPR = 0.95;
 const DAYS_THRESHOLD_COMFORTABLE = 14;
 const DAYS_THRESHOLD_EYECATCHER = 45;
 const DAYS_THRESHOLD_HAMPERED = 21;
@@ -2893,9 +2893,9 @@ export function PicksRaceRow({
                 highlight4={
                   countGood &&
                   timePerFurlongGood &&
-                  bestBeatenOrGood &&
-                  bestBeatenTsGood &&
-                  bestBeatenRprGood &&
+                  //bestBeatenOrGood &&
+                  // bestBeatenTsGood &&
+                  //bestBeatenRprGood &&
                   bestBeatenRprMaxGood &&
                   (aiGood ||
                     rpPredGood ||

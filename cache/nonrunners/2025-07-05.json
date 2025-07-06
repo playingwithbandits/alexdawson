@@ -17,6 +17,22 @@
             "raceNumber": "(14)"
           }
         ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/176/bellewstown/2025-07-05/898879",
+        "horses": [
+          {
+            "horseName": "Kershaw",
+            "horseProfileUrl": "/profile/horse/7436479/kershaw/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Osborne Park",
+            "horseProfileUrl": "/profile/horse/7682434/osborne-park/",
+            "raceNumber": "(17)"
+          }
+        ]
       }
     ]
   },
@@ -27,7 +43,24 @@
     "going": "GOOD TO FIRM, Good in places (GoingStick: 7.1) (Watering) (Rail movements: 2.13, 3.58, 4.33, 5.05 & 5.42 +7yds)",
     "weather": "Cloudy",
     "stallsPosition": "Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:42",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-05/897270",
+        "horses": [
+          {
+            "horseName": "Campani",
+            "horseProfileUrl": "/profile/horse/6487600/campani/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Fidget Lady",
+            "horseProfileUrl": "/profile/horse/7068769/fidget-lady/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Carlisle",
@@ -87,7 +120,24 @@
     "going": "GOOD",
     "weather": "Light rain",
     "stallsPosition": "Sprints - Centre",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:07",
+        "raceCardUrl": "/racecards/192/naas/2025-07-05/898882",
+        "horses": [
+          {
+            "horseName": "Rosato",
+            "horseProfileUrl": "/profile/horse/5301540/rosato/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Livingston Range",
+            "horseProfileUrl": "/profile/horse/3125473/livingston-range/",
+            "raceNumber": "(15)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Nottingham",
@@ -96,7 +146,19 @@
     "going": "GOOD TO FIRM, Good in places (GoingStick: 6.8) (Watering) (Outer track) (Rail movements: 6.53 +24yds and 8.23 & 8.53 +12yds)",
     "weather": "Cloudy",
     "stallsPosition": "5f & 6f - Centre; 1m2f & 2m - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "8:23",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-05/897305",
+        "horses": [
+          {
+            "horseName": "Bevy",
+            "horseProfileUrl": "/profile/horse/7457883/bevy/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Sandown",
@@ -105,7 +167,35 @@
     "going": "Sprint: GOOD, Good to firm in places; Round: GOOD TO FIRM (GoingStick: Round 7.3; Sprint 6.8) (Watering)",
     "weather": "Cloudy",
     "stallsPosition": "Sprint - Far side; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/54/sandown/2025-07-05/897283",
+        "horses": [
+          {
+            "horseName": "Bermuda Longtail",
+            "horseProfileUrl": "/profile/horse/6000779/bermuda-longtail/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Serving With Style",
+            "horseProfileUrl": "/profile/horse/6143334/serving-with-style/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/54/sandown/2025-07-05/897284",
+        "horses": [
+          {
+            "horseName": "Nebras",
+            "horseProfileUrl": "/profile/horse/6537083/nebras/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Deauville",
@@ -168,5 +258,31 @@
     "weather": "",
     "stallsPosition": "",
     "races": []
+  },
+  {
+    "courseName": "Sunshine Coast",
+    "raceCardsCourseUrl": "/racecards/2025-07-05#sunshine-coast",
+    "raceCardsCourseMeetingsUrl": "/racecards/897/sunshine-coast/2025-07-05",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:23",
+        "raceCardUrl": "/racecards/897/sunshine-coast/2025-07-05/899396",
+        "horses": [
+          {
+            "horseName": "Good Philly",
+            "horseProfileUrl": "/profile/horse/7530019/good-philly/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Mister Bianco",
+            "horseProfileUrl": "/profile/horse/6940952/mister-bianco/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
   }
 ]
