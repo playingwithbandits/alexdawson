@@ -2893,9 +2893,9 @@ export function PicksRaceRow({
                 highlight4={
                   countGood &&
                   timePerFurlongGood &&
-                  //bestBeatenOrGood &&
-                  // bestBeatenTsGood &&
-                  //bestBeatenRprGood &&
+                  bestBeatenOrGood &&
+                  bestBeatenTsGood &&
+                  bestBeatenRprGood &&
                   bestBeatenRprMaxGood &&
                   (aiGood ||
                     rpPredGood ||

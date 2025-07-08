@@ -1,0 +1,67 @@
+[
+  {
+    "courseName": "Ayr",
+    "raceCardsCourseUrl": "/racecards/2025-07-07#ayr",
+    "raceCardsCourseMeetingsUrl": "/racecards/3/ayr/2025-07-07",
+    "going": "GOOD TO SOFT, Soft in places (GoingStick: 6.7) (Rail movements: 2.00, 2.30, 3.00 & 4.40 +15yds and 5.15 +21yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "6f - Centre; 7f & 1m2f - Outside; 1m & 1m5f - Inside",
+    "races": [
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-07/897315",
+        "horses": [
+          {
+            "horseName": "Quest For Fun",
+            "horseProfileUrl": "/profile/horse/3256833/quest-for-fun/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Reidh",
+            "horseProfileUrl": "/profile/horse/4498957/reidh/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ripon",
+    "raceCardsCourseUrl": "/racecards/2025-07-07#ripon",
+    "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-07-07",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.9) (Watered) (Rail movements: 7.00, 7.30 & 8.30 +8yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f & 6f - Stands' side; 1m - Inside; 1m4f - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Roscommon",
+    "raceCardsCourseUrl": "/racecards/2025-07-07#roscommon",
+    "raceCardsCourseMeetingsUrl": "/racecards/196/roscommon/2025-07-07",
+    "going": "GOOD (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/196/roscommon/2025-07-07/899281",
+        "horses": [
+          {
+            "horseName": "Bossy Bird",
+            "horseProfileUrl": "/profile/horse/7436294/bossy-bird/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Worcester",
+    "raceCardsCourseUrl": "/racecards/2025-07-07#worcester",
+    "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-07-07",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.7) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  }
+]
