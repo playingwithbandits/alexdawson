@@ -1,0 +1,322 @@
+[
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-07-15#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-07-15",
+    "going": "GOOD TO FIRM (GoingStick: 7.1) (Rail Movements: 3.00, 3.30, 4.30 & 5.00 +7yds)",
+    "weather": "Showers",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-15/898078",
+        "horses": [
+          {
+            "horseName": "Jack Andrea",
+            "horseProfileUrl": "/profile/horse/6032320/jack-andrea/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-15/898079",
+        "horses": [
+          {
+            "horseName": "Birdie Bowers",
+            "horseProfileUrl": "/profile/horse/2620887/birdie-bowers/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-15/898076",
+        "horses": [
+          {
+            "horseName": "Pole Star",
+            "horseProfileUrl": "/profile/horse/6419946/pole-star/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Downpatrick",
+    "raceCardsCourseUrl": "/racecards/2025-07-15#downpatrick",
+    "raceCardsCourseMeetingsUrl": "/racecards/179/downpatrick/2025-07-15",
+    "going": "GOOD, Good to firm in places",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:48",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-07-15/899607",
+        "horses": [
+          {
+            "horseName": "Jetaway Nana",
+            "horseProfileUrl": "/profile/horse/7556751/jetaway-nana/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:18",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-07-15/899608",
+        "horses": [
+          {
+            "horseName": "Kilbuny Supersonic",
+            "horseProfileUrl": "/profile/horse/5689577/kilbuny-supersonic/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:48",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-07-15/899609",
+        "horses": [
+          {
+            "horseName": "Sallap",
+            "horseProfileUrl": "/profile/horse/6509771/sallap/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Feast",
+            "horseProfileUrl": "/profile/horse/3956902/feast/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Sineads Fancy",
+            "horseProfileUrl": "/profile/horse/4375468/sineads-fancy/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Western Opera",
+            "horseProfileUrl": "/profile/horse/6988880/western-opera/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:18",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-07-15/899610",
+        "horses": [
+          {
+            "horseName": "Purse Price",
+            "horseProfileUrl": "/profile/horse/4129080/purse-price/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-07-15/899611",
+        "horses": [
+          {
+            "horseName": "Evies Court",
+            "horseProfileUrl": "/profile/horse/5746476/evies-court/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Demanding Gerry",
+            "horseProfileUrl": "/profile/horse/5309152/demanding-gerry/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Killarney",
+    "raceCardsCourseUrl": "/racecards/2025-07-15#killarney",
+    "raceCardsCourseMeetingsUrl": "/racecards/185/killarney/2025-07-15",
+    "going": "YIELDING TO SOFT, Soft in places",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:07",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-15/899599",
+        "horses": [
+          {
+            "horseName": "Yes Oui Si",
+            "horseProfileUrl": "/profile/horse/5218331/yes-oui-si/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-15/899600",
+        "horses": [
+          {
+            "horseName": "Space Warrior",
+            "horseProfileUrl": "/profile/horse/5859136/space-warrior/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-15/899601",
+        "horses": [
+          {
+            "horseName": "Shahada Ace",
+            "horseProfileUrl": "/profile/horse/7365401/shahada-ace/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Academe",
+            "horseProfileUrl": "/profile/horse/6509765/academe/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-15/899602",
+        "horses": [
+          {
+            "horseName": "Touch The Sound",
+            "horseProfileUrl": "/profile/horse/5509251/touch-the-sound/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Pinball Wizard",
+            "horseProfileUrl": "/profile/horse/3373737/pinball-wizard/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-15/899603",
+        "horses": [
+          {
+            "horseName": "Mo Ghille Mar",
+            "horseProfileUrl": "/profile/horse/5147922/mo-ghille-mar/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Letiza",
+            "horseProfileUrl": "/profile/horse/4904811/letiza/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:45",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-15/899604",
+        "horses": [
+          {
+            "horseName": "La Vita Nova",
+            "horseProfileUrl": "/profile/horse/6005929/la-vita-nova/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Curious Bride",
+            "horseProfileUrl": "/profile/horse/2870489/curious-bride/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:15",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-15/899605",
+        "horses": [
+          {
+            "horseName": "Young Churchill",
+            "horseProfileUrl": "/profile/horse/5751518/young-churchill/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Kimy",
+            "horseProfileUrl": "/profile/horse/5398567/kimy/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-07-15#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-07-15",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.1) (Watered) (Rail Movements: 2.10, 4.42 & 5.13 +18yds)",
+    "weather": "Showers",
+    "stallsPosition": "(Outer track) 5f, 6f & 1m - Centre; 1m2f - Inside",
+    "races": [
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-15/898087",
+        "horses": [
+          {
+            "horseName": "Maruna",
+            "horseProfileUrl": "/profile/horse/5390226/maruna/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-15/898084",
+        "horses": [
+          {
+            "horseName": "Smooth Silesie",
+            "horseProfileUrl": "/profile/horse/5061633/smooth-silesie/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Recon Mission",
+            "horseProfileUrl": "/profile/horse/1978680/recon-mission/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-15/898085",
+        "horses": [
+          {
+            "horseName": "Eclipser",
+            "horseProfileUrl": "/profile/horse/7205130/eclipser/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-15/898083",
+        "horses": [
+          {
+            "horseName": "Silver Splash",
+            "horseProfileUrl": "/profile/horse/7830263/silver-splash/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Thirsk",
+    "raceCardsCourseUrl": "/racecards/2025-07-15#thirsk",
+    "raceCardsCourseMeetingsUrl": "/racecards/80/thirsk/2025-07-15",
+    "going": "GOOD TO FIRM, Good in places (Watered)",
+    "weather": "Showers",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/80/thirsk/2025-07-15/898095",
+        "horses": [
+          {
+            "horseName": "Two Shoes",
+            "horseProfileUrl": "/profile/horse/5971877/two-shoes/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  }
+]

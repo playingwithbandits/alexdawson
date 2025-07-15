@@ -1,0 +1,165 @@
+{
+  "date": "2025-07-15",
+  "tips": [
+    {
+      "time": "14:10",
+      "horse": "Mr Trick",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Hurt You Never",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Eclipser",
+      "isNap": true
+    },
+    {
+      "time": "15:40",
+      "horse": "Secret Sonata",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Four Adaay",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "Surprised",
+      "isNap": false
+    },
+    {
+      "time": "17:13",
+      "horse": "Read All About It",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Portarlington",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Persian Daughter",
+      "isNap": false
+    },
+    {
+      "time": "15:18",
+      "horse": "Kamikaz Du Plessis",
+      "isNap": false
+    },
+    {
+      "time": "15:48",
+      "horse": "Sights Unseen",
+      "isNap": false
+    },
+    {
+      "time": "16:18",
+      "horse": "Fool Me Once",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Miss Gitana",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Closutton",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Pearl Fortune",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Quirke On Parole",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Araifjan",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Pole Star",
+      "isNap": false
+    },
+    {
+      "time": "17:07",
+      "horse": "Shania",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Ocean Manifest",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Oiche Rua",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Enchanted Garden",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Elana Osario",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Ragmans Corner",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Arch Empire",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Atmosphere",
+      "isNap": true
+    },
+    {
+      "time": "18:00",
+      "horse": "Calafiori",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "One More Bottle",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Harry Palmer",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Bette Davis Eyes",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Marajito",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Green Team",
+      "isNap": false
+    }
+  ]
+}

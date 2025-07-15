@@ -1,0 +1,98 @@
+[
+  {
+    "courseName": "Bath",
+    "raceCardsCourseUrl": "/racecards/2025-07-16#bath",
+    "raceCardsCourseMeetingsUrl": "/racecards/5/bath/2025-07-16",
+    "going": "FIRM (GoingStick: 8.4) (Rail Movements: 3.50, 4.20 & 4.53 +11yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "Sprints - Centre; 1m3f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/5/bath/2025-07-16/898098",
+        "horses": [
+          {
+            "horseName": "Kilima",
+            "horseProfileUrl": "/profile/horse/7426986/kilima/",
+            "raceNumber": "(12)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-07-16#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-07-16",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 8.6) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-07-16#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-07-16",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.4) (Watered) (Rail movements: 8.00 +48yds and 8.30 & 9.00 +34yds)",
+    "weather": "Light rain",
+    "stallsPosition": "Sprints - Outside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Killarney",
+    "raceCardsCourseUrl": "/racecards/2025-07-16#killarney",
+    "raceCardsCourseMeetingsUrl": "/racecards/185/killarney/2025-07-16",
+    "going": "YIELDING TO SOFT, Soft in places",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:20",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-16/899617",
+        "horses": [
+          {
+            "horseName": "Morning Approach",
+            "horseProfileUrl": "/profile/horse/3315569/morning-approach/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Uttoxeter",
+    "raceCardsCourseUrl": "/racecards/2025-07-16#uttoxeter",
+    "raceCardsCourseMeetingsUrl": "/racecards/84/uttoxeter/2025-07-16",
+    "going": "GOOD (GoingStick: Chase 7.3, Hurdle 7.2) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-07-16#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-07-16",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 5.8) (Watered)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; 1m3f - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-07-16#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-07-16",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Vichy",
+    "raceCardsCourseUrl": "/racecards/2025-07-16#vichy",
+    "raceCardsCourseMeetingsUrl": "/racecards/220/vichy/2025-07-16",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
