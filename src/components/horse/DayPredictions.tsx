@@ -117,7 +117,8 @@ export function DayPredictions({
   const [isDeletingNonRunners, setIsDeletingNonRunners] = useState(false);
   const [isDeletingOlbg, setIsDeletingOlbg] = useState(false);
   const [showOnlyBest, setShowOnlyBest] = useState(true);
-  const [countToBeHigherThan, setCountToBeHigherThan] = useState(3);
+  const [countToBeHigherThan, setCountToBeHigherThan] = useState(1);
+  const [starsToBeHigherThan, setStarsToBeHigherThan] = useState(5);
   //const data = generatePredictions(meetings);
 
   const today = new Date().toISOString().split("T")[0];
@@ -524,6 +525,16 @@ export function DayPredictions({
                   min="1"
                   max="10"
                 />
+                <input
+                  type="number"
+                  value={starsToBeHigherThan}
+                  onChange={(e) =>
+                    setStarsToBeHigherThan(Number(e.target.value))
+                  }
+                  className="w-20 px-2 py-2 border rounded text-black"
+                  min="1"
+                  max="100"
+                />
                 <button
                   className={`px-4 py-2 rounded hover:opacity-80 disabled:opacity-50 ${
                     showOnlyBest ? "bg-green-500" : "bg-gray-500"
@@ -675,6 +686,7 @@ export function DayPredictions({
                       sharpTips={sharpTips}
                       showOnlyBest={showOnlyBest}
                       countToBeHigherThan={countToBeHigherThan}
+                      starsToBeHigherThan={starsToBeHigherThan}
                       olbgRaceInfoArr={olbgRaceInfoArr}
                     />
                   ))}

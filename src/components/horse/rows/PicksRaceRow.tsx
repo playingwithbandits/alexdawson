@@ -38,6 +38,7 @@ interface PicksRaceRowProps {
   olbgTips: OLBGTip[] | undefined;
   showOnlyBest: boolean;
   countToBeHigherThan?: number;
+  starsToBeHigherThan?: number;
   sharpTips: SharpTip[] | undefined;
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
@@ -77,7 +78,8 @@ export function PicksRaceRow({
   rtWebTips,
   olbgTips,
   showOnlyBest,
-  countToBeHigherThan: propCountToBeHigherThan = 3,
+  countToBeHigherThan: propCountToBeHigherThan = 1,
+  starsToBeHigherThan: propStarsToBeHigherThan = 5,
   sharpTips,
   olbgRaceInfoArr,
 }: PicksRaceRowProps) {
@@ -983,6 +985,7 @@ export function PicksRaceRow({
   //const topScorePerc20Perc = topScorePerc * 0.8;
 
   const countToBeHigherThan = propCountToBeHigherThan;
+  const starsToBeHigherThan = propStarsToBeHigherThan;
 
   const horsesCount = race.horses?.filter(
     (x) => !isNonRunner(race.time, x.name)
@@ -2935,6 +2938,74 @@ export function PicksRaceRow({
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
+                starsToBeHigherThan={starsToBeHigherThan}
+                stars={[
+                  {
+                    title: "countGood",
+                    value: Boolean(countGood),
+                  },
+                  {
+                    title: "bestBeatenRprGood",
+                    value: Boolean(bestBeatenRprGood),
+                  },
+                  {
+                    title: "bestBeatenRprMaxGood",
+                    value: Boolean(bestBeatenRprMaxGood),
+                  },
+                  {
+                    title: "bestBeatenOrGood",
+                    value: Boolean(bestBeatenOrGood),
+                  },
+                  {
+                    title: "bestBeatenTsGood",
+                    value: Boolean(bestBeatenTsGood),
+                  },
+                  {
+                    title: "rprBeatenToRaceBeatenAvgDiffGood",
+                    value: Boolean(rprBeatenToRaceBeatenAvgDiffGood),
+                  },
+                  {
+                    title: "rprBeatenToRaceBeatenAvgDiffMaxGood",
+                    value: Boolean(rprBeatenToRaceBeatenAvgDiffMaxGood),
+                  },
+                  {
+                    title: "aiGood",
+                    value: Boolean(aiGood),
+                  },
+                  {
+                    title: "rpPredGood",
+                    value: Boolean(rpPredGood),
+                  },
+                  {
+                    title: "mentionedByTipster",
+                    value: Boolean(mentionedByTipster),
+                  },
+                  {
+                    title: "sharpRatingGood",
+                    value: Boolean(sharpRatingGood),
+                  },
+                  {
+                    title: "hasOlbgComment",
+                    value: Boolean(hasOlbgComment),
+                  },
+                  {
+                    title: "hasOlbgNap",
+                    value: Boolean(olbgNapGood),
+                  },
+                  {
+                    title: "hasOlbgExpert",
+                    value: Boolean(olbgExpertCount),
+                  },
+                  {
+                    title: "hasNotes",
+                    value:
+                      Boolean(horseEyecatcherObj?.hasEyecatcherWithinDays) ||
+                      Boolean(horseHamperedObj?.hasHamperedWithinDays) ||
+                      Boolean(
+                        horseComfortableWithinDaysObj?.hasComfortableWithinDays
+                      ),
+                  },
+                ]}
               />
             );
           })}

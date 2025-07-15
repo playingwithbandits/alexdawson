@@ -4,6 +4,23 @@ import { normalizeTime } from "../DayPredictions";
 import { HoverTooltip } from "@/components/ui/HoverTooltip";
 import { twMerge } from "tailwind-merge";
 
+export type StarTitle =
+  | "countGood"
+  | "bestBeatenRprGood"
+  | "bestBeatenRprMaxGood"
+  | "bestBeatenOrGood"
+  | "bestBeatenTsGood"
+  | "rprBeatenToRaceBeatenAvgDiffGood"
+  | "rprBeatenToRaceBeatenAvgDiffMaxGood"
+  | "aiGood"
+  | "rpPredGood"
+  | "mentionedByTipster"
+  | "sharpRatingGood"
+  | "hasOlbgComment"
+  | "hasOlbgNap"
+  | "hasOlbgExpert"
+  | "hasNotes";
+
 interface HorseNameRowProps {
   horseName: string;
   results: RaceResults | undefined;
@@ -18,9 +35,14 @@ interface HorseNameRowProps {
   title?: string;
   showOnlyBest: boolean;
   shownCountToBeHigherThan?: boolean;
+  starsToBeHigherThan?: number;
   highlight3?: boolean;
   highlight4?: boolean;
   bg?: string;
+  stars?: {
+    title: StarTitle;
+    value: boolean;
+  }[];
 }
 
 const getTrophy = (position: string) => {
@@ -74,9 +96,11 @@ export function HorseNameRow({
   title,
   showOnlyBest,
   shownCountToBeHigherThan,
+  starsToBeHigherThan,
   highlight3,
   highlight4,
   bg,
+  stars,
 }: HorseNameRowProps) {
   if (showOnlyBest && !shownCountToBeHigherThan) {
     return <></>;
@@ -93,8 +117,22 @@ export function HorseNameRow({
   const isHighlight1 =
     highlight1 && (!isHighlight3 || !isHighlight2 || !isHighlight4);
 
+  const totalStars =
+    stars?.reduce((acc, star) => {
+      if (star.value) {
+        acc++;
+      }
+      return acc;
+    }, 0) || 0;
+  const starsTable =
+    stars?.map(({ title, value }) => (value ? "⭐" : "☆")).join("|") || "";
+
+  if (starsToBeHigherThan && totalStars < starsToBeHigherThan) {
+    return <></>;
+  }
+
   return (
-    <HoverTooltip content={title || ""}>
+    <HoverTooltip content={(title || "") + "\n" + starsTable}>
       <div
         className={twMerge(
           "flex justify-between",
@@ -112,10 +150,14 @@ export function HorseNameRow({
             {horseName}
           </span>
         </span>
-        <span className={`flex gap-2 `}>
+
+        <span className={`flex gap-2 text-white `}>
           <span>{extraText}</span>
-          <span className={`${oddsHighlight ? "text-[#1EEAFF]" : ""}`}>
+          {/* <span className={`${oddsHighlight ? "text-[#1EEAFF]" : ""}`}>
             {odds.toFixed(2)}
+          </span> */}
+          <span className={`${totalStars >= 10 ? "text-[#1EEAFF]" : ""}`}>
+            {totalStars}
           </span>
         </span>
       </div>
