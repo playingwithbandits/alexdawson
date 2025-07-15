@@ -1,0 +1,189 @@
+[
+  {
+    "courseName": "Brighton",
+    "raceCardsCourseUrl": "/racecards/2025-07-08#brighton",
+    "raceCardsCourseMeetingsUrl": "/racecards/7/brighton/2025-07-08",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 6.4) (Watered) (Rail Movements: All races +6yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "6f - Centre; 7f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "7:42",
+        "raceCardUrl": "/racecards/7/brighton/2025-07-08/897328",
+        "horses": [
+          {
+            "horseName": "Shady Bay",
+            "horseProfileUrl": "/profile/horse/5733262/shady-bay/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:42",
+        "raceCardUrl": "/racecards/7/brighton/2025-07-08/897326",
+        "horses": [
+          {
+            "horseName": "Dapper Gee Gee",
+            "horseProfileUrl": "/profile/horse/6350036/dapper-gee-gee/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Havana Gila",
+            "horseProfileUrl": "/profile/horse/5920274/havana-gila/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-07-08#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-07-08",
+    "going": "GOOD TO SOFT, Good in places on Round course (GoingStick 7.3) (Watered) (Rail movements: 2.25, 2.55 & 3.25 +8yds)",
+    "weather": "Mostly sunny",
+    "stallsPosition": "Straight - Centre; 1m1f - Inside; Remainder - Outside",
+    "races": [
+      {
+        "raceTime": "3:25",
+        "raceCardUrl": "/racecards/31/lingfield/2025-07-08/897334",
+        "horses": [
+          {
+            "horseName": "Captain Brett",
+            "horseProfileUrl": "/profile/horse/6233788/captain-brett/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/31/lingfield/2025-07-08/897337",
+        "horses": [
+          {
+            "horseName": "Saeculamation",
+            "horseProfileUrl": "/profile/horse/7547289/saeculamation/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Rajak",
+            "horseProfileUrl": "/profile/horse/7493124/rajak/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:25",
+        "raceCardUrl": "/racecards/31/lingfield/2025-07-08/897333",
+        "horses": [
+          {
+            "horseName": "Moon Target",
+            "horseProfileUrl": "/profile/horse/7718164/moon-target/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/31/lingfield/2025-07-08/897332",
+        "horses": [
+          {
+            "horseName": "Dapperling",
+            "horseProfileUrl": "/profile/horse/4994497/dapperling/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-07-08#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-07-08",
+    "going": "GOOD, Good to firm in places (GoingStick 7.7) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "2:40",
+        "raceCardUrl": "/racecards/46/pontefract/2025-07-08/897341",
+        "horses": [
+          {
+            "horseName": "Spooky Wooky",
+            "horseProfileUrl": "/profile/horse/7708597/spooky-wooky/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/46/pontefract/2025-07-08/897338",
+        "horses": [
+          {
+            "horseName": "Sparks Fly",
+            "horseProfileUrl": "/profile/horse/4808597/sparks-fly/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Tramore",
+    "raceCardsCourseUrl": "/racecards/2025-07-08#tramore",
+    "raceCardsCourseMeetingsUrl": "/racecards/200/tramore/2025-07-08",
+    "going": "GOOD (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Uttoxeter",
+    "raceCardsCourseUrl": "/racecards/2025-07-08#uttoxeter",
+    "raceCardsCourseMeetingsUrl": "/racecards/84/uttoxeter/2025-07-08",
+    "going": "GOOD (GoingStick: Chase 6.1, Hurdle 6.3) (Watering) (Rail Movements: 6.00, 8.00, 8.30 & 9.00 +18yds, 6.30 +28yds and 7.00 & 7.30 +36yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-07-08/897523",
+        "horses": [
+          {
+            "horseName": "McGrath From Clune",
+            "horseProfileUrl": "/profile/horse/3030359/mcgrath-from-clune/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-07-08/897524",
+        "horses": [
+          {
+            "horseName": "Battle Of Omdurman",
+            "horseProfileUrl": "/profile/horse/5293190/battle-of-omdurman/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hamburg",
+    "raceCardsCourseUrl": "/racecards/2025-07-08#hamburg",
+    "raceCardsCourseMeetingsUrl": "/racecards/244/hamburg/2025-07-08",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Lingfield (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-07-08#lingfield-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1337/lingfield-gb/2025-07-08",
+    "going": "GOOD TO SOFT, Good in places (GoingStick 7.3)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

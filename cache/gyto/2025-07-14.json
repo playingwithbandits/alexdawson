@@ -1,0 +1,160 @@
+{
+  "date": "2025-07-14",
+  "tips": [
+    {
+      "time": "14:10",
+      "horse": "Underwriter",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Eternal Sunshine",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Novamay",
+      "isNap": true
+    },
+    {
+      "time": "15:40",
+      "horse": "Detective",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Clasina",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Bamburgh",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Ana Emaraaty",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Ensured",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Centara",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Max Of Stars",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Stiletto",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Time To Bite",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Queen Kate",
+      "isNap": false
+    },
+    {
+      "time": "14:28",
+      "horse": "Lilac Lady",
+      "isNap": false
+    },
+    {
+      "time": "14:58",
+      "horse": "Full Confession",
+      "isNap": false
+    },
+    {
+      "time": "15:28",
+      "horse": "Ar Nos Na Gaoithe",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Jazz De Cotte",
+      "isNap": false
+    },
+    {
+      "time": "16:28",
+      "horse": "Lakota Blue",
+      "isNap": false
+    },
+    {
+      "time": "16:58",
+      "horse": "Betty Dutton",
+      "isNap": false
+    },
+    {
+      "time": "17:28",
+      "horse": "Mrs Biddle",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Benvenuto Cellini",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Tribal Nation",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Alpha Capture",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Matrice",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Magnolia Drive",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "India Love",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Displaying",
+      "isNap": true
+    },
+    {
+      "time": "19:30",
+      "horse": "Competizione",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Amazonian Dream",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Art Patron",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Bobacious",
+      "isNap": false
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "date": "2025-07-08",
+  "tips": [
+    {
+      "time": "13:30",
+      "horse": "Mearall",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Valiancy",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Estrange",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Bright",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Rhoscolyn",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Point Of Contact",
+      "isNap": false
+    },
+    {
+      "time": "13:50",
+      "horse": "She'S Quality",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Blue Bolt",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Ombudsman",
+      "isNap": true
+    },
+    {
+      "time": "16:12",
+      "horse": "Dance In The Storm",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Yabher",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Best Adventure",
+      "isNap": false
+    },
+    {
+      "time": "13:57",
+      "horse": "Cactus",
+      "isNap": false
+    },
+    {
+      "time": "14:32",
+      "horse": "The Piper'S Call",
+      "isNap": true
+    },
+    {
+      "time": "15:07",
+      "horse": "American In Paris",
+      "isNap": false
+    },
+    {
+      "time": "15:42",
+      "horse": "Oxford Rock",
+      "isNap": false
+    },
+    {
+      "time": "16:17",
+      "horse": "Daytona",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Undefeatable",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Storm Piece",
+      "isNap": false
+    },
+    {
+      "time": "14:13",
+      "horse": "Vincenzo Peruggia",
+      "isNap": false
+    },
+    {
+      "time": "14:48",
+      "horse": "Mo Of Cairo",
+      "isNap": false
+    },
+    {
+      "time": "15:23",
+      "horse": "Cheerleader",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Candleford",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Risen Again",
+      "isNap": false
+    },
+    {
+      "time": "17:42",
+      "horse": "Toota",
+      "isNap": false
+    },
+    {
+      "time": "16:03",
+      "horse": "Mare Of London",
+      "isNap": false
+    },
+    {
+      "time": "16:38",
+      "horse": "Nardra",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Ricardo Phillips",
+      "isNap": false
+    },
+    {
+      "time": "17:47",
+      "horse": "This Farh",
+      "isNap": false
+    },
+    {
+      "time": "18:18",
+      "horse": "Cuban Fiesta",
+      "isNap": false
+    },
+    {
+      "time": "18:48",
+      "horse": "Sweet Sonata",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Parisiac",
+      "isNap": false
+    },
+    {
+      "time": "17:37",
+      "horse": "Throne Hall",
+      "isNap": false
+    },
+    {
+      "time": "18:12",
+      "horse": "Blufferonthebus",
+      "isNap": false
+    },
+    {
+      "time": "18:42",
+      "horse": "Wheres The Crumpet",
+      "isNap": false
+    },
+    {
+      "time": "19:12",
+      "horse": "Shark Two One",
+      "isNap": false
+    },
+    {
+      "time": "19:42",
+      "horse": "Ravenscraig Castle",
+      "isNap": false
+    },
+    {
+      "time": "20:12",
+      "horse": "She'S Got Bottle",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Autumn Twist",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Encosta",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Ballysax Hank",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Iamyouare",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Klassman",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Aspurofthemoment",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Minella Emperor",
+      "isNap": false
+    },
+    {
+      "time": "17:53",
+      "horse": "Beyond Borders",
+      "isNap": false
+    },
+    {
+      "time": "18:23",
+      "horse": "Silent Applause",
+      "isNap": false
+    },
+    {
+      "time": "18:53",
+      "horse": "Regally Blonde",
+      "isNap": false
+    },
+    {
+      "time": "19:23",
+      "horse": "Bona Fortuna",
+      "isNap": false
+    },
+    {
+      "time": "19:53",
+      "horse": "In The City",
+      "isNap": false
+    },
+    {
+      "time": "20:23",
+      "horse": "Bebside",
+      "isNap": false
+    },
+    {
+      "time": "20:53",
+      "horse": "Hawa Jumeirah",
+      "isNap": false
+    }
+  ]
+}

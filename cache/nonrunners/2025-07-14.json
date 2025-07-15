@@ -1,0 +1,130 @@
+[
+  {
+    "courseName": "Ayr",
+    "raceCardsCourseUrl": "/racecards/2025-07-14#ayr",
+    "raceCardsCourseMeetingsUrl": "/racecards/3/ayr/2025-07-14",
+    "going": "GOOD, Good to firm in places (GoingStick: 8.5)",
+    "weather": "Rain",
+    "stallsPosition": "5f & 6f - Centre; 7f & 1m2f - Outside; 1m & 1m5f - Inside",
+    "races": [
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-14/898064",
+        "horses": [
+          {
+            "horseName": "Flowstate",
+            "horseProfileUrl": "/profile/horse/6046659/flowstate/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-14/898067",
+        "horses": [
+          {
+            "horseName": "Love Games",
+            "horseProfileUrl": "/profile/horse/5708857/love-games/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-14/898062",
+        "horses": [
+          {
+            "horseName": "Ancient Myth",
+            "horseProfileUrl": "/profile/horse/5649690/ancient-myth/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Ebendi",
+            "horseProfileUrl": "/profile/horse/2394618/ebendi/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Downpatrick",
+    "raceCardsCourseUrl": "/racecards/2025-07-14#downpatrick",
+    "raceCardsCourseMeetingsUrl": "/racecards/179/downpatrick/2025-07-14",
+    "going": "GOOD, Good to firm in places",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:28",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-07-14/899535",
+        "horses": [
+          {
+            "horseName": "Chicago Calling",
+            "horseProfileUrl": "/profile/horse/7757773/chicago-calling/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:58",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-07-14/899536",
+        "horses": [
+          {
+            "horseName": "Eco Pete",
+            "horseProfileUrl": "/profile/horse/3617914/eco-pete/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Zaryagle",
+            "horseProfileUrl": "/profile/horse/7525370/zaryagle/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Matter Of Opinion",
+            "horseProfileUrl": "/profile/horse/5689612/matter-of-opinion/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:28",
+        "raceCardUrl": "/racecards/179/downpatrick/2025-07-14/899539",
+        "horses": [
+          {
+            "horseName": "Doyen Magic",
+            "horseProfileUrl": "/profile/horse/4867593/doyen-magic/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Killarney",
+    "raceCardsCourseUrl": "/racecards/2025-07-14#killarney",
+    "raceCardsCourseMeetingsUrl": "/racecards/185/killarney/2025-07-14",
+    "going": "GOOD, Good to yielding in places",
+    "weather": "Rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Newton Abbot",
+    "raceCardsCourseUrl": "/racecards/2025-07-14#newton-abbot",
+    "raceCardsCourseMeetingsUrl": "/racecards/39/newton-abbot/2025-07-14",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.9) (Watering) (Rail movements: 2.20 & 3.50 +47yds, 2.50 +46yds, 3.20 & 4.50 +39yds and 4.20 +59yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-07-14#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-07-14",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.4) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m - Inside; Remainder - Centre",
+    "races": []
+  }
+]

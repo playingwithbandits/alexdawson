@@ -1,0 +1,80 @@
+[
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-07-09#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-07-09",
+    "going": "GOOD, Good to firm in places (GoingStick 7.9) (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Fairyhouse",
+    "raceCardsCourseUrl": "/racecards/2025-07-09#fairyhouse",
+    "raceCardsCourseMeetingsUrl": "/racecards/182/fairyhouse/2025-07-09",
+    "going": "GOOD, Good to firm in places (Watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/182/fairyhouse/2025-07-09/899328",
+        "horses": [
+          {
+            "horseName": "Weegeebear",
+            "horseProfileUrl": "/profile/horse/5848864/weegeebear/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-07-09#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-07-09",
+    "going": "GOOD, Good to firm in places (GoingStick 7.6) (Watering) (Rail movements: 6.10, 7.40 & 8.10 +34yds and 8.40 +48yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Outside",
+    "races": []
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-07-09#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-07-09",
+    "going": "POLYTRACK: STANDARD TO SLOW (Watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "6:50",
+        "raceCardUrl": "/racecards/1079/kempton-aw/2025-07-09/897558",
+        "horses": [
+          {
+            "horseName": "Gallic Legend",
+            "horseProfileUrl": "/profile/horse/6626301/gallic-legend/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-07-09#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-07-09",
+    "going": "SOFT (GoingStick 5.0) (Watered)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; 1m2f - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Happy Valley",
+    "raceCardsCourseUrl": "/racecards/2025-07-09#happy-valley",
+    "raceCardsCourseMeetingsUrl": "/racecards/396/happy-valley/2025-07-09",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

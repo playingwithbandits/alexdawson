@@ -2661,11 +2661,11 @@ export function PicksRaceRow({
               aiPerc >= (topAiPercentage || 100) * THRESHOLD;
 
             const olbgNapCount = olbgTipsWithNap
-              ?.filter((x) => x.napTips >= 2)
+              ?.filter((x) => x.napTips >= 1)
               ?.some((x) => cleanName(x.horseName) === cleanName(name));
 
             const olbgExpertCount = olbgTipsWithExpert
-              ?.filter((x) => x.expertCount >= 2)
+              ?.filter((x) => x.expertCount >= 1)
               ?.some((x) => cleanName(x.horseName) === cleanName(name));
 
             const olbgCommentCount = olbgTipsWithComment
@@ -2739,35 +2739,62 @@ export function PicksRaceRow({
               timePerFurlong,
             } = info || {};
 
+            const rprBeatenToRaceBeatenAvgDiff =
+              (averages_beaten?.rpr || 0) -
+              (race.raceStats?.lastRaceStatsRaceInfo?.beatenAvg?.rpr || 0);
+
+            const rprBeatenToRaceBeatenAvgDiffGood =
+              rprBeatenToRaceBeatenAvgDiff >= 5;
+
+            const rprBeatenToRaceBeatenAvgDiffMax =
+              (maxes_beaten?.rpr || 0) -
+              (race.raceStats?.lastRaceStatsRaceInfo?.maxOfAvgs?.rpr || 0);
+
+            const rprBeatenToRaceBeatenAvgDiffMaxGood =
+              rprBeatenToRaceBeatenAvgDiffMax >= 5;
+
             const lastRaceStatsText = [
               `Time per furlong: <span style='color: ${
                 timePerFurlongGood ? "#2df8ff" : "#fff"
-              }'>${timePerFurlong?.toFixed(2)}</span> | ${
+              }'>${timePerFurlong?.toFixed(2)}</span> | ${(
                 race.raceStats?.lastRaceStatsRaceInfo?.avgTimePerFurlong || 0
-              } (${(
+              )?.toFixed(2)} (${(
                 (timePerFurlong || 0) -
                 (race.raceStats?.lastRaceStatsRaceInfo?.avgTimePerFurlong || 0)
-              ).toFixed(3)})`,
+              )?.toFixed(2)})`,
 
               `OR: Avg <span style='color: ${
                 bestBeatenOrGood ? "#2df8ff" : "#fff"
-              }'>${averages_beaten?.or}</span> (${
-                race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.or
-              }) | Max ${maxes_beaten?.or} (${
+              }'>${averages_beaten?.or?.toFixed(
+                2
+              )}</span> (${race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.or?.toFixed(
+                2
+              )}) | Max ${maxes_beaten?.or} (${
                 race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.or
               })`,
               `RPR: Avg <span style='color: ${
                 bestBeatenRprGood ? "#2df8ff" : "#fff"
-              }'>${averages_beaten?.rpr}</span> (${
-                race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.rpr
-              }) | Max ${maxes_beaten?.rpr} (${
+              }'>${averages_beaten?.rpr?.toFixed(
+                2
+              )}</span> (${race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.rpr?.toFixed(
+                2
+              )}) (${race.raceStats?.lastRaceStatsRaceInfo?.beatenAvg?.rpr?.toFixed(
+                2
+              )})  (${rprBeatenToRaceBeatenAvgDiff?.toFixed(2)})  | Max ${
+                maxes_beaten?.rpr
+              } (${
                 race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.rpr
-              })`,
+              }) (${race.raceStats?.lastRaceStatsRaceInfo?.maxOfAvgs?.rpr?.toFixed(
+                2
+              )}) (${rprBeatenToRaceBeatenAvgDiffMax?.toFixed(2)})`,
+
               `TS: Avg <span style='color: ${
                 bestBeatenTsGood ? "#2df8ff" : "#fff"
-              }'>${averages_beaten?.ts}</span> (${
-                race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.ts
-              }) | Max ${maxes_beaten?.ts} (${
+              }'>${averages_beaten?.ts?.toFixed(
+                2
+              )}</span> (${race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.ts?.toFixed(
+                2
+              )}) | Max ${maxes_beaten?.ts} (${
                 race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.ts
               })`,
             ]
@@ -2891,12 +2918,10 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
+                  //isEwable &&
                   countGood &&
-                  timePerFurlongGood &&
-                  bestBeatenOrGood &&
-                  bestBeatenTsGood &&
-                  bestBeatenRprGood &&
-                  bestBeatenRprMaxGood &&
+                  rprBeatenToRaceBeatenAvgDiffGood &&
+                  rprBeatenToRaceBeatenAvgDiffMaxGood &&
                   (aiGood ||
                     rpPredGood ||
                     mentionedByTipster ||
