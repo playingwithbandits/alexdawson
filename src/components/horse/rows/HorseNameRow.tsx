@@ -43,6 +43,7 @@ interface HorseNameRowProps {
     title: StarTitle;
     value: boolean;
   }[];
+  showStars?: boolean;
 }
 
 const getTrophy = (position: string) => {
@@ -101,6 +102,7 @@ export function HorseNameRow({
   highlight4,
   bg,
   stars,
+  showStars,
 }: HorseNameRowProps) {
   if (showOnlyBest && !shownCountToBeHigherThan) {
     return <></>;
@@ -127,7 +129,7 @@ export function HorseNameRow({
   const starsTable =
     stars?.map(({ title, value }) => (value ? "⭐" : "☆")).join("|") || "";
 
-  if (starsToBeHigherThan && totalStars < starsToBeHigherThan) {
+  if (showOnlyBest && starsToBeHigherThan && totalStars < starsToBeHigherThan) {
     return <></>;
   }
 
@@ -153,12 +155,16 @@ export function HorseNameRow({
 
         <span className={`flex gap-2 text-white `}>
           <span>{extraText}</span>
-          {/* <span className={`${oddsHighlight ? "text-[#1EEAFF]" : ""}`}>
+          <span className={`${oddsHighlight ? "text-[#1EEAFF]" : ""}`}>
             {odds.toFixed(2)}
-          </span> */}
-          <span className={`${totalStars >= 10 ? "text-[#1EEAFF]" : ""}`}>
-            {totalStars}
           </span>
+          {showStars ? (
+            <span className={`${totalStars >= 10 ? "text-[#1EEAFF]" : ""}`}>
+              {totalStars}
+            </span>
+          ) : (
+            <></>
+          )}
         </span>
       </div>
     </HoverTooltip>

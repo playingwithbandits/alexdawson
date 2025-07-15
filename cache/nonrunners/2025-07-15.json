@@ -3,10 +3,21 @@
     "courseName": "Beverley",
     "raceCardsCourseUrl": "/racecards/2025-07-15#beverley",
     "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-07-15",
-    "going": "GOOD TO FIRM (GoingStick: 7.1) (Rail Movements: 3.00, 3.30, 4.30 & 5.00 +7yds)",
-    "weather": "Showers",
+    "going": "GOOD TO FIRM (7.1)",
+    "weather": "Light rain showers",
     "stallsPosition": "Inside",
     "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-15/898080",
+        "horses": [
+          {
+            "horseName": "Perfect Price",
+            "horseProfileUrl": "/profile/horse/7722807/perfect-price/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
       {
         "raceTime": "3:30",
         "raceCardUrl": "/racecards/6/beverley/2025-07-15/898078",
@@ -46,7 +57,7 @@
     "courseName": "Downpatrick",
     "raceCardsCourseUrl": "/racecards/2025-07-15#downpatrick",
     "raceCardsCourseMeetingsUrl": "/racecards/179/downpatrick/2025-07-15",
-    "going": "GOOD, Good to firm in places",
+    "going": "GOOD (Good to firm in places)",
     "weather": "Showers",
     "stallsPosition": "",
     "races": [
@@ -54,6 +65,11 @@
         "raceTime": "2:48",
         "raceCardUrl": "/racecards/179/downpatrick/2025-07-15/899607",
         "horses": [
+          {
+            "horseName": "Wild Mandate",
+            "horseProfileUrl": "/profile/horse/5098065/wild-mandate/",
+            "raceNumber": "(4)"
+          },
           {
             "horseName": "Jetaway Nana",
             "horseProfileUrl": "/profile/horse/7556751/jetaway-nana/",
@@ -92,6 +108,11 @@
             "raceNumber": "(16)"
           },
           {
+            "horseName": "Sights Unseen",
+            "horseProfileUrl": "/profile/horse/5964386/sights-unseen/",
+            "raceNumber": "(2)"
+          },
+          {
             "horseName": "Western Opera",
             "horseProfileUrl": "/profile/horse/6988880/western-opera/",
             "raceNumber": "(17)"
@@ -114,14 +135,19 @@
         "raceCardUrl": "/racecards/179/downpatrick/2025-07-15/899611",
         "horses": [
           {
-            "horseName": "Evies Court",
-            "horseProfileUrl": "/profile/horse/5746476/evies-court/",
-            "raceNumber": "(7)"
+            "horseName": "Sea Of Doubt",
+            "horseProfileUrl": "/profile/horse/58953296/sea-of-doubt/",
+            "raceNumber": "(1)"
           },
           {
             "horseName": "Demanding Gerry",
             "horseProfileUrl": "/profile/horse/5309152/demanding-gerry/",
             "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Evies Court",
+            "horseProfileUrl": "/profile/horse/5746476/evies-court/",
+            "raceNumber": "(7)"
           }
         ]
       }
@@ -243,7 +269,7 @@
     "courseName": "Nottingham",
     "raceCardsCourseUrl": "/racecards/2025-07-15#nottingham",
     "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-07-15",
-    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.1) (Watered) (Rail Movements: 2.10, 4.42 & 5.13 +18yds)",
+    "going": "GOOD (Good to firm in places; watered; 7.1) changing to GOOD after Race 3 (3.10)",
     "weather": "Showers",
     "stallsPosition": "(Outer track) 5f, 6f & 1m - Centre; 1m2f - Inside",
     "races": [
@@ -290,6 +316,11 @@
         "raceCardUrl": "/racecards/40/nottingham/2025-07-15/898083",
         "horses": [
           {
+            "horseName": "Margoritatime",
+            "horseProfileUrl": "/profile/horse/7588044/margoritatime/",
+            "raceNumber": "(2)"
+          },
+          {
             "horseName": "Silver Splash",
             "horseProfileUrl": "/profile/horse/7830263/silver-splash/",
             "raceNumber": "(4)"
@@ -302,7 +333,7 @@
     "courseName": "Thirsk",
     "raceCardsCourseUrl": "/racecards/2025-07-15#thirsk",
     "raceCardsCourseMeetingsUrl": "/racecards/80/thirsk/2025-07-15",
-    "going": "GOOD TO FIRM, Good in places (Watered)",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 9.5)",
     "weather": "Showers",
     "stallsPosition": "5f - Centre; Remainder - Inside",
     "races": [

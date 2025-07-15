@@ -2921,20 +2921,21 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
-                  isEwable &&
-                  countGood &&
-                  rprBeatenToRaceBeatenAvgDiffGood &&
-                  rprBeatenToRaceBeatenAvgDiffMaxGood &&
-                  (aiGood ||
-                    rpPredGood ||
-                    mentionedByTipster ||
-                    sharpRatingGood ||
-                    hasOlbgComment ||
-                    olbgNapGood ||
-                    olbgExpertCount ||
-                    horseEyecatcherObj?.hasEyecatcherWithinDays ||
-                    horseHamperedObj?.hasHamperedWithinDays ||
-                    horseComfortableWithinDaysObj?.hasComfortableWithinDays)
+                  countGood
+                  // isEwable &&
+                  // countGood &&
+                  // rprBeatenToRaceBeatenAvgDiffGood &&
+                  // rprBeatenToRaceBeatenAvgDiffMaxGood &&
+                  // (aiGood ||
+                  //   rpPredGood ||
+                  //   mentionedByTipster ||
+                  //   sharpRatingGood ||
+                  //   hasOlbgComment ||
+                  //   olbgNapGood ||
+                  //   olbgExpertCount ||
+                  //   horseEyecatcherObj?.hasEyecatcherWithinDays ||
+                  //   horseHamperedObj?.hasHamperedWithinDays ||
+                  //   horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
@@ -3006,6 +3007,7 @@ export function PicksRaceRow({
                       ),
                   },
                 ]}
+                showStars={true}
               />
             );
           })}
