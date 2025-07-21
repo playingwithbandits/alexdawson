@@ -1,0 +1,167 @@
+[
+  {
+    "courseName": "Down Royal",
+    "raceCardsCourseUrl": "/racecards/2025-07-18#down-royal",
+    "raceCardsCourseMeetingsUrl": "/racecards/180/down-royal/2025-07-18",
+    "going": "GOOD, Good to firm in places (Watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Hamilton",
+    "raceCardsCourseUrl": "/racecards/2025-07-18#hamilton",
+    "raceCardsCourseMeetingsUrl": "/racecards/22/hamilton/2025-07-18",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.2) (Rail movements: 7.10, 7.45 & 8.50 +8yds)",
+    "weather": "Showers",
+    "stallsPosition": "1m - Inside; Remainder - Stands' side",
+    "races": []
+  },
+  {
+    "courseName": "Haydock",
+    "raceCardsCourseUrl": "/racecards/2025-07-18#haydock",
+    "raceCardsCourseMeetingsUrl": "/racecards/23/haydock/2025-07-18",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.0) (Inside track) (Rail movements: 2.05, 5.00 & 5.35 +11yds, and 4.25 +44yds)",
+    "weather": "Light rain",
+    "stallsPosition": "6f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/23/haydock/2025-07-18/898165",
+        "horses": [
+          {
+            "horseName": "Golden Redemption",
+            "horseProfileUrl": "/profile/horse/6759149/golden-redemption/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/23/haydock/2025-07-18/898167",
+        "horses": [
+          {
+            "horseName": "Ironist",
+            "horseProfileUrl": "/profile/horse/5580129/ironist/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Killarney",
+    "raceCardsCourseUrl": "/racecards/2025-07-18#killarney",
+    "raceCardsCourseMeetingsUrl": "/racecards/185/killarney/2025-07-18",
+    "going": "YIELDING TO SOFT",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-18/899693",
+        "horses": [
+          {
+            "horseName": "Dorans Mill",
+            "horseProfileUrl": "/profile/horse/5521384/dorans-mill/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/185/killarney/2025-07-18/899694",
+        "horses": [
+          {
+            "horseName": "Derryville",
+            "horseProfileUrl": "/profile/horse/58953287/derryville/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-07-18#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-07-18",
+    "going": "GOOD TO FIRM (GoingStick: 6.1) (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "1m4f & 1m5f - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "4:10",
+        "raceCardUrl": "/racecards/36/newbury/2025-07-18/898177",
+        "horses": [
+          {
+            "horseName": "Nuevo Slovo",
+            "horseProfileUrl": "/profile/horse/7324741/nuevo-slovo/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newmarket (July)",
+    "raceCardsCourseUrl": "/racecards/2025-07-18#newmarket-july",
+    "raceCardsCourseMeetingsUrl": "/racecards/174/newmarket-july/2025-07-18",
+    "going": "GOOD TO FIRM (GoingStick: 7.5) (Watering)",
+    "weather": "Cloudy",
+    "stallsPosition": "(Far side course) - 1m2f & 1m4f - Inside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-07-18#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-07-18",
+    "going": "Round course - GOOD TO SOFT, Good in places; Straight course - GOOD, Good to soft in places (GoingStick: 6.3) (Watered) (Outer Track) (Rail movements: 4.00 & 4.31 +18yds)",
+    "weather": "Light rain",
+    "stallsPosition": "5f & 6f - Centre; 1m2f - Inside",
+    "races": [
+      {
+        "raceTime": "3:25",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-18/898153",
+        "horses": [
+          {
+            "horseName": "Juno Star",
+            "horseProfileUrl": "/profile/horse/5831377/juno-star/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-18/898154",
+        "horses": [
+          {
+            "horseName": "Yankee Queen",
+            "horseProfileUrl": "/profile/horse/7653233/yankee-queen/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-07-18#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-07-18",
+    "going": "GOOD (GoingStick: 7.4) (Watered)",
+    "weather": "Light rain",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "7:55",
+        "raceCardUrl": "/racecards/46/pontefract/2025-07-18/898158",
+        "horses": [
+          {
+            "horseName": "Twilight Jet",
+            "horseProfileUrl": "/profile/horse/3560267/twilight-jet/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  }
+]

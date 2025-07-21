@@ -2921,11 +2921,12 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight4={
-                  countGood
-                  // isEwable &&
-                  // countGood &&
-                  // rprBeatenToRaceBeatenAvgDiffGood &&
-                  // rprBeatenToRaceBeatenAvgDiffMaxGood &&
+                  countGood &&
+                  isEwable &&
+                  // countGood
+                  bestBeatenRprGood &&
+                  rprBeatenToRaceBeatenAvgDiffGood &&
+                  rprBeatenToRaceBeatenAvgDiffMaxGood
                   // (aiGood ||
                   //   rpPredGood ||
                   //   mentionedByTipster ||

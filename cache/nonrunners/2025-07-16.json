@@ -17,6 +17,17 @@
             "raceNumber": "(12)"
           }
         ]
+      },
+      {
+        "raceTime": "4:53",
+        "raceCardUrl": "/racecards/5/bath/2025-07-16/898099",
+        "horses": [
+          {
+            "horseName": "Weston Court",
+            "horseProfileUrl": "/profile/horse/5109646/weston-court/",
+            "raceNumber": "(4)"
+          }
+        ]
       }
     ]
   },
@@ -24,7 +35,7 @@
     "courseName": "Catterick",
     "raceCardsCourseUrl": "/racecards/2025-07-16#catterick",
     "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-07-16",
-    "going": "GOOD TO FIRM, Good in places (GoingStick: 8.6) (Watered)",
+    "going": "GOOD (Watered)",
     "weather": "Partly cloudy",
     "stallsPosition": "Inside",
     "races": []

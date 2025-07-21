@@ -1,0 +1,260 @@
+{
+  "date": "2025-07-18",
+  "tips": [
+    {
+      "time": "13:25",
+      "horse": "Felicity Smoak",
+      "isNap": false
+    },
+    {
+      "time": "13:55",
+      "horse": "Amboyna",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Greatness Awaits",
+      "isNap": false
+    },
+    {
+      "time": "15:05",
+      "horse": "St Faz",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Nurburgring",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Tippin And Tappin",
+      "isNap": false
+    },
+    {
+      "time": "16:50",
+      "horse": "Movie King",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Beir Bua",
+      "isNap": false
+    },
+    {
+      "time": "14:05",
+      "horse": "Port Erin",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Awaafi",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Raffles Angel",
+      "isNap": false
+    },
+    {
+      "time": "15:50",
+      "horse": "Arnaz",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Headmaster",
+      "isNap": false
+    },
+    {
+      "time": "17:35",
+      "horse": "White Umbrella",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Maximum Scepticism",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Novello Lad",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "On Key",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Camtank",
+      "isNap": false
+    },
+    {
+      "time": "16:31",
+      "horse": "Roman Secret",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Banana",
+      "isNap": false
+    },
+    {
+      "time": "14:25",
+      "horse": "Sonic Pioneer",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Ruler Of Time",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Sing The Blues",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Wise Approach",
+      "isNap": false
+    },
+    {
+      "time": "16:45",
+      "horse": "Star Of Light",
+      "isNap": false
+    },
+    {
+      "time": "17:20",
+      "horse": "Golden Handshake",
+      "isNap": true
+    },
+    {
+      "time": "17:10",
+      "horse": "Jack The Bachelor",
+      "isNap": false
+    },
+    {
+      "time": "17:42",
+      "horse": "Hero Of The Hour",
+      "isNap": false
+    },
+    {
+      "time": "18:17",
+      "horse": "Venetian Star",
+      "isNap": false
+    },
+    {
+      "time": "18:52",
+      "horse": "Angelo Pio",
+      "isNap": false
+    },
+    {
+      "time": "19:27",
+      "horse": "Doctor Grace",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "No Niki No",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Ranting And Raven",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Celestra",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Scoville",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Catch Cunningham",
+      "isNap": false
+    },
+    {
+      "time": "19:35",
+      "horse": "Asmen Warrior",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Split Elevens",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Bondi",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Ascending Star",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Magic Box",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Nahraan",
+      "isNap": true
+    },
+    {
+      "time": "19:45",
+      "horse": "Spanish Hustle",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Classy Al",
+      "isNap": false
+    },
+    {
+      "time": "20:50",
+      "horse": "Invincible Ruby",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Cloudbuster",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Walsingham",
+      "isNap": false
+    },
+    {
+      "time": "19:20",
+      "horse": "Little Ted",
+      "isNap": false
+    },
+    {
+      "time": "19:55",
+      "horse": "The Bell Conductor",
+      "isNap": false
+    },
+    {
+      "time": "20:25",
+      "horse": "Kitsune Power",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "One Of Our Own",
+      "isNap": false
+    }
+  ]
+}

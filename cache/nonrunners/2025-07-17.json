@@ -1,0 +1,178 @@
+[
+  {
+    "courseName": "Chepstow",
+    "raceCardsCourseUrl": "/racecards/2025-07-17#chepstow",
+    "raceCardsCourseMeetingsUrl": "/racecards/12/chepstow/2025-07-17",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.2) (Selective watering)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Epsom",
+    "raceCardsCourseUrl": "/racecards/2025-07-17#epsom",
+    "raceCardsCourseMeetingsUrl": "/racecards/17/epsom/2025-07-17",
+    "going": "GOOD TO FIRM (GoingStick: 7.3) (Watering) (Rail movements: 5.55, 8.05 & 8.40 +32yds and 6.30, 7.00 & 7.35 +40yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m4f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "6:30",
+        "raceCardUrl": "/racecards/17/epsom/2025-07-17/898130",
+        "horses": [
+          {
+            "horseName": "Starshiba",
+            "horseProfileUrl": "/profile/horse/2836929/starshiba/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Hamilton",
+    "raceCardsCourseUrl": "/racecards/2025-07-17#hamilton",
+    "raceCardsCourseMeetingsUrl": "/racecards/22/hamilton/2025-07-17",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.9) (Rail movements: 2.50, 3.22, 3.55 & 4.55 +8yds)",
+    "weather": "Light rain",
+    "stallsPosition": "1m - Inside; Remainder - Stands' side",
+    "races": [
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/22/hamilton/2025-07-17/898144",
+        "horses": [
+          {
+            "horseName": "Lady Of The Garr",
+            "horseProfileUrl": "/profile/horse/5089398/lady-of-the-garr/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/22/hamilton/2025-07-17/898141",
+        "horses": [
+          {
+            "horseName": "Angelardo",
+            "horseProfileUrl": "/profile/horse/7657432/angelardo/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/22/hamilton/2025-07-17/898142",
+        "horses": [
+          {
+            "horseName": "Jaminoz",
+            "horseProfileUrl": "/profile/horse/4355310/jaminoz/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Killarney",
+    "raceCardsCourseUrl": "/racecards/2025-07-17#killarney",
+    "raceCardsCourseMeetingsUrl": "/racecards/185/killarney/2025-07-17",
+    "going": "GOOD",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Leicester",
+    "raceCardsCourseUrl": "/racecards/2025-07-17#leicester",
+    "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-07-17",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.6) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/30/leicester/2025-07-17/898134",
+        "horses": [
+          {
+            "horseName": "Warrior Lion",
+            "horseProfileUrl": "/profile/horse/4483051/warrior-lion/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:38",
+        "raceCardUrl": "/racecards/30/leicester/2025-07-17/898136",
+        "horses": [
+          {
+            "horseName": "Doctor Dauila",
+            "horseProfileUrl": "/profile/horse/7390855/doctor-dauila/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-07-17#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-07-17",
+    "going": "GOOD, Good to firm in places (Selective watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:52",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-07-17/898729",
+        "horses": [
+          {
+            "horseName": "Sparks Fly",
+            "horseProfileUrl": "/profile/horse/4808597/sparks-fly/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Worcester",
+    "raceCardsCourseUrl": "/racecards/2025-07-17#worcester",
+    "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-07-17",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.4) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:50",
+        "raceCardUrl": "/racecards/101/worcester/2025-07-17/898399",
+        "horses": [
+          {
+            "horseName": "Illico De Montave",
+            "horseProfileUrl": "/profile/horse/4739613/illico-de-montave/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:55",
+        "raceCardUrl": "/racecards/101/worcester/2025-07-17/899714",
+        "horses": [
+          {
+            "horseName": "Even Break",
+            "horseProfileUrl": "/profile/horse/4288041/even-break/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chepstow (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-07-17#chepstow-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1322/chepstow-gb/2025-07-17",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.2) (Watering)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
