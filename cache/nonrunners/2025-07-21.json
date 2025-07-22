@@ -1,0 +1,431 @@
+[
+  {
+    "courseName": "Ayr",
+    "raceCardsCourseUrl": "/racecards/2025-07-21#ayr",
+    "raceCardsCourseMeetingsUrl": "/racecards/3/ayr/2025-07-21",
+    "going": "GOOD TO SOFT (Soft in places; 6.9)",
+    "weather": "Overcast dry",
+    "stallsPosition": "5f & 6f - Centre; 1m - Inside; Remainder - Outside",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-21/898224",
+        "horses": [
+          {
+            "horseName": "Bobbys Pride",
+            "horseProfileUrl": "/profile/horse/7780580/bobbys-pride/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-21/898228",
+        "horses": [
+          {
+            "horseName": "Gesundheit",
+            "horseProfileUrl": "/profile/horse/6247255/gesundheit/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Trais Fluors",
+            "horseProfileUrl": "/profile/horse/1170369/trais-fluors/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:30",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-21/898223",
+        "horses": [
+          {
+            "horseName": "Queen's Guard",
+            "horseProfileUrl": "/profile/horse/5048104/queens-guard/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-21/898225",
+        "horses": [
+          {
+            "horseName": "Shaladar",
+            "horseProfileUrl": "/profile/horse/3521624/shaladar/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Bowood",
+            "horseProfileUrl": "/profile/horse/5189858/bowood/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:40",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-21/898227",
+        "horses": [
+          {
+            "horseName": "Falcon Nine",
+            "horseProfileUrl": "/profile/horse/4415502/falcon-nine/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ballinrobe",
+    "raceCardsCourseUrl": "/racecards/2025-07-21#ballinrobe",
+    "raceCardsCourseMeetingsUrl": "/racecards/175/ballinrobe/2025-07-21",
+    "going": "GOOD TO YIELDING, Yielding in places",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-07-21/900134",
+        "horses": [
+          {
+            "horseName": "Casanova",
+            "horseProfileUrl": "/profile/horse/1748939/casanova/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:00",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-07-21/900137",
+        "horses": [
+          {
+            "horseName": "Awakening",
+            "horseProfileUrl": "/profile/horse/6514084/awakening/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-07-21/900138",
+        "horses": [
+          {
+            "horseName": "Nans View",
+            "horseProfileUrl": "/profile/horse/5329090/nans-view/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Bright Legend",
+            "horseProfileUrl": "/profile/horse/4471462/bright-legend/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-07-21/900139",
+        "horses": [
+          {
+            "horseName": "Asisaid",
+            "horseProfileUrl": "/profile/horse/4215684/asisaid/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Chopsticks",
+            "horseProfileUrl": "/profile/horse/5518981/chopsticks/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Tastyee",
+            "horseProfileUrl": "/profile/horse/3918267/tastyee/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-07-21/900140",
+        "horses": [
+          {
+            "horseName": "Rosemount",
+            "horseProfileUrl": "/profile/horse/6635762/rosemount/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-07-21#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-07-21",
+    "going": "HEAVY (GoingStick: 5.4) (Rail movements: 7.20, 7.50, 8.20 & 8.50 +7yds)",
+    "weather": "Showers",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "6:20",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-21/898235",
+        "horses": [
+          {
+            "horseName": "Ishimentor",
+            "horseProfileUrl": "/profile/horse/7020300/ishimentor/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:50",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-21/898232",
+        "horses": [
+          {
+            "horseName": "Crafty Spirit",
+            "horseProfileUrl": "/profile/horse/5320946/crafty-spirit/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Snow Berry",
+            "horseProfileUrl": "/profile/horse/3166286/snow-berry/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Cuban Storm",
+            "horseProfileUrl": "/profile/horse/5021301/cuban-storm/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:20",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-21/898230",
+        "horses": [
+          {
+            "horseName": "Gloriously Sassy",
+            "horseProfileUrl": "/profile/horse/7267877/gloriously-sassy/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Frankies Dream",
+            "horseProfileUrl": "/profile/horse/6032308/frankies-dream/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Lord Roxby",
+            "horseProfileUrl": "/profile/horse/5864558/lord-roxby/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:50",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-21/898234",
+        "horses": [
+          {
+            "horseName": "Hush Puppy",
+            "horseProfileUrl": "/profile/horse/6803077/hush-puppy/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Little Beck Annie",
+            "horseProfileUrl": "/profile/horse/6759110/little-beck-annie/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:20",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-21/898233",
+        "horses": [
+          {
+            "horseName": "Pacific Man",
+            "horseProfileUrl": "/profile/horse/6193158/pacific-man/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Jamih",
+            "horseProfileUrl": "/profile/horse/1691169/jamih/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Orchestral Wave",
+            "horseProfileUrl": "/profile/horse/6666851/orchestral-wave/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:50",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-21/898231",
+        "horses": [
+          {
+            "horseName": "Looks Fantastic",
+            "horseProfileUrl": "/profile/horse/6626285/looks-fantastic/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Draupnir",
+            "horseProfileUrl": "/profile/horse/6340650/draupnir/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Arkenstaar",
+            "horseProfileUrl": "/profile/horse/4502653/arkenstaar/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Legend Forever",
+            "horseProfileUrl": "/profile/horse/6465251/legend-forever/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Cartmel",
+    "raceCardsCourseUrl": "/racecards/2025-07-21#cartmel",
+    "raceCardsCourseMeetingsUrl": "/racecards/9/cartmel/2025-07-21",
+    "going": "SOFT (Heavy in places)",
+    "weather": "Sunny intervals",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:42",
+        "raceCardUrl": "/racecards/9/cartmel/2025-07-21/898436",
+        "horses": [
+          {
+            "horseName": "Detective",
+            "horseProfileUrl": "/profile/horse/2839680/detective/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Somebodycomegether",
+            "horseProfileUrl": "/profile/horse/5861971/somebodycomegether/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:12",
+        "raceCardUrl": "/racecards/9/cartmel/2025-07-21/898435",
+        "horses": [
+          {
+            "horseName": "Top Flight Century",
+            "horseProfileUrl": "/profile/horse/5412838/top-flight-century/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Strike Of Lighting",
+            "horseProfileUrl": "/profile/horse/3513315/strike-of-lighting/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:12",
+        "raceCardUrl": "/racecards/9/cartmel/2025-07-21/898433",
+        "horses": [
+          {
+            "horseName": "Jentobello",
+            "horseProfileUrl": "/profile/horse/7365378/jentobello/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Jolie Coeur Allen",
+            "horseProfileUrl": "/profile/horse/4998711/jolie-coeur-allen/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Captain Cool",
+            "horseProfileUrl": "/profile/horse/5746437/captain-cool/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/9/cartmel/2025-07-21/898432",
+        "horses": [
+          {
+            "horseName": "Sean Og",
+            "horseProfileUrl": "/profile/horse/4431778/sean-og/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Arthur's Quay",
+            "horseProfileUrl": "/profile/horse/2396289/arthurs-quay/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "River Of Joy",
+            "horseProfileUrl": "/profile/horse/4207204/river-of-joy/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/9/cartmel/2025-07-21/898434",
+        "horses": [
+          {
+            "horseName": "Derracrin",
+            "horseProfileUrl": "/profile/horse/3673826/derracrin/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Defence Witness",
+            "horseProfileUrl": "/profile/horse/5045993/defence-witness/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-07-21#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-07-21",
+    "going": "GOOD (GoingStick: 6.7) (Watered) (Rail movements: 6.40, 7.40, 8.10 & 8.40 +9yds)",
+    "weather": "Showers",
+    "stallsPosition": "1m - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "6:40",
+        "raceCardUrl": "/racecards/93/windsor/2025-07-21/898239",
+        "horses": [
+          {
+            "horseName": "Wonderful Wendy",
+            "horseProfileUrl": "/profile/horse/7462326/wonderful-wendy/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Golden Horse",
+            "horseProfileUrl": "/profile/horse/7856889/golden-horse/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/93/windsor/2025-07-21/898236",
+        "horses": [
+          {
+            "horseName": "Pomme Pomme",
+            "horseProfileUrl": "/profile/horse/7334604/pomme-pomme/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:10",
+        "raceCardUrl": "/racecards/93/windsor/2025-07-21/898240",
+        "horses": [
+          {
+            "horseName": "Kentucky Kingdom",
+            "horseProfileUrl": "/profile/horse/1796342/kentucky-kingdom/",
+            "raceNumber": "(14)"
+          }
+        ]
+      }
+    ]
+  }
+]
