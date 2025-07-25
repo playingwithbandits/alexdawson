@@ -2908,6 +2908,11 @@ export function PicksRaceRow({
               ?.filter((x) => x)
               .join("\n");
 
+            const hasNotes =
+              horseEyecatcherObj?.hasEyecatcherWithinDays ||
+              horseHamperedObj?.hasHamperedWithinDays ||
+              horseComfortableWithinDaysObj?.hasComfortableWithinDays;
+
             return (
               <HorseNameRow
                 key={race.time + x_i}
@@ -2920,13 +2925,14 @@ export function PicksRaceRow({
                 isNonRunner={isNonRunner(race.time, name)}
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
-                highlight4={
+                highlight3={
                   countGood &&
                   isEwable &&
                   // countGood
                   bestBeatenRprGood &&
                   rprBeatenToRaceBeatenAvgDiffGood &&
                   rprBeatenToRaceBeatenAvgDiffMaxGood
+
                   // (aiGood ||
                   //   rpPredGood ||
                   //   mentionedByTipster ||
@@ -2937,6 +2943,15 @@ export function PicksRaceRow({
                   //   horseEyecatcherObj?.hasEyecatcherWithinDays ||
                   //   horseHamperedObj?.hasHamperedWithinDays ||
                   //   horseComfortableWithinDaysObj?.hasComfortableWithinDays)
+                }
+                highlight4={
+                  countGood &&
+                  isEwable &&
+                  // countGood
+                  bestBeatenRprGood &&
+                  rprBeatenToRaceBeatenAvgDiffGood &&
+                  rprBeatenToRaceBeatenAvgDiffMaxGood &&
+                  hasNotes
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
@@ -3000,12 +3015,7 @@ export function PicksRaceRow({
                   },
                   {
                     title: "hasNotes",
-                    value:
-                      Boolean(horseEyecatcherObj?.hasEyecatcherWithinDays) ||
-                      Boolean(horseHamperedObj?.hasHamperedWithinDays) ||
-                      Boolean(
-                        horseComfortableWithinDaysObj?.hasComfortableWithinDays
-                      ),
+                    value: hasNotes,
                   },
                 ]}
                 showStars={true}

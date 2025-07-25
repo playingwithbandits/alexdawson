@@ -1,0 +1,85 @@
+[
+  {
+    "courseName": "Ballinrobe",
+    "raceCardsCourseUrl": "/racecards/2025-07-22#ballinrobe",
+    "raceCardsCourseMeetingsUrl": "/racecards/175/ballinrobe/2025-07-22",
+    "going": "GOOD (Inner loop)",
+    "weather": "Showers",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:42",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-07-22/900174",
+        "horses": [
+          {
+            "horseName": "Moneysharvin",
+            "horseProfileUrl": "/profile/horse/7499335/moneysharvin/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:42",
+        "raceCardUrl": "/racecards/175/ballinrobe/2025-07-22/900249",
+        "horses": [
+          {
+            "horseName": "Sights Unseen",
+            "horseProfileUrl": "/profile/horse/5964386/sights-unseen/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Lingfield",
+    "raceCardsCourseUrl": "/racecards/2025-07-22#lingfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/31/lingfield/2025-07-22",
+    "going": "Straight course - GOOD, Good to soft in places; Round course - GOOD TO SOFT, Soft in places (GoingStick: 6.5) (Rail movements: 2.15 & 2.45 +8yds)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; 1m1f - Inside; 1m3f - Outside",
+    "races": [
+      {
+        "raceTime": "5:22",
+        "raceCardUrl": "/racecards/31/lingfield/2025-07-22/898248",
+        "horses": [
+          {
+            "horseName": "Symbol Of Hope",
+            "horseProfileUrl": "/profile/horse/3164267/symbol-of-hope/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Musselburgh",
+    "raceCardsCourseUrl": "/racecards/2025-07-22#musselburgh",
+    "raceCardsCourseMeetingsUrl": "/racecards/16/musselburgh/2025-07-22",
+    "going": "GOOD (GoingStick: 7.6)",
+    "weather": "Showers",
+    "stallsPosition": "5f - Stands' side; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-07-22/898255",
+        "horses": [
+          {
+            "horseName": "Lang Toon Lad",
+            "horseProfileUrl": "/profile/horse/5431088/lang-toon-lad/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-07-22#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-07-22",
+    "going": "TAPETA: STANDARD",
+    "weather": "Showers",
+    "stallsPosition": "7f - Outside; Remainder - Inside",
+    "races": []
+  }
+]
