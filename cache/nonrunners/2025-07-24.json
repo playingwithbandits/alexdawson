@@ -1,0 +1,445 @@
+[
+  {
+    "courseName": "Doncaster",
+    "raceCardsCourseUrl": "/racecards/2025-07-24#doncaster",
+    "raceCardsCourseMeetingsUrl": "/racecards/15/doncaster/2025-07-24",
+    "going": "GOOD TO SOFT (Good in places) changing to GOOD (Good to soft in places) after Race 1 (1.25)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": [
+      {
+        "raceTime": "3:10",
+        "raceCardUrl": "/racecards/15/doncaster/2025-07-24/900311",
+        "horses": [
+          {
+            "horseName": "Obee Jo",
+            "horseProfileUrl": "/profile/horse/2020345/obee-jo/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/15/doncaster/2025-07-24/898288",
+        "horses": [
+          {
+            "horseName": "Ann Terry",
+            "horseProfileUrl": "/profile/horse/6074540/ann-terry/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leopardstown",
+    "raceCardsCourseUrl": "/racecards/2025-07-24#leopardstown",
+    "raceCardsCourseMeetingsUrl": "/racecards/187/leopardstown/2025-07-24",
+    "going": "YIELDING TO SOFT",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:27",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-07-24/900200",
+        "horses": [
+          {
+            "horseName": "Balantina",
+            "horseProfileUrl": "/profile/horse/7499446/balantina/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:27",
+        "raceCardUrl": "/racecards/187/leopardstown/2025-07-24/900204",
+        "horses": [
+          {
+            "horseName": "Open To Question",
+            "horseProfileUrl": "/profile/horse/4967853/open-to-question/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-07-24#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-07-24",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.0) (Watering) (Rail movements: 5.50, 7.33, 8.03 & 8.33 +7yds)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "5:50",
+        "raceCardUrl": "/racecards/36/newbury/2025-07-24/898293",
+        "horses": [
+          {
+            "horseName": "Sagano",
+            "horseProfileUrl": "/profile/horse/3294840/sagano/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Azahara Palace",
+            "horseProfileUrl": "/profile/horse/5015369/azahara-palace/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:22",
+        "raceCardUrl": "/racecards/36/newbury/2025-07-24/898291",
+        "horses": [
+          {
+            "horseName": "Pepper Fizz",
+            "horseProfileUrl": "/profile/horse/7677645/pepper-fizz/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Venetian Romance",
+            "horseProfileUrl": "/profile/horse/7847683/venetian-romance/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Queen Tamara",
+            "horseProfileUrl": "/profile/horse/7735728/queen-tamara/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:03",
+        "raceCardUrl": "/racecards/36/newbury/2025-07-24/898295",
+        "horses": [
+          {
+            "horseName": "Finn Russell",
+            "horseProfileUrl": "/profile/horse/4273978/finn-russell/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Pivotal Days",
+            "horseProfileUrl": "/profile/horse/5708811/pivotal-days/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:33",
+        "raceCardUrl": "/racecards/36/newbury/2025-07-24/898292",
+        "horses": [
+          {
+            "horseName": "Artavian",
+            "horseProfileUrl": "/profile/horse/5343980/artavian/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Monkmoor Pip",
+            "horseProfileUrl": "/profile/horse/4076450/monkmoor-pip/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Sandown",
+    "raceCardsCourseUrl": "/racecards/2025-07-24#sandown",
+    "raceCardsCourseMeetingsUrl": "/racecards/54/sandown/2025-07-24",
+    "going": "GOOD (Watered; Round 6.4; Sprint 6.0) changing to GOOD (Good to soft in places on Round course) after Race 2 (2.45)",
+    "weather": "Overcast showers",
+    "stallsPosition": "Sprints - Far side; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/54/sandown/2025-07-24/898305",
+        "horses": [
+          {
+            "horseName": "Sweet Reward",
+            "horseProfileUrl": "/profile/horse/2806566/sweet-reward/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/54/sandown/2025-07-24/898308",
+        "horses": [
+          {
+            "horseName": "Zariela",
+            "horseProfileUrl": "/profile/horse/4827036/zariela/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Wexford",
+    "raceCardsCourseUrl": "/racecards/2025-07-24#wexford",
+    "raceCardsCourseMeetingsUrl": "/racecards/201/wexford/2025-07-24",
+    "going": "GOOD (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "4:35",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-24/900168",
+        "horses": [
+          {
+            "horseName": "Beau Coup",
+            "horseProfileUrl": "/profile/horse/6671021/beau-coup/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "The Monkey Pole",
+            "horseProfileUrl": "/profile/horse/7139217/the-monkey-pole/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Dark Berkshire",
+            "horseProfileUrl": "/profile/horse/7776064/dark-berkshire/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-24/900169",
+        "horses": [
+          {
+            "horseName": "Willuhaveamineral",
+            "horseProfileUrl": "/profile/horse/7618327/willuhaveamineral/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "West End Victory",
+            "horseProfileUrl": "/profile/horse/4893409/west-end-victory/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Zanoosh",
+            "horseProfileUrl": "/profile/horse/5793411/zanoosh/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Urban Lee",
+            "horseProfileUrl": "/profile/horse/7682433/urban-lee/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Rutland Rose",
+            "horseProfileUrl": "/profile/horse/5457615/rutland-rose/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-24/900170",
+        "horses": [
+          {
+            "horseName": "Ladiam",
+            "horseProfileUrl": "/profile/horse/3803224/ladiam/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "To The Wire",
+            "horseProfileUrl": "/profile/horse/5911247/to-the-wire/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-24/900171",
+        "horses": [
+          {
+            "horseName": "Sprinkles",
+            "horseProfileUrl": "/profile/horse/58956124/sprinkles/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Stretchemout",
+            "horseProfileUrl": "/profile/horse/5845718/stretchemout/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Kingkong Ciergues",
+            "horseProfileUrl": "/profile/horse/5826617/kingkong-ciergues/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:47",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-24/900306",
+        "horses": [
+          {
+            "horseName": "I'm Flattered",
+            "horseProfileUrl": "/profile/horse/5554967/im-flattered/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Glendine Billy",
+            "horseProfileUrl": "/profile/horse/4982075/glendine-billy/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Phoenix Cowboy",
+            "horseProfileUrl": "/profile/horse/2806523/phoenix-cowboy/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:17",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-24/900172",
+        "horses": [
+          {
+            "horseName": "Sidiriya",
+            "horseProfileUrl": "/profile/horse/3866967/sidiriya/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Belle Of Boston",
+            "horseProfileUrl": "/profile/horse/7339100/belle-of-boston/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Kate Ill Know",
+            "horseProfileUrl": "/profile/horse/3368312/kate-ill-know/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:47",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-24/900307",
+        "horses": [
+          {
+            "horseName": "Kazbek",
+            "horseProfileUrl": "/profile/horse/7457863/kazbek/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Hope She Flies",
+            "horseProfileUrl": "/profile/horse/7597348/hope-she-flies/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:17",
+        "raceCardUrl": "/racecards/201/wexford/2025-07-24/900173",
+        "horses": [
+          {
+            "horseName": "Kershaw",
+            "horseProfileUrl": "/profile/horse/7436479/kershaw/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Cailin Fort",
+            "horseProfileUrl": "/profile/horse/7757783/cailin-fort/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Worcester",
+    "raceCardsCourseUrl": "/racecards/2025-07-24#worcester",
+    "raceCardsCourseMeetingsUrl": "/racecards/101/worcester/2025-07-24",
+    "going": "GOOD (Watered; 7.5)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:45",
+        "raceCardUrl": "/racecards/101/worcester/2025-07-24/898437",
+        "horses": [
+          {
+            "horseName": "Cooper's Cross",
+            "horseProfileUrl": "/profile/horse/3005078/coopers-cross/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:42",
+        "raceCardUrl": "/racecards/101/worcester/2025-07-24/898442",
+        "horses": [
+          {
+            "horseName": "Pacific",
+            "horseProfileUrl": "/profile/horse/5398604/pacific/",
+            "raceNumber": "(13)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-07-24#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-07-24",
+    "going": "SOFT (GoingStick: 4.8) (Rail Movements: 5.40, 8.10 & 8.40 +9yds)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-07-24/898300",
+        "horses": [
+          {
+            "horseName": "Obsidian Knight",
+            "horseProfileUrl": "/profile/horse/3986107/obsidian-knight/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:40",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-07-24/898301",
+        "horses": [
+          {
+            "horseName": "Drifts Away",
+            "horseProfileUrl": "/profile/horse/5289577/drifts-away/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:10",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-07-24/898298",
+        "horses": [
+          {
+            "horseName": "Leadman",
+            "horseProfileUrl": "/profile/horse/4429421/leadman/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-07-24/898299",
+        "horses": [
+          {
+            "horseName": "Fidelius",
+            "horseProfileUrl": "/profile/horse/5237783/fidelius/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Compiegne",
+    "raceCardsCourseUrl": "/racecards/2025-07-24#compiegne",
+    "raceCardsCourseMeetingsUrl": "/racecards/291/compiegne/2025-07-24",
+    "going": "TURF: VERY SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

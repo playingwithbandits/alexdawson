@@ -1,0 +1,240 @@
+{
+  "date": "2025-07-24",
+  "tips": [
+    {
+      "time": "13:10",
+      "horse": "Fat Sam",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Deep Purple",
+      "isNap": false
+    },
+    {
+      "time": "14:20",
+      "horse": "Midnight Pass",
+      "isNap": false
+    },
+    {
+      "time": "14:55",
+      "horse": "Scintillante",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Aslukgoes",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Tilehurst",
+      "isNap": false
+    },
+    {
+      "time": "16:42",
+      "horse": "Sixty Plus",
+      "isNap": false
+    },
+    {
+      "time": "17:17",
+      "horse": "Fine By Me",
+      "isNap": false
+    },
+    {
+      "time": "13:25",
+      "horse": "Commander'S Intent",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Double Eagle",
+      "isNap": false
+    },
+    {
+      "time": "14:35",
+      "horse": "Jez Bomb",
+      "isNap": false
+    },
+    {
+      "time": "15:10",
+      "horse": "Ey Up Its Jazz",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Stem",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Novello Lad",
+      "isNap": true
+    },
+    {
+      "time": "16:55",
+      "horse": "Telepathic",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Silver Wraith",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Publish",
+      "isNap": true
+    },
+    {
+      "time": "15:20",
+      "horse": "Orion'S Belt",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Pendragon",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Sweet Reward",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "Crooked Tannie",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Sophia Rose",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Warm In Gorey",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Fire Coral",
+      "isNap": false
+    },
+    {
+      "time": "18:47",
+      "horse": "Stellar Symphony",
+      "isNap": false
+    },
+    {
+      "time": "19:17",
+      "horse": "Sharetheknowledge",
+      "isNap": false
+    },
+    {
+      "time": "19:47",
+      "horse": "Quinn The Eskimo",
+      "isNap": false
+    },
+    {
+      "time": "20:17",
+      "horse": "Mistyburn",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Montreal",
+      "isNap": false
+    },
+    {
+      "time": "17:57",
+      "horse": "Amerilis",
+      "isNap": false
+    },
+    {
+      "time": "18:27",
+      "horse": "Composing",
+      "isNap": false
+    },
+    {
+      "time": "18:57",
+      "horse": "Flushing Meadows",
+      "isNap": false
+    },
+    {
+      "time": "19:27",
+      "horse": "Onemoredance",
+      "isNap": false
+    },
+    {
+      "time": "19:57",
+      "horse": "Floresta",
+      "isNap": false
+    },
+    {
+      "time": "20:27",
+      "horse": "Ranting And Raven",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Fantasy World",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Express Train",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Drifts Away",
+      "isNap": false
+    },
+    {
+      "time": "19:10",
+      "horse": "Superposition",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Solar Aclaim",
+      "isNap": false
+    },
+    {
+      "time": "20:10",
+      "horse": "Pole Star",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Gordon Grey",
+      "isNap": false
+    },
+    {
+      "time": "18:22",
+      "horse": "Darkwing",
+      "isNap": false
+    },
+    {
+      "time": "19:02",
+      "horse": "Snake Charmer",
+      "isNap": false
+    },
+    {
+      "time": "19:33",
+      "horse": "Kitty Foyle",
+      "isNap": false
+    },
+    {
+      "time": "20:03",
+      "horse": "Finn Russell",
+      "isNap": false
+    },
+    {
+      "time": "20:33",
+      "horse": "Monkmoor Pip",
+      "isNap": false
+    }
+  ]
+}
