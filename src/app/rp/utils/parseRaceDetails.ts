@@ -171,20 +171,20 @@ export async function parseRaceDetails(
           )
         : undefined;
 
-      console.log(
-        "🏁 lastRaceToLastRaceStats",
-        {
-          lastRaceEle,
-          name,
-          lastFormRowDistanceFurlongAccurate,
-          raceDistance,
-        },
-        outcomeLink?.href,
-        lastRaceLink,
-        lastRaceEle,
-        lastRaceStatsObj,
-        lastRaceTypeCode
-      );
+      // console.log(
+      //   "🏁 lastRaceToLastRaceStats",
+      //   {
+      //     lastRaceEle,
+      //     name,
+      //     lastFormRowDistanceFurlongAccurate,
+      //     raceDistance,
+      //   },
+      //   outcomeLink?.href,
+      //   lastRaceLink,
+      //   lastRaceEle,
+      //   lastRaceStatsObj,
+      //   lastRaceTypeCode
+      // );
 
       return {
         name,
@@ -267,7 +267,7 @@ export async function parseRaceDetails(
     })
   );
 
-  console.log("🐎 horses", horses);
+  //console.log("🐎 horses", horses);
 
   // Calculate relative scores for all horses in the race
   // Extract prize money from title or other elements
@@ -380,6 +380,16 @@ export async function parseRaceDetails(
   if (isAW) {
     raceCode = "X";
   }
+
+  console.log(
+    "🏁 raceCode",
+    raceCode,
+    isHurdle,
+    isChase,
+    isAW,
+    baseRaceData.title,
+    raceTitleLower
+  );
 
   const raceTypeCode = raceCode || "";
 

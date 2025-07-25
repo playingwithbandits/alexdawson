@@ -79,8 +79,8 @@ export function DayPredictions({
   sharpTips,
   olbgRaceInfoArr,
 }: DayPredictionsProps) {
-  console.log("nonRunners", nonRunners);
-  console.log("liveOdds", liveOdds);
+  //console.log("nonRunners", nonRunners);
+  //console.log("liveOdds", liveOdds);
 
   const getNonRunnersMap = () => {
     const nonRunnersMap: Record<string, string[]> = {};
@@ -101,7 +101,7 @@ export function DayPredictions({
   };
 
   const nonRunnersMap = getNonRunnersMap();
-  console.log("nonRunnersMap", nonRunnersMap);
+  //("nonRunnersMap", nonRunnersMap);
 
   const isNonRunner = (time: string, horseName: string) => {
     return nonRunnersMap[normalizeTime(time)]?.includes(
@@ -278,7 +278,7 @@ export function DayPredictions({
     ),
   });
 
-  console.log("gyto Tips", gytoTips);
+  //console.log("gyto Tips", gytoTips);
   const gytoRoi = calculateROI({
     meetings,
     results,
@@ -294,8 +294,8 @@ export function DayPredictions({
     }),
   });
 
-  console.log("gyto Roi", gytoRoi);
-  console.log("naps TableTips", napsTableTips);
+  //console.log("gyto Roi", gytoRoi);
+  //console.log("naps TableTips", napsTableTips);
   const napsRoi = calculateROI({
     meetings,
     results,
@@ -310,7 +310,7 @@ export function DayPredictions({
       };
     }),
   });
-  console.log("naps Roi", napsRoi);
+  //console.log("naps Roi", napsRoi);
 
   const handleSaveRoi = async () => {
     const roiData = {
@@ -580,7 +580,7 @@ export function DayPredictions({
     return <div className="day-predictions">{renderHeader()}</div>;
   }
 
-  console.log("nonRunners", nonRunners);
+  //console.log("nonRunners", nonRunners);
   // First filter the predictions
   const filteredMeetings = meetings
     .map((meeting) => ({
@@ -824,15 +824,15 @@ function DetailedRaceRow({
   gytoTips: GytoTip[] | undefined;
   napsTableTips: NapsTableTip[] | undefined;
 }) {
-  console.log("DetailedRaceRow", {
-    isTodayOrPast,
-    race,
-    meeting,
-    results,
-    tips,
-    gytoTips,
-    napsTableTips,
-  });
+  // console.log("DetailedRaceRow", {
+  //   isTodayOrPast,
+  //   race,
+  //   meeting,
+  //   results,
+  //   tips,
+  //   gytoTips,
+  //   napsTableTips,
+  // });
 
   const topScorer = race.horses
     .sort(

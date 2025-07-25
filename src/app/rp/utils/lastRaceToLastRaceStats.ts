@@ -222,23 +222,23 @@ export async function lastRaceToLastRaceStats(
     timePerFurlong,
   };
 
-  console.log(
-    "🏁 Last Race To Last Race Stats",
-    {
-      input_name,
-      distanceF,
-      distanceBeaten,
-      distanceBeatenThreshold,
-    },
-    {
-      runners,
-      averages,
-      maxes,
-      runners_beaten,
-      averages_beaten,
-      maxes_beaten,
-    }
-  );
+  // console.log(
+  //   "🏁 Last Race To Last Race Stats",
+  //   {
+  //     input_name,
+  //     distanceF,
+  //     distanceBeaten,
+  //     distanceBeatenThreshold,
+  //   },
+  //   {
+  //     runners,
+  //     averages,
+  //     maxes,
+  //     runners_beaten,
+  //     averages_beaten,
+  //     maxes_beaten,
+  //   }
+  // );
   return {
     raceTypeCode: lastRaceTypeCode,
     runners_all: runners,

@@ -84,20 +84,20 @@ export function PicksRaceRow({
   sharpTips,
   olbgRaceInfoArr,
 }: PicksRaceRowProps) {
-  console.log("CompactRaceRow", {
-    isTodayOrPast,
-    index,
-    race,
-    meeting,
-    results,
-    tips,
-    gytoTips,
-    napsTableTips,
-    rtWebTips,
-    olbgTips,
-    sharpTips,
-    olbgRaceInfoArr,
-  });
+  // console.log("CompactRaceRow", {
+  //   isTodayOrPast,
+  //   index,
+  //   race,
+  //   meeting,
+  //   results,
+  //   tips,
+  //   gytoTips,
+  //   napsTableTips,
+  //   rtWebTips,
+  //   olbgTips,
+  //   sharpTips,
+  //   olbgRaceInfoArr,
+  // });
 
   const comfortableWithinDays = race.horses.map((horse) => {
     const formObj = horse.formObj?.form || [];
@@ -2816,6 +2816,7 @@ export function PicksRaceRow({
               )}) | Max ${maxes_beaten?.ts} (${
                 race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.ts
               })`,
+              `Last Race Type: ${horseLastRaceType} (${race.raceType})`,
             ]
               .filter((x) => x)
               .join("\n");
