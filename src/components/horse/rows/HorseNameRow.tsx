@@ -19,7 +19,10 @@ export type StarTitle =
   | "hasOlbgComment"
   | "hasOlbgNap"
   | "hasOlbgExpert"
-  | "hasNotes";
+  | "hasNotes"
+  | "rprAvgBeatenToRaceBeatenMaxGood"
+  | "rprMaxBeatenToRaceBeatenMaxGood"
+  | "lastRaceTypeGood";
 
 interface HorseNameRowProps {
   horseName: string;

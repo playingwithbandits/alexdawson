@@ -67,6 +67,7 @@ export interface LastRaceRunner {
 }
 
 export interface LastRaceStats {
+  raceTypeCode: string;
   runners_all: LastRaceRunner[];
   runners_beaten: LastRaceRunner[];
   averages_all: {

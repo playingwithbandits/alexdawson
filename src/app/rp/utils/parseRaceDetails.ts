@@ -12,6 +12,7 @@ import type { Bet, Horse, Meeting, Race } from "@/types/racing";
 import { fetchPredictions } from "./fetchPredictions";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
 import {
+  getRaceType,
   horseNameToKey,
   isValidOutcome,
   parseDistance,
@@ -155,6 +156,8 @@ export async function parseRaceDetails(
           })
         : formObj?.form?.[0];
 
+      const lastRaceTypeCode = matchingFormObj?.raceTypeCode || "";
+
       const lastFormRowFromDistanceYard = matchingFormObj?.distanceYard || 0;
       const lastFormRowDistanceFurlongAccurate =
         lastFormRowFromDistanceYard * 0.00454545;
@@ -163,7 +166,8 @@ export async function parseRaceDetails(
         ? await lastRaceToLastRaceStats(
             lastRaceEle,
             name,
-            lastFormRowDistanceFurlongAccurate || raceDistance
+            lastFormRowDistanceFurlongAccurate || raceDistance,
+            lastRaceTypeCode
           )
         : undefined;
 
@@ -178,7 +182,8 @@ export async function parseRaceDetails(
         outcomeLink?.href,
         lastRaceLink,
         lastRaceEle,
-        lastRaceStatsObj
+        lastRaceStatsObj,
+        lastRaceTypeCode
       );
 
       return {
@@ -360,6 +365,24 @@ export async function parseRaceDetails(
     horses: horses.filter((h) => h.stats), // Only include horses with stats
   });
 
+  const raceTitleLower = baseRaceData.title?.toLowerCase();
+  const isHurdle = raceTitleLower?.includes("hurdle");
+  const isChase = raceTitleLower?.includes("chase");
+  const isAW = baseRaceData.trackConfig?.toLowerCase().includes("(aw)");
+
+  let raceCode = "F";
+  if (isHurdle) {
+    raceCode = "H";
+  }
+  if (isChase) {
+    raceCode = "C";
+  }
+  if (isAW) {
+    raceCode = "X";
+  }
+
+  const raceTypeCode = raceCode || "";
+
   const result1: Race = {
     ...baseRaceData,
     horses: baseRaceData.horses || [],
@@ -371,6 +394,8 @@ export async function parseRaceDetails(
     tv: baseRaceData.tv || "",
     url: baseRaceData.url || "",
     runners: baseRaceData.runners || 0,
+    raceTypeCode: raceTypeCode || "",
+    raceType: getRaceType(raceTypeCode) || "",
     raceStats,
 
     predictions: baseRaceData.id

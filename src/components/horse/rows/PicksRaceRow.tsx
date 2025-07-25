@@ -15,6 +15,7 @@ import { normalizeTime } from "../DayPredictions";
 import { cleanName } from "@/app/rp/utils/fetchRaceAccordion";
 import {
   distanceToWinnerStrToFloat,
+  getRaceType,
   horseNameToKey,
   isGoodDistanceToWinner,
   placeToPlaceKey,
@@ -2733,6 +2734,7 @@ export function PicksRaceRow({
               averages_beaten,
               maxes_beaten,
               info,
+              raceTypeCode,
             } = lastRaceStats || {};
 
             const {
@@ -2755,6 +2757,20 @@ export function PicksRaceRow({
 
             const rprBeatenToRaceBeatenAvgDiffMaxGood =
               rprBeatenToRaceBeatenAvgDiffMax >= 5;
+
+            const rprAvgBeatenToRaceBeatenMaxGood =
+              (averages_beaten?.rpr || 0) >=
+              (race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.rpr ||
+                0) *
+                0.95;
+
+            const rprMaxBeatenToRaceBeatenMaxGood =
+              (maxes_beaten?.rpr || 0) >=
+              (race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.rpr || 0) *
+                0.95;
+
+            const horseLastRaceType = getRaceType(raceTypeCode);
+            const lastRaceTypeGood = race.raceType === horseLastRaceType;
 
             const lastRaceStatsText = [
               `Time per furlong: <span style='color: ${
@@ -2927,12 +2943,8 @@ export function PicksRaceRow({
                 //highlight1={countGood && sharpRatingGood}
                 highlight3={
                   countGood &&
-                  isEwable &&
-                  // countGood
-                  bestBeatenRprGood &&
-                  rprBeatenToRaceBeatenAvgDiffGood &&
-                  rprBeatenToRaceBeatenAvgDiffMaxGood
-
+                  rprAvgBeatenToRaceBeatenMaxGood &&
+                  rprMaxBeatenToRaceBeatenMaxGood
                   // (aiGood ||
                   //   rpPredGood ||
                   //   mentionedByTipster ||
@@ -2946,12 +2958,9 @@ export function PicksRaceRow({
                 }
                 highlight4={
                   countGood &&
-                  isEwable &&
-                  // countGood
-                  bestBeatenRprGood &&
-                  rprBeatenToRaceBeatenAvgDiffGood &&
-                  rprBeatenToRaceBeatenAvgDiffMaxGood &&
-                  hasNotes
+                  rprAvgBeatenToRaceBeatenMaxGood &&
+                  rprMaxBeatenToRaceBeatenMaxGood &&
+                  lastRaceTypeGood
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
@@ -2985,6 +2994,16 @@ export function PicksRaceRow({
                     title: "rprBeatenToRaceBeatenAvgDiffMaxGood",
                     value: Boolean(rprBeatenToRaceBeatenAvgDiffMaxGood),
                   },
+
+                  {
+                    title: "rprAvgBeatenToRaceBeatenMaxGood",
+                    value: Boolean(rprAvgBeatenToRaceBeatenMaxGood),
+                  },
+                  {
+                    title: "rprMaxBeatenToRaceBeatenMaxGood",
+                    value: Boolean(rprMaxBeatenToRaceBeatenMaxGood),
+                  },
+
                   {
                     title: "aiGood",
                     value: Boolean(aiGood),
@@ -3015,7 +3034,11 @@ export function PicksRaceRow({
                   },
                   {
                     title: "hasNotes",
-                    value: hasNotes,
+                    value: Boolean(hasNotes),
+                  },
+                  {
+                    title: "lastRaceTypeGood",
+                    value: Boolean(lastRaceTypeGood),
                   },
                 ]}
                 showStars={true}

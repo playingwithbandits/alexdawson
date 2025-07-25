@@ -9,7 +9,8 @@ import { avg } from "@/lib/utils";
 export async function lastRaceToLastRaceStats(
   lastRaceEle: string,
   input_name: string,
-  distanceF: number
+  distanceF: number,
+  lastRaceTypeCode: string
 ): Promise<LastRaceStats> {
   const parser = new DOMParser();
   const doc = parser.parseFromString(lastRaceEle, "text/html");
@@ -239,6 +240,7 @@ export async function lastRaceToLastRaceStats(
     }
   );
   return {
+    raceTypeCode: lastRaceTypeCode,
     runners_all: runners,
     averages_all: averages,
     maxes_all: maxes,

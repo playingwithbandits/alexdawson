@@ -149,7 +149,8 @@ export interface Race {
   url: string;
   going?: string;
   // surface?: string;
-  // raceType?: string;
+  raceTypeCode?: string;
+  raceType?: string;
   // trackCondition?: string;
   // weather?: string;
   drawBias?: DrawBiasResult["bias"];

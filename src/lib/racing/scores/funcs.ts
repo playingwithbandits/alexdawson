@@ -87,6 +87,27 @@ export function calculateDistancePreference(
   return "stayer";
 }
 
+interface RaceCodeMap {
+  [name: string]: string;
+}
+export const raceCodeToText = (code?: string | null) => {
+  const decoder: RaceCodeMap = {
+    H: "Hurdle",
+    C: "Chase",
+    U: "Chase",
+    F: "T Flat",
+    B: "T NH Flat",
+    W: "AW NH Flat",
+    X: "AW Flat",
+    P: "PTP",
+  };
+  const decoder_res = code ? decoder[code] || null : null;
+  if (!decoder_res) {
+    console.log("Sort out: " + code);
+  }
+  return decoder_res ? decoder_res : code;
+};
+
 export function getRaceType(formRaceCode: string | undefined) {
   if (!formRaceCode) return null;
   switch (formRaceCode) {
