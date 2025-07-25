@@ -366,8 +366,15 @@ export async function parseRaceDetails(
   });
 
   const raceTitleLower = baseRaceData.title?.toLowerCase();
-  const isHurdle = raceTitleLower?.includes("hurdle");
-  const isChase = raceTitleLower?.includes("chase");
+
+  // Test examples for chase detection:
+  // ✅ Should match: "Chase Stakes", "Steeplechase", "Chase", "Maiden Chase"
+  // ❌ Should NOT match: "Chasemore Oaks", "Chaseable", "Chaser"
+  // Test examples for hurdle detection:
+  // ✅ Should match: "Hurdle Stakes", "Novice Hurdle", "Hurdle", "Maiden Hurdle"
+  // ❌ Should NOT match: "Hurdlemore Oaks", "Hurdleable", "Hurdler"
+  const isHurdle = /\bhurdle(?:\b|$)/.test(raceTitleLower || "");
+  const isChase = /\bchase(?:\b|$)/.test(raceTitleLower || "");
   const isAW = baseRaceData.trackConfig?.toLowerCase().includes("(aw)");
 
   let raceCode = "F";
