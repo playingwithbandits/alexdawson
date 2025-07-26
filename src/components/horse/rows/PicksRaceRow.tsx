@@ -44,7 +44,7 @@ interface PicksRaceRowProps {
   olbgRaceInfoArr: OLBGRaceInfo[] | undefined;
 }
 
-const THRESHOLD = 0.7;
+const THRESHOLD = 0.8;
 const THRESHOLD_RATING = 0.8;
 const THRESHOLD_BEATEN_RPR = 0.9;
 const DAYS_THRESHOLD_COMFORTABLE = 14;
@@ -2772,6 +2772,40 @@ export function PicksRaceRow({
             const horseLastRaceType = getRaceType(raceTypeCode);
             const lastRaceTypeGood = race.raceType === horseLastRaceType;
 
+            // const raceTitleLower = race.title?.toLowerCase();
+
+            // Test examples for chase detection:
+            // ✅ Should match: "Chase Stakes", "Steeplechase", "Chase", "Maiden Chase"
+            // ❌ Should NOT match: "Chasemore Oaks", "Chaseable", "Chaser"
+            // Test examples for hurdle detection:
+            // ✅ Should match: "Hurdle Stakes", "Novice Hurdle", "Hurdle", "Maiden Hurdle"
+            // ❌ Should NOT match: "Hurdlemore Oaks", "Hurdleable", "Hurdler"
+            // const isHurdle = /\bhurdle(?:\b|$)/.test(raceTitleLower || "");
+            // const isChase = /\bchase(?:\b|$)/.test(raceTitleLower || "");
+            // const isAW = race.trackConfig?.toLowerCase().includes("(aw)");
+
+            // let raceCode = "F";
+            // if (isHurdle) {
+            //   raceCode = "H";
+            // }
+            // if (isChase) {
+            //   raceCode = "C";
+            // }
+            // if (isAW) {
+            //   raceCode = "X";
+            // }
+
+            // console.log(
+            //   "🏁 raceCode",
+            //   raceCode,
+            //   isHurdle,
+            //   isChase,
+            //   isAW,
+            //   race.title,
+            //   race.trackConfig,
+            //   raceTitleLower
+            // );
+
             const lastRaceStatsText = [
               `Time per furlong: <span style='color: ${
                 timePerFurlongGood ? "#2df8ff" : "#fff"
@@ -2816,7 +2850,7 @@ export function PicksRaceRow({
               )}) | Max ${maxes_beaten?.ts} (${
                 race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.ts
               })`,
-              `Last Race Type: ${horseLastRaceType} (${race.raceType})`,
+              `Last Race Type: ${horseLastRaceType} (${race.raceType}) ${race.title}`,
             ]
               .filter((x) => x)
               .join("\n");
@@ -2944,6 +2978,7 @@ export function PicksRaceRow({
                 //highlight1={countGood && sharpRatingGood}
                 highlight3={
                   countGood &&
+                  lastRaceTypeGood &&
                   rprAvgBeatenToRaceBeatenMaxGood &&
                   rprMaxBeatenToRaceBeatenMaxGood
                   // (aiGood ||
@@ -2959,9 +2994,10 @@ export function PicksRaceRow({
                 }
                 highlight4={
                   countGood &&
+                  lastRaceTypeGood &&
                   rprAvgBeatenToRaceBeatenMaxGood &&
                   rprMaxBeatenToRaceBeatenMaxGood &&
-                  lastRaceTypeGood
+                  hasNotes
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
