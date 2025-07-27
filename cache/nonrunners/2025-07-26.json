@@ -1,0 +1,288 @@
+[
+  {
+    "courseName": "Ascot",
+    "raceCardsCourseUrl": "/racecards/2025-07-26#ascot",
+    "raceCardsCourseMeetingsUrl": "/racecards/2/ascot/2025-07-26",
+    "going": "GOOD, Good to firm in places (GoingStick: Stands' side 7.6, Centre 7.9, Far side 7.4, Round 6.3)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "1:40",
+        "raceCardUrl": "/racecards/2/ascot/2025-07-26/898335",
+        "horses": [
+          {
+            "horseName": "Dance To The Music",
+            "horseProfileUrl": "/profile/horse/7534593/dance-to-the-music/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:20",
+        "raceCardUrl": "/racecards/2/ascot/2025-07-26/898334",
+        "horses": [
+          {
+            "horseName": "Pina Sonata",
+            "horseProfileUrl": "/profile/horse/6550738/pina-sonata/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Sunfall",
+            "horseProfileUrl": "/profile/horse/5419099/sunfall/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Chester",
+    "raceCardsCourseUrl": "/racecards/2025-07-26#chester",
+    "raceCardsCourseMeetingsUrl": "/racecards/13/chester/2025-07-26",
+    "going": "GOOD (GoingStick: 7.4) (Rail Movements: 1.30 +28yds, 2.10, 2.45, 3.15, 3.45, 4.20 & 4.55 +14yds and 5.30 +20yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "1m2f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "1:30",
+        "raceCardUrl": "/racecards/13/chester/2025-07-26/898358",
+        "horses": [
+          {
+            "horseName": "Princess Niyla",
+            "horseProfileUrl": "/profile/horse/4728079/princess-niyla/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/13/chester/2025-07-26/898353",
+        "horses": [
+          {
+            "horseName": "Miraculous",
+            "horseProfileUrl": "/profile/horse/6928471/miraculous/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Rare Change",
+            "horseProfileUrl": "/profile/horse/5708625/rare-change/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/13/chester/2025-07-26/898359",
+        "horses": [
+          {
+            "horseName": "Street Life",
+            "horseProfileUrl": "/profile/horse/2456551/street-life/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Rock N Roll Rocket",
+            "horseProfileUrl": "/profile/horse/5889830/rock-n-roll-rocket/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/13/chester/2025-07-26/898356",
+        "horses": [
+          {
+            "horseName": "Curious Rover",
+            "horseProfileUrl": "/profile/horse/5222216/curious-rover/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Grandlad",
+            "horseProfileUrl": "/profile/horse/5756247/grandlad/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Gowran Park",
+    "raceCardsCourseUrl": "/racecards/2025-07-26#gowran-park",
+    "raceCardsCourseMeetingsUrl": "/racecards/184/gowran-park/2025-07-26",
+    "going": "GOOD (Selective watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-07-26/900324",
+        "horses": [
+          {
+            "horseName": "Gegenpressing",
+            "horseProfileUrl": "/profile/horse/3423095/gegenpressing/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:33",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-07-26/900328",
+        "horses": [
+          {
+            "horseName": "Carrickfinn",
+            "horseProfileUrl": "/profile/horse/4481240/carrickfinn/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:07",
+        "raceCardUrl": "/racecards/184/gowran-park/2025-07-26/900369",
+        "horses": [
+          {
+            "horseName": "Roderick",
+            "horseProfileUrl": "/profile/horse/2031530/roderick/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-07-26#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-07-26",
+    "going": "TAPETA: STANDARD TO SLOW",
+    "weather": "Light rain",
+    "stallsPosition": "1m2f & 1m4f - Outside; Straight - Centre",
+    "races": [
+      {
+        "raceTime": "1:52",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-07-26/898468",
+        "horses": [
+          {
+            "horseName": "Fazen",
+            "horseProfileUrl": "/profile/horse/6618145/fazen/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:40",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-07-26/898465",
+        "horses": [
+          {
+            "horseName": "Borgi",
+            "horseProfileUrl": "/profile/horse/4125047/borgi/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Salisbury",
+    "raceCardsCourseUrl": "/racecards/2025-07-26#salisbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/52/salisbury/2025-07-26",
+    "going": "GOOD TO FIRM (GoingStick: 8.3) (Watering)",
+    "weather": "Light rain",
+    "stallsPosition": "6f & 1m - Far side; 1m2f - Inside; 1m4f - Stands' side",
+    "races": []
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-07-26#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-07-26",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.3) (Selective watering) (Rail movements: 7.15 +17yds)",
+    "weather": "Light rain",
+    "stallsPosition": "Centre",
+    "races": [
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/93/windsor/2025-07-26/898370",
+        "horses": [
+          {
+            "horseName": "Lady Milton",
+            "horseProfileUrl": "/profile/horse/7882522/lady-milton/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:45",
+        "raceCardUrl": "/racecards/93/windsor/2025-07-26/898368",
+        "horses": [
+          {
+            "horseName": "Mrs Meader",
+            "horseProfileUrl": "/profile/horse/2396374/mrs-meader/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "York",
+    "raceCardsCourseUrl": "/racecards/2025-07-26#york",
+    "raceCardsCourseMeetingsUrl": "/racecards/107/york/2025-07-26",
+    "going": "GOOD, Good to soft in places (GoingStick: Overall 5.9, Home Straight: Far side 5.4, Centre 5.5, Stands' side 5.6) (Rail movements: 2.40 & 3.50 +11yds and 4.25 +8yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "5f, 6f & 1m 4f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/107/york/2025-07-26/898347",
+        "horses": [
+          {
+            "horseName": "Brooklyn Nine Nine",
+            "horseProfileUrl": "/profile/horse/4582292/brooklyn-nine-nine/",
+            "raceNumber": "(21)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/107/york/2025-07-26/898350",
+        "horses": [
+          {
+            "horseName": "Rosenpur",
+            "horseProfileUrl": "/profile/horse/5598864/rosenpur/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/107/york/2025-07-26/898351",
+        "horses": [
+          {
+            "horseName": "Naina",
+            "horseProfileUrl": "/profile/horse/58950427/naina/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Caulfield",
+    "raceCardsCourseUrl": "/racecards/2025-07-26#caulfield",
+    "raceCardsCourseMeetingsUrl": "/racecards/469/caulfield/2025-07-26",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:25",
+        "raceCardUrl": "/racecards/469/caulfield/2025-07-26/900339",
+        "horses": [
+          {
+            "horseName": "Baraqiel",
+            "horseProfileUrl": "/profile/horse/6102249/baraqiel/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  }
+]

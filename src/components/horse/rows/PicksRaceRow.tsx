@@ -2762,12 +2762,12 @@ export function PicksRaceRow({
               (averages_beaten?.rpr || 0) >=
               (race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.rpr ||
                 0) *
-                0.95;
+                0.9;
 
             const rprMaxBeatenToRaceBeatenMaxGood =
               (maxes_beaten?.rpr || 0) >=
               (race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.rpr || 0) *
-                0.95;
+                0.9;
 
             const horseLastRaceType = getRaceType(raceTypeCode);
             const lastRaceTypeGood = race.raceType === horseLastRaceType;
@@ -2997,7 +2997,11 @@ export function PicksRaceRow({
                   lastRaceTypeGood &&
                   rprAvgBeatenToRaceBeatenMaxGood &&
                   rprMaxBeatenToRaceBeatenMaxGood &&
-                  hasNotes
+                  sharpRatingGood &&
+                  aiGood &&
+                  rpPredGood &&
+                  mentionedByTipster &&
+                  timePerFurlongGood
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
@@ -3006,6 +3010,11 @@ export function PicksRaceRow({
                   {
                     title: "countGood",
                     value: Boolean(countGood),
+                  },
+
+                  {
+                    title: "timePerFurlongGood",
+                    value: Boolean(timePerFurlongGood),
                   },
                   {
                     title: "bestBeatenRprGood",

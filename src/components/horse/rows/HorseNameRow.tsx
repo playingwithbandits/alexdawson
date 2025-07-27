@@ -22,7 +22,8 @@ export type StarTitle =
   | "hasNotes"
   | "rprAvgBeatenToRaceBeatenMaxGood"
   | "rprMaxBeatenToRaceBeatenMaxGood"
-  | "lastRaceTypeGood";
+  | "lastRaceTypeGood"
+  | "timePerFurlongGood";
 
 interface HorseNameRowProps {
   horseName: string;
