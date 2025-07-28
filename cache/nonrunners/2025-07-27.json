@@ -1,0 +1,201 @@
+[
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-07-27#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-07-27",
+    "going": "GOOD (GoingStick: 7.4)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Uttoxeter",
+    "raceCardsCourseUrl": "/racecards/2025-07-27#uttoxeter",
+    "raceCardsCourseMeetingsUrl": "/racecards/84/uttoxeter/2025-07-27",
+    "going": "GOOD (GoingStick: Chase 6.5, Hurdle 6.4) (Watering) (Rail movements: 1.37, 2.07 & 2.37 +70yds and 3.37 +140yds and 4.37 & 5.07 +100yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:37",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-07-27/898455",
+        "horses": [
+          {
+            "horseName": "Split",
+            "horseProfileUrl": "/profile/horse/7882533/split/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Mister Knockout",
+            "horseProfileUrl": "/profile/horse/5845661/mister-knockout/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:37",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-07-27/898454",
+        "horses": [
+          {
+            "horseName": "Breaking Cover",
+            "horseProfileUrl": "/profile/horse/4129104/breaking-cover/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:07",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-07-27/898451",
+        "horses": [
+          {
+            "horseName": "Pimlico Point",
+            "horseProfileUrl": "/profile/horse/3549397/pimlico-point/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:37",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-07-27/898452",
+        "horses": [
+          {
+            "horseName": "Wbee",
+            "horseProfileUrl": "/profile/horse/2655974/wbee/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Doc McCoy",
+            "horseProfileUrl": "/profile/horse/4173233/doc-mccoy/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Minella Rescue",
+            "horseProfileUrl": "/profile/horse/4652681/minella-rescue/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:07",
+        "raceCardUrl": "/racecards/84/uttoxeter/2025-07-27/900419",
+        "horses": [
+          {
+            "horseName": "Sixty Plus",
+            "horseProfileUrl": "/profile/horse/5663053/sixty-plus/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Del Mar",
+    "raceCardsCourseUrl": "/racecards/2025-07-27#del-mar",
+    "raceCardsCourseMeetingsUrl": "/racecards/444/del-mar/2025-07-27",
+    "going": "DIRT: FAST",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:33",
+        "raceCardUrl": "/racecards/444/del-mar/2025-07-27/900451",
+        "horses": [
+          {
+            "horseName": "Midnight Mammoth",
+            "horseProfileUrl": "/profile/horse/5023472/midnight-mammoth/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Greyville",
+    "raceCardsCourseUrl": "/racecards/2025-07-27#greyville",
+    "raceCardsCourseMeetingsUrl": "/racecards/451/greyville/2025-07-27",
+    "going": "TURF: GOOD",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "1:35",
+        "raceCardUrl": "/racecards/451/greyville/2025-07-27/900272",
+        "horses": [
+          {
+            "horseName": "Jordash",
+            "horseProfileUrl": "/profile/horse/7882467/jordash/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:55",
+        "raceCardUrl": "/racecards/451/greyville/2025-07-27/900274",
+        "horses": [
+          {
+            "horseName": "Chocolate Soldier",
+            "horseProfileUrl": "/profile/horse/7338955/chocolate-soldier/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Frozen Fantasy",
+            "horseProfileUrl": "/profile/horse/5991317/frozen-fantasy/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/451/greyville/2025-07-27/900275",
+        "horses": [
+          {
+            "horseName": "Litigation",
+            "horseProfileUrl": "/profile/horse/4239360/litigation/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "La Teste De Buch",
+    "raceCardsCourseUrl": "/racecards/2025-07-27#la-teste-de-buch",
+    "raceCardsCourseMeetingsUrl": "/racecards/391/la-teste-de-buch/2025-07-27",
+    "going": "TURF: GOOD TO SOFT",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Munich",
+    "raceCardsCourseUrl": "/racecards/2025-07-27#munich",
+    "raceCardsCourseMeetingsUrl": "/racecards/254/munich/2025-07-27",
+    "going": "TURF: GOOD (Good to soft in places)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "12:20",
+        "raceCardUrl": "/racecards/254/munich/2025-07-27/900344",
+        "horses": [
+          {
+            "horseName": "Planteur's Whiskey",
+            "horseProfileUrl": "/profile/horse/4383471/planteurs-whiskey/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "1:10",
+        "raceCardUrl": "/racecards/254/munich/2025-07-27/900345",
+        "horses": [
+          {
+            "horseName": "Egina",
+            "horseProfileUrl": "/profile/horse/5431161/egina/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  }
+]

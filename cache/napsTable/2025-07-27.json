@@ -1,0 +1,299 @@
+{
+  "date": "2025-07-27",
+  "tips": [
+    {
+      "time": "16:55",
+      "horse": "Flavius Titus",
+      "tipster": "Chris Connolly",
+      "score": "27.4"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Steve Mullington",
+      "score": "22.9"
+    },
+    {
+      "time": "16:25",
+      "horse": "Bosh",
+      "tipster": "Farringdon",
+      "score": "19.2"
+    },
+    {
+      "time": "13:37",
+      "horse": "Dignam",
+      "tipster": "Lee Sobot",
+      "score": "12.8"
+    },
+    {
+      "time": "13:37",
+      "horse": "Dignam",
+      "tipster": "The Brigadier",
+      "score": "11.1"
+    },
+    {
+      "time": "15:37",
+      "horse": "Pounding Poet",
+      "tipster": "Ben Morgan",
+      "score": "6.0"
+    },
+    {
+      "time": "14:55",
+      "horse": "Boiling Point",
+      "tipster": "Marlborough",
+      "score": "4.4"
+    },
+    {
+      "time": "14:55",
+      "horse": "Prague",
+      "tipster": "Melissa Jones",
+      "score": "3.1"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Glendale",
+      "score": "0.6"
+    },
+    {
+      "time": "15:07",
+      "horse": "Village Master",
+      "tipster": "Lambourn",
+      "score": "0.3"
+    },
+    {
+      "time": "14:25",
+      "horse": "Arkenstaar",
+      "tipster": "Rory Delargy",
+      "score": "-1.3"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Templegate",
+      "score": "-1.8"
+    },
+    {
+      "time": "14:25",
+      "horse": "Eeetee",
+      "tipster": "The North",
+      "score": "-4.7"
+    },
+    {
+      "time": "15:55",
+      "horse": "Charming Princess",
+      "tipster": "Mercury",
+      "score": "-4.7"
+    },
+    {
+      "time": "15:37",
+      "horse": "Saint Bibiana",
+      "tipster": "Whistler",
+      "score": "-9.2"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Dean Kilbryde",
+      "score": "-9.1"
+    },
+    {
+      "time": "15:07",
+      "horse": "Village Master",
+      "tipster": "Rockavon",
+      "score": "-9.7"
+    },
+    {
+      "time": "15:37",
+      "horse": "Earth King",
+      "tipster": "Luke Tucker",
+      "score": "-11.6"
+    },
+    {
+      "time": "14:55",
+      "horse": "Prague",
+      "tipster": "The Judge",
+      "score": "-11.4"
+    },
+    {
+      "time": "16:07",
+      "horse": "Raby Mere",
+      "tipster": "Matt Polley",
+      "score": "-13.5"
+    },
+    {
+      "time": "13:37",
+      "horse": "Dignam",
+      "tipster": "Computeform",
+      "score": "-13.7"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Robin Goodfellow",
+      "score": "-13.3"
+    },
+    {
+      "time": "16:07",
+      "horse": "Golden Ambition",
+      "tipster": "West Country",
+      "score": "-15.8"
+    },
+    {
+      "time": "14:55",
+      "horse": "Prague",
+      "tipster": "Ross Shepherd",
+      "score": "-16.3"
+    },
+    {
+      "time": "14:37",
+      "horse": "Time Interval",
+      "tipster": "The Punt",
+      "score": "-16.9"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Chris Wright",
+      "score": "-16.9"
+    },
+    {
+      "time": "14:55",
+      "horse": "Make Me King",
+      "tipster": "Newmarket",
+      "score": "-19.3"
+    },
+    {
+      "time": "16:37",
+      "horse": "Present Fair",
+      "tipster": "Postdata",
+      "score": "-19.8"
+    },
+    {
+      "time": "15:37",
+      "horse": "Keel Strand",
+      "tipster": "Garry Owen",
+      "score": "-19.2"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Brian Flanagan",
+      "score": "-21.5"
+    },
+    {
+      "time": "14:25",
+      "horse": "Louie The Legend",
+      "tipster": "Newsboy",
+      "score": "-21.8"
+    },
+    {
+      "time": "16:25",
+      "horse": "Brummell",
+      "tipster": "Fortunatus",
+      "score": "-22.0"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "RP Ratings",
+      "score": "-22.9"
+    },
+    {
+      "time": "14:25",
+      "horse": "Eeetee",
+      "tipster": "Jim Delahunt",
+      "score": "-23.1"
+    },
+    {
+      "time": "13:37",
+      "horse": "Dignam",
+      "tipster": "Ratings Hub",
+      "score": "-24.7"
+    },
+    {
+      "time": "14:25",
+      "horse": "Eeetee",
+      "tipster": "Tipman Tips",
+      "score": "-25.2"
+    },
+    {
+      "time": "14:25",
+      "horse": "Louie The Legend",
+      "tipster": "Spotlight",
+      "score": "-26.5"
+    },
+    {
+      "time": "14:37",
+      "horse": "Stroll On By",
+      "tipster": "Jason Heavey",
+      "score": "-34.8"
+    },
+    {
+      "time": "13:55",
+      "horse": "Chairmanfourtimes",
+      "tipster": "Jeffrey Ross",
+      "score": "-39.4"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Adrian Wall",
+      "score": "-36.1"
+    },
+    {
+      "time": "15:25",
+      "horse": "Raulin",
+      "tipster": "Rob Wright",
+      "score": "-39.3"
+    },
+    {
+      "time": "16:55",
+      "horse": "Filey Beach",
+      "tipster": "The Duke",
+      "score": "-42.4"
+    },
+    {
+      "time": "14:55",
+      "horse": "Prague",
+      "tipster": "Ian Gaughran",
+      "score": "-42.5"
+    },
+    {
+      "time": "16:25",
+      "horse": "Ventura Express",
+      "tipster": "The Score",
+      "score": "-42.5"
+    },
+    {
+      "time": "16:55",
+      "horse": "Desert Beauty",
+      "tipster": "On The Nose",
+      "score": "-44.3"
+    },
+    {
+      "time": "14:55",
+      "horse": "Point Lynas",
+      "tipster": "Jon Freeman",
+      "score": "-45.4"
+    },
+    {
+      "time": "16:55",
+      "horse": "Gis A Sub",
+      "tipster": "Moorestyle",
+      "score": "-46.3"
+    },
+    {
+      "time": "14:25",
+      "horse": "She's Got Bottle",
+      "tipster": "Rory Paddock",
+      "score": "-62.9"
+    },
+    {
+      "time": "13:55",
+      "horse": "Pull The Rug",
+      "tipster": "Andrew Mount",
+      "score": "-64.7"
+    }
+  ]
+}

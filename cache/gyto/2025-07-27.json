@@ -1,0 +1,495 @@
+{
+  "date": "2025-07-27",
+  "tips": [
+    {
+      "time": "13:10",
+      "horse": "Words Of Truth",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Dance To The Music",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Aalto",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Teroomm",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Calandagan",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Criminal",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Tropical Storm",
+      "isNap": false
+    },
+    {
+      "time": "13:25",
+      "horse": "Golden Palace",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Pocklington",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Almaqam",
+      "isNap": true
+    },
+    {
+      "time": "15:20",
+      "horse": "Wen Moon",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Tele Red",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Kisskodi",
+      "isNap": false
+    },
+    {
+      "time": "13:30",
+      "horse": "Haliphon",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Suspended Sentence",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Vixey",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Arabian Cobra",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Secret Mistral",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Maharajas Express",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Kodiac Thriller",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Giselles Defence",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Idiocracy",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Sierra De Gredos",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Acapulco Bay",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Continuite",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Daonethatgotaway",
+      "isNap": false
+    },
+    {
+      "time": "16:33",
+      "horse": "Together Aclaim",
+      "isNap": false
+    },
+    {
+      "time": "17:07",
+      "horse": "Warazam",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Crypto Force",
+      "isNap": false
+    },
+    {
+      "time": "13:52",
+      "horse": "Berkshire Phantom",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "La Pulga",
+      "isNap": false
+    },
+    {
+      "time": "15:08",
+      "horse": "Riffa Spirit",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Callianassa",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Lady Of The Garr",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Green Valentine",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Elettaria",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Martin'S Brig",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Desert Treasure",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Startled Lady",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Offiah'S Boy",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Summertime Blues",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Campani",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Another Abbot",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Lost Signal",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Addison Grey",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Silent Flame",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Dayzee",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Jet Black",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "King Of The Dance",
+      "isNap": false
+    },
+    {
+      "time": "13:10",
+      "horse": "Words Of Truth",
+      "isNap": false
+    },
+    {
+      "time": "13:40",
+      "horse": "Dance To The Music",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Aalto",
+      "isNap": false
+    },
+    {
+      "time": "15:35",
+      "horse": "Teroomm",
+      "isNap": false
+    },
+    {
+      "time": "16:10",
+      "horse": "Calandagan",
+      "isNap": true
+    },
+    {
+      "time": "16:45",
+      "horse": "Criminal",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Tropical Storm",
+      "isNap": false
+    },
+    {
+      "time": "13:25",
+      "horse": "Golden Palace",
+      "isNap": false
+    },
+    {
+      "time": "14:00",
+      "horse": "Pocklington",
+      "isNap": false
+    },
+    {
+      "time": "14:40",
+      "horse": "Almaqam",
+      "isNap": true
+    },
+    {
+      "time": "15:20",
+      "horse": "Wen Moon",
+      "isNap": false
+    },
+    {
+      "time": "16:25",
+      "horse": "Tele Red",
+      "isNap": false
+    },
+    {
+      "time": "17:00",
+      "horse": "Kisskodi",
+      "isNap": false
+    },
+    {
+      "time": "13:30",
+      "horse": "Haliphon",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Suspended Sentence",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Vixey",
+      "isNap": false
+    },
+    {
+      "time": "15:15",
+      "horse": "Arabian Cobra",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Secret Mistral",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "Maharajas Express",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Kodiac Thriller",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Giselles Defence",
+      "isNap": false
+    },
+    {
+      "time": "13:45",
+      "horse": "Idiocracy",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Sierra De Gredos",
+      "isNap": false
+    },
+    {
+      "time": "14:50",
+      "horse": "Acapulco Bay",
+      "isNap": false
+    },
+    {
+      "time": "15:25",
+      "horse": "Continuite",
+      "isNap": false
+    },
+    {
+      "time": "15:58",
+      "horse": "Daonethatgotaway",
+      "isNap": false
+    },
+    {
+      "time": "16:33",
+      "horse": "Together Aclaim",
+      "isNap": false
+    },
+    {
+      "time": "17:07",
+      "horse": "Warazam",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Crypto Force",
+      "isNap": false
+    },
+    {
+      "time": "13:52",
+      "horse": "Berkshire Phantom",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "La Pulga",
+      "isNap": false
+    },
+    {
+      "time": "15:08",
+      "horse": "Riffa Spirit",
+      "isNap": false
+    },
+    {
+      "time": "15:40",
+      "horse": "Callianassa",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Lady Of The Garr",
+      "isNap": false
+    },
+    {
+      "time": "16:15",
+      "horse": "Green Valentine",
+      "isNap": false
+    },
+    {
+      "time": "17:25",
+      "horse": "Elettaria",
+      "isNap": false
+    },
+    {
+      "time": "17:55",
+      "horse": "Martin'S Brig",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Desert Treasure",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Startled Lady",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Offiah'S Boy",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Summertime Blues",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Campani",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Another Abbot",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Lost Signal",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Addison Grey",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "Silent Flame",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Dayzee",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Jet Black",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "King Of The Dance",
+      "isNap": false
+    }
+  ]
+}
