@@ -2958,13 +2958,16 @@ export function PicksRaceRow({
                 odds={odds}
                 extraText={`${timePerFurlong?.toFixed(
                   1
-                )} ${averages_beaten?.rpr?.toFixed(2)}  ${maxes_beaten?.rpr} `}
+                )} ${averages_beaten?.rpr?.toFixed(2)}  ${
+                  maxes_beaten?.rpr
+                }  ${count.toFixed(1)}`}
                 oddsHighlight={countGood && isEwable && odds >= 12}
                 isNonRunner={isNonRunner(race.time, name)}
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight3={
                   countGood &&
+                  isEwable &&
                   lastRaceTypeGood &&
                   rprAvgBeatenToRaceBeatenMaxGood &&
                   rprMaxBeatenToRaceBeatenMaxGood
@@ -2981,6 +2984,7 @@ export function PicksRaceRow({
                 }
                 highlight4={
                   countGood &&
+                  isEwable &&
                   lastRaceTypeGood &&
                   rprAvgBeatenToRaceBeatenMaxGood &&
                   rprMaxBeatenToRaceBeatenMaxGood &&
