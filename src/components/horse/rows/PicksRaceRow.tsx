@@ -3008,6 +3008,10 @@ export function PicksRaceRow({
                 starsToBeHigherThan={starsToBeHigherThan}
                 stars={[
                   {
+                    title: "isEwable",
+                    value: Boolean(isEwable),
+                  },
+                  {
                     title: "countGood",
                     value: Boolean(countGood),
                   },

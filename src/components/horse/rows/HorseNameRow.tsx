@@ -5,6 +5,7 @@ import { HoverTooltip } from "@/components/ui/HoverTooltip";
 import { twMerge } from "tailwind-merge";
 
 export type StarTitle =
+  | "isEwable"
   | "countGood"
   | "bestBeatenRprGood"
   | "bestBeatenRprMaxGood"
