@@ -1,0 +1,311 @@
+{
+  "date": "2025-07-28",
+  "tips": [
+    {
+      "time": "15:00",
+      "horse": "Redarna",
+      "tipster": "Chris Connolly",
+      "score": "26.0"
+    },
+    {
+      "time": "15:30",
+      "horse": "Jannas Journey",
+      "tipster": "Steve Mullington",
+      "score": "21.5"
+    },
+    {
+      "time": "19:25",
+      "horse": "Habrdi",
+      "tipster": "Farringdon",
+      "score": "19.2"
+    },
+    {
+      "time": "18:30",
+      "horse": "Finalise",
+      "tipster": "Lee Sobot",
+      "score": "12.9"
+    },
+    {
+      "time": "19:15",
+      "horse": "Highbury See See",
+      "tipster": "The Brigadier",
+      "score": "11.2"
+    },
+    {
+      "time": "18:40",
+      "horse": "Comfort Zone",
+      "tipster": "Ben Morgan",
+      "score": "9.1"
+    },
+    {
+      "time": "15:15",
+      "horse": "String Of Pearls",
+      "tipster": "Marlborough",
+      "score": "3.2"
+    },
+    {
+      "time": "15:00",
+      "horse": "Kelpie Grey",
+      "tipster": "Melissa Jones",
+      "score": "1.9"
+    },
+    {
+      "time": "15:00",
+      "horse": "Kelpie Grey",
+      "tipster": "Glendale",
+      "score": "-0.6"
+    },
+    {
+      "time": "20:00",
+      "horse": "Bint Havana Gold",
+      "tipster": "Lambourn",
+      "score": "-0.8"
+    },
+    {
+      "time": "19:25",
+      "horse": "Altmore",
+      "tipster": "Rory Delargy",
+      "score": "-2.4"
+    },
+    {
+      "time": "15:15",
+      "horse": "String Of Pearls",
+      "tipster": "Templegate",
+      "score": "-2.8"
+    },
+    {
+      "time": "18:10",
+      "horse": "Constitution River",
+      "tipster": "Mercury",
+      "score": "-4.1"
+    },
+    {
+      "time": "15:00",
+      "horse": "Kelpie Grey",
+      "tipster": "The North",
+      "score": "-5.8"
+    },
+    {
+      "time": "17:50",
+      "horse": "Special Dividend",
+      "tipster": "Whistler",
+      "score": "-10.2"
+    },
+    {
+      "time": "15:47",
+      "horse": "Kilima",
+      "tipster": "Dean Kilbryde",
+      "score": "-10.2"
+    },
+    {
+      "time": "14:15",
+      "horse": "Rogue Dynasty",
+      "tipster": "Rockavon",
+      "score": "-10.7"
+    },
+    {
+      "time": "18:40",
+      "horse": "Toll Stone",
+      "tipster": "Luke Tucker",
+      "score": "-12.6"
+    },
+    {
+      "time": "15:15",
+      "horse": "String Of Pearls",
+      "tipster": "The Judge",
+      "score": "-12.4"
+    },
+    {
+      "time": "18:10",
+      "horse": "Constitution River",
+      "tipster": "Computeform",
+      "score": "-13.3"
+    },
+    {
+      "time": "20:10",
+      "horse": "Calibos",
+      "tipster": "Fortunatus",
+      "score": "-13.8"
+    },
+    {
+      "time": "21:00",
+      "horse": "Hamdani Cruiser",
+      "tipster": "Matt Polley",
+      "score": "-14.5"
+    },
+    {
+      "time": "15:00",
+      "horse": "Kelpie Grey",
+      "tipster": "Robin Goodfellow",
+      "score": "-14.3"
+    },
+    {
+      "time": "14:00",
+      "horse": "Shouldbeanothering",
+      "tipster": "Newmarket",
+      "score": "-15.1"
+    },
+    {
+      "time": "20:10",
+      "horse": "Havana Tobouggaloo",
+      "tipster": "West Country",
+      "score": "-16.8"
+    },
+    {
+      "time": "19:05",
+      "horse": "Heaven Knows",
+      "tipster": "Ross Shepherd",
+      "score": "-17.3"
+    },
+    {
+      "time": "15:47",
+      "horse": "Rolling Luck",
+      "tipster": "The Punt",
+      "score": "-17.8"
+    },
+    {
+      "time": "15:00",
+      "horse": "Redarna",
+      "tipster": "Chris Wright",
+      "score": "-17.8"
+    },
+    {
+      "time": "16:40",
+      "horse": "Ski Angel",
+      "tipster": "Postdata",
+      "score": "-20.7"
+    },
+    {
+      "time": "16:05",
+      "horse": "Jujubella",
+      "tipster": "Garry Owen",
+      "score": "-20.1"
+    },
+    {
+      "time": "20:10",
+      "horse": "Calibos",
+      "tipster": "Newsboy",
+      "score": "-21.8"
+    },
+    {
+      "time": "18:40",
+      "horse": "Familiar Dreams",
+      "tipster": "Brian Flanagan",
+      "score": "-22.4"
+    },
+    {
+      "time": "18:52",
+      "horse": "Tiempo Alegre",
+      "tipster": "RP Ratings",
+      "score": "-23.7"
+    },
+    {
+      "time": "18:40",
+      "horse": "Toll Stone",
+      "tipster": "Jim Delahunt",
+      "score": "-23.9"
+    },
+    {
+      "time": "18:30",
+      "horse": "Finalise",
+      "tipster": "Ratings Hub",
+      "score": "-24.2"
+    },
+    {
+      "time": "14:15",
+      "horse": "Rogue Dynasty",
+      "tipster": "Spotlight",
+      "score": "-26.5"
+    },
+    {
+      "time": "16:05",
+      "horse": "Crown Of Oaks",
+      "tipster": "Tipman Tips",
+      "score": "-26.0"
+    },
+    {
+      "time": "19:15",
+      "horse": "It'sneverjustone",
+      "tipster": "Karl Hedley",
+      "score": "-29.8"
+    },
+    {
+      "time": "14:45",
+      "horse": "Monastry",
+      "tipster": "Jeffrey Ross",
+      "score": "-35.8"
+    },
+    {
+      "time": "15:15",
+      "horse": "String Of Pearls",
+      "tipster": "Rob Wright",
+      "score": "-36.3"
+    },
+    {
+      "time": "15:30",
+      "horse": "Jannas Journey",
+      "tipster": "Jason Heavey",
+      "score": "-35.5"
+    },
+    {
+      "time": "15:15",
+      "horse": "String Of Pearls",
+      "tipster": "Adrian Wall",
+      "score": "-36.8"
+    },
+    {
+      "time": "16:05",
+      "horse": "Crown Of Oaks",
+      "tipster": "The Duke",
+      "score": "-43.1"
+    },
+    {
+      "time": "17:40",
+      "horse": "Son Of Hypnos",
+      "tipster": "Ian Gaughran",
+      "score": "-43.1"
+    },
+    {
+      "time": "15:00",
+      "horse": "Boy Douglas",
+      "tipster": "The Score",
+      "score": "-43.1"
+    },
+    {
+      "time": "19:15",
+      "horse": "Sun Soldier",
+      "tipster": "On The Nose",
+      "score": "-44.9"
+    },
+    {
+      "time": "15:00",
+      "horse": "Kelpie Grey",
+      "tipster": "Jon Freeman",
+      "score": "-46.0"
+    },
+    {
+      "time": "20:10",
+      "horse": "Pure Theory",
+      "tipster": "Moorestyle",
+      "score": "-46.9"
+    },
+    {
+      "time": "17:10",
+      "horse": "Eternal Echo",
+      "tipster": "Sam Hardy",
+      "score": "-53.8"
+    },
+    {
+      "time": "15:30",
+      "horse": "Yellow Lemons",
+      "tipster": "Rory Paddock",
+      "score": "-63.3"
+    },
+    {
+      "time": "14:30",
+      "horse": "Giselles Izzy",
+      "tipster": "Andrew Mount",
+      "score": "-65.1"
+    }
+  ]
+}

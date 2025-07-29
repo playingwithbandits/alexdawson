@@ -1,0 +1,97 @@
+[
+  {
+    "courseName": "Ayr",
+    "raceCardsCourseUrl": "/racecards/2025-07-28#ayr",
+    "raceCardsCourseMeetingsUrl": "/racecards/3/ayr/2025-07-28",
+    "going": "GOOD, Good to soft in places (GoingStick: 7.6)",
+    "weather": "Light rain",
+    "stallsPosition": "5f, 5.5f & 6f - Centre; 7f & 1m2f - Outside; 1m - Inside",
+    "races": [
+      {
+        "raceTime": "2:00",
+        "raceCardUrl": "/racecards/3/ayr/2025-07-28/898897",
+        "horses": [
+          {
+            "horseName": "Napolian",
+            "horseProfileUrl": "/profile/horse/7204792/napolian/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Galway",
+    "raceCardsCourseUrl": "/racecards/2025-07-28#galway",
+    "raceCardsCourseMeetingsUrl": "/racecards/183/galway/2025-07-28",
+    "going": "Jumps course - GOOD; Flat course - YIELDING (Selective watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-07-28#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-07-28",
+    "going": "TAPETA: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-07-28/899223",
+        "horses": [
+          {
+            "horseName": "Brazilian Rose",
+            "horseProfileUrl": "/profile/horse/6296589/brazilian-rose/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Windsor",
+    "raceCardsCourseUrl": "/racecards/2025-07-28#windsor",
+    "raceCardsCourseMeetingsUrl": "/racecards/93/windsor/2025-07-28",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.5) (Watering) (Rail movements: 6.30, 8.10 & 8.40 +28yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m - Inside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-07-28#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-07-28",
+    "going": "SOFT (GoingStick: 4.7) (Rail movements: 3.15, 3.47 & 4.22 +9yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "7f & 1m - Centre; 1m6f - Stands' side; 1m2f & 1m3f - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Del Mar",
+    "raceCardsCourseUrl": "/racecards/2025-07-28#del-mar",
+    "raceCardsCourseMeetingsUrl": "/racecards/444/del-mar/2025-07-28",
+    "going": "TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "2:03",
+        "raceCardUrl": "/racecards/444/del-mar/2025-07-28/900473",
+        "horses": [
+          {
+            "horseName": "Atitlan",
+            "horseProfileUrl": "/profile/horse/6202513/atitlan/",
+            "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Gold Phoenix",
+            "horseProfileUrl": "/profile/horse/3423096/gold-phoenix/",
+            "raceNumber": "(5)"
+          }
+        ]
+      }
+    ]
+  }
+]

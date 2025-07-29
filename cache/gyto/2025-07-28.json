@@ -1,0 +1,160 @@
+{
+  "date": "2025-07-28",
+  "tips": [
+    {
+      "time": "14:00",
+      "horse": "Napolian",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Danzan",
+      "isNap": false
+    },
+    {
+      "time": "15:00",
+      "horse": "Kelpie Grey",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Jannas Journey",
+      "isNap": true
+    },
+    {
+      "time": "16:05",
+      "horse": "Crown Of Oaks",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Ski Angel",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Dingwall",
+      "isNap": false
+    },
+    {
+      "time": "14:15",
+      "horse": "Born A Rebel",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Starlight Time",
+      "isNap": false
+    },
+    {
+      "time": "15:47",
+      "horse": "Rolling Luck",
+      "isNap": false
+    },
+    {
+      "time": "16:22",
+      "horse": "Sense Of Reason",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Hinitsa Bay",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Davy Crockett",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Jerrari",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Constitution River",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Comfort Zone",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Honeysuckle Rose",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Starford",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Coutach",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Jax Edge",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Hilitany",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Finalise",
+      "isNap": true
+    },
+    {
+      "time": "19:05",
+      "horse": "Badri",
+      "isNap": false
+    },
+    {
+      "time": "19:35",
+      "horse": "Vault Of Heaven",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Midsummer Music",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Special Dividend",
+      "isNap": false
+    },
+    {
+      "time": "18:20",
+      "horse": "Key Of Magic",
+      "isNap": false
+    },
+    {
+      "time": "18:52",
+      "horse": "Linear Spirit",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "Altmore",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Dalton Park",
+      "isNap": false
+    },
+    {
+      "time": "21:00",
+      "horse": "Frostmagic",
+      "isNap": false
+    }
+  ]
+}
