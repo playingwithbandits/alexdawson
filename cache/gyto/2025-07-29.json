@@ -1,0 +1,160 @@
+{
+  "date": "2025-07-29",
+  "tips": [
+    {
+      "time": "13:55",
+      "horse": "Dorset",
+      "isNap": true
+    },
+    {
+      "time": "14:30",
+      "horse": "Jonquil",
+      "isNap": true
+    },
+    {
+      "time": "15:05",
+      "horse": "Illinois",
+      "isNap": false
+    },
+    {
+      "time": "15:45",
+      "horse": "Enchanting",
+      "isNap": false
+    },
+    {
+      "time": "16:20",
+      "horse": "High Approval",
+      "isNap": false
+    },
+    {
+      "time": "16:55",
+      "horse": "Protest",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Easy Peeler",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Blue Yonder",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Rosso Levanto",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Ancient Egypt",
+      "isNap": false
+    },
+    {
+      "time": "16:00",
+      "horse": "Haberdash",
+      "isNap": false
+    },
+    {
+      "time": "16:35",
+      "horse": "U Turn",
+      "isNap": false
+    },
+    {
+      "time": "17:10",
+      "horse": "Catch Cunningham",
+      "isNap": false
+    },
+    {
+      "time": "17:47",
+      "horse": "Dr Rio",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "Emily Love",
+      "isNap": false
+    },
+    {
+      "time": "17:37",
+      "horse": "My Great Mate",
+      "isNap": false
+    },
+    {
+      "time": "18:07",
+      "horse": "Amelia Earhart",
+      "isNap": false
+    },
+    {
+      "time": "18:40",
+      "horse": "Orandi",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Collecting Coin",
+      "isNap": false
+    },
+    {
+      "time": "19:50",
+      "horse": "Exquisite Acclaim",
+      "isNap": false
+    },
+    {
+      "time": "20:20",
+      "horse": "Comfort Line",
+      "isNap": false
+    },
+    {
+      "time": "17:42",
+      "horse": "Oldbury Lad",
+      "isNap": false
+    },
+    {
+      "time": "18:50",
+      "horse": "Sundiata Keita",
+      "isNap": false
+    },
+    {
+      "time": "19:25",
+      "horse": "Zilfee",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Royal Jet",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Queen Of Steel",
+      "isNap": false
+    },
+    {
+      "time": "18:00",
+      "horse": "Al Shaham",
+      "isNap": false
+    },
+    {
+      "time": "18:30",
+      "horse": "Rajak",
+      "isNap": false
+    },
+    {
+      "time": "19:05",
+      "horse": "Bosphorus Rose",
+      "isNap": false
+    },
+    {
+      "time": "19:40",
+      "horse": "Latin Five",
+      "isNap": false
+    },
+    {
+      "time": "20:40",
+      "horse": "Homeland",
+      "isNap": false
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+[
+  {
+    "courseName": "Beverley",
+    "raceCardsCourseUrl": "/racecards/2025-07-29#beverley",
+    "raceCardsCourseMeetingsUrl": "/racecards/6/beverley/2025-07-29",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 6.5) (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "2:10",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-29/898915",
+        "horses": [
+          {
+            "horseName": "Persian Phoenix",
+            "horseProfileUrl": "/profile/horse/5073364/persian-phoenix/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Highwaygrey",
+            "horseProfileUrl": "/profile/horse/2168858/highwaygrey/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Apodictique",
+            "horseProfileUrl": "/profile/horse/4983972/apodictique/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:00",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-29/898914",
+        "horses": [
+          {
+            "horseName": "Haberdash",
+            "horseProfileUrl": "/profile/horse/7395267/haberdash/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:10",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-29/898916",
+        "horses": [
+          {
+            "horseName": "Military Girl",
+            "horseProfileUrl": "/profile/horse/58950425/military-girl/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:47",
+        "raceCardUrl": "/racecards/6/beverley/2025-07-29/898911",
+        "horses": [
+          {
+            "horseName": "Renewable Dream",
+            "horseProfileUrl": "/profile/horse/6759105/renewable-dream/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-07-29#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-07-29",
+    "going": "GOOD (GoingStick: 7.1) (Watered) (Rail movements: 8.30 +14yds)",
+    "weather": "Light rain",
+    "stallsPosition": "1m & 1m6f - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "6:50",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-07-29/898921",
+        "horses": [
+          {
+            "horseName": "Sundiata Keita",
+            "horseProfileUrl": "/profile/horse/6701904/sundiata-keita/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Galway",
+    "raceCardsCourseUrl": "/racecards/2025-07-29#galway",
+    "raceCardsCourseMeetingsUrl": "/racecards/183/galway/2025-07-29",
+    "going": "Jumps course - GOOD; Flat course - YIELDING, Yielding to soft in places (Selective watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/183/galway/2025-07-29/900385",
+        "horses": [
+          {
+            "horseName": "Pour One More",
+            "horseProfileUrl": "/profile/horse/4965724/pour-one-more/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/183/galway/2025-07-29/900388",
+        "horses": [
+          {
+            "horseName": "Skippinandajumpin",
+            "horseProfileUrl": "/profile/horse/7757770/skippinandajumpin/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Raykir",
+            "horseProfileUrl": "/profile/horse/6111583/raykir/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:50",
+        "raceCardUrl": "/racecards/183/galway/2025-07-29/900389",
+        "horses": [
+          {
+            "horseName": "Mile End",
+            "horseProfileUrl": "/profile/horse/4403169/mile-end/",
+            "raceNumber": "(15)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:20",
+        "raceCardUrl": "/racecards/183/galway/2025-07-29/900390",
+        "horses": [
+          {
+            "horseName": "Darkdeserthighway",
+            "horseProfileUrl": "/profile/horse/3315564/darkdeserthighway/",
+            "raceNumber": "(11)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-07-29#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-07-29",
+    "going": "GOOD (GoingStick: 7.1) (Watered) (Rail movements: 1.20 +5yds and 1.55, 2.30, 3.05 & 4.55 +10yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "5f, 6f, 7f & 1m - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/21/goodwood/2025-07-29/898932",
+        "horses": [
+          {
+            "horseName": "My Champion",
+            "horseProfileUrl": "/profile/horse/7891677/my-champion/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Manly Fireball",
+            "horseProfileUrl": "/profile/horse/7204905/manly-fireball/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/21/goodwood/2025-07-29/898933",
+        "horses": [
+          {
+            "horseName": "Rockymountainway",
+            "horseProfileUrl": "/profile/horse/5415114/rockymountainway/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ripon",
+    "raceCardsCourseUrl": "/racecards/2025-07-29#ripon",
+    "raceCardsCourseMeetingsUrl": "/racecards/49/ripon/2025-07-29",
+    "going": "GOOD (GoingStick: 7.4) (Rail movements: 7.05, 8.10 & 8.40 +4yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Stands' side; 1m4f - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "7:05",
+        "raceCardUrl": "/racecards/49/ripon/2025-07-29/898923",
+        "horses": [
+          {
+            "horseName": "Bosphorus Rose",
+            "horseProfileUrl": "/profile/horse/6541722/bosphorus-rose/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  }
+]

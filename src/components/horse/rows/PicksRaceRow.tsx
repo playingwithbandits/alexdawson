@@ -2762,12 +2762,12 @@ export function PicksRaceRow({
               (averages_beaten?.rpr || 0) >=
               (race.raceStats?.lastRaceStatsRaceInfo?.beatenMaxOfAvgs?.rpr ||
                 0) *
-                0.9;
+                0.95;
 
             const rprMaxBeatenToRaceBeatenMaxGood =
               (maxes_beaten?.rpr || 0) >=
               (race.raceStats?.lastRaceStatsRaceInfo?.beatenMax?.rpr || 0) *
-                0.9;
+                0.95;
 
             const horseLastRaceType = getRaceType(raceTypeCode);
             const lastRaceTypeGood = race.raceType === horseLastRaceType;
