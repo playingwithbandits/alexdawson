@@ -250,6 +250,8 @@ export function calculateHorseScore2(
 
     const isAW =
       raceGoing.includes("standard") ||
+      raceGoing.includes("slow") ||
+      raceGoing.includes("fast") ||
       meetingDetails.type?.toLowerCase().includes("all-weather") ||
       meetingDetails.surface?.toLowerCase().includes("polytrack") ||
       meetingDetails.surface?.toLowerCase().includes("tapeta");

@@ -1132,9 +1132,6 @@ export function PicksRaceRow({
                   results={results}
                   time={race.time}
                   odds={picksWithFastTimePerFurlongWeighted[x_i][1]}
-                  highlight2={
-                    picksWithFastTimePerFurlongWeighted[x_i][1] >= THRESHOLD
-                  }
                   highlight3={
                     picksWithFastTimePerFurlongWeighted[x_i][1] >=
                     THRESHOLD_RATING
@@ -1156,9 +1153,6 @@ export function PicksRaceRow({
                   results={results}
                   time={race.time}
                   odds={picksWithBestBeatenOrWeighted[x_i][1]}
-                  highlight2={
-                    picksWithBestBeatenOrWeighted[x_i][1] >= THRESHOLD
-                  }
                   highlight3={
                     picksWithBestBeatenOrWeighted[x_i][1] >= THRESHOLD_RATING
                   }
@@ -1176,9 +1170,6 @@ export function PicksRaceRow({
                   results={results}
                   time={race.time}
                   odds={picksWithBestBeatenRprWeighted[x_i][1]}
-                  highlight2={
-                    picksWithBestBeatenRprWeighted[x_i][1] >= THRESHOLD
-                  }
                   highlight3={
                     picksWithBestBeatenRprWeighted[x_i][1] >=
                     THRESHOLD_BEATEN_RPR
@@ -1198,9 +1189,6 @@ export function PicksRaceRow({
                   results={results}
                   time={race.time}
                   odds={picksWithBestBeatenRprMaxWeighted[x_i][1]}
-                  highlight2={
-                    picksWithBestBeatenRprMaxWeighted[x_i][1] >= THRESHOLD
-                  }
                   highlight3={
                     picksWithBestBeatenRprMaxWeighted[x_i][1] >=
                     THRESHOLD_BEATEN_RPR
@@ -1219,9 +1207,6 @@ export function PicksRaceRow({
                   results={results}
                   time={race.time}
                   odds={picksWithBestBeatenTsWeighted[x_i][1]}
-                  highlight2={
-                    picksWithBestBeatenTsWeighted[x_i][1] >= THRESHOLD
-                  }
                   highlight3={
                     picksWithBestBeatenTsWeighted[x_i][1] >= THRESHOLD_RATING
                   }
@@ -2971,7 +2956,9 @@ export function PicksRaceRow({
                 results={results}
                 time={race.time}
                 odds={odds}
-                extraText={`${count.toFixed(1)} : ${perc}%`}
+                extraText={`${timePerFurlong?.toFixed(
+                  1
+                )} ${averages_beaten?.rpr?.toFixed(2)}  ${maxes_beaten?.rpr} `}
                 oddsHighlight={countGood && isEwable && odds >= 12}
                 isNonRunner={isNonRunner(race.time, name)}
                 title={paraGraph}

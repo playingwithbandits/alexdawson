@@ -375,7 +375,13 @@ export async function parseRaceDetails(
   // ❌ Should NOT match: "Hurdlemore Oaks", "Hurdleable", "Hurdler"
   const isHurdle = /\bhurdle(?:\b|$)/.test(raceTitleLower || "");
   const isChase = /\bchase(?:\b|$)/.test(raceTitleLower || "");
-  const isAW = baseRaceData.trackConfig?.toLowerCase().includes("(aw)");
+  const isAW =
+    baseRaceData?.going?.includes("standard") ||
+    baseRaceData?.going?.includes("slow") ||
+    baseRaceData?.going?.includes("fast") ||
+    meetingDetails.type?.toLowerCase().includes("all-weather") ||
+    meetingDetails.surface?.toLowerCase().includes("polytrack") ||
+    meetingDetails.surface?.toLowerCase().includes("tapeta");
 
   let raceCode = "F";
   if (isHurdle) {
