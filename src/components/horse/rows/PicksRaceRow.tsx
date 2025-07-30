@@ -19,6 +19,7 @@ import {
   horseNameToKey,
   isGoodDistanceToWinner,
   placeToPlaceKey,
+  raceCodeToText,
 } from "@/lib/racing/scores/funcs";
 import { HorseNameRow } from "./HorseNameRow";
 import { twMerge } from "tailwind-merge";
@@ -2818,7 +2819,8 @@ export function PicksRaceRow({
                     2
                   )}, Time/F: (${x?.lastRaceStatsObj?.info?.timePerFurlong?.toFixed(
                     2
-                  )})`
+                  )})` +
+                  ` (${raceCodeToText(x?.lastRaceTypeCode)})`
                 );
               }),
             ]
