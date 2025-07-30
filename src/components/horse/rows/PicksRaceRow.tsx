@@ -2758,7 +2758,7 @@ export function PicksRaceRow({
             const lastRaceTypeGood = race.raceType === horseLastRaceType;
 
             const allValidFormRowsStatsDataStats = race.horses?.find(
-              (h) => h.name === x.name
+              (h) => h.name === name
             )?.allValidFormRowsStatsDataStats;
             const {
               maxBeatenAvgsRpr,

@@ -90,7 +90,7 @@ export async function parseRaceDetails(
   const rows = Array.from(rowsElements);
   //console.log(`Found ${rows.length} horses to parse`);
 
-  const sixtyDaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
+  const fourtyDaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 40);
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const horses: Horse[] = await Promise.all(
     rows.map(async (row) => {
@@ -127,7 +127,7 @@ export async function parseRaceDetails(
             ?.split("/")?.[4] || "";
 
         const date = new Date(formRowDate || "");
-        return isValidOutcome(raceOutcomeCode) && date > sixtyDaysAgo;
+        return isValidOutcome(raceOutcomeCode) && date > fourtyDaysAgo;
       });
 
       const allValidFormRowsStatsData = await Promise.all(
