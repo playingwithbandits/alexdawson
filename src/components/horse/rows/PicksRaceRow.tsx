@@ -2768,24 +2768,25 @@ export function PicksRaceRow({
             } = allValidFormRowsStatsDataStats || {};
 
             const maxBeatenAvgsRprGood =
-              (maxBeatenAvgsRpr || 0) -
+              maxBeatenAvgsRpr &&
+              (maxBeatenAvgsRpr || 0) >=
                 (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
                   ?.maxBeatenAvgsRpr || 0) *
-                  0.9 >=
-              0;
+                  0.95;
 
             const maxBeatenMaxesRprGood =
-              (maxBeatenMaxesRpr || 0) -
+              maxBeatenMaxesRpr &&
+              (maxBeatenMaxesRpr || 0) >=
                 (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
                   ?.maxBeatenMaxesRpr || 0) *
-                  0.9 >=
-              0;
+                  0.95;
 
             const minTimePerFurlongGood =
+              minTimePerFurlong &&
               (minTimePerFurlong || 0) <=
-              (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                ?.minTimePerFurlong || 0) *
-                1.1;
+                (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
+                  ?.minTimePerFurlong || 0) *
+                  1.05;
 
             const rawFormRowsStatsArrText = [
               `Max Beaten Avgs RPR: <span style='color: ${
@@ -2799,6 +2800,15 @@ export function PicksRaceRow({
               )}</span> | Min Time Per Furlong: <span style='color: ${
                 minTimePerFurlongGood ? "#2df8ff" : "#fff"
               }'>${minTimePerFurlong?.toFixed(2)}</span>`,
+
+              `Race Stats: Max Beaten Avgs RPR: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.maxBeatenAvgsRpr?.toFixed(
+                2
+              )} | Max Beaten Maxes RPR: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.maxBeatenMaxesRpr?.toFixed(
+                2
+              )} | Min Time Per Furlong: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.minTimePerFurlong?.toFixed(
+                2
+              )}`,
+
               ...(rawFormRowsStatsData || []).map((x) => {
                 return (
                   `<span style='color: #666'>${x?.formRowValidDate}</span>` +
