@@ -1,0 +1,47 @@
+[
+  {
+    "courseName": "Epsom",
+    "raceCardsCourseUrl": "/racecards/2025-07-31#epsom",
+    "raceCardsCourseMeetingsUrl": "/racecards/17/epsom/2025-07-31",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.2) (Watering)",
+    "weather": "Rain",
+    "stallsPosition": "6f - Outside; 1m 4f - Centre; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Galway",
+    "raceCardsCourseUrl": "/racecards/2025-07-31#galway",
+    "raceCardsCourseMeetingsUrl": "/racecards/183/galway/2025-07-31",
+    "going": "Jumps course - GOOD; Flat course - YIELDING",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-07-31#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-07-31",
+    "going": "GOOD (GoingStick: 7.2) (Rail movements: 1.20, 2.30 & 3.05 +5yds and 4.20, 4.55 & 5.30 +10yds)",
+    "weather": "Rain",
+    "stallsPosition": "5f, 6f, 7f, 1m - Centre; 1m4f - Outside; Rest - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Nottingham",
+    "raceCardsCourseUrl": "/racecards/2025-07-31#nottingham",
+    "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-07-31",
+    "going": "GOOD (GoingStick: 6.5) (Watered) (Outer Track)",
+    "weather": "Light rain",
+    "stallsPosition": "5f, 6f & 1m - Centre; 1m 2f & 1m 6f - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Wolverhampton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-07-31#wolverhampton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/513/wolverhampton-aw/2025-07-31",
+    "going": "TAPETA: STANDARD",
+    "weather": "Light rain",
+    "stallsPosition": "Inside",
+    "races": []
+  }
+]

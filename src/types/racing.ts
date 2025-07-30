@@ -135,11 +135,27 @@ export interface RaceStats {
   };
 }
 
+export interface AllValidFormRowsStatsDataStatsType {
+  raw: {
+    formRowValidDate: string | undefined;
+    lastRaceStatsObj: LastRaceStats | undefined;
+    matchingFormObj: FormEntry | undefined;
+    name: string;
+    lastFormRowDistanceFurlongAccurate: number;
+    lastRaceTypeCode: string;
+  }[];
+  maxBeatenAvgsRpr: number;
+  maxBeatenMaxesRpr: number;
+  minTimePerFurlong: number;
+}
+
 export interface Race {
   id?: string;
   time: string;
   title: string;
   raceExtraInfo?: RaceAccordionStats;
+
+  allValidFormRowsStatsDataStats?: AllValidFormRowsStatsDataStatsType;
   runners: number;
   distance: number;
   class: number;

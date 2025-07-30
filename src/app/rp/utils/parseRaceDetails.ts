@@ -8,9 +8,6 @@ import { fetchHorseForm } from "@/lib/racing/fetchHorseForm";
 import { generateRaceComment } from "@/lib/racing/generateRaceComment";
 import { getTrackConfiguration } from "@/lib/racing/getTrackConfiguration";
 import { calculateHorseScore3 } from "@/lib/racing/scores/calculateHorseScore3";
-import type { Bet, Horse, Meeting, Race } from "@/types/racing";
-import { fetchPredictions } from "./fetchPredictions";
-import { fetchRaceAccordion } from "./fetchRaceAccordion";
 import {
   getRaceType,
   horseNameToKey,
@@ -18,8 +15,16 @@ import {
   parseDistance,
   placeToPlaceKey,
 } from "@/lib/racing/scores/funcs";
-import { calculateHorseScore4 } from "@/lib/racing/scores/calculateHorseScore4";
+import type {
+  AllValidFormRowsStatsDataStatsType,
+  Bet,
+  Horse,
+  Meeting,
+  Race,
+} from "@/types/racing";
 import { fetchFormRaceDetails } from "./fetchFormRaceDetails";
+import { fetchPredictions } from "./fetchPredictions";
+import { fetchRaceAccordion } from "./fetchRaceAccordion";
 import { lastRaceToLastRaceStats } from "./lastRaceToLastRaceStats";
 
 export async function parseRaceDetails(
@@ -125,51 +130,91 @@ export async function parseRaceDetails(
         return isValidOutcome(raceOutcomeCode) && date > sixtyDaysAgo;
       });
 
-      const latestFormRow = formRowsValid?.[0];
-      const outcomeCell = latestFormRow?.querySelector(
-        '[data-test-selector="RC-runnerFormRow__outcome"]'
-      );
-      const outcomeLink = outcomeCell?.querySelector("a");
-      const lastRaceLink = outcomeLink?.href
-        ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
-          new URL(outcomeLink.href).pathname
-        : "";
-      const lastRaceEle = lastRaceLink
-        ? await fetchFormRaceDetails(lastRaceLink)
-        : undefined;
+      const allValidFormRowsStatsData = await Promise.all(
+        formRowsValid.map(async (latestFormRow) => {
+          const outcomeCell = latestFormRow?.querySelector(
+            '[data-test-selector="RC-runnerFormRow__outcome"]'
+          );
+          const outcomeLink = outcomeCell?.querySelector("a");
+          const lastRaceLink = outcomeLink?.href
+            ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+              new URL(outcomeLink.href).pathname
+            : "";
+          const lastRaceEle = lastRaceLink
+            ? await fetchFormRaceDetails(lastRaceLink)
+            : undefined;
 
-      const formRowValidDate =
-        latestFormRow
-          ?.querySelector('[data-test-selector="RC-runnerFormLink__results"]')
-          ?.getAttribute("href")
-          ?.split("/")?.[4] || undefined;
+          const formRowValidDate =
+            latestFormRow
+              ?.querySelector(
+                '[data-test-selector="RC-runnerFormLink__results"]'
+              )
+              ?.getAttribute("href")
+              ?.split("/")?.[4] || undefined;
 
-      const matchingFormObj = formRowValidDate
-        ? formObj?.form?.find((x) => {
-            const date1 = x.raceDatetime
-              ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
-              : undefined;
-            const date2 = formRowValidDate
-              ? new Date(formRowValidDate || "").toISOString().split("T")[0]
-              : undefined;
-            return date1 === date2;
-          })
-        : formObj?.form?.[0];
+          const matchingFormObj = formRowValidDate
+            ? formObj?.form?.find((x) => {
+                const date1 = x.raceDatetime
+                  ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
+                  : undefined;
+                const date2 = formRowValidDate
+                  ? new Date(formRowValidDate || "").toISOString().split("T")[0]
+                  : undefined;
+                return date1 === date2;
+              })
+            : formObj?.form?.[0];
 
-      const lastRaceTypeCode = matchingFormObj?.raceTypeCode || "";
+          const lastRaceTypeCode = matchingFormObj?.raceTypeCode || "";
 
-      const lastFormRowFromDistanceYard = matchingFormObj?.distanceYard || 0;
-      const lastFormRowDistanceFurlongAccurate =
-        lastFormRowFromDistanceYard * 0.00454545;
+          const lastFormRowFromDistanceYard =
+            matchingFormObj?.distanceYard || 0;
+          const lastFormRowDistanceFurlongAccurate =
+            lastFormRowFromDistanceYard * 0.00454545;
 
-      const lastRaceStatsObj = lastRaceEle
-        ? await lastRaceToLastRaceStats(
-            lastRaceEle,
+          const lastRaceStatsObj = lastRaceEle
+            ? await lastRaceToLastRaceStats(
+                lastRaceEle,
+                name,
+                lastFormRowDistanceFurlongAccurate || raceDistance,
+                lastRaceTypeCode
+              )
+            : undefined;
+
+          return {
+            formRowValidDate,
+            lastRaceStatsObj,
+            matchingFormObj,
             name,
-            lastFormRowDistanceFurlongAccurate || raceDistance,
-            lastRaceTypeCode
-          )
-        : undefined;
+            lastFormRowDistanceFurlongAccurate:
+              lastFormRowDistanceFurlongAccurate || raceDistance,
+            lastRaceTypeCode,
+          };
+        })
+      );
+
+      const allFormRowsStatsDataStatsObjs = allValidFormRowsStatsData
+        .map((x) => x.lastRaceStatsObj)
+        .filter((x) => x !== undefined);
+
+      const minTimePerFurlong = Math.min(
+        ...allFormRowsStatsDataStatsObjs.map(
+          (x) => x.info?.timePerFurlong || 999
+        )
+      );
+      const maxBeatenAvgsRpr = Math.max(
+        ...allFormRowsStatsDataStatsObjs.map((x) => x.averages_beaten?.rpr || 0)
+      );
+      const maxBeatenMaxesRpr = Math.max(
+        ...allFormRowsStatsDataStatsObjs.map((x) => x.maxes_beaten?.rpr || 0)
+      );
+
+      const allValidFormRowsStatsDataStats: AllValidFormRowsStatsDataStatsType =
+        {
+          raw: allValidFormRowsStatsData,
+          maxBeatenAvgsRpr,
+          maxBeatenMaxesRpr,
+          minTimePerFurlong,
+        };
 
       // console.log(
       //   "🏁 lastRaceToLastRaceStats",
@@ -189,7 +234,9 @@ export async function parseRaceDetails(
       return {
         name,
         profileUrl,
-        lastRaceStats: lastRaceStatsObj,
+        lastRaceStats:
+          allValidFormRowsStatsDataStats?.raw?.[0]?.lastRaceStatsObj,
+        allValidFormRowsStatsDataStats,
         formObj: {
           ...formObj,
           form: formObj?.form?.filter(
