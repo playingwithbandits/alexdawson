@@ -1,0 +1,80 @@
+[
+  {
+    "courseName": "Galway",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#galway",
+    "raceCardsCourseMeetingsUrl": "/racecards/183/galway/2025-07-30",
+    "going": "Jumps course - GOOD; Flat course - YIELDING (Selective watering)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/183/galway/2025-07-30/900395",
+        "horses": [
+          {
+            "horseName": "Goldinthevalleys",
+            "horseProfileUrl": "/profile/horse/6492187/goldinthevalleys/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-07-30",
+    "going": "GOOD (GoingStick: 7.1) (Watered) (Rail movements: 1.20 & 3.45 +5yds and 1.55, 3.05 & 4.55 +10yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f, 7f & 1m - Centre; 1m3f - Outside; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Leicester",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#leicester",
+    "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-07-30",
+    "going": "GOOD TO FIRM, Good in places (GoingStick: 7.4) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": [
+      {
+        "raceTime": "7:38",
+        "raceCardUrl": "/racecards/30/leicester/2025-07-30/898958",
+        "horses": [
+          {
+            "horseName": "Wrydcroft",
+            "horseProfileUrl": "/profile/horse/7566153/wrydcroft/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Redcar",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#redcar",
+    "raceCardsCourseMeetingsUrl": "/racecards/47/redcar/2025-07-30",
+    "going": "GOOD (GoingStick: 8.1)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Sandown",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#sandown",
+    "raceCardsCourseMeetingsUrl": "/racecards/54/sandown/2025-07-30",
+    "going": "GOOD, Good to firm in places on Round course (GoingStick: Round 6.3, Sprint 6.0) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Sprints - Far side; Remainder - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Goodwood (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#goodwood-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1335/goodwood-gb/2025-07-30",
+    "going": "GOOD (GoingStick: 7.1)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
