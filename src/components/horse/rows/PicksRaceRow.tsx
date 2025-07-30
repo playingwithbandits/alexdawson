@@ -2757,6 +2757,64 @@ export function PicksRaceRow({
             const horseLastRaceType = getRaceType(raceTypeCode);
             const lastRaceTypeGood = race.raceType === horseLastRaceType;
 
+            const allValidFormRowsStatsDataStats = race.horses?.find(
+              (h) => h.name === x.name
+            )?.allValidFormRowsStatsDataStats;
+            const {
+              maxBeatenAvgsRpr,
+              maxBeatenMaxesRpr,
+              minTimePerFurlong,
+              raw: rawFormRowsStatsData,
+            } = allValidFormRowsStatsDataStats || {};
+
+            const maxBeatenAvgsRprGood =
+              (maxBeatenAvgsRpr || 0) -
+                (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
+                  ?.maxBeatenAvgsRpr || 0) *
+                  0.9 >=
+              0;
+
+            const maxBeatenMaxesRprGood =
+              (maxBeatenMaxesRpr || 0) -
+                (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
+                  ?.maxBeatenMaxesRpr || 0) *
+                  0.9 >=
+              0;
+
+            const minTimePerFurlongGood =
+              (minTimePerFurlong || 0) <=
+              (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
+                ?.minTimePerFurlong || 0) *
+                1.1;
+
+            const rawFormRowsStatsArrText = [
+              `Max Beaten Avgs RPR: <span style='color: ${
+                maxBeatenAvgsRprGood ? "#2df8ff" : "#fff"
+              }'>${maxBeatenAvgsRpr?.toFixed(
+                2
+              )}</span> | Max Beaten Maxes RPR: <span style='color: ${
+                maxBeatenMaxesRprGood ? "#2df8ff" : "#fff"
+              }'>${maxBeatenMaxesRpr?.toFixed(
+                2
+              )}</span> | Min Time Per Furlong: <span style='color: ${
+                minTimePerFurlongGood ? "#2df8ff" : "#fff"
+              }'>${minTimePerFurlong?.toFixed(2)}</span>`,
+              ...(rawFormRowsStatsData || []).map((x) => {
+                return (
+                  `<span style='color: #666'>${x?.formRowValidDate}</span>` +
+                  `RPR: ${x?.lastRaceStatsObj?.averages_beaten?.rpr?.toFixed(
+                    2
+                  )}, Max: ${x?.lastRaceStatsObj?.maxes_beaten?.rpr?.toFixed(
+                    2
+                  )}, Time/F: (${x?.lastRaceStatsObj?.info?.timePerFurlong?.toFixed(
+                    2
+                  )})`
+                );
+              }),
+            ]
+              .filter(Boolean)
+              .join("\n");
+
             // const raceTitleLower = race.title?.toLowerCase();
 
             // Test examples for chase detection:
@@ -2940,6 +2998,8 @@ export function PicksRaceRow({
                   rpHorseComment
                 : undefined,
               lastRaceStatsText,
+
+              rawFormRowsStatsArrText,
             ]
               ?.filter((x) => x)
               .join("\n");

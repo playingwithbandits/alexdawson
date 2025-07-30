@@ -6,6 +6,7 @@ export interface Horse {
   name: string;
   profileUrl: string;
   lastRaceStats?: LastRaceStats | undefined;
+  allValidFormRowsStatsDataStats?: AllValidFormRowsStatsDataStatsType;
   formObj?: FormObj;
   number: string;
   draw?: string;
@@ -90,8 +91,15 @@ export interface LastRaceStatsRaceInfo {
   };
 }
 
+export interface AllValidFormsAllHorsesRaceStatsRaceInfoType {
+  maxBeatenAvgsRpr: number;
+  maxBeatenMaxesRpr: number;
+  minTimePerFurlong: number;
+}
+
 export interface RaceStats {
   lastRaceStatsRaceInfo: LastRaceStatsRaceInfo;
+  allValidFormsAllHorsesRaceStatsRaceInfo: AllValidFormsAllHorsesRaceStatsRaceInfoType;
   avgOfficialRating: number;
   avgRating: number;
   avgTopSpeed: number;
@@ -155,7 +163,6 @@ export interface Race {
   title: string;
   raceExtraInfo?: RaceAccordionStats;
 
-  allValidFormRowsStatsDataStats?: AllValidFormRowsStatsDataStatsType;
   runners: number;
   distance: number;
   class: number;

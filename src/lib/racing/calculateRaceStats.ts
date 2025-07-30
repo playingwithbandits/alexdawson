@@ -1,5 +1,11 @@
 import { avg, sum } from "@/lib/utils";
-import { Race, RaceStats, Horse, LastRaceStatsRaceInfo } from "@/types/racing";
+import {
+  Race,
+  RaceStats,
+  Horse,
+  LastRaceStatsRaceInfo,
+  AllValidFormsAllHorsesRaceStatsRaceInfoType,
+} from "@/types/racing";
 import { LastRaceStats } from "./scores/types";
 
 interface RaceStatsInput {
@@ -176,9 +182,29 @@ export function calculateRaceStats({
     },
   };
 
+  const allValidFormsAllHorsesRaceStatsRaceInfo: AllValidFormsAllHorsesRaceStatsRaceInfoType =
+    {
+      maxBeatenAvgsRpr: avg(
+        horses.map(
+          (h) => h.allValidFormRowsStatsDataStats?.maxBeatenAvgsRpr || 0
+        )
+      ),
+      maxBeatenMaxesRpr: avg(
+        horses.map(
+          (h) => h.allValidFormRowsStatsDataStats?.maxBeatenMaxesRpr || 0
+        )
+      ),
+      minTimePerFurlong: avg(
+        horses.map(
+          (h) => h.allValidFormRowsStatsDataStats?.minTimePerFurlong || 0
+        )
+      ),
+    };
+
   // Calculate aggregate stats
   const stats: RaceStats = {
     lastRaceStatsRaceInfo,
+    allValidFormsAllHorsesRaceStatsRaceInfo,
     // Basic averages
     avgOfficialRating: avg(horses.map((h) => parseInt(h.officialRating) || 0)),
     avgRating: avg(horses.map((h) => parseInt(h.rating) || 0)),
