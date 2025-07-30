@@ -184,19 +184,21 @@ export function calculateRaceStats({
 
   const allValidFormsAllHorsesRaceStatsRaceInfo: AllValidFormsAllHorsesRaceStatsRaceInfoType =
     {
-      maxBeatenAvgsRpr: avg(
-        horses
+      maxBeatenAvgsRpr: Math.max(
+        ...horses
           .map((h) => h.allValidFormRowsStatsDataStats?.maxBeatenAvgsRpr || 0)
           ?.filter(Boolean)
       ),
-      maxBeatenMaxesRpr: avg(
-        horses
+      maxBeatenMaxesRpr: Math.max(
+        ...horses
           .map((h) => h.allValidFormRowsStatsDataStats?.maxBeatenMaxesRpr || 0)
           ?.filter(Boolean)
       ),
-      minTimePerFurlong: avg(
-        horses
-          .map((h) => h.allValidFormRowsStatsDataStats?.minTimePerFurlong || 0)
+      minTimePerFurlong: Math.min(
+        ...horses
+          .map(
+            (h) => h.allValidFormRowsStatsDataStats?.minTimePerFurlong || 999
+          )
           ?.filter(Boolean)
       ),
     };

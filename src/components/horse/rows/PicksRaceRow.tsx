@@ -2811,16 +2811,21 @@ export function PicksRaceRow({
               )}`,
 
               ...(rawFormRowsStatsData || []).map((x) => {
+                const raceTypeGood =
+                  race.raceType === getRaceType(x?.lastRaceTypeCode);
+
                 return (
                   `<span style='color: #666'>${x?.formRowValidDate}</span>` +
                   `RPR: ${x?.lastRaceStatsObj?.averages_beaten?.rpr?.toFixed(
                     2
-                  )}, Max: ${x?.lastRaceStatsObj?.maxes_beaten?.rpr?.toFixed(
+                  )}, Max: <span style='color: ${
+                    raceTypeGood ? "#ffff00" : "#fff"
+                  }'>${x?.lastRaceStatsObj?.maxes_beaten?.rpr?.toFixed(
                     2
-                  )}, Time/F: (${x?.lastRaceStatsObj?.info?.timePerFurlong?.toFixed(
+                  )}</span>, Time/F: (${x?.lastRaceStatsObj?.info?.timePerFurlong?.toFixed(
                     2
                   )})` +
-                  ` (${raceCodeToText(x?.lastRaceTypeCode)})`
+                  ` (${getRaceType(x?.lastRaceTypeCode)})`
                 );
               }),
             ]

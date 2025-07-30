@@ -7,7 +7,7 @@ interface HoverTooltipProps {
 
 export function HoverTooltip({ content, children }: HoverTooltipProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const [isPinned, setIsPinned] = useState(false);
+  const [isStrikethrough, setIsStrikethrough] = useState(false);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,7 +16,6 @@ export function HoverTooltip({ content, children }: HoverTooltipProps) {
         tooltipRef.current &&
         !tooltipRef.current.contains(event.target as Node)
       ) {
-        setIsPinned(false);
       }
     };
 
@@ -28,18 +27,20 @@ export function HoverTooltip({ content, children }: HoverTooltipProps) {
 
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIsPinned(!isPinned);
+    setIsStrikethrough(!isStrikethrough);
   };
 
   return (
     <div
-      className="relative inline-block"
-      onMouseEnter={() => !isPinned && setIsVisible(true)}
-      onMouseLeave={() => !isPinned && setIsVisible(false)}
+      className={`relative inline-block ${
+        isStrikethrough ? "opacity-50 line-through" : ""
+      }`}
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
       onClick={handleClick}
     >
       {children}
-      {(isVisible || isPinned) && (
+      {isVisible && (
         <div
           ref={tooltipRef}
           className="absolute z-50  bg-gray-900 text-white text-sm rounded shadow-lg w-[90vw] max-w-[500px]  whitespace-pre-wrap p-4"
