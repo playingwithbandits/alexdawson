@@ -1,0 +1,169 @@
+[
+  {
+    "courseName": "Galway",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#galway",
+    "raceCardsCourseMeetingsUrl": "/racecards/183/galway/2025-07-30",
+    "going": "Jumps course - GOOD; Flat course - YIELDING",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/183/galway/2025-07-30/900392",
+        "horses": [
+          {
+            "horseName": "Gorvitho",
+            "horseProfileUrl": "/profile/horse/6754625/gorvitho/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Obey The Order",
+            "horseProfileUrl": "/profile/horse/58956217/obey-the-order/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Rutland Rose",
+            "horseProfileUrl": "/profile/horse/5457615/rutland-rose/",
+            "raceNumber": "(17)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:35",
+        "raceCardUrl": "/racecards/183/galway/2025-07-30/900393",
+        "horses": [
+          {
+            "horseName": "Brilliant Light",
+            "horseProfileUrl": "/profile/horse/2894398/brilliant-light/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:05",
+        "raceCardUrl": "/racecards/183/galway/2025-07-30/900394",
+        "horses": [
+          {
+            "horseName": "Classy Cc",
+            "horseProfileUrl": "/profile/horse/58958874/classy-cc/",
+            "raceNumber": "(16)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/183/galway/2025-07-30/900395",
+        "horses": [
+          {
+            "horseName": "Goldinthevalleys",
+            "horseProfileUrl": "/profile/horse/6492187/goldinthevalleys/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:20",
+        "raceCardUrl": "/racecards/183/galway/2025-07-30/900397",
+        "horses": [
+          {
+            "horseName": "Pearl Jewel",
+            "horseProfileUrl": "/profile/horse/5218291/pearl-jewel/",
+            "raceNumber": "(16)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-07-30",
+    "going": "GOOD (GoingStick: 7.2) (Rail movements: 1.20 & 3.45 +5yds and 1.55, 3.05 & 4.55 +10yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f, 7f & 1m - Centre; 1m3f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/21/goodwood/2025-07-30/898935",
+        "horses": [
+          {
+            "horseName": "Chic Colombine",
+            "horseProfileUrl": "/profile/horse/5082953/chic-colombine/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Leicester",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#leicester",
+    "raceCardsCourseMeetingsUrl": "/racecards/30/leicester/2025-07-30",
+    "going": "GOOD, Good to firm in places (GoingStick: 6.9) (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Stands' side; Round - Inside",
+    "races": [
+      {
+        "raceTime": "7:03",
+        "raceCardUrl": "/racecards/30/leicester/2025-07-30/898962",
+        "horses": [
+          {
+            "horseName": "Beach Partee",
+            "horseProfileUrl": "/profile/horse/7020235/beach-partee/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:38",
+        "raceCardUrl": "/racecards/30/leicester/2025-07-30/898958",
+        "horses": [
+          {
+            "horseName": "Wrydcroft",
+            "horseProfileUrl": "/profile/horse/7566153/wrydcroft/",
+            "raceNumber": "(9)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Redcar",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#redcar",
+    "raceCardsCourseMeetingsUrl": "/racecards/47/redcar/2025-07-30",
+    "going": "GOOD, Good to firm in places (GoingStick: 8.4)",
+    "weather": "Light rain",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": []
+  },
+  {
+    "courseName": "Sandown",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#sandown",
+    "raceCardsCourseMeetingsUrl": "/racecards/54/sandown/2025-07-30",
+    "going": "GOOD, Good to firm in places (GoingStick: Round 6.2, Sprint 6.0) (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Sprints - Far side; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "7:25",
+        "raceCardUrl": "/racecards/54/sandown/2025-07-30/898975",
+        "horses": [
+          {
+            "horseName": "Bintshuaa",
+            "horseProfileUrl": "/profile/horse/6265750/bintshuaa/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Goodwood (GB)",
+    "raceCardsCourseUrl": "/racecards/2025-07-30#goodwood-gb",
+    "raceCardsCourseMeetingsUrl": "/racecards/1335/goodwood-gb/2025-07-30",
+    "going": "GOOD (GoingStick: 7.2)",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]
