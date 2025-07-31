@@ -3,11 +3,16 @@ import { useEffect, useRef, useState } from "react";
 interface HoverTooltipProps {
   content: string;
   children: React.ReactNode;
+  defaultStrikethrough?: boolean;
 }
 
-export function HoverTooltip({ content, children }: HoverTooltipProps) {
+export function HoverTooltip({
+  content,
+  children,
+  defaultStrikethrough,
+}: HoverTooltipProps) {
   const [isVisible, setIsVisible] = useState(false);
-  const [isStrikethrough, setIsStrikethrough] = useState(false);
+  const [isStrikethrough, setIsStrikethrough] = useState(defaultStrikethrough);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

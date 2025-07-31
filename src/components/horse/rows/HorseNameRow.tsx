@@ -49,6 +49,7 @@ interface HorseNameRowProps {
     value: boolean;
   }[];
   showStars?: boolean;
+  defaultStrikethrough?: boolean;
 }
 
 const getTrophy = (position: string) => {
@@ -108,6 +109,7 @@ export function HorseNameRow({
   bg,
   stars,
   showStars,
+  defaultStrikethrough,
 }: HorseNameRowProps) {
   if (showOnlyBest && !shownCountToBeHigherThan) {
     return <></>;
@@ -139,7 +141,10 @@ export function HorseNameRow({
   }
 
   return (
-    <HoverTooltip content={(title || "") + "\n" + starsTable}>
+    <HoverTooltip
+      content={(title || "") + "\n" + starsTable}
+      defaultStrikethrough={defaultStrikethrough}
+    >
       <div
         className={twMerge(
           "flex justify-between",

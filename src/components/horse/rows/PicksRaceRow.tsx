@@ -2768,66 +2768,88 @@ export function PicksRaceRow({
               raw: rawFormRowsStatsData,
             } = allValidFormRowsStatsDataStats || {};
 
+            const rprRaceMaxBeatenAvgsRprThreshold =
+              (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
+                ?.maxBeatenAvgsRpr || 0) * 0.9;
+
+            const rprRaceMaxBeatenMaxesRprThreshold =
+              (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
+                ?.maxBeatenMaxesRpr || 0) * 0.9;
+
             const maxBeatenAvgsRprGood =
               maxBeatenAvgsRpr &&
-              (maxBeatenAvgsRpr || 0) >=
-                (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                  ?.maxBeatenAvgsRpr || 0) *
-                  0.95;
+              (maxBeatenAvgsRpr || 0) >= rprRaceMaxBeatenAvgsRprThreshold;
 
             const maxBeatenMaxesRprGood =
               maxBeatenMaxesRpr &&
-              (maxBeatenMaxesRpr || 0) >=
-                (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                  ?.maxBeatenMaxesRpr || 0) *
-                  0.95;
+              (maxBeatenMaxesRpr || 0) >= rprRaceMaxBeatenMaxesRprThreshold;
+
+            const timePerFurlongThreshold =
+              (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
+                ?.minTimePerFurlong || 0) * 1.1;
 
             const minTimePerFurlongGood =
               minTimePerFurlong &&
-              (minTimePerFurlong || 0) <=
-                (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                  ?.minTimePerFurlong || 0) *
-                  1.05;
+              minTimePerFurlong !== 0 &&
+              minTimePerFurlong <= timePerFurlongThreshold;
 
             const rawFormRowsStatsArrText = [
               "\n",
 
-              // `Max Beaten Avgs RPR: <span style='color: ${
-              //   maxBeatenAvgsRprGood ? "#2df8ff" : "#fff"
-              // }'>${maxBeatenAvgsRpr?.toFixed(
-              //   2
-              // )}</span> | Max Beaten Maxes RPR: <span style='color: ${
-              //   maxBeatenMaxesRprGood ? "#2df8ff" : "#fff"
-              // }'>${maxBeatenMaxesRpr?.toFixed(
-              //   2
-              // )}</span> | Min Time Per Furlong: <span style='color: ${
-              //   minTimePerFurlongGood ? "#2df8ff" : "#fff"
-              // }'>${minTimePerFurlong?.toFixed(2)}</span>`,
+              maxBeatenAvgsRprGood || maxBeatenMaxesRprGood
+                ? `<span style='color: #ffff00'>Yes</span>`
+                : "---",
 
-              // `Race Stats: Max Beaten Avgs RPR: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.maxBeatenAvgsRpr?.toFixed(
-              //   2
-              // )} | Max Beaten Maxes RPR: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.maxBeatenMaxesRpr?.toFixed(
-              //   2
-              // )} | Min Time Per Furlong: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.minTimePerFurlong?.toFixed(
-              //   2
-              // )}`,
+              `Max Beaten Avgs RPR: <span style='color: ${
+                maxBeatenAvgsRprGood ? "#2df8ff" : "#fff"
+              }'>${maxBeatenAvgsRpr?.toFixed(
+                2
+              )}</span> | Max Beaten Maxes RPR: <span style='color: ${
+                maxBeatenMaxesRprGood ? "#2df8ff" : "#fff"
+              }'>${maxBeatenMaxesRpr?.toFixed(
+                2
+              )}</span> | Min Time Per Furlong: <span style='color: ${
+                minTimePerFurlongGood ? "#2df8ff" : "#fff"
+              }'>${minTimePerFurlong?.toFixed(2)}</span>`,
+
+              `Race Stats: Max Beaten Avgs RPR: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.maxBeatenAvgsRpr?.toFixed(
+                2
+              )} | Max Beaten Maxes RPR: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.maxBeatenMaxesRpr?.toFixed(
+                2
+              )} | Min Time Per Furlong: ${race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo?.minTimePerFurlong?.toFixed(
+                2
+              )}`,
 
               ...(rawFormRowsStatsData || []).map((x) => {
                 const raceTypeGood =
                   race.raceType === getRaceType(x?.lastRaceTypeCode);
 
+                const rprAvg = x?.lastRaceStatsObj?.averages_beaten?.rpr || 0;
+                const rprMax = x?.lastRaceStatsObj?.maxes_beaten?.rpr || 0;
+                const timePerFurlong =
+                  x?.lastRaceStatsObj?.info?.timePerFurlong || 0;
+
                 return (
                   `<span style='color: #666'>${x?.formRowValidDate}</span>` +
-                  `RPR: ${x?.lastRaceStatsObj?.averages_beaten?.rpr?.toFixed(
+                  `RPR: <span style='color: ${
+                    rprAvg >= rprRaceMaxBeatenAvgsRprThreshold
+                      ? "#ffff00"
+                      : "#fff"
+                  }'>${rprAvg?.toFixed(2)}</span>, Max: <span style='color: ${
+                    rprMax >= rprRaceMaxBeatenMaxesRprThreshold
+                      ? "#ffff00"
+                      : "#fff"
+                  }'>${rprMax?.toFixed(
                     2
-                  )}, Max: <span style='color: ${
+                  )}</span>, Time/F: <span style='color: ${
+                    Boolean(timePerFurlong) &&
+                    timePerFurlong <= timePerFurlongThreshold
+                      ? "#ffff00"
+                      : "#fff"
+                  }'>${timePerFurlong?.toFixed(2)}</span>` +
+                  ` (<span style='color: ${
                     raceTypeGood ? "#ffff00" : "#fff"
-                  }'>${x?.lastRaceStatsObj?.maxes_beaten?.rpr?.toFixed(
-                    2
-                  )}</span>, Time/F: (${x?.lastRaceStatsObj?.info?.timePerFurlong?.toFixed(
-                    2
-                  )})` +
-                  ` (${getRaceType(x?.lastRaceTypeCode)})`
+                  }'>${getRaceType(x?.lastRaceTypeCode)}</span>)`
                 );
               }),
               "\n",
@@ -3062,17 +3084,9 @@ export function PicksRaceRow({
                   //   horseHamperedObj?.hasHamperedWithinDays ||
                   //   horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
-                highlight4={
-                  countGood &&
-                  isEwable &&
-                  lastRaceTypeGood &&
-                  rprAvgBeatenToRaceBeatenMaxGood &&
-                  rprMaxBeatenToRaceBeatenMaxGood &&
-                  sharpRatingGood &&
-                  aiGood &&
-                  rpPredGood &&
-                  mentionedByTipster &&
-                  timePerFurlongGood
+                highlight4={hasNotes}
+                defaultStrikethrough={
+                  !(maxBeatenAvgsRprGood || maxBeatenMaxesRprGood)
                 }
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}

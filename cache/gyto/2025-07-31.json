@@ -1,0 +1,165 @@
+{
+  "date": "2025-07-31",
+  "tips": [
+    {
+      "time": "13:20",
+      "horse": "High Degree",
+      "isNap": false
+    },
+    {
+      "time": "14:30",
+      "horse": "Merchant",
+      "isNap": true
+    },
+    {
+      "time": "15:05",
+      "horse": "Whirl",
+      "isNap": true
+    },
+    {
+      "time": "15:45",
+      "horse": "Fluorescence",
+      "isNap": false
+    },
+    {
+      "time": "17:30",
+      "horse": "Wicked",
+      "isNap": false
+    },
+    {
+      "time": "14:10",
+      "horse": "Westport Cove",
+      "isNap": false
+    },
+    {
+      "time": "14:45",
+      "horse": "Bravo Zulu",
+      "isNap": false
+    },
+    {
+      "time": "15:20",
+      "horse": "Fingerpaint",
+      "isNap": false
+    },
+    {
+      "time": "15:55",
+      "horse": "Which Wolf Wins",
+      "isNap": false
+    },
+    {
+      "time": "16:30",
+      "horse": "Mr Percy",
+      "isNap": false
+    },
+    {
+      "time": "17:05",
+      "horse": "I Am River",
+      "isNap": false
+    },
+    {
+      "time": "17:40",
+      "horse": "Glenroyal",
+      "isNap": false
+    },
+    {
+      "time": "18:10",
+      "horse": "Wartime Leader",
+      "isNap": false
+    },
+    {
+      "time": "14:18",
+      "horse": "Nebrook Star",
+      "isNap": false
+    },
+    {
+      "time": "14:53",
+      "horse": "Moby Quick",
+      "isNap": false
+    },
+    {
+      "time": "15:30",
+      "horse": "Alther Walden",
+      "isNap": false
+    },
+    {
+      "time": "16:05",
+      "horse": "Ravishing Beauty",
+      "isNap": false
+    },
+    {
+      "time": "16:40",
+      "horse": "Regally Blonde",
+      "isNap": false
+    },
+    {
+      "time": "17:15",
+      "horse": "Dogged",
+      "isNap": false
+    },
+    {
+      "time": "17:45",
+      "horse": "Stanley Spencer",
+      "isNap": false
+    },
+    {
+      "time": "18:15",
+      "horse": "Loving Apprentice",
+      "isNap": false
+    },
+    {
+      "time": "18:45",
+      "horse": "Charging Thunder",
+      "isNap": false
+    },
+    {
+      "time": "19:15",
+      "horse": "Change Sings",
+      "isNap": false
+    },
+    {
+      "time": "19:45",
+      "horse": "Double Parked",
+      "isNap": false
+    },
+    {
+      "time": "20:15",
+      "horse": "Mr Swivell",
+      "isNap": false
+    },
+    {
+      "time": "20:45",
+      "horse": "Fox Avatar",
+      "isNap": false
+    },
+    {
+      "time": "17:50",
+      "horse": "Carnival Day",
+      "isNap": false
+    },
+    {
+      "time": "18:25",
+      "horse": "Hengroin",
+      "isNap": false
+    },
+    {
+      "time": "19:00",
+      "horse": "King'S Castle",
+      "isNap": false
+    },
+    {
+      "time": "19:30",
+      "horse": "Revelance",
+      "isNap": false
+    },
+    {
+      "time": "20:00",
+      "horse": "Uncle Simon",
+      "isNap": false
+    },
+    {
+      "time": "20:30",
+      "horse": "Simply Blue",
+      "isNap": false
+    }
+  ]
+}

@@ -487,18 +487,15 @@ export const distanceBeatenLengthsThreshold = (
 ) => {
   if (!raceDistance) return 0;
 
-  if (raceDistance <= 7) {
+  if (raceDistance <= 9) {
     return 1;
   }
-  if (raceDistance <= 9) {
+  if (raceDistance <= 11) {
     return 2;
   }
-  if (raceDistance <= 11) {
+  if (raceDistance <= 17) {
     return 3;
   }
-  if (raceDistance <= 17) {
-    return 4;
-  }
 
-  return 5;
+  return 4;
 };
