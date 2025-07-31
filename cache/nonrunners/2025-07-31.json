@@ -3,37 +3,312 @@
     "courseName": "Epsom",
     "raceCardsCourseUrl": "/racecards/2025-07-31#epsom",
     "raceCardsCourseMeetingsUrl": "/racecards/17/epsom/2025-07-31",
-    "going": "GOOD (GoingStick: 6.1) (Watered)",
+    "going": "GOOD TO SOFT, Good in places (GoingStick: 6.3) (Watered)",
     "weather": "Rain",
     "stallsPosition": "6f - Outside; 1m 4f - Centre; Remainder - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "5:50",
+        "raceCardUrl": "/racecards/17/epsom/2025-07-31/898979",
+        "horses": [
+          {
+            "horseName": "Risen Again",
+            "horseProfileUrl": "/profile/horse/5671267/risen-again/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:30",
+        "raceCardUrl": "/racecards/17/epsom/2025-07-31/898976",
+        "horses": [
+          {
+            "horseName": "Brielle",
+            "horseProfileUrl": "/profile/horse/7578902/brielle/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:00",
+        "raceCardUrl": "/racecards/17/epsom/2025-07-31/898981",
+        "horses": [
+          {
+            "horseName": "Cooramook",
+            "horseProfileUrl": "/profile/horse/6388820/cooramook/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/17/epsom/2025-07-31/898980",
+        "horses": [
+          {
+            "horseName": "Muscika",
+            "horseProfileUrl": "/profile/horse/1044719/muscika/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Galway",
     "raceCardsCourseUrl": "/racecards/2025-07-31#galway",
     "raceCardsCourseMeetingsUrl": "/racecards/183/galway/2025-07-31",
-    "going": "Jumps course - GOOD; Flat course - SOFT",
+    "going": "Jumps course - GOOD (Good to yielding in places); Flat course - SOFT",
     "weather": "Mostly cloudy",
     "stallsPosition": "",
-    "races": []
+    "races": [
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/183/galway/2025-07-31/900399",
+        "horses": [
+          {
+            "horseName": "Comfort Line",
+            "horseProfileUrl": "/profile/horse/2863058/comfort-line/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Expound",
+            "horseProfileUrl": "/profile/horse/4611030/expound/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Goal Exceeded",
+            "horseProfileUrl": "/profile/horse/5198199/goal-exceeded/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:20",
+        "raceCardUrl": "/racecards/183/galway/2025-07-31/900400",
+        "horses": [
+          {
+            "horseName": "Mojave River",
+            "horseProfileUrl": "/profile/horse/6318910/mojave-river/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Fingerpaint",
+            "horseProfileUrl": "/profile/horse/7441017/fingerpaint/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Bellaphina",
+            "horseProfileUrl": "/profile/horse/4455456/bellaphina/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Kodilicious",
+            "horseProfileUrl": "/profile/horse/5889828/kodilicious/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:55",
+        "raceCardUrl": "/racecards/183/galway/2025-07-31/900401",
+        "horses": [
+          {
+            "horseName": "Glamazon",
+            "horseProfileUrl": "/profile/horse/7503729/glamazon/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/183/galway/2025-07-31/900301",
+        "horses": [
+          {
+            "horseName": "Jesse Evans",
+            "horseProfileUrl": "/profile/horse/3087843/jesse-evans/",
+            "raceNumber": "(3)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:05",
+        "raceCardUrl": "/racecards/183/galway/2025-07-31/900402",
+        "horses": [
+          {
+            "horseName": "Sunny South West",
+            "horseProfileUrl": "/profile/horse/6671031/sunny-south-west/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:40",
+        "raceCardUrl": "/racecards/183/galway/2025-07-31/900403",
+        "horses": [
+          {
+            "horseName": "Lagoon Nebula",
+            "horseProfileUrl": "/profile/horse/6314153/lagoon-nebula/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Zuzukel",
+            "horseProfileUrl": "/profile/horse/5141719/zuzukel/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Hasten Slowly",
+            "horseProfileUrl": "/profile/horse/4377590/hasten-slowly/",
+            "raceNumber": "(19)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:10",
+        "raceCardUrl": "/racecards/183/galway/2025-07-31/900404",
+        "horses": [
+          {
+            "horseName": "Expresso Tini",
+            "horseProfileUrl": "/profile/horse/6134925/expresso-tini/",
+            "raceNumber": "(17)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Goodwood",
     "raceCardsCourseUrl": "/racecards/2025-07-31#goodwood",
     "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-07-31",
-    "going": "GOOD (GoingStick: 7.2) (Rail movements: 1.20, 2.30 & 3.05 +5yds and 4.20, 4.55 & 5.30 +10yds)",
-    "weather": "Rain",
+    "going": "GOOD (Good to firm in places; 7.6) changing to HEAVY after Race 3 (2.30)",
+    "weather": "Overcast rain later",
     "stallsPosition": "5f, 6f, 7f, 1m - Centre; 1m4f - Outside; Rest - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/21/goodwood/2025-07-31/898947",
+        "horses": [
+          {
+            "horseName": "Kinetic Force",
+            "horseProfileUrl": "/profile/horse/5991242/kinetic-force/",
+            "raceNumber": "(9)"
+          },
+          {
+            "horseName": "Fluorescence",
+            "horseProfileUrl": "/profile/horse/6587058/fluorescence/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "The Man",
+            "horseProfileUrl": "/profile/horse/5598659/the-man/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:55",
+        "raceCardUrl": "/racecards/21/goodwood/2025-07-31/898945",
+        "horses": [
+          {
+            "horseName": "Proposal",
+            "horseProfileUrl": "/profile/horse/7830199/proposal/",
+            "raceNumber": "(14)"
+          },
+          {
+            "horseName": "Deedaydiva",
+            "horseProfileUrl": "/profile/horse/7900598/deedaydiva/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Eleanor Shelby",
+            "horseProfileUrl": "/profile/horse/7793651/eleanor-shelby/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Barefoot Beach",
+            "horseProfileUrl": "/profile/horse/7020226/barefoot-beach/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Lyrics Of Life",
+            "horseProfileUrl": "/profile/horse/7488308/lyrics-of-life/",
+            "raceNumber": "(12)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/21/goodwood/2025-07-31/898946",
+        "horses": [
+          {
+            "horseName": "Transparent",
+            "horseProfileUrl": "/profile/horse/6555376/transparent/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Antipodes",
+            "horseProfileUrl": "/profile/horse/7570753/antipodes/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Organ",
+            "horseProfileUrl": "/profile/horse/5900724/organ/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Winston's Warrior",
+            "horseProfileUrl": "/profile/horse/6183956/winstons-warrior/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Abundance",
+            "horseProfileUrl": "/profile/horse/6482624/abundance/",
+            "raceNumber": "(10)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Nottingham",
     "raceCardsCourseUrl": "/racecards/2025-07-31#nottingham",
     "raceCardsCourseMeetingsUrl": "/racecards/40/nottingham/2025-07-31",
-    "going": "GOOD (GoingStick: 6.5) (Watered) (Outer Track)",
+    "going": "GOOD TO SOFT (Watered; 6.1)",
     "weather": "Light rain",
     "stallsPosition": "5f, 6f & 1m - Centre; 1m 2f & 1m 6f - Inside",
-    "races": []
+    "races": [
+      {
+        "raceTime": "4:05",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-31/898983",
+        "horses": [
+          {
+            "horseName": "Ravishing Beauty",
+            "horseProfileUrl": "/profile/horse/5262428/ravishing-beauty/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Pay Attention",
+            "horseProfileUrl": "/profile/horse/5937858/pay-attention/",
+            "raceNumber": "(10)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:15",
+        "raceCardUrl": "/racecards/40/nottingham/2025-07-31/898982",
+        "horses": [
+          {
+            "horseName": "Miaswell",
+            "horseProfileUrl": "/profile/horse/5279954/miaswell/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Bass Player",
+            "horseProfileUrl": "/profile/horse/4263233/bass-player/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
   },
   {
     "courseName": "Wolverhampton (AW)",
@@ -51,6 +326,27 @@
             "horseName": "Leadenhall Street",
             "horseProfileUrl": "/profile/horse/6278722/leadenhall-street/",
             "raceNumber": "(3)"
+          },
+          {
+            "horseName": "Alpha Magic",
+            "horseProfileUrl": "/profile/horse/6111533/alpha-magic/",
+            "raceNumber": "(5)"
+          },
+          {
+            "horseName": "Hello Zaman",
+            "horseProfileUrl": "/profile/horse/5580100/hello-zaman/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:15",
+        "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-07-31/899228",
+        "horses": [
+          {
+            "horseName": "Never Just A Dream",
+            "horseProfileUrl": "/profile/horse/4076522/never-just-a-dream/",
+            "raceNumber": "(5)"
           }
         ]
       },
@@ -58,6 +354,11 @@
         "raceTime": "8:15",
         "raceCardUrl": "/racecards/513/wolverhampton-aw/2025-07-31/899231",
         "horses": [
+          {
+            "horseName": "Romieu",
+            "horseProfileUrl": "/profile/horse/5973510/romieu/",
+            "raceNumber": "(2)"
+          },
           {
             "horseName": "Rock Walk",
             "horseProfileUrl": "/profile/horse/5568491/rock-walk/",

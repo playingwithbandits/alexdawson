@@ -2770,11 +2770,11 @@ export function PicksRaceRow({
 
             const rprRaceMaxBeatenAvgsRprThreshold =
               (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                ?.maxBeatenAvgsRpr || 0) * 0.9;
+                ?.maxBeatenAvgsRpr || 0) * 0.95;
 
             const rprRaceMaxBeatenMaxesRprThreshold =
               (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                ?.maxBeatenMaxesRpr || 0) * 0.9;
+                ?.maxBeatenMaxesRpr || 0) * 0.95;
 
             const maxBeatenAvgsRprGood =
               maxBeatenAvgsRpr &&
@@ -2786,7 +2786,7 @@ export function PicksRaceRow({
 
             const timePerFurlongThreshold =
               (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                ?.minTimePerFurlong || 0) * 1.1;
+                ?.minTimePerFurlong || 0) * 1.05;
 
             const minTimePerFurlongGood =
               minTimePerFurlong &&
@@ -2796,7 +2796,7 @@ export function PicksRaceRow({
             const rawFormRowsStatsArrText = [
               "\n",
 
-              maxBeatenAvgsRprGood || maxBeatenMaxesRprGood
+              maxBeatenMaxesRprGood
                 ? `<span style='color: #ffff00'>Yes</span>`
                 : "---",
 
@@ -3068,11 +3068,7 @@ export function PicksRaceRow({
                 title={paraGraph}
                 //highlight1={countGood && sharpRatingGood}
                 highlight3={
-                  countGood &&
-                  isEwable &&
-                  lastRaceTypeGood &&
-                  rprAvgBeatenToRaceBeatenMaxGood &&
-                  rprMaxBeatenToRaceBeatenMaxGood
+                  Boolean(maxBeatenMaxesRprGood)
                   // (aiGood ||
                   //   rpPredGood ||
                   //   mentionedByTipster ||
@@ -3084,10 +3080,8 @@ export function PicksRaceRow({
                   //   horseHamperedObj?.hasHamperedWithinDays ||
                   //   horseComfortableWithinDaysObj?.hasComfortableWithinDays)
                 }
-                highlight4={hasNotes}
-                defaultStrikethrough={
-                  !(maxBeatenAvgsRprGood || maxBeatenMaxesRprGood)
-                }
+                highlight4={Boolean(maxBeatenMaxesRprGood) && hasNotes}
+                defaultStrikethrough={!maxBeatenMaxesRprGood}
                 showOnlyBest={showOnlyBest}
                 shownCountToBeHigherThan={count >= countToBeHigherThan}
                 starsToBeHigherThan={starsToBeHigherThan}
