@@ -6,11 +6,15 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function avg(nums: number[]): number {
-  return nums.length ? nums.reduce((a, b) => a + b) / nums.length : 0;
+  const filteredNums = nums?.filter(Boolean) || [];
+  return filteredNums.length
+    ? filteredNums.reduce((a, b) => a + b) / filteredNums.length
+    : 0;
 }
 
 export function sum(nums: number[]): number {
-  return nums.reduce((a, b) => a + b, 0);
+  const filteredNums = nums?.filter(Boolean) || [];
+  return filteredNums.reduce((a, b) => a + b, 0);
 }
 
 export function normalize(value: number, min: number, max: number): number {

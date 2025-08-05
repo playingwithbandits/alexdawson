@@ -1,0 +1,167 @@
+[
+  {
+    "courseName": "Catterick",
+    "raceCardsCourseUrl": "/racecards/2025-08-05#catterick",
+    "raceCardsCourseMeetingsUrl": "/racecards/10/catterick/2025-08-05",
+    "going": "GOOD (GoingStick: 8.0) (Watered) (Rail Movements: 2.30, 3.00, 4.00 & 4.30 +6yds and 3.30 +12yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Inside",
+    "races": [
+      {
+        "raceTime": "3:00",
+        "raceCardUrl": "/racecards/10/catterick/2025-08-05/899079",
+        "horses": [
+          {
+            "horseName": "Sassy Glory",
+            "horseProfileUrl": "/profile/horse/5176441/sassy-glory/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/10/catterick/2025-08-05/899076",
+        "horses": [
+          {
+            "horseName": "Jamih",
+            "horseProfileUrl": "/profile/horse/1691169/jamih/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Ffos Las",
+    "raceCardsCourseUrl": "/racecards/2025-08-05#ffos-las",
+    "raceCardsCourseMeetingsUrl": "/racecards/1212/ffos-las/2025-08-05",
+    "going": "GOOD, Good to soft in places (GoingStick: 6.7) (Rail movements: 2.15 +14yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "1m6f - Inside; Remainder - Centre",
+    "races": [
+      {
+        "raceTime": "2:15",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-08-05/899081",
+        "horses": [
+          {
+            "horseName": "Melakaz",
+            "horseProfileUrl": "/profile/horse/3161573/melakaz/",
+            "raceNumber": "(6)"
+          },
+          {
+            "horseName": "Maxident",
+            "horseProfileUrl": "/profile/horse/4001892/maxident/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:45",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-08-05/899082",
+        "horses": [
+          {
+            "horseName": "Ibn Sirin",
+            "horseProfileUrl": "/profile/horse/7930865/ibn-sirin/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:15",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-08-05/899086",
+        "horses": [
+          {
+            "horseName": "Dandy G Boy",
+            "horseProfileUrl": "/profile/horse/58956406/dandy-g-boy/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-08-05/899084",
+        "horses": [
+          {
+            "horseName": "Punchbowl Flyer",
+            "horseProfileUrl": "/profile/horse/2734123/punchbowl-flyer/",
+            "raceNumber": "(9)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:50",
+        "raceCardUrl": "/racecards/1212/ffos-las/2025-08-05/899085",
+        "horses": [
+          {
+            "horseName": "Resilient Lady",
+            "horseProfileUrl": "/profile/horse/5708903/resilient-lady/",
+            "raceNumber": "(7)"
+          },
+          {
+            "horseName": "Judge Frank",
+            "horseProfileUrl": "/profile/horse/5120115/judge-frank/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newbury",
+    "raceCardsCourseUrl": "/racecards/2025-08-05#newbury",
+    "raceCardsCourseMeetingsUrl": "/racecards/36/newbury/2025-08-05",
+    "going": "GOOD, Good to firm in places (GoingStick: 5.8) (Rail movements: 7.45 & 8.15 +14yds)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "7:45",
+        "raceCardUrl": "/racecards/36/newbury/2025-08-05/899087",
+        "horses": [
+          {
+            "horseName": "Good Show",
+            "horseProfileUrl": "/profile/horse/4540826/good-show/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:15",
+        "raceCardUrl": "/racecards/36/newbury/2025-08-05/899091",
+        "horses": [
+          {
+            "horseName": "Free Speech",
+            "horseProfileUrl": "/profile/horse/5262431/free-speech/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Roscommon",
+    "raceCardsCourseUrl": "/racecards/2025-08-05#roscommon",
+    "raceCardsCourseMeetingsUrl": "/racecards/196/roscommon/2025-08-05",
+    "going": "Hurdle course - GOOD TO YIELDING; Chase Course - GOOD TO YIELDING, Yielding in places",
+    "weather": "Partly cloudy",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "6:20",
+        "raceCardUrl": "/racecards/196/roscommon/2025-08-05/900998",
+        "horses": [
+          {
+            "horseName": "Bigira",
+            "horseProfileUrl": "/profile/horse/5003640/bigira/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Long Gone",
+            "horseProfileUrl": "/profile/horse/5848823/long-gone/",
+            "raceNumber": "(1)"
+          }
+        ]
+      }
+    ]
+  }
+]
