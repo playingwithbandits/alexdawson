@@ -184,23 +184,28 @@ export function calculateRaceStats({
 
   const allValidFormsAllHorsesRaceStatsRaceInfo: AllValidFormsAllHorsesRaceStatsRaceInfoType =
     {
-      maxBeatenAvgsRpr: Math.max(
-        ...horses
-          .map((h) => h.allValidFormRowsStatsDataStats?.maxBeatenAvgsRpr || 0)
-          ?.filter(Boolean)
-      ),
-      maxBeatenMaxesRpr: Math.max(
-        ...horses
-          .map((h) => h.allValidFormRowsStatsDataStats?.maxBeatenMaxesRpr || 0)
-          ?.filter(Boolean)
-      ),
-      minTimePerFurlong: Math.min(
-        ...horses
-          .map(
-            (h) => h.allValidFormRowsStatsDataStats?.minTimePerFurlong || 999
-          )
-          ?.filter(Boolean)
-      ),
+      maxBeatenAvgsRpr:
+        Math.max(
+          ...horses
+            .map((h) => h.allValidFormRowsStatsDataStats?.maxBeatenAvgsRpr || 0)
+            ?.filter(Boolean)
+        ) || 0,
+      maxBeatenMaxesRpr:
+        Math.max(
+          ...horses
+            .map(
+              (h) => h.allValidFormRowsStatsDataStats?.maxBeatenMaxesRpr || 0
+            )
+            ?.filter(Boolean)
+        ) || 0,
+      minTimePerFurlong:
+        Math.min(
+          ...horses
+            .map(
+              (h) => h.allValidFormRowsStatsDataStats?.minTimePerFurlong || 0
+            )
+            ?.filter(Boolean)
+        ) || 0,
     };
 
   // Calculate aggregate stats

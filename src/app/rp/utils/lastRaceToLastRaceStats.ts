@@ -128,45 +128,55 @@ export async function lastRaceToLastRaceStats(
 
   // Calculate averages
   const averages = {
-    or: runners.length ? avg(runners.map((r) => r.or)?.filter(Boolean)) : 0,
-    rpr: runners.length ? avg(runners.map((r) => r.rpr)?.filter(Boolean)) : 0,
-    ts: runners.length ? avg(runners.map((r) => r.ts)?.filter(Boolean)) : 0,
-    draw: runners.length ? avg(runners.map((r) => r.draw)?.filter(Boolean)) : 0,
-    age: runners.length ? avg(runners.map((r) => r.age)?.filter(Boolean)) : 0,
+    or: runners.length
+      ? avg(runners.map((r) => r.or)?.filter(Boolean)) || 0
+      : 0,
+    rpr: runners.length
+      ? avg(runners.map((r) => r.rpr)?.filter(Boolean)) || 0
+      : 0,
+    ts: runners.length
+      ? avg(runners.map((r) => r.ts)?.filter(Boolean)) || 0
+      : 0,
+    draw: runners.length
+      ? avg(runners.map((r) => r.draw)?.filter(Boolean)) || 0
+      : 0,
+    age: runners.length
+      ? avg(runners.map((r) => r.age)?.filter(Boolean)) || 0
+      : 0,
   };
 
   const averages_beaten = {
     or: runners_beaten.length
-      ? avg(runners_beaten.map((r) => r.or)?.filter(Boolean))
+      ? avg(runners_beaten.map((r) => r.or)?.filter(Boolean)) || 0
       : 0,
     rpr: runners_beaten.length
-      ? avg(runners_beaten.map((r) => r.rpr)?.filter(Boolean))
+      ? avg(runners_beaten.map((r) => r.rpr)?.filter(Boolean)) || 0
       : 0,
     ts: runners_beaten.length
-      ? avg(runners_beaten.map((r) => r.ts)?.filter(Boolean))
+      ? avg(runners_beaten.map((r) => r.ts)?.filter(Boolean)) || 0
       : 0,
     draw: runners_beaten.length
-      ? avg(runners_beaten.map((r) => r.draw)?.filter(Boolean))
+      ? avg(runners_beaten.map((r) => r.draw)?.filter(Boolean)) || 0
       : 0,
     age: runners_beaten.length
-      ? avg(runners_beaten.map((r) => r.age)?.filter(Boolean))
+      ? avg(runners_beaten.map((r) => r.age)?.filter(Boolean)) || 0
       : 0,
   };
   // Calculate maxes
   const maxes = {
-    or: Math.max(...runners.map((r) => r.or)?.filter(Boolean)),
-    rpr: Math.max(...runners.map((r) => r.rpr)?.filter(Boolean)),
-    ts: Math.max(...runners.map((r) => r.ts)?.filter(Boolean)),
-    draw: Math.max(...runners.map((r) => r.draw)?.filter(Boolean)),
-    age: Math.max(...runners.map((r) => r.age)?.filter(Boolean)),
+    or: Math.max(...runners.map((r) => r.or)?.filter(Boolean)) || 0,
+    rpr: Math.max(...runners.map((r) => r.rpr)?.filter(Boolean)) || 0,
+    ts: Math.max(...runners.map((r) => r.ts)?.filter(Boolean)) || 0,
+    draw: Math.max(...runners.map((r) => r.draw)?.filter(Boolean)) || 0,
+    age: Math.max(...runners.map((r) => r.age)?.filter(Boolean)) || 0,
   };
 
   const maxes_beaten = {
-    or: Math.max(...runners_beaten.map((r) => r.or)?.filter(Boolean)),
-    rpr: Math.max(...runners_beaten.map((r) => r.rpr)?.filter(Boolean)),
-    ts: Math.max(...runners_beaten.map((r) => r.ts)?.filter(Boolean)),
-    draw: Math.max(...runners_beaten.map((r) => r.draw)?.filter(Boolean)),
-    age: Math.max(...runners_beaten.map((r) => r.age)?.filter(Boolean)),
+    or: Math.max(...runners_beaten.map((r) => r.or)?.filter(Boolean)) || 0,
+    rpr: Math.max(...runners_beaten.map((r) => r.rpr)?.filter(Boolean)) || 0,
+    ts: Math.max(...runners_beaten.map((r) => r.ts)?.filter(Boolean)) || 0,
+    draw: Math.max(...runners_beaten.map((r) => r.draw)?.filter(Boolean)) || 0,
+    age: Math.max(...runners_beaten.map((r) => r.age)?.filter(Boolean)) || 0,
   };
 
   const raceInfoEle = doc.querySelector(".rp-raceInfo");

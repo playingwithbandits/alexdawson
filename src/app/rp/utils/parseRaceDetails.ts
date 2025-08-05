@@ -196,17 +196,24 @@ export async function parseRaceDetails(
         .map((x) => x.lastRaceStatsObj)
         .filter((x) => x !== undefined);
 
-      const minTimePerFurlong = Math.min(
-        ...allFormRowsStatsDataStatsObjs.map(
-          (x) => x.info?.timePerFurlong || 999
-        )
-      );
-      const maxBeatenAvgsRpr = Math.max(
-        ...allFormRowsStatsDataStatsObjs.map((x) => x.averages_beaten?.rpr || 0)
-      );
-      const maxBeatenMaxesRpr = Math.max(
-        ...allFormRowsStatsDataStatsObjs.map((x) => x.maxes_beaten?.rpr || 0)
-      );
+      const minTimePerFurlong =
+        Math.min(
+          ...allFormRowsStatsDataStatsObjs
+            .map((x) => x.info?.timePerFurlong || 0)
+            ?.filter(Boolean)
+        ) || 0;
+      const maxBeatenAvgsRpr =
+        Math.max(
+          ...allFormRowsStatsDataStatsObjs
+            .map((x) => x.averages_beaten?.rpr || 0)
+            ?.filter(Boolean)
+        ) || 0;
+      const maxBeatenMaxesRpr =
+        Math.max(
+          ...allFormRowsStatsDataStatsObjs
+            .map((x) => x.maxes_beaten?.rpr || 0)
+            ?.filter(Boolean)
+        ) || 0;
 
       const allValidFormRowsStatsDataStats: AllValidFormRowsStatsDataStatsType =
         {

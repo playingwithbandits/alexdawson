@@ -732,7 +732,7 @@ export function DayPredictions({
         (
           avg(
             test?.flatMap((x) =>
-              key ? x?.[key as keyof HorseScore["components"]].score || 0 : 0
+              key ? x?.[key as keyof HorseScore["components"]]?.score || 0 : 0
             )
           ) /
           (anExample?.[key as keyof HorseScore["components"]]?.maxScore || 1)
