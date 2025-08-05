@@ -4,7 +4,7 @@ import {
   horseNameToKey,
 } from "@/lib/racing/scores/funcs";
 import { LastRaceRunner, LastRaceStats } from "@/lib/racing/scores/types";
-import { avg } from "@/lib/utils";
+import { avg, max } from "@/lib/utils";
 
 export async function lastRaceToLastRaceStats(
   lastRaceEle: string,
@@ -164,19 +164,19 @@ export async function lastRaceToLastRaceStats(
   };
   // Calculate maxes
   const maxes = {
-    or: Math.max(...runners.map((r) => r.or)?.filter(Boolean)) || 0,
-    rpr: Math.max(...runners.map((r) => r.rpr)?.filter(Boolean)) || 0,
-    ts: Math.max(...runners.map((r) => r.ts)?.filter(Boolean)) || 0,
-    draw: Math.max(...runners.map((r) => r.draw)?.filter(Boolean)) || 0,
-    age: Math.max(...runners.map((r) => r.age)?.filter(Boolean)) || 0,
+    or: max(runners.map((r) => r.or)?.filter(Boolean)) || 0,
+    rpr: max(runners.map((r) => r.rpr)?.filter(Boolean)) || 0,
+    ts: max(runners.map((r) => r.ts)?.filter(Boolean)) || 0,
+    draw: max(runners.map((r) => r.draw)?.filter(Boolean)) || 0,
+    age: max(runners.map((r) => r.age)?.filter(Boolean)) || 0,
   };
 
   const maxes_beaten = {
-    or: Math.max(...runners_beaten.map((r) => r.or)?.filter(Boolean)) || 0,
-    rpr: Math.max(...runners_beaten.map((r) => r.rpr)?.filter(Boolean)) || 0,
-    ts: Math.max(...runners_beaten.map((r) => r.ts)?.filter(Boolean)) || 0,
-    draw: Math.max(...runners_beaten.map((r) => r.draw)?.filter(Boolean)) || 0,
-    age: Math.max(...runners_beaten.map((r) => r.age)?.filter(Boolean)) || 0,
+    or: max(runners_beaten.map((r) => r.or)?.filter(Boolean)) || 0,
+    rpr: max(runners_beaten.map((r) => r.rpr)?.filter(Boolean)) || 0,
+    ts: max(runners_beaten.map((r) => r.ts)?.filter(Boolean)) || 0,
+    draw: max(runners_beaten.map((r) => r.draw)?.filter(Boolean)) || 0,
+    age: max(runners_beaten.map((r) => r.age)?.filter(Boolean)) || 0,
   };
 
   const raceInfoEle = doc.querySelector(".rp-raceInfo");
@@ -211,7 +211,8 @@ export async function lastRaceToLastRaceStats(
   }
 
   let timePerFurlong = 0;
-  timePerFurlong = winningTimeSeconds / distanceF;
+  timePerFurlong =
+    winningTimeSeconds && distanceF ? winningTimeSeconds / distanceF : 0;
 
   if (
     currentHorse?.position &&

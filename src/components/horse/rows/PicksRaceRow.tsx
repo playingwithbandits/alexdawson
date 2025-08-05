@@ -23,6 +23,7 @@ import {
 } from "@/lib/racing/scores/funcs";
 import { HorseNameRow } from "./HorseNameRow";
 import { twMerge } from "tailwind-merge";
+import { max } from "@/lib/utils";
 
 interface PicksRaceRowProps {
   isTodayOrPast: boolean;
@@ -773,50 +774,32 @@ export function PicksRaceRow({
       (x) => [x.horseName, 0.25 * x.commentCount] as [string, number]
     ) || [];
 
-  const topSharpRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.sharpRating),
-    0
-  );
+  const topSharpRating =
+    max(sharpTipSelections?.map((x) => x.sharpRating) || []) || 0;
 
-  const topSharpSpeedRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.earlySpeed || 0),
-    0
-  );
+  const topSharpSpeedRating =
+    max(sharpTipSelections?.map((x) => x.earlySpeed) || []) || 0;
 
-  const topSharpAbilityRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.ability || 0),
-    0
-  );
+  const topSharpAbilityRating =
+    max(sharpTipSelections?.map((x) => x.ability) || []) || 0;
 
-  const topSharpJockeyRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.jockey || 0),
-    0
-  );
+  const topSharpJockeyRating =
+    max(sharpTipSelections?.map((x) => x.jockey) || []) || 0;
 
-  const topSharpTrainerRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.trainer || 0),
-    0
-  );
+  const topSharpTrainerRating =
+    max(sharpTipSelections?.map((x) => x.trainer) || []) || 0;
 
-  const topSharpGoingRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.going || 0),
-    0
-  );
+  const topSharpGoingRating =
+    max(sharpTipSelections?.map((x) => x.going) || []) || 0;
 
-  const topSharpCourseRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.course || 0),
-    0
-  );
+  const topSharpCourseRating =
+    max(sharpTipSelections?.map((x) => x.course) || []) || 0;
 
-  const topSharpPedigreeRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.pedigree || 0),
-    0
-  );
+  const topSharpPedigreeRating =
+    max(sharpTipSelections?.map((x) => x.pedigree) || []) || 0;
 
-  const topSharpOwnerRating = sharpTipSelections?.reduce(
-    (acc, x) => Math.max(acc, x.owner || 0),
-    0
-  );
+  const topSharpOwnerRating =
+    max(sharpTipSelections?.map((x) => x.owner) || []) || 0;
 
   const averageSharpTotalsRatingArr = sharpTipSelections?.map((x) => {
     const arr = [
@@ -835,10 +818,8 @@ export function PicksRaceRow({
     };
   });
 
-  const topAverageSharpTotalsRating = averageSharpTotalsRatingArr?.reduce(
-    (acc, x) => Math.max(acc, x.average),
-    0
-  );
+  const topAverageSharpTotalsRating =
+    max(averageSharpTotalsRatingArr?.map((x) => x.average) || []) || 0;
 
   const sharpTipsWeighted =
     sharpTipSelections?.map((x) => {
@@ -995,7 +976,7 @@ export function PicksRaceRow({
 
   const isEwable = horsesCount > 7;
 
-  const topScoreCount = Math.max(...nameCountsWithPerc?.map((x) => x[1]));
+  const topScoreCount = max(nameCountsWithPerc?.map((x) => x[1]) || []);
 
   return (
     <div

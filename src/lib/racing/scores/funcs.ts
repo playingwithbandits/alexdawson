@@ -1,4 +1,4 @@
-import { avg } from "@/lib/utils";
+import { avg, max } from "@/lib/utils";
 import { FormObj, HorseStats } from "@/types/racing";
 
 // Add helper function
@@ -431,7 +431,7 @@ export function determineRunStyle(
   });
 
   // Find the predominant style
-  const maxScore = Math.max(...Object.values(scores));
+  const maxScore = max(Object.values(scores) as number[]);
   const predominantStyles = Object.entries(scores)
     .filter(([, score]) => score === maxScore)
     .map(([style]) => style);

@@ -1,4 +1,4 @@
-import { avg, sum } from "@/lib/utils";
+import { avg, max, min, sum } from "@/lib/utils";
 import {
   Race,
   RaceStats,
@@ -40,12 +40,12 @@ export function calculateRaceStats({
         lastRaceStatsArr.map((l) => l.info?.timePerFurlong)?.filter(Boolean)
       ) || 0,
     minTimePerFurlong:
-      Math.min(
-        ...lastRaceStatsArr.map((l) => l.info?.timePerFurlong)?.filter(Boolean)
+      min(
+        lastRaceStatsArr.map((l) => l.info?.timePerFurlong)?.filter(Boolean)
       ) || 0,
     maxTimePerFurlong:
-      Math.max(
-        ...lastRaceStatsArr.map((l) => l.info?.timePerFurlong)?.filter(Boolean)
+      max(
+        lastRaceStatsArr.map((l) => l.info?.timePerFurlong)?.filter(Boolean)
       ) || 0,
 
     avg: {
@@ -68,48 +68,35 @@ export function calculateRaceStats({
     },
     maxOfAvgs: {
       or:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_all.or)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.averages_all.or)?.filter(Boolean)) ||
+        0,
       rpr:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_all.rpr)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.averages_all.rpr)?.filter(Boolean)) ||
+        0,
       ts:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_all.ts)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.averages_all.ts)?.filter(Boolean)) ||
+        0,
       draw:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_all.draw)?.filter(Boolean)
+        max(
+          lastRaceStatsArr.map((l) => l.averages_all.draw)?.filter(Boolean)
         ) || 0,
       age:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_all.age)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.averages_all.age)?.filter(Boolean)) ||
+        0,
     },
 
     max: {
       or:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_all.or)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_all.or)?.filter(Boolean)) || 0,
       rpr:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_all.rpr)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_all.rpr)?.filter(Boolean)) || 0,
       ts:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_all.ts)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_all.ts)?.filter(Boolean)) || 0,
       draw:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_all.draw)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_all.draw)?.filter(Boolean)) ||
+        0,
       age:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_all.age)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_all.age)?.filter(Boolean)) || 0,
     },
     beatenAvg: {
       or:
@@ -136,71 +123,65 @@ export function calculateRaceStats({
 
     beatenMaxOfAvgs: {
       or:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_beaten.or)?.filter(Boolean)
+        max(
+          lastRaceStatsArr.map((l) => l.averages_beaten.or)?.filter(Boolean)
         ) || 0,
       rpr:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_beaten.rpr)?.filter(Boolean)
+        max(
+          lastRaceStatsArr.map((l) => l.averages_beaten.rpr)?.filter(Boolean)
         ) || 0,
       ts:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_beaten.ts)?.filter(Boolean)
+        max(
+          lastRaceStatsArr.map((l) => l.averages_beaten.ts)?.filter(Boolean)
         ) || 0,
       draw:
-        Math.max(
-          ...lastRaceStatsArr
-            .map((l) => l.averages_beaten.draw)
-            ?.filter(Boolean)
+        max(
+          lastRaceStatsArr.map((l) => l.averages_beaten.draw)?.filter(Boolean)
         ) || 0,
       age:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.averages_beaten.age)?.filter(Boolean)
+        max(
+          lastRaceStatsArr.map((l) => l.averages_beaten.age)?.filter(Boolean)
         ) || 0,
     },
     beatenMax: {
       or:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_beaten.or)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_beaten.or)?.filter(Boolean)) ||
+        0,
       rpr:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_beaten.rpr)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_beaten.rpr)?.filter(Boolean)) ||
+        0,
       ts:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_beaten.ts)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_beaten.ts)?.filter(Boolean)) ||
+        0,
       draw:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_beaten.draw)?.filter(Boolean)
+        max(
+          lastRaceStatsArr.map((l) => l.maxes_beaten.draw)?.filter(Boolean)
         ) || 0,
       age:
-        Math.max(
-          ...lastRaceStatsArr.map((l) => l.maxes_beaten.age)?.filter(Boolean)
-        ) || 0,
+        max(lastRaceStatsArr.map((l) => l.maxes_beaten.age)?.filter(Boolean)) ||
+        0,
     },
   };
 
   const allValidFormsAllHorsesRaceStatsRaceInfo: AllValidFormsAllHorsesRaceStatsRaceInfoType =
     {
       maxBeatenAvgsRpr:
-        Math.max(
-          ...horses
+        max(
+          horses
             .map((h) => h.allValidFormRowsStatsDataStats?.maxBeatenAvgsRpr || 0)
             ?.filter(Boolean)
         ) || 0,
       maxBeatenMaxesRpr:
-        Math.max(
-          ...horses
+        max(
+          horses
             .map(
               (h) => h.allValidFormRowsStatsDataStats?.maxBeatenMaxesRpr || 0
             )
             ?.filter(Boolean)
         ) || 0,
       minTimePerFurlong:
-        Math.min(
-          ...horses
+        min(
+          horses
             .map(
               (h) => h.allValidFormRowsStatsDataStats?.minTimePerFurlong || 0
             )
@@ -256,8 +237,8 @@ export function calculateRaceStats({
     distanceInFurlongs,
     avgDistancePreference: avg(horseStats.map((s) => s?.optimalDistance || 0)),
     distanceRange: {
-      min: Math.min(...horseStats.map((s) => s?.minDistance || Infinity)),
-      max: Math.max(...horseStats.map((s) => s?.maxDistance || 0)),
+      min: min(horseStats.map((s) => s?.minDistance || 0)),
+      max: max(horseStats.map((s) => s?.maxDistance || 0)),
       avg: avg(horseStats.map((s) => s?.avgDistance || 0)),
     },
 

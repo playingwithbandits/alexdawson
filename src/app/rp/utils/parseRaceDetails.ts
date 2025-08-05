@@ -26,6 +26,7 @@ import { fetchFormRaceDetails } from "./fetchFormRaceDetails";
 import { fetchPredictions } from "./fetchPredictions";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
 import { lastRaceToLastRaceStats } from "./lastRaceToLastRaceStats";
+import { max, min } from "@/lib/utils";
 
 export async function parseRaceDetails(
   html: string,
@@ -90,7 +91,7 @@ export async function parseRaceDetails(
   const rows = Array.from(rowsElements);
   //console.log(`Found ${rows.length} horses to parse`);
 
-  const fourtyFiveDaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 45);
+  const _180DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 180);
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const horses: Horse[] = await Promise.all(
     rows.map(async (row) => {
@@ -127,7 +128,7 @@ export async function parseRaceDetails(
             ?.split("/")?.[4] || "";
 
         const date = new Date(formRowDate || "");
-        return isValidOutcome(raceOutcomeCode) && date > fourtyFiveDaysAgo;
+        return isValidOutcome(raceOutcomeCode) && date > _180DaysAgo;
       });
 
       const allValidFormRowsStatsData = await Promise.all(
@@ -197,20 +198,20 @@ export async function parseRaceDetails(
         .filter((x) => x !== undefined);
 
       const minTimePerFurlong =
-        Math.min(
-          ...allFormRowsStatsDataStatsObjs
+        min(
+          allFormRowsStatsDataStatsObjs
             .map((x) => x.info?.timePerFurlong || 0)
             ?.filter(Boolean)
         ) || 0;
       const maxBeatenAvgsRpr =
-        Math.max(
-          ...allFormRowsStatsDataStatsObjs
+        max(
+          allFormRowsStatsDataStatsObjs
             .map((x) => x.averages_beaten?.rpr || 0)
             ?.filter(Boolean)
         ) || 0;
       const maxBeatenMaxesRpr =
-        Math.max(
-          ...allFormRowsStatsDataStatsObjs
+        max(
+          allFormRowsStatsDataStatsObjs
             .map((x) => x.maxes_beaten?.rpr || 0)
             ?.filter(Boolean)
         ) || 0;
