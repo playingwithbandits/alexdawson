@@ -1,0 +1,468 @@
+[
+  {
+    "courseName": "Bath",
+    "raceCardsCourseUrl": "/racecards/2025-08-01#bath",
+    "raceCardsCourseMeetingsUrl": "/racecards/5/bath/2025-08-01",
+    "going": "GOOD TO FIRM, Good in places (GoingStick 5.8) (Rail movements: 5.55, 8.05 & 8.35 +5yds)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "1m - Inside; 1m2f & 1m3f - Outside; Remainder - Centre",
+    "races": []
+  },
+  {
+    "courseName": "Galway",
+    "raceCardsCourseUrl": "/racecards/2025-08-01#galway",
+    "raceCardsCourseMeetingsUrl": "/racecards/183/galway/2025-08-01",
+    "going": "Jumps course - GOOD; Flat course - YIELDING, Good to yielding in places (Chase course selectively watered)",
+    "weather": "Light rain",
+    "stallsPosition": "",
+    "races": [
+      {
+        "raceTime": "5:00",
+        "raceCardUrl": "/racecards/183/galway/2025-08-01/900490",
+        "horses": [
+          {
+            "horseName": "Coincidental Glory",
+            "horseProfileUrl": "/profile/horse/7834643/coincidental-glory/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Askalon",
+            "horseProfileUrl": "/profile/horse/7708573/askalon/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Caught U Sleeping",
+            "horseProfileUrl": "/profile/horse/7866001/caught-u-sleeping/",
+            "raceNumber": "(11)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:30",
+        "raceCardUrl": "/racecards/183/galway/2025-08-01/900491",
+        "horses": [
+          {
+            "horseName": "Fiddledee",
+            "horseProfileUrl": "/profile/horse/5613776/fiddledee/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Miss Manzor",
+            "horseProfileUrl": "/profile/horse/4497178/miss-manzor/",
+            "raceNumber": "(18)"
+          },
+          {
+            "horseName": "Heroes Rise",
+            "horseProfileUrl": "/profile/horse/5671318/heroes-rise/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Princess Georgie",
+            "horseProfileUrl": "/profile/horse/6833867/princess-georgie/",
+            "raceNumber": "(20)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:00",
+        "raceCardUrl": "/racecards/183/galway/2025-08-01/900492",
+        "horses": [
+          {
+            "horseName": "Rexem",
+            "horseProfileUrl": "/profile/horse/3918406/rexem/",
+            "raceNumber": "(22)"
+          },
+          {
+            "horseName": "In Excelsis Deo",
+            "horseProfileUrl": "/profile/horse/4609190/in-excelsis-deo/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Cavalry Master",
+            "horseProfileUrl": "/profile/horse/2471236/cavalry-master/",
+            "raceNumber": "(23)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:35",
+        "raceCardUrl": "/racecards/183/galway/2025-08-01/900333",
+        "horses": [
+          {
+            "horseName": "Beset",
+            "horseProfileUrl": "/profile/horse/5403099/beset/",
+            "raceNumber": "(19)"
+          },
+          {
+            "horseName": "Vorfreude",
+            "horseProfileUrl": "/profile/horse/6514077/vorfreude/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Mon Coeur",
+            "horseProfileUrl": "/profile/horse/4086859/mon-coeur/",
+            "raceNumber": "(20)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:10",
+        "raceCardUrl": "/racecards/183/galway/2025-08-01/900493",
+        "horses": [
+          {
+            "horseName": "Isabella Johnson",
+            "horseProfileUrl": "/profile/horse/6949138/isabella-johnson/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "7:40",
+        "raceCardUrl": "/racecards/183/galway/2025-08-01/900494",
+        "horses": [
+          {
+            "horseName": "Ohmali",
+            "horseProfileUrl": "/profile/horse/6429635/ohmali/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Casheldale Lass",
+            "horseProfileUrl": "/profile/horse/6671045/casheldale-lass/",
+            "raceNumber": "(10)"
+          },
+          {
+            "horseName": "Great Mover",
+            "horseProfileUrl": "/profile/horse/6064561/great-mover/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Summer Island",
+            "horseProfileUrl": "/profile/horse/7431607/summer-island/",
+            "raceNumber": "(15)"
+          },
+          {
+            "horseName": "Medieval Night",
+            "horseProfileUrl": "/profile/horse/6202590/medieval-night/",
+            "raceNumber": "(13)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:10",
+        "raceCardUrl": "/racecards/183/galway/2025-08-01/900495",
+        "horses": [
+          {
+            "horseName": "A Dream To Share",
+            "horseProfileUrl": "/profile/horse/4320863/a-dream-to-share/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Granite Bay",
+            "horseProfileUrl": "/profile/horse/5368075/granite-bay/",
+            "raceNumber": "(4)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:40",
+        "raceCardUrl": "/racecards/183/galway/2025-08-01/900496",
+        "horses": [
+          {
+            "horseName": "Dream Escape",
+            "horseProfileUrl": "/profile/horse/3662412/dream-escape/",
+            "raceNumber": "(8)"
+          },
+          {
+            "horseName": "Atheneum",
+            "horseProfileUrl": "/profile/horse/6166369/atheneum/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Scottish Reel",
+            "horseProfileUrl": "/profile/horse/5237855/scottish-reel/",
+            "raceNumber": "(20)"
+          },
+          {
+            "horseName": "Tassarolo",
+            "horseProfileUrl": "/profile/horse/6582481/tassarolo/",
+            "raceNumber": "(12)"
+          },
+          {
+            "horseName": "Redwood Queen",
+            "horseProfileUrl": "/profile/horse/3891103/redwood-queen/",
+            "raceNumber": "(7)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Goodwood",
+    "raceCardsCourseUrl": "/racecards/2025-08-01#goodwood",
+    "raceCardsCourseMeetingsUrl": "/racecards/21/goodwood/2025-08-01",
+    "going": "SOFT (Good to soft in places; 5.7) changing to GOOD TO SOFT (Soft in places) after Race 3 (2.30)",
+    "weather": "Sunny intervals",
+    "stallsPosition": "5f, 6f & 1m - Centre; 1m3f - Outside; 1m1f - Inside; 2m4f - Flag",
+    "races": [
+      {
+        "raceTime": "1:55",
+        "raceCardUrl": "/racecards/21/goodwood/2025-08-01/898948",
+        "horses": [
+          {
+            "horseName": "Opera Ballo",
+            "horseProfileUrl": "/profile/horse/7055588/opera-ballo/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Spectacular View",
+            "horseProfileUrl": "/profile/horse/6278732/spectacular-view/",
+            "raceNumber": "(6)"
+          }
+        ]
+      },
+      {
+        "raceTime": "2:30",
+        "raceCardUrl": "/racecards/21/goodwood/2025-08-01/897465",
+        "horses": [
+          {
+            "horseName": "Longlai",
+            "horseProfileUrl": "/profile/horse/3097918/longlai/",
+            "raceNumber": "(21)"
+          },
+          {
+            "horseName": "Mirsky",
+            "horseProfileUrl": "/profile/horse/3841764/mirsky/",
+            "raceNumber": "(11)"
+          },
+          {
+            "horseName": "Arisaig",
+            "horseProfileUrl": "/profile/horse/5343990/arisaig/",
+            "raceNumber": "(4)"
+          },
+          {
+            "horseName": "Great Chieftain",
+            "horseProfileUrl": "/profile/horse/5398613/great-chieftain/",
+            "raceNumber": "(16)"
+          },
+          {
+            "horseName": "Two Tempting",
+            "horseProfileUrl": "/profile/horse/4014038/two-tempting/",
+            "raceNumber": "(2)"
+          },
+          {
+            "horseName": "Star Anthem",
+            "horseProfileUrl": "/profile/horse/5708719/star-anthem/",
+            "raceNumber": "(17)"
+          },
+          {
+            "horseName": "Treasure Time",
+            "horseProfileUrl": "/profile/horse/4924667/treasure-time/",
+            "raceNumber": "(14)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:05",
+        "raceCardUrl": "/racecards/21/goodwood/2025-08-01/897464",
+        "horses": [
+          {
+            "horseName": "Celandine",
+            "horseProfileUrl": "/profile/horse/5937852/celandine/",
+            "raceNumber": "(13)"
+          },
+          {
+            "horseName": "Manaccan",
+            "horseProfileUrl": "/profile/horse/3593785/manaccan/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "3:45",
+        "raceCardUrl": "/racecards/21/goodwood/2025-08-01/898949",
+        "horses": [
+          {
+            "horseName": "Haunted Dream",
+            "horseProfileUrl": "/profile/horse/3673840/haunted-dream/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:20",
+        "raceCardUrl": "/racecards/21/goodwood/2025-08-01/898951",
+        "horses": [
+          {
+            "horseName": "Rising Power",
+            "horseProfileUrl": "/profile/horse/7471066/rising-power/",
+            "raceNumber": "(1)"
+          },
+          {
+            "horseName": "Jan Steen",
+            "horseProfileUrl": "/profile/horse/7426993/jan-steen/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Musselburgh",
+    "raceCardsCourseUrl": "/racecards/2025-08-01#musselburgh",
+    "raceCardsCourseMeetingsUrl": "/racecards/16/musselburgh/2025-08-01",
+    "going": "GOOD, Good to firm in places (GoingStick 7.6) (Watered)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f & 2m2f - Stands' side; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "5:37",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-08-01/898997",
+        "horses": [
+          {
+            "horseName": "Star Of Markinch",
+            "horseProfileUrl": "/profile/horse/2994233/star-of-markinch/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:50",
+        "raceCardUrl": "/racecards/16/musselburgh/2025-08-01/898999",
+        "horses": [
+          {
+            "horseName": "Wrestling Revenue",
+            "horseProfileUrl": "/profile/horse/5176377/wrestling-revenue/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newcastle (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-08-01#newcastle-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1353/newcastle-aw/2025-08-01",
+    "going": "TAPETA: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Centre; 1m2f - Outside; 2m - Inside",
+    "races": [
+      {
+        "raceTime": "2:05",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-08-01/899238",
+        "horses": [
+          {
+            "horseName": "Rampant",
+            "horseProfileUrl": "/profile/horse/5042484/rampant/",
+            "raceNumber": "(7)"
+          }
+        ]
+      },
+      {
+        "raceTime": "4:30",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-08-01/899240",
+        "horses": [
+          {
+            "horseName": "El Cobre Fuego",
+            "horseProfileUrl": "/profile/horse/6829614/el-cobre-fuego/",
+            "raceNumber": "(1)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:07",
+        "raceCardUrl": "/racecards/1353/newcastle-aw/2025-08-01/899235",
+        "horses": [
+          {
+            "horseName": "Front Gunner",
+            "horseProfileUrl": "/profile/horse/5357891/front-gunner/",
+            "raceNumber": "(6)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Newmarket (July)",
+    "raceCardsCourseUrl": "/racecards/2025-08-01#newmarket-july",
+    "raceCardsCourseMeetingsUrl": "/racecards/174/newmarket-july/2025-08-01",
+    "going": "GOOD TO SOFT (GoingStick 6.5)",
+    "weather": "Partly cloudy",
+    "stallsPosition": "(Stands' side course) Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "5:45",
+        "raceCardUrl": "/racecards/174/newmarket-july/2025-08-01/899006",
+        "horses": [
+          {
+            "horseName": "Arlo's Girl",
+            "horseProfileUrl": "/profile/horse/7913267/arlos-girl/",
+            "raceNumber": "(5)"
+          }
+        ]
+      },
+      {
+        "raceTime": "6:55",
+        "raceCardUrl": "/racecards/174/newmarket-july/2025-08-01/899001",
+        "horses": [
+          {
+            "horseName": "Documenting",
+            "horseProfileUrl": "/profile/horse/901037/documenting/",
+            "raceNumber": "(2)"
+          }
+        ]
+      },
+      {
+        "raceTime": "8:30",
+        "raceCardUrl": "/racecards/174/newmarket-july/2025-08-01/899004",
+        "horses": [
+          {
+            "horseName": "Dashing Roger",
+            "horseProfileUrl": "/profile/horse/2861834/dashing-roger/",
+            "raceNumber": "(2)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Southwell (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-08-01#southwell-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/394/southwell-aw/2025-08-01",
+    "going": "TAPETA: STANDARD",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "5f - Centre; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "2:50",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-08-01/899244",
+        "horses": [
+          {
+            "horseName": "Cribbins",
+            "horseProfileUrl": "/profile/horse/7861443/cribbins/",
+            "raceNumber": "(8)"
+          }
+        ]
+      },
+      {
+        "raceTime": "5:50",
+        "raceCardUrl": "/racecards/394/southwell-aw/2025-08-01/899243",
+        "horses": [
+          {
+            "horseName": "Lazzar",
+            "horseProfileUrl": "/profile/horse/6402366/lazzar/",
+            "raceNumber": "(4)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Saratoga",
+    "raceCardsCourseUrl": "/racecards/2025-08-01#saratoga",
+    "raceCardsCourseMeetingsUrl": "/racecards/445/saratoga/2025-08-01",
+    "going": "TURF: FIRM",
+    "weather": "",
+    "stallsPosition": "",
+    "races": []
+  }
+]

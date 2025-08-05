@@ -1,0 +1,299 @@
+{
+  "date": "2025-08-01",
+  "tips": [
+    {
+      "time": "13:20",
+      "horse": "Aggagio",
+      "tipster": "Steve Mullington",
+      "score": "22.3"
+    },
+    {
+      "time": "14:30",
+      "horse": "Rhoscolyn",
+      "tipster": "Chris Connolly",
+      "score": "20.5"
+    },
+    {
+      "time": "14:30",
+      "horse": "Afentiko",
+      "tipster": "Farringdon",
+      "score": "13.8"
+    },
+    {
+      "time": "14:50",
+      "horse": "Byblos",
+      "tipster": "Lee Sobot",
+      "score": "10.4"
+    },
+    {
+      "time": "17:45",
+      "horse": "Beckford's Folly",
+      "tipster": "The Brigadier",
+      "score": "9.8"
+    },
+    {
+      "time": "15:45",
+      "horse": "Carrytheone",
+      "tipster": "Whistler",
+      "score": "7.8"
+    },
+    {
+      "time": "16:55",
+      "horse": "Push The Limit",
+      "tipster": "Rory Delargy",
+      "score": "7.6"
+    },
+    {
+      "time": "14:30",
+      "horse": "Tribal Chief",
+      "tipster": "Marlborough",
+      "score": "5.4"
+    },
+    {
+      "time": "16:55",
+      "horse": "Ammes",
+      "tipster": "Ben Morgan",
+      "score": "4.3"
+    },
+    {
+      "time": "14:30",
+      "horse": "Fifth Column",
+      "tipster": "Templegate",
+      "score": "4.1"
+    },
+    {
+      "time": "14:30",
+      "horse": "Real Gain",
+      "tipster": "Melissa Jones",
+      "score": "-1.5"
+    },
+    {
+      "time": "15:05",
+      "horse": "Asfoora",
+      "tipster": "Glendale",
+      "score": "-2.6"
+    },
+    {
+      "time": "14:30",
+      "horse": "Skukuza",
+      "tipster": "Mercury",
+      "score": "-3.0"
+    },
+    {
+      "time": "14:30",
+      "horse": "Ebt's Guard",
+      "tipster": "Lambourn",
+      "score": "-5.0"
+    },
+    {
+      "time": "13:55",
+      "horse": "Diego Ventura",
+      "tipster": "Luke Tucker",
+      "score": "-6.3"
+    },
+    {
+      "time": "14:30",
+      "horse": "Dutch Decoy",
+      "tipster": "RP Ratings",
+      "score": "-5.9"
+    },
+    {
+      "time": "18:35",
+      "horse": "Lope De Lilas",
+      "tipster": "Fortunatus",
+      "score": "-6.2"
+    },
+    {
+      "time": "14:30",
+      "horse": "Rhoscolyn",
+      "tipster": "Dean Kilbryde",
+      "score": "-6.4"
+    },
+    {
+      "time": "14:30",
+      "horse": "Rhoscolyn",
+      "tipster": "The North",
+      "score": "-10.1"
+    },
+    {
+      "time": "13:20",
+      "horse": "Sheradann",
+      "tipster": "Newsboy",
+      "score": "-11.0"
+    },
+    {
+      "time": "15:05",
+      "horse": "Big Mojo",
+      "tipster": "Ross Shepherd",
+      "score": "-11.1"
+    },
+    {
+      "time": "15:05",
+      "horse": "Big Mojo",
+      "tipster": "The Judge",
+      "score": "-14.5"
+    },
+    {
+      "time": "14:30",
+      "horse": "Fifth Column",
+      "tipster": "Rockavon",
+      "score": "-14.6"
+    },
+    {
+      "time": "14:50",
+      "horse": "Byblos",
+      "tipster": "Computeform",
+      "score": "-15.9"
+    },
+    {
+      "time": "15:05",
+      "horse": "Khaadem",
+      "tipster": "Robin Goodfellow",
+      "score": "-15.6"
+    },
+    {
+      "time": "17:30",
+      "horse": "Jarrive De Mee",
+      "tipster": "Karl Hedley",
+      "score": "-18.3"
+    },
+    {
+      "time": "16:55",
+      "horse": "Ammes",
+      "tipster": "Matt Polley",
+      "score": "-18.3"
+    },
+    {
+      "time": "13:20",
+      "horse": "Sheradann",
+      "tipster": "The Punt",
+      "score": "-18.0"
+    },
+    {
+      "time": "19:10",
+      "horse": "Jannah Star",
+      "tipster": "Ratings Hub",
+      "score": "-18.5"
+    },
+    {
+      "time": "20:35",
+      "horse": "Galactic Glow",
+      "tipster": "West Country",
+      "score": "-20.7"
+    },
+    {
+      "time": "15:05",
+      "horse": "Big Mojo",
+      "tipster": "Garry Owen",
+      "score": "-20.6"
+    },
+    {
+      "time": "15:05",
+      "horse": "Big Mojo",
+      "tipster": "Chris Wright",
+      "score": "-21.3"
+    },
+    {
+      "time": "20:35",
+      "horse": "Blue Hero",
+      "tipster": "Postdata",
+      "score": "-24.2"
+    },
+    {
+      "time": "20:10",
+      "horse": "A Dream To Share",
+      "tipster": "Brian Flanagan",
+      "score": "-25.0"
+    },
+    {
+      "time": "14:30",
+      "horse": "Arisaig",
+      "tipster": "Jim Delahunt",
+      "score": "-27.2"
+    },
+    {
+      "time": "13:20",
+      "horse": "Tashkhan",
+      "tipster": "Rob Wright",
+      "score": "-29.7"
+    },
+    {
+      "time": "13:20",
+      "horse": "Zinc White",
+      "tipster": "Spotlight",
+      "score": "-29.7"
+    },
+    {
+      "time": "15:45",
+      "horse": "Liberty Lane",
+      "tipster": "Adrian Wall",
+      "score": "-32.9"
+    },
+    {
+      "time": "16:20",
+      "horse": "Penhallam",
+      "tipster": "Jeffrey Ross",
+      "score": "-38.8"
+    },
+    {
+      "time": "14:30",
+      "horse": "Tribal Chief",
+      "tipster": "Jason Heavey",
+      "score": "-36.6"
+    },
+    {
+      "time": "14:30",
+      "horse": "Skukuza",
+      "tipster": "The Duke",
+      "score": "-40.9"
+    },
+    {
+      "time": "14:30",
+      "horse": "Fifth Column",
+      "tipster": "The Score",
+      "score": "-41.2"
+    },
+    {
+      "time": "15:05",
+      "horse": "Khaadem",
+      "tipster": "Ian Gaughran",
+      "score": "-45.7"
+    },
+    {
+      "time": "16:20",
+      "horse": "Ardisia",
+      "tipster": "On The Nose",
+      "score": "-47.3"
+    },
+    {
+      "time": "15:05",
+      "horse": "Town And Country",
+      "tipster": "Jon Freeman",
+      "score": "-48.4"
+    },
+    {
+      "time": "16:55",
+      "horse": "Push The Limit",
+      "tipster": "Moorestyle",
+      "score": "-49.2"
+    },
+    {
+      "time": "14:30",
+      "horse": "Two Tempting",
+      "tipster": "Sam Hardy",
+      "score": "-55.2"
+    },
+    {
+      "time": "14:30",
+      "horse": "Mirsky",
+      "tipster": "Andrew Mount",
+      "score": "-58.6"
+    },
+    {
+      "time": "15:53",
+      "horse": "Pinjarra",
+      "tipster": "Rory Paddock",
+      "score": "-64.9"
+    }
+  ]
+}
