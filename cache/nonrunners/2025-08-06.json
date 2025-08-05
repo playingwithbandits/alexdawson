@@ -1,0 +1,80 @@
+[
+  {
+    "courseName": "Brighton",
+    "raceCardsCourseUrl": "/racecards/2025-08-06#brighton",
+    "raceCardsCourseMeetingsUrl": "/racecards/7/brighton/2025-08-06",
+    "going": "GOOD, Good to firm in places (GoingStick: 5.7) (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "7f - Centre; 1m2f - Outside; Remainder - Inside",
+    "races": [
+      {
+        "raceTime": "4:15",
+        "raceCardUrl": "/racecards/7/brighton/2025-08-06/899106",
+        "horses": [
+          {
+            "horseName": "Typeface",
+            "horseProfileUrl": "/profile/horse/7227191/typeface/",
+            "raceNumber": "(8)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "courseName": "Kempton (AW)",
+    "raceCardsCourseUrl": "/racecards/2025-08-06#kempton-aw",
+    "raceCardsCourseMeetingsUrl": "/racecards/1079/kempton-aw/2025-08-06",
+    "going": "POLYTRACK: STANDARD TO SLOW",
+    "weather": "Cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Pontefract",
+    "raceCardsCourseUrl": "/racecards/2025-08-06#pontefract",
+    "raceCardsCourseMeetingsUrl": "/racecards/46/pontefract/2025-08-06",
+    "going": "GOOD, Good to firm in places (GoingStick: 7.7) (Selective watering) (Rail Movements: 2.30, 3.30 & 4.38 +8yds and 3.00, 4.05 & 5.08 +6yds)",
+    "weather": "Cloudy",
+    "stallsPosition": "Inside",
+    "races": []
+  },
+  {
+    "courseName": "Sligo",
+    "raceCardsCourseUrl": "/racecards/2025-08-06#sligo",
+    "raceCardsCourseMeetingsUrl": "/racecards/197/sligo/2025-08-06",
+    "going": "YIELDING, Good to yielding in places",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Wexford",
+    "raceCardsCourseUrl": "/racecards/2025-08-06#wexford",
+    "raceCardsCourseMeetingsUrl": "/racecards/201/wexford/2025-08-06",
+    "going": "GOOD (Watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "",
+    "races": []
+  },
+  {
+    "courseName": "Yarmouth",
+    "raceCardsCourseUrl": "/racecards/2025-08-06#yarmouth",
+    "raceCardsCourseMeetingsUrl": "/racecards/104/yarmouth/2025-08-06",
+    "going": "GOOD, Good to firm in places (GoingStick: 5.6) (Selective watering)",
+    "weather": "Mostly cloudy",
+    "stallsPosition": "Straight - Centre; Round - Inside",
+    "races": [
+      {
+        "raceTime": "6:15",
+        "raceCardUrl": "/racecards/104/yarmouth/2025-08-06/899099",
+        "horses": [
+          {
+            "horseName": "Sinj",
+            "horseProfileUrl": "/profile/horse/7471078/sinj/",
+            "raceNumber": "(3)"
+          }
+        ]
+      }
+    ]
+  }
+]

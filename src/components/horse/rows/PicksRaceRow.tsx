@@ -2751,11 +2751,11 @@ export function PicksRaceRow({
 
             const rprRaceMaxBeatenAvgsRprThreshold =
               (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                ?.maxBeatenAvgsRpr || 0) * 0.95;
+                ?.maxBeatenAvgsRpr || 0) * 0.9;
 
             const rprRaceMaxBeatenMaxesRprThreshold =
               (race.raceStats?.allValidFormsAllHorsesRaceStatsRaceInfo
-                ?.maxBeatenMaxesRpr || 0) * 0.95;
+                ?.maxBeatenMaxesRpr || 0) * 0.9;
 
             const maxBeatenAvgsRprGood =
               maxBeatenAvgsRpr &&
