@@ -1,5 +1,5 @@
 import type { FormObj, GoingRecord, HorseStats } from "@/types/racing";
-import { avg, sum } from "@/lib/utils";
+import { avg, max, min, sum } from "@/lib/utils";
 import { mapGoingCodeToType } from "./goingUtils";
 import { analyzeSentiment } from "./analyzeSentiment";
 import { TrackConfiguration } from "./calculateDrawBias";
@@ -261,13 +261,13 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       .filter(Boolean),
 
     // Ratings
-    bestRPR: Math.max(...validRuns.map((r) => r.rpPostmark || 0)),
+    bestRPR: max(validRuns.map((r) => r.rpPostmark || 0)),
     avgRPR: avg(validRuns.map((r) => r.rpPostmark || 0)),
     rprProgression: validRuns
       .slice(0, 12)
       .map((r) => r.rpPostmark || 0)
       .reverse(),
-    bestTopSpeed: Math.max(...validRuns.map((r) => r.rpTopspeed || 0)),
+    bestTopSpeed: max(validRuns.map((r) => r.rpTopspeed || 0)),
     avgTopSpeed: avg(validRuns.map((r) => r.rpTopspeed || 0)),
     topSpeedProgression: validRuns
       .slice(0, 12)
@@ -275,10 +275,8 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       .reverse(),
 
     // Distance
-    minDistance: Math.min(
-      ...validRuns.map((r) => r.distanceFurlong || Infinity)
-    ),
-    maxDistance: Math.max(...validRuns.map((r) => r.distanceFurlong || 0)),
+    minDistance: min(validRuns.map((r) => r.distanceFurlong || 0)),
+    maxDistance: max(validRuns.map((r) => r.distanceFurlong || 0)),
     avgDistance: avg(validRuns.map((r) => r.distanceFurlong || 0)),
     distanceProgression: validRuns
       .slice(0, 12)
@@ -286,10 +284,8 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       .reverse(),
 
     // Weight
-    minWeight: Math.min(
-      ...validRuns.map((r) => r.weightCarriedLbs || Infinity)
-    ),
-    maxWeight: Math.max(...validRuns.map((r) => r.weightCarriedLbs || 0)),
+    minWeight: min(validRuns.map((r) => r.weightCarriedLbs || 0)),
+    maxWeight: max(validRuns.map((r) => r.weightCarriedLbs || 0)),
     avgWeight: avg(validRuns.map((r) => r.weightCarriedLbs || 0)),
     weightProgression: validRuns
       .slice(0, 12)
@@ -297,7 +293,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       .reverse(),
 
     // Prize money
-    highestPrize: Math.max(...validRuns.map((r) => r.prizeSterling || 0)),
+    highestPrize: max(validRuns.map((r) => r.prizeSterling || 0)),
     avgPrize: avg(validRuns.map((r) => r.prizeSterling || 0)),
     totalPrizeMoney: sum(validRuns.map((r) => r.prizeSterling || 0)),
 
@@ -315,9 +311,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
 
     // Official ratings
     latestOR: validRuns[0]?.officialRatingRanOff || 0,
-    bestOfficialRating: Math.max(
-      ...validRuns.map((r) => r.officialRatingRanOff || 0)
-    ),
+    bestOfficialRating: max(validRuns.map((r) => r.officialRatingRanOff || 0)),
     avgOfficialRating: avg(validRuns.map((r) => r.officialRatingRanOff || 0)),
     officialRatingProgression: validRuns
       .slice(0, 12)
@@ -346,8 +340,8 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
     distanceStats: {
       optimal: findOptimalDistance(validRuns),
       range: {
-        min: Math.min(...distances),
-        max: Math.max(...distances),
+        min: min(distances),
+        max: max(distances),
         avg: avg(distances),
       },
       performanceByType: distancePerformance,
@@ -362,9 +356,9 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       trend: positionTrend,
     },
     classStats: {
-      highestClass: Math.min(...classes), // Lower number = higher class
+      highestClass: min(classes), // Lower number = higher class
 
-      lowestClass: Math.max(...classes),
+      lowestClass: max(classes),
       currentClass: validRuns[0]?.raceClass || 0,
       classProgression: classes.slice(0, 12),
     },
@@ -373,8 +367,8 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       avgBeatenDistance: avg(beatenDistances),
       totalWinningDistance: sum(winningMargins),
       totalBeatenDistance: sum(beatenDistances),
-      maxWinningMargin: Math.max(...winningMargins, 0),
-      maxBeatenDistance: Math.max(...beatenDistances, 0),
+      maxWinningMargin: max(winningMargins),
+      maxBeatenDistance: max(beatenDistances),
     },
     drawPerformance: {
       winsFromBadDraw: winsFromBadDraw.length,
@@ -382,7 +376,7 @@ export function calculateHorseStats(formObj?: FormObj): HorseStats {
       winRateFromBadDraw:
         (winsFromBadDraw.length / runsFromBadDraw.length) * 100 || 0,
       avgPositionFromBadDraw: avg(positionsFromBadDraw) || 0,
-      bestPositionFromBadDraw: Math.min(...positionsFromBadDraw, Infinity),
+      bestPositionFromBadDraw: min(positionsFromBadDraw),
     },
     sentiment,
     runStyle,
