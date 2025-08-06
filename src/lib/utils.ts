@@ -36,15 +36,33 @@ export function normalize(value: number, min: number, max: number): number {
   return (value - min) / (max - min);
 }
 
-export function mostFrequentString(arr: string[]): string {
-  if (!arr.length) return "-";
+/**
+ * Returns an array of the most frequently occurring strings in the input array.
+ *
+ * Examples:
+ * mostFrequentString(['a', 'b', 'a', 'c']) => ['a']
+ * mostFrequentString(['a', 'b', 'b', 'a']) => ['a', 'b']
+ * mostFrequentString(['x', 'y']) => ['x', 'y']
+ * mostFrequentString([]) => []
+ */
+export function mostFrequentString(arr: string[]): string[] {
+  if (!arr.length) return [];
+
+  // Create frequency map
   const frequencyMap = new Map<string, number>();
   arr.forEach((item) => {
     frequencyMap.set(item, (frequencyMap.get(item) || 0) + 1);
   });
+
+  // Find max frequency
   const entries = Array.from(frequencyMap.entries());
-  if (!entries.length) return "-";
-  return entries.reduce((a, b) => (a[1] > b[1] ? a : b))[0];
+  if (!entries.length) return [];
+  const maxFreq = Math.max(...entries.map((e) => e[1]));
+
+  // Return all strings that appear maxFreq times
+  return entries
+    .filter((entry) => entry[1] === maxFreq)
+    .map((entry) => entry[0]);
 }
 
 export function courseNameToTrackId(courseName: string): string {

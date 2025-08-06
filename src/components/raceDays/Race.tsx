@@ -15,7 +15,7 @@ interface RaceProps {
 export function Race({ race, meeting }: RaceProps) {
   // Calculate
 
-  const scoreToBeBetterThan = 5;
+  const scoreToBeBetterThan = 6;
 
   return (
     <Accordion type="single" collapsible>

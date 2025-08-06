@@ -76,6 +76,9 @@ export interface ScoreObj {
     goingCode: boolean;
     jockey: boolean;
   };
+  horseRacedWith: {
+    jockey: boolean;
+  };
 }
 
 export interface Horse {
@@ -92,9 +95,9 @@ export interface FormInfo {
   rawData: {
     rpr: number[];
     distanceF: number[];
-    trackId: string[];
+    trackIds: string[];
     goingCodes: string[];
-    jockey: string[];
+    jockeys: string[];
     timePerFurlong: number[];
     racedAgainst: {
       rpr: number[];
@@ -118,9 +121,9 @@ export interface FormInfo {
   averages: {
     rpr: number;
     distanceF: number;
-    trackId: string;
-    goingCode: string;
-    jockey: string;
+    trackIds: string[];
+    goingCodes: string[];
+    jockeys: string[];
     racedAgainst: {
       rpr: number;
     };

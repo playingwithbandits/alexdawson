@@ -11,6 +11,7 @@ import {
 } from "@/types/raceday";
 import { twMerge } from "tailwind-merge";
 import { Forms } from "./Forms";
+import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 interface HorseProps {
   horse: HorseType;
@@ -39,6 +40,7 @@ export function Horse({ horse, race, meeting }: HorseProps) {
     total: totalScore,
     horseBetterThanRaceTheshold,
     horseFormAveragesStatsGood,
+    horseRacedWith,
   } = scoreObj || {};
 
   return (
@@ -69,7 +71,8 @@ export function Horse({ horse, race, meeting }: HorseProps) {
                 <tr>
                   <td className="px-4 py-2">Distance</td>
                   <td className="px-4 py-2">Going</td>
-                  <td className="px-4 py-2">Jockey</td>
+                  <td className="px-4 py-2">Jockeys</td>
+                  <td className="px-4 py-2">Avg_Jockey</td>
                   <td className="px-4 py-2">TPF</td>
                   <td className="px-4 py-2 ">Avg</td>
                   <td className="px-4 py-2 ">Max</td>
@@ -94,6 +97,16 @@ export function Horse({ horse, race, meeting }: HorseProps) {
                     {formAveragesGoingCode}
                   </td>
 
+                  <td
+                    className={twMerge(
+                      "px-4 py-2",
+                      horseRacedWith?.jockey && "text-yellow-400"
+                    )}
+                  >
+                    {Array.from(new Set(horse.form?.map((x) => x.jockey)))
+                      .map((x) => horseNameToKey(x))
+                      .join(", ")}
+                  </td>
                   <td
                     className={twMerge(
                       "px-4 py-2",

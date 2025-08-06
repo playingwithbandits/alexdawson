@@ -194,9 +194,9 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           averages: {
             rpr: avg(rawRprData),
             distanceF: avg(rawDistanceFData),
-            trackId: mostFrequentString(rawTrackIdData),
-            goingCode: mostFrequentString(rawGoingCodesData),
-            jockey: mostFrequentString(rawJockeyData),
+            trackIds: mostFrequentString(rawTrackIdData),
+            goingCodes: mostFrequentString(rawGoingCodesData),
+            jockeys: mostFrequentString(rawJockeyData),
 
             racedAgainst: {
               rpr: avg(rawRprData_RacedAgainst),
@@ -247,9 +247,9 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             rpr: rawRprData || [],
             timePerFurlong: rawTimePerFurlongData || [],
             distanceF: rawDistanceFData || [],
-            trackId: rawTrackIdData || [],
+            trackIds: rawTrackIdData || [],
             goingCodes: rawGoingCodesData || [],
-            jockey: rawJockeyData || [],
+            jockeys: rawJockeyData || [],
             racedAgainst: {
               rpr: rawRprData_RacedAgainst || [],
             },

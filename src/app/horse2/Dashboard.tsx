@@ -1,6 +1,6 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
-import { horseNameToKey } from "@/lib/racing/scores/funcs";
+import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 
 export function Dashboard({ data }: { data: Meeting[] }) {
   console.log("Dashboard", data);
@@ -40,6 +40,7 @@ export function Dashboard({ data }: { data: Meeting[] }) {
                   rpr: horseRpr,
                   formInfo: horseFormInfo,
                   jockey,
+                  form,
                 } = horse;
 
                 const {
@@ -71,8 +72,8 @@ export function Dashboard({ data }: { data: Meeting[] }) {
                       raceThresholds.timePerFurlong,
                 };
 
-                const avgGoingCode = horseFormInfo?.averages?.goingCode;
-                const avgJockey = horseFormInfo?.averages?.jockey;
+                const avgGoingCodes = horseFormInfo?.averages?.goingCodes;
+                const avgJockeys = horseFormInfo?.averages?.jockeys;
                 const avgDistanceF = horseFormInfo?.averages?.distanceF;
 
                 const horseFormAveragesStatsGood = {
@@ -81,22 +82,34 @@ export function Dashboard({ data }: { data: Meeting[] }) {
                     avgDistanceF >= raceThresholds.distanceFMin &&
                     avgDistanceF <= raceThresholds.distanceFMax,
                   goingCode:
-                    Boolean(horseFormInfo?.averages?.goingCode) &&
-                    goingCodes?.some((goingCode) => goingCode === avgGoingCode),
+                    Boolean(avgGoingCodes) &&
+                    goingCodes?.some((goingCode) =>
+                      avgGoingCodes?.includes(goingCode)
+                    ),
 
                   jockey:
-                    Boolean(avgJockey) &&
-                    horseNameToKey(avgJockey) === horseNameToKey(jockey),
+                    Boolean(avgJockeys) &&
+                    avgJockeys?.some(
+                      (jockey) =>
+                        horseNameToKey(jockey) === horseNameToKey(jockey)
+                    ),
+                };
+
+                const horseRacedWith = {
+                  jockey: form
+                    ?.map((x) => horseNameToKey(x.jockey))
+                    .includes(horseNameToKey(jockey)),
                 };
 
                 const total = [
                   ...Object.values(horseBetterThanRaceTheshold),
                   ...Object.values(horseFormAveragesStatsGood),
+                  ...Object.values(horseRacedWith),
                 ].filter(Boolean).length;
 
                 const scoreObj: ScoreObj = {
                   total,
-
+                  horseRacedWith,
                   horseBetterThanRaceTheshold,
                   horseFormAveragesStatsGood,
                 };
