@@ -25,6 +25,18 @@ export interface RaceHorsesInfo {
     racedAgainst_Beaten: {
       rpr: number;
     };
+    racedAgainst_Averages: {
+      rpr: number;
+    };
+    racedAgainst_Beaten_Averages: {
+      rpr: number;
+    };
+    racedAgainst_Maxes: {
+      rpr: number;
+    };
+    racedAgainst_Beaten_Maxes: {
+      rpr: number;
+    };
   };
   maxes: {
     rpr: number;
@@ -32,6 +44,18 @@ export interface RaceHorsesInfo {
       rpr: number;
     };
     racedAgainst_Beaten: {
+      rpr: number;
+    };
+    racedAgainst_Averages: {
+      rpr: number;
+    };
+    racedAgainst_Beaten_Averages: {
+      rpr: number;
+    };
+    racedAgainst_Maxes: {
+      rpr: number;
+    };
+    racedAgainst_Beaten_Maxes: {
       rpr: number;
     };
   };
@@ -42,19 +66,15 @@ export interface RaceHorsesInfo {
 
 export interface ScoreObj {
   total: number;
-  horseBetterThanRaceAverage: {
-    rpr: boolean;
-  };
   horseBetterThanRaceTheshold: {
-    rpr: boolean;
+    rpr_racedAgainst_Beaten_Averages: boolean;
+    rpr_racedAgainst_Beaten_Maxes: boolean;
     timePerFurlong: boolean;
-  };
-  horseFormRacedAgainstBeatenBetterThanRaceRacedAgainstBeatenAverage: {
-    rpr: boolean;
   };
   horseFormAveragesStatsGood: {
     distance: boolean;
     goingCode: boolean;
+    jockey: boolean;
   };
 }
 
@@ -82,6 +102,18 @@ export interface FormInfo {
     racedAgainst_Beaten: {
       rpr: number[];
     };
+    racedAgainst_Averages: {
+      rpr: number[];
+    };
+    racedAgainst_Beaten_Averages: {
+      rpr: number[];
+    };
+    racedAgainst_Maxes: {
+      rpr: number[];
+    };
+    racedAgainst_Beaten_Maxes: {
+      rpr: number[];
+    };
   };
   averages: {
     rpr: number;
@@ -95,6 +127,18 @@ export interface FormInfo {
     racedAgainst_Beaten: {
       rpr: number;
     };
+    racedAgainst_Averages: {
+      rpr: number;
+    };
+    racedAgainst_Beaten_Averages: {
+      rpr: number;
+    };
+    racedAgainst_Maxes: {
+      rpr: number;
+    };
+    racedAgainst_Beaten_Maxes: {
+      rpr: number;
+    };
   };
   maxes: {
     rpr: number;
@@ -102,6 +146,18 @@ export interface FormInfo {
       rpr: number;
     };
     racedAgainst_Beaten: {
+      rpr: number;
+    };
+    racedAgainst_Averages: {
+      rpr: number;
+    };
+    racedAgainst_Beaten_Averages: {
+      rpr: number;
+    };
+    racedAgainst_Maxes: {
+      rpr: number;
+    };
+    racedAgainst_Beaten_Maxes: {
       rpr: number;
     };
   };

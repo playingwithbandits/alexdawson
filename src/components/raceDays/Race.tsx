@@ -15,6 +15,8 @@ interface RaceProps {
 export function Race({ race, meeting }: RaceProps) {
   // Calculate
 
+  const scoreToBeBetterThan = 5;
+
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={race.id}>
@@ -22,6 +24,21 @@ export function Race({ race, meeting }: RaceProps) {
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center space-x-4">
               <span className="font-medium text-blue-400">{race.time}</span>
+              <div className="flex flex-wrap gap-2">
+                {race.horses
+                  .filter(
+                    (horse) =>
+                      (horse.scoreObj?.total || 0) >= scoreToBeBetterThan
+                  )
+                  ?.map((horse) => (
+                    <span
+                      key={horse.id}
+                      className="px-2 py-1 text-sm bg-blue-900 rounded-full"
+                    >
+                      {horse.name}
+                    </span>
+                  ))}
+              </div>
             </div>
           </div>
         </AccordionTrigger>
@@ -33,39 +50,45 @@ export function Race({ race, meeting }: RaceProps) {
                   <td className="px-4 py-2 bg-gray-800" colSpan={3}>
                     About Race
                   </td>
-                  <td className="px-4 py-2" colSpan={2}>
-                    Horses (Avg | Max)
+                  <td className="px-4 py-2" colSpan={1}>
+                    Horses
                   </td>
-                  <td className="px-4 py-2 bg-gray-800" colSpan={1}>
-                    Raced Against (Avg | Max)
+                  <td className="px-4 py-2 " colSpan={2}>
+                    Max of Beaten
                   </td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 bg-gray-800">Distance</td>
                   <td className="px-4 py-2 bg-gray-800">Going</td>
                   <td className="px-4 py-2 bg-gray-800">Type</td>
-                  <td className="px-4 py-2">RPR</td>
                   <td className="px-4 py-2">TPF</td>
-                  <td className="px-4 py-2 bg-gray-800">RPR</td>
+                  <td className="px-4 py-2 ">Avg</td>
+                  <td className="px-4 py-2 ">Max</td>
                 </tr>
               </thead>
               <tbody>
                 <tr className="">
-                  <td className="px-4 py-2 bg-gray-800">{race.distanceF}F</td>
+                  <td className="px-4 py-2 bg-gray-800">
+                    {race.distanceF?.toFixed(2)}F
+                  </td>
                   <td className="px-4 py-2 bg-gray-800 ">
                     {race.goingCodes.join(", ")}
                   </td>
                   <td className="px-4 py-2 bg-gray-800">{race.raceTypeCode}</td>
-                  <td className="px-4 py-2">
-                    {race.horsesInfo.averages.rpr} | {race.horsesInfo.maxes.rpr}
-                  </td>
 
                   <td className="px-4 py-2">
                     {race.horsesInfo.min.timePerFurlong.toFixed(2)}
                   </td>
-                  <td className="px-4 py-2 bg-gray-800">
-                    {race.horsesInfo.averages.racedAgainst.rpr} |{" "}
-                    {race.horsesInfo.maxes.racedAgainst.rpr}
+
+                  <td className="px-4 py-2 ">
+                    {race.horsesInfo.maxes.racedAgainst_Beaten_Averages.rpr.toFixed(
+                      2
+                    )}
+                  </td>
+                  <td className="px-4 py-2 ">
+                    {race.horsesInfo.maxes.racedAgainst_Beaten_Maxes.rpr.toFixed(
+                      2
+                    )}
                   </td>
                 </tr>
               </tbody>

@@ -48,15 +48,21 @@ export function FormRow({ form, horse, race, meeting }: FormProps) {
       <td className="px-4 py-2 ">{formGoingCodes}</td>
       <td className="px-4 py-2 ">{jockey}</td>
 
-      <td className="px-4 py-2 ">{formDistanceF}</td>
-      <td className="px-4 py-2 ">{timePerFurlong.toFixed(2)}</td>
+      <td className="px-4 py-2 ">{formDistanceF?.toFixed(2)}</td>
+      <td className="px-4 py-2 ">{timePerFurlong?.toFixed(2)}</td>
 
       <td className="px-4 py-2 ">{rpr}</td>
 
-      <td className="px-4 py-2 ">{racedAgainstInfo.averages.rpr}</td>
-      <td className="px-4 py-2 ">{racedAgainstInfo.maxes.rpr}</td>
-      <td className="px-4 py-2 ">{racedAgainst_BeatenInfo.averages.rpr}</td>
-      <td className="px-4 py-2 ">{racedAgainst_BeatenInfo.maxes.rpr}</td>
+      <td className="px-4 py-2 ">
+        {racedAgainstInfo.averages.rpr?.toFixed(2)}
+      </td>
+      <td className="px-4 py-2 ">{racedAgainstInfo.maxes.rpr?.toFixed(2)}</td>
+      <td className="px-4 py-2 ">
+        {racedAgainst_BeatenInfo.averages.rpr?.toFixed(2)}
+      </td>
+      <td className="px-4 py-2 ">
+        {racedAgainst_BeatenInfo.maxes.rpr?.toFixed(2)}
+      </td>
     </tr>
   );
 }

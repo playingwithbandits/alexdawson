@@ -19,7 +19,7 @@ interface HorseProps {
 }
 
 export function Horse({ horse, race, meeting }: HorseProps) {
-  const { form, formInfo, id, jockey, name, rpr, scoreObj } = horse;
+  const { formInfo, name, scoreObj } = horse;
 
   const { averages: formAverages, maxes: formMaxes, min: formMin } = formInfo;
 
@@ -27,21 +27,17 @@ export function Horse({ horse, race, meeting }: HorseProps) {
     distanceF: formAveragesDistanceF,
     goingCode: formAveragesGoingCode,
     jockey: formAveragesJockey,
-    rpr: formAveragesRpr,
-    racedAgainst_Beaten: formAveragesRacedAgainstBeaten,
-    trackId: formAveragesTrackId,
+    racedAgainst_Beaten_Averages: formAveragesRacedAgainstBeatenAverages,
   } = formAverages;
 
-  const { rpr: formAveragesRacedAgainstBeatenRpr } =
-    formAveragesRacedAgainstBeaten;
+  const { racedAgainst_Beaten_Maxes: formMaxesRacedAgainstBeatenMaxes } =
+    formMaxes;
 
   const { timePerFurlong: formMinTimePerFurlong } = formMin;
 
   const {
     total: totalScore,
-    horseBetterThanRaceAverage,
     horseBetterThanRaceTheshold,
-    horseFormRacedAgainstBeatenBetterThanRaceRacedAgainstBeatenAverage,
     horseFormAveragesStatsGood,
   } = scoreObj || {};
 
@@ -52,7 +48,9 @@ export function Horse({ horse, race, meeting }: HorseProps) {
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center space-x-2">
               <span className="font-semibold text-white">{name}</span>
-              <span className="text-sm text-gray-300">{totalScore}</span>
+              <span className="px-2 py-1 text-sm bg-blue-900 rounded-full">
+                {totalScore}
+              </span>
             </div>
           </div>
         </AccordionTrigger>
@@ -61,43 +59,31 @@ export function Horse({ horse, race, meeting }: HorseProps) {
             <table className="text-sm">
               <thead>
                 <tr>
-                  <td className="px-4 py-2 bg-gray-800" colSpan={1}>
-                    Current Stats
-                  </td>
                   <td className="px-4 py-2" colSpan={3}>
                     Form Avgs
                   </td>
-                  <td className="px-4 py-2 bg-gray-800" colSpan={2}>
+                  <td className="px-4 py-2 " colSpan={2}>
                     Beaten
                   </td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 bg-gray-800">RPR</td>
                   <td className="px-4 py-2">Distance</td>
-                  <td className="px-4 py-2 ">Going</td>
+                  <td className="px-4 py-2">Going</td>
+                  <td className="px-4 py-2">Jockey</td>
                   <td className="px-4 py-2">TPF</td>
-
-                  <td className="px-4 py-2 bg-gray-800">Avg</td>
-                  <td className="px-4 py-2 bg-gray-800">Max</td>
+                  <td className="px-4 py-2 ">Avg</td>
+                  <td className="px-4 py-2 ">Max</td>
                 </tr>
               </thead>
               <tbody>
                 <tr className="">
                   <td
                     className={twMerge(
-                      "px-4 py-2 bg-gray-800",
-                      horseBetterThanRaceTheshold?.rpr && "text-yellow-400"
-                    )}
-                  >
-                    {rpr}
-                  </td>
-                  <td
-                    className={twMerge(
                       "px-4 py-2",
                       horseFormAveragesStatsGood?.distance && "text-yellow-400"
                     )}
                   >
-                    {formAveragesDistanceF}
+                    {formAveragesDistanceF?.toFixed(1)}
                   </td>
                   <td
                     className={twMerge(
@@ -106,6 +92,15 @@ export function Horse({ horse, race, meeting }: HorseProps) {
                     )}
                   >
                     {formAveragesGoingCode}
+                  </td>
+
+                  <td
+                    className={twMerge(
+                      "px-4 py-2",
+                      horseFormAveragesStatsGood?.jockey && "text-yellow-400"
+                    )}
+                  >
+                    {formAveragesJockey}
                   </td>
                   <td
                     className={twMerge(
@@ -119,20 +114,22 @@ export function Horse({ horse, race, meeting }: HorseProps) {
 
                   <td
                     className={twMerge(
-                      "px-4 py-2 bg-gray-800",
-                      horseFormRacedAgainstBeatenBetterThanRaceRacedAgainstBeatenAverage?.rpr &&
+                      "px-4 py-2 ",
+                      horseBetterThanRaceTheshold?.rpr_racedAgainst_Beaten_Averages &&
                         "text-yellow-400"
                     )}
                   >
-                    {formAveragesRacedAgainstBeatenRpr}
+                    {formAveragesRacedAgainstBeatenAverages.rpr?.toFixed(2)}
                   </td>
+
                   <td
                     className={twMerge(
-                      "px-4 py-2 bg-gray-800",
-                      false && "text-yellow-400"
+                      "px-4 py-2 ",
+                      horseBetterThanRaceTheshold?.rpr_racedAgainst_Beaten_Maxes &&
+                        "text-yellow-400"
                     )}
                   >
-                    0
+                    {formMaxesRacedAgainstBeatenMaxes.rpr?.toFixed(2)}
                   </td>
                 </tr>
               </tbody>

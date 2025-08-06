@@ -9,17 +9,26 @@ import {
   RacedAgainstForm,
   RacedAgainstInfo,
 } from "@/types/raceday";
+import {
+  avg,
+  courseNameToTrackId,
+  max,
+  min,
+  mostFrequentString,
+  normaliseGoingToGoingCode,
+} from "@/lib/utils";
 
 export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
   const meetingData: Meeting[] = oldMeetings.map((oldMeeting) => {
-    const trackId = oldMeeting?.venue || "-";
+    const trackId = courseNameToTrackId(oldMeeting?.venue || "-") || "-";
 
     const races: Race[] = oldMeeting.races.map((oldRace) => {
       const id = oldRace.id || "-";
       const distanceF = oldRace.distance;
       const goingCodes =
-        oldRace.going?.split("/")?.map((code) => code.toLowerCase().trim()) ||
-        [];
+        oldRace.going
+          ?.split("/")
+          ?.map((code) => normaliseGoingToGoingCode(code)) || [];
       const raceClass = oldRace.class;
       const raceTypeCode = oldRace.raceTypeCode || "-";
       const time = oldRace.time;
@@ -48,10 +57,10 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             raceInstanceUid,
             raceTypeCode,
             courseName,
-            goingTypeCode,
+            goingTypeServicesDesc,
             raceOutcomeCode,
             raceClass,
-            jockeyShortName,
+            jockeyStyleName,
             rpPostmark,
           } = matchingFormObj || {};
 
@@ -68,23 +77,19 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
               rpr: runner?.rpr || 0,
             })
           );
+
+          const rawRprData =
+            (runners_all || [])?.map((runner) => runner?.rpr).filter(Boolean) ||
+            [];
           const racedAgainstInfo: RacedAgainstInfo = {
             rawData: {
-              rpr: (runners_all || [])?.map((runner) => runner?.rpr) || [],
+              rpr: rawRprData || [],
             },
             averages: {
-              rpr:
-                (runners_all || [])?.reduce(
-                  (acc, runner) => acc + runner?.rpr,
-                  0
-                ) / (runners_all || []).length || 0,
+              rpr: avg(rawRprData),
             },
             maxes: {
-              rpr:
-                (runners_all || [])?.reduce(
-                  (acc, runner) => acc + runner?.rpr,
-                  0
-                ) / (runners_all || []).length || 0,
+              rpr: max(rawRprData),
             },
           };
 
@@ -97,37 +102,35 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             distanceToWinner: runner?.distanceBeaten || 0,
             rpr: runner?.rpr || 0,
           }));
+
+          const rawRprData_Beaten =
+            (runners_beaten || [])
+              ?.map((runner) => runner?.rpr)
+              .filter(Boolean) || [];
+
           const racedAgainst_BeatenInfo: RacedAgainstInfo = {
             rawData: {
-              rpr: (runners_beaten || [])?.map((runner) => runner?.rpr) || [],
+              rpr: rawRprData_Beaten || [],
             },
             averages: {
-              rpr:
-                (runners_beaten || [])?.reduce(
-                  (acc, runner) => acc + runner?.rpr,
-                  0
-                ) / (runners_beaten || []).length || 0,
+              rpr: avg(rawRprData_Beaten),
             },
             maxes: {
-              rpr:
-                (runners_beaten || [])?.reduce(
-                  (acc, runner) => acc + runner?.rpr,
-                  0
-                ) / (runners_beaten || []).length || 0,
+              rpr: max(rawRprData_Beaten),
             },
           };
 
           return {
             id,
             raceDate: formRowValidDate || "-",
-            trackId: courseName || "-",
+            trackId: courseNameToTrackId(courseName || "-"),
             goingCodes:
-              goingTypeCode
+              goingTypeServicesDesc
                 ?.split("/")
-                ?.map((code) => code.toLowerCase().trim()) || [],
+                ?.map((code) => normaliseGoingToGoingCode(code)) || [],
             position: parseInt(raceOutcomeCode || "0", 10),
             distanceF: lastFormRowDistanceFurlongAccurate || 0,
-            jockey: jockeyShortName || "-",
+            jockey: jockeyStyleName || "-",
             raceClass: raceClass || 0,
 
             timePerFurlong: info?.timePerFurlong || 0,
@@ -144,142 +147,126 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           };
         });
 
+        const rawRprData = form?.map((form) => form.rpr).filter(Boolean) || [];
+        const rawDistanceFData =
+          form?.map((form) => form.distanceF).filter(Boolean) || [];
+        const rawTrackIdData =
+          form
+            ?.map((form) => courseNameToTrackId(form.trackId || "-"))
+            .filter(Boolean) || [];
+        const rawGoingCodesData =
+          form?.flatMap((form) => form.goingCodes).filter(Boolean) || [];
+        const rawJockeyData =
+          form?.map((form) => form.jockey).filter(Boolean) || [];
+        const rawTimePerFurlongData =
+          form?.map((form) => form.timePerFurlong).filter(Boolean) || [];
+
+        const rawRprData_RacedAgainst =
+          form
+            ?.flatMap((form) => form.racedAgainstInfo?.rawData?.rpr)
+            .filter(Boolean) || [];
+
+        const rawRprData_RacedAgainst_Beaten =
+          form
+            ?.flatMap((form) => form.racedAgainst_BeatenInfo?.rawData?.rpr)
+            .filter(Boolean) || [];
+
+        const rawRprAveragesData_RacedAgainst =
+          form
+            ?.map((form) => form.racedAgainstInfo?.averages?.rpr)
+            .filter(Boolean) || [];
+
+        const rawRprAveragesData_RacedAgainst_Beaten =
+          form
+            ?.map((form) => form.racedAgainst_BeatenInfo?.averages?.rpr)
+            .filter(Boolean) || [];
+
+        const rawRprMaxesData_RacedAgainst =
+          form
+            ?.map((form) => form.racedAgainstInfo?.maxes?.rpr)
+            .filter(Boolean) || [];
+        const rawRprMaxesData_RacedAgainst_Beaten =
+          form
+            ?.map((form) => form.racedAgainst_BeatenInfo?.maxes?.rpr)
+            .filter(Boolean) || [];
+
         const formInfo: FormInfo = {
           averages: {
-            rpr:
-              form?.filter(Boolean)?.reduce((acc, form) => acc + form.rpr, 0) /
-                (form?.filter(Boolean)?.length || 1) || 0,
-            distanceF:
-              form
-                ?.filter(Boolean)
-                ?.reduce((acc, form) => acc + form.distanceF, 0) /
-                (form?.filter(Boolean)?.length || 1) || 0,
-            trackId:
-              form
-                ?.filter(Boolean)
-                ?.reduce(
-                  (acc, form, i, arr) =>
-                    acc + form.trackId + (i < arr.length - 1 ? "," : ""),
-                  ""
-                ) || "",
-            goingCode:
-              form
-                ?.filter(Boolean)
-                ?.reduce(
-                  (acc, form, i, arr) =>
-                    acc +
-                    form.goingCodes.join(",") +
-                    (i < arr.length - 1 ? "," : ""),
-                  ""
-                ) || "",
-            jockey:
-              form
-                ?.filter(Boolean)
-                ?.reduce(
-                  (acc, form, i, arr) =>
-                    acc + form.jockey + (i < arr.length - 1 ? "," : ""),
-                  ""
-                ) || "",
+            rpr: avg(rawRprData),
+            distanceF: avg(rawDistanceFData),
+            trackId: mostFrequentString(rawTrackIdData),
+            goingCode: mostFrequentString(rawGoingCodesData),
+            jockey: mostFrequentString(rawJockeyData),
+
             racedAgainst: {
-              rpr:
-                form
-                  ?.filter(Boolean)
-                  ?.flatMap((form) =>
-                    form.racedAgainstInfo.rawData.rpr.filter(Boolean)
-                  )
-                  .reduce((acc, rpr) => acc + rpr, 0) /
-                  (form?.filter(Boolean)?.length || 1) || 0,
+              rpr: avg(rawRprData_RacedAgainst),
             },
             racedAgainst_Beaten: {
-              rpr:
-                form
-                  ?.filter(Boolean)
-                  ?.flatMap((form) =>
-                    form.racedAgainst_BeatenInfo.rawData.rpr.filter(Boolean)
-                  )
-                  .reduce((acc, rpr) => acc + rpr, 0) /
-                  (form?.filter(Boolean)?.length || 1) || 0,
+              rpr: avg(rawRprData_RacedAgainst_Beaten),
+            },
+
+            racedAgainst_Averages: {
+              rpr: avg(rawRprAveragesData_RacedAgainst),
+            },
+            racedAgainst_Beaten_Averages: {
+              rpr: avg(rawRprAveragesData_RacedAgainst_Beaten),
+            },
+            racedAgainst_Maxes: {
+              rpr: max(rawRprMaxesData_RacedAgainst),
+            },
+            racedAgainst_Beaten_Maxes: {
+              rpr: avg(rawRprMaxesData_RacedAgainst_Beaten),
             },
           },
           maxes: {
-            rpr: Math.max(
-              ...(form
-                ?.filter(Boolean)
-                ?.map((form) => form.rpr)
-                .filter(Boolean) || [0])
-            ),
+            rpr: max(rawRprData),
+
             racedAgainst: {
-              rpr: Math.max(
-                ...(form
-                  ?.filter(Boolean)
-                  ?.flatMap((form) =>
-                    form.racedAgainstInfo.rawData.rpr.filter(Boolean)
-                  ) || [0])
-              ),
+              rpr: max(rawRprData_RacedAgainst),
             },
             racedAgainst_Beaten: {
-              rpr: Math.max(
-                ...(form
-                  ?.filter(Boolean)
-                  ?.flatMap((form) =>
-                    form.racedAgainst_BeatenInfo.rawData.rpr.filter(Boolean)
-                  ) || [0])
-              ),
+              rpr: max(rawRprData_RacedAgainst_Beaten),
+            },
+            racedAgainst_Averages: {
+              rpr: max(rawRprAveragesData_RacedAgainst),
+            },
+            racedAgainst_Beaten_Averages: {
+              rpr: max(rawRprAveragesData_RacedAgainst_Beaten),
+            },
+            racedAgainst_Maxes: {
+              rpr: max(rawRprMaxesData_RacedAgainst),
+            },
+            racedAgainst_Beaten_Maxes: {
+              rpr: max(rawRprMaxesData_RacedAgainst_Beaten),
             },
           },
           min: {
-            timePerFurlong: Math.min(
-              ...(form
-                ?.filter(Boolean)
-                ?.map((form) => form.timePerFurlong)
-                .filter(Boolean) || [0])
-            ),
+            timePerFurlong: min(rawTimePerFurlongData),
           },
           rawData: {
-            rpr:
-              form
-                ?.filter(Boolean)
-                ?.map((form) => form.rpr)
-                .filter(Boolean) || [],
-            timePerFurlong:
-              form
-                ?.filter(Boolean)
-                ?.map((form) => form.timePerFurlong)
-                .filter(Boolean) || [],
-            distanceF:
-              form
-                ?.filter(Boolean)
-                ?.map((form) => form.distanceF)
-                .filter(Boolean) || [],
-            trackId:
-              form
-                ?.filter(Boolean)
-                ?.map((form) => form.trackId)
-                .filter(Boolean) || [],
-            goingCodes:
-              form
-                ?.filter(Boolean)
-                ?.flatMap((form) => form.goingCodes.filter(Boolean)) || [],
-            jockey:
-              form
-                ?.filter(Boolean)
-                ?.map((form) => form.jockey)
-                .filter(Boolean) || [],
+            rpr: rawRprData || [],
+            timePerFurlong: rawTimePerFurlongData || [],
+            distanceF: rawDistanceFData || [],
+            trackId: rawTrackIdData || [],
+            goingCodes: rawGoingCodesData || [],
+            jockey: rawJockeyData || [],
             racedAgainst: {
-              rpr:
-                form
-                  ?.filter(Boolean)
-                  ?.flatMap((form) =>
-                    form.racedAgainstInfo.rawData.rpr.filter(Boolean)
-                  ) || [],
+              rpr: rawRprData_RacedAgainst || [],
             },
             racedAgainst_Beaten: {
-              rpr:
-                form
-                  ?.filter(Boolean)
-                  ?.flatMap((form) =>
-                    form.racedAgainst_BeatenInfo.rawData.rpr.filter(Boolean)
-                  ) || [],
+              rpr: rawRprData_RacedAgainst_Beaten || [],
+            },
+            racedAgainst_Averages: {
+              rpr: rawRprAveragesData_RacedAgainst || [],
+            },
+            racedAgainst_Beaten_Averages: {
+              rpr: rawRprAveragesData_RacedAgainst_Beaten || [],
+            },
+            racedAgainst_Maxes: {
+              rpr: rawRprMaxesData_RacedAgainst || [],
+            },
+            racedAgainst_Beaten_Maxes: {
+              rpr: rawRprMaxesData_RacedAgainst_Beaten || [],
             },
           },
         };
@@ -295,27 +282,94 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         return horse;
       });
 
+      const rawRprData_Horse =
+        horses?.map((horse) => horse.rpr).filter(Boolean) || [];
+
+      const rawRprData_RacedAgainst =
+        horses
+          ?.map((horse) => horse.formInfo?.averages?.racedAgainst?.rpr)
+          .filter(Boolean) || [];
+
+      const rawRprData_RacedAgainst_Beaten =
+        horses
+          ?.map((horse) => horse.formInfo?.averages?.racedAgainst_Beaten?.rpr)
+          .filter(Boolean) || [];
+
+      const rawRprAveragesData_RacedAgainst =
+        horses
+          ?.map((horse) => horse.formInfo?.averages?.racedAgainst_Averages?.rpr)
+          .filter(Boolean) || [];
+
+      const rawRprAveragesData_RacedAgainst_Beaten =
+        horses
+          ?.map(
+            (horse) =>
+              horse.formInfo?.averages?.racedAgainst_Beaten_Averages?.rpr
+          )
+          .filter(Boolean) || [];
+
+      const rawRprMaxesData_RacedAgainst =
+        horses
+          ?.map((horse) => horse.formInfo?.maxes?.racedAgainst_Maxes?.rpr)
+          .filter(Boolean) || [];
+
+      const rawRprMaxesData_RacedAgainst_Beaten =
+        horses
+          ?.map(
+            (horse) => horse.formInfo?.maxes?.racedAgainst_Beaten_Maxes?.rpr
+          )
+          .filter(Boolean) || [];
+
+      const rawTimePerFurlongData_Horse =
+        horses
+          ?.map((horse) => horse.formInfo.min.timePerFurlong)
+          .filter(Boolean) || [];
+
       const horsesInfo: RaceHorsesInfo = {
         averages: {
-          rpr: 0,
+          rpr: avg(rawRprData_Horse),
           racedAgainst: {
-            rpr: 0,
+            rpr: avg(rawRprData_RacedAgainst),
           },
           racedAgainst_Beaten: {
-            rpr: 0,
+            rpr: avg(rawRprData_RacedAgainst_Beaten),
+          },
+          racedAgainst_Averages: {
+            rpr: avg(rawRprAveragesData_RacedAgainst),
+          },
+          racedAgainst_Beaten_Averages: {
+            rpr: avg(rawRprAveragesData_RacedAgainst_Beaten),
+          },
+          racedAgainst_Maxes: {
+            rpr: max(rawRprMaxesData_RacedAgainst),
+          },
+          racedAgainst_Beaten_Maxes: {
+            rpr: max(rawRprMaxesData_RacedAgainst_Beaten),
           },
         },
         maxes: {
-          rpr: 0,
+          rpr: max(rawRprData_Horse),
           racedAgainst: {
-            rpr: 0,
+            rpr: max(rawRprData_RacedAgainst),
           },
           racedAgainst_Beaten: {
-            rpr: 0,
+            rpr: max(rawRprData_RacedAgainst_Beaten),
+          },
+          racedAgainst_Averages: {
+            rpr: max(rawRprAveragesData_RacedAgainst),
+          },
+          racedAgainst_Beaten_Averages: {
+            rpr: max(rawRprAveragesData_RacedAgainst_Beaten),
+          },
+          racedAgainst_Maxes: {
+            rpr: max(rawRprMaxesData_RacedAgainst),
+          },
+          racedAgainst_Beaten_Maxes: {
+            rpr: max(rawRprMaxesData_RacedAgainst_Beaten),
           },
         },
         min: {
-          timePerFurlong: 0,
+          timePerFurlong: min(rawTimePerFurlongData_Horse),
         },
       };
 

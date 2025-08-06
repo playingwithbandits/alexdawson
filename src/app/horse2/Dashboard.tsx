@@ -1,5 +1,6 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
+import { horseNameToKey } from "@/lib/racing/scores/funcs";
 
 export function Dashboard({ data }: { data: Meeting[] }) {
   console.log("Dashboard", data);
@@ -17,15 +18,14 @@ export function Dashboard({ data }: { data: Meeting[] }) {
       return {
         ...meeting,
         races: meeting.races.map((race) => {
-          const { horsesInfo, goingCodes, distanceF } = race;
-          const {
-            averages: raceAverages,
-            maxes: raceMaxes,
-            min: raceMin,
-          } = horsesInfo;
+          const { horsesInfo, goingCodes, distanceF, trackId } = race;
+          const { maxes: raceMaxes, min: raceMin } = horsesInfo;
 
           const raceThresholds = {
-            rpr: raceMaxes?.rpr * 0.9,
+            rpr_racedAgainst_Beaten_Averages:
+              raceMaxes?.racedAgainst_Beaten_Averages?.rpr * 0.95,
+            rpr_racedAgainst_Beaten_Maxes:
+              raceMaxes?.racedAgainst_Beaten_Maxes?.rpr * 0.95,
 
             timePerFurlong: raceMin?.timePerFurlong * 1.1,
             distanceFMin: distanceF * 0.9,
@@ -38,58 +38,66 @@ export function Dashboard({ data }: { data: Meeting[] }) {
               .map((horse) => {
                 const {
                   rpr: horseRpr,
-
                   formInfo: horseFormInfo,
+                  jockey,
                 } = horse;
 
-                const horseBetterThanRaceAverage = {
-                  rpr: Boolean(horseRpr) && horseRpr >= raceAverages?.rpr,
-                };
+                const {
+                  maxes: horseFormMaxes,
+                  min: horseFormMin,
+                  averages: horseFormAverages,
+                } = horseFormInfo;
+
+                // const horseBetterThanRaceAverage = {
+                //   rpr: Boolean(horseRpr) && horseRpr >= raceAverages?.rpr,
+                // };
 
                 const horseBetterThanRaceTheshold = {
-                  rpr: Boolean(horseRpr) && horseRpr >= raceThresholds.rpr,
+                  rpr_racedAgainst_Beaten_Averages:
+                    Boolean(
+                      horseFormAverages?.racedAgainst_Beaten_Averages?.rpr
+                    ) &&
+                    horseFormAverages?.racedAgainst_Beaten_Averages?.rpr >=
+                      raceThresholds.rpr_racedAgainst_Beaten_Averages,
+
+                  rpr_racedAgainst_Beaten_Maxes:
+                    Boolean(horseFormMaxes?.racedAgainst_Beaten_Maxes?.rpr) &&
+                    horseFormMaxes?.racedAgainst_Beaten_Maxes?.rpr >=
+                      raceThresholds.rpr_racedAgainst_Beaten_Maxes,
+
                   timePerFurlong:
-                    Boolean(horseFormInfo?.min?.timePerFurlong) &&
-                    horseFormInfo?.min?.timePerFurlong >=
+                    Boolean(horseFormMin?.timePerFurlong) &&
+                    horseFormMin?.timePerFurlong <=
                       raceThresholds.timePerFurlong,
                 };
 
-                const horseFormRacedAgainstBeatenBetterThanRaceRacedAgainstBeatenAverage =
-                  {
-                    rpr:
-                      Boolean(
-                        horseFormInfo?.averages?.racedAgainst_Beaten?.rpr
-                      ) &&
-                      horseFormInfo?.averages?.racedAgainst_Beaten?.rpr >
-                        raceAverages?.racedAgainst_Beaten?.rpr,
-                  };
+                const avgGoingCode = horseFormInfo?.averages?.goingCode;
+                const avgJockey = horseFormInfo?.averages?.jockey;
+                const avgDistanceF = horseFormInfo?.averages?.distanceF;
 
                 const horseFormAveragesStatsGood = {
                   distance:
-                    Boolean(horseFormInfo?.averages?.distanceF) &&
-                    horseFormInfo?.averages?.distanceF >=
-                      raceThresholds.distanceFMin &&
-                    horseFormInfo?.averages?.distanceF <=
-                      raceThresholds.distanceFMax,
+                    Boolean(avgDistanceF) &&
+                    avgDistanceF >= raceThresholds.distanceFMin &&
+                    avgDistanceF <= raceThresholds.distanceFMax,
                   goingCode:
                     Boolean(horseFormInfo?.averages?.goingCode) &&
-                    goingCodes.includes(horseFormInfo?.averages?.goingCode),
+                    goingCodes?.some((goingCode) => goingCode === avgGoingCode),
+
+                  jockey:
+                    Boolean(avgJockey) &&
+                    horseNameToKey(avgJockey) === horseNameToKey(jockey),
                 };
 
                 const total = [
-                  ...Object.values(horseBetterThanRaceAverage),
                   ...Object.values(horseBetterThanRaceTheshold),
-                  ...Object.values(
-                    horseFormRacedAgainstBeatenBetterThanRaceRacedAgainstBeatenAverage
-                  ),
                   ...Object.values(horseFormAveragesStatsGood),
                 ].filter(Boolean).length;
 
                 const scoreObj: ScoreObj = {
                   total,
-                  horseBetterThanRaceAverage,
+
                   horseBetterThanRaceTheshold,
-                  horseFormRacedAgainstBeatenBetterThanRaceRacedAgainstBeatenAverage,
                   horseFormAveragesStatsGood,
                 };
 
