@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 import { Dashboard } from "../Dashboard";
 import { IRISH_COURSES, UK_COURSES } from "@/types/courses";
-import { parseMeetings } from "@/app/rp/utils/Aug25/parseMeetings";
+import { parseMeetings } from "@/app/rp/utils/parseMeetings";
+import { oldMeetingsToNewMeetings } from "@/app/rp/utils/Aug25/oldMeetingsToNewMeetings";
 
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
@@ -103,9 +104,12 @@ export function PageClient({ date }: { date: string }) {
             meetingElementsArr.length
           );
 
-          const parsedMeetings = await parseMeetings(
+          const parsedMeetingsOld = await parseMeetings(
             Array.from(meetingElementsArr) //.slice(0, 1)
           );
+
+          const parsedMeetings: Meeting[] =
+            oldMeetingsToNewMeetings(parsedMeetingsOld);
           console.log("✅ Parsed meetings:", parsedMeetings.length);
 
           // Save to cache file

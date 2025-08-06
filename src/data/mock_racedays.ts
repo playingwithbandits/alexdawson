@@ -76,16 +76,6 @@ const generateForm = (
     raceType: Math.random() > 0.5 ? "Hurdle" : "Chase",
     raceTypeCode: Math.random() > 0.5 ? "H" : "C",
     jockey,
-    raceRecords: {
-      surfaceRecord: [
-        {
-          surfaceDesc: "Turf",
-          surfaceCode: "T",
-          runs: 10 + Math.floor(Math.random() * 20),
-          wins: Math.floor(Math.random() * 8),
-        },
-      ],
-    },
   };
 };
 

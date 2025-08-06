@@ -155,27 +155,6 @@ export interface FormObj {
   raceTypeCode: string;
 
   jockey: string;
-
-  raceRecords?: {
-    // lifetimeRecords?: {
-    //   [key: string]: RaceRecord;
-    // };
-    // flatPlacings?: {
-    //   [year: string]: number[];
-    // };
-    // jumpsPlacings?: null | unknown;
-    // flatFiguresCalculated?: Array<{
-    //   formFigure?: string;
-    //   raceTypeCode?: string | null;
-    // }>;
-    // jumpsFiguresCalculated?: null | unknown;
-    surfaceRecord?: Array<{
-      surfaceDesc: string;
-      surfaceCode: string;
-      runs: number | null;
-      wins: number | null;
-    }>;
-  };
 }
 
 export interface RacedAgainstForm {

@@ -155,9 +155,6 @@ export function Horse({ horse, race, meeting }: HorseProps) {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="font-semibold text-white text-sm">
-                      {horse.name}s Form
-                    </span>
                   </div>
                 </div>
               </AccordionTrigger>
