@@ -139,3 +139,60 @@ export const compareTwoGoingCodeArrays = (
     .map((input) => goingCodes2Set.includes(input))
     .some((x) => x);
 };
+/**
+ * Maps race type codes to arrays of similar/equivalent codes
+ *
+ * Examples:
+ * raceTypeCodesToSimilarRaceTypeCodes("H") => ["p", "h"] // Hurdle races
+ * raceTypeCodesToSimilarRaceTypeCodes("C") => ["c", "u"] // Chase races
+ * raceTypeCodesToSimilarRaceTypeCodes("F") => ["f", "b"] // Flat races
+ * raceTypeCodesToSimilarRaceTypeCodes("X") => ["w", "x"] // All-weather races
+ */
+const raceTypeCodesToSimilarRaceTypeCodes = (
+  raceTypeCode: string
+): string[] => {
+  const raceTypeCodeNormalised = raceTypeCode.toLowerCase().trim();
+
+  const raceTypeCodesToSimilarRaceTypeCodesMap: Record<string, string[]> = {
+    p: ["p", "h"], //hurdle
+    h: ["p", "h"],
+    c: ["c", "u"], //chase
+    u: ["c", "u"],
+    f: ["f", "b"], //flat
+    b: ["f", "b"],
+    w: ["w", "x"], //aw
+    x: ["w", "x"], //aw
+  };
+  return raceTypeCodesToSimilarRaceTypeCodesMap[raceTypeCodeNormalised] || [];
+};
+
+/**
+ * Checks if two race type codes match by comparing their similar/equivalent codes
+ *
+ * Examples:
+ * matchRaceTypeCode("H", "P") => true  // Both are hurdle races
+ * matchRaceTypeCode("C", "U") => true  // Both are chase races
+ * matchRaceTypeCode("F", "B") => true  // Both are flat races
+ * matchRaceTypeCode("W", "X") => true  // Both are all-weather races
+ * matchRaceTypeCode("H", "C") => false // Hurdle vs Chase
+ * matchRaceTypeCode("F", "X") => false // Flat vs All-weather
+ * matchRaceTypeCode(undefined, "H") => false // Invalid input
+ */
+export const matchRaceTypeCode = (
+  raceTypeCode1: string | undefined,
+  raceTypeCode2: string | undefined
+): boolean => {
+  if (!raceTypeCode1 || !raceTypeCode2) return false;
+
+  const raceTypeCode1Normalised = raceTypeCode1.toLowerCase().trim();
+  const raceTypeCode2Normalised = raceTypeCode2.toLowerCase().trim();
+
+  const raceTypeCode1Similar = raceTypeCodesToSimilarRaceTypeCodes(
+    raceTypeCode1Normalised
+  );
+  const raceTypeCode2Similar = raceTypeCodesToSimilarRaceTypeCodes(
+    raceTypeCode2Normalised
+  );
+
+  return raceTypeCode1Similar?.some((x) => raceTypeCode2Similar.includes(x));
+};

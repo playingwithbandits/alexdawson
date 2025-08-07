@@ -12,6 +12,7 @@ import {
 import {
   avg,
   courseNameToTrackId,
+  matchRaceTypeCode,
   max,
   min,
   mostFrequentString,
@@ -41,9 +42,13 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const jockey = oldHorse?.jockey?.name || "-";
         const rpr = parseInt(oldHorse?.rating || "0", 10);
 
-        const form: FormObj[] = (
+        const removedWrongRaceTypes = (
           oldHorse.allValidFormRowsStatsDataStats?.raw || []
-        )?.map((oldForm) => {
+        )?.filter((x) =>
+          matchRaceTypeCode(x.matchingFormObj?.raceTypeCode, raceTypeCode)
+        );
+
+        const form: FormObj[] = removedWrongRaceTypes?.map((oldForm) => {
           const {
             matchingFormObj,
             formRowValidDate,

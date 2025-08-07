@@ -21,7 +21,7 @@ export function Race({ race, meeting }: RaceProps) {
   );
   const maxScoreThreshold = maxScore * 0.9;
   const scoreToBeBetterThan =
-    maxScoreThreshold && maxScore > 5 ? maxScoreThreshold : 5;
+    maxScoreThreshold && maxScore > 6 ? maxScoreThreshold : 6;
 
   return (
     <Accordion type="single" collapsible>
