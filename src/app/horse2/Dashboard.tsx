@@ -1,6 +1,7 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
+import { compareTwoGoingCodeArrays } from "@/lib/utils";
 
 export function Dashboard({ data }: { data: Meeting[] }) {
   console.log("Dashboard", data);
@@ -83,15 +84,12 @@ export function Dashboard({ data }: { data: Meeting[] }) {
                     avgDistanceF <= raceThresholds.distanceFMax,
                   goingCode:
                     Boolean(avgGoingCodes) &&
-                    goingCodes?.some((goingCode) =>
-                      avgGoingCodes?.includes(goingCode)
-                    ),
+                    compareTwoGoingCodeArrays(goingCodes, avgGoingCodes),
 
                   jockey:
                     Boolean(avgJockeys) &&
                     avgJockeys?.some(
-                      (jockey) =>
-                        horseNameToKey(jockey) === horseNameToKey(jockey)
+                      (x) => horseNameToKey(x) === horseNameToKey(jockey)
                     ),
                 };
 
@@ -99,13 +97,25 @@ export function Dashboard({ data }: { data: Meeting[] }) {
                   jockey: form
                     ?.map((x) => horseNameToKey(x.jockey))
                     .includes(horseNameToKey(jockey)),
+                  goingCode: form
+                    ?.map((f) =>
+                      compareTwoGoingCodeArrays(goingCodes, f.goingCodes)
+                    )
+                    .some((x) => x),
                 };
 
-                const total = [
-                  ...Object.values(horseBetterThanRaceTheshold),
-                  ...Object.values(horseFormAveragesStatsGood),
-                  ...Object.values(horseRacedWith),
-                ].filter(Boolean).length;
+                const total =
+                  [
+                    ...Object.values(horseBetterThanRaceTheshold).map((x) =>
+                      x ? 1 : 0
+                    ),
+                    ...Object.values(horseFormAveragesStatsGood).map((x) =>
+                      x ? 1 : 0
+                    ),
+                    ...Object.values(horseRacedWith).map((x) => (x ? 0.5 : 0)),
+                  ]
+                    ?.filter(Boolean)
+                    .reduce<number>((a, b) => a + b, 0) || 0;
 
                 const scoreObj: ScoreObj = {
                   total,

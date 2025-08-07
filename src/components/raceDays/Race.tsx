@@ -15,7 +15,13 @@ interface RaceProps {
 export function Race({ race, meeting }: RaceProps) {
   // Calculate
 
-  const scoreToBeBetterThan = 6;
+  const maxScore = race.horses.reduce(
+    (max, horse) => Math.max(max, horse.scoreObj?.total || 0),
+    0
+  );
+  const maxScoreThreshold = maxScore * 0.9;
+  const scoreToBeBetterThan =
+    maxScoreThreshold && maxScore > 5 ? maxScoreThreshold : 5;
 
   return (
     <Accordion type="single" collapsible>
@@ -35,7 +41,7 @@ export function Race({ race, meeting }: RaceProps) {
                       key={horse.id}
                       className="px-2 py-1 text-sm bg-blue-900 rounded-full"
                     >
-                      {horse.name}
+                      {horse.name} {horse.scoreObj?.total}
                     </span>
                   ))}
               </div>
@@ -54,7 +60,7 @@ export function Race({ race, meeting }: RaceProps) {
                     Horses
                   </td>
                   <td className="px-4 py-2 " colSpan={2}>
-                    Max of Beaten
+                    Beaten
                   </td>
                 </tr>
                 <tr>
@@ -63,7 +69,7 @@ export function Race({ race, meeting }: RaceProps) {
                   <td className="px-4 py-2 bg-gray-800">Type</td>
                   <td className="px-4 py-2">TPF</td>
                   <td className="px-4 py-2 ">Avg</td>
-                  <td className="px-4 py-2 ">Max</td>
+                  <td className="px-4 py-2 ">T_Max</td>
                 </tr>
               </thead>
               <tbody>

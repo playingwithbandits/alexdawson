@@ -78,6 +78,7 @@ export interface ScoreObj {
   };
   horseRacedWith: {
     jockey: boolean;
+    goingCode: boolean;
   };
 }
 
