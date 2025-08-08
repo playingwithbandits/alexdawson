@@ -21,7 +21,7 @@ export function Race({ race, meeting }: RaceProps) {
   );
   const maxScoreThreshold = maxScore * 0.9;
   const scoreToBeBetterThan =
-    maxScoreThreshold && maxScore > 6 ? maxScoreThreshold : 6;
+    maxScoreThreshold && maxScore > 7 ? maxScoreThreshold : 7;
 
   return (
     <Accordion type="single" collapsible>
@@ -70,6 +70,7 @@ export function Race({ race, meeting }: RaceProps) {
                   <td className="px-4 py-2">TPF</td>
                   <td className="px-4 py-2 ">Avg</td>
                   <td className="px-4 py-2 ">T_Max</td>
+                  <td className="px-4 py-2 ">Max Recent Form</td>
                 </tr>
               </thead>
               <tbody>
@@ -95,6 +96,9 @@ export function Race({ race, meeting }: RaceProps) {
                     {race.horsesInfo.maxes.racedAgainst_Beaten_Maxes.rpr.toFixed(
                       2
                     )}
+                  </td>
+                  <td className="px-4 py-2 ">
+                    {race.horsesInfo.maxes.mostRecentForm.rpr.toFixed(2)}
                   </td>
                 </tr>
               </tbody>

@@ -148,6 +148,7 @@ export const compareTwoGoingCodeArrays = (
  * raceTypeCodesToSimilarRaceTypeCodes("F") => ["f", "b"] // Flat races
  * raceTypeCodesToSimilarRaceTypeCodes("X") => ["w", "x"] // All-weather races
  */
+
 const raceTypeCodesToSimilarRaceTypeCodes = (
   raceTypeCode: string
 ): string[] => {
@@ -195,4 +196,43 @@ export const matchRaceTypeCode = (
   );
 
   return raceTypeCode1Similar?.some((x) => raceTypeCode2Similar.includes(x));
+};
+/**
+ * Checks if a horse's average race distance is within an acceptable tolerance of a race distance
+ *
+ * The tolerance increases with race distance, calibrated so that:
+ * - 8f has ±1f tolerance
+ * - 20f has ±2f tolerance
+ *
+ * Examples of acceptable ranges (in furlongs):
+ *
+ * Race Distance | Tolerance | Acceptable Range
+ * 5f  | ±0.63f | 4.37f - 5.63f
+ * 7f  | ±0.88f | 6.12f - 7.88f
+ * 8f  | ±1.00f | 7.00f - 9.00f
+ * 9f  | ±1.13f | 7.87f - 10.13f
+ * 10f | ±1.25f | 8.75f - 11.25f
+ * 12f | ±1.50f | 10.50f - 13.50f
+ * 14f | ±1.75f | 12.25f - 15.75f
+ * 16f | ±1.88f | 14.12f - 17.88f
+ * 20f | ±2.00f | 18.00f - 22.00f
+ * 24f | ±2.25f | 21.75f - 26.25f
+ * 28f | ±2.50f | 25.50f - 30.50f
+ * 30f | ±2.63f | 27.37f - 32.63f
+ */
+export const distanceOkay = (
+  horsesAverageDistanceRanOver: number | undefined,
+  raceDistance: number | undefined
+): boolean => {
+  if (!Boolean(raceDistance) || !Boolean(horsesAverageDistanceRanOver))
+    return false;
+
+  const raceDistanceF = raceDistance || 0;
+  const horseAvgDistanceF = horsesAverageDistanceRanOver || 0;
+
+  // Linear interpolation between key points:
+  // 8f -> ±1f
+  // 20f -> ±2f
+  const tolerance = 1 + (raceDistanceF - 8) / (20 - 8);
+  return Math.abs(horseAvgDistanceF - raceDistanceF) <= tolerance;
 };

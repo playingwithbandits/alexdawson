@@ -18,6 +18,9 @@ export interface Race {
 
 export interface RaceHorsesInfo {
   averages: {
+    mostRecentForm: {
+      rpr: number;
+    };
     rpr: number;
     racedAgainst: {
       rpr: number;
@@ -39,6 +42,9 @@ export interface RaceHorsesInfo {
     };
   };
   maxes: {
+    mostRecentForm: {
+      rpr: number;
+    };
     rpr: number;
     racedAgainst: {
       rpr: number;
@@ -70,6 +76,7 @@ export interface ScoreObj {
     rpr_racedAgainst_Beaten_Averages: boolean;
     rpr_racedAgainst_Beaten_Maxes: boolean;
     timePerFurlong: boolean;
+    mostRecentForm: boolean;
   };
   horseFormAveragesStatsGood: {
     distance: boolean;
@@ -90,6 +97,7 @@ export interface Horse {
   formInfo: FormInfo;
   rpr: number;
   scoreObj?: ScoreObj;
+  mostRecentForm: FormObj | undefined;
 }
 
 export interface FormInfo {

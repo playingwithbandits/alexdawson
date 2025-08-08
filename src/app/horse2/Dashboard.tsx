@@ -1,7 +1,7 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
-import { compareTwoGoingCodeArrays } from "@/lib/utils";
+import { compareTwoGoingCodeArrays, distanceOkay } from "@/lib/utils";
 
 export function Dashboard({ data }: { data: Meeting[] }) {
   console.log("Dashboard", data);
@@ -24,13 +24,13 @@ export function Dashboard({ data }: { data: Meeting[] }) {
 
           const raceThresholds = {
             rpr_racedAgainst_Beaten_Averages:
-              raceMaxes?.racedAgainst_Beaten_Averages?.rpr * 0.95,
+              raceMaxes?.racedAgainst_Beaten_Averages?.rpr * 0.925,
             rpr_racedAgainst_Beaten_Maxes:
-              raceMaxes?.racedAgainst_Beaten_Maxes?.rpr * 0.95,
+              raceMaxes?.racedAgainst_Beaten_Maxes?.rpr * 0.925,
 
             timePerFurlong: raceMin?.timePerFurlong * 1.1,
-            distanceFMin: distanceF * 0.9,
-            distanceFMax: distanceF * 1.1,
+
+            mostRecentForm: raceMaxes?.mostRecentForm?.rpr * 0.925,
           };
 
           return {
@@ -71,6 +71,13 @@ export function Dashboard({ data }: { data: Meeting[] }) {
                     Boolean(horseFormMin?.timePerFurlong) &&
                     horseFormMin?.timePerFurlong <=
                       raceThresholds.timePerFurlong,
+
+                  mostRecentForm:
+                    Boolean(
+                      horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr
+                    ) &&
+                    (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes
+                      ?.rpr || 0) >= raceThresholds.mostRecentForm,
                 };
 
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;
@@ -78,10 +85,7 @@ export function Dashboard({ data }: { data: Meeting[] }) {
                 const avgDistanceF = horseFormInfo?.averages?.distanceF;
 
                 const horseFormAveragesStatsGood = {
-                  distance:
-                    Boolean(avgDistanceF) &&
-                    avgDistanceF >= raceThresholds.distanceFMin &&
-                    avgDistanceF <= raceThresholds.distanceFMax,
+                  distance: distanceOkay(avgDistanceF, distanceF),
                   goingCode:
                     Boolean(avgGoingCodes) &&
                     compareTwoGoingCodeArrays(goingCodes, avgGoingCodes),

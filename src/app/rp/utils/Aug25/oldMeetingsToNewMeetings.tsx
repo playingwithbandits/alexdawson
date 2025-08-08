@@ -276,6 +276,15 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           },
         };
 
+        const mostRecentForm =
+          form.length > 0
+            ? form?.sort((a, b) => {
+                const aDate = new Date(a.raceDate);
+                const bDate = new Date(b.raceDate);
+                return bDate.getTime() - aDate.getTime();
+              })[0]
+            : undefined;
+
         const horse: Horse = {
           form,
           formInfo,
@@ -283,6 +292,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           jockey,
           name,
           rpr,
+          mostRecentForm,
         };
         return horse;
       });
@@ -330,8 +340,19 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           ?.map((horse) => horse.formInfo.min.timePerFurlong)
           .filter(Boolean) || [];
 
+      const rawRprData_MostRecentForm_Beaten_Maxes =
+        horses
+          ?.map(
+            (horse) =>
+              horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr || 0
+          )
+          .filter(Boolean) || [];
+
       const horsesInfo: RaceHorsesInfo = {
         averages: {
+          mostRecentForm: {
+            rpr: avg(rawRprData_MostRecentForm_Beaten_Maxes),
+          },
           rpr: avg(rawRprData_Horse),
           racedAgainst: {
             rpr: avg(rawRprData_RacedAgainst),
@@ -353,6 +374,9 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           },
         },
         maxes: {
+          mostRecentForm: {
+            rpr: max(rawRprData_MostRecentForm_Beaten_Maxes),
+          },
           rpr: max(rawRprData_Horse),
           racedAgainst: {
             rpr: max(rawRprData_RacedAgainst),
