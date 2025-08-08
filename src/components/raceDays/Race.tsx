@@ -19,9 +19,7 @@ export function Race({ race, meeting }: RaceProps) {
     (max, horse) => Math.max(max, horse.scoreObj?.total || 0),
     0
   );
-  const maxScoreThreshold = maxScore * 0.9;
-  const scoreToBeBetterThan =
-    maxScoreThreshold && maxScore > 7 ? maxScoreThreshold : 7;
+  const scoreToBeBetterThan = 8;
 
   return (
     <Accordion type="single" collapsible>
