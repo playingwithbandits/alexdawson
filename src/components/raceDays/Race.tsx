@@ -15,11 +15,27 @@ interface RaceProps {
 export function Race({ race, meeting }: RaceProps) {
   // Calculate
 
-  const maxScore = race.horses.reduce(
-    (max, horse) => Math.max(max, horse.scoreObj?.total || 0),
-    0
-  );
-  const scoreToBeBetterThan = 8;
+  const horsesInRace = race.horses.length;
+  const horsesInRaceWithForms = race.horses.filter(
+    (horse) => horse.form.length > 1
+  ).length;
+  const ratioWithForms = horsesInRaceWithForms / horsesInRace;
+  const ratioWithFormsGood = ratioWithForms > 0.8;
+
+  const scoreToBeBetterThan = 7;
+  // const maxScore = race.horses.reduce(
+  //   (max, horse) => Math.max(max, horse.scoreObj?.total || 0),
+  //   0
+  // );
+
+  // const betterThanLowLevel = 7;
+  // const maxScoreThreshold = maxScore * 0.8;
+  // const scoreToBeBetterThan =
+  //   maxScoreThreshold && maxScore > betterThanLowLevel
+  //     ? maxScoreThreshold < betterThanLowLevel
+  //       ? betterThanLowLevel
+  //       : maxScoreThreshold
+  //     : betterThanLowLevel;
 
   return (
     <Accordion type="single" collapsible>
@@ -37,7 +53,11 @@ export function Race({ race, meeting }: RaceProps) {
                   ?.map((horse) => (
                     <span
                       key={horse.id}
-                      className="px-2 py-1 text-sm bg-blue-900 rounded-full"
+                      className={`px-2 py-1 text-sm  rounded-full ${
+                        ratioWithFormsGood
+                          ? "bg-blue-900"
+                          : "bg-red-900 opacity-40"
+                      }`}
                     >
                       {horse.name} {horse.scoreObj?.total}
                     </span>

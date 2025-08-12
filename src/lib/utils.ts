@@ -149,6 +149,14 @@ export const compareTwoGoingCodeArrays = (
  * raceTypeCodesToSimilarRaceTypeCodes("X") => ["w", "x"] // All-weather races
  */
 
+const hurdlesRaceTypeCodes = ["p", "h"];
+const chaseRaceTypeCodes = ["c", "u"];
+const flatRaceTypeCodes = ["f", "b"];
+const allWeatherRaceTypeCodes = ["w", "x", "a"];
+
+const jumpsRaceTypes = [...hurdlesRaceTypeCodes, ...chaseRaceTypeCodes];
+const flatRaceTypes = [...flatRaceTypeCodes, ...allWeatherRaceTypeCodes];
+
 const raceTypeCodesToSimilarRaceTypeCodes = (
   raceTypeCode: string
 ): string[] => {
@@ -159,10 +167,10 @@ const raceTypeCodesToSimilarRaceTypeCodes = (
     h: ["p", "h"],
     c: ["c", "u"], //chase
     u: ["c", "u"],
-    f: ["f", "b"], //flat
-    b: ["f", "b"],
-    w: ["w", "x"], //aw
-    x: ["w", "x"], //aw
+    f: flatRaceTypes, //["f", "b"], //flat
+    b: flatRaceTypes, //["f", "b"],
+    w: flatRaceTypes, //["w", "x"], //aw
+    x: flatRaceTypes, //["w", "x"], //aw
   };
   return raceTypeCodesToSimilarRaceTypeCodesMap[raceTypeCodeNormalised] || [];
 };
@@ -230,9 +238,11 @@ export const distanceOkay = (
   const raceDistanceF = raceDistance || 0;
   const horseAvgDistanceF = horsesAverageDistanceRanOver || 0;
 
-  // Linear interpolation between key points:
-  // 8f -> ±1f
-  // 20f -> ±2f
-  const tolerance = 1 + (raceDistanceF - 8) / (20 - 8);
-  return Math.abs(horseAvgDistanceF - raceDistanceF) <= tolerance;
+  const maxThresholdAdd = raceDistanceF < 8 ? 1 : raceDistanceF < 21 ? 2 : 3;
+  const minThresholdAdd = raceDistanceF < 8 ? 0.5 : raceDistanceF < 13 ? 1 : 2;
+
+  const maxThreshold = raceDistanceF + maxThresholdAdd;
+  const minThreshold = raceDistanceF - minThresholdAdd;
+
+  return horseAvgDistanceF >= minThreshold && horseAvgDistanceF <= maxThreshold;
 };
