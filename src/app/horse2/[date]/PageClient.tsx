@@ -8,6 +8,7 @@ import { Dashboard } from "../Dashboard";
 import { IRISH_COURSES, UK_COURSES } from "@/types/courses";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { oldMeetingsToNewMeetings } from "@/app/rp/utils/Aug25/oldMeetingsToNewMeetings";
+import { useResults } from "@/hooks/useResults";
 
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
@@ -18,6 +19,7 @@ export function PageClient({ date }: { date: string }) {
   const [meetings, setMeetings] = useState<Meeting[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { data: results, isLoading: resultsLoading } = useResults(date);
 
   useEffect(() => {
     console.log("🔄 Effect triggered with date:", date);
@@ -25,6 +27,17 @@ export function PageClient({ date }: { date: string }) {
       try {
         console.log("📥 Starting data load");
         setLoading(true);
+
+        const resultsResponse = await fetch(`/api/racing/results/${date}`);
+        const resultsData = await resultsResponse.json();
+
+        if (
+          !resultsData ||
+          !resultsData.results ||
+          resultsData.results.length === 0
+        ) {
+          await fetch(`/api/racing/results/fetch?date=${date}`);
+        }
 
         // Fetch racing data
         console.log("🔍 Fetching from API for date:", date);
@@ -140,7 +153,7 @@ export function PageClient({ date }: { date: string }) {
     loadData();
   }, [date]);
 
-  if (loading) {
+  if (loading || resultsLoading) {
     console.log("⌛ Rendering loading state");
     return (
       <div className="flex items-center justify-center h-screen">
@@ -159,5 +172,5 @@ export function PageClient({ date }: { date: string }) {
   }
 
   console.log("🎉 Rendering dashboard with", meetings.length, "meetings");
-  return <Dashboard data={meetings} />;
+  return <Dashboard data={meetings} results={results} />;
 }

@@ -15,18 +15,22 @@ interface RaceProps {
 export function Race({ race, meeting }: RaceProps) {
   // Calculate
 
+  const raceAvgScore =
+    race.horses
+      .map((horse) => horse.scoreObj?.total || 0)
+      .sort((a, b) => b - a)
+      .slice(0, 3)
+      .reduce((acc, score) => acc + score, 0) / 3;
+
+  const maxScore = 13;
   const horsesInRace = race.horses.length;
   const horsesInRaceWithForms = race.horses.filter(
-    (horse) => horse.form.length > 1
+    (horse) => horse.form.length > 2
   ).length;
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
-  const ratioWithFormsGood = ratioWithForms > 0.8;
+  const ratioWithFormsGood = ratioWithForms > 0.75;
 
-  const scoreToBeBetterThan = 7;
-  // const maxScore = race.horses.reduce(
-  //   (max, horse) => Math.max(max, horse.scoreObj?.total || 0),
-  //   0
-  // );
+  const scoreToBeBetterThan = 12;
 
   // const betterThanLowLevel = 7;
   // const maxScoreThreshold = maxScore * 0.8;
@@ -43,25 +47,37 @@ export function Race({ race, meeting }: RaceProps) {
         <AccordionTrigger className="">
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center space-x-4">
-              <span className="font-medium text-blue-400">{race.time}</span>
+              <span className="font-medium text-blue-400">
+                {race.time} {raceAvgScore.toFixed(1)}
+              </span>
               <div className="flex flex-wrap gap-2">
                 {race.horses
                   .filter(
                     (horse) =>
                       (horse.scoreObj?.total || 0) >= scoreToBeBetterThan
                   )
-                  ?.map((horse) => (
-                    <span
-                      key={horse.id}
-                      className={`px-2 py-1 text-sm  rounded-full ${
-                        ratioWithFormsGood
-                          ? "bg-blue-900"
-                          : "bg-red-900 opacity-40"
-                      }`}
-                    >
-                      {horse.name} {horse.scoreObj?.total}
-                    </span>
-                  ))}
+                  ?.map((horse) => {
+                    const gapToAvgScore =
+                      (horse.scoreObj?.total || 0) - raceAvgScore;
+
+                    return (
+                      <span
+                        key={horse.id}
+                        className={`px-2 py-1 text-sm  rounded-full ${
+                          ratioWithFormsGood
+                            ? horse.scoreObj?.total === maxScore
+                              ? "bg-yellow-500 text-black"
+                              : "bg-blue-900"
+                            : "bg-red-900 opacity-40"
+                        }`}
+                        title={`${horse.name} ${horse.scoreObj?.total}`}
+                      >
+                        {horse.name} {horse.scoreObj?.total} (
+                        {gapToAvgScore > 0 ? "+" : ""}
+                        {gapToAvgScore.toFixed(1)})
+                      </span>
+                    );
+                  })}
               </div>
             </div>
           </div>

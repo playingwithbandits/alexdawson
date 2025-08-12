@@ -2,9 +2,16 @@ import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 import { compareTwoGoingCodeArrays, distanceOkay } from "@/lib/utils";
+import { RaceResults } from "@/types/racing";
 
-export function Dashboard({ data }: { data: Meeting[] }) {
-  console.log("Dashboard", data);
+export function Dashboard({
+  data,
+  results,
+}: {
+  data: Meeting[];
+  results: RaceResults;
+}) {
+  console.log("Dashboard", data, results);
 
   if (!data || data.length === 0) {
     return (
@@ -110,13 +117,19 @@ export function Dashboard({ data }: { data: Meeting[] }) {
 
                 const total =
                   [
-                    ...Object.values(horseBetterThanRaceTheshold).map((x) =>
-                      x ? 1 : 0
-                    ),
-                    ...Object.values(horseFormAveragesStatsGood).map((x) =>
-                      x ? 1 : 0
-                    ),
-                    ...Object.values(horseRacedWith).map((x) => (x ? 0.5 : 0)),
+                    horseBetterThanRaceTheshold?.timePerFurlong ? 1 : 0,
+                    horseBetterThanRaceTheshold?.mostRecentForm ? 2 : 0,
+                    horseBetterThanRaceTheshold?.rpr_racedAgainst_Beaten_Averages
+                      ? 2
+                      : 0,
+                    horseBetterThanRaceTheshold?.rpr_racedAgainst_Beaten_Maxes
+                      ? 2
+                      : 0,
+                    horseFormAveragesStatsGood?.distance ? 2 : 0,
+                    horseFormAveragesStatsGood?.goingCode ? 1 : 0,
+                    horseFormAveragesStatsGood?.jockey ? 0.5 : 0,
+                    horseRacedWith?.jockey ? 0.5 : 0,
+                    horseRacedWith?.goingCode ? 2 : 0,
                   ]
                     ?.filter(Boolean)
                     .reduce<number>((a, b) => a + b, 0) || 0;
