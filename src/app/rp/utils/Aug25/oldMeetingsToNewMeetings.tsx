@@ -18,6 +18,7 @@ import {
   mostFrequentString,
   normaliseGoingToGoingCode,
 } from "@/lib/utils";
+import { horseNameToKey } from "@/lib/racing/scores/funcs";
 
 export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
   const meetingData: Meeting[] = oldMeetings.map((oldMeeting) => {
@@ -34,6 +35,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
       const raceTypeCode = oldRace.raceTypeCode || "-";
       const time = oldRace.time;
       const title = oldRace.title;
+      const bettingForecast = oldRace.bettingForecast || [];
 
       const horses: Horse[] = oldRace.horses.map((oldHorse) => {
         const idStr = oldHorse?.profileUrl;
@@ -293,6 +295,10 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           name,
           rpr,
           mostRecentForm,
+          oddsDecimal:
+            bettingForecast?.find(
+              (bet) => horseNameToKey(bet.horseName) === horseNameToKey(name)
+            )?.decimalOdds || 0,
         };
         return horse;
       });

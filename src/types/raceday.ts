@@ -3,6 +3,12 @@ export interface Meeting {
   races: Race[];
 }
 
+export interface Bet {
+  horseName: string;
+  odds: string;
+  decimalOdds: number;
+}
+
 export interface Race {
   id: string;
   time: string;
@@ -98,6 +104,7 @@ export interface Horse {
   rpr: number;
   scoreObj?: ScoreObj;
   mostRecentForm: FormObj | undefined;
+  oddsDecimal: number;
 }
 
 export interface FormInfo {
