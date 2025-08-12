@@ -3,15 +3,18 @@ import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 import { compareTwoGoingCodeArrays, distanceOkay } from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
+import { useState } from "react";
+import { getRaceToShowStats } from "@/components/raceDays/Race";
 
 export function Dashboard({
   data,
   results,
 }: {
   data: Meeting[];
-  results: RaceResults;
+  results: RaceResults | undefined;
 }) {
   console.log("Dashboard", data, results);
+  const [showInfo, setShowInfo] = useState(true);
 
   if (!data || data.length === 0) {
     return (
@@ -159,10 +162,42 @@ export function Dashboard({
 
   return (
     <div className="space-y-4 p-4 bg-gray-900 min-h-screen">
-      <h1 className="text-2xl font-bold text-white mb-6">Race Day Dashboard</h1>
-      {dataWithScoreObj?.map((meeting) => (
-        <MeetingComponent key={meeting.trackId} meeting={meeting} />
-      ))}
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-bold text-white">Race Day Dashboard</h1>
+        <button
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+          onClick={() => setShowInfo(!showInfo)}
+        >
+          {showInfo ? "Hide" : "Show"}
+        </button>
+      </div>
+      {dataWithScoreObj
+        ?.filter((x) => {
+          const hasARaceWithHorseScoreMax = x.races.some((race) => {
+            const {
+              raceAvgScore,
+              maxScore,
+              ratioWithFormsGood,
+              scoreToBeBetterThan,
+            } = getRaceToShowStats(race);
+
+            const someHorseHasMaxScore = race.horses.some(
+              (horse) => (horse.scoreObj?.total || 0) >= scoreToBeBetterThan
+            );
+
+            return ratioWithFormsGood && someHorseHasMaxScore;
+          });
+
+          return showInfo ? hasARaceWithHorseScoreMax : true;
+        })
+        ?.map((meeting) => (
+          <MeetingComponent
+            key={meeting.trackId}
+            meeting={meeting}
+            results={results}
+            showInfo={showInfo}
+          />
+        ))}
     </div>
   );
 }

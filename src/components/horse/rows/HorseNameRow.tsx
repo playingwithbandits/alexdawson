@@ -52,7 +52,7 @@ interface HorseNameRowProps {
   defaultStrikethrough?: boolean;
 }
 
-const getTrophy = (position: string) => {
+export const getTrophy = (position: string) => {
   switch (position.toLowerCase()) {
     case "1st":
       return "🏆";
@@ -65,7 +65,7 @@ const getTrophy = (position: string) => {
   }
 };
 
-const getHorsePosition = (
+export const getHorsePosition = (
   horseName: string,
   results: RaceResults | undefined,
   time: string
