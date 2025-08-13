@@ -53,6 +53,9 @@ export function Horse({ horse, race, meeting }: HorseProps) {
             <div className="flex items-center space-x-2">
               <span className="font-semibold text-white">{name}</span>
               <span className="text-gray-400">({jockey})</span>
+              <span className="text-gray-400">
+                ({horse.oddsDecimal > 0 ? horse.oddsDecimal : ""})
+              </span>
               <span className="px-2 py-1 text-sm bg-blue-900 rounded-full">
                 {totalScore}
               </span>

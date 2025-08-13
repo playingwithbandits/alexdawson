@@ -32,7 +32,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms > 0.75;
 
-  const scoreToBeBetterThan = 11;
+  const scoreToBeBetterThan = 12;
 
   return {
     raceAvgScore,
@@ -93,7 +93,8 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
                         <span
                           className={`px-2 py-1 text-sm  rounded-full ${
                             ratioWithFormsGood
-                              ? horse.scoreObj?.total === maxScore
+                              ? horse.scoreObj?.total === maxScore &&
+                                gapToAvgScore > 2
                                 ? "bg-yellow-500 text-black"
                                 : "bg-blue-900"
                               : "bg-red-900 opacity-40"
@@ -103,6 +104,7 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
                           {horse.name} {horse.scoreObj?.total} (
                           {gapToAvgScore > 0 ? "+" : ""}
                           {gapToAvgScore.toFixed(1)}){" "}
+                          {horse.oddsDecimal > 0 ? horse.oddsDecimal : ""}
                         </span>
                         {horseTrophy}
                       </span>
