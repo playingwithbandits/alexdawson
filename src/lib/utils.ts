@@ -167,10 +167,10 @@ const raceTypeCodesToSimilarRaceTypeCodes = (
     h: ["p", "h"],
     c: ["c", "u"], //chase
     u: ["c", "u"],
-    f: ["f", "b"], //flat
-    b: ["f", "b"],
-    w: ["w", "x"], //aw
-    x: ["w", "x"], //aw
+    f: flatRaceTypes, //["f", "b"], //flat
+    b: flatRaceTypes, //["f", "b"],
+    w: flatRaceTypes, //["w", "x"], //aw
+    x: flatRaceTypes, //["w", "x"], //aw
   };
   return raceTypeCodesToSimilarRaceTypeCodesMap[raceTypeCodeNormalised] || [];
 };
