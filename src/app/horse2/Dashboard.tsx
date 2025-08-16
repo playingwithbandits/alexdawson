@@ -116,6 +116,7 @@ export function Dashboard({
                       compareTwoGoingCodeArrays(goingCodes, f.goingCodes)
                     )
                     .some((x) => x),
+                  lastRan: Boolean(horse.lastRan) && horse.lastRan <= 45,
                 };
 
                 const total =
@@ -133,6 +134,7 @@ export function Dashboard({
                     horseFormAveragesStatsGood?.jockey ? 0.5 : 0,
                     horseRacedWith?.jockey ? 0.5 : 0,
                     horseRacedWith?.goingCode ? 2 : 0,
+                    horseRacedWith?.lastRan ? 2 : 0,
                   ]
                     ?.filter(Boolean)
                     .reduce<number>((a, b) => a + b, 0) || 0;

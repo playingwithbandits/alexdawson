@@ -287,6 +287,22 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
               })[0]
             : undefined;
 
+        const lastRanDate =
+          form.length > 0
+            ? form?.sort((a, b) => {
+                const aDate = new Date(a.raceDate);
+                const bDate = new Date(b.raceDate);
+                return bDate.getTime() - aDate.getTime();
+              })[0].raceDate
+            : undefined;
+
+        const lastRan = lastRanDate
+          ? Math.floor(
+              (new Date().getTime() - new Date(lastRanDate).getTime()) /
+                (1000 * 60 * 60 * 24)
+            )
+          : 0;
+
         const horse: Horse = {
           form,
           formInfo,
@@ -299,6 +315,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             bettingForecast?.find(
               (bet) => horseNameToKey(bet.horseName) === horseNameToKey(name)
             )?.decimalOdds || 0,
+          lastRan,
         };
         return horse;
       });

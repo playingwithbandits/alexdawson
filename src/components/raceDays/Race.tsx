@@ -24,7 +24,7 @@ export const getRaceToShowStats = (race: RaceType) => {
       .slice(0, 3)
       .reduce((acc, score) => acc + score, 0) / 3;
 
-  const maxScore = 13;
+  const maxScore = 15;
   const horsesInRace = race.horses.length;
   const horsesInRaceWithForms = race.horses.filter(
     (horse) => horse.form.length > 2
@@ -96,6 +96,9 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
                               ? horse.scoreObj?.total === maxScore &&
                                 gapToAvgScore > 2
                                 ? "bg-yellow-500 text-black"
+                                : horse.oddsDecimal >= 6 &&
+                                  race.horses?.length >= 8
+                                ? "bg-blue-400 text-black"
                                 : "bg-blue-900"
                               : "bg-red-900 opacity-40"
                           }`}

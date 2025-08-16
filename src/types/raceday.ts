@@ -92,6 +92,7 @@ export interface ScoreObj {
   horseRacedWith: {
     jockey: boolean;
     goingCode: boolean;
+    lastRan: boolean;
   };
 }
 
@@ -105,6 +106,7 @@ export interface Horse {
   scoreObj?: ScoreObj;
   mostRecentForm: FormObj | undefined;
   oddsDecimal: number;
+  lastRan: number;
 }
 
 export interface FormInfo {

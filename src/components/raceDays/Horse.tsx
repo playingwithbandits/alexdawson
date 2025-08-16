@@ -20,7 +20,7 @@ interface HorseProps {
 }
 
 export function Horse({ horse, race, meeting }: HorseProps) {
-  const { formInfo, name, scoreObj, jockey } = horse;
+  const { formInfo, name, scoreObj, jockey, lastRan } = horse;
 
   const { averages: formAverages, maxes: formMaxes, min: formMin } = formInfo;
 
@@ -53,6 +53,15 @@ export function Horse({ horse, race, meeting }: HorseProps) {
             <div className="flex items-center space-x-2">
               <span className="font-semibold text-white">{name}</span>
               <span className="text-gray-400">({jockey})</span>
+
+              <span
+                className={twMerge(
+                  "text-gray-400",
+                  horseRacedWith?.lastRan && "text-[#fa9360]"
+                )}
+              >
+                ({lastRan > 0 ? `${lastRan}d` : "0d"})
+              </span>
               <span className="text-gray-400">
                 ({horse.oddsDecimal > 0 ? horse.oddsDecimal : ""})
               </span>
