@@ -19,9 +19,9 @@ interface RaceProps {
 export const getRaceToShowStats = (race: RaceType) => {
   const raceAvgScore =
     race.horses
-      .map((horse) => horse.scoreObj?.total || 0)
+      ?.map((horse) => horse.scoreObj?.total || 0)
       .sort((a, b) => b - a)
-      .slice(0, 3)
+      .slice(1, 4)
       .reduce((acc, score) => acc + score, 0) / 3;
 
   const maxScore = 15;
@@ -30,9 +30,9 @@ export const getRaceToShowStats = (race: RaceType) => {
     (horse) => horse.form.length > 2
   ).length;
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
-  const ratioWithFormsGood = ratioWithForms > 0.75;
+  const ratioWithFormsGood = ratioWithForms > 0.66;
 
-  const scoreToBeBetterThan = 12;
+  const scoreToBeBetterThan = 13;
 
   return {
     raceAvgScore,
@@ -94,10 +94,9 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
                           className={`px-2 py-1 text-sm  rounded-full ${
                             ratioWithFormsGood
                               ? horse.scoreObj?.total === maxScore &&
-                                gapToAvgScore > 2
+                                gapToAvgScore > 2.5
                                 ? "bg-yellow-500 text-black"
-                                : horse.oddsDecimal >= 6 &&
-                                  race.horses?.length >= 8
+                                : gapToAvgScore > 2.5
                                 ? "bg-blue-400 text-black"
                                 : "bg-blue-900"
                               : "bg-red-900 opacity-40"
