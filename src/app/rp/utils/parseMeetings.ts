@@ -73,7 +73,8 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
             goingDataElement?.textContent
               ?.trim()
               .split("\n")
-              .map((s) => s.trim()) || [];
+              .map((s) => s.trim())
+              .filter((x) => x.length) || [];
           const [classInfo, ageRestriction, distance] = goingData;
 
           // Extract the path from the full URL

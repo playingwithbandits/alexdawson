@@ -58,14 +58,24 @@ export const placeToPlaceKey = (m_place: string) => {
   }
   return place_out;
 };
-
 export function parseDistance(distance: string): number {
   const miles = distance.match(/(\d+)m/);
-  const furlongs = distance.match(/(\d+)f/);
+  const furlongs = distance.match(/(\d+(?:½|¼|¾)?)f/);
 
   let totalFurlongs = 0;
   if (miles) totalFurlongs += parseInt(miles[1]) * 8;
-  if (furlongs) totalFurlongs += parseInt(furlongs[1]);
+  if (furlongs) {
+    const furlongValue = furlongs[1];
+    if (furlongValue.includes("½")) {
+      totalFurlongs += parseInt(furlongValue) + 0.5;
+    } else if (furlongValue.includes("¼")) {
+      totalFurlongs += parseInt(furlongValue) + 0.25;
+    } else if (furlongValue.includes("¾")) {
+      totalFurlongs += parseInt(furlongValue) + 0.75;
+    } else {
+      totalFurlongs += parseInt(furlongValue);
+    }
+  }
 
   return totalFurlongs;
 }

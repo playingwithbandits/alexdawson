@@ -32,7 +32,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms > 0.66;
 
-  const scoreToBeBetterThan = 13;
+  const scoreToBeBetterThan = 14;
 
   return {
     raceAvgScore,
