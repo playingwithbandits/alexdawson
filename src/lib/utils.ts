@@ -74,7 +74,9 @@ export const normaliseGoingToGoingCode = (
 ): string => {
   const goingMap: Record<string, string> = {
     fast: "f", //done
+    "standard to fast": "stf", //done
     standard: "st", //done
+    "standard to slow": "stsl", //done
     slow: "slw", //done
 
     firm: "fm", //done
@@ -95,9 +97,9 @@ export const normaliseGoingToGoingCode = (
   return goingMap[normalised] || normalised;
 };
 
-const aw_fast = ["f"];
-const aw_med = ["st"];
-const aw_slow = ["s", "sl"];
+const aw_fast = ["f", "stf"];
+const aw_med = ["st", "stf", "stsl"];
+const aw_slow = ["s", "sl", "slw", "stsl"];
 
 const turf_fast = ["gf", "fm", "g", "gd"];
 const turf_med = ["g", "gd", "gs"];
