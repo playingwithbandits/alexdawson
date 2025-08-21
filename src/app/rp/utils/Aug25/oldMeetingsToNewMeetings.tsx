@@ -10,6 +10,7 @@ import {
   RacedAgainstInfo,
 } from "@/types/raceday";
 import {
+  analyseSentimentFromComment,
   avg,
   courseNameToTrackId,
   matchRaceTypeCode,
@@ -153,6 +154,9 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             racedAgainst_Beaten,
             racedAgainst_BeatenInfo,
             comment: rpCloseUpComment || "-",
+            commentMatchedTerms:
+              analyseSentimentFromComment(rpCloseUpComment || "")
+                .matchedTerms || {},
           };
         });
 

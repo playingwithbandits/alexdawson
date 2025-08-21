@@ -301,6 +301,7 @@ const HAMPERED_TERMS = [
   "jammed",
   "trapped",
   "stuck",
+  "hit",
 
   "barged",
   "bunched",
@@ -518,6 +519,18 @@ const NEGATIVE_TERMS = [
 ];
 
 export const analyseSentimentFromComment = (comment: string) => {
+  if (!comment || comment?.length < 2 || comment === "-") {
+    return {
+      matchedTerms: {
+        hampered: [],
+        bad: [],
+        eyecatcher: [],
+        positive: [],
+        negative: [],
+      },
+    };
+  }
+
   const loweredComment = comment.toLowerCase();
 
   const matchedHamperedTerms = HAMPERED_TERMS.filter((term) =>

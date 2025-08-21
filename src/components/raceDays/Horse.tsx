@@ -12,6 +12,7 @@ import {
 } from "@/types/raceday";
 import { twMerge } from "tailwind-merge";
 import { Forms } from "./Forms";
+import { renderCommentWithHighlights } from "./FormRow";
 
 interface HorseProps {
   horse: HorseType;
@@ -45,6 +46,21 @@ export function Horse({ horse, race, meeting }: HorseProps) {
     horseRacedWith,
   } = scoreObj || {};
 
+  const mostRecentForm_commentMatchedTerms =
+    horse.mostRecentForm?.commentMatchedTerms;
+  const mostRecentForm_commentMatchedTerms_hampered =
+    mostRecentForm_commentMatchedTerms?.hampered || [];
+  const mostRecentForm_commentMatchedTerms_eyecatcher =
+    mostRecentForm_commentMatchedTerms?.eyecatcher || [];
+
+  const anyFormsHaveEyecatcher = horse.form?.some(
+    (form) => form.commentMatchedTerms?.eyecatcher?.length > 0
+  );
+
+  const anyFormsHaveHampered = horse.form?.some(
+    (form) => form.commentMatchedTerms?.hampered?.length > 0
+  );
+
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={horse.id} isOpenDefault>
@@ -68,6 +84,14 @@ export function Horse({ horse, race, meeting }: HorseProps) {
               <span className="px-2 py-1 text-sm bg-blue-900 rounded-full">
                 {totalScore}
               </span>
+
+              {anyFormsHaveHampered && (
+                <span style={{ color: "#fb923c", marginRight: "4px" }}>⚠️</span>
+              )}
+
+              {anyFormsHaveEyecatcher && (
+                <span style={{ color: "#facc15", marginRight: "4px" }}>⭐</span>
+              )}
             </div>
           </div>
         </AccordionTrigger>
@@ -94,6 +118,7 @@ export function Horse({ horse, race, meeting }: HorseProps) {
                   <td className="px-4 py-2 ">A_Max</td>
                   <td className="px-4 py-2 ">T_Max</td>
                   <td className="px-4 py-2 ">Max Recent Form</td>
+                  <td className="px-4 py-2 ">Comment</td>
                 </tr>
               </thead>
               <tbody>
@@ -184,6 +209,26 @@ export function Horse({ horse, race, meeting }: HorseProps) {
                   >
                     {horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr?.toFixed(
                       2
+                    )}
+                  </td>
+
+                  <td className="px-4 py-2 ">
+                    {mostRecentForm_commentMatchedTerms_hampered?.length >
+                      0 && (
+                      <span style={{ color: "#fb923c", marginRight: "4px" }}>
+                        ⚠️
+                      </span>
+                    )}
+
+                    {mostRecentForm_commentMatchedTerms_eyecatcher?.length >
+                      0 && (
+                      <span style={{ color: "#facc15", marginRight: "4px" }}>
+                        ⭐
+                      </span>
+                    )}
+                    {renderCommentWithHighlights(
+                      horse.mostRecentForm?.comment,
+                      mostRecentForm_commentMatchedTerms
                     )}
                   </td>
                 </tr>

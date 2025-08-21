@@ -233,6 +233,13 @@ export interface FormObj {
 
   jockey: string;
   comment: string;
+  commentMatchedTerms: {
+    hampered: string[];
+    bad: string[];
+    eyecatcher: string[];
+    positive: string[];
+    negative: string[];
+  };
 }
 
 export interface RacedAgainstForm {
