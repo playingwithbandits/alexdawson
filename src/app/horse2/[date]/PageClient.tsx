@@ -172,5 +172,5 @@ export function PageClient({ date }: { date: string }) {
   }
 
   console.log("🎉 Rendering dashboard with", meetings.length, "meetings");
-  return <Dashboard data={meetings} results={results} />;
+  return <Dashboard data={meetings} results={results} date={date} />;
 }

@@ -2,14 +2,16 @@ import { Meeting as MeetingType } from "@/types/raceday";
 
 import { getRaceToShowStats, Race } from "./Race";
 import { RaceResults } from "@/types/racing";
+import { normalizeTime } from "../horse/DayPredictions";
 
 interface MeetingProps {
   meeting: MeetingType;
   results: RaceResults | undefined;
   showInfo: boolean;
+  date: string;
 }
 
-export function Meeting({ meeting, results, showInfo }: MeetingProps) {
+export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
   return (
     <div className="meeting">
       <span className="font-semibold text-lg text-white">
@@ -24,7 +26,16 @@ export function Meeting({ meeting, results, showInfo }: MeetingProps) {
             const raceHasHorseScoreMax = x.horses.some((horse) => {
               return (horse.scoreObj?.total || 0) >= scoreToBeBetterThan;
             });
-            return showInfo ? ratioWithFormsGood && raceHasHorseScoreMax : true;
+
+            const raceHasFinsihed =
+              date === new Date().toISOString().split("T")[0] &&
+              new Date(
+                `${date} ${normalizeTime(x.time).split(":").join(":")}`
+              ).getTime() < new Date().getTime();
+
+            return showInfo
+              ? !raceHasFinsihed && ratioWithFormsGood && raceHasHorseScoreMax
+              : true;
           })
           .map((race) => (
             <Race
@@ -33,6 +44,7 @@ export function Meeting({ meeting, results, showInfo }: MeetingProps) {
               meeting={meeting}
               results={results}
               showInfo={showInfo}
+              date={date}
             />
           ))}
       </div>

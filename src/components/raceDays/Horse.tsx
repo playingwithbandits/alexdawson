@@ -13,14 +13,17 @@ import {
 import { twMerge } from "tailwind-merge";
 import { Forms } from "./Forms";
 import { renderCommentWithHighlights } from "./FormRow";
+import { RaceResults } from "@/types/racing";
+import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
 
 interface HorseProps {
   horse: HorseType;
   race: RaceType;
   meeting: MeetingType;
+  results: RaceResults | undefined;
 }
 
-export function Horse({ horse, race, meeting }: HorseProps) {
+export function Horse({ horse, race, meeting, results }: HorseProps) {
   const { formInfo, name, scoreObj, jockey, lastRan } = horse;
 
   const { averages: formAverages, maxes: formMaxes, min: formMin } = formInfo;
@@ -61,13 +64,17 @@ export function Horse({ horse, race, meeting }: HorseProps) {
     (form) => form.commentMatchedTerms?.hampered?.length > 0
   );
 
+  const horsePos = getHorsePosition(horse.name, results, race.time);
+  const horseTrophy = getTrophy(horsePos);
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={horse.id} isOpenDefault>
         <AccordionTrigger className="">
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center space-x-2">
-              <span className="font-semibold text-white">{name}</span>
+              <span className="font-semibold text-white">
+                {horsePos ? horseTrophy : ""} {name}
+              </span>
               <span className="text-gray-400">({jockey})</span>
 
               <span

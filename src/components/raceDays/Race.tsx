@@ -8,12 +8,14 @@ import { Meeting as MeetingType, Race as RaceType } from "@/types/raceday";
 import { RaceResults } from "@/types/racing";
 import { Horse } from "./Horse";
 import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
+import { normalizeTime } from "../horse/DayPredictions";
 
 interface RaceProps {
   race: RaceType;
   meeting: MeetingType;
   results: RaceResults | undefined;
   showInfo: boolean;
+  date: string;
 }
 
 export const getRaceToShowStats = (race: RaceType) => {
@@ -45,7 +47,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   };
 };
 
-export function Race({ race, meeting, results, showInfo }: RaceProps) {
+export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
   // Calculate
 
   const { raceAvgScore, maxScore, ratioWithFormsGood, scoreToBeBetterThan } =
@@ -59,6 +61,12 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
   //       ? betterThanLowLevel
   //       : maxScoreThreshold
   //     : betterThanLowLevel;
+  // Example of checking if race has finished:
+  const raceHasFinsihed =
+    date === new Date().toISOString().split("T")[0] &&
+    new Date(
+      `${date} ${normalizeTime(race.time).split(":").join(":")}`
+    ).getTime() < new Date().getTime();
 
   return (
     <Accordion type="single" collapsible>
@@ -67,7 +75,8 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center space-x-4">
               <span className="font-medium text-blue-400">
-                {race.time} {raceAvgScore.toFixed(1)}
+                {raceHasFinsihed ? "🏁" : ""} {race.time}{" "}
+                {raceAvgScore.toFixed(1)}
               </span>
               <div className="flex flex-wrap gap-2">
                 {race.horses
@@ -91,7 +100,7 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
                     );
 
                     return showInfo
-                      ? ratioWithFormsGood && neededOkay
+                      ? !raceHasFinsihed && ratioWithFormsGood && neededOkay
                       : neededOkay;
                   })
                   ?.map((horse) => {
@@ -203,6 +212,7 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
                 horse={horse}
                 race={race}
                 meeting={meeting}
+                results={results}
               />
             ))}
           </div>

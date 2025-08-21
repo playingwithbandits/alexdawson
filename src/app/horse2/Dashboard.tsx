@@ -9,9 +9,11 @@ import { getRaceToShowStats } from "@/components/raceDays/Race";
 export function Dashboard({
   data,
   results,
+  date,
 }: {
   data: Meeting[];
   results: RaceResults | undefined;
+  date: string;
 }) {
   console.log("Dashboard", data, results);
   const [showInfo, setShowInfo] = useState(true);
@@ -198,6 +200,7 @@ export function Dashboard({
             meeting={meeting}
             results={results}
             showInfo={showInfo}
+            date={date}
           />
         ))}
     </div>
