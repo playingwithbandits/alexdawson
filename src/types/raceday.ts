@@ -232,6 +232,7 @@ export interface FormObj {
   raceTypeCode: string;
 
   jockey: string;
+  comment: string;
 }
 
 export interface RacedAgainstForm {

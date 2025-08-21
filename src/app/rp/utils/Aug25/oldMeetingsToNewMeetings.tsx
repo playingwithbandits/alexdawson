@@ -69,6 +69,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             raceClass,
             jockeyStyleName,
             rpPostmark,
+            rpCloseUpComment,
           } = matchingFormObj || {};
 
           const { runners_beaten, runners_all } = lastRaceStatsObj || {};
@@ -151,6 +152,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             racedAgainstInfo,
             racedAgainst_Beaten,
             racedAgainst_BeatenInfo,
+            comment: rpCloseUpComment || "-",
           };
         });
 

@@ -71,12 +71,29 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
               </span>
               <div className="flex flex-wrap gap-2">
                 {race.horses
-                  .filter((horse) =>
-                    showInfo
-                      ? ratioWithFormsGood &&
-                        (horse.scoreObj?.total || 0) >= scoreToBeBetterThan
-                      : (horse.scoreObj?.total || 0) >= scoreToBeBetterThan
-                  )
+                  // ?.filter(
+                  //   (horse) =>
+                  //     horse.oddsDecimal >= 20 &&
+                  //     (horse.scoreObj?.total || 0) >= 10
+                  // )
+                  .filter((horse) => {
+                    const totalScore = horse.scoreObj?.total ?? 0;
+                    const gapToAvgScore = totalScore - raceAvgScore;
+                    const scoreGood = totalScore >= scoreToBeBetterThan;
+
+                    const oddsGood =
+                      horse.oddsDecimal >= 15 &&
+                      totalScore >= 10 &&
+                      gapToAvgScore > 1;
+
+                    const neededOkay = [scoreGood, oddsGood].some(
+                      (value) => value
+                    );
+
+                    return showInfo
+                      ? ratioWithFormsGood && neededOkay
+                      : neededOkay;
+                  })
                   ?.map((horse) => {
                     const gapToAvgScore =
                       (horse.scoreObj?.total || 0) - raceAvgScore;
@@ -98,8 +115,14 @@ export function Race({ race, meeting, results, showInfo }: RaceProps) {
                                 ? "bg-yellow-500 text-black"
                                 : gapToAvgScore > 2.5
                                 ? "bg-blue-400 text-black"
+                                : horse?.oddsDecimal >= 15
+                                ? "bg-gray-300 text-black"
                                 : "bg-blue-900"
                               : "bg-red-900 opacity-40"
+                          } ${
+                            horse.oddsDecimal >= 15
+                              ? "border-2 border-gray-300"
+                              : ""
                           }`}
                           title={`${horse.name} ${horse.scoreObj?.total}`}
                         >

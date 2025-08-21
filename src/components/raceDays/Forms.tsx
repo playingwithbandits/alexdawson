@@ -43,6 +43,7 @@ export function Forms({ forms, horse, race, meeting }: FormProps) {
             <td className="px-4 py-2 ">Max</td>
             <td className="px-4 py-2 ">Avg</td>
             <td className="px-4 py-2 ">Max</td>
+            <td className="px-4 py-2 ">Comment</td>
           </tr>
         </thead>
         <tbody>

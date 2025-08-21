@@ -35,6 +35,7 @@ export function FormRow({ form, horse, race, meeting }: FormProps) {
     trackId: formTrackId,
     raceDate,
     position,
+    comment,
   } = form;
 
   return (
@@ -63,6 +64,7 @@ export function FormRow({ form, horse, race, meeting }: FormProps) {
       <td className="px-4 py-2 ">
         {racedAgainst_BeatenInfo.maxes.rpr?.toFixed(2)}
       </td>
+      <td className="px-4 py-2 ">{comment}</td>
     </tr>
   );
 }
