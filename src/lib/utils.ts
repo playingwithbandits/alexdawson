@@ -268,7 +268,6 @@ const HAMPERED_TERMS = [
   "blocked",
   "not clear",
   "no clear",
-  "not clear run",
   "interference",
   "intereference",
   "interreference",
@@ -278,7 +277,6 @@ const HAMPERED_TERMS = [
   "crashed",
   "tight",
   "short of room",
-  "room",
   "waiting for",
   "nowhere to go",
   "boxed in",
@@ -291,7 +289,6 @@ const HAMPERED_TERMS = [
   "jostled",
   "veered",
   "swerved",
-  "clipped heels",
   "clipped",
   "clipping",
   "knocked",
@@ -309,25 +306,7 @@ const HAMPERED_TERMS = [
   "squeeze",
   "unlucky",
   "did well",
-  "denied a clear run",
   "denied",
-];
-
-const BAD_TERMS = [
-  "no extra",
-  "never better",
-  "never dangerous",
-  "found little",
-  "no improvement",
-  "no impression",
-  "weakened",
-  "no chance",
-  "outpaced",
-  "hung",
-  "weak",
-  "flat",
-  "never on terms",
-  "no improvement",
 ];
 
 const POSITIVE_TERMS = [
@@ -361,11 +340,8 @@ const POSITIVE_TERMS = [
   "readily",
   "going best",
   "going easily",
-  "smooth headway",
   "ran on well",
-  "promising",
   "comfortably",
-  "just prevailed",
   "eyecatcher",
   "rallied",
   "nearest finish",
@@ -390,14 +366,11 @@ const POSITIVE_TERMS = [
   "determined",
   "willing",
   "honest",
-  "ready",
-  "sharp",
   "thriving",
   "flourishing",
 
   // Movement quality
   "travelled",
-  "moved",
   "balanced",
   "fluent",
   "rhythm",
@@ -410,21 +383,26 @@ const POSITIVE_TERMS = [
 
   // New positive terms
   "made all",
-  "went clear",
-  "pushed out",
   "ran on",
-  "shaken up",
   "always doing enough",
   "recovered",
-  "disputed lead",
-  "faced challenge",
-  "nudged along",
 ];
 
 const NEGATIVE_TERMS = [
-  // Poor performance
-  "struggled",
+  "weakening",
+  "no extra",
+  "never better",
+  "never dangerous",
+  "found little",
+  "no improvement",
+  "no impression",
   "weakened",
+  "no chance",
+  "hung",
+  "weak",
+  "flat",
+  "never on terms",
+  "struggled",
   "poor",
   "disappointing",
   "faded",
@@ -434,7 +412,6 @@ const NEGATIVE_TERMS = [
   "tailed",
   "labored",
   "failed",
-  "dropped",
   "lost",
   "awkward",
   "beaten",
@@ -442,11 +419,8 @@ const NEGATIVE_TERMS = [
   "detached",
   "stopped",
   "pulled up",
-  "no extra",
-  "no impression",
   "no match",
   "dwelt",
-  "hung",
   "unseated",
   "fell",
   "tailed off",
@@ -465,12 +439,10 @@ const NEGATIVE_TERMS = [
 
   // Form concerns
   "regressive",
-  "flat",
   "reluctant",
   "unwilling",
   "hesitant",
   "sloppy",
-  "green",
   "raw",
   "unfocused",
   "temperamental",
@@ -487,43 +459,44 @@ const NEGATIVE_TERMS = [
   "spent",
   "heavy",
   "plodded",
-  "struggled",
 
-  // New negative terms
+  // Additional terms
   "ducked",
-  "carried head awkwardly",
+  "awkwardly",
   "stone bruise",
   "off feed",
   "ran green",
   "respiratory noise",
-  "no chance",
-  "lost touch",
   "hung right",
   "hung left",
-
-  // New negative terms
   "reared",
   "slowly away",
   "visibility reduced",
-  "struggling home",
+  "struggling",
   "carried head",
   "pecked",
   "sprawled",
   "unsuitable ground",
-  "lost ground",
   "dropped to rear",
-  "lost position",
   "not reach leaders",
   "not near to challenge",
   "not pace to challenge",
 ];
 
-export const analyseSentimentFromComment = (comment: string) => {
+interface AnalyseSentimentFromCommentObj {
+  hampered: string[];
+  eyecatcher: string[];
+  positive: string[];
+  negative: string[];
+}
+
+export const analyseSentimentFromComment = (
+  comment: string
+): { matchedTerms: AnalyseSentimentFromCommentObj } => {
   if (!comment || comment?.length < 2 || comment === "-") {
     return {
       matchedTerms: {
         hampered: [],
-        bad: [],
         eyecatcher: [],
         positive: [],
         negative: [],
@@ -534,10 +507,6 @@ export const analyseSentimentFromComment = (comment: string) => {
   const loweredComment = comment.toLowerCase();
 
   const matchedHamperedTerms = HAMPERED_TERMS.filter((term) =>
-    loweredComment.includes(term)
-  );
-
-  const matchedBadTerms = BAD_TERMS.filter((term) =>
     loweredComment.includes(term)
   );
 
@@ -555,11 +524,39 @@ export const analyseSentimentFromComment = (comment: string) => {
 
   const matchedTerms = {
     hampered: matchedHamperedTerms,
-    bad: matchedBadTerms,
     eyecatcher: matchedEyecatcherTerms,
     positive: matchedPositiveTerms,
     negative: matchedNegativeTerms,
   };
 
   return { matchedTerms };
+};
+
+export const countCommentSentimentObj = (
+  matchedTerms: AnalyseSentimentFromCommentObj
+) => {
+  const { hampered, eyecatcher, positive, negative } = matchedTerms;
+
+  const goodCount: number =
+    positive.length + eyecatcher.length + hampered.length + 0;
+  const badCount: number = negative.length + 0;
+
+  const counts = {
+    hampered: hampered.length,
+    eyecatcher: eyecatcher.length,
+    positive: positive.length,
+    negative: negative.length,
+  };
+
+  const maxCount = Math.max(...Object.values(counts));
+  const winners = Object.entries(counts)
+    .filter(([_, count]) => count === maxCount)
+    .map(([key]) => key);
+
+  return {
+    score: goodCount - badCount,
+    goodCount,
+    badCount,
+    mostCommonSentiment: winners,
+  };
 };
