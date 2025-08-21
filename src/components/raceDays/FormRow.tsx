@@ -1,3 +1,4 @@
+import { analyseSentimentFromComment } from "@/lib/utils";
 import {
   FormObj,
   Horse as HorseType,
@@ -38,6 +39,9 @@ export function FormRow({ form, horse, race, meeting }: FormProps) {
     comment,
   } = form;
 
+  const { matchedTerms } = analyseSentimentFromComment(comment);
+
+  console.log(horse.name, { matchedTerms });
   return (
     <tr className="">
       <td className="px-4 py-2 ">{raceDate}</td>
@@ -64,7 +68,63 @@ export function FormRow({ form, horse, race, meeting }: FormProps) {
       <td className="px-4 py-2 ">
         {racedAgainst_BeatenInfo.maxes.rpr?.toFixed(2)}
       </td>
-      <td className="px-4 py-2 ">{comment}</td>
+      <td className="px-4 py-2 ">
+        {matchedTerms.eyecatcher.length > 0 && (
+          <span style={{ color: "#2dd4bf", marginRight: "4px" }}>⭐</span>
+        )}
+        {matchedTerms.hampered.length > 0 && (
+          <span style={{ color: "#fb923c", marginRight: "4px" }}>⚠️</span>
+        )}
+        {comment?.split(" ").map((word, i) => {
+          const isPositiveTerm = matchedTerms.positive.some(
+            (term) =>
+              term.toLowerCase() === word.toLowerCase() ||
+              term.toLowerCase().includes(word.toLowerCase())
+          );
+          const isNegativeTerm = matchedTerms.negative.some(
+            (term) =>
+              term.toLowerCase() === word.toLowerCase() ||
+              term.toLowerCase().includes(word.toLowerCase())
+          );
+          const isHamperedTerm = matchedTerms.hampered.some(
+            (term) =>
+              term.toLowerCase() === word.toLowerCase() ||
+              term.toLowerCase().includes(word.toLowerCase())
+          );
+          const isEyecatcherTerm = matchedTerms.eyecatcher.some(
+            (term) =>
+              term.toLowerCase() === word.toLowerCase() ||
+              term.toLowerCase().includes(word.toLowerCase())
+          );
+          const isBadTerm = matchedTerms.bad.some(
+            (term) =>
+              term.toLowerCase() === word.toLowerCase() ||
+              term.toLowerCase().includes(word.toLowerCase())
+          );
+
+          return (
+            <span key={i}>
+              <span
+                style={{
+                  color: isPositiveTerm
+                    ? "#4ade80"
+                    : isNegativeTerm
+                    ? "#ef4444"
+                    : isHamperedTerm
+                    ? "#fb923c"
+                    : isEyecatcherTerm
+                    ? "#2dd4bf"
+                    : isBadTerm
+                    ? "#f43f5e"
+                    : undefined,
+                }}
+              >
+                {word}
+              </span>{" "}
+            </span>
+          );
+        })}
+      </td>
     </tr>
   );
 }

@@ -1,6 +1,7 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { placeToPlaceKey } from "./racing/scores/funcs";
+import { analyzeSentiment } from "./racing/analyzeSentiment";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -254,4 +255,298 @@ export const distanceOkay = (
   const minThreshold = raceDistanceF - minThresholdAdd;
 
   return horseAvgDistanceF >= minThreshold && horseAvgDistanceF <= maxThreshold;
+};
+
+const EYECATCHER_TERMS = ["eyecatcher", "eye catcher", "eye-catcher"];
+
+const HAMPERED_TERMS = [
+  "hampered",
+  "hmpd",
+  "hmprd",
+  "remarkable",
+  "lost irons",
+  "blocked",
+  "not clear",
+  "no clear",
+  "not clear run",
+  "interference",
+  "intereference",
+  "interreference",
+  "impeded",
+  "squeezed",
+  "accidentally",
+  "crashed",
+  "tight",
+  "short of room",
+  "room",
+  "waiting for",
+  "nowhere to go",
+  "boxed in",
+  "waiting for room",
+  "bumped into",
+  "carried out",
+  "slipped up",
+  "mistake",
+  "stumbled",
+  "jostled",
+  "veered",
+  "swerved",
+  "clipped heels",
+  "clipped",
+  "clipping",
+  "knocked",
+  "pushed out",
+  "forced wide",
+  "crowded",
+  "jammed",
+  "trapped",
+  "stuck",
+
+  "barged",
+  "bunched",
+
+  "squeeze",
+  "unlucky",
+  "did well",
+  "denied a clear run",
+  "denied",
+];
+
+const BAD_TERMS = [
+  "no extra",
+  "never better",
+  "never dangerous",
+  "found little",
+  "no improvement",
+  "no impression",
+  "weakened",
+  "no chance",
+  "outpaced",
+  "hung",
+  "weak",
+  "flat",
+  "never on terms",
+  "no improvement",
+];
+
+const POSITIVE_TERMS = [
+  // Strong performance
+  "impressive",
+  "strong",
+  "well",
+  "good",
+  "promising",
+  "improved",
+  "progressive",
+  "comfortable",
+  "easily",
+  "went clear",
+  "dominated",
+  "smooth",
+  "perfect",
+  "professional",
+  "consistent",
+  "cruised",
+  "quickened",
+  "powered",
+  "stormed",
+  "commanded",
+  "kept on",
+  "headway",
+  "challenged",
+  "led",
+  "ridden out",
+  "cosily",
+  "readily",
+  "going best",
+  "going easily",
+  "smooth headway",
+  "ran on well",
+  "promising",
+  "comfortably",
+  "just prevailed",
+  "eyecatcher",
+  "rallied",
+  "nearest finish",
+  "just did enough",
+
+  // Winning terms
+  "won",
+  "scored",
+  "landed",
+  "prevailed",
+  "delivered",
+  "justified",
+  "stayed on",
+
+  // Form indicators
+  "progress",
+  "potential",
+  "scopey",
+  "straightforward",
+  "genuine",
+  "game",
+  "determined",
+  "willing",
+  "honest",
+  "ready",
+  "sharp",
+  "thriving",
+  "flourishing",
+
+  // Movement quality
+  "travelled",
+  "moved",
+  "balanced",
+  "fluent",
+  "rhythm",
+  "flowing",
+  "nimble",
+  "athletic",
+  "agile",
+  "springy",
+  "bouncing",
+
+  // New positive terms
+  "made all",
+  "went clear",
+  "pushed out",
+  "ran on",
+  "shaken up",
+  "always doing enough",
+  "recovered",
+  "disputed lead",
+  "faced challenge",
+  "nudged along",
+];
+
+const NEGATIVE_TERMS = [
+  // Poor performance
+  "struggled",
+  "weakened",
+  "poor",
+  "disappointing",
+  "faded",
+  "tired",
+  "outpaced",
+  "never",
+  "tailed",
+  "labored",
+  "failed",
+  "dropped",
+  "lost",
+  "awkward",
+  "beaten",
+  "behind",
+  "detached",
+  "stopped",
+  "pulled up",
+  "no extra",
+  "no impression",
+  "no match",
+  "dwelt",
+  "hung",
+  "unseated",
+  "fell",
+  "tailed off",
+  "refused",
+
+  // Movement issues
+  "stumbled",
+  "bumped",
+  "interfered",
+  "unbalanced",
+  "hanging",
+  "wandered",
+  "veered",
+  "edged",
+  "lugged",
+
+  // Form concerns
+  "regressive",
+  "flat",
+  "reluctant",
+  "unwilling",
+  "hesitant",
+  "sloppy",
+  "green",
+  "raw",
+  "unfocused",
+  "temperamental",
+  "restless",
+  "unsettled",
+  "nervous",
+
+  // Fitness/effort
+  "blew",
+  "unfit",
+  "legless",
+  "emptied",
+  "exhausted",
+  "spent",
+  "heavy",
+  "plodded",
+  "struggled",
+
+  // New negative terms
+  "ducked",
+  "carried head awkwardly",
+  "stone bruise",
+  "off feed",
+  "ran green",
+  "respiratory noise",
+  "no chance",
+  "lost touch",
+  "hung right",
+  "hung left",
+
+  // New negative terms
+  "reared",
+  "slowly away",
+  "visibility reduced",
+  "struggling home",
+  "carried head",
+  "pecked",
+  "sprawled",
+  "unsuitable ground",
+  "lost ground",
+  "dropped to rear",
+  "lost position",
+  "not reach leaders",
+  "not near to challenge",
+  "not pace to challenge",
+];
+
+export const analyseSentimentFromComment = (comment: string) => {
+  const loweredComment = comment.toLowerCase();
+
+  const matchedHamperedTerms = HAMPERED_TERMS.filter((term) =>
+    loweredComment.includes(term)
+  );
+
+  const matchedBadTerms = BAD_TERMS.filter((term) =>
+    loweredComment.includes(term)
+  );
+
+  const matchedEyecatcherTerms = EYECATCHER_TERMS.filter((term) =>
+    loweredComment.includes(term)
+  );
+
+  const matchedPositiveTerms = POSITIVE_TERMS.filter((term) =>
+    loweredComment.includes(term)
+  );
+
+  const matchedNegativeTerms = NEGATIVE_TERMS.filter((term) =>
+    loweredComment.includes(term)
+  );
+
+  const matchedTerms = {
+    hampered: matchedHamperedTerms,
+    bad: matchedBadTerms,
+    eyecatcher: matchedEyecatcherTerms,
+    positive: matchedPositiveTerms,
+    negative: matchedNegativeTerms,
+  };
+
+  return { matchedTerms };
 };
