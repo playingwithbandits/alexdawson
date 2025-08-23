@@ -38,11 +38,11 @@ export function Dashboard({
             rpr_racedAgainst_Beaten_Averages:
               raceMaxes?.racedAgainst_Beaten_Averages?.rpr * 0.925,
             rpr_racedAgainst_Beaten_Maxes:
-              raceMaxes?.racedAgainst_Beaten_Maxes?.rpr * 0.925,
+              raceMaxes?.racedAgainst_Beaten_Maxes?.rpr * 0.975,
 
             timePerFurlong: raceMin?.timePerFurlong * 1.1,
 
-            mostRecentForm: raceMaxes?.mostRecentForm?.rpr * 0.925,
+            mostRecentForm: raceMaxes?.mostRecentForm?.rpr * 0.975,
           };
 
           return {
