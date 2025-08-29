@@ -26,7 +26,7 @@ export const getRaceToShowStats = (race: RaceType) => {
       .slice(1, 4)
       .reduce((acc, score) => acc + score, 0) / 3;
 
-  const maxScore = 15;
+  const maxScore = 80;
   const horsesInRace = race.horses.length;
   const horsesInRaceWithForms = race.horses.filter(
     (horse) => horse.form.length > 2
@@ -34,7 +34,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms > 0.66;
 
-  const scoreToBeBetterThan = 14;
+  const scoreToBeBetterThan = 60;
 
   return {
     raceAvgScore,
@@ -91,9 +91,9 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const scoreGood = totalScore >= scoreToBeBetterThan;
 
                     const oddsGood =
-                      horse.oddsDecimal >= 15 &&
-                      totalScore >= 10 &&
-                      gapToAvgScore > 1;
+                      horse.oddsDecimal >= 12 &&
+                      totalScore >= 50 &&
+                      gapToAvgScore > 5;
 
                     const neededOkay = [scoreGood, oddsGood].some(
                       (value) => value
@@ -119,10 +119,9 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                         <span
                           className={`px-2 py-1 text-sm  rounded-full ${
                             ratioWithFormsGood
-                              ? horse.scoreObj?.total === maxScore &&
-                                gapToAvgScore > 2.5
+                              ? (horse.scoreObj?.total || 0) >= maxScore
                                 ? "bg-yellow-500 text-black"
-                                : gapToAvgScore > 2.5
+                                : gapToAvgScore > 15
                                 ? "bg-blue-400 text-black"
                                 : horse?.oddsDecimal >= 15
                                 ? "bg-gray-300 text-black"
@@ -168,9 +167,14 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   <td className="px-4 py-2 bg-gray-800">Going</td>
                   <td className="px-4 py-2 bg-gray-800">Type</td>
                   <td className="px-4 py-2">TPF</td>
-                  <td className="px-4 py-2 ">Avg</td>
-                  <td className="px-4 py-2 ">T_Max</td>
-                  <td className="px-4 py-2 ">Max Recent Form</td>
+                  <td className="px-4 py-2 ">B Avg (Avg)</td>
+                  <td className="px-4 py-2 ">B Avg (Max)</td>
+                  <td className="px-4 py-2 ">B Max (Avg)</td>
+                  <td className="px-4 py-2 ">B Max (Max)</td>
+                  <td className="px-4 py-2 ">RF Avgs (Avg)</td>
+                  <td className="px-4 py-2 ">RF Avgs (Max)</td>
+                  <td className="px-4 py-2 ">RF Max (Avg)</td>
+                  <td className="px-4 py-2 ">RF Max (Max)</td>
                 </tr>
               </thead>
               <tbody>
@@ -184,21 +188,51 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   <td className="px-4 py-2 bg-gray-800">{race.raceTypeCode}</td>
 
                   <td className="px-4 py-2">
-                    {race.horsesInfo.min.timePerFurlong.toFixed(2)}
+                    {race.horsesInfo.min.race_min_timePerFurlong.toFixed(2)}
+                  </td>
+                  <td className="px-4 py-2 ">
+                    {race.horsesInfo.averages.race_averages_racedAgainst_Beaten_Averages.toFixed(
+                      2
+                    )}
+                  </td>
+                  <td className="px-4 py-2 ">
+                    {race.horsesInfo.maxes.race_averages_racedAgainst_Beaten_Averages.toFixed(
+                      2
+                    )}
                   </td>
 
                   <td className="px-4 py-2 ">
-                    {race.horsesInfo.maxes.racedAgainst_Beaten_Averages.rpr.toFixed(
+                    {race.horsesInfo.averages.race_maxes_racedAgainst_Beaten_Averages.toFixed(
+                      2
+                    )}
+                  </td>
+
+                  <td className="px-4 py-2 ">
+                    {race.horsesInfo.maxes.race_maxes_racedAgainst_Beaten_Averages.toFixed(
+                      2
+                    )}
+                  </td>
+
+                  <td className="px-4 py-2 ">
+                    {race.horsesInfo.averages.race_mostRecentForm_racedAgainst_Beaten_Averages.toFixed(
                       2
                     )}
                   </td>
                   <td className="px-4 py-2 ">
-                    {race.horsesInfo.maxes.racedAgainst_Beaten_Maxes.rpr.toFixed(
+                    {race.horsesInfo.maxes.race_mostRecentForm_racedAgainst_Beaten_Averages.toFixed(
+                      2
+                    )}
+                  </td>
+
+                  <td className="px-4 py-2 ">
+                    {race.horsesInfo.averages.race_mostRecentForm_racedAgainst_Beaten_Maxes.toFixed(
                       2
                     )}
                   </td>
                   <td className="px-4 py-2 ">
-                    {race.horsesInfo.maxes.mostRecentForm.rpr.toFixed(2)}
+                    {race.horsesInfo.maxes.race_mostRecentForm_racedAgainst_Beaten_Maxes.toFixed(
+                      2
+                    )}
                   </td>
                 </tr>
               </tbody>

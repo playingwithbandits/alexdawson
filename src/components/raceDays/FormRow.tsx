@@ -89,7 +89,6 @@ export function renderCommentWithHighlights(
   matchedTerms:
     | {
         hampered: string[];
-        bad: string[];
         eyecatcher: string[];
         positive: string[];
         negative: string[];

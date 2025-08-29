@@ -1,6 +1,6 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
-import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
+import { horseNameToKey } from "@/lib/racing/scores/funcs";
 import { compareTwoGoingCodeArrays, distanceOkay } from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
 import { useState } from "react";
@@ -34,15 +34,36 @@ export function Dashboard({
           const { horsesInfo, goingCodes, distanceF, trackId } = race;
           const { maxes: raceMaxes, min: raceMin } = horsesInfo;
 
+          const thresholdValue = 0.95;
+
           const raceThresholds = {
-            rpr_racedAgainst_Beaten_Averages:
-              raceMaxes?.racedAgainst_Beaten_Averages?.rpr * 0.925,
-            rpr_racedAgainst_Beaten_Maxes:
-              raceMaxes?.racedAgainst_Beaten_Maxes?.rpr * 0.975,
+            race_rpr: raceMaxes?.race_rpr * thresholdValue,
+            race_averages_racedAgainst:
+              raceMaxes?.race_averages_racedAgainst * thresholdValue,
+            race_maxes_racedAgainst:
+              raceMaxes?.race_maxes_racedAgainst * thresholdValue,
+            race_averages_racedAgainst_Averages:
+              raceMaxes?.race_averages_racedAgainst_Averages * thresholdValue,
+            race_maxes_racedAgainst_Averages:
+              raceMaxes?.race_maxes_racedAgainst_Averages * thresholdValue,
+            race_averages_racedAgainst_Beaten:
+              raceMaxes?.race_averages_racedAgainst_Beaten * thresholdValue,
+            race_maxes_racedAgainst_Beaten:
+              raceMaxes?.race_maxes_racedAgainst_Beaten * thresholdValue,
+            race_averages_racedAgainst_Beaten_Averages:
+              raceMaxes?.race_averages_racedAgainst_Beaten_Averages *
+              thresholdValue,
+            race_maxes_racedAgainst_Beaten_Averages:
+              raceMaxes?.race_maxes_racedAgainst_Beaten_Averages *
+              thresholdValue,
+            race_mostRecentForm_racedAgainst_Beaten_Averages:
+              raceMaxes?.race_mostRecentForm_racedAgainst_Beaten_Averages *
+              thresholdValue,
+            race_mostRecentForm_racedAgainst_Beaten_Maxes:
+              raceMaxes?.race_mostRecentForm_racedAgainst_Beaten_Maxes *
+              thresholdValue,
 
-            timePerFurlong: raceMin?.timePerFurlong * 1.1,
-
-            mostRecentForm: raceMaxes?.mostRecentForm?.rpr * 0.975,
+            race_min_timePerFurlong: raceMin?.race_min_timePerFurlong * 1.1,
           };
 
           return {
@@ -66,30 +87,88 @@ export function Dashboard({
                 //   rpr: Boolean(horseRpr) && horseRpr >= raceAverages?.rpr,
                 // };
 
-                const horseBetterThanRaceTheshold = {
-                  rpr_racedAgainst_Beaten_Averages:
+                const horseBetterThanRaceTheshold: {
+                  race_rpr: boolean;
+                  race_averages_racedAgainst: boolean;
+                  race_maxes_racedAgainst: boolean;
+                  race_averages_racedAgainst_Averages: boolean;
+                  race_maxes_racedAgainst_Averages: boolean;
+                  race_averages_racedAgainst_Beaten: boolean;
+                  race_maxes_racedAgainst_Beaten: boolean;
+                  race_averages_racedAgainst_Beaten_Averages: boolean;
+                  race_maxes_racedAgainst_Beaten_Averages: boolean;
+                  race_mostRecentForm_racedAgainst_Beaten_Averages: boolean;
+                  race_mostRecentForm_racedAgainst_Beaten_Maxes: boolean;
+                  race_min_timePerFurlong: boolean;
+                } = {
+                  race_rpr:
+                    Boolean(horseRpr) && horseRpr >= raceThresholds.race_rpr,
+
+                  race_averages_racedAgainst:
+                    Boolean(horseFormAverages?.racedAgainst?.rpr) &&
+                    horseFormAverages.racedAgainst.rpr >=
+                      raceThresholds.race_averages_racedAgainst,
+
+                  race_maxes_racedAgainst:
+                    Boolean(horseFormMaxes?.racedAgainst?.rpr) &&
+                    horseFormMaxes.racedAgainst.rpr >=
+                      raceThresholds.race_maxes_racedAgainst,
+
+                  race_averages_racedAgainst_Averages:
+                    Boolean(horseFormAverages?.racedAgainst_Averages?.rpr) &&
+                    horseFormAverages.racedAgainst_Averages.rpr >=
+                      raceThresholds.race_averages_racedAgainst_Averages,
+
+                  race_maxes_racedAgainst_Averages:
+                    Boolean(horseFormMaxes?.racedAgainst_Averages?.rpr) &&
+                    horseFormMaxes.racedAgainst_Averages.rpr >=
+                      raceThresholds.race_maxes_racedAgainst_Averages,
+
+                  race_averages_racedAgainst_Beaten:
+                    Boolean(horseFormAverages?.racedAgainst_Beaten?.rpr) &&
+                    horseFormAverages.racedAgainst_Beaten.rpr >=
+                      raceThresholds.race_averages_racedAgainst_Beaten,
+
+                  race_maxes_racedAgainst_Beaten:
+                    Boolean(horseFormMaxes?.racedAgainst_Beaten?.rpr) &&
+                    horseFormMaxes.racedAgainst_Beaten.rpr >=
+                      raceThresholds.race_maxes_racedAgainst_Beaten,
+
+                  race_averages_racedAgainst_Beaten_Averages:
                     Boolean(
                       horseFormAverages?.racedAgainst_Beaten_Averages?.rpr
                     ) &&
-                    horseFormAverages?.racedAgainst_Beaten_Averages?.rpr >=
-                      raceThresholds.rpr_racedAgainst_Beaten_Averages,
+                    horseFormAverages.racedAgainst_Beaten_Averages.rpr >=
+                      raceThresholds.race_averages_racedAgainst_Beaten_Averages,
 
-                  rpr_racedAgainst_Beaten_Maxes:
-                    Boolean(horseFormMaxes?.racedAgainst_Beaten_Maxes?.rpr) &&
-                    horseFormMaxes?.racedAgainst_Beaten_Maxes?.rpr >=
-                      raceThresholds.rpr_racedAgainst_Beaten_Maxes,
+                  race_maxes_racedAgainst_Beaten_Averages:
+                    Boolean(
+                      horseFormMaxes?.racedAgainst_Beaten_Averages?.rpr
+                    ) &&
+                    horseFormMaxes.racedAgainst_Beaten_Averages.rpr >=
+                      raceThresholds.race_maxes_racedAgainst_Beaten_Averages,
 
-                  timePerFurlong:
-                    Boolean(horseFormMin?.timePerFurlong) &&
-                    horseFormMin?.timePerFurlong <=
-                      raceThresholds.timePerFurlong,
+                  race_mostRecentForm_racedAgainst_Beaten_Averages:
+                    Boolean(
+                      horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages
+                        ?.rpr
+                    ) &&
+                    (horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages
+                      ?.rpr || 0) >=
+                      raceThresholds.race_mostRecentForm_racedAgainst_Beaten_Averages,
 
-                  mostRecentForm:
+                  race_mostRecentForm_racedAgainst_Beaten_Maxes:
                     Boolean(
                       horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr
                     ) &&
                     (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes
-                      ?.rpr || 0) >= raceThresholds.mostRecentForm,
+                      ?.rpr || 0) >=
+                      raceThresholds.race_mostRecentForm_racedAgainst_Beaten_Maxes,
+
+                  race_min_timePerFurlong:
+                    Boolean(horseFormMin?.timePerFurlong) &&
+                    horseFormMin.timePerFurlong <=
+                      raceThresholds.race_min_timePerFurlong,
                 };
 
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;
@@ -119,30 +198,96 @@ export function Dashboard({
                     )
                     .some((x) => x),
                   lastRan: Boolean(horse.lastRan) && horse.lastRan <= 45,
+                  distance: form
+                    ?.map((f) => distanceOkay(f.distanceF, distanceF))
+                    .some((x) => x),
+                };
+
+                const weights = {
+                  race_rpr: 1,
+                  race_averages_racedAgainst: 1,
+                  race_maxes_racedAgainst: 1,
+                  race_averages_racedAgainst_Averages: 1,
+                  race_maxes_racedAgainst_Averages: 1,
+                  race_averages_racedAgainst_Beaten: 1,
+                  race_maxes_racedAgainst_Beaten: 1,
+                  race_averages_racedAgainst_Beaten_Averages: 1,
+                  race_maxes_racedAgainst_Beaten_Averages: 1,
+                  race_mostRecentForm_racedAgainst_Beaten_Averages: 1,
+                  race_mostRecentForm_racedAgainst_Beaten_Maxes: 1,
+                  race_min_timePerFurlong: 1,
+
+                  hfa_distance: 1,
+                  hfa_goingCode: 1,
+                  hfa_jockey: 1,
+
+                  hrw_jockey: 1,
+                  hrw_goingCode: 1,
+                  hrw_lastRan: 1,
+                  hrw_distance: 1,
                 };
 
                 const total =
                   [
-                    horseBetterThanRaceTheshold?.timePerFurlong ? 1 : 0,
-                    horseBetterThanRaceTheshold?.mostRecentForm ? 2 : 0,
-                    horseBetterThanRaceTheshold?.rpr_racedAgainst_Beaten_Averages
-                      ? 2
+                    horseBetterThanRaceTheshold?.race_rpr
+                      ? weights.race_rpr
                       : 0,
-                    horseBetterThanRaceTheshold?.rpr_racedAgainst_Beaten_Maxes
-                      ? 2
+                    horseBetterThanRaceTheshold?.race_averages_racedAgainst
+                      ? weights.race_averages_racedAgainst
                       : 0,
-                    horseFormAveragesStatsGood?.distance ? 2 : 0,
-                    horseFormAveragesStatsGood?.goingCode ? 1 : 0,
-                    horseFormAveragesStatsGood?.jockey ? 0.5 : 0,
-                    horseRacedWith?.jockey ? 0.5 : 0,
-                    horseRacedWith?.goingCode ? 2 : 0,
-                    horseRacedWith?.lastRan ? 2 : 0,
+                    horseBetterThanRaceTheshold?.race_maxes_racedAgainst
+                      ? weights.race_maxes_racedAgainst
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_averages_racedAgainst_Averages
+                      ? weights.race_averages_racedAgainst_Averages
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_maxes_racedAgainst_Averages
+                      ? weights.race_maxes_racedAgainst_Averages
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_averages_racedAgainst_Beaten
+                      ? weights.race_averages_racedAgainst_Beaten
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_maxes_racedAgainst_Beaten
+                      ? weights.race_maxes_racedAgainst_Beaten
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_averages_racedAgainst_Beaten_Averages
+                      ? weights.race_averages_racedAgainst_Beaten_Averages
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_maxes_racedAgainst_Beaten_Averages
+                      ? weights.race_maxes_racedAgainst_Beaten_Averages
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_mostRecentForm_racedAgainst_Beaten_Averages
+                      ? weights.race_mostRecentForm_racedAgainst_Beaten_Averages
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_mostRecentForm_racedAgainst_Beaten_Maxes
+                      ? weights.race_mostRecentForm_racedAgainst_Beaten_Maxes
+                      : 0,
+                    horseBetterThanRaceTheshold?.race_min_timePerFurlong
+                      ? weights.race_min_timePerFurlong
+                      : 0,
+
+                    horseFormAveragesStatsGood?.distance
+                      ? weights.hfa_distance
+                      : 0,
+                    horseFormAveragesStatsGood?.goingCode
+                      ? weights.hfa_goingCode
+                      : 0,
+                    horseFormAveragesStatsGood?.jockey ? weights.hfa_jockey : 0,
+                    horseRacedWith?.jockey ? weights.hrw_jockey : 0,
+                    horseRacedWith?.goingCode ? weights.hrw_goingCode : 0,
+                    horseRacedWith?.lastRan ? weights.hrw_lastRan : 0,
+                    horseRacedWith?.distance ? weights.hrw_distance : 0,
                   ]
                     ?.filter(Boolean)
                     .reduce<number>((a, b) => a + b, 0) || 0;
 
+                const totalScorePossible = Object.values(weights).reduce(
+                  (a, b) => a + b,
+                  0
+                );
+
                 const scoreObj: ScoreObj = {
-                  total,
+                  total: (total / totalScorePossible) * 100,
                   horseRacedWith,
                   horseBetterThanRaceTheshold,
                   horseFormAveragesStatsGood,

@@ -24,65 +24,67 @@ export interface Race {
 
 export interface RaceHorsesInfo {
   averages: {
-    mostRecentForm: {
-      rpr: number;
-    };
-    rpr: number;
-    racedAgainst: {
-      rpr: number;
-    };
-    racedAgainst_Beaten: {
-      rpr: number;
-    };
-    racedAgainst_Averages: {
-      rpr: number;
-    };
-    racedAgainst_Beaten_Averages: {
-      rpr: number;
-    };
-    racedAgainst_Maxes: {
-      rpr: number;
-    };
-    racedAgainst_Beaten_Maxes: {
-      rpr: number;
-    };
+    race_rpr: number;
+    race_min_timePerFurlong: number;
+    race_averages_racedAgainst: number;
+    race_maxes_racedAgainst: number;
+    race_averages_racedAgainst_Averages: number;
+    race_maxes_racedAgainst_Averages: number;
+    race_averages_racedAgainst_Beaten: number;
+    race_maxes_racedAgainst_Beaten: number;
+    race_averages_racedAgainst_Beaten_Averages: number;
+    race_maxes_racedAgainst_Beaten_Averages: number;
+    race_mostRecentForm_racedAgainst_Beaten_Averages: number;
+    race_mostRecentForm_racedAgainst_Beaten_Maxes: number;
   };
   maxes: {
-    mostRecentForm: {
-      rpr: number;
-    };
-    rpr: number;
-    racedAgainst: {
-      rpr: number;
-    };
-    racedAgainst_Beaten: {
-      rpr: number;
-    };
-    racedAgainst_Averages: {
-      rpr: number;
-    };
-    racedAgainst_Beaten_Averages: {
-      rpr: number;
-    };
-    racedAgainst_Maxes: {
-      rpr: number;
-    };
-    racedAgainst_Beaten_Maxes: {
-      rpr: number;
-    };
+    race_rpr: number;
+    race_min_timePerFurlong: number;
+    race_averages_racedAgainst: number;
+    race_maxes_racedAgainst: number;
+    race_averages_racedAgainst_Averages: number;
+    race_maxes_racedAgainst_Averages: number;
+    race_averages_racedAgainst_Beaten: number;
+    race_maxes_racedAgainst_Beaten: number;
+    race_averages_racedAgainst_Beaten_Averages: number;
+    race_maxes_racedAgainst_Beaten_Averages: number;
+    race_mostRecentForm_racedAgainst_Beaten_Averages: number;
+    race_mostRecentForm_racedAgainst_Beaten_Maxes: number;
   };
   min: {
-    timePerFurlong: number;
+    race_min_timePerFurlong: number;
+  };
+  rawData: {
+    raw_race_rpr: number[];
+    raw_race_min_timePerFurlong: number[];
+    raw_race_averages_racedAgainst: number[];
+    raw_race_maxes_racedAgainst: number[];
+    raw_race_averages_racedAgainst_Averages: number[];
+    raw_race_maxes_racedAgainst_Averages: number[];
+    raw_race_averages_racedAgainst_Beaten: number[];
+    raw_race_maxes_racedAgainst_Beaten: number[];
+    raw_race_averages_racedAgainst_Beaten_Averages: number[];
+    raw_race_maxes_racedAgainst_Beaten_Averages: number[];
+    raw_race_mostRecentForm_racedAgainst_Beaten_Averages: number[];
+    raw_race_mostRecentForm_racedAgainst_Beaten_Maxes: number[];
   };
 }
 
 export interface ScoreObj {
   total: number;
   horseBetterThanRaceTheshold: {
-    rpr_racedAgainst_Beaten_Averages: boolean;
-    rpr_racedAgainst_Beaten_Maxes: boolean;
-    timePerFurlong: boolean;
-    mostRecentForm: boolean;
+    race_rpr: boolean;
+    race_averages_racedAgainst: boolean;
+    race_maxes_racedAgainst: boolean;
+    race_averages_racedAgainst_Averages: boolean;
+    race_maxes_racedAgainst_Averages: boolean;
+    race_averages_racedAgainst_Beaten: boolean;
+    race_maxes_racedAgainst_Beaten: boolean;
+    race_averages_racedAgainst_Beaten_Averages: boolean;
+    race_maxes_racedAgainst_Beaten_Averages: boolean;
+    race_mostRecentForm_racedAgainst_Beaten_Averages: boolean;
+    race_mostRecentForm_racedAgainst_Beaten_Maxes: boolean;
+    race_min_timePerFurlong: boolean;
   };
   horseFormAveragesStatsGood: {
     distance: boolean;
@@ -93,6 +95,7 @@ export interface ScoreObj {
     jockey: boolean;
     goingCode: boolean;
     lastRan: boolean;
+    distance: boolean;
   };
 }
 
