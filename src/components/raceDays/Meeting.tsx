@@ -24,7 +24,11 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
               getRaceToShowStats(x);
 
             const raceHasHorseScoreMax = x.horses.some((horse) => {
-              return (horse.scoreObj?.total || 0) >= scoreToBeBetterThan;
+              const racedRecently = horse.scoreObj?.horseRacedWith?.lastRan;
+              return (
+                (horse.scoreObj?.total || 0) >= scoreToBeBetterThan &&
+                racedRecently
+              );
             });
 
             const raceHasFinsihed =
@@ -37,9 +41,9 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
               ? !raceHasFinsihed && ratioWithFormsGood && raceHasHorseScoreMax
               : true;
           })
-          .map((race) => (
+          .map((race, index) => (
             <Race
-              key={race.id}
+              key={race.id + index}
               race={race}
               meeting={meeting}
               results={results}

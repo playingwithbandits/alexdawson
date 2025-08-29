@@ -5,6 +5,7 @@ import { compareTwoGoingCodeArrays, distanceOkay } from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
 import { useState } from "react";
 import { getRaceToShowStats } from "@/components/raceDays/Race";
+import { normalizeTime } from "@/components/horse/DayPredictions";
 
 export function Dashboard({
   data,
@@ -331,10 +332,20 @@ export function Dashboard({
             } = getRaceToShowStats(race);
 
             const someHorseHasMaxScore = race.horses.some(
-              (horse) => (horse.scoreObj?.total || 0) >= scoreToBeBetterThan
+              (horse) =>
+                (horse.scoreObj?.total || 0) >= scoreToBeBetterThan &&
+                horse.scoreObj?.horseRacedWith?.lastRan
             );
 
-            return ratioWithFormsGood && someHorseHasMaxScore;
+            const raceHasFinsihed =
+              date === new Date().toISOString().split("T")[0] &&
+              new Date(
+                `${date} ${normalizeTime(race.time).split(":").join(":")}`
+              ).getTime() < new Date().getTime();
+
+            return (
+              ratioWithFormsGood && someHorseHasMaxScore && !raceHasFinsihed
+            );
           });
 
           return showInfo ? hasARaceWithHorseScoreMax : true;

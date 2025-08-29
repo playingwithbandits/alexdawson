@@ -34,7 +34,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms > 0.66;
 
-  const scoreToBeBetterThan = 60;
+  const scoreToBeBetterThan = 70;
 
   return {
     raceAvgScore,
@@ -90,8 +90,11 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const gapToAvgScore = totalScore - raceAvgScore;
                     const scoreGood = totalScore >= scoreToBeBetterThan;
 
+                    const racedRecently =
+                      horse.scoreObj?.horseRacedWith?.lastRan;
+
                     const oddsGood =
-                      horse.oddsDecimal >= 12 &&
+                      horse.oddsDecimal >= 25 &&
                       totalScore >= 50 &&
                       gapToAvgScore > 5;
 
@@ -100,10 +103,13 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     );
 
                     return showInfo
-                      ? !raceHasFinsihed && ratioWithFormsGood && neededOkay
-                      : neededOkay;
+                      ? !raceHasFinsihed &&
+                          ratioWithFormsGood &&
+                          racedRecently &&
+                          neededOkay
+                      : racedRecently && neededOkay;
                   })
-                  ?.map((horse) => {
+                  ?.map((horse, index) => {
                     const gapToAvgScore =
                       (horse.scoreObj?.total || 0) - raceAvgScore;
 
@@ -115,7 +121,10 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const horseTrophy = getTrophy(horsePos);
 
                     return (
-                      <span key={horse.id} className="flex items-center gap-1">
+                      <span
+                        key={horse.id + index}
+                        className="flex items-center gap-1"
+                      >
                         <span
                           className={`px-2 py-1 text-sm  rounded-full ${
                             ratioWithFormsGood
@@ -134,7 +143,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           }`}
                           title={`${horse.name} ${horse.scoreObj?.total}`}
                         >
-                          {horse.name} {horse.scoreObj?.total} (
+                          {horse.name} {horse.scoreObj?.total?.toFixed(1)} (
                           {gapToAvgScore > 0 ? "+" : ""}
                           {gapToAvgScore.toFixed(1)}){" "}
                           {horse.oddsDecimal > 0 ? horse.oddsDecimal : ""}

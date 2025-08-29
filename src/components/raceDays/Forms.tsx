@@ -47,9 +47,9 @@ export function Forms({ forms, horse, race, meeting }: FormProps) {
           </tr>
         </thead>
         <tbody>
-          {forms?.map((form) => (
+          {forms?.map((form, index) => (
             <FormRow
-              key={form.id}
+              key={form.id + index}
               form={form}
               horse={horse}
               race={race}
