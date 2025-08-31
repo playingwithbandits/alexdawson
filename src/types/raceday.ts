@@ -89,6 +89,15 @@ export interface ScoreObj {
     race_mostRecentForm_racedAgainst_Beaten_Maxes: boolean;
     race_min_timePerFurlong: boolean;
     race_handicapped_rpr: boolean;
+    handicapped_maxes_racedAgainst_Beaten_rpr: boolean;
+    handicapped_maxes_racedAgainst_Beaten_Averages_rpr: boolean;
+    handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: boolean;
+    handicapped_averages_racedAgainst_Beaten_rpr: boolean;
+    handicapped_averages_racedAgainst_Beaten_Averages_rpr: boolean;
+    handicapped_averages_racedAgainst_Beaten_Maxes_rpr: boolean;
+
+    handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: boolean;
+    handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: boolean;
   };
   horseFormAveragesStatsGood: {
     distance: boolean;

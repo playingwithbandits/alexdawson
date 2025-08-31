@@ -129,7 +129,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   <td className="px-4 py-2 ">Beaten Max (Max)</td>
                   <td className="px-4 py-2 ">Recent Form Avgs</td>
                   <td className="px-4 py-2 ">Recent Form Max</td>
-                  <td className="px-4 py-2 ">Handicapped Rpr</td>
+                  <td className="px-4 py-2 ">OR | GAP</td>
                   <td className="px-4 py-2 ">Comment</td>
                 </tr>
               </thead>
@@ -205,64 +205,82 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   <td
                     className={twMerge(
                       "px-4 py-2 ",
-                      horseBetterThanRaceTheshold?.race_averages_racedAgainst_Beaten_Averages &&
+                      horseBetterThanRaceTheshold?.handicapped_averages_racedAgainst_Beaten_Averages_rpr &&
                         "text-[rgb(105,255,100)]"
                     )}
                   >
-                    {formAveragesRacedAgainstBeatenAverages.rpr?.toFixed(2)}
+                    {(
+                      formAveragesRacedAgainstBeatenAverages.rpr +
+                      (horse.handicapBonus || 0)
+                    )?.toFixed(2)}
                   </td>
                   <td
                     className={twMerge(
                       "px-4 py-2 ",
-                      horseBetterThanRaceTheshold?.race_maxes_racedAgainst_Beaten_Averages &&
+                      horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr &&
                         "text-[rgb(105,255,100)]"
                     )}
                   >
-                    {formMaxesRacedAgainstBeatenAverages.rpr?.toFixed(2)}
+                    {(
+                      formMaxesRacedAgainstBeatenAverages.rpr +
+                      (horse.handicapBonus || 0)
+                    )?.toFixed(2)}
                   </td>
                   <td
                     className={twMerge(
                       "px-4 py-2 ",
-                      horseBetterThanRaceTheshold?.race_averages_racedAgainst_Beaten &&
+                      horseBetterThanRaceTheshold?.handicapped_averages_racedAgainst_Beaten_rpr &&
                         "text-[#fa9360]"
                     )}
                   >
-                    {formAveragesRacedAgainstBeatenMaxes.rpr?.toFixed(2)}
+                    {(
+                      formAveragesRacedAgainstBeatenMaxes.rpr +
+                      (horse.handicapBonus || 0)
+                    )?.toFixed(2)}
                   </td>
                   <td
                     className={twMerge(
                       "px-4 py-2 ",
-                      horseBetterThanRaceTheshold?.race_maxes_racedAgainst_Beaten &&
+                      horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_rpr &&
                         "text-[#fa9360]"
                     )}
                   >
-                    {formMaxesRacedAgainstBeatenMaxes.rpr?.toFixed(2)}
+                    {(
+                      formMaxesRacedAgainstBeatenMaxes.rpr +
+                      (horse.handicapBonus || 0)
+                    )?.toFixed(2)}
                   </td>
 
                   <td
                     className={twMerge(
                       "px-4 py-2 ",
-                      horseBetterThanRaceTheshold?.race_mostRecentForm_racedAgainst_Beaten_Averages &&
+                      horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr &&
                         "text-yellow-400"
                     )}
                   >
-                    {horse?.mostRecentForm?.racedAgainst_BeatenInfo?.averages?.rpr?.toFixed(
-                      2
-                    )}
+                    {(
+                      (horse?.mostRecentForm?.racedAgainst_BeatenInfo?.averages
+                        ?.rpr || 0) + (horse.handicapBonus || 0)
+                    )?.toFixed(2)}
                   </td>
 
                   <td
                     className={twMerge(
                       "px-4 py-2 ",
-                      horseBetterThanRaceTheshold?.race_mostRecentForm_racedAgainst_Beaten_Maxes &&
+                      horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr &&
                         "text-yellow-400"
                     )}
                   >
-                    {horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr?.toFixed(
-                      2
-                    )}
+                    {(
+                      (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes
+                        ?.rpr || 0) + (horse.handicapBonus || 0)
+                    )?.toFixed(2)}
                   </td>
 
+                  <td className={twMerge("px-4 py-2 ")}>
+                    {horse.or} | {horse.handicapBonus}
+                  </td>
+                  {/* 
                   <td
                     className={twMerge(
                       "px-4 py-2 ",
@@ -270,9 +288,14 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                         "text-yellow-400"
                     )}
                   >
-                    {horse.handicappedRpr?.toFixed(2)} ({horse.rpr} +{" "}
-                    {horse.handicapBonus})
-                  </td>
+                    {(
+                      (horse.formInfo?.averages?.racedAgainst_Beaten_Maxes
+                        ?.rpr || 0) + (horse.handicapBonus || 0)
+                    )?.toFixed(2)}{" "}
+                    ({horse.handicapBonus}){" "}
+                    {horse.formInfo?.averages?.racedAgainst_Beaten_Maxes?.rpr ||
+                      0}
+                  </td> */}
 
                   <td className="px-4 py-2 ">
                     {mostRecentForm_commentMatchedTerms_hampered?.length >

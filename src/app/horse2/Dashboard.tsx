@@ -38,13 +38,92 @@ export function Dashboard({
           const raw_handicapped_rpr = race.horses.map(
             (horse) => horse.handicappedRpr || 0
           );
+
+          const raw_handicapped_maxes_racedAgainst_Beaten_rpr = race.horses.map(
+            (horse) =>
+              (horse.formInfo?.maxes?.racedAgainst_Beaten?.rpr || 0) +
+              (horse.handicapBonus || 0)
+          );
+          const raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr =
+            race.horses.map(
+              (horse) =>
+                (horse.formInfo?.maxes?.racedAgainst_Beaten_Averages?.rpr ||
+                  0) + (horse.handicapBonus || 0)
+            );
+
+          const raw_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr =
+            race.horses.map(
+              (horse) =>
+                (horse.formInfo?.maxes?.racedAgainst_Beaten_Maxes?.rpr || 0) +
+                (horse.handicapBonus || 0)
+            );
+
+          const raw_handicapped_averages_racedAgainst_Beaten_rpr =
+            race.horses.map(
+              (horse) =>
+                (horse.formInfo?.averages?.racedAgainst_Beaten?.rpr || 0) +
+                (horse.handicapBonus || 0)
+            );
+
+          const raw_handicapped_averages_racedAgainst_Beaten_Averages_rpr =
+            race.horses.map(
+              (horse) =>
+                (horse.formInfo?.averages?.racedAgainst_Beaten_Averages?.rpr ||
+                  0) + (horse.handicapBonus || 0)
+            );
+
+          const raw_handicapped_averages_racedAgainst_Beaten_Maxes_rpr =
+            race.horses.map(
+              (horse) =>
+                (horse.formInfo?.averages?.racedAgainst_Beaten_Maxes?.rpr ||
+                  0) + (horse.handicapBonus || 0)
+            );
+
+          const raw_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr =
+            race.horses.map(
+              (horse) =>
+                (horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages?.rpr ||
+                  0) + (horse.handicapBonus || 0)
+            );
+
+          const raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr =
+            race.horses.map(
+              (horse) =>
+                (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr ||
+                  0) + (horse.handicapBonus || 0)
+            );
+
           const maxRaceHandicappedRpr = max(raw_handicapped_rpr);
+          const maxRaceHandicappedMaxesRacedAgainstBeatenRpr = max(
+            raw_handicapped_maxes_racedAgainst_Beaten_rpr
+          );
+          const maxRaceHandicappedMaxesRacedAgainstBeatenAveragesRpr = max(
+            raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr
+          );
+          const maxRaceHandicappedMaxesRacedAgainstBeatenMaxesRpr = max(
+            raw_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr
+          );
+          const maxRaceHandicappedAveragesRacedAgainstBeatenRpr = max(
+            raw_handicapped_averages_racedAgainst_Beaten_rpr
+          );
+          const maxRaceHandicappedAveragesRacedAgainstBeatenAveragesRpr = max(
+            raw_handicapped_averages_racedAgainst_Beaten_Averages_rpr
+          );
+          const maxRaceHandicappedAveragesRacedAgainstBeatenMaxesRpr = max(
+            raw_handicapped_averages_racedAgainst_Beaten_Maxes_rpr
+          );
+
+          const maxRaceHandicappedMostRecentFormRacedAgainstBeatenAveragesRpr =
+            max(
+              raw_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr
+            );
+          const maxRaceHandicappedMostRecentFormRacedAgainstBeatenMaxesRpr =
+            max(raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr);
 
           const thresholdValue = 0.9;
 
           const raceThresholds = {
             race_rpr: raceMaxes?.race_rpr * thresholdValue,
-            race_or: raceMaxes?.race_or * thresholdValue,
             race_averages_racedAgainst:
               raceMaxes?.race_averages_racedAgainst * thresholdValue,
             race_maxes_racedAgainst:
@@ -73,6 +152,29 @@ export function Dashboard({
             race_min_timePerFurlong: raceMin?.race_min_timePerFurlong * 1.1,
 
             race_handicapped_rpr: maxRaceHandicappedRpr * thresholdValue,
+            race_handicapped_maxes_racedAgainst_Beaten_rpr:
+              maxRaceHandicappedMaxesRacedAgainstBeatenRpr * thresholdValue,
+            race_handicapped_maxes_racedAgainst_Beaten_Averages_rpr:
+              maxRaceHandicappedMaxesRacedAgainstBeatenAveragesRpr *
+              thresholdValue,
+            race_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr:
+              maxRaceHandicappedMaxesRacedAgainstBeatenMaxesRpr *
+              thresholdValue,
+            race_handicapped_averages_racedAgainst_Beaten_rpr:
+              maxRaceHandicappedAveragesRacedAgainstBeatenRpr * thresholdValue,
+            race_handicapped_averages_racedAgainst_Beaten_Averages_rpr:
+              maxRaceHandicappedAveragesRacedAgainstBeatenAveragesRpr *
+              thresholdValue,
+            race_handicapped_averages_racedAgainst_Beaten_Maxes_rpr:
+              maxRaceHandicappedAveragesRacedAgainstBeatenMaxesRpr *
+              thresholdValue,
+
+            race_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr:
+              maxRaceHandicappedMostRecentFormRacedAgainstBeatenAveragesRpr *
+              thresholdValue,
+            race_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr:
+              maxRaceHandicappedMostRecentFormRacedAgainstBeatenMaxesRpr *
+              thresholdValue,
           };
 
           return {
@@ -88,6 +190,33 @@ export function Dashboard({
                   handicapBonus,
                   handicappedRpr,
                 } = horse;
+
+                const handicappedStats = {
+                  handicapped_maxes_racedAgainst_Beaten_rpr:
+                    (horse.formInfo?.maxes?.racedAgainst_Beaten?.rpr || 0) +
+                    (horse.handicapBonus || 0),
+                  handicapped_maxes_racedAgainst_Beaten_Averages_rpr:
+                    (horse.formInfo?.maxes?.racedAgainst_Beaten_Averages?.rpr ||
+                      0) + (horse.handicapBonus || 0),
+                  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr:
+                    (horse.formInfo?.maxes?.racedAgainst_Beaten_Maxes?.rpr ||
+                      0) + (horse.handicapBonus || 0),
+                  handicapped_averages_racedAgainst_Beaten_rpr:
+                    (horse.formInfo?.averages?.racedAgainst_Beaten?.rpr || 0) +
+                    (horse.handicapBonus || 0),
+                  handicapped_averages_racedAgainst_Beaten_Averages_rpr:
+                    (horse.formInfo?.averages?.racedAgainst_Beaten_Averages
+                      ?.rpr || 0) + (horse.handicapBonus || 0),
+                  handicapped_averages_racedAgainst_Beaten_Maxes_rpr:
+                    (horse.formInfo?.averages?.racedAgainst_Beaten_Maxes?.rpr ||
+                      0) + (horse.handicapBonus || 0),
+                  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr:
+                    (horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages
+                      ?.rpr || 0) + (horse.handicapBonus || 0),
+                  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr:
+                    (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes
+                      ?.rpr || 0) + (horse.handicapBonus || 0),
+                };
 
                 const {
                   maxes: horseFormMaxes,
@@ -113,6 +242,16 @@ export function Dashboard({
                   race_mostRecentForm_racedAgainst_Beaten_Maxes: boolean;
                   race_min_timePerFurlong: boolean;
                   race_handicapped_rpr: boolean;
+
+                  handicapped_maxes_racedAgainst_Beaten_rpr: boolean;
+                  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: boolean;
+                  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: boolean;
+                  handicapped_averages_racedAgainst_Beaten_rpr: boolean;
+                  handicapped_averages_racedAgainst_Beaten_Averages_rpr: boolean;
+                  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: boolean;
+
+                  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: boolean;
+                  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: boolean;
                 } = {
                   race_rpr:
                     Boolean(horseRpr) && horseRpr >= raceThresholds.race_rpr,
@@ -190,6 +329,97 @@ export function Dashboard({
                     : Boolean(handicappedRpr) &&
                       (handicappedRpr || 0) >=
                         raceThresholds.race_handicapped_rpr,
+
+                  handicapped_maxes_racedAgainst_Beaten_rpr: !Boolean(
+                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_rpr
+                  )
+                    ? true
+                    : Boolean(
+                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_rpr
+                      ) &&
+                      (handicappedStats.handicapped_maxes_racedAgainst_Beaten_rpr ||
+                        0) >=
+                        raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_rpr,
+
+                  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: !Boolean(
+                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Averages_rpr
+                  )
+                    ? true
+                    : Boolean(
+                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_Averages_rpr
+                      ) &&
+                      (handicappedStats.handicapped_maxes_racedAgainst_Beaten_Averages_rpr ||
+                        0) >=
+                        raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
+
+                  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: !Boolean(
+                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr
+                  )
+                    ? true
+                    : Boolean(
+                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_Maxes_rpr
+                      ) &&
+                      (handicappedStats.handicapped_maxes_racedAgainst_Beaten_Maxes_rpr ||
+                        0) >=
+                        raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr,
+
+                  handicapped_averages_racedAgainst_Beaten_rpr: !Boolean(
+                    raceThresholds.race_handicapped_averages_racedAgainst_Beaten_rpr
+                  )
+                    ? true
+                    : Boolean(
+                        handicappedStats.handicapped_averages_racedAgainst_Beaten_rpr
+                      ) &&
+                      (handicappedStats.handicapped_averages_racedAgainst_Beaten_rpr ||
+                        0) >=
+                        raceThresholds.race_handicapped_averages_racedAgainst_Beaten_rpr,
+
+                  handicapped_averages_racedAgainst_Beaten_Averages_rpr:
+                    !Boolean(
+                      raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Averages_rpr
+                    )
+                      ? true
+                      : Boolean(
+                          handicappedStats.handicapped_averages_racedAgainst_Beaten_Averages_rpr
+                        ) &&
+                        (handicappedStats.handicapped_averages_racedAgainst_Beaten_Averages_rpr ||
+                          0) >=
+                          raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Averages_rpr,
+
+                  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: !Boolean(
+                    raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Maxes_rpr
+                  )
+                    ? true
+                    : Boolean(
+                        handicappedStats.handicapped_averages_racedAgainst_Beaten_Maxes_rpr
+                      ) &&
+                      (handicappedStats.handicapped_averages_racedAgainst_Beaten_Maxes_rpr ||
+                        0) >=
+                        raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
+
+                  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr:
+                    !Boolean(
+                      raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr
+                    )
+                      ? true
+                      : Boolean(
+                          handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr
+                        ) &&
+                        (handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr ||
+                          0) >=
+                          raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
+
+                  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr:
+                    !Boolean(
+                      raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr
+                    )
+                      ? true
+                      : Boolean(
+                          handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr
+                        ) &&
+                        (handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr ||
+                          0) >=
+                          raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
                 };
 
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;
@@ -239,6 +469,14 @@ export function Dashboard({
                   race_min_timePerFurlong: 1,
 
                   race_handicapped_rpr: 1,
+                  handicapped_maxes_racedAgainst_Beaten_rpr: 1,
+                  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: 1,
+                  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: 1,
+                  handicapped_averages_racedAgainst_Beaten_rpr: 1,
+                  handicapped_averages_racedAgainst_Beaten_Averages_rpr: 1,
+                  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 1,
+                  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: 1,
+                  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: 1,
 
                   hfa_distance: 1,
                   hfa_goingCode: 1,
@@ -293,6 +531,38 @@ export function Dashboard({
                       ? weights.race_handicapped_rpr
                       : 0,
 
+                    horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_rpr
+                      ? weights.handicapped_maxes_racedAgainst_Beaten_rpr
+                      : 0,
+
+                    horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr
+                      ? weights.handicapped_maxes_racedAgainst_Beaten_Averages_rpr
+                      : 0,
+
+                    horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_Maxes_rpr
+                      ? weights.handicapped_maxes_racedAgainst_Beaten_Maxes_rpr
+                      : 0,
+
+                    horseBetterThanRaceTheshold?.handicapped_averages_racedAgainst_Beaten_rpr
+                      ? weights.handicapped_averages_racedAgainst_Beaten_rpr
+                      : 0,
+
+                    horseBetterThanRaceTheshold?.handicapped_averages_racedAgainst_Beaten_Averages_rpr
+                      ? weights.handicapped_averages_racedAgainst_Beaten_Averages_rpr
+                      : 0,
+
+                    horseBetterThanRaceTheshold?.handicapped_averages_racedAgainst_Beaten_Maxes_rpr
+                      ? weights.handicapped_averages_racedAgainst_Beaten_Maxes_rpr
+                      : 0,
+
+                    horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr
+                      ? weights.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr
+                      : 0,
+
+                    horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr
+                      ? weights.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr
+                      : 0,
+
                     horseFormAveragesStatsGood?.distance
                       ? weights.hfa_distance
                       : 0,
@@ -320,6 +590,13 @@ export function Dashboard({
                   horseFormAveragesStatsGood,
                 };
 
+                console.log(
+                  "horse scoreObj",
+                  horse.name,
+                  scoreObj,
+                  handicappedStats,
+                  raceThresholds
+                );
                 return {
                   ...horse,
                   scoreObj,

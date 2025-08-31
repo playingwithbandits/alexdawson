@@ -98,11 +98,11 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                       horse?.scoreObj?.horseRacedWith?.goingCode,
 
                       horse?.scoreObj?.horseBetterThanRaceTheshold
-                        ?.race_averages_racedAgainst_Beaten_Averages,
+                        ?.handicapped_averages_racedAgainst_Beaten_Averages_rpr,
                       horse?.scoreObj?.horseBetterThanRaceTheshold
-                        ?.race_mostRecentForm_racedAgainst_Beaten_Averages,
+                        ?.handicapped_averages_racedAgainst_Beaten_rpr,
                       horse?.scoreObj?.horseBetterThanRaceTheshold
-                        ?.race_mostRecentForm_racedAgainst_Beaten_Maxes,
+                        ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
                     ];
 
                     const requiredStatsGood = requiredStats.every(
