@@ -25,6 +25,7 @@ export interface Race {
 export interface RaceHorsesInfo {
   averages: {
     race_rpr: number;
+    race_or: number;
     race_min_timePerFurlong: number;
     race_averages_racedAgainst: number;
     race_maxes_racedAgainst: number;
@@ -39,6 +40,7 @@ export interface RaceHorsesInfo {
   };
   maxes: {
     race_rpr: number;
+    race_or: number;
     race_min_timePerFurlong: number;
     race_averages_racedAgainst: number;
     race_maxes_racedAgainst: number;
@@ -56,6 +58,7 @@ export interface RaceHorsesInfo {
   };
   rawData: {
     raw_race_rpr: number[];
+    raw_race_or: number[];
     raw_race_min_timePerFurlong: number[];
     raw_race_averages_racedAgainst: number[];
     raw_race_maxes_racedAgainst: number[];
@@ -85,6 +88,7 @@ export interface ScoreObj {
     race_mostRecentForm_racedAgainst_Beaten_Averages: boolean;
     race_mostRecentForm_racedAgainst_Beaten_Maxes: boolean;
     race_min_timePerFurlong: boolean;
+    race_handicapped_rpr: boolean;
   };
   horseFormAveragesStatsGood: {
     distance: boolean;
@@ -106,10 +110,13 @@ export interface Horse {
   form: FormObj[];
   formInfo: FormInfo;
   rpr: number;
+  or: number;
   scoreObj?: ScoreObj;
   mostRecentForm: FormObj | undefined;
   oddsDecimal: number;
   lastRan: number;
+  handicapBonus?: number;
+  handicappedRpr?: number;
 }
 
 export interface FormInfo {

@@ -34,7 +34,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms > 0.66;
 
-  const scoreToBeBetterThan = 70;
+  const scoreToBeBetterThan = 75;
 
   return {
     raceAvgScore,
@@ -93,6 +93,22 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const racedRecently =
                       horse.scoreObj?.horseRacedWith?.lastRan;
 
+                    const requiredStats = [
+                      horse?.scoreObj?.horseRacedWith?.distance,
+                      horse?.scoreObj?.horseRacedWith?.goingCode,
+
+                      horse?.scoreObj?.horseBetterThanRaceTheshold
+                        ?.race_averages_racedAgainst_Beaten_Averages,
+                      horse?.scoreObj?.horseBetterThanRaceTheshold
+                        ?.race_mostRecentForm_racedAgainst_Beaten_Averages,
+                      horse?.scoreObj?.horseBetterThanRaceTheshold
+                        ?.race_mostRecentForm_racedAgainst_Beaten_Maxes,
+                    ];
+
+                    const requiredStatsGood = requiredStats.every(
+                      (stat) => stat
+                    );
+
                     const oddsGood =
                       horse.oddsDecimal >= 25 &&
                       totalScore >= 50 &&
@@ -106,7 +122,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
                           racedRecently &&
-                          neededOkay
+                          neededOkay &&
+                          requiredStatsGood
                       : racedRecently && neededOkay;
                   })
                   ?.map((horse, index) => {

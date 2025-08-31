@@ -1,7 +1,7 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
-import { compareTwoGoingCodeArrays, distanceOkay } from "@/lib/utils";
+import { compareTwoGoingCodeArrays, distanceOkay, max } from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
 import { useState } from "react";
 import { getRaceToShowStats } from "@/components/raceDays/Race";
@@ -35,10 +35,16 @@ export function Dashboard({
           const { horsesInfo, goingCodes, distanceF, trackId } = race;
           const { maxes: raceMaxes, min: raceMin } = horsesInfo;
 
-          const thresholdValue = 0.95;
+          const raw_handicapped_rpr = race.horses.map(
+            (horse) => horse.handicappedRpr || 0
+          );
+          const maxRaceHandicappedRpr = max(raw_handicapped_rpr);
+
+          const thresholdValue = 0.9;
 
           const raceThresholds = {
             race_rpr: raceMaxes?.race_rpr * thresholdValue,
+            race_or: raceMaxes?.race_or * thresholdValue,
             race_averages_racedAgainst:
               raceMaxes?.race_averages_racedAgainst * thresholdValue,
             race_maxes_racedAgainst:
@@ -65,6 +71,8 @@ export function Dashboard({
               thresholdValue,
 
             race_min_timePerFurlong: raceMin?.race_min_timePerFurlong * 1.1,
+
+            race_handicapped_rpr: maxRaceHandicappedRpr * thresholdValue,
           };
 
           return {
@@ -76,6 +84,9 @@ export function Dashboard({
                   formInfo: horseFormInfo,
                   jockey,
                   form,
+                  or: horseOr,
+                  handicapBonus,
+                  handicappedRpr,
                 } = horse;
 
                 const {
@@ -101,6 +112,7 @@ export function Dashboard({
                   race_mostRecentForm_racedAgainst_Beaten_Averages: boolean;
                   race_mostRecentForm_racedAgainst_Beaten_Maxes: boolean;
                   race_min_timePerFurlong: boolean;
+                  race_handicapped_rpr: boolean;
                 } = {
                   race_rpr:
                     Boolean(horseRpr) && horseRpr >= raceThresholds.race_rpr,
@@ -170,6 +182,14 @@ export function Dashboard({
                     Boolean(horseFormMin?.timePerFurlong) &&
                     horseFormMin.timePerFurlong <=
                       raceThresholds.race_min_timePerFurlong,
+
+                  race_handicapped_rpr: !Boolean(
+                    raceThresholds.race_handicapped_rpr
+                  )
+                    ? true
+                    : Boolean(handicappedRpr) &&
+                      (handicappedRpr || 0) >=
+                        raceThresholds.race_handicapped_rpr,
                 };
 
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;
@@ -218,6 +238,8 @@ export function Dashboard({
                   race_mostRecentForm_racedAgainst_Beaten_Maxes: 1,
                   race_min_timePerFurlong: 1,
 
+                  race_handicapped_rpr: 1,
+
                   hfa_distance: 1,
                   hfa_goingCode: 1,
                   hfa_jockey: 1,
@@ -265,6 +287,10 @@ export function Dashboard({
                       : 0,
                     horseBetterThanRaceTheshold?.race_min_timePerFurlong
                       ? weights.race_min_timePerFurlong
+                      : 0,
+
+                    horseBetterThanRaceTheshold?.race_handicapped_rpr
+                      ? weights.race_handicapped_rpr
                       : 0,
 
                     horseFormAveragesStatsGood?.distance

@@ -129,6 +129,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   <td className="px-4 py-2 ">Beaten Max (Max)</td>
                   <td className="px-4 py-2 ">Recent Form Avgs</td>
                   <td className="px-4 py-2 ">Recent Form Max</td>
+                  <td className="px-4 py-2 ">Handicapped Rpr</td>
                   <td className="px-4 py-2 ">Comment</td>
                 </tr>
               </thead>
@@ -260,6 +261,17 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     {horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr?.toFixed(
                       2
                     )}
+                  </td>
+
+                  <td
+                    className={twMerge(
+                      "px-4 py-2 ",
+                      horseBetterThanRaceTheshold?.race_handicapped_rpr &&
+                        "text-yellow-400"
+                    )}
+                  >
+                    {horse.handicappedRpr?.toFixed(2)} ({horse.rpr} +{" "}
+                    {horse.handicapBonus})
                   </td>
 
                   <td className="px-4 py-2 ">

@@ -44,6 +44,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const name = oldHorse?.name || "-";
         const jockey = oldHorse?.jockey?.name || "-";
         const rpr = parseInt(oldHorse?.rating || "0", 10);
+        const or = parseInt(oldHorse?.officialRating || "0", 10);
 
         const removedWrongRaceTypes = (
           oldHorse.allValidFormRowsStatsDataStats?.raw || []
@@ -316,6 +317,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           jockey,
           name,
           rpr,
+          or,
           mostRecentForm,
           oddsDecimal:
             bettingForecast?.find(
@@ -402,8 +404,12 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           )
           .filter(Boolean) || [];
 
+      const raw_race_or =
+        horses?.map((horse) => horse.or || 0).filter(Boolean) || [];
+
       const raw_race_data = {
         raw_race_rpr,
+        raw_race_or,
         raw_race_min_timePerFurlong,
         raw_race_averages_racedAgainst,
         raw_race_maxes_racedAgainst,
@@ -419,6 +425,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
 
       const raw_race_data_avg = {
         race_rpr: avg(raw_race_data.raw_race_rpr),
+        race_or: avg(raw_race_data.raw_race_or),
         race_min_timePerFurlong: avg(raw_race_data.raw_race_min_timePerFurlong),
         race_averages_racedAgainst: avg(
           raw_race_data.raw_race_averages_racedAgainst
@@ -452,6 +459,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
 
       const raw_race_data_maxes = {
         race_rpr: max(raw_race_data.raw_race_rpr),
+        race_or: max(raw_race_data.raw_race_or),
         race_min_timePerFurlong: max(raw_race_data.raw_race_min_timePerFurlong),
         race_averages_racedAgainst: max(
           raw_race_data.raw_race_averages_racedAgainst
@@ -503,7 +511,18 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         raceTypeCode,
         time,
         title,
-        horses,
+        horses: horses.map((horse) => {
+          const { or: horseOr } = horse;
+          const maxRaceOr = horsesInfo.maxes.race_or;
+
+          const handicapBonus = horseOr && maxRaceOr ? maxRaceOr - horseOr : 0;
+
+          return {
+            ...horse,
+            handicapBonus,
+            handicappedRpr: horseOr + handicapBonus,
+          };
+        }),
       };
       return race;
     });
