@@ -512,7 +512,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         time,
         title,
         horses: horses.map((horse) => {
-          const { or: horseOr } = horse;
+          const { or: horseOr, rpr: horseRpr } = horse;
           const maxRaceOr = horsesInfo.maxes.race_or;
 
           const handicapBonus = horseOr && maxRaceOr ? maxRaceOr - horseOr : 0;
@@ -520,7 +520,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           return {
             ...horse,
             handicapBonus,
-            handicappedRpr: horseOr + handicapBonus,
+            handicappedRpr: horseRpr + handicapBonus,
           };
         }),
       };
