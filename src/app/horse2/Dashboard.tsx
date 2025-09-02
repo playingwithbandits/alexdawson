@@ -4,8 +4,42 @@ import { horseNameToKey } from "@/lib/racing/scores/funcs";
 import { compareTwoGoingCodeArrays, distanceOkay, max } from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
 import { useState } from "react";
-import { getRaceToShowStats } from "@/components/raceDays/Race";
+import {
+  getRaceToShowStats,
+  horseHasRequiredStats,
+} from "@/components/raceDays/Race";
 import { normalizeTime } from "@/components/horse/DayPredictions";
+
+const weights = {
+  race_rpr: 190,
+  race_maxes_racedAgainst: 80,
+  race_maxes_racedAgainst_Beaten: 119,
+  race_mostRecentForm_racedAgainst_Beaten_Averages: 59,
+  race_mostRecentForm_racedAgainst_Beaten_Maxes: 82,
+  race_min_timePerFurlong: 167,
+  race_handicapped_rpr: 101,
+  handicapped_maxes_racedAgainst_Beaten_rpr: 117,
+  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: 117,
+  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 97,
+  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: 72,
+  hfa_distance: 157,
+  hfa_goingCode: 144,
+  hfa_jockey: 94,
+  hrw_jockey: 120,
+  hrw_goingCode: 154,
+  hrw_lastRan: 185,
+  hrw_distance: 183,
+  race_averages_racedAgainst: 70,
+  race_averages_racedAgainst_Averages: 77,
+  race_maxes_racedAgainst_Averages: 65,
+  race_averages_racedAgainst_Beaten: 79,
+  race_averages_racedAgainst_Beaten_Averages: 78,
+  race_maxes_racedAgainst_Beaten_Averages: 74,
+  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: 74,
+  handicapped_averages_racedAgainst_Beaten_rpr: 76,
+  handicapped_averages_racedAgainst_Beaten_Averages_rpr: 74,
+  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: 55,
+};
 
 export function Dashboard({
   data,
@@ -454,40 +488,6 @@ export function Dashboard({
                     .some((x) => x),
                 };
 
-                const weights = {
-                  race_rpr: 1,
-                  race_averages_racedAgainst: 1,
-                  race_maxes_racedAgainst: 1,
-                  race_averages_racedAgainst_Averages: 1,
-                  race_maxes_racedAgainst_Averages: 1,
-                  race_averages_racedAgainst_Beaten: 1,
-                  race_maxes_racedAgainst_Beaten: 1,
-                  race_averages_racedAgainst_Beaten_Averages: 1,
-                  race_maxes_racedAgainst_Beaten_Averages: 1,
-                  race_mostRecentForm_racedAgainst_Beaten_Averages: 1,
-                  race_mostRecentForm_racedAgainst_Beaten_Maxes: 1,
-                  race_min_timePerFurlong: 1,
-
-                  race_handicapped_rpr: 1,
-                  handicapped_maxes_racedAgainst_Beaten_rpr: 1,
-                  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: 1,
-                  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: 1,
-                  handicapped_averages_racedAgainst_Beaten_rpr: 1,
-                  handicapped_averages_racedAgainst_Beaten_Averages_rpr: 1,
-                  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 1,
-                  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: 1,
-                  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: 1,
-
-                  hfa_distance: 1,
-                  hfa_goingCode: 1,
-                  hfa_jockey: 1,
-
-                  hrw_jockey: 1,
-                  hrw_goingCode: 1,
-                  hrw_lastRan: 1,
-                  hrw_distance: 1,
-                };
-
                 const total =
                   [
                     horseBetterThanRaceTheshold?.race_rpr
@@ -613,6 +613,165 @@ export function Dashboard({
 
   console.log("dataWithScoreObj", dataWithScoreObj);
 
+  if (results) {
+    console.log("🏇 Results found", results);
+
+    const resultsArrScoreObjs = results.results?.map((result) => {
+      const matchingRaceHorses = dataWithScoreObj
+        .flatMap(
+          (meeting) =>
+            meeting.races.find(
+              (race) => normalizeTime(race.time) === normalizeTime(result.time)
+            )?.horses
+        )
+        .filter((x) => x);
+
+      const matchingWinner =
+        matchingRaceHorses &&
+        matchingRaceHorses?.find(
+          (horse) =>
+            horse &&
+            horseNameToKey(horse.name) === horseNameToKey(result.winner.name)
+        );
+
+      const matchingPlacedHorses =
+        matchingRaceHorses &&
+        matchingRaceHorses?.filter(
+          (horse) =>
+            horse &&
+            result.placedHorses.find(
+              (placedHorse) =>
+                horseNameToKey(placedHorse.name) === horseNameToKey(horse.name)
+            )
+        );
+
+      const matchingWinnerScoreObj = matchingWinner?.scoreObj;
+      const matchingPlacedScoreObjs = matchingPlacedHorses
+        ?.map((horse) => horse?.scoreObj)
+        .filter((x) => x);
+
+      // Create weighted score object combining winner and placed horses
+      const combinedScoreObj: Record<string, number> = {};
+
+      // Add winner scores with 5x weight
+      if (matchingWinnerScoreObj) {
+        Object.entries(
+          matchingWinnerScoreObj.horseBetterThanRaceTheshold
+        ).forEach(([key, value]) => {
+          const newKey = key;
+          if (value === true) {
+            combinedScoreObj[newKey] = (combinedScoreObj[newKey] || 0) + 5;
+          }
+        });
+        Object.entries(
+          matchingWinnerScoreObj.horseFormAveragesStatsGood
+        ).forEach(([key, value]) => {
+          const newKey = `hfa_${key}`;
+          if (value === true) {
+            combinedScoreObj[newKey] = (combinedScoreObj[newKey] || 0) + 5;
+          }
+        });
+        Object.entries(matchingWinnerScoreObj.horseRacedWith).forEach(
+          ([key, value]) => {
+            const newKey = `hrw_${key}`;
+            if (value === true) {
+              combinedScoreObj[newKey] = (combinedScoreObj[newKey] || 0) + 5;
+            }
+          }
+        );
+      }
+
+      // Add placed horses scores with 1x weight
+      if (matchingPlacedScoreObjs?.length) {
+        matchingPlacedScoreObjs.forEach((scoreObj) => {
+          if (scoreObj) {
+            // Add null check
+            Object.entries(scoreObj.horseBetterThanRaceTheshold).forEach(
+              ([key, value]) => {
+                const newKey = key;
+                if (value === true) {
+                  combinedScoreObj[newKey] =
+                    (combinedScoreObj[newKey] || 0) + 1;
+                }
+              }
+            );
+            Object.entries(scoreObj.horseFormAveragesStatsGood).forEach(
+              ([key, value]) => {
+                const newKey = `hfa_${key}`;
+                if (value === true) {
+                  combinedScoreObj[newKey] =
+                    (combinedScoreObj[newKey] || 0) + 1;
+                }
+              }
+            );
+            Object.entries(scoreObj.horseRacedWith).forEach(([key, value]) => {
+              const newKey = `hrw_${key}`;
+              if (value === true) {
+                combinedScoreObj[newKey] = (combinedScoreObj[newKey] || 0) + 1;
+              }
+            });
+          }
+        });
+      }
+
+      console.log("🏇 Combined score object loop", {
+        matchingWinner,
+        matchingPlacedHorses,
+        matchingWinnerScoreObj,
+        matchingPlacedScoreObjs,
+        combinedScoreObj,
+      });
+
+      return combinedScoreObj;
+    });
+
+    resultsArrScoreObjs?.push(weights);
+
+    const combinedResults = resultsArrScoreObjs.reduce((acc, scoreObj) => {
+      Object.entries(scoreObj).forEach(([key, value]) => {
+        acc[key] = (acc[key] || 0) + value;
+      });
+      return acc;
+    }, {} as Record<string, number>);
+
+    const highestScore = Object.values(combinedResults).reduce(
+      (a, b) => (a > b ? a : b),
+      0
+    );
+
+    const combinedResultsPercentage = Object.entries(combinedResults).map(
+      ([key, value]) => {
+        return {
+          [key]: (value / highestScore) * 100,
+        };
+      }
+    );
+
+    const combinedResultsPercentageGroups = {
+      low: combinedResultsPercentage.filter(
+        (item) => Object.values(item)[0] < 25
+      ),
+      midLow: combinedResultsPercentage.filter(
+        (item) => Object.values(item)[0] >= 25 && Object.values(item)[0] < 50
+      ),
+      medium: combinedResultsPercentage.filter(
+        (item) => Object.values(item)[0] >= 50 && Object.values(item)[0] < 75
+      ),
+      high: combinedResultsPercentage.filter(
+        (item) => Object.values(item)[0] >= 75
+      ),
+    };
+
+    console.log("🏇 NEW WEIGHT OBJECT", combinedResults);
+
+    console.log("🏇 Combined score object  Results array", {
+      resultsArrScoreObjs,
+      combinedResults,
+      combinedResultsPercentage,
+      combinedResultsPercentageGroups,
+    });
+  }
+
   return (
     <div className="space-y-4 p-4 bg-gray-900 min-h-screen">
       <div className="flex items-center justify-between mb-6">
@@ -634,11 +793,13 @@ export function Dashboard({
               scoreToBeBetterThan,
             } = getRaceToShowStats(race);
 
-            const someHorseHasMaxScore = race.horses.some(
-              (horse) =>
+            const someHorseHasMaxScore = race.horses.some((horse) => {
+              const requiredStatsGood = horseHasRequiredStats(horse);
+              return (
                 (horse.scoreObj?.total || 0) >= scoreToBeBetterThan &&
-                horse.scoreObj?.horseRacedWith?.lastRan
-            );
+                requiredStatsGood
+              );
+            });
 
             const raceHasFinsihed =
               date === new Date().toISOString().split("T")[0] &&

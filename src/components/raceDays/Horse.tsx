@@ -280,6 +280,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   <td className={twMerge("px-4 py-2 ")}>
                     {horse.or} | {horse.handicapBonus}
                   </td>
+
                   {/* 
                   <td
                     className={twMerge(

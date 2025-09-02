@@ -3,12 +3,13 @@
 import { Meeting } from "@/types/raceday";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
+import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 import { Dashboard } from "../Dashboard";
 import { IRISH_COURSES, UK_COURSES } from "@/types/courses";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { oldMeetingsToNewMeetings } from "@/app/rp/utils/Aug25/oldMeetingsToNewMeetings";
 import { useResults } from "@/hooks/useResults";
+import { normalizeTime } from "@/components/horse/DayPredictions";
 
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;

@@ -103,8 +103,8 @@ const aw_med = ["st", "stf", "stsl"];
 const aw_slow = ["s", "sl", "slw", "stsl"];
 
 const turf_fast = ["gf", "fm", "g", "gd"];
-const turf_med = ["g", "gd", "gs"];
-const turf_slow = ["y", "sft", "vsft"];
+const turf_med = ["g", "gd", "gs", "gy"];
+const turf_slow = ["y", "gs", "gy", "sft", "vsft"];
 const turf_v_slow = ["hy", "hvy"];
 
 const goingCodeToArrayOfSimilarGoingcodes = (goingCode: string): string[] => {

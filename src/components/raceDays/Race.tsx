@@ -4,11 +4,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Meeting as MeetingType, Race as RaceType } from "@/types/raceday";
+import {
+  Horse as HorseType,
+  Meeting as MeetingType,
+  Race as RaceType,
+} from "@/types/raceday";
 import { RaceResults } from "@/types/racing";
-import { Horse } from "./Horse";
 import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
 import { normalizeTime } from "../horse/DayPredictions";
+import { Horse } from "./Horse";
 
 interface RaceProps {
   race: RaceType;
@@ -18,6 +22,22 @@ interface RaceProps {
   date: string;
 }
 
+export const horseHasRequiredStats = (horse: HorseType) => {
+  const requiredStats = [
+    horse.scoreObj?.horseRacedWith?.lastRan,
+    horse?.scoreObj?.horseRacedWith?.distance,
+    horse?.scoreObj?.horseRacedWith?.goingCode,
+
+    horse?.scoreObj?.horseBetterThanRaceTheshold
+      ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
+    horse?.scoreObj?.horseBetterThanRaceTheshold
+      ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+  ];
+
+  const requiredStatsGood = requiredStats.every((stat) => stat);
+  return requiredStatsGood;
+};
+
 export const getRaceToShowStats = (race: RaceType) => {
   const raceAvgScore =
     race.horses
@@ -26,7 +46,7 @@ export const getRaceToShowStats = (race: RaceType) => {
       .slice(1, 4)
       .reduce((acc, score) => acc + score, 0) / 3;
 
-  const maxScore = 80;
+  const maxScore = 90;
   const horsesInRace = race.horses.length;
   const horsesInRaceWithForms = race.horses.filter(
     (horse) => horse.form.length > 2
@@ -34,7 +54,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms > 0.66;
 
-  const scoreToBeBetterThan = 75;
+  const scoreToBeBetterThan = 80;
 
   return {
     raceAvgScore,
@@ -93,25 +113,11 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const racedRecently =
                       horse.scoreObj?.horseRacedWith?.lastRan;
 
-                    const requiredStats = [
-                      horse?.scoreObj?.horseRacedWith?.distance,
-                      horse?.scoreObj?.horseRacedWith?.goingCode,
-
-                      horse?.scoreObj?.horseBetterThanRaceTheshold
-                        ?.handicapped_averages_racedAgainst_Beaten_Averages_rpr,
-                      horse?.scoreObj?.horseBetterThanRaceTheshold
-                        ?.handicapped_averages_racedAgainst_Beaten_rpr,
-                      horse?.scoreObj?.horseBetterThanRaceTheshold
-                        ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
-                    ];
-
-                    const requiredStatsGood = requiredStats.every(
-                      (stat) => stat
-                    );
+                    const requiredStatsGood = horseHasRequiredStats(horse);
 
                     const oddsGood =
                       horse.oddsDecimal >= 25 &&
-                      totalScore >= 50 &&
+                      totalScore >= 60 &&
                       gapToAvgScore > 5;
 
                     const neededOkay = [scoreGood, oddsGood].some(
@@ -121,7 +127,6 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     return showInfo
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
-                          racedRecently &&
                           neededOkay &&
                           requiredStatsGood
                       : racedRecently && neededOkay;
