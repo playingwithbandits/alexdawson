@@ -787,7 +787,8 @@ export function Dashboard({
             const {
               raceAvgScore,
               maxScore,
-              ratioWithFormsGood,ratioWithHorsesAbove2YearsOldGood
+              ratioWithFormsGood,
+              ratioWithHorsesAbove2YearsOldGood,
               scoreToBeBetterThan,
             } = getRaceToShowStats(race);
 
@@ -803,7 +804,10 @@ export function Dashboard({
               ).getTime() < new Date().getTime();
 
             return (
-              ratioWithFormsGood && ratioWithHorsesAbove2YearsOldGood && someHorseHasMaxScore && !raceHasFinsihed
+              ratioWithFormsGood &&
+              ratioWithHorsesAbove2YearsOldGood &&
+              someHorseHasMaxScore &&
+              !raceHasFinsihed
             );
           });
 
