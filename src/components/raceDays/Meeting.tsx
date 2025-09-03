@@ -1,8 +1,9 @@
 import { Meeting as MeetingType } from "@/types/raceday";
 
-import { getRaceToShowStats, horseHasRequiredStats, Race } from "./Race";
+import { getRaceToShowStats, Race } from "./Race";
 import { RaceResults } from "@/types/racing";
 import { normalizeTime } from "../horse/DayPredictions";
+import { horseHasRequiredStats } from "./Horse";
 
 interface MeetingProps {
   meeting: MeetingType;
@@ -25,10 +26,7 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
 
             const raceHasHorseScoreMax = x.horses.some((horse) => {
               const requiredStatsGood = horseHasRequiredStats(horse);
-              return (
-                (horse.scoreObj?.total || 0) >= scoreToBeBetterThan &&
-                requiredStatsGood
-              );
+              return requiredStatsGood;
             });
 
             const raceHasFinsihed =

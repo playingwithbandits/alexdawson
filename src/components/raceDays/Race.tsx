@@ -4,15 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Horse as HorseType,
-  Meeting as MeetingType,
-  Race as RaceType,
-} from "@/types/raceday";
+import { Meeting as MeetingType, Race as RaceType } from "@/types/raceday";
 import { RaceResults } from "@/types/racing";
 import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
 import { normalizeTime } from "../horse/DayPredictions";
-import { Horse } from "./Horse";
+import { Horse, horseHasRequiredStats } from "./Horse";
+import { twMerge } from "tailwind-merge";
+import { countCommentSentimentObj } from "@/lib/utils";
 
 interface RaceProps {
   race: RaceType;
@@ -21,22 +19,6 @@ interface RaceProps {
   showInfo: boolean;
   date: string;
 }
-
-export const horseHasRequiredStats = (horse: HorseType) => {
-  const requiredStats = [
-    horse.scoreObj?.horseRacedWith?.lastRan,
-    horse?.scoreObj?.horseRacedWith?.distance,
-    horse?.scoreObj?.horseRacedWith?.goingCode,
-
-    horse?.scoreObj?.horseBetterThanRaceTheshold
-      ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
-    horse?.scoreObj?.horseBetterThanRaceTheshold
-      ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-  ];
-
-  const requiredStatsGood = requiredStats.every((stat) => stat);
-  return requiredStatsGood;
-};
 
 export const getRaceToShowStats = (race: RaceType) => {
   const raceAvgScore =
@@ -106,30 +88,12 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   //     (horse.scoreObj?.total || 0) >= 10
                   // )
                   .filter((horse) => {
-                    const totalScore = horse.scoreObj?.total ?? 0;
-                    const gapToAvgScore = totalScore - raceAvgScore;
-                    const scoreGood = totalScore >= scoreToBeBetterThan;
-
-                    const racedRecently =
-                      horse.scoreObj?.horseRacedWith?.lastRan;
-
                     const requiredStatsGood = horseHasRequiredStats(horse);
-
-                    const oddsGood =
-                      horse.oddsDecimal >= 25 &&
-                      totalScore >= 60 &&
-                      gapToAvgScore > 5;
-
-                    const neededOkay = [scoreGood, oddsGood].some(
-                      (value) => value
-                    );
-
                     return showInfo
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
-                          neededOkay &&
                           requiredStatsGood
-                      : racedRecently && neededOkay;
+                      : true;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =
@@ -142,33 +106,55 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     );
                     const horseTrophy = getTrophy(horsePos);
 
+                    const anyFormsHaveEyecatcher = horse.form?.some(
+                      (form) => form.commentMatchedTerms?.eyecatcher?.length > 0
+                    );
+
+                    const lastRaceWasHampered =
+                      horse?.mostRecentForm &&
+                      horse?.mostRecentForm?.commentMatchedTerms?.hampered
+                        ?.length > 0;
+
+                    const countCommentSentiment =
+                      horse?.mostRecentForm &&
+                      countCommentSentimentObj(
+                        horse?.mostRecentForm?.commentMatchedTerms
+                      );
+                    const lastRaceWasBad =
+                      countCommentSentiment?.score &&
+                      countCommentSentiment?.score < 0;
                     return (
                       <span
                         key={horse.id + index}
                         className="flex items-center gap-1"
                       >
                         <span
-                          className={`px-2 py-1 text-sm  rounded-full ${
-                            ratioWithFormsGood
-                              ? (horse.scoreObj?.total || 0) >= maxScore
-                                ? "bg-yellow-500 text-black"
-                                : gapToAvgScore > 15
-                                ? "bg-blue-400 text-black"
-                                : horse?.oddsDecimal >= 15
-                                ? "bg-gray-300 text-black"
-                                : "bg-blue-900"
-                              : "bg-red-900 opacity-40"
-                          } ${
-                            horse.oddsDecimal >= 15
-                              ? "border-2 border-gray-300"
-                              : ""
-                          }`}
+                          className={twMerge(
+                            `px-2 py-1 text-sm  rounded-full ${
+                              ratioWithFormsGood
+                                ? (horse.scoreObj?.total || 0) >= maxScore
+                                  ? "bg-yellow-500 text-black"
+                                  : gapToAvgScore > 15
+                                  ? "bg-blue-400 text-black"
+                                  : horse?.oddsDecimal >= 15
+                                  ? "bg-gray-300 text-black"
+                                  : "bg-blue-900"
+                                : "bg-red-900 opacity-40"
+                            } ${
+                              horse.oddsDecimal >= 10
+                                ? "border-2 border-gray-300"
+                                : ""
+                            }`
+                          )}
                           title={`${horse.name} ${horse.scoreObj?.total}`}
                         >
                           {horse.name} {horse.scoreObj?.total?.toFixed(1)} (
                           {gapToAvgScore > 0 ? "+" : ""}
                           {gapToAvgScore.toFixed(1)}){" "}
-                          {horse.oddsDecimal > 0 ? horse.oddsDecimal : ""}
+                          {horse.oddsDecimal > 0 ? horse.oddsDecimal : ""}{" "}
+                          {lastRaceWasHampered ? "⚠️" : ""}
+                          {anyFormsHaveEyecatcher ? "⭐" : ""}
+                          {lastRaceWasBad ? "❌" : ""}
                         </span>
                         {horseTrophy}
                       </span>

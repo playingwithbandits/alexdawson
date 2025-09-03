@@ -268,6 +268,7 @@ const HAMPERED_TERMS = [
   "blocked",
   "not clear",
   "no clear",
+  "interfered",
   "interference",
   "intereference",
   "interreference",
@@ -307,6 +308,9 @@ const HAMPERED_TERMS = [
   "unlucky",
   "did well",
   "denied",
+
+  "unsuited",
+  "unsuitable",
 ];
 
 const POSITIVE_TERMS = [
@@ -314,7 +318,6 @@ const POSITIVE_TERMS = [
   "impressive",
   "strong",
   "well",
-  "good",
   "promising",
   "improved",
   "progressive",
@@ -340,7 +343,6 @@ const POSITIVE_TERMS = [
   "readily",
   "going best",
   "going easily",
-  "ran on well",
   "comfortably",
   "eyecatcher",
   "rallied",
@@ -389,14 +391,12 @@ const POSITIVE_TERMS = [
 ];
 
 const NEGATIVE_TERMS = [
-  "weakening",
   "no extra",
   "never better",
   "never dangerous",
   "found little",
   "no improvement",
   "no impression",
-  "weakened",
   "no chance",
   "hung",
   "weak",
@@ -408,7 +408,6 @@ const NEGATIVE_TERMS = [
   "faded",
   "tired",
   "outpaced",
-  "never",
   "tailed",
   "labored",
   "failed",
@@ -457,7 +456,6 @@ const NEGATIVE_TERMS = [
   "emptied",
   "exhausted",
   "spent",
-  "heavy",
   "plodded",
 
   // Additional terms
@@ -465,19 +463,14 @@ const NEGATIVE_TERMS = [
   "awkwardly",
   "stone bruise",
   "off feed",
-  "ran green",
-  "respiratory noise",
-  "hung right",
-  "hung left",
+  "green",
+  "noise",
   "reared",
   "slowly away",
-  "visibility reduced",
   "struggling",
   "carried head",
   "pecked",
   "sprawled",
-  "unsuitable ground",
-  "dropped to rear",
   "not reach leaders",
   "not near to challenge",
   "not pace to challenge",

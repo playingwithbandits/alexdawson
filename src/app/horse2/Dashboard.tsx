@@ -4,41 +4,39 @@ import { horseNameToKey } from "@/lib/racing/scores/funcs";
 import { compareTwoGoingCodeArrays, distanceOkay, max } from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
 import { useState } from "react";
-import {
-  getRaceToShowStats,
-  horseHasRequiredStats,
-} from "@/components/raceDays/Race";
+import { getRaceToShowStats } from "@/components/raceDays/Race";
 import { normalizeTime } from "@/components/horse/DayPredictions";
+import { horseHasRequiredStats } from "@/components/raceDays/Horse";
 
 const weights = {
-  race_rpr: 190,
-  race_maxes_racedAgainst: 80,
-  race_maxes_racedAgainst_Beaten: 119,
-  race_mostRecentForm_racedAgainst_Beaten_Averages: 59,
-  race_mostRecentForm_racedAgainst_Beaten_Maxes: 82,
-  race_min_timePerFurlong: 167,
-  race_handicapped_rpr: 101,
-  handicapped_maxes_racedAgainst_Beaten_rpr: 117,
-  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: 117,
-  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 97,
-  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: 72,
-  hfa_distance: 157,
-  hfa_goingCode: 144,
-  hfa_jockey: 94,
-  hrw_jockey: 120,
-  hrw_goingCode: 154,
-  hrw_lastRan: 185,
-  hrw_distance: 183,
-  race_averages_racedAgainst: 70,
-  race_averages_racedAgainst_Averages: 77,
-  race_maxes_racedAgainst_Averages: 65,
-  race_averages_racedAgainst_Beaten: 79,
-  race_averages_racedAgainst_Beaten_Averages: 78,
-  race_maxes_racedAgainst_Beaten_Averages: 74,
-  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: 74,
-  handicapped_averages_racedAgainst_Beaten_rpr: 76,
-  handicapped_averages_racedAgainst_Beaten_Averages_rpr: 74,
-  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: 55,
+  race_rpr: 395,
+  race_averages_racedAgainst_Averages: 199,
+  race_maxes_racedAgainst_Averages: 197,
+  race_averages_racedAgainst_Beaten: 188,
+  race_maxes_racedAgainst_Beaten: 268,
+  race_maxes_racedAgainst_Beaten_Averages: 191,
+  race_mostRecentForm_racedAgainst_Beaten_Averages: 145,
+  race_mostRecentForm_racedAgainst_Beaten_Maxes: 197,
+  race_min_timePerFurlong: 395,
+  handicapped_maxes_racedAgainst_Beaten_rpr: 241,
+  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: 199,
+  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: 241,
+  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: 137,
+  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: 177,
+  hfa_distance: 346,
+  hfa_goingCode: 327,
+  hrw_goingCode: 375,
+  hrw_lastRan: 385,
+  hrw_distance: 407,
+  race_handicapped_rpr: 214,
+  handicapped_averages_racedAgainst_Beaten_rpr: 171,
+  handicapped_averages_racedAgainst_Beaten_Averages_rpr: 175,
+  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 218,
+  hfa_jockey: 208,
+  hrw_jockey: 257,
+  race_maxes_racedAgainst: 208,
+  race_averages_racedAgainst: 191,
+  race_averages_racedAgainst_Beaten_Averages: 174,
 };
 
 export function Dashboard({
@@ -795,10 +793,7 @@ export function Dashboard({
 
             const someHorseHasMaxScore = race.horses.some((horse) => {
               const requiredStatsGood = horseHasRequiredStats(horse);
-              return (
-                (horse.scoreObj?.total || 0) >= scoreToBeBetterThan &&
-                requiredStatsGood
-              );
+              return requiredStatsGood;
             });
 
             const raceHasFinsihed =
