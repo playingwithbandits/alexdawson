@@ -116,6 +116,7 @@ export interface Horse {
   id: string;
   name: string;
   jockey: string;
+  age: number;
   form: FormObj[];
   formInfo: FormInfo;
   rpr: number;

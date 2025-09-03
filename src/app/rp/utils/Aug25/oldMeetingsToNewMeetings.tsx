@@ -45,6 +45,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const jockey = oldHorse?.jockey?.name || "-";
         const rpr = parseInt(oldHorse?.rating || "0", 10);
         const or = parseInt(oldHorse?.officialRating || "0", 10);
+        const age = parseInt(oldHorse?.age || "0", 10);
 
         const removedWrongRaceTypes = (
           oldHorse.allValidFormRowsStatsDataStats?.raw || []
@@ -311,6 +312,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           : 0;
 
         const horse: Horse = {
+          age,
           form,
           formInfo,
           id,

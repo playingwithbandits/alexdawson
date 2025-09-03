@@ -38,11 +38,19 @@ export const getRaceToShowStats = (race: RaceType) => {
 
   const scoreToBeBetterThan = 80;
 
+  const horsesInRaceAbove2YearsOld = race.horses.filter(
+    (horse) => horse.age > 2
+  ).length;
+  const ratioWithHorsesAbove2YearsOld =
+    horsesInRaceAbove2YearsOld / horsesInRace;
+  const ratioWithHorsesAbove2YearsOldGood = ratioWithHorsesAbove2YearsOld > 0.8;
+
   return {
     raceAvgScore,
     maxScore,
     horsesInRace,
     horsesInRaceWithForms,
+    ratioWithHorsesAbove2YearsOldGood,
     ratioWithForms,
     ratioWithFormsGood,
     scoreToBeBetterThan,
@@ -52,8 +60,13 @@ export const getRaceToShowStats = (race: RaceType) => {
 export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
   // Calculate
 
-  const { raceAvgScore, maxScore, ratioWithFormsGood, scoreToBeBetterThan } =
-    getRaceToShowStats(race);
+  const {
+    raceAvgScore,
+    maxScore,
+    ratioWithFormsGood,
+    scoreToBeBetterThan,
+    ratioWithHorsesAbove2YearsOldGood,
+  } = getRaceToShowStats(race);
 
   // const betterThanLowLevel = 7;
   // const maxScoreThreshold = maxScore * 0.8;
@@ -92,6 +105,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     return showInfo
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
+                          ratioWithHorsesAbove2YearsOldGood &&
                           requiredStatsGood
                       : true;
                   })
@@ -131,7 +145,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                         <span
                           className={twMerge(
                             `px-2 py-1 text-sm  rounded-full ${
-                              ratioWithFormsGood
+                              ratioWithFormsGood &&
+                              ratioWithHorsesAbove2YearsOldGood
                                 ? (horse.scoreObj?.total || 0) >= maxScore
                                   ? "bg-yellow-500 text-black"
                                   : gapToAvgScore > 15

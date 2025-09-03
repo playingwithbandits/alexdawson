@@ -39,11 +39,11 @@ export const getWarningMessage = (horse: HorseType) => {
   const requiredStats = [
     {
       value: lastRaceWasGood,
-      name: "Awful comment for last race",
+      name: "Bad comment for last race",
     },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
-      name: "Ran too long ago",
+      name: "Long time since last ran",
     },
     {
       value: horse?.scoreObj?.horseRacedWith?.distance,
@@ -67,19 +67,19 @@ export const getWarningMessage = (horse: HorseType) => {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
           ?.handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
-      name: "Out of all the races, average rpr is low",
+      name: "Average form beaten rpr is low",
     },
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
           ?.handicapped_maxes_racedAgainst_Beaten_rpr,
-      name: "Out of all the races, max rpr is low",
+      name: "Max form beaten rpr is low",
     },
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
           ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-      name: "Last race wan't good",
+      name: "Last race had bad max rpr",
     },
   ];
 
