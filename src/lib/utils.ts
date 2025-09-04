@@ -127,16 +127,11 @@ export const compareTwoGoingCodeArrays = (
   const goingCodes1Remapped = goingCodes1.map(
     goingCodeToArrayOfSimilarGoingcodes
   );
-  const goingCodes2Remapped = goingCodes2.map(
-    goingCodeToArrayOfSimilarGoingcodes
-  );
 
   const goingCodes1Set = Array.from(
     new Set(goingCodes1Remapped.flatMap((x) => x))
   );
-  const goingCodes2Set = Array.from(
-    new Set(goingCodes2Remapped.flatMap((x) => x))
-  );
+  const goingCodes2Set = Array.from(new Set(goingCodes2.flatMap((x) => x)));
 
   return goingCodes1Set
     .map((input) => goingCodes2Set.includes(input))
@@ -241,7 +236,14 @@ export const distanceOkay = (
   const raceDistanceF = raceDistance || 0;
   const horseAvgDistanceF = horsesAverageDistanceRanOver || 0;
 
-  const maxThresholdAdd = raceDistanceF < 8 ? 1 : raceDistanceF < 21 ? 2 : 3;
+  const maxThresholdAdd =
+    raceDistanceF < 8
+      ? 1.5
+      : raceDistanceF < 20
+      ? 2.5
+      : raceDistanceF < 27
+      ? 3.5
+      : 10;
   const minThresholdAdd =
     raceDistanceF < 7
       ? 0.33

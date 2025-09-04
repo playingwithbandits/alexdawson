@@ -1,15 +1,11 @@
-import {
-  analyseSentimentFromComment,
-  countCommentSentimentObj,
-} from "@/lib/utils";
+import { countCommentSentimentObj } from "@/lib/utils";
 import {
   FormObj,
   Horse as HorseType,
   Race as RaceType,
   Meeting as MeetingType,
 } from "@/types/raceday";
-import { time } from "console";
-import { twMerge } from "tailwind-merge";
+import { JSX } from "react";
 
 interface FormProps {
   form: FormObj;
@@ -18,24 +14,17 @@ interface FormProps {
   meeting: MeetingType;
 }
 
-export function FormRow({ form, horse, race, meeting }: FormProps) {
-  const { trackId } = meeting;
-  const { goingCodes, distanceF, raceTypeCode, raceClass } = race;
-
+export function FormRow({ form, horse }: FormProps) {
   const {
     distanceF: formDistanceF,
     goingCodes: formGoingCodes,
-    id,
     jockey,
-    raceClass: formRaceClass,
     raceTypeCode: formRaceRaceCode,
     racedAgainstInfo,
     racedAgainstRaw,
-    racedAgainst_Beaten,
     racedAgainst_BeatenInfo,
     rpr,
     timePerFurlong,
-    totalRaceTime,
     trackId: formTrackId,
     raceDate,
     position,

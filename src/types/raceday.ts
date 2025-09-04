@@ -110,6 +110,11 @@ export interface ScoreObj {
     lastRan: boolean;
     distance: boolean;
   };
+  horseMostRecentForm: {
+    type: boolean;
+    distance: boolean;
+    going: boolean;
+  };
 }
 
 export interface Horse {

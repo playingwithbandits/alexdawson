@@ -8,35 +8,69 @@ import { getRaceToShowStats } from "@/components/raceDays/Race";
 import { normalizeTime } from "@/components/horse/DayPredictions";
 import { horseHasRequiredStats } from "@/components/raceDays/Horse";
 
+// race_rpr: 184,
+// race_maxes_racedAgainst: 114,
+// race_min_timePerFurlong: 190,
+// race_handicapped_rpr: 140,
+// handicapped_maxes_racedAgainst_Beaten_rpr: 140,
+// handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: 140,
+// handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: 76,
+// handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: 121,
+// hfa_distance: 162,
+// hrw_goingCode: 145,
+// hrw_lastRan: 173,
+// hrw_distance: 185,
+// hrf_type: 136,
+// hrf_distance: 159,
+// handicapped_averages_racedAgainst_Beaten_rpr: 119,
+// hrf_going: 81,
+// race_averages_racedAgainst: 119,
+// race_averages_racedAgainst_Averages: 125,
+// race_maxes_racedAgainst_Averages: 120,
+// hfa_goingCode: 111,
+// hrw_jockey: 105,
+// race_averages_racedAgainst_Beaten: 122,
+// race_maxes_racedAgainst_Beaten: 150,
+// race_averages_racedAgainst_Beaten_Averages: 117,
+// race_maxes_racedAgainst_Beaten_Averages: 102,
+// race_mostRecentForm_racedAgainst_Beaten_Averages: 80,
+// race_mostRecentForm_racedAgainst_Beaten_Maxes: 126,
+// handicapped_maxes_racedAgainst_Beaten_Averages_rpr: 97,
+// handicapped_averages_racedAgainst_Beaten_Averages_rpr: 114,
+// handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 125,
+// hfa_jockey: 90,
 const weights = {
-  race_rpr: 395,
-  race_averages_racedAgainst_Averages: 199,
-  race_maxes_racedAgainst_Averages: 197,
-  race_averages_racedAgainst_Beaten: 188,
-  race_maxes_racedAgainst_Beaten: 268,
-  race_maxes_racedAgainst_Beaten_Averages: 191,
-  race_mostRecentForm_racedAgainst_Beaten_Averages: 145,
-  race_mostRecentForm_racedAgainst_Beaten_Maxes: 197,
-  race_min_timePerFurlong: 395,
-  handicapped_maxes_racedAgainst_Beaten_rpr: 241,
-  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: 199,
-  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: 241,
-  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: 137,
-  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: 177,
-  hfa_distance: 346,
-  hfa_goingCode: 327,
-  hrw_goingCode: 375,
-  hrw_lastRan: 385,
-  hrw_distance: 407,
-  race_handicapped_rpr: 214,
-  handicapped_averages_racedAgainst_Beaten_rpr: 171,
-  handicapped_averages_racedAgainst_Beaten_Averages_rpr: 175,
-  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 218,
-  hfa_jockey: 208,
-  hrw_jockey: 257,
-  race_maxes_racedAgainst: 208,
-  race_averages_racedAgainst: 191,
-  race_averages_racedAgainst_Beaten_Averages: 174,
+  race_rpr: 1,
+  race_maxes_racedAgainst: 1,
+  race_min_timePerFurlong: 1,
+  race_handicapped_rpr: 1,
+  handicapped_maxes_racedAgainst_Beaten_rpr: 1,
+  handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: 1,
+  handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: 1,
+  handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: 1,
+  hfa_distance: 1,
+  hrw_goingCode: 1,
+  hrw_lastRan: 1,
+  hrw_distance: 1,
+  hrf_type: 1,
+  hrf_distance: 1,
+  handicapped_averages_racedAgainst_Beaten_rpr: 1,
+  hrf_going: 1,
+  race_averages_racedAgainst: 1,
+  race_averages_racedAgainst_Averages: 1,
+  race_maxes_racedAgainst_Averages: 1,
+  hfa_goingCode: 1,
+  hrw_jockey: 1,
+  race_averages_racedAgainst_Beaten: 1,
+  race_maxes_racedAgainst_Beaten: 1,
+  race_averages_racedAgainst_Beaten_Averages: 1,
+  race_maxes_racedAgainst_Beaten_Averages: 1,
+  race_mostRecentForm_racedAgainst_Beaten_Averages: 1,
+  race_mostRecentForm_racedAgainst_Beaten_Maxes: 1,
+  handicapped_maxes_racedAgainst_Beaten_Averages_rpr: 1,
+  handicapped_averages_racedAgainst_Beaten_Averages_rpr: 1,
+  handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 1,
+  hfa_jockey: 1,
 };
 
 export function Dashboard({
@@ -64,7 +98,7 @@ export function Dashboard({
       return {
         ...meeting,
         races: meeting.races.map((race) => {
-          const { horsesInfo, goingCodes, distanceF, trackId } = race;
+          const { horsesInfo, goingCodes, raceTypeCode, distanceF } = race;
           const { maxes: raceMaxes, min: raceMin } = horsesInfo;
 
           const raw_handicapped_rpr = race.horses.map(
@@ -218,8 +252,6 @@ export function Dashboard({
                   formInfo: horseFormInfo,
                   jockey,
                   form,
-                  or: horseOr,
-                  handicapBonus,
                   handicappedRpr,
                 } = horse;
 
@@ -486,6 +518,18 @@ export function Dashboard({
                     .some((x) => x),
                 };
 
+                const horseMostRecentForm = {
+                  type: horse.mostRecentForm?.raceTypeCode === raceTypeCode,
+                  distance: distanceOkay(
+                    horse.mostRecentForm?.distanceF,
+                    distanceF
+                  ),
+                  going: compareTwoGoingCodeArrays(
+                    horse.mostRecentForm?.goingCodes || [],
+                    goingCodes
+                  ),
+                };
+
                 const total =
                   [
                     horseBetterThanRaceTheshold?.race_rpr
@@ -572,6 +616,10 @@ export function Dashboard({
                     horseRacedWith?.goingCode ? weights.hrw_goingCode : 0,
                     horseRacedWith?.lastRan ? weights.hrw_lastRan : 0,
                     horseRacedWith?.distance ? weights.hrw_distance : 0,
+
+                    horseMostRecentForm?.type ? weights.hrf_type : 0,
+                    horseMostRecentForm?.distance ? weights.hrf_distance : 0,
+                    horseMostRecentForm?.going ? weights.hrf_going : 0,
                   ]
                     ?.filter(Boolean)
                     .reduce<number>((a, b) => a + b, 0) || 0;
@@ -586,15 +634,16 @@ export function Dashboard({
                   horseRacedWith,
                   horseBetterThanRaceTheshold,
                   horseFormAveragesStatsGood,
+                  horseMostRecentForm,
                 };
 
-                console.log(
-                  "horse scoreObj",
-                  horse.name,
-                  scoreObj,
-                  handicappedStats,
-                  raceThresholds
-                );
+                // console.log(
+                //   "horse scoreObj",
+                //   horse.name,
+                //   scoreObj,
+                //   handicappedStats,
+                //   raceThresholds
+                // );
                 return {
                   ...horse,
                   scoreObj,
@@ -677,6 +726,15 @@ export function Dashboard({
             }
           }
         );
+
+        Object.entries(matchingWinnerScoreObj.horseMostRecentForm).forEach(
+          ([key, value]) => {
+            const newKey = `hrf_${key}`;
+            if (value === true) {
+              combinedScoreObj[newKey] = (combinedScoreObj[newKey] || 0) + 5;
+            }
+          }
+        );
       }
 
       // Add placed horses scores with 1x weight
@@ -708,17 +766,26 @@ export function Dashboard({
                 combinedScoreObj[newKey] = (combinedScoreObj[newKey] || 0) + 1;
               }
             });
+            Object.entries(scoreObj.horseMostRecentForm).forEach(
+              ([key, value]) => {
+                const newKey = `hrf_${key}`;
+                if (value === true) {
+                  combinedScoreObj[newKey] =
+                    (combinedScoreObj[newKey] || 0) + 1;
+                }
+              }
+            );
           }
         });
       }
 
-      console.log("🏇 Combined score object loop", {
-        matchingWinner,
-        matchingPlacedHorses,
-        matchingWinnerScoreObj,
-        matchingPlacedScoreObjs,
-        combinedScoreObj,
-      });
+      // console.log("🏇 Combined score object loop", {
+      //   matchingWinner,
+      //   matchingPlacedHorses,
+      //   matchingWinnerScoreObj,
+      //   matchingPlacedScoreObjs,
+      //   combinedScoreObj,
+      // });
 
       return combinedScoreObj;
     });
@@ -784,13 +851,8 @@ export function Dashboard({
       {dataWithScoreObj
         ?.filter((x) => {
           const hasARaceWithHorseScoreMax = x.races.some((race) => {
-            const {
-              raceAvgScore,
-              maxScore,
-              ratioWithFormsGood,
-              ratioWithHorsesAbove2YearsOldGood,
-              scoreToBeBetterThan,
-            } = getRaceToShowStats(race);
+            const { ratioWithFormsGood, ratioWithHorsesAbove2YearsOldGood } =
+              getRaceToShowStats(race);
 
             const someHorseHasMaxScore = race.horses.some((horse) => {
               const requiredStatsGood = horseHasRequiredStats(horse);

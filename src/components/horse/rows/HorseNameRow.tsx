@@ -78,14 +78,14 @@ export const getHorsePosition = (
   if (!raceResult) return "";
 
   if (cleanName(raceResult.winner.name) === cleanName(horseName)) {
-    console.log("Horse was winner");
+    //console.log("Horse was winner");
     return "1st";
   }
 
   const placed = raceResult.placedHorses.find(
     (h) => cleanName(h.name) === cleanName(horseName)
   );
-  console.log("Horse placed:", placed?.position);
+  //console.log("Horse placed:", placed?.position);
   return placed?.position || "";
 };
 

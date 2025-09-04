@@ -11,6 +11,7 @@ import { normalizeTime } from "../horse/DayPredictions";
 import { Horse, horseHasRequiredStats } from "./Horse";
 import { twMerge } from "tailwind-merge";
 import { countCommentSentimentObj } from "@/lib/utils";
+import { useMemo, useState } from "react";
 
 interface RaceProps {
   race: RaceType;
@@ -64,7 +65,6 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
     raceAvgScore,
     maxScore,
     ratioWithFormsGood,
-    scoreToBeBetterThan,
     ratioWithHorsesAbove2YearsOldGood,
   } = getRaceToShowStats(race);
 
@@ -82,6 +82,17 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
     new Date(
       `${date} ${normalizeTime(race.time).split(":").join(":")}`
     ).getTime() < new Date().getTime();
+
+  const [showAll, setShowAll] = useState(false);
+
+  const filteredHorses = useMemo(() => {
+    if (showAll) return race.horses;
+    return race.horses.filter((horse) => {
+      const requiredStatsGood = horseHasRequiredStats(horse);
+
+      return requiredStatsGood;
+    });
+  }, [race.horses, showAll]);
 
   return (
     <Accordion type="single" collapsible>
@@ -272,15 +283,25 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
           </div>
           {/* Horses */}
           <div className="space-y-2">
-            {race.horses.map((horse) => (
-              <Horse
-                key={horse.id}
-                horse={horse}
-                race={race}
-                meeting={meeting}
-                results={results}
-              />
-            ))}
+            <>
+              <div className="mb-4">
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="px-4 py-2 text-sm bg-blue-900 rounded hover:bg-blue-800"
+                >
+                  {showAll ? "Show Scored Only" : "Show All"}
+                </button>
+              </div>
+              {filteredHorses.map((horse) => (
+                <Horse
+                  key={horse.id}
+                  horse={horse}
+                  race={race}
+                  meeting={meeting}
+                  results={results}
+                />
+              ))}
+            </>
           </div>
         </AccordionContent>
       </AccordionItem>
