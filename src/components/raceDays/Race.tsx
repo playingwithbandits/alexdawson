@@ -10,7 +10,7 @@ import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
 import { normalizeTime } from "../horse/DayPredictions";
 import { Horse, horseHasRequiredStats } from "./Horse";
 import { twMerge } from "tailwind-merge";
-import { countCommentSentimentObj } from "@/lib/utils";
+import { avg, countCommentSentimentObj } from "@/lib/utils";
 import { useMemo, useState } from "react";
 
 interface RaceProps {
@@ -22,12 +22,11 @@ interface RaceProps {
 }
 
 export const getRaceToShowStats = (race: RaceType) => {
-  const raceAvgScore =
+  const raceAvgScore = avg(
     race.horses
       ?.map((horse) => horse.scoreObj?.total || 0)
       .sort((a, b) => b - a)
-      .slice(1, 4)
-      .reduce((acc, score) => acc + score, 0) / 3;
+  );
 
   const maxScore = 90;
   const horsesInRace = race.horses.length;
@@ -89,10 +88,10 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
     if (showAll) return race.horses;
     return race.horses.filter((horse) => {
       const requiredStatsGood = horseHasRequiredStats(horse);
-
-      return requiredStatsGood;
+      const gapToAvgScore = (horse.scoreObj?.total || 0) - raceAvgScore;
+      return requiredStatsGood && gapToAvgScore >= 0;
     });
-  }, [race.horses, showAll]);
+  }, [race.horses, raceAvgScore, showAll]);
 
   return (
     <Accordion type="single" collapsible>
@@ -113,11 +112,14 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   // )
                   .filter((horse) => {
                     const requiredStatsGood = horseHasRequiredStats(horse);
+                    const gapToAvgScore =
+                      (horse.scoreObj?.total || 0) - raceAvgScore;
                     return showInfo
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
-                          requiredStatsGood
+                          requiredStatsGood &&
+                          gapToAvgScore >= 0
                       : true;
                   })
                   ?.map((horse, index) => {
@@ -160,7 +162,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                               ratioWithHorsesAbove2YearsOldGood
                                 ? (horse.scoreObj?.total || 0) >= maxScore
                                   ? "bg-yellow-500 text-black"
-                                  : gapToAvgScore > 15
+                                  : gapToAvgScore > 33
                                   ? "bg-blue-400 text-black"
                                   : horse?.oddsDecimal >= 15
                                   ? "bg-gray-300 text-black"

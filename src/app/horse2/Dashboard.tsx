@@ -851,12 +851,16 @@ export function Dashboard({
       {dataWithScoreObj
         ?.filter((x) => {
           const hasARaceWithHorseScoreMax = x.races.some((race) => {
-            const { ratioWithFormsGood, ratioWithHorsesAbove2YearsOldGood } =
-              getRaceToShowStats(race);
+            const {
+              ratioWithFormsGood,
+              ratioWithHorsesAbove2YearsOldGood,
+              raceAvgScore,
+            } = getRaceToShowStats(race);
 
             const someHorseHasMaxScore = race.horses.some((horse) => {
               const requiredStatsGood = horseHasRequiredStats(horse);
-              return requiredStatsGood;
+              const gapToAvgScore = (horse.scoreObj?.total || 0) - raceAvgScore;
+              return requiredStatsGood && gapToAvgScore >= 0;
             });
 
             const raceHasFinsihed =
