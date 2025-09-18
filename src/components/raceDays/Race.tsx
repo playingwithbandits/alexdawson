@@ -89,7 +89,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
     return race.horses.filter((horse) => {
       const requiredStatsGood = horseHasRequiredStats(horse);
       const gapToAvgScore = (horse.scoreObj?.total || 0) - raceAvgScore;
-      return requiredStatsGood && gapToAvgScore >= 0;
+      return requiredStatsGood && gapToAvgScore >= 10;
     });
   }, [race.horses, raceAvgScore, showAll]);
 
@@ -119,7 +119,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
                           requiredStatsGood &&
-                          gapToAvgScore >= 0
+                          gapToAvgScore >= 10
                       : true;
                   })
                   ?.map((horse, index) => {

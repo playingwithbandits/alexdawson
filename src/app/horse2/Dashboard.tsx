@@ -860,7 +860,7 @@ export function Dashboard({
             const someHorseHasMaxScore = race.horses.some((horse) => {
               const requiredStatsGood = horseHasRequiredStats(horse);
               const gapToAvgScore = (horse.scoreObj?.total || 0) - raceAvgScore;
-              return requiredStatsGood && gapToAvgScore >= 0;
+              return requiredStatsGood && gapToAvgScore >= 10;
             });
 
             const raceHasFinsihed =

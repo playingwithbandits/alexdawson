@@ -30,7 +30,7 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
             const raceHasHorseScoreMax = x.horses.some((horse) => {
               const requiredStatsGood = horseHasRequiredStats(horse);
               const gapToAvgScore = (horse.scoreObj?.total || 0) - raceAvgScore;
-              return requiredStatsGood && gapToAvgScore >= 0;
+              return requiredStatsGood && gapToAvgScore >= 10;
             });
 
             const raceHasFinsihed =
