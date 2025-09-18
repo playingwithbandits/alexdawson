@@ -34,6 +34,10 @@ export function FormRow({ form, horse }: FormProps) {
 
   console.log(horse.name, { commentMatchedTerms });
   const countCommentSentiment = countCommentSentimentObj(commentMatchedTerms);
+
+  const lastRaceWasExcellent =
+    countCommentSentiment?.score !== undefined &&
+    countCommentSentiment?.score > 3;
   return (
     <tr className="">
       <td className="px-4 py-2 ">{raceDate}</td>
@@ -61,13 +65,16 @@ export function FormRow({ form, horse }: FormProps) {
         {racedAgainst_BeatenInfo.maxes.rpr?.toFixed(2)}
       </td>
       <td className="px-4 py-2 ">
-        {countCommentSentiment.score}
+        {countCommentSentiment.score}{" "}
         {commentMatchedTerms?.eyecatcher?.length > 0 && (
           <span style={{ color: "#2dd4bf", marginRight: "4px" }}>⭐</span>
         )}
         {commentMatchedTerms?.hampered?.length > 0 && (
           <span style={{ color: "#fb923c", marginRight: "4px" }}>⚠️</span>
         )}
+        {lastRaceWasExcellent && (
+          <span style={{ color: "#10b981", marginRight: "4px" }}>👑</span>
+        )}{" "}
         {renderCommentWithHighlights(comment, commentMatchedTerms)}
       </td>
     </tr>

@@ -147,6 +147,17 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                       countCommentSentimentObj(
                         horse?.mostRecentForm?.commentMatchedTerms
                       );
+
+                    const anyFormsHaveExcellent = horse.form?.some((form) => {
+                      const countCommentSentiment =
+                        form &&
+                        countCommentSentimentObj(form?.commentMatchedTerms);
+                      return (
+                        countCommentSentiment?.score !== undefined &&
+                        countCommentSentiment?.score > 3
+                      );
+                    });
+
                     const lastRaceWasBad =
                       countCommentSentiment?.score &&
                       countCommentSentiment?.score < 0;
@@ -182,6 +193,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           {horse.oddsDecimal > 0 ? horse.oddsDecimal : ""}{" "}
                           {lastRaceWasHampered ? "⚠️" : ""}
                           {anyFormsHaveEyecatcher ? "⭐" : ""}
+                          {anyFormsHaveExcellent ? "👑" : ""}
                           {lastRaceWasBad ? "❌" : ""}
                         </span>
                         {horseTrophy}

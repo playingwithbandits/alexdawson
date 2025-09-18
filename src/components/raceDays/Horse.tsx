@@ -34,7 +34,7 @@ export const getWarningMessage = (horse: HorseType) => {
     countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms);
   const lastRaceWasGood =
     countCommentSentiment?.score !== undefined &&
-    countCommentSentiment?.score >= 0;
+    countCommentSentiment?.score > 0;
 
   const requiredStats = [
     {
@@ -156,6 +156,13 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
     mostRecentForm_commentMatchedTerms?.hampered || [];
   const mostRecentForm_commentMatchedTerms_eyecatcher =
     mostRecentForm_commentMatchedTerms?.eyecatcher || [];
+
+  const countCommentSentiment =
+    horse?.mostRecentForm &&
+    countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms);
+  const lastRaceWasExcellent =
+    countCommentSentiment?.score !== undefined &&
+    countCommentSentiment?.score > 3;
 
   const anyFormsHaveEyecatcher = horse.form?.some(
     (form) => form.commentMatchedTerms?.eyecatcher?.length > 0
@@ -430,6 +437,11 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                         0 && (
                         <span style={{ color: "#facc15", marginRight: "4px" }}>
                           ⭐
+                        </span>
+                      )}
+                      {lastRaceWasExcellent && (
+                        <span style={{ color: "#10b981", marginRight: "4px" }}>
+                          👑
                         </span>
                       )}
                       {renderCommentWithHighlights(
