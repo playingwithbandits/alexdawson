@@ -38,8 +38,8 @@ export const getWarningMessage = (horse: HorseType) => {
 
   const requiredStats = [
     {
-      value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
-      name: "Score is less than 60",
+      value: horse.scoreObj?.total && horse.scoreObj?.total > 70,
+      name: "Score is less than 70",
     },
     {
       value: horse.age > 2,
@@ -50,10 +50,10 @@ export const getWarningMessage = (horse: HorseType) => {
       name: "Horse has less than 2 forms",
     },
 
-    {
-      value: lastRaceWasGood,
-      name: "Bad comment for last race",
-    },
+    // {
+    //   value: lastRaceWasGood,
+    //   name: "Bad comment for last race",
+    // },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
@@ -68,13 +68,22 @@ export const getWarningMessage = (horse: HorseType) => {
     },
 
     {
-      value: horse?.scoreObj?.horseMostRecentForm?.type,
-      name: "Recent form type",
+      value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
+      name: "Hasn't raced at this distance",
     },
     {
-      value: horse?.scoreObj?.horseMostRecentForm?.distance,
-      name: "Recent form distance",
+      value: horse?.scoreObj?.horseFormAveragesStatsGood?.goingCode,
+      name: "Hasn't raced with this going",
     },
+
+    // {
+    //   value: horse?.scoreObj?.horseMostRecentForm?.type,
+    //   name: "Recent form type",
+    // },
+    // {
+    //   value: horse?.scoreObj?.horseMostRecentForm?.distance,
+    //   name: "Recent form distance",
+    // },
 
     // {
     //   value: horse?.scoreObj?.horseMostRecentForm?.going,
@@ -102,12 +111,12 @@ export const getWarningMessage = (horse: HorseType) => {
           ?.handicapped_maxes_racedAgainst_Beaten_rpr,
       name: "Max form beaten rpr is low",
     },
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-      name: "Last race had bad max rpr",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+    //   name: "Last race had bad max rpr",
+    // },
   ];
 
   const missingStats = requiredStats
@@ -162,7 +171,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
     countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms);
   const lastRaceWasExcellent =
     countCommentSentiment?.score !== undefined &&
-    countCommentSentiment?.score > 3;
+    countCommentSentiment?.score >= 3;
 
   const anyFormsHaveEyecatcher = horse.form?.some(
     (form) => form.commentMatchedTerms?.eyecatcher?.length > 0
@@ -236,7 +245,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">Distance</td>
                     <td className="px-2 py-1 w-[100px]">Goings</td>
                     <td className="px-2 py-1 w-[100px]">Going</td>
-                    <td className="px-2 py-1 w-[300px]">Jockeys</td>
+                    <td className="px-2 py-1 w-[100px]">Jockeys</td>
                     <td className="px-2 py-1 w-[100px]">Avg_Jockey</td>
                     <td className="px-2 py-1 w-[100px]">TPF</td>
                     <td className="px-2 py-1 w-[100px]">Beaten Avg (Avg)</td>
@@ -250,7 +259,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">RF Avgs</td>
                     <td className="px-2 py-1 w-[100px]">RF Max</td>
                     <td className="px-2 py-1 w-[100px]">OR | GAP</td>
-                    <td className="px-2 py-1">Comment</td>
+                    <td className="px-2 py-1 min-w-[300px]">Comment</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -296,7 +305,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
 
                     <td
                       className={twMerge(
-                        "px-2 py-1 w-[300px]",
+                        "px-2 py-1 w-[100px]",
                         horseRacedWith?.jockey && "text-[#fa9360]"
                       )}
                     >

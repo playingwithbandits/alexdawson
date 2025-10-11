@@ -37,7 +37,7 @@ export function FormRow({ form, horse }: FormProps) {
 
   const lastRaceWasExcellent =
     countCommentSentiment?.score !== undefined &&
-    countCommentSentiment?.score > 3;
+    countCommentSentiment?.score >= 3;
   return (
     <tr className="">
       <td className="px-4 py-2 ">{raceDate}</td>

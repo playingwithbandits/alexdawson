@@ -154,7 +154,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                         countCommentSentimentObj(form?.commentMatchedTerms);
                       return (
                         countCommentSentiment?.score !== undefined &&
-                        countCommentSentiment?.score > 3
+                        countCommentSentiment?.score >= 3
                       );
                     });
 
