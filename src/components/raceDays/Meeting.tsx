@@ -21,16 +21,12 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
       <div className="mt-4 space-y-4">
         {meeting.races
           ?.filter((x) => {
-            const {
-              ratioWithFormsGood,
-              ratioWithHorsesAbove2YearsOldGood,
-              raceAvgScore,
-            } = getRaceToShowStats(x);
+            const { ratioWithFormsGood, ratioWithHorsesAbove2YearsOldGood } =
+              getRaceToShowStats(x);
 
             const raceHasHorseScoreMax = x.horses.some((horse) => {
               const requiredStatsGood = horseHasRequiredStats(horse);
-              const gapToAvgScore = (horse.scoreObj?.total || 0) - raceAvgScore;
-              return requiredStatsGood && gapToAvgScore >= 10;
+              return requiredStatsGood;
             });
 
             const raceHasFinsihed =

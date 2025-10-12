@@ -88,10 +88,9 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
     if (showAll) return race.horses;
     return race.horses.filter((horse) => {
       const requiredStatsGood = horseHasRequiredStats(horse);
-      const gapToAvgScore = (horse.scoreObj?.total || 0) - raceAvgScore;
-      return requiredStatsGood && gapToAvgScore >= 10;
+      return requiredStatsGood;
     });
-  }, [race.horses, raceAvgScore, showAll]);
+  }, [race.horses, showAll]);
 
   return (
     <Accordion type="single" collapsible>
@@ -112,14 +111,12 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   // )
                   .filter((horse) => {
                     const requiredStatsGood = horseHasRequiredStats(horse);
-                    const gapToAvgScore =
-                      (horse.scoreObj?.total || 0) - raceAvgScore;
+
                     return showInfo
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
-                          requiredStatsGood &&
-                          gapToAvgScore >= 10
+                          requiredStatsGood
                       : true;
                   })
                   ?.map((horse, index) => {
@@ -161,6 +158,9 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const lastRaceWasBad =
                       countCommentSentiment?.score &&
                       countCommentSentiment?.score < 0;
+
+                    const horseHasRequiredStatsGood =
+                      horseHasRequiredStats(horse);
                     return (
                       <span
                         key={horse.id + index}
@@ -171,12 +171,10 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                             `px-2 py-1 text-sm  rounded-full ${
                               ratioWithFormsGood &&
                               ratioWithHorsesAbove2YearsOldGood
-                                ? (horse.scoreObj?.total || 0) >= maxScore
-                                  ? "bg-yellow-500 text-black"
+                                ? horseHasRequiredStatsGood
+                                  ? "bg-green-700 text-black"
                                   : gapToAvgScore > 33
                                   ? "bg-blue-400 text-black"
-                                  : horse?.oddsDecimal >= 15
-                                  ? "bg-gray-300 text-black"
                                   : "bg-blue-900"
                                 : "bg-red-900 opacity-40"
                             } ${
