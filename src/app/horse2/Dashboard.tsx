@@ -513,8 +513,10 @@ export function Dashboard({
 
                   raceTypeCode:
                     Boolean(avgRaceTypeCodes) &&
-                    avgRaceTypeCodes?.some((x) =>
-                      matchRaceTypeCode(x, raceTypeCode)
+                    avgRaceTypeCodes?.some(
+                      (x) =>
+                        x?.toLowerCase()?.trim() ===
+                        raceTypeCode?.toLowerCase()?.trim()
                     ),
                 };
 
@@ -532,8 +534,10 @@ export function Dashboard({
                     ?.map((f) => distanceOkay(f.distanceF, distanceF))
                     .some((x) => x),
                   raceTypeCode: form
-                    ?.map((f) =>
-                      matchRaceTypeCode(f.raceTypeCode, raceTypeCode)
+                    ?.map(
+                      (f) =>
+                        f.raceTypeCode?.toLowerCase()?.trim() ===
+                        raceTypeCode?.toLowerCase()?.trim()
                     )
                     .some((x) => x),
                 };
