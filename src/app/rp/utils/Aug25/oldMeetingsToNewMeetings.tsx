@@ -173,6 +173,10 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           form?.flatMap((form) => form.goingCodes).filter(Boolean) || [];
         const rawJockeyData =
           form?.map((form) => form.jockey).filter(Boolean) || [];
+
+        const rawRaceTypeCodeData =
+          form?.map((form) => form.raceTypeCode).filter(Boolean) || [];
+
         const rawTimePerFurlongData =
           form?.map((form) => form.timePerFurlong).filter(Boolean) || [];
 
@@ -212,6 +216,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             trackIds: mostFrequentString(rawTrackIdData),
             goingCodes: mostFrequentString(rawGoingCodesData),
             jockeys: mostFrequentString(rawJockeyData),
+            raceTypeCodes: mostFrequentString(rawRaceTypeCodeData),
 
             racedAgainst: {
               rpr: avg(rawRprData_RacedAgainst),
@@ -227,7 +232,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
               rpr: avg(rawRprAveragesData_RacedAgainst_Beaten),
             },
             racedAgainst_Maxes: {
-              rpr: max(rawRprMaxesData_RacedAgainst),
+              rpr: avg(rawRprMaxesData_RacedAgainst),
             },
             racedAgainst_Beaten_Maxes: {
               rpr: avg(rawRprMaxesData_RacedAgainst_Beaten),
@@ -261,6 +266,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           rawData: {
             rpr: rawRprData || [],
             timePerFurlong: rawTimePerFurlongData || [],
+            raceTypeCodes: rawRaceTypeCodeData || [],
             distanceF: rawDistanceFData || [],
             trackIds: rawTrackIdData || [],
             goingCodes: rawGoingCodesData || [],

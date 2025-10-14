@@ -103,12 +103,14 @@ export interface ScoreObj {
     distance: boolean;
     goingCode: boolean;
     jockey: boolean;
+    raceTypeCode: boolean;
   };
   horseRacedWith: {
     jockey: boolean;
     goingCode: boolean;
     lastRan: boolean;
     distance: boolean;
+    raceTypeCode: boolean;
   };
   horseMostRecentForm: {
     type: boolean;
@@ -141,6 +143,7 @@ export interface FormInfo {
     trackIds: string[];
     goingCodes: string[];
     jockeys: string[];
+    raceTypeCodes: string[];
     timePerFurlong: number[];
     racedAgainst: {
       rpr: number[];
@@ -167,6 +170,7 @@ export interface FormInfo {
     trackIds: string[];
     goingCodes: string[];
     jockeys: string[];
+    raceTypeCodes: string[];
     racedAgainst: {
       rpr: number;
     };

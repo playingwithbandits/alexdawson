@@ -1,7 +1,12 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
-import { compareTwoGoingCodeArrays, distanceOkay, max } from "@/lib/utils";
+import {
+  compareTwoGoingCodeArrays,
+  distanceOkay,
+  matchRaceTypeCode,
+  max,
+} from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
 import { useState } from "react";
 import { getRaceToShowStats } from "@/components/raceDays/Race";
@@ -71,6 +76,9 @@ const weights = {
   handicapped_averages_racedAgainst_Beaten_Averages_rpr: 1,
   handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 1,
   hfa_jockey: 1,
+
+  hrw_raceTypeCode: 1,
+  hfa_raceTypeCode: 1,
 };
 
 export function Dashboard({
@@ -489,6 +497,7 @@ export function Dashboard({
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;
                 const avgJockeys = horseFormInfo?.averages?.jockeys;
                 const avgDistanceF = horseFormInfo?.averages?.distanceF;
+                const avgRaceTypeCodes = horseFormInfo?.averages?.raceTypeCodes;
 
                 const horseFormAveragesStatsGood = {
                   distance: distanceOkay(avgDistanceF, distanceF),
@@ -500,6 +509,12 @@ export function Dashboard({
                     Boolean(avgJockeys) &&
                     avgJockeys?.some(
                       (x) => horseNameToKey(x) === horseNameToKey(jockey)
+                    ),
+
+                  raceTypeCode:
+                    Boolean(avgRaceTypeCodes) &&
+                    avgRaceTypeCodes?.some((x) =>
+                      matchRaceTypeCode(x, raceTypeCode)
                     ),
                 };
 
@@ -515,6 +530,11 @@ export function Dashboard({
                   lastRan: Boolean(horse.lastRan) && horse.lastRan <= 45,
                   distance: form
                     ?.map((f) => distanceOkay(f.distanceF, distanceF))
+                    .some((x) => x),
+                  raceTypeCode: form
+                    ?.map((f) =>
+                      matchRaceTypeCode(f.raceTypeCode, raceTypeCode)
+                    )
                     .some((x) => x),
                 };
 
@@ -612,10 +632,16 @@ export function Dashboard({
                       ? weights.hfa_goingCode
                       : 0,
                     horseFormAveragesStatsGood?.jockey ? weights.hfa_jockey : 0,
+
+                    horseFormAveragesStatsGood?.raceTypeCode
+                      ? weights.hfa_raceTypeCode
+                      : 0,
+
                     horseRacedWith?.jockey ? weights.hrw_jockey : 0,
                     horseRacedWith?.goingCode ? weights.hrw_goingCode : 0,
                     horseRacedWith?.lastRan ? weights.hrw_lastRan : 0,
                     horseRacedWith?.distance ? weights.hrw_distance : 0,
+                    horseRacedWith?.raceTypeCode ? weights.hrw_raceTypeCode : 0,
 
                     horseMostRecentForm?.type ? weights.hrf_type : 0,
                     horseMostRecentForm?.distance ? weights.hrf_distance : 0,
