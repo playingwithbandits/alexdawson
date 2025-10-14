@@ -92,6 +92,17 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
     });
   }, [race.horses, showAll]);
 
+  const placeTerms =
+    race.horses.length < 5
+      ? 1
+      : race.horses.length < 8
+      ? 2
+      : race.horses.length < 12
+      ? 3
+      : race.horses.length < 20
+      ? 4
+      : 5;
+
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={race.id}>
@@ -101,6 +112,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
               <span className="font-medium text-blue-400">
                 {raceHasFinsihed ? "🏁" : ""} {race.time}{" "}
                 {raceAvgScore.toFixed(1)}
+                {placeTerms ? ` 👥${placeTerms}` : ""}
               </span>
               <div className="flex flex-wrap gap-2">
                 {race.horses
@@ -171,7 +183,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                             `px-2 py-1 text-sm  rounded-full ${
                               ratioWithFormsGood &&
                               ratioWithHorsesAbove2YearsOldGood
-                                ? horseHasRequiredStatsGood
+                                ? horseHasRequiredStatsGood &&
+                                  gapToAvgScore >= 0
                                   ? "bg-green-700 text-black"
                                   : gapToAvgScore > 33
                                   ? "bg-blue-400 text-black"

@@ -29,10 +29,26 @@ export const horseHasRequiredStats = (horse: HorseType) => {
 };
 
 export const getWarningMessage = (horse: HorseType) => {
+  const countCommentSentiment =
+    horse?.mostRecentForm &&
+    countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms);
+  const lastRaceWasGood =
+    countCommentSentiment?.score !== undefined &&
+    countCommentSentiment?.score > 0;
+
+  const averageCommentScoreLast2 =
+    horse?.form
+      ?.slice(0, 2)
+      .map((form) => form.commentMatchedTerms)
+      .map((commentMatchedTerms) =>
+        countCommentSentimentObj(commentMatchedTerms)
+      )
+      .reduce((acc, curr) => acc + curr.score, 0) / 2;
+
   const requiredStats = [
     {
-      value: horse.scoreObj?.total && horse.scoreObj?.total > 50,
-      name: "Score is less than 50",
+      value: horse.scoreObj?.total && horse.scoreObj?.total > 70,
+      name: "Score is less than 70",
     },
     {
       value: horse.age > 2,
@@ -42,11 +58,10 @@ export const getWarningMessage = (horse: HorseType) => {
       value: horse.form.length >= 2,
       name: "Horse has less than 2 forms",
     },
-    // {
-    //   value: averageCommentScore > 0,
-    //   name: "Average comment score is less than 0",
-    // },
-
+    {
+      value: averageCommentScoreLast2 >= 1,
+      name: "Average comment score for last 2 forms is less than 1",
+    },
     // {
     //   value: lastRaceWasGood,
     //   name: "Bad comment for last race",
@@ -73,15 +88,15 @@ export const getWarningMessage = (horse: HorseType) => {
       value: horse?.scoreObj?.horseMostRecentForm?.type,
       name: "Recent form type",
     },
-    {
-      value: horse?.scoreObj?.horseMostRecentForm?.distance,
-      name: "Recent form distance",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseMostRecentForm?.distance,
+    //   name: "Recent form distance",
+    // },
 
-    {
-      value: horse?.scoreObj?.horseMostRecentForm?.going,
-      name: "Recent form going",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseMostRecentForm?.going,
+    //   name: "Recent form going",
+    // },
     // {
     //   value: horse?.scoreObj?.horseRacedWith?.jockey,
     //   name: "Hasn't raced with this jockey",
@@ -104,12 +119,12 @@ export const getWarningMessage = (horse: HorseType) => {
           ?.handicapped_maxes_racedAgainst_Beaten_rpr,
       name: "Max form beaten rpr is low",
     },
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-    //   name: "Last race had bad max rpr",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+      name: "Last race had bad max rpr",
+    },
   ];
 
   const missingStats = requiredStats
@@ -178,6 +193,21 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
   const horseTrophy = getTrophy(horsePos);
 
   const warningMessage = getWarningMessage(horse);
+  const averageCommentScore =
+    horse?.form
+      ?.map((form) => form.commentMatchedTerms)
+      .map((commentMatchedTerms) =>
+        countCommentSentimentObj(commentMatchedTerms)
+      )
+      .reduce((acc, curr) => acc + curr.score, 0) / horse?.form?.length;
+  const averageCommentScoreLast2 =
+    horse?.form
+      ?.slice(0, 2)
+      .map((form) => form.commentMatchedTerms)
+      .map((commentMatchedTerms) =>
+        countCommentSentimentObj(commentMatchedTerms)
+      )
+      .reduce((acc, curr) => acc + curr.score, 0) / 2;
 
   return (
     <div className={warningMessage.horseHasRequiredStats ? "" : "opacity-70"}>
@@ -204,6 +234,26 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   ({horse.oddsDecimal > 0 ? horse.oddsDecimal : ""})
                 </span>
                 <span className="text-gray-400">{totalScore?.toFixed(2)}</span>
+                <span
+                  className={twMerge(
+                    "text-gray-400",
+                    averageCommentScore >= 0 ? "text-[#fa9360]" : "text-red-500"
+                  )}
+                >
+                  {averageCommentScore ? averageCommentScore?.toFixed(2) : "--"}
+                </span>
+                <span
+                  className={twMerge(
+                    "text-gray-400",
+                    averageCommentScoreLast2 >= 0
+                      ? "text-[rgb(105,255,100)]"
+                      : "text-red-500"
+                  )}
+                >
+                  {averageCommentScoreLast2
+                    ? averageCommentScoreLast2?.toFixed(2)
+                    : averageCommentScoreLast2}
+                </span>
 
                 {anyFormsHaveHampered && (
                   <span style={{ color: "#fb923c", marginRight: "4px" }}>
@@ -384,7 +434,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseMostRecentForm?.going && "text-[rgb(105,255,100)]"
+                        horseMostRecentForm?.going && "text-[#fa9360]"
                       )}
                     >
                       {horse?.mostRecentForm?.goingCodes?.join(", ")}
@@ -392,8 +442,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseMostRecentForm?.distance &&
-                          "text-[rgb(105,255,100)]"
+                        horseMostRecentForm?.distance && "text-[#fa9360]"
                       )}
                     >
                       {horse?.mostRecentForm?.distanceF?.toFixed(1)}
@@ -415,7 +464,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {(
