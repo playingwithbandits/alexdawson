@@ -186,7 +186,7 @@ export function Dashboard({
           const maxRaceHandicappedMostRecentFormRacedAgainstBeatenMaxesRpr =
             max(raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr);
 
-          const thresholdValue = 0.8;
+          const thresholdValue = 0.875;
 
           const raceThresholds = {
             race_rpr: raceMaxes?.race_rpr * thresholdValue,

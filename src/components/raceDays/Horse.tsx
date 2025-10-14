@@ -47,8 +47,8 @@ export const getWarningMessage = (horse: HorseType) => {
 
   const requiredStats = [
     {
-      value: horse.scoreObj?.total && horse.scoreObj?.total > 70,
-      name: "Score is less than 70",
+      value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
+      name: "Score is less than 60",
     },
     {
       value: horse.age > 2,
@@ -59,8 +59,8 @@ export const getWarningMessage = (horse: HorseType) => {
       name: "Horse has less than 2 forms",
     },
     {
-      value: averageCommentScoreLast2 >= 1,
-      name: "Average comment score for last 2 forms is less than 1",
+      value: averageCommentScoreLast2 >= 0,
+      name: "Average comment score for last 2 forms is less than 0",
     },
     // {
     //   value: lastRaceWasGood,
