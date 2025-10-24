@@ -36,14 +36,14 @@ export const getWarningMessage = (horse: HorseType) => {
     countCommentSentiment?.score !== undefined &&
     countCommentSentiment?.score > 0;
 
-  const averageCommentScoreLast2 =
+  const averageCommentScoreLast3 =
     horse?.form
-      ?.slice(0, 2)
+      ?.slice(0, 3)
       .map((form) => form.commentMatchedTerms)
       .map((commentMatchedTerms) =>
         countCommentSentimentObj(commentMatchedTerms)
       )
-      .reduce((acc, curr) => acc + curr.score, 0) / 2;
+      .reduce((acc, curr) => acc + curr.score, 0) / 3;
 
   const requiredStats = [
     {
@@ -59,9 +59,10 @@ export const getWarningMessage = (horse: HorseType) => {
       name: "Horse has less than 2 forms",
     },
     {
-      value: averageCommentScoreLast2 >= 0,
+      value: averageCommentScoreLast3 > 0,
       name: "Average comment score for last 2 forms is less than 0",
     },
+
     // {
     //   value: lastRaceWasGood,
     //   name: "Bad comment for last race",
@@ -88,10 +89,10 @@ export const getWarningMessage = (horse: HorseType) => {
       name: "Hasn't averaged distance",
     },
 
-    {
-      value: horse?.scoreObj?.horseMostRecentForm?.type,
-      name: "Recent form type",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseMostRecentForm?.type,
+    //   name: "Recent form type",
+    // },
     // {
     //   value: horse?.scoreObj?.horseMostRecentForm?.distance,
     //   name: "Recent form distance",
@@ -123,12 +124,12 @@ export const getWarningMessage = (horse: HorseType) => {
           ?.handicapped_maxes_racedAgainst_Beaten_rpr,
       name: "Max form beaten rpr is low",
     },
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-      name: "Last race had bad max rpr",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+    //   name: "Last race had bad max rpr",
+    // },
   ];
 
   const missingStats = requiredStats
@@ -206,14 +207,14 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
         countCommentSentimentObj(commentMatchedTerms)
       )
       .reduce((acc, curr) => acc + curr.score, 0) / horse?.form?.length;
-  const averageCommentScoreLast2 =
+  const averageCommentScoreLast3 =
     horse?.form
-      ?.slice(0, 2)
+      ?.slice(0, 3)
       .map((form) => form.commentMatchedTerms)
       .map((commentMatchedTerms) =>
         countCommentSentimentObj(commentMatchedTerms)
       )
-      .reduce((acc, curr) => acc + curr.score, 0) / 2;
+      .reduce((acc, curr) => acc + curr.score, 0) / 3;
 
   return (
     <div className={warningMessage.horseHasRequiredStats ? "" : "opacity-70"}>
@@ -251,14 +252,14 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                 <span
                   className={twMerge(
                     "text-gray-400",
-                    averageCommentScoreLast2 >= 0
+                    averageCommentScoreLast3 >= 0
                       ? "text-[rgb(105,255,100)]"
                       : "text-red-500"
                   )}
                 >
-                  {averageCommentScoreLast2
-                    ? averageCommentScoreLast2?.toFixed(2)
-                    : averageCommentScoreLast2}
+                  {averageCommentScoreLast3
+                    ? averageCommentScoreLast3?.toFixed(2)
+                    : averageCommentScoreLast3}
                 </span>
 
                 {anyFormsHaveHampered && (
@@ -468,7 +469,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseMostRecentForm?.type && "text-[rgb(105,255,100)]"
+                        horseMostRecentForm?.type && "text-[#fa9360]"
                       )}
                     >
                       {horse?.mostRecentForm?.raceTypeCode}
@@ -506,7 +507,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {(

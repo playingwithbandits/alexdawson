@@ -151,25 +151,24 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                       horse?.mostRecentForm?.commentMatchedTerms?.hampered
                         ?.length > 0;
 
-                    const countCommentSentiment =
+                    const lastRaceScore =
                       horse?.mostRecentForm &&
                       countCommentSentimentObj(
                         horse?.mostRecentForm?.commentMatchedTerms
-                      );
+                      ).score;
 
-                    const anyFormsHaveExcellent = horse.form?.some((form) => {
-                      const countCommentSentiment =
-                        form &&
-                        countCommentSentimentObj(form?.commentMatchedTerms);
-                      return (
-                        countCommentSentiment?.score !== undefined &&
-                        countCommentSentiment?.score >= 3
-                      );
-                    });
+                    const lastRaceWasExcellent =
+                      lastRaceScore !== undefined && lastRaceScore >= 3;
 
-                    const lastRaceWasBad =
-                      countCommentSentiment?.score &&
-                      countCommentSentiment?.score < 0;
+                    const averageCommentScoreLast3 =
+                      horse?.form &&
+                      horse?.form
+                        ?.slice(0, 3)
+                        .map((form) => form.commentMatchedTerms)
+                        .map((commentMatchedTerms) =>
+                          countCommentSentimentObj(commentMatchedTerms)
+                        )
+                        .reduce((acc, curr) => acc + curr.score, 0) / 3;
 
                     const horseHasRequiredStatsGood =
                       horseHasRequiredStats(horse);
@@ -202,10 +201,18 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           {gapToAvgScore > 0 ? "+" : ""}
                           {gapToAvgScore.toFixed(1)}){" "}
                           {horse.oddsDecimal > 0 ? horse.oddsDecimal : ""}{" "}
+                          <span
+                            className={twMerge(
+                              averageCommentScoreLast3 > 0
+                                ? "text-[rgb(105,255,100)]"
+                                : "text-red-400"
+                            )}
+                          >
+                            {averageCommentScoreLast3?.toFixed(2)}
+                          </span>
                           {lastRaceWasHampered ? "⚠️" : ""}
+                          {lastRaceWasExcellent ? "👑" : ""}
                           {anyFormsHaveEyecatcher ? "⭐" : ""}
-                          {anyFormsHaveExcellent ? "👑" : ""}
-                          {lastRaceWasBad ? "❌" : ""}
                         </span>
                         {horseTrophy}
                       </span>
