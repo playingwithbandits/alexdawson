@@ -71,10 +71,10 @@ export const getWarningMessage = (horse: HorseType) => {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
     },
-    {
-      value: horse?.scoreObj?.horseRacedWith?.distance,
-      name: "Hasn't raced at this distance",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseRacedWith?.distance,
+    //   name: "Hasn't raced at this distance",
+    // },
     {
       value: horse?.scoreObj?.horseRacedWith?.goingCode,
       name: "Hasn't raced with this going",
@@ -89,14 +89,14 @@ export const getWarningMessage = (horse: HorseType) => {
       name: "Hasn't averaged distance",
     },
 
-    // {
-    //   value: horse?.scoreObj?.horseMostRecentForm?.type,
-    //   name: "Recent form type",
-    // },
-    // {
-    //   value: horse?.scoreObj?.horseMostRecentForm?.distance,
-    //   name: "Recent form distance",
-    // },
+    {
+      value: horse?.scoreObj?.horseMostRecentForm?.type,
+      name: "Recent form type",
+    },
+    {
+      value: horse?.scoreObj?.horseMostRecentForm?.distance,
+      name: "Recent form distance",
+    },
 
     // {
     //   value: horse?.scoreObj?.horseMostRecentForm?.going,
@@ -124,12 +124,19 @@ export const getWarningMessage = (horse: HorseType) => {
           ?.handicapped_maxes_racedAgainst_Beaten_rpr,
       name: "Max form beaten rpr is low",
     },
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-    //   name: "Last race had bad max rpr",
-    // },
+
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
+      name: "Last race had bad averages rpr",
+    },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+      name: "Last race had bad max rpr",
+    },
   ];
 
   const missingStats = requiredStats
@@ -469,7 +476,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseMostRecentForm?.type && "text-[#fa9360]"
+                        horseMostRecentForm?.type && "text-[rgb(105,255,100)]"
                       )}
                     >
                       {horse?.mostRecentForm?.raceTypeCode}
@@ -494,7 +501,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {(
@@ -507,7 +514,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {(

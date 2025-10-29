@@ -250,6 +250,7 @@ export interface FormObj {
   racedAgainst_Beaten: RacedAgainstForm[];
   racedAgainst_BeatenInfo: RacedAgainstInfo;
 
+  or: number;
   rpr: number;
 
   raceClass: number;
@@ -262,6 +263,7 @@ export interface FormObj {
   raceTypeCode: string;
 
   jockey: string;
+  jockeyAllowance: number;
   comment: string;
   commentMatchedTerms: {
     hampered: string[];

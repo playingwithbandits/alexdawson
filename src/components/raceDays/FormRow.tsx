@@ -24,12 +24,14 @@ export function FormRow({ form, horse }: FormProps) {
     racedAgainstRaw,
     racedAgainst_BeatenInfo,
     rpr,
+    jockeyAllowance,
     timePerFurlong,
     trackId: formTrackId,
     raceDate,
     position,
     comment,
     commentMatchedTerms,
+    or,
   } = form;
 
   console.log(horse.name, { commentMatchedTerms });
@@ -52,6 +54,8 @@ export function FormRow({ form, horse }: FormProps) {
       <td className="px-4 py-2 ">{formDistanceF?.toFixed(2)}</td>
       <td className="px-4 py-2 ">{timePerFurlong?.toFixed(2)}</td>
 
+      <td className="px-4 py-2 ">{or?.toFixed(2)}</td>
+      <td className="px-4 py-2 ">{jockeyAllowance?.toFixed(2)}</td>
       <td className="px-4 py-2 ">{rpr}</td>
 
       <td className="px-4 py-2 ">

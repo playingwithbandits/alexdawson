@@ -38,6 +38,8 @@ export function Forms({ forms, horse, race, meeting }: FormProps) {
             <td className="px-4 py-2 ">Jockey</td>
             <td className="px-4 py-2 ">Distance</td>
             <td className="px-4 py-2 ">TPF</td>
+            <td className="px-4 py-2 ">OR</td>
+            <td className="px-4 py-2 ">JOK</td>
             <td className="px-4 py-2 ">Rpr</td>
             <td className="px-4 py-2 ">Avg</td>
             <td className="px-4 py-2 ">Max</td>

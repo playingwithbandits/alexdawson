@@ -77,6 +77,8 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             jockeyStyleName,
             rpPostmark,
             rpCloseUpComment,
+            officialRatingRanOff,
+            weightAllowanceLbs,
           } = matchingFormObj || {};
 
           const { runners_beaten, runners_all } = lastRaceStatsObj || {};
@@ -154,7 +156,8 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             raceTypeCode: raceTypeCode || "-",
 
             rpr: rpPostmark || 0,
-
+            or: officialRatingRanOff || 0,
+            jockeyAllowance: weightAllowanceLbs || 0,
             racedAgainstRaw,
             racedAgainstInfo,
             racedAgainst_Beaten,
