@@ -533,14 +533,22 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
 
           const jockeyAllowance = horse.jockeyAllowance;
 
+          const lastRaceOr = horse.mostRecentForm?.or || 0;
+
+          const gapBetweenLastRaceOrAndCurrentOr = lastRaceOr
+            ? lastRaceOr - horseOr
+            : 0;
+
           const handicapBonus =
             (horseOr && maxRaceOr ? maxRaceOr - horseOr : 0) * 1 +
-            jockeyAllowance;
+            jockeyAllowance +
+            gapBetweenLastRaceOrAndCurrentOr;
 
           return {
             ...horse,
             handicapBonus,
             handicappedRpr: horseRpr + handicapBonus,
+            gapBetweenLastRaceOrAndCurrentOr,
           };
         }),
       };

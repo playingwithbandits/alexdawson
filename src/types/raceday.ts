@@ -135,6 +135,7 @@ export interface Horse {
   lastRan: number;
   handicapBonus?: number;
   handicappedRpr?: number;
+  gapBetweenLastRaceOrAndCurrentOr?: number;
 }
 
 export interface FormInfo {

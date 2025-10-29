@@ -19,7 +19,7 @@ export function Forms({ forms, horse, race, meeting }: FormProps) {
       <table className="text-sm">
         <thead>
           <tr>
-            <td className="px-4 py-2 " colSpan={9}>
+            <td className="px-4 py-2 " colSpan={11}>
               Form
             </td>
             <td className="px-4 py-2 " colSpan={2}>
