@@ -524,7 +524,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           const maxRaceOr = horsesInfo.maxes.race_or;
 
           const handicapBonus =
-            (horseOr && maxRaceOr ? maxRaceOr - horseOr : 0) * 0.66;
+            (horseOr && maxRaceOr ? maxRaceOr - horseOr : 0) * 0.2;
 
           return {
             ...horse,
