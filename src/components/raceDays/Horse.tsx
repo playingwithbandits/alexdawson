@@ -313,7 +313,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">RF Distance</td>
                     <td className="px-2 py-1 w-[100px]">RF Avgs</td>
                     <td className="px-2 py-1 w-[100px]">RF Max</td>
-                    <td className="px-2 py-1 w-[100px]">OR | GAP</td>
+                    <td className="px-2 py-1 w-[100px]">OR|GAP|BON</td>
                     <td className="px-2 py-1 min-w-[300px]">Comment</td>
                   </tr>
                 </thead>
@@ -517,7 +517,9 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     </td>
 
                     <td className={twMerge("px-2 py-1 w-[100px]")}>
-                      {horse.or} | {horse.handicapBonus?.toFixed(2)}
+                      {horse.or} |{" "}
+                      {(race.horsesInfo.maxes.race_or - horse.or)?.toFixed(2)} |{" "}
+                      {horse.handicapBonus?.toFixed(2)}
                     </td>
 
                     <td className="px-2 py-1">
