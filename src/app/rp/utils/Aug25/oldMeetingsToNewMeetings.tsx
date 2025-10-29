@@ -43,6 +43,10 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const id = idStr.split("horse/")[1].split("/")[0] || "-";
         const name = oldHorse?.name || "-";
         const jockey = oldHorse?.jockey?.name || "-";
+        const jockeyAllowance = parseInt(
+          oldHorse?.jockey?.allowance || "0",
+          10
+        );
         const rpr = parseInt(oldHorse?.rating || "0", 10);
         const or = parseInt(oldHorse?.officialRating || "0", 10);
         const age = parseInt(oldHorse?.age || "0", 10);
@@ -323,6 +327,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           formInfo,
           id,
           jockey,
+          jockeyAllowance,
           name,
           rpr,
           or,
@@ -523,8 +528,11 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           const { or: horseOr, rpr: horseRpr } = horse;
           const maxRaceOr = horsesInfo.maxes.race_or;
 
+          const jockeyAllowance = horse.jockeyAllowance;
+
           const handicapBonus =
-            (horseOr && maxRaceOr ? maxRaceOr - horseOr : 0) * 0.5;
+            (horseOr && maxRaceOr ? maxRaceOr - horseOr : 0) * 1 +
+            jockeyAllowance;
 
           return {
             ...horse,

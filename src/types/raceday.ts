@@ -123,6 +123,7 @@ export interface Horse {
   id: string;
   name: string;
   jockey: string;
+  jockeyAllowance: number;
   age: number;
   form: FormObj[];
   formInfo: FormInfo;
