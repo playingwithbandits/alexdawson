@@ -123,13 +123,14 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   // )
                   .filter((horse) => {
                     const requiredStatsGood = horseHasRequiredStats(horse);
-
+                    const gapToAvgScore =
+                      (horse.scoreObj?.total || 0) - raceAvgScore;
                     return showInfo
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
                           requiredStatsGood
-                      : true;
+                      : gapToAvgScore >= 10;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =
@@ -190,7 +191,9 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                                   : "bg-blue-900"
                                 : "bg-red-900 opacity-40"
                             } ${
-                              horse.oddsDecimal >= 10
+                              horse.oddsDecimal >= 30
+                                ? "border-4 border-yellow-300"
+                                : horse.oddsDecimal >= 10
                                 ? "border-2 border-gray-300"
                                 : ""
                             }`

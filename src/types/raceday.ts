@@ -24,6 +24,7 @@ export interface Race {
 
 export interface RaceHorsesInfo {
   averages: {
+    race_wgtLbs: number;
     race_rpr: number;
     race_or: number;
     race_min_timePerFurlong: number;
@@ -39,6 +40,7 @@ export interface RaceHorsesInfo {
     race_mostRecentForm_racedAgainst_Beaten_Maxes: number;
   };
   maxes: {
+    race_wgtLbs: number;
     race_rpr: number;
     race_or: number;
     race_min_timePerFurlong: number;
@@ -57,6 +59,7 @@ export interface RaceHorsesInfo {
     race_min_timePerFurlong: number;
   };
   rawData: {
+    raw_race_wgtLbs: number[];
     raw_race_rpr: number[];
     raw_race_or: number[];
     raw_race_min_timePerFurlong: number[];
@@ -122,6 +125,7 @@ export interface ScoreObj {
 export interface Horse {
   id: string;
   name: string;
+  wgtLbs: number;
   jockey: string;
   jockeyAllowance: number;
   age: number;
@@ -136,6 +140,7 @@ export interface Horse {
   handicapBonus?: number;
   handicappedRpr?: number;
   gapBetweenLastRaceOrAndCurrentOr?: number;
+  gapBetweenMaxRaceWgtLbsAndHorseWgtLbs?: number;
 }
 
 export interface FormInfo {

@@ -51,6 +51,8 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const or = parseInt(oldHorse?.officialRating || "0", 10);
         const age = parseInt(oldHorse?.age || "0", 10);
 
+        const wgtLbs = (oldHorse?.weight.pounds || 0) - (jockeyAllowance || 0);
+
         const removedWrongRaceTypes = (
           oldHorse.allValidFormRowsStatsDataStats?.raw || []
         )?.filter((x) =>
@@ -334,6 +336,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           name,
           rpr,
           or,
+          wgtLbs,
           mostRecentForm,
           oddsDecimal:
             bettingForecast?.find(
@@ -422,8 +425,11 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
 
       const raw_race_or =
         horses?.map((horse) => horse.or || 0).filter(Boolean) || [];
+      const raw_race_wgtLbs =
+        horses?.map((horse) => horse.wgtLbs || 0).filter(Boolean) || [];
 
       const raw_race_data = {
+        raw_race_wgtLbs,
         raw_race_rpr,
         raw_race_or,
         raw_race_min_timePerFurlong,
@@ -440,6 +446,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
       };
 
       const raw_race_data_avg = {
+        race_wgtLbs: avg(raw_race_data.raw_race_wgtLbs),
         race_rpr: avg(raw_race_data.raw_race_rpr),
         race_or: avg(raw_race_data.raw_race_or),
         race_min_timePerFurlong: avg(raw_race_data.raw_race_min_timePerFurlong),
@@ -474,6 +481,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
       };
 
       const raw_race_data_maxes = {
+        race_wgtLbs: max(raw_race_data.raw_race_wgtLbs),
         race_rpr: max(raw_race_data.raw_race_rpr),
         race_or: max(raw_race_data.raw_race_or),
         race_min_timePerFurlong: max(raw_race_data.raw_race_min_timePerFurlong),
@@ -528,26 +536,27 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         time,
         title,
         horses: horses.map((horse) => {
-          const { or: horseOr, rpr: horseRpr } = horse;
-          const maxRaceOr = horsesInfo.maxes.race_or;
+          const { or: horseOr, rpr: horseRpr, wgtLbs: horseWgtLbs } = horse;
 
-          const jockeyAllowance = horse.jockeyAllowance;
+          const maxRaceWgtLbs = horsesInfo.maxes.race_wgtLbs;
 
           const lastRaceOr = horse.mostRecentForm?.or || 0;
 
-          const gapBetweenLastRaceOrAndCurrentOr = lastRaceOr
-            ? lastRaceOr - horseOr
-            : 0;
+          const gapBetweenLastRaceOrAndCurrentOr =
+            lastRaceOr && horseOr ? lastRaceOr - horseOr : 0;
+
+          const gapBetweenMaxRaceWgtLbsAndHorseWgtLbs =
+            maxRaceWgtLbs && horseWgtLbs ? maxRaceWgtLbs - horseWgtLbs : 0;
 
           const handicapBonus =
-            (horseOr && maxRaceOr ? maxRaceOr - horseOr : 0) * 1 +
-            jockeyAllowance +
+            gapBetweenMaxRaceWgtLbsAndHorseWgtLbs +
             gapBetweenLastRaceOrAndCurrentOr;
 
           return {
             ...horse,
             handicapBonus,
             handicappedRpr: horseRpr + handicapBonus,
+            gapBetweenMaxRaceWgtLbsAndHorseWgtLbs,
             gapBetweenLastRaceOrAndCurrentOr,
           };
         }),

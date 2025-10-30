@@ -523,10 +523,27 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       )?.toFixed(2)}
                     </td>
 
-                    <td className={twMerge("px-2 py-1 w-[100px]")}>
-                      {horse.or} | {horse.jockeyAllowance?.toFixed(2)} |{" "}
-                      {(race.horsesInfo.maxes.race_or - horse.or)?.toFixed(2)} |{" "}
-                      {horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(2)} |{" "}
+                    <td
+                      className={twMerge("px-2 py-1 w-[100px]")}
+                      title={
+                        `Last Race Or: ${horse.mostRecentForm?.or}\n` +
+                        `Current Or: ${horse.or}\n\n` +
+                        `Gap Between Last Race Or And Current Or: ${horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(
+                          2
+                        )}\n\n` +
+                        `Max Race WgtLbs: ${race.horsesInfo.maxes.race_wgtLbs}\n` +
+                        `Horse WgtLbs: ${horse.wgtLbs}\n` +
+                        `Gap Between Max Race WgtLbs And Horse WgtLbs: ${horse.gapBetweenMaxRaceWgtLbsAndHorseWgtLbs?.toFixed(
+                          2
+                        )}\n\n` +
+                        `Handicap Bonus:\n\n ` +
+                        `${horse.gapBetweenMaxRaceWgtLbsAndHorseWgtLbs?.toFixed(
+                          2
+                        )} + ${horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(
+                          2
+                        )} = ${horse.handicapBonus?.toFixed(2)}`
+                      }
+                    >
                       {horse.handicapBonus?.toFixed(2)}
                     </td>
 
