@@ -125,12 +125,12 @@ export const getWarningMessage = (horse: HorseType) => {
       name: "Max form beaten rpr is low",
     },
 
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
-      name: "Last race had bad averages rpr",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
+    //   name: "Last race had bad averages rpr",
+    // },
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -501,7 +501,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {(
