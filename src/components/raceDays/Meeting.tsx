@@ -25,7 +25,7 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
               getRaceToShowStats(x);
 
             const raceHasHorseScoreMax = x.horses.some((horse) => {
-              const requiredStatsGood = horseHasRequiredStats(horse);
+              const requiredStatsGood = horseHasRequiredStats(horse, x);
               return requiredStatsGood;
             });
 

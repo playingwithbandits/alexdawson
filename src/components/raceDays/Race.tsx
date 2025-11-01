@@ -87,10 +87,11 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
   const filteredHorses = useMemo(() => {
     if (showAll) return race.horses;
     return race.horses.filter((horse) => {
-      const requiredStatsGood = horseHasRequiredStats(horse);
+      console.log("filteredHorses horseHasRequiredStats log 2", race);
+      const requiredStatsGood = horseHasRequiredStats(horse, race);
       return requiredStatsGood;
     });
-  }, [race.horses, showAll]);
+  }, [showAll, race]);
 
   const placeTerms =
     race.horses.length < 5
@@ -122,15 +123,20 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   //     (horse.scoreObj?.total || 0) >= 10
                   // )
                   .filter((horse) => {
-                    const requiredStatsGood = horseHasRequiredStats(horse);
-                    const gapToAvgScore =
-                      (horse.scoreObj?.total || 0) - raceAvgScore;
+                    console.log(
+                      "filteredHorses horseHasRequiredStats log 1",
+                      race
+                    );
+                    const requiredStatsGood = horseHasRequiredStats(
+                      horse,
+                      race
+                    );
                     return showInfo
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
                           requiredStatsGood
-                      : gapToAvgScore >= 10;
+                      : true;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =
@@ -171,8 +177,14 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                         )
                         .reduce((acc, curr) => acc + curr.score, 0) / 3;
 
-                    const horseHasRequiredStatsGood =
-                      horseHasRequiredStats(horse);
+                    console.log(
+                      "filteredHorses horseHasRequiredStats log 3",
+                      race
+                    );
+                    const horseHasRequiredStatsGood = horseHasRequiredStats(
+                      horse,
+                      race
+                    );
                     return (
                       <span
                         key={horse.id + index}
@@ -183,11 +195,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                             `px-2 py-1 text-sm  rounded-full ${
                               ratioWithFormsGood &&
                               ratioWithHorsesAbove2YearsOldGood
-                                ? horseHasRequiredStatsGood &&
-                                  gapToAvgScore >= 0
+                                ? horseHasRequiredStatsGood
                                   ? "bg-green-700 text-black"
-                                  : gapToAvgScore > 33
-                                  ? "bg-blue-400 text-black"
                                   : "bg-blue-900"
                                 : "bg-red-900 opacity-40"
                             } ${

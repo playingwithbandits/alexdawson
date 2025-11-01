@@ -15,7 +15,7 @@ import { Forms } from "./Forms";
 import { renderCommentWithHighlights } from "./FormRow";
 import { RaceResults } from "@/types/racing";
 import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
-import { countCommentSentimentObj } from "@/lib/utils";
+import { avg, countCommentSentimentObj } from "@/lib/utils";
 
 interface HorseProps {
   horse: HorseType;
@@ -24,28 +24,44 @@ interface HorseProps {
   results: RaceResults | undefined;
 }
 
-export const horseHasRequiredStats = (horse: HorseType) => {
-  return getWarningMessage(horse).horseHasRequiredStats;
+export const horseHasRequiredStats = (horse: HorseType, race: RaceType) => {
+  console.log("horseHasRequiredStats", horse, race);
+  return getWarningMessage(horse, race).horseHasRequiredStats;
 };
 
-export const getWarningMessage = (horse: HorseType) => {
+export const getWarningMessage = (horse: HorseType, race: RaceType) => {
+  console.log("getWarningMessage", horse, race);
+  const raceAvgScore =
+    race?.horses?.length > 0
+      ? avg(race?.horses?.map((horse) => horse.scoreObj?.total || 0))
+      : 0;
+  const gapToAvgScore =
+    horse.scoreObj?.total && raceAvgScore
+      ? (horse.scoreObj?.total || 0) - raceAvgScore
+      : 0;
+
+  const gapToAvgScoreThreshold = 0;
+  const gapToAvgScoreGood = gapToAvgScore >= gapToAvgScoreThreshold;
+  console.log(
+    "getWarningMessage gapToAvgScore",
+    horse.name,
+    race,
+    raceAvgScore,
+    gapToAvgScore,
+    gapToAvgScoreGood
+  );
   const countCommentSentiment =
     horse?.mostRecentForm &&
     countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms);
   const lastRaceWasGood =
     countCommentSentiment?.score !== undefined &&
-    countCommentSentiment?.score > 0;
-
-  const averageCommentScoreLast3 =
-    horse?.form
-      ?.slice(0, 3)
-      .map((form) => form.commentMatchedTerms)
-      .map((commentMatchedTerms) =>
-        countCommentSentimentObj(commentMatchedTerms)
-      )
-      .reduce((acc, curr) => acc + curr.score, 0) / 3;
+    countCommentSentiment?.score >= 0;
 
   const requiredStats = [
+    {
+      value: gapToAvgScoreGood,
+      name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
+    },
     {
       value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
       name: "Score is less than 60",
@@ -58,15 +74,11 @@ export const getWarningMessage = (horse: HorseType) => {
       value: horse.form.length >= 2,
       name: "Horse has less than 2 forms",
     },
-    {
-      value: averageCommentScoreLast3 > 0,
-      name: "Average comment score for last 2 forms is less than 0",
-    },
 
-    // {
-    //   value: lastRaceWasGood,
-    //   name: "Bad comment for last race",
-    // },
+    {
+      value: lastRaceWasGood,
+      name: "Bad comment for last race",
+    },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
@@ -84,10 +96,10 @@ export const getWarningMessage = (horse: HorseType) => {
       name: "Hasn't raced with this race type",
     },
 
-    {
-      value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
-      name: "Hasn't averaged distance",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
+    //   name: "Hasn't averaged distance",
+    // },
 
     {
       value: horse?.scoreObj?.horseMostRecentForm?.type,
@@ -206,7 +218,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
   const horsePos = getHorsePosition(horse.name, results, race.time);
   const horseTrophy = getTrophy(horsePos);
 
-  const warningMessage = getWarningMessage(horse);
+  const warningMessage = getWarningMessage(horse, race);
   const averageCommentScore =
     horse?.form
       ?.map((form) => form.commentMatchedTerms)
@@ -222,6 +234,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
         countCommentSentimentObj(commentMatchedTerms)
       )
       .reduce((acc, curr) => acc + curr.score, 0) / 3;
+
+  const lastCommentScore =
+    horse?.mostRecentForm &&
+    countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms).score;
 
   return (
     <div className={warningMessage.horseHasRequiredStats ? "" : "opacity-70"}>
@@ -248,25 +264,46 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   ({horse.oddsDecimal > 0 ? horse.oddsDecimal : ""})
                 </span>
                 <span className="text-gray-400">{totalScore?.toFixed(2)}</span>
+
+                <span
+                  className={twMerge(
+                    "text-gray-400",
+                    lastCommentScore !== undefined && lastCommentScore >= 0
+                      ? "text-[rgb(105,255,100)]"
+                      : "text-red-500"
+                  )}
+                >
+                  {lastCommentScore !== undefined
+                    ? lastCommentScore
+                      ? lastCommentScore?.toFixed(2)
+                      : 0
+                    : "--"}
+                </span>
                 <span
                   className={twMerge(
                     "text-gray-400",
                     averageCommentScore >= 0 ? "text-[#fa9360]" : "text-red-500"
                   )}
                 >
-                  {averageCommentScore ? averageCommentScore?.toFixed(2) : "--"}
+                  {averageCommentScore !== undefined
+                    ? averageCommentScore
+                      ? averageCommentScore?.toFixed(2)
+                      : 0
+                    : "--"}
                 </span>
                 <span
                   className={twMerge(
                     "text-gray-400",
                     averageCommentScoreLast3 >= 0
-                      ? "text-[rgb(105,255,100)]"
+                      ? "text-[#fa9360]"
                       : "text-red-500"
                   )}
                 >
-                  {averageCommentScoreLast3
-                    ? averageCommentScoreLast3?.toFixed(2)
-                    : averageCommentScoreLast3}
+                  {averageCommentScoreLast3 !== undefined
+                    ? averageCommentScoreLast3
+                      ? averageCommentScoreLast3?.toFixed(2)
+                      : 0
+                    : "--"}
                 </span>
 
                 {anyFormsHaveHampered && (
@@ -339,8 +376,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseFormAveragesStatsGood?.distance &&
-                          "text-[rgb(105,255,100)]"
+                        horseFormAveragesStatsGood?.distance && "text-[#fa9360]"
                       )}
                     >
                       {formAveragesDistanceF?.toFixed(1)}

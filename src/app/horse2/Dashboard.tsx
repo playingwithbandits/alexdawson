@@ -885,7 +885,7 @@ export function Dashboard({
               getRaceToShowStats(race);
 
             const someHorseHasMaxScore = race.horses.some((horse) => {
-              const requiredStatsGood = horseHasRequiredStats(horse);
+              const requiredStatsGood = horseHasRequiredStats(horse, race);
               return requiredStatsGood;
             });
 
