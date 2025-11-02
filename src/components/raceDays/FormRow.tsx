@@ -34,7 +34,7 @@ export function FormRow({ form, horse }: FormProps) {
     or,
   } = form;
 
-  console.log(horse.name, { commentMatchedTerms });
+  //console.log(horse.name, { commentMatchedTerms });
   const countCommentSentiment = countCommentSentimentObj(commentMatchedTerms);
 
   const lastRaceWasExcellent =

@@ -87,7 +87,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
   const filteredHorses = useMemo(() => {
     if (showAll) return race.horses;
     return race.horses.filter((horse) => {
-      console.log("filteredHorses horseHasRequiredStats log 2", race);
+      //console.log("filteredHorses horseHasRequiredStats log 2", race);
       const requiredStatsGood = horseHasRequiredStats(horse, race);
       return requiredStatsGood;
     });
@@ -123,10 +123,10 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   //     (horse.scoreObj?.total || 0) >= 10
                   // )
                   .filter((horse) => {
-                    console.log(
-                      "filteredHorses horseHasRequiredStats log 1",
-                      race
-                    );
+                    // console.log(
+                    //   "filteredHorses horseHasRequiredStats log 1",
+                    //   race
+                    // );
                     const requiredStatsGood = horseHasRequiredStats(
                       horse,
                       race
@@ -177,10 +177,10 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                         )
                         .reduce((acc, curr) => acc + curr.score, 0) / 3;
 
-                    console.log(
-                      "filteredHorses horseHasRequiredStats log 3",
-                      race
-                    );
+                    //console.log(
+                    //  "filteredHorses horseHasRequiredStats log 3",
+                    //  race
+                    //);
                     const horseHasRequiredStatsGood = horseHasRequiredStats(
                       horse,
                       race

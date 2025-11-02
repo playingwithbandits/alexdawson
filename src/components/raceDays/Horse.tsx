@@ -25,12 +25,12 @@ interface HorseProps {
 }
 
 export const horseHasRequiredStats = (horse: HorseType, race: RaceType) => {
-  console.log("horseHasRequiredStats", horse, race);
+  //("horseHasRequiredStats", horse, race);
   return getWarningMessage(horse, race).horseHasRequiredStats;
 };
 
 export const getWarningMessage = (horse: HorseType, race: RaceType) => {
-  console.log("getWarningMessage", horse, race);
+  //console.log("getWarningMessage", horse, race);
   const raceAvgScore =
     race?.horses?.length > 0
       ? avg(race?.horses?.map((horse) => horse.scoreObj?.total || 0))
@@ -42,14 +42,14 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
 
   const gapToAvgScoreThreshold = 0;
   const gapToAvgScoreGood = gapToAvgScore >= gapToAvgScoreThreshold;
-  console.log(
-    "getWarningMessage gapToAvgScore",
-    horse.name,
-    race,
-    raceAvgScore,
-    gapToAvgScore,
-    gapToAvgScoreGood
-  );
+  // console.log(
+  //   "getWarningMessage gapToAvgScore",
+  //   horse.name,
+  //   race,
+  //   raceAvgScore,
+  //   gapToAvgScore,
+  //   gapToAvgScoreGood
+  // );
   const countCommentSentiment =
     horse?.mostRecentForm &&
     countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms);
