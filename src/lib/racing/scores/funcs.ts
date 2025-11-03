@@ -468,6 +468,30 @@ export function isWithinTenPercent(
   return Math.abs(distance - targetDistance) <= tenPercent;
 }
 
+export const distanceBeatenLengthsThreshold = (
+  raceDistance: number | undefined
+) => {
+  if (!raceDistance) return 0;
+
+  // 5 furlong races should be within 2 lengths
+  if (raceDistance <= 5.5) {
+    return 2;
+  }
+  // 7 furlong races should be under 3 lengths
+  if (raceDistance <= 7.5) {
+    return 3;
+  }
+  // 10 furlong races should be under 4 lengths
+  if (raceDistance <= 12.5) {
+    return 4;
+  }
+  // 16 furlong is within 5 lengths
+  if (raceDistance >= 16.5) {
+    return 5;
+  }
+  return 6;
+};
+
 export const isGoodDistanceToWinner = (
   raceDistance: number | undefined,
   distanceCode: string | undefined
@@ -475,37 +499,8 @@ export const isGoodDistanceToWinner = (
   if (!raceDistance || !distanceCode) return false;
 
   const distanceToWinnerFloat = distanceToWinnerStrToFloat(distanceCode || "");
+  const distanceBeatenLengthsThreshold2 =
+    distanceBeatenLengthsThreshold(raceDistance);
 
-  if (raceDistance <= 6) {
-    return distanceToWinnerFloat <= 5;
-  }
-  if (raceDistance <= 8) {
-    return distanceToWinnerFloat <= 6;
-  }
-  if (raceDistance <= 10) {
-    return distanceToWinnerFloat <= 8;
-  }
-  if (raceDistance <= 16) {
-    return distanceToWinnerFloat <= 10;
-  }
-
-  return distanceToWinnerFloat <= 12;
-};
-
-export const distanceBeatenLengthsThreshold = (
-  raceDistance: number | undefined
-) => {
-  if (!raceDistance) return 0;
-
-  if (raceDistance <= 9) {
-    return 1;
-  }
-  if (raceDistance <= 11) {
-    return 2;
-  }
-  if (raceDistance <= 17) {
-    return 3;
-  }
-
-  return 4;
+  return distanceToWinnerFloat <= distanceBeatenLengthsThreshold2;
 };
