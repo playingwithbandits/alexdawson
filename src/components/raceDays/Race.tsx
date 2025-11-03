@@ -62,7 +62,6 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
 
   const {
     raceAvgScore,
-    maxScore,
     ratioWithFormsGood,
     ratioWithHorsesAbove2YearsOldGood,
   } = getRaceToShowStats(race);

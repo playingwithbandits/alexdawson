@@ -1,12 +1,7 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
-import {
-  compareTwoGoingCodeArrays,
-  distanceOkay,
-  matchRaceTypeCode,
-  max,
-} from "@/lib/utils";
+import { compareTwoGoingCodeArrays, distanceOkay, max } from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
 import { useState } from "react";
 import { getRaceToShowStats } from "@/components/raceDays/Race";
@@ -45,6 +40,8 @@ import { horseHasRequiredStats } from "@/components/raceDays/Horse";
 // handicapped_averages_racedAgainst_Beaten_Maxes_rpr: 125,
 // hfa_jockey: 90,
 const weights = {
+  race_averages_racedAgainstMaxes: 1,
+  handicapped_race_averages_racedAgainstMaxes: 1,
   race_rpr: 1,
   race_maxes_racedAgainst: 1,
   race_min_timePerFurlong: 1,
@@ -249,6 +246,9 @@ export function Dashboard({
             race_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr:
               maxRaceHandicappedMostRecentFormRacedAgainstBeatenMaxesRpr *
               thresholdValue,
+
+            race_averages_racedAgainstMaxes:
+              raceMaxes?.race_averages_racedAgainstMaxes * thresholdValue,
           };
 
           return {
@@ -324,6 +324,8 @@ export function Dashboard({
 
                   handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: boolean;
                   handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: boolean;
+
+                  race_averages_racedAgainstMaxes: boolean;
                 } = {
                   race_rpr:
                     Boolean(horseRpr) && horseRpr >= raceThresholds.race_rpr,
@@ -492,6 +494,11 @@ export function Dashboard({
                         (handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr ||
                           0) >=
                           raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+
+                  race_averages_racedAgainstMaxes:
+                    Boolean(horseFormAverages?.racedAgainst_Maxes?.rpr) &&
+                    horseFormAverages.racedAgainst_Maxes.rpr >=
+                      raceThresholds.race_averages_racedAgainstMaxes,
                 };
 
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;
@@ -556,6 +563,9 @@ export function Dashboard({
 
                 const total =
                   [
+                    horseBetterThanRaceTheshold?.race_averages_racedAgainstMaxes
+                      ? weights.race_averages_racedAgainstMaxes
+                      : 0,
                     horseBetterThanRaceTheshold?.race_rpr
                       ? weights.race_rpr
                       : 0,
