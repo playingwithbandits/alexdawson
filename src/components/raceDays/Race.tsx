@@ -8,7 +8,7 @@ import { Meeting as MeetingType, Race as RaceType } from "@/types/raceday";
 import { RaceResults } from "@/types/racing";
 import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
 import { normalizeTime } from "../horse/DayPredictions";
-import { Horse, horseHasRequiredStats } from "./Horse";
+import { getWarningMessage, Horse, horseHasRequiredStats } from "./Horse";
 import { twMerge } from "tailwind-merge";
 import { avg, countCommentSentimentObj } from "@/lib/utils";
 import { useMemo, useState } from "react";
@@ -126,16 +126,24 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     //   "filteredHorses horseHasRequiredStats log 1",
                     //   race
                     // );
+                    const gapToAvgScore =
+                      (horse.scoreObj?.total || 0) - raceAvgScore;
                     const requiredStatsGood = horseHasRequiredStats(
                       horse,
                       race
                     );
+                    const missingStats = !requiredStatsGood
+                      ? getWarningMessage(horse, race).missingStats
+                      : [];
+
+                    const missingLen = missingStats.length;
+
                     return showInfo
                       ? !raceHasFinsihed &&
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
                           requiredStatsGood
-                      : true;
+                      : missingLen <= 2 && gapToAvgScore >= 0;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =
@@ -184,6 +192,13 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                       horse,
                       race
                     );
+
+                    const missingStats = !horseHasRequiredStatsGood
+                      ? getWarningMessage(horse, race).missingStats
+                      : [];
+                    const missingOnlyFew = missingStats.length <= 1;
+                    const missingNoStats = missingStats.length === 0;
+
                     return (
                       <span
                         key={horse.id + index}
@@ -194,15 +209,17 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                             `px-2 py-1 text-sm  rounded-full ${
                               ratioWithFormsGood &&
                               ratioWithHorsesAbove2YearsOldGood
-                                ? horseHasRequiredStatsGood
+                                ? missingNoStats
                                   ? "bg-green-700 text-black"
+                                  : missingOnlyFew
+                                  ? "bg-[#ae7100] text-black"
                                   : "bg-blue-900"
                                 : "bg-red-900 opacity-40"
                             } ${
                               horse.oddsDecimal >= 30
                                 ? "border-4 border-yellow-300"
                                 : horse.oddsDecimal >= 10
-                                ? "border-2 border-gray-300"
+                                ? "border-4 border-gray-300"
                                 : ""
                             }`
                           )}
@@ -214,12 +231,16 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           {horse.oddsDecimal > 0 ? horse.oddsDecimal : ""}{" "}
                           <span
                             className={twMerge(
-                              averageCommentScoreLast3 > 0
+                              lastRaceScore !== undefined && lastRaceScore >= 0
                                 ? "text-[rgb(105,255,100)]"
                                 : "text-red-400"
                             )}
                           >
-                            {averageCommentScoreLast3?.toFixed(2)}
+                            {lastRaceScore !== undefined
+                              ? lastRaceScore
+                                ? lastRaceScore?.toFixed(2)
+                                : 0
+                              : "--"}
                           </span>
                           {lastRaceWasHampered ? "⚠️" : ""}
                           {lastRaceWasExcellent ? "👑" : ""}

@@ -59,6 +59,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
 
   const requiredStats = [
     {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_averages_racedAgainstMaxes,
+      name: "Averages raced against maxes is good",
+    },
+    {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
     },
@@ -83,10 +89,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
     },
-    // {
-    //   value: horse?.scoreObj?.horseRacedWith?.distance,
-    //   name: "Hasn't raced at this distance",
-    // },
+    {
+      value: horse?.scoreObj?.horseRacedWith?.distance,
+      name: "Hasn't raced at this distance",
+    },
     {
       value: horse?.scoreObj?.horseRacedWith?.goingCode,
       name: "Hasn't raced with this going",
@@ -96,10 +102,19 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    // {
-    //   value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
-    //   name: "Hasn't averaged distance",
-    // },
+    {
+      value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
+      name: "Hasn't averaged distance",
+    },
+
+    {
+      value: horse?.scoreObj?.horseFormAveragesStatsGood?.goingCode,
+      name: "Hasn't averaged going",
+    },
+    {
+      value: horse?.scoreObj?.horseFormAveragesStatsGood?.raceTypeCode,
+      name: "Hasn't averaged race type",
+    },
 
     {
       value: horse?.scoreObj?.horseMostRecentForm?.type,
@@ -114,10 +129,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   value: horse?.scoreObj?.horseMostRecentForm?.going,
     //   name: "Recent form going",
     // },
-    // {
-    //   value: horse?.scoreObj?.horseRacedWith?.jockey,
-    //   name: "Hasn't raced with this jockey",
-    // },
+    {
+      value: horse?.scoreObj?.horseRacedWith?.jockey,
+      name: "Hasn't raced with this jockey",
+    },
 
     // {
     //   value:
@@ -160,7 +175,7 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     ? `Missing: ${missingStats.join(", ")}`
     : "";
 
-  return { horseHasRequiredStats, message };
+  return { horseHasRequiredStats, message, missingStats };
 };
 
 export function Horse({ horse, race, meeting, results }: HorseProps) {
@@ -376,7 +391,8 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseFormAveragesStatsGood?.distance && "text-[#fa9360]"
+                        horseFormAveragesStatsGood?.distance &&
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {formAveragesDistanceF?.toFixed(1)}
@@ -396,7 +412,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseFormAveragesStatsGood?.goingCode &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {formAveragesGoingCode?.join(", ")}
@@ -417,7 +433,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseFormAveragesStatsGood?.raceTypeCode &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {formAveragesRaceTypeCode?.join(", ")}
@@ -426,7 +442,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseRacedWith?.jockey && "text-[#fa9360]"
+                        horseRacedWith?.jockey && "text-[rgb(105,255,100)]"
                       )}
                     >
                       {Array.from(new Set(horse.form?.map((x) => x.jockey)))
@@ -455,7 +471,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_averages_racedAgainstMaxes &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {formAveragesRacedAgainstMaxes.rpr?.toFixed(2)}
