@@ -216,7 +216,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                                   : "bg-blue-900"
                                 : "bg-red-900 opacity-40"
                             } ${
-                              horse.oddsDecimal >= 30
+                              horse.oddsDecimal >= 20
                                 ? "border-4 border-yellow-300"
                                 : horse.oddsDecimal >= 10
                                 ? "border-4 border-gray-300"
