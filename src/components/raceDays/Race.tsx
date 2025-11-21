@@ -196,7 +196,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const missingStats = !horseHasRequiredStatsGood
                       ? getWarningMessage(horse, race).missingStats
                       : [];
-                    const missingOnlyFew = missingStats.length <= 1;
+                    const missingOnlyFew = missingStats.length <= 2;
                     const missingNoStats = missingStats.length === 0;
 
                     return (
