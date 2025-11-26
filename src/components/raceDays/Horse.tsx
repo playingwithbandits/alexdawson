@@ -129,10 +129,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   value: horse?.scoreObj?.horseMostRecentForm?.going,
     //   name: "Recent form going",
     // },
-    {
-      value: horse?.scoreObj?.horseRacedWith?.jockey,
-      name: "Hasn't raced with this jockey",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseRacedWith?.jockey,
+    //   name: "Hasn't raced with this jockey",
+    // },
 
     // {
     //   value:
