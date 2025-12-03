@@ -566,8 +566,9 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             maxRaceWgtLbs && horseWgtLbs ? maxRaceWgtLbs - horseWgtLbs : 0;
 
           const handicapBonus =
-            gapBetweenMaxRaceWgtLbsAndHorseWgtLbs +
-            gapBetweenLastRaceOrAndCurrentOr;
+            (gapBetweenMaxRaceWgtLbsAndHorseWgtLbs +
+              gapBetweenLastRaceOrAndCurrentOr) /
+            2;
 
           return {
             ...horse,

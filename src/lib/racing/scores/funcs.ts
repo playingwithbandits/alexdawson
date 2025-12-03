@@ -475,15 +475,15 @@ export const distanceBeatenLengthsThreshold = (
 
   // 7 furlong races should be under 3 lengths
   if (raceDistance <= 7.5) {
-    return 2;
+    return 3;
   }
   // 10 furlong races should be under 4 lengths
   if (raceDistance <= 12.5) {
-    return 3;
+    return 4;
   }
   // 16 furlong is within 5 lengths
   if (raceDistance >= 16.5) {
-    return 4;
+    return 5;
   }
   return 6;
 };

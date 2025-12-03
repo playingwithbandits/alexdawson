@@ -31,7 +31,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const maxScore = 90;
   const horsesInRace = race.horses.length;
   const horsesInRaceWithForms = race.horses.filter(
-    (horse) => horse.form.length > 2
+    (horse) => horse.form.length >= 2
   ).length;
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms > 0.66;
@@ -143,7 +143,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
                           requiredStatsGood
-                      : missingLen <= 2 && gapToAvgScore >= 0;
+                      : missingLen <= 1 && gapToAvgScore >= 0;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =
@@ -214,6 +214,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                                   : missingOnlyFew
                                   ? "bg-[#ae7100] text-black"
                                   : "bg-blue-900"
+                                : missingNoStats
+                                ? "bg-red-900"
                                 : "bg-red-900 opacity-40"
                             } ${
                               horse.oddsDecimal >= 20
@@ -244,7 +246,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           </span>
                           {lastRaceWasHampered ? "⚠️" : ""}
                           {lastRaceWasExcellent ? "👑" : ""}
-                          {anyFormsHaveEyecatcher ? "⭐" : ""}
+                          {anyFormsHaveEyecatcher ? "⭐" : ""}{" "}
                         </span>
                         {horseTrophy}
                       </span>

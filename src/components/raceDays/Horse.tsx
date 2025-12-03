@@ -58,19 +58,19 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     countCommentSentiment?.score >= 0;
 
   const requiredStats = [
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.race_averages_racedAgainstMaxes,
-      name: "Averages raced against maxes is good",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.race_averages_racedAgainstMaxes,
+    //   name: "Averages raced against maxes is good",
+    // },
     {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
     },
     {
-      value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
-      name: "Score is less than 60",
+      value: horse.scoreObj?.total && horse.scoreObj?.total > 70,
+      name: "Score is less than 70",
     },
     {
       value: horse.age > 2,
@@ -81,10 +81,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Horse has less than 2 forms",
     },
 
-    {
-      value: lastRaceWasGood,
-      name: "Bad comment for last race",
-    },
+    // {
+    //   value: lastRaceWasGood,
+    //   name: "Bad comment for last race",
+    // },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
@@ -110,10 +110,6 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     {
       value: horse?.scoreObj?.horseFormAveragesStatsGood?.goingCode,
       name: "Hasn't averaged going",
-    },
-    {
-      value: horse?.scoreObj?.horseFormAveragesStatsGood?.raceTypeCode,
-      name: "Hasn't averaged race type",
     },
 
     {
@@ -158,6 +154,13 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
     //   name: "Last race had bad averages rpr",
     // },
+
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
+      name: "Last race had bad averages rpr",
+    },
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -471,7 +474,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_averages_racedAgainstMaxes &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {formAveragesRacedAgainstMaxes.rpr?.toFixed(2)}
@@ -553,7 +556,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {(
