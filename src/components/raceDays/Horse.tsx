@@ -69,8 +69,8 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
     },
     {
-      value: horse.scoreObj?.total && horse.scoreObj?.total > 70,
-      name: "Score is less than 70",
+      value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
+      name: "Score is less than 60",
     },
     {
       value: horse.age > 2,
@@ -81,10 +81,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Horse has less than 2 forms",
     },
 
-    // {
-    //   value: lastRaceWasGood,
-    //   name: "Bad comment for last race",
-    // },
+    {
+      value: lastRaceWasGood,
+      name: "Bad comment for last race",
+    },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
@@ -125,28 +125,28 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   value: horse?.scoreObj?.horseMostRecentForm?.going,
     //   name: "Recent form going",
     // },
-    // {
-    //   value: horse?.scoreObj?.horseRacedWith?.jockey,
-    //   name: "Hasn't raced with this jockey",
-    // },
+    {
+      value: horse?.scoreObj?.horseRacedWith?.jockey,
+      name: "Hasn't raced with this jockey",
+    },
 
     // {
     //   value:
     //     horse?.scoreObj?.horseBetterThanRaceTheshold?.race_min_timePerFurlong,
     //   name: "Time per furlong is high",
     // },
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
-      name: "Max form beaten averages rpr is low",
-    },
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_maxes_racedAgainst_Beaten_rpr,
-      name: "Max form beaten rpr is low",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
+    //   name: "Max form beaten averages rpr is low",
+    // },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_maxes_racedAgainst_Beaten_rpr,
+    //   name: "Max form beaten rpr is low",
+    // },
 
     // {
     //   value:
@@ -155,12 +155,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Last race had bad averages rpr",
     // },
 
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
-      name: "Last race had bad averages rpr",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
+    //   name: "Last race had bad averages rpr",
+    // },
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -436,7 +436,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseFormAveragesStatsGood?.raceTypeCode &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {formAveragesRaceTypeCode?.join(", ")}
@@ -496,7 +496,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {(
@@ -520,7 +520,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_rpr &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {(
@@ -556,7 +556,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {(
