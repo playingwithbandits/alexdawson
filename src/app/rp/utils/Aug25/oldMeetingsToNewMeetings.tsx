@@ -550,6 +550,8 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         id,
         raceClass,
         raceTypeCode,
+        predictions: oldRace.predictions || [],
+        raceExtraInfo: oldRace?.raceExtraInfo || undefined,
         time,
         title,
         horses: horses.map((horse) => {

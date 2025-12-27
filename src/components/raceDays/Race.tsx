@@ -349,6 +349,35 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
           </div>
           {/* Horses */}
           <div className="space-y-2">
+            {race.predictions ? (
+              <div className="flex flex-wrap gap-2 mb-4">
+                {Object.values(race.predictions)
+                  .sort((a, b) => b.score - a.score)
+                  .map((prediction) => (
+                    <div
+                      key={prediction.id}
+                      className="px-3 py-1 bg-gray-800 rounded-full text-sm flex items-center gap-2"
+                    >
+                      <span className="font-medium">{prediction.name}</span>
+                      <span className="text-primary">
+                        {prediction.score.toFixed(1)}
+                      </span>
+                    </div>
+                  ))}
+              </div>
+            ) : (
+              <>No predictions available</>
+            )}
+            {race.raceExtraInfo?.verdict.comment && (
+              <div className="bt-4 text-sm text-gray-300">
+                <p className="mb-2">{race.raceExtraInfo.verdict.comment}</p>
+                {race.raceExtraInfo.verdict.allNamed.length > 0 && (
+                  <div className="text-xs text-gray-400">
+                    Mentioned: {race.raceExtraInfo.verdict.allNamed.join(", ")}
+                  </div>
+                )}
+              </div>
+            )}
             <>
               <div className="mb-4">
                 <button

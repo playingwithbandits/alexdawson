@@ -1,3 +1,6 @@
+import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
+import { PredictionRunner } from "./racing";
+
 export interface Meeting {
   trackId: string;
   races: Race[];
@@ -17,9 +20,10 @@ export interface Race {
   goingCodes: string[];
   raceClass: number;
   raceTypeCode: string;
-
+  predictions?: PredictionRunner[];
   horses: Horse[];
   horsesInfo: RaceHorsesInfo;
+  raceExtraInfo?: RaceAccordionStats;
 }
 
 export interface RaceHorsesInfo {
