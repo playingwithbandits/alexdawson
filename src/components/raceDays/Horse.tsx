@@ -58,12 +58,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     countCommentSentiment?.score >= 0;
 
   const requiredStats = [
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.race_averages_racedAgainstMaxes,
-    //   name: "Averages raced against maxes is good",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_averages_racedAgainstMaxes,
+      name: "Averages raced against maxes is good",
+    },
     {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
@@ -81,10 +81,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Horse has less than 2 forms",
     },
 
-    {
-      value: lastRaceWasGood,
-      name: "Bad comment for last race",
-    },
+    // {
+    //   value: lastRaceWasGood,
+    //   name: "Bad comment for last race",
+    // },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
@@ -102,15 +102,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    {
-      value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
-      name: "Hasn't averaged distance",
-    },
-
-    {
-      value: horse?.scoreObj?.horseFormAveragesStatsGood?.goingCode,
-      name: "Hasn't averaged going",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
+    //   name: "Hasn't averaged distance",
+    // },
 
     {
       value: horse?.scoreObj?.horseMostRecentForm?.type,
@@ -125,10 +120,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   value: horse?.scoreObj?.horseMostRecentForm?.going,
     //   name: "Recent form going",
     // },
-    {
-      value: horse?.scoreObj?.horseRacedWith?.jockey,
-      name: "Hasn't raced with this jockey",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseRacedWith?.jockey,
+    //   name: "Hasn't raced with this jockey",
+    // },
 
     // {
     //   value:
@@ -394,8 +389,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseFormAveragesStatsGood?.distance &&
-                          "text-[rgb(105,255,100)]"
+                        horseFormAveragesStatsGood?.distance && "text-[#fa9360]"
                       )}
                     >
                       {formAveragesDistanceF?.toFixed(1)}
@@ -415,7 +409,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseFormAveragesStatsGood?.goingCode &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {formAveragesGoingCode?.join(", ")}
@@ -445,7 +439,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseRacedWith?.jockey && "text-[rgb(105,255,100)]"
+                        horseRacedWith?.jockey && "text-[#fa9360]"
                       )}
                     >
                       {Array.from(new Set(horse.form?.map((x) => x.jockey)))
@@ -474,7 +468,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_averages_racedAgainstMaxes &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {formAveragesRacedAgainstMaxes.rpr?.toFixed(2)}
