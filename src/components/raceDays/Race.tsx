@@ -12,6 +12,7 @@ import { getWarningMessage, Horse, horseHasRequiredStats } from "./Horse";
 import { twMerge } from "tailwind-merge";
 import { avg, countCommentSentimentObj } from "@/lib/utils";
 import { useMemo, useState } from "react";
+import { horseNameToKey } from "@/lib/racing/scores/funcs";
 
 interface RaceProps {
   race: RaceType;
@@ -103,6 +104,9 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
       ? 4
       : 5;
 
+  const raceHasPredictions =
+    race?.predictions && Object.values(race?.predictions || {}).length > 0;
+
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={race.id}>
@@ -113,6 +117,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                 {raceHasFinsihed ? "🏁" : ""} {race.time}{" "}
                 {raceAvgScore.toFixed(1)}
                 {placeTerms ? ` 👥${placeTerms}` : ""}
+                {raceHasPredictions ? ` rp` : ""}
               </span>
               <div className="flex flex-wrap gap-2">
                 {race.horses
@@ -199,6 +204,15 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const missingOnlyFew = missingStats.length <= 1;
                     const missingNoStats = missingStats.length === 0;
 
+                    const rpPredictions = Object.values(
+                      race?.predictions || {}
+                    )?.find(
+                      (prediction) =>
+                        horseNameToKey(prediction.name) ===
+                        horseNameToKey(horse.name)
+                    );
+                    const rpPredictionScore = rpPredictions?.score;
+
                     return (
                       <span
                         key={horse.id + index}
@@ -244,6 +258,11 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                                 : 0
                               : "--"}
                           </span>
+                          <span>
+                            {rpPredictionScore !== undefined
+                              ? rpPredictionScore?.toFixed(2)
+                              : "--"}
+                          </span>{" "}
                           {lastRaceWasHampered ? "⚠️" : ""}
                           {lastRaceWasExcellent ? "👑" : ""}
                           {anyFormsHaveEyecatcher ? "⭐" : ""}{" "}

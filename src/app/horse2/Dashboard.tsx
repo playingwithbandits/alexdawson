@@ -1,7 +1,12 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
-import { compareTwoGoingCodeArrays, distanceOkay, max } from "@/lib/utils";
+import {
+  compareTwoGoingCodeArrays,
+  distanceOkay,
+  matchRaceTypeCode,
+  max,
+} from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
 import { useState } from "react";
 import { getRaceToShowStats } from "@/components/raceDays/Race";
@@ -520,10 +525,8 @@ export function Dashboard({
 
                   raceTypeCode:
                     Boolean(avgRaceTypeCodes) &&
-                    avgRaceTypeCodes?.some(
-                      (x) =>
-                        x?.toLowerCase()?.trim() ===
-                        raceTypeCode?.toLowerCase()?.trim()
+                    avgRaceTypeCodes?.some((x) =>
+                      matchRaceTypeCode(x, raceTypeCode)
                     ),
                 };
 
@@ -541,16 +544,17 @@ export function Dashboard({
                     ?.map((f) => distanceOkay(f.distanceF, distanceF))
                     .some((x) => x),
                   raceTypeCode: form
-                    ?.map(
-                      (f) =>
-                        f.raceTypeCode?.toLowerCase()?.trim() ===
-                        raceTypeCode?.toLowerCase()?.trim()
+                    ?.map((f) =>
+                      matchRaceTypeCode(f.raceTypeCode, raceTypeCode)
                     )
                     .some((x) => x),
                 };
 
                 const horseMostRecentForm = {
-                  type: horse.mostRecentForm?.raceTypeCode === raceTypeCode,
+                  type: matchRaceTypeCode(
+                    horse.mostRecentForm?.raceTypeCode,
+                    raceTypeCode
+                  ),
                   distance: distanceOkay(
                     horse.mostRecentForm?.distanceF,
                     distanceF

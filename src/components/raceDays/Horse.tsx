@@ -57,6 +57,22 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     countCommentSentiment?.score !== undefined &&
     countCommentSentiment?.score >= 0;
 
+  const isRpMentioned = race.raceExtraInfo?.verdict?.selection
+    ? horseNameToKey(race.raceExtraInfo?.verdict?.selection) ===
+      horseNameToKey(horse.name)
+    : true;
+
+  const hasPredictions =
+    race?.predictions && Object.values(race?.predictions || {}).length > 0;
+  const rpPredictions = Object.values(race?.predictions || {})?.find(
+    (prediction) =>
+      horseNameToKey(prediction.name) === horseNameToKey(horse.name)
+  );
+  const rpPredictionScore = rpPredictions?.score;
+  const rpPredictionScoreGood = hasPredictions
+    ? rpPredictionScore !== undefined && rpPredictionScore >= 90
+    : true;
+
   const requiredStats = [
     {
       value:
@@ -81,10 +97,20 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Horse has less than 2 forms",
     },
 
+    {
+      value: rpPredictionScoreGood,
+      name: "Prediction score is not good",
+    },
+
     // {
-    //   value: lastRaceWasGood,
-    //   name: "Bad comment for last race",
+    //   value: isRpMentioned,
+    //   name: "Horse is not mentioned in the verdict",
     // },
+
+    {
+      value: lastRaceWasGood,
+      name: "Bad comment for last race",
+    },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
