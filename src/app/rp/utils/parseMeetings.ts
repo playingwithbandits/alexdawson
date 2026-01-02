@@ -2,6 +2,7 @@ import type { Race, Meeting } from "@/types/racing";
 import { fetchRaceDetails } from "./fetchRaceDetails";
 import { parseRaceDetails } from "./parseRaceDetails";
 import { parseDistance, placeToPlaceKey } from "@/lib/racing/scores/funcs";
+import { normalizeTime } from "@/components/horse/DayPredictions";
 
 export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
   return Promise.all(
@@ -48,78 +49,86 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
       };
 
       const races = await Promise.all(
-        Array.from(raceElements).map(async (raceElement): Promise<Race> => {
-          const linkElement = raceElement.querySelector(
-            ".RC-meetingItem__link"
-          ) as HTMLAnchorElement;
-          const timeElement = raceElement.querySelector(
-            '[data-test-selector="RC-courseCards__time"]'
-          );
-          const titleElement = raceElement.querySelector(
-            '[data-test-selector="RC-courseCards__info"]'
-          );
-          const runnersElement = raceElement.querySelector(
-            '[data-test-selector="RC-courseCards__runners"]'
-          );
-          const goingDataElement = raceElement.querySelector(
-            '[data-test-selector="RC-courseCards__going"]'
-          );
-          const tvElement = raceElement.querySelector(
-            '[data-test-selector="RC-meetingItem__tv"]'
-          );
+        Array.from(raceElements)
+          .filter((raceElement) => {
+            const timeElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__time"]'
+            );
 
-          // Parse going data text which contains class, age restriction and distance
-          const goingData =
-            goingDataElement?.textContent
-              ?.trim()
-              .split("\n")
-              .map((s) => s.trim())
-              .filter((x) => x.length) || [];
-          const [classInfo, ageRestriction, distance] = goingData;
+            const raceTime = normalizeTime(
+              timeElement?.textContent?.trim() || ""
+            );
 
-          // Extract the path from the full URL
-          const raceUrl = linkElement?.href
-            ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
-              new URL(linkElement.href).pathname
-            : "";
+            const today = new Date().toISOString().split("T")[0];
+            const raceDateTime = new Date(`${today}T${raceTime}:00`);
+            const raceHasFinsihed =
+              raceDateTime.getTime() < new Date().getTime();
 
-          let details = "";
-          let additionalDetails: Partial<Race> = { horses: [] };
+            return !raceHasFinsihed;
+          })
+          .map(async (raceElement): Promise<Race> => {
+            const linkElement = raceElement.querySelector(
+              ".RC-meetingItem__link"
+            ) as HTMLAnchorElement;
+            const goingDataElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__going"]'
+            );
+            const tvElement = raceElement.querySelector(
+              '[data-test-selector="RC-meetingItem__tv"]'
+            );
 
-          try {
-            //console.log(`Processing race at ${raceUrl}`);
-            details = await fetchRaceDetails(raceUrl);
-            if (details) {
-              //console.log("📝 Got race details, starting parse...");
-              additionalDetails = await parseRaceDetails(
-                details,
-                raceUrl,
-                meetingDetails
+            // Parse going data text which contains class, age restriction and distance
+            const goingData =
+              goingDataElement?.textContent
+                ?.trim()
+                .split("\n")
+                .map((s) => s.trim())
+                .filter((x) => x.length) || [];
+            const [classInfo, ageRestriction, distance] = goingData;
+
+            // Extract the path from the full URL
+            const raceUrl = linkElement?.href
+              ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+                new URL(linkElement.href).pathname
+              : "";
+
+            let details = "";
+            let additionalDetails: Partial<Race> = { horses: [] };
+
+            try {
+              //console.log(`Processing race at ${raceUrl}`);
+              details = await fetchRaceDetails(raceUrl);
+              if (details) {
+                //console.log("📝 Got race details, starting parse...");
+                additionalDetails = await parseRaceDetails(
+                  details,
+                  raceUrl,
+                  meetingDetails
+                );
+              }
+            } catch (error) {
+              console.error(
+                `Failed to fetch/parse details for race at ${raceUrl}:`,
+                error
               );
             }
-          } catch (error) {
-            console.error(
-              `Failed to fetch/parse details for race at ${raceUrl}:`,
-              error
-            );
-          }
 
-          return {
-            time: timeElement?.textContent?.trim() || "",
-            title: titleElement?.textContent?.trim() || "",
-            runners: parseInt(
-              runnersElement?.textContent?.trim().split(" ")[0] || "0",
-              10
-            ),
-            distance: parseDistance(distance || ""),
-            class: classInfo || ""?.replace("Class", "").trim(),
-            ageRestriction: ageRestriction || "",
-            tv: tvElement?.textContent?.trim() || "",
-            url: raceUrl,
-            horses: [],
-            ...additionalDetails,
-          };
-        })
+            return {
+              time: timeElement?.textContent?.trim() || "",
+              title: titleElement?.textContent?.trim() || "",
+              runners: parseInt(
+                runnersElement?.textContent?.trim().split(" ")[0] || "0",
+                10
+              ),
+              distance: parseDistance(distance || ""),
+              class: classInfo || ""?.replace("Class", "").trim(),
+              ageRestriction: ageRestriction || "",
+              tv: tvElement?.textContent?.trim() || "",
+              url: raceUrl,
+              horses: [],
+              ...additionalDetails,
+            };
+          })
       );
 
       return {
