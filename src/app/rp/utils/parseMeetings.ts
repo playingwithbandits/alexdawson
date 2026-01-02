@@ -4,7 +4,10 @@ import { parseRaceDetails } from "./parseRaceDetails";
 import { parseDistance, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 import { normalizeTime } from "@/components/horse/DayPredictions";
 
-export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
+export async function parseMeetings(
+  elements: Element[],
+  date: string
+): Promise<Meeting[]> {
   return Promise.all(
     elements.map(async (element) => {
       // Get meeting venue and going
@@ -54,9 +57,8 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
             const timeElement = raceElement.querySelector(
               '[data-test-selector="RC-courseCards__time"]'
             );
-            console.log("timeElement", timeElement);
+
             if (!timeElement) {
-              console.log("No time element found for race", raceElement);
               return true;
             }
 
@@ -69,13 +71,8 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
             const raceHasFinsihed =
               raceDateTime.getTime() < new Date().getTime();
 
-            console.log(
-              "raceHasFinsihed",
-              raceHasFinsihed,
-              raceDateTime,
-              raceTime
-            );
-            return !raceHasFinsihed;
+            const isToday = date === today;
+            return isToday && !raceHasFinsihed;
           })
           .map(async (raceElement): Promise<Race> => {
             const linkElement = raceElement.querySelector(

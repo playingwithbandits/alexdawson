@@ -1,15 +1,14 @@
 "use client";
 
+import { oldMeetingsToNewMeetings } from "@/app/rp/utils/Aug25/oldMeetingsToNewMeetings";
+import { parseMeetings } from "@/app/rp/utils/parseMeetings";
+import { useResults } from "@/hooks/useResults";
+import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
+import { IRISH_COURSES, UK_COURSES } from "@/types/courses";
 import { Meeting } from "@/types/raceday";
 import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { horseNameToKey, placeToPlaceKey } from "@/lib/racing/scores/funcs";
 import { Dashboard } from "../Dashboard";
-import { IRISH_COURSES, UK_COURSES } from "@/types/courses";
-import { parseMeetings } from "@/app/rp/utils/parseMeetings";
-import { oldMeetingsToNewMeetings } from "@/app/rp/utils/Aug25/oldMeetingsToNewMeetings";
-import { useResults } from "@/hooks/useResults";
-import { normalizeTime } from "@/components/horse/DayPredictions";
 
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
@@ -119,7 +118,8 @@ export function PageClient({ date }: { date: string }) {
           );
 
           const parsedMeetingsOld = await parseMeetings(
-            Array.from(meetingElementsArr) //.slice(0, 1)
+            Array.from(meetingElementsArr), //.slice(0, 1)
+            date
           );
 
           const parsedMeetings: Meeting[] =

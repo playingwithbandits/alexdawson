@@ -4,15 +4,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { horseNameToKey } from "@/lib/racing/scores/funcs";
+import { avg, countCommentSentimentObj } from "@/lib/utils";
 import { Meeting as MeetingType, Race as RaceType } from "@/types/raceday";
 import { RaceResults } from "@/types/racing";
-import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
-import { normalizeTime } from "../horse/DayPredictions";
-import { getWarningMessage, Horse, horseHasRequiredStats } from "./Horse";
-import { twMerge } from "tailwind-merge";
-import { avg, countCommentSentimentObj } from "@/lib/utils";
 import { useMemo, useState } from "react";
-import { horseNameToKey } from "@/lib/racing/scores/funcs";
+import { twMerge } from "tailwind-merge";
+import { normalizeTime } from "../horse/DayPredictions";
+import { getHorsePosition, getTrophy } from "../horse/rows/HorseNameRow";
+import { getWarningMessage, Horse, horseHasRequiredStats } from "./Horse";
 
 interface RaceProps {
   race: RaceType;
@@ -179,15 +179,15 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const lastRaceWasExcellent =
                       lastRaceScore !== undefined && lastRaceScore >= 3;
 
-                    const averageCommentScoreLast3 =
-                      horse?.form &&
-                      horse?.form
-                        ?.slice(0, 3)
-                        .map((form) => form.commentMatchedTerms)
-                        .map((commentMatchedTerms) =>
-                          countCommentSentimentObj(commentMatchedTerms)
-                        )
-                        .reduce((acc, curr) => acc + curr.score, 0) / 3;
+                    // const averageCommentScoreLast3 =
+                    //   horse?.form &&
+                    //   horse?.form
+                    //     ?.slice(0, 3)
+                    //     .map((form) => form.commentMatchedTerms)
+                    //     .map((commentMatchedTerms) =>
+                    //       countCommentSentimentObj(commentMatchedTerms)
+                    //     )
+                    //     .reduce((acc, curr) => acc + curr.score, 0) / 3;
 
                     //console.log(
                     //  "filteredHorses horseHasRequiredStats log 3",

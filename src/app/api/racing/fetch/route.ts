@@ -51,7 +51,7 @@ export async function POST(request: Request) {
     console.log(`✨ Filtered to ${ukElements.length} courses`, ukElements);
 
     console.log("📊 Parsing meetings data");
-    const meetings = await parseMeetings(ukElements);
+    const meetings = await parseMeetings(ukElements, date);
     console.log("✅ Successfully parsed meetings");
 
     const filePath = join(process.cwd(), "cache", "racing", `${date}.json`);

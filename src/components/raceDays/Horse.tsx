@@ -57,10 +57,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     countCommentSentiment?.score !== undefined &&
     countCommentSentiment?.score >= 0;
 
-  const isRpMentioned = race.raceExtraInfo?.verdict?.selection
-    ? horseNameToKey(race.raceExtraInfo?.verdict?.selection) ===
-      horseNameToKey(horse.name)
-    : true;
+  // const isRpMentioned = race.raceExtraInfo?.verdict?.selection
+  //   ? horseNameToKey(race.raceExtraInfo?.verdict?.selection) ===
+  //     horseNameToKey(horse.name)
+  //   : true;
 
   const hasPredictions =
     race?.predictions && Object.values(race?.predictions || {}).length > 0;
@@ -70,7 +70,7 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
   );
   const rpPredictionScore = rpPredictions?.score;
   const rpPredictionScoreGood = hasPredictions
-    ? rpPredictionScore !== undefined && rpPredictionScore >= 90
+    ? rpPredictionScore !== undefined && rpPredictionScore >= 85
     : true;
 
   const requiredStats = [
