@@ -59,12 +59,17 @@ export async function parseMeetings(
             );
 
             if (!timeElement) {
+              console.log(
+                "⏰ No timeElement found for raceElement",
+                raceElement
+              );
               return true;
             }
 
             const raceTime = normalizeTime(
               timeElement?.textContent?.trim() || ""
             );
+            console.log("⏰ Evaluating race with time:", raceTime);
 
             const today = new Date().toISOString().split("T")[0];
             const raceDateTime = new Date(`${today}T${raceTime}:00`);
@@ -72,7 +77,10 @@ export async function parseMeetings(
               raceDateTime.getTime() < new Date().getTime();
 
             const isToday = date === today;
-            return isToday && !raceHasFinsihed;
+            console.log(
+              `🔍 raceTime: ${raceTime}, today: ${today}, isToday: ${isToday}, raceDateTime: ${raceDateTime.toISOString()}, hasFinished: ${raceHasFinsihed}`
+            );
+            return isToday ? !raceHasFinsihed : true;
           })
           .map(async (raceElement): Promise<Race> => {
             const linkElement = raceElement.querySelector(
