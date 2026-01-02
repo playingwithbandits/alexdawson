@@ -54,6 +54,11 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
             const timeElement = raceElement.querySelector(
               '[data-test-selector="RC-courseCards__time"]'
             );
+            console.log("timeElement", timeElement);
+            if (!timeElement) {
+              console.log("No time element found for race", raceElement);
+              return true;
+            }
 
             const raceTime = normalizeTime(
               timeElement?.textContent?.trim() || ""
@@ -64,12 +69,27 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
             const raceHasFinsihed =
               raceDateTime.getTime() < new Date().getTime();
 
+            console.log(
+              "raceHasFinsihed",
+              raceHasFinsihed,
+              raceDateTime,
+              raceTime
+            );
             return !raceHasFinsihed;
           })
           .map(async (raceElement): Promise<Race> => {
             const linkElement = raceElement.querySelector(
               ".RC-meetingItem__link"
             ) as HTMLAnchorElement;
+            const timeElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__time"]'
+            );
+            const titleElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__info"]'
+            );
+            const runnersElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__runners"]'
+            );
             const goingDataElement = raceElement.querySelector(
               '[data-test-selector="RC-courseCards__going"]'
             );
@@ -121,7 +141,9 @@ export async function parseMeetings(elements: Element[]): Promise<Meeting[]> {
                 10
               ),
               distance: parseDistance(distance || ""),
-              class: classInfo || ""?.replace("Class", "").trim(),
+              class:
+                parseInt(classInfo?.replace("Class", "").trim() || "0", 10) ||
+                0,
               ageRestriction: ageRestriction || "",
               tv: tvElement?.textContent?.trim() || "",
               url: raceUrl,
