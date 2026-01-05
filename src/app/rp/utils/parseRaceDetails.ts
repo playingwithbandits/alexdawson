@@ -91,8 +91,8 @@ export async function parseRaceDetails(
   const rows = Array.from(rowsElements);
   //console.log(`Found ${rows.length} horses to parse`);
 
-  const _180DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365);
-  const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
+  const _60DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
+  const oneYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 1);
   const horses: Horse[] = [];
   for (let i = 0; i < rows.length; i++) {
     if (i > 0) {
@@ -132,7 +132,7 @@ export async function parseRaceDetails(
           ?.split("/")?.[4] || "";
 
       const date = new Date(formRowDate || "");
-      return isValidOutcome(raceOutcomeCode) && date > _180DaysAgo;
+      return isValidOutcome(raceOutcomeCode) && date > _60DaysAgo;
     });
 
     const allValidFormRowsStatsData = [];
@@ -149,9 +149,42 @@ export async function parseRaceDetails(
         ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
           new URL(outcomeLink.href).pathname
         : "";
-      const lastRaceEle = lastRaceLink
-        ? await fetchFormRaceDetails(lastRaceLink)
-        : undefined;
+
+      let lastRaceEle = "";
+      let tryCount = 0;
+      let retryDoc: Document | null = null;
+      while (tryCount < 10) {
+        tryCount++;
+        console.log(
+          "🏁 parseRaceDetails - Trying to fetch last race details",
+          tryCount,
+          lastRaceLink
+        );
+        if (lastRaceLink) {
+          await new Promise((resolve) => setTimeout(resolve, 700));
+          const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
+          const retryParser = new DOMParser();
+          retryDoc = retryParser.parseFromString(
+            retryRaceEle || "",
+            "text/html"
+          );
+          if (retryDoc.querySelector(".rp-horseTable__table")) {
+            // Successfully loaded the correct page
+            lastRaceEle = retryRaceEle;
+            break;
+          }
+        } else {
+          // No link to retry
+          break;
+        }
+      }
+
+      console.log(
+        "🏁 parseRaceDetails - race element fetcher result",
+        lastRaceLink,
+        tryCount,
+        lastRaceEle
+      );
 
       const formRowValidDate =
         latestFormRow
@@ -265,7 +298,7 @@ export async function parseRaceDetails(
             // x.officialRatingRanOff &&
             // x.officialRatingRanOff > 0 &&
             // x.raceClass !== null &&
-            new Date(x.raceDatetime || "") > twoYearsAgo
+            new Date(x.raceDatetime || "") > oneYearsAgo
         ),
       },
       number:
