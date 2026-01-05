@@ -91,7 +91,7 @@ export async function parseRaceDetails(
   const rows = Array.from(rowsElements);
   //console.log(`Found ${rows.length} horses to parse`);
 
-  const _180DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
+  const _120DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 120);
   const oneYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 1);
   const horses: Horse[] = await Promise.all(
     rows.map(async (row) => {
@@ -128,7 +128,7 @@ export async function parseRaceDetails(
             ?.split("/")?.[4] || "";
 
         const date = new Date(formRowDate || "");
-        return isValidOutcome(raceOutcomeCode) && date > _180DaysAgo;
+        return isValidOutcome(raceOutcomeCode) && date > _120DaysAgo;
       });
 
       const allValidFormRowsStatsData = await Promise.all(
@@ -145,7 +145,7 @@ export async function parseRaceDetails(
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 250) {
+          while (tryCount < 60) {
             tryCount++;
             console.log(
               "🏁 parseRaceDetails - Trying to fetch last race details",
@@ -153,7 +153,7 @@ export async function parseRaceDetails(
               lastRaceLink
             );
             if (lastRaceLink) {
-              await new Promise((resolve) => setTimeout(resolve, 1000));
+              await new Promise((resolve) => setTimeout(resolve, 6000));
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
               retryDoc = retryParser.parseFromString(

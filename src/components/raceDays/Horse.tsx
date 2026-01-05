@@ -128,10 +128,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    {
-      value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
-      name: "Hasn't averaged distance",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
+    //   name: "Hasn't averaged distance",
+    // },
 
     {
       value: horse?.scoreObj?.horseMostRecentForm?.type,
@@ -417,8 +417,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseFormAveragesStatsGood?.distance &&
-                          "text-[rgb(105,255,100)]"
+                        horseFormAveragesStatsGood?.distance && "text-[#fa9360]"
                       )}
                     >
                       {formAveragesDistanceF?.toFixed(1)}
