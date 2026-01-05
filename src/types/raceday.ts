@@ -126,6 +126,7 @@ export interface ScoreObj {
     lastRan: boolean;
     distance: boolean;
     raceTypeCode: boolean;
+    track: boolean;
   };
   horseMostRecentForm: {
     type: boolean;

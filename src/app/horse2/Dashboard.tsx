@@ -3,6 +3,7 @@ import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
 import {
   compareTwoGoingCodeArrays,
+  courseNameToTrackId,
   distanceOkay,
   matchRaceTypeCode,
   max,
@@ -531,6 +532,9 @@ export function Dashboard({
                 };
 
                 const horseRacedWith = {
+                  track: form
+                    ?.map((x) => courseNameToTrackId(x.trackId))
+                    .includes(courseNameToTrackId(meeting.trackId)),
                   jockey: form
                     ?.map((x) => horseNameToKey(x.jockey))
                     .includes(horseNameToKey(jockey)),
