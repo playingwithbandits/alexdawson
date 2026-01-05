@@ -93,276 +93,284 @@ export async function parseRaceDetails(
 
   const _60DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
   const oneYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 1);
-  const horses: Horse[] = [];
-  for (let i = 0; i < rows.length; i++) {
-    if (i > 0) {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-    }
-    const row = rows[i];
-    const profileLink = row.querySelector(
-      ".RC-runnerName.ui-link"
-    ) as HTMLAnchorElement;
-    const profileUrl = profileLink?.href
-      ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
-        new URL(profileLink.href).pathname
-      : "";
-    const formObj = await fetchHorseForm(profileUrl);
-
-    const name = horseNameToKey(
-      row.querySelector(".RC-runnerName")?.textContent?.trim() || ""
-    );
-
-    const formTableEle = row.querySelector(
-      `[data-test-selector="RC-runnerFormBody"]`
-    );
-    const formRows = formTableEle?.querySelectorAll("tr");
-
-    const formRowsValid = Array.from(formRows || [])?.filter((x) => {
-      const outcomeCell = x.querySelector(
-        '[data-test-selector="RC-runnerFormRow__outcome"]'
-      );
-      const outcomeText =
-        outcomeCell?.querySelector("a")?.textContent?.trim() || "";
-      const raceOutcomeCode = outcomeText.split("/")[0];
-
-      const formRowDate: string =
-        x
-          ?.querySelector('[data-test-selector="RC-runnerFormLink__results"]')
-          ?.getAttribute("href")
-          ?.split("/")?.[4] || "";
-
-      const date = new Date(formRowDate || "");
-      return isValidOutcome(raceOutcomeCode) && date > _60DaysAgo;
-    });
-
-    const allValidFormRowsStatsData = [];
-    for (let j = 0; j < formRowsValid.length; j++) {
-      if (j > 0) {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-      }
-      const latestFormRow = formRowsValid[j];
-      const outcomeCell = latestFormRow?.querySelector(
-        '[data-test-selector="RC-runnerFormRow__outcome"]'
-      );
-      const outcomeLink = outcomeCell?.querySelector("a");
-      const lastRaceLink = outcomeLink?.href
+  const horses: Horse[] = await Promise.all(
+    rows.map(async (row) => {
+      const profileLink = row.querySelector(
+        ".RC-runnerName.ui-link"
+      ) as HTMLAnchorElement;
+      const profileUrl = profileLink?.href
         ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
-          new URL(outcomeLink.href).pathname
+          new URL(profileLink.href).pathname
         : "";
+      const formObj = await fetchHorseForm(profileUrl);
 
-      let lastRaceEle = "";
-      let tryCount = 0;
-      let retryDoc: Document | null = null;
-      while (tryCount < 10) {
-        tryCount++;
-        console.log(
-          "🏁 parseRaceDetails - Trying to fetch last race details",
-          tryCount,
-          lastRaceLink
-        );
-        if (lastRaceLink) {
-          await new Promise((resolve) => setTimeout(resolve, 700));
-          const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
-          const retryParser = new DOMParser();
-          retryDoc = retryParser.parseFromString(
-            retryRaceEle || "",
-            "text/html"
-          );
-          if (retryDoc.querySelector(".rp-horseTable__table")) {
-            // Successfully loaded the correct page
-            lastRaceEle = retryRaceEle;
-            break;
-          }
-        } else {
-          // No link to retry
-          break;
-        }
-      }
-
-      console.log(
-        "🏁 parseRaceDetails - race element fetcher result",
-        lastRaceLink,
-        tryCount,
-        lastRaceEle
+      const name = horseNameToKey(
+        row.querySelector(".RC-runnerName")?.textContent?.trim() || ""
       );
 
-      const formRowValidDate =
-        latestFormRow
-          ?.querySelector('[data-test-selector="RC-runnerFormLink__results"]')
-          ?.getAttribute("href")
-          ?.split("/")?.[4] || undefined;
+      const formTableEle = row.querySelector(
+        `[data-test-selector="RC-runnerFormBody"]`
+      );
+      const formRows = formTableEle?.querySelectorAll("tr");
 
-      const matchingFormObj = formRowValidDate
-        ? formObj?.form?.find((x) => {
-            const date1 = x.raceDatetime
-              ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
-              : undefined;
-            const date2 = formRowValidDate
-              ? new Date(formRowValidDate || "").toISOString().split("T")[0]
-              : undefined;
-            return date1 === date2;
-          })
-        : formObj?.form?.[0];
-
-      const lastRaceTypeCode = matchingFormObj?.raceTypeCode || "";
-
-      const lastFormRowFromDistanceYard = matchingFormObj?.distanceYard || 0;
-      const lastFormRowDistanceFurlongAccurate =
-        lastFormRowFromDistanceYard * 0.00454545;
-
-      const lastRaceStatsObj = lastRaceEle
-        ? await lastRaceToLastRaceStats(
-            lastRaceEle,
-            name,
-            lastFormRowDistanceFurlongAccurate || raceDistance,
-            lastRaceTypeCode
-          )
-        : undefined;
-
-      if (
-        !lastRaceStatsObj?.runners_all ||
-        lastRaceStatsObj?.runners_all?.length === 0
-      ) {
-        console.error(
-          "🏁 lastRaceToLastRaceStats - No last race stats object found",
-          lastRaceLink
+      const formRowsValid = Array.from(formRows || [])?.filter((x) => {
+        const outcomeCell = x.querySelector(
+          '[data-test-selector="RC-runnerFormRow__outcome"]'
         );
-      }
+        const outcomeText =
+          outcomeCell?.querySelector("a")?.textContent?.trim() || "";
+        const raceOutcomeCode = outcomeText.split("/")[0];
 
-      allValidFormRowsStatsData.push({
-        formRowValidDate,
-        lastRaceStatsObj,
-        matchingFormObj,
-        name,
-        lastFormRowDistanceFurlongAccurate:
-          lastFormRowDistanceFurlongAccurate || raceDistance,
-        lastRaceTypeCode,
+        const formRowDate: string =
+          x
+            ?.querySelector('[data-test-selector="RC-runnerFormLink__results"]')
+            ?.getAttribute("href")
+            ?.split("/")?.[4] || "";
+
+        const date = new Date(formRowDate || "");
+        return isValidOutcome(raceOutcomeCode) && date > _60DaysAgo;
       });
-    }
 
-    const allFormRowsStatsDataStatsObjs = allValidFormRowsStatsData
-      .map((x) => x.lastRaceStatsObj)
-      .filter((x) => x !== undefined);
+      const allValidFormRowsStatsData = await Promise.all(
+        formRowsValid.map(async (latestFormRow) => {
+          const outcomeCell = latestFormRow?.querySelector(
+            '[data-test-selector="RC-runnerFormRow__outcome"]'
+          );
+          const outcomeLink = outcomeCell?.querySelector("a");
+          const lastRaceLink = outcomeLink?.href
+            ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+              new URL(outcomeLink.href).pathname
+            : "";
 
-    const minTimePerFurlong =
-      min(
-        allFormRowsStatsDataStatsObjs
-          .map((x) => x.info?.timePerFurlong || 0)
-          ?.filter(Boolean)
-      ) || 0;
-    const maxBeatenAvgsRpr =
-      max(
-        allFormRowsStatsDataStatsObjs
-          .map((x) => x.averages_beaten?.rpr || 0)
-          ?.filter(Boolean)
-      ) || 0;
-    const maxBeatenMaxesRpr =
-      max(
-        allFormRowsStatsDataStatsObjs
-          .map((x) => x.maxes_beaten?.rpr || 0)
-          ?.filter(Boolean)
-      ) || 0;
-
-    const allValidFormRowsStatsDataStats: AllValidFormRowsStatsDataStatsType = {
-      raw: allValidFormRowsStatsData,
-      maxBeatenAvgsRpr,
-      maxBeatenMaxesRpr,
-      minTimePerFurlong,
-    };
-
-    // console.log(
-    //   "🏁 lastRaceToLastRaceStats",
-    //   {
-    //     lastRaceEle,
-    //     name,
-    //     lastFormRowDistanceFurlongAccurate,
-    //     raceDistance,
-    //   },
-    //   outcomeLink?.href,
-    //   lastRaceLink,
-    //   lastRaceEle,
-    //   lastRaceStatsObj,
-    //   lastRaceTypeCode
-    // );
-
-    horses.push({
-      name,
-      profileUrl,
-      lastRaceStats: allValidFormRowsStatsDataStats?.raw?.[0]?.lastRaceStatsObj,
-      allValidFormRowsStatsDataStats,
-      formObj: {
-        ...formObj,
-        form: formObj?.form?.filter(
-          (x) =>
-            // isValidOutcome(x.raceOutcomeCode) &&
-            // x.officialRatingRanOff &&
-            // x.officialRatingRanOff > 0 &&
-            // x.raceClass !== null &&
-            new Date(x.raceDatetime || "") > oneYearsAgo
-        ),
-      },
-      number:
-        row.querySelector(".RC-runnerNumber__no")?.textContent?.trim() || "",
-      draw: row
-        .querySelector(".RC-runnerNumber__draw")
-        ?.textContent?.replace(/[()]/g, "")
-        .trim(),
-      age: row.querySelector(".RC-runnerAge")?.textContent?.trim() || "",
-      headGear: (() => {
-        const code = row
-          .querySelector(".RC-runnerHeadgearCode")
-          ?.textContent?.trim();
-        return code
-          ? {
-              code,
-              description: code, // Removed mapHeadgear since it's undefined
+          let lastRaceEle = "";
+          let tryCount = 0;
+          let retryDoc: Document | null = null;
+          while (tryCount < 100) {
+            tryCount++;
+            console.log(
+              "🏁 parseRaceDetails - Trying to fetch last race details",
+              tryCount,
+              lastRaceLink
+            );
+            if (lastRaceLink) {
+              await new Promise((resolve) => setTimeout(resolve, 700));
+              const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
+              const retryParser = new DOMParser();
+              retryDoc = retryParser.parseFromString(
+                retryRaceEle || "",
+                "text/html"
+              );
+              if (retryDoc.querySelector(".rp-horseTable__table")) {
+                // Successfully loaded the correct page
+                lastRaceEle = retryRaceEle;
+                break;
+              } else {
+                console.log(
+                  "🏁 parseRaceDetails - race element fetcher result",
+                  lastRaceLink,
+                  tryCount,
+                  "no table found"
+                );
+              }
+            } else {
+              // No link to retry
+              break;
             }
-          : undefined;
-      })(),
-      weight: (() => {
-        const wgtElement = row.querySelector(".RC-runnerWgt__carried");
-        const pounds = Number(wgtElement?.getAttribute("data-order-wgt") || 0);
-        const stone = Math.floor(pounds / 14);
-        const remainingPounds = pounds % 14;
-        const display = `${stone}-${remainingPounds}`;
-        return {
-          pounds,
-          display: display,
+          }
+
+          console.log(
+            "🏁 parseRaceDetails - race element fetcher result",
+            lastRaceLink,
+            tryCount,
+            lastRaceEle
+          );
+
+          const formRowValidDate =
+            latestFormRow
+              ?.querySelector(
+                '[data-test-selector="RC-runnerFormLink__results"]'
+              )
+              ?.getAttribute("href")
+              ?.split("/")?.[4] || undefined;
+
+          const matchingFormObj = formRowValidDate
+            ? formObj?.form?.find((x) => {
+                const date1 = x.raceDatetime
+                  ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
+                  : undefined;
+                const date2 = formRowValidDate
+                  ? new Date(formRowValidDate || "").toISOString().split("T")[0]
+                  : undefined;
+                return date1 === date2;
+              })
+            : formObj?.form?.[0];
+
+          const lastRaceTypeCode = matchingFormObj?.raceTypeCode || "";
+
+          const lastFormRowFromDistanceYard =
+            matchingFormObj?.distanceYard || 0;
+          const lastFormRowDistanceFurlongAccurate =
+            lastFormRowFromDistanceYard * 0.00454545;
+
+          const lastRaceStatsObj = lastRaceEle
+            ? await lastRaceToLastRaceStats(
+                lastRaceEle,
+                name,
+                lastFormRowDistanceFurlongAccurate || raceDistance,
+                lastRaceTypeCode
+              )
+            : undefined;
+
+          if (
+            !lastRaceStatsObj?.runners_all ||
+            lastRaceStatsObj?.runners_all?.length === 0
+          ) {
+            console.error(
+              "🏁 lastRaceToLastRaceStats - No last race stats object found",
+              lastRaceLink
+            );
+          }
+
+          return {
+            formRowValidDate,
+            lastRaceStatsObj,
+            matchingFormObj,
+            name,
+            lastFormRowDistanceFurlongAccurate:
+              lastFormRowDistanceFurlongAccurate || raceDistance,
+            lastRaceTypeCode,
+          };
+        })
+      );
+
+      const allFormRowsStatsDataStatsObjs = allValidFormRowsStatsData
+        .map((x) => x.lastRaceStatsObj)
+        .filter((x) => x !== undefined);
+
+      const minTimePerFurlong =
+        min(
+          allFormRowsStatsDataStatsObjs
+            .map((x) => x.info?.timePerFurlong || 0)
+            ?.filter(Boolean)
+        ) || 0;
+      const maxBeatenAvgsRpr =
+        max(
+          allFormRowsStatsDataStatsObjs
+            .map((x) => x.averages_beaten?.rpr || 0)
+            ?.filter(Boolean)
+        ) || 0;
+      const maxBeatenMaxesRpr =
+        max(
+          allFormRowsStatsDataStatsObjs
+            .map((x) => x.maxes_beaten?.rpr || 0)
+            ?.filter(Boolean)
+        ) || 0;
+
+      const allValidFormRowsStatsDataStats: AllValidFormRowsStatsDataStatsType =
+        {
+          raw: allValidFormRowsStatsData,
+          maxBeatenAvgsRpr,
+          maxBeatenMaxesRpr,
+          minTimePerFurlong,
         };
-      })(),
-      jockey: {
-        name:
+
+      // console.log(
+      //   "🏁 lastRaceToLastRaceStats",
+      //   {
+      //     lastRaceEle,
+      //     name,
+      //     lastFormRowDistanceFurlongAccurate,
+      //     raceDistance,
+      //   },
+      //   outcomeLink?.href,
+      //   lastRaceLink,
+      //   lastRaceEle,
+      //   lastRaceStatsObj,
+      //   lastRaceTypeCode
+      // );
+
+      return {
+        name,
+        profileUrl,
+        lastRaceStats:
+          allValidFormRowsStatsDataStats?.raw?.[0]?.lastRaceStatsObj,
+        allValidFormRowsStatsDataStats,
+        formObj: {
+          ...formObj,
+          form: formObj?.form?.filter(
+            (x) =>
+              // isValidOutcome(x.raceOutcomeCode) &&
+              // x.officialRatingRanOff &&
+              // x.officialRatingRanOff > 0 &&
+              // x.raceClass !== null &&
+              new Date(x.raceDatetime || "") > oneYearsAgo
+          ),
+        },
+        number:
+          row.querySelector(".RC-runnerNumber__no")?.textContent?.trim() || "",
+        draw: row
+          .querySelector(".RC-runnerNumber__draw")
+          ?.textContent?.replace(/[()]/g, "")
+          .trim(),
+        age: row.querySelector(".RC-runnerAge")?.textContent?.trim() || "",
+        headGear: (() => {
+          const code = row
+            .querySelector(".RC-runnerHeadgearCode")
+            ?.textContent?.trim();
+          return code
+            ? {
+                code,
+                description: code, // Removed mapHeadgear since it's undefined
+              }
+            : undefined;
+        })(),
+        weight: (() => {
+          const wgtElement = row.querySelector(".RC-runnerWgt__carried");
+          const pounds = Number(
+            wgtElement?.getAttribute("data-order-wgt") || 0
+          );
+          const stone = Math.floor(pounds / 14);
+          const remainingPounds = pounds % 14;
+          const display = `${stone}-${remainingPounds}`;
+          return {
+            pounds,
+            display: display,
+          };
+        })(),
+        jockey: {
+          name:
+            row
+              .querySelector(".RC-runnerInfo_jockey .RC-runnerInfo__name")
+              ?.textContent?.trim() || "",
+          allowance: row
+            .querySelector(".RC-runnerInfo_jockey .RC-runnerInfo__count")
+            ?.textContent?.trim(),
+        },
+        trainer: {
+          name:
+            row
+              .querySelector(".RC-runnerInfo_trainer .RC-runnerInfo__name")
+              ?.textContent?.trim() || "",
+          stats: row
+            .querySelector(".RC-runnerInfo_trainer .RC-runnerInfo__count")
+            ?.textContent?.trim(),
+        },
+        owner:
           row
-            .querySelector(".RC-runnerInfo_jockey .RC-runnerInfo__name")
+            .querySelector(".RC-runnerInfo_owner .RC-runnerInfo__name")
             ?.textContent?.trim() || "",
-        allowance: row
-          .querySelector(".RC-runnerInfo_jockey .RC-runnerInfo__count")
+        rating: row.querySelector(".RC-runnerRpr")?.textContent?.trim() || "",
+        officialRating:
+          row.querySelector(".RC-runnerOr")?.textContent?.trim() || "",
+        topSpeed: row.querySelector(".RC-runnerTs")?.textContent?.trim() || "",
+        form: row.querySelector(".RC-runnerInfo__form")?.textContent?.trim(),
+        lastRun: row
+          .querySelector(".RC-runnerStats__lastRun")
           ?.textContent?.trim(),
-      },
-      trainer: {
-        name:
-          row
-            .querySelector(".RC-runnerInfo_trainer .RC-runnerInfo__name")
-            ?.textContent?.trim() || "",
-        stats: row
-          .querySelector(".RC-runnerInfo_trainer .RC-runnerInfo__count")
-          ?.textContent?.trim(),
-      },
-      owner:
-        row
-          .querySelector(".RC-runnerInfo_owner .RC-runnerInfo__name")
-          ?.textContent?.trim() || "",
-      rating: row.querySelector(".RC-runnerRpr")?.textContent?.trim() || "",
-      officialRating:
-        row.querySelector(".RC-runnerOr")?.textContent?.trim() || "",
-      topSpeed: row.querySelector(".RC-runnerTs")?.textContent?.trim() || "",
-      form: row.querySelector(".RC-runnerInfo__form")?.textContent?.trim(),
-      lastRun: row
-        .querySelector(".RC-runnerStats__lastRun")
-        ?.textContent?.trim(),
-      stats: calculateHorseStats(formObj),
-    });
-  }
+        stats: calculateHorseStats(formObj),
+      };
+    })
+  );
 
   //console.log("🐎 horses", horses);
 

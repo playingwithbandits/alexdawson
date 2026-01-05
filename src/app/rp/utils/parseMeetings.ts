@@ -8,160 +8,160 @@ export async function parseMeetings(
   elements: Element[],
   date: string
 ): Promise<Meeting[]> {
-  const meetings: Meeting[] = [];
-  for (let i = 0; i < elements.length; i++) {
-    if (i > 0) {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-    }
-    const element = elements[i];
-    // Get meeting venue and going
-    const venueElement = element.querySelector(".RC-accordion__courseName");
-    const surfaceElement = element.querySelector(".RC-accordion__surface");
-    const firstRaceElement = element.querySelector(
-      '[data-test-selector="RC-accordion__firstRaceTime"]'
-    );
-    const lastRaceElement = element.querySelector(
-      '[data-test-selector="RC-accordion__lastRaceTime"]'
-    );
-    const typeElement = element.querySelector(
-      '[data-test-selector="RC-accordion__meetingType"]'
-    );
-    const raceCountElement = element.querySelector(
-      '[data-test-selector="RC-accordion__raceCount"]'
-    );
-    const goingElement = element.querySelector(
-      '[data-test-selector="RC-courseDescription__info"]'
-    );
-
-    // Get all races for this meeting
-    const raceElementsAll = element.querySelectorAll(
-      '[data-test-selector="RC-courseCards__raceRow"]'
-    );
-
-    const raceElements = Array.from(raceElementsAll); //.slice(0, 1)
-
-    //console.log("Venue:", venueElement?.textContent);
-    //console.log("Races found:", raceElements);
-
-    const meetingDetails = {
-      venue: placeToPlaceKey(venueElement?.textContent?.trim() || ""),
-      surface: surfaceElement?.textContent?.trim() || "Turf",
-      firstRace: firstRaceElement?.textContent?.trim() || "",
-      lastRace:
-        lastRaceElement?.textContent?.trim().replace(/[&nbsp;-]*/g, "") || "",
-      type: typeElement?.textContent?.trim() || "",
-      raceCount: raceCountElement?.textContent?.trim() || "",
-      going: goingElement?.textContent?.trim().replace(/^GOING\s*/i, "") || "",
-    };
-
-    const filteredRaceElements = Array.from(raceElements).filter(
-      (raceElement) => {
-        const timeElement = raceElement.querySelector(
-          '[data-test-selector="RC-courseCards__time"]'
-        );
-
-        if (!timeElement) {
-          console.log("⏰ No timeElement found for raceElement", raceElement);
-          return true;
-        }
-
-        const raceTime = normalizeTime(timeElement?.textContent?.trim() || "");
-        console.log("⏰ Evaluating race with time:", raceTime);
-
-        const today = new Date().toISOString().split("T")[0];
-        const raceDateTime = new Date(`${today}T${raceTime}:00`);
-        const raceHasFinsihed = raceDateTime.getTime() < new Date().getTime();
-
-        const isToday = date === today;
-        console.log(
-          `🔍 raceTime: ${raceTime}, today: ${today}, isToday: ${isToday}, raceDateTime: ${raceDateTime.toISOString()}, hasFinished: ${raceHasFinsihed}`
-        );
-        return isToday ? !raceHasFinsihed : true;
-      }
-    );
-
-    const races: Race[] = [];
-    for (let j = 0; j < filteredRaceElements.length; j++) {
-      if (j > 0) {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-      }
-      const raceElement = filteredRaceElements[j];
-      const linkElement = raceElement.querySelector(
-        ".RC-meetingItem__link"
-      ) as HTMLAnchorElement;
-      const timeElement = raceElement.querySelector(
-        '[data-test-selector="RC-courseCards__time"]'
+  return Promise.all(
+    elements.map(async (element) => {
+      // Get meeting venue and going
+      const venueElement = element.querySelector(".RC-accordion__courseName");
+      const surfaceElement = element.querySelector(".RC-accordion__surface");
+      const firstRaceElement = element.querySelector(
+        '[data-test-selector="RC-accordion__firstRaceTime"]'
       );
-      const titleElement = raceElement.querySelector(
-        '[data-test-selector="RC-courseCards__info"]'
+      const lastRaceElement = element.querySelector(
+        '[data-test-selector="RC-accordion__lastRaceTime"]'
       );
-      const runnersElement = raceElement.querySelector(
-        '[data-test-selector="RC-courseCards__runners"]'
+      const typeElement = element.querySelector(
+        '[data-test-selector="RC-accordion__meetingType"]'
       );
-      const goingDataElement = raceElement.querySelector(
-        '[data-test-selector="RC-courseCards__going"]'
+      const raceCountElement = element.querySelector(
+        '[data-test-selector="RC-accordion__raceCount"]'
       );
-      const tvElement = raceElement.querySelector(
-        '[data-test-selector="RC-meetingItem__tv"]'
+      const goingElement = element.querySelector(
+        '[data-test-selector="RC-courseDescription__info"]'
       );
 
-      // Parse going data text which contains class, age restriction and distance
-      const goingData =
-        goingDataElement?.textContent
-          ?.trim()
-          .split("\n")
-          .map((s) => s.trim())
-          .filter((x) => x.length) || [];
-      const [classInfo, ageRestriction, distance] = goingData;
+      // Get all races for this meeting
+      const raceElementsAll = element.querySelectorAll(
+        '[data-test-selector="RC-courseCards__raceRow"]'
+      );
 
-      // Extract the path from the full URL
-      const raceUrl = linkElement?.href
-        ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
-          new URL(linkElement.href).pathname
-        : "";
+      const raceElements = Array.from(raceElementsAll); //.slice(0, 1)
 
-      let details = "";
-      let additionalDetails: Partial<Race> = { horses: [] };
+      //console.log("Venue:", venueElement?.textContent);
+      //console.log("Races found:", raceElements);
 
-      try {
-        //console.log(`Processing race at ${raceUrl}`);
-        details = await fetchRaceDetails(raceUrl);
-        if (details) {
-          //console.log("📝 Got race details, starting parse...");
-          additionalDetails = await parseRaceDetails(
-            details,
-            raceUrl,
-            meetingDetails
-          );
-        }
-      } catch (error) {
-        console.error(
-          `Failed to fetch/parse details for race at ${raceUrl}:`,
-          error
-        );
-      }
+      const meetingDetails = {
+        venue: placeToPlaceKey(venueElement?.textContent?.trim() || ""),
+        surface: surfaceElement?.textContent?.trim() || "Turf",
+        firstRace: firstRaceElement?.textContent?.trim() || "",
+        lastRace:
+          lastRaceElement?.textContent?.trim().replace(/[&nbsp;-]*/g, "") || "",
+        type: typeElement?.textContent?.trim() || "",
+        raceCount: raceCountElement?.textContent?.trim() || "",
+        going:
+          goingElement?.textContent?.trim().replace(/^GOING\s*/i, "") || "",
+      };
 
-      races.push({
-        time: timeElement?.textContent?.trim() || "",
-        title: titleElement?.textContent?.trim() || "",
-        runners: parseInt(
-          runnersElement?.textContent?.trim().split(" ")[0] || "0",
-          10
-        ),
-        distance: parseDistance(distance || ""),
-        class: parseInt(classInfo?.replace("Class", "").trim() || "0", 10) || 0,
-        ageRestriction: ageRestriction || "",
-        tv: tvElement?.textContent?.trim() || "",
-        url: raceUrl,
-        horses: [],
-        ...additionalDetails,
-      });
-    }
+      const races = await Promise.all(
+        Array.from(raceElements)
+          .filter((raceElement) => {
+            const timeElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__time"]'
+            );
 
-    meetings.push({
-      ...meetingDetails,
-      races,
-    });
-  }
-  return meetings;
+            if (!timeElement) {
+              console.log(
+                "⏰ No timeElement found for raceElement",
+                raceElement
+              );
+              return true;
+            }
+
+            const raceTime = normalizeTime(
+              timeElement?.textContent?.trim() || ""
+            );
+            console.log("⏰ Evaluating race with time:", raceTime);
+
+            const today = new Date().toISOString().split("T")[0];
+            const raceDateTime = new Date(`${today}T${raceTime}:00`);
+            const raceHasFinsihed =
+              raceDateTime.getTime() < new Date().getTime();
+
+            const isToday = date === today;
+            console.log(
+              `🔍 raceTime: ${raceTime}, today: ${today}, isToday: ${isToday}, raceDateTime: ${raceDateTime.toISOString()}, hasFinished: ${raceHasFinsihed}`
+            );
+            return isToday ? !raceHasFinsihed : true;
+          })
+          .map(async (raceElement): Promise<Race> => {
+            const linkElement = raceElement.querySelector(
+              ".RC-meetingItem__link"
+            ) as HTMLAnchorElement;
+            const timeElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__time"]'
+            );
+            const titleElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__info"]'
+            );
+            const runnersElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__runners"]'
+            );
+            const goingDataElement = raceElement.querySelector(
+              '[data-test-selector="RC-courseCards__going"]'
+            );
+            const tvElement = raceElement.querySelector(
+              '[data-test-selector="RC-meetingItem__tv"]'
+            );
+
+            // Parse going data text which contains class, age restriction and distance
+            const goingData =
+              goingDataElement?.textContent
+                ?.trim()
+                .split("\n")
+                .map((s) => s.trim())
+                .filter((x) => x.length) || [];
+            const [classInfo, ageRestriction, distance] = goingData;
+
+            // Extract the path from the full URL
+            const raceUrl = linkElement?.href
+              ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+                new URL(linkElement.href).pathname
+              : "";
+
+            let details = "";
+            let additionalDetails: Partial<Race> = { horses: [] };
+
+            try {
+              //console.log(`Processing race at ${raceUrl}`);
+              details = await fetchRaceDetails(raceUrl);
+              if (details) {
+                //console.log("📝 Got race details, starting parse...");
+                additionalDetails = await parseRaceDetails(
+                  details,
+                  raceUrl,
+                  meetingDetails
+                );
+              }
+            } catch (error) {
+              console.error(
+                `Failed to fetch/parse details for race at ${raceUrl}:`,
+                error
+              );
+            }
+
+            return {
+              time: timeElement?.textContent?.trim() || "",
+              title: titleElement?.textContent?.trim() || "",
+              runners: parseInt(
+                runnersElement?.textContent?.trim().split(" ")[0] || "0",
+                10
+              ),
+              distance: parseDistance(distance || ""),
+              class:
+                parseInt(classInfo?.replace("Class", "").trim() || "0", 10) ||
+                0,
+              ageRestriction: ageRestriction || "",
+              tv: tvElement?.textContent?.trim() || "",
+              url: raceUrl,
+              horses: [],
+              ...additionalDetails,
+            };
+          })
+      );
+
+      return {
+        ...meetingDetails,
+        races,
+      };
+    })
+  );
 }
