@@ -145,7 +145,7 @@ export async function parseRaceDetails(
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 60) {
+          while (tryCount < 225) {
             tryCount++;
             console.log(
               "🏁 parseRaceDetails - Trying to fetch last race details",
@@ -153,7 +153,7 @@ export async function parseRaceDetails(
               lastRaceLink
             );
             if (lastRaceLink) {
-              await new Promise((resolve) => setTimeout(resolve, 6000));
+              await new Promise((resolve) => setTimeout(resolve, 2000));
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
               retryDoc = retryParser.parseFromString(

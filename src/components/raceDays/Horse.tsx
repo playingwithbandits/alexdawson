@@ -74,19 +74,19 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     : true;
 
   const requiredStats = [
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.race_averages_racedAgainstMaxes,
-      name: "Averages raced against maxes is good",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.race_averages_racedAgainstMaxes,
+    //   name: "Averages raced against maxes is good",
+    // },
     {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
     },
     {
-      value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
-      name: "Score is less than 60",
+      value: horse.scoreObj?.total && horse.scoreObj?.total > 50,
+      name: "Score is less than 50",
     },
     {
       value: horse.age > 2,
@@ -107,10 +107,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Horse is not mentioned in the verdict",
     // },
 
-    {
-      value: lastRaceWasGood,
-      name: "Bad comment for last race",
-    },
+    // {
+    //   value: lastRaceWasGood,
+    //   name: "Bad comment for last race",
+    // },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
@@ -128,10 +128,15 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    // {
-    //   value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
-    //   name: "Hasn't averaged distance",
-    // },
+    {
+      value: horse?.scoreObj?.horseRacedWith?.track,
+      name: "Hasn't raced with this track",
+    },
+
+    {
+      value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
+      name: "Hasn't averaged distance",
+    },
 
     {
       value: horse?.scoreObj?.horseMostRecentForm?.type,
@@ -156,12 +161,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //     horse?.scoreObj?.horseBetterThanRaceTheshold?.race_min_timePerFurlong,
     //   name: "Time per furlong is high",
     // },
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
-      name: "Max form beaten averages rpr is low",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
+    //   name: "Max form beaten averages rpr is low",
+    // },
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -417,7 +422,8 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseFormAveragesStatsGood?.distance && "text-[#fa9360]"
+                        horseFormAveragesStatsGood?.distance &&
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {formAveragesDistanceF?.toFixed(1)}
@@ -467,7 +473,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseRacedWith?.track && "text-[#fa9360]"
+                        horseRacedWith?.track && "text-[rgb(105,255,100)]"
                       )}
                     >
                       {Array.from(
@@ -506,7 +512,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_averages_racedAgainstMaxes &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {formAveragesRacedAgainstMaxes.rpr?.toFixed(2)}
@@ -528,7 +534,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {(
