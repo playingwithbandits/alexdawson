@@ -87,11 +87,34 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
   const filteredHorses = useMemo(() => {
     if (showAll) return race.horses;
     return race.horses.filter((horse) => {
-      //console.log("filteredHorses horseHasRequiredStats log 2", race);
+      // console.log(
+      //   "filteredHorses horseHasRequiredStats log 1",
+      //   race
+      // );
+      const gapToAvgScore = (horse.scoreObj?.total || 0) - raceAvgScore;
       const requiredStatsGood = horseHasRequiredStats(horse, race);
-      return requiredStatsGood;
+      const missingStats = !requiredStatsGood
+        ? getWarningMessage(horse, race).missingStats
+        : [];
+
+      const missingLen = missingStats.length;
+
+      return showInfo
+        ? !raceHasFinsihed &&
+            ratioWithFormsGood &&
+            ratioWithHorsesAbove2YearsOldGood &&
+            requiredStatsGood
+        : missingLen <= 1 && gapToAvgScore >= 0;
     });
-  }, [showAll, race]);
+  }, [
+    showAll,
+    race,
+    raceAvgScore,
+    showInfo,
+    raceHasFinsihed,
+    ratioWithFormsGood,
+    ratioWithHorsesAbove2YearsOldGood,
+  ]);
 
   const placeTerms =
     race.horses.length < 5

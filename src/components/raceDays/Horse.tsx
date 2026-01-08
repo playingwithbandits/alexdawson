@@ -70,7 +70,7 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
   );
   const rpPredictionScore = rpPredictions?.score;
   const rpPredictionScoreGood = hasPredictions
-    ? rpPredictionScore !== undefined && rpPredictionScore >= 85
+    ? rpPredictionScore !== undefined && rpPredictionScore >= 50
     : true;
 
   const requiredStats = [
@@ -97,10 +97,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Horse has less than 2 forms",
     },
 
-    // {
-    //   value: rpPredictionScoreGood,
-    //   name: "Prediction score is not good",
-    // },
+    {
+      value: rpPredictionScoreGood,
+      name: "Prediction score is not good",
+    },
 
     // {
     //   value: isRpMentioned,
@@ -132,10 +132,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   value: horse?.scoreObj?.horseRacedWith?.track,
     //   name: "Hasn't raced with this track",
     // },
-    {
-      value: horse?.scoreObj?.horseRacedWith?.jockey,
-      name: "Hasn't raced with this jockey",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseRacedWith?.jockey,
+    //   name: "Hasn't raced with this jockey",
+    // },
 
     {
       value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
@@ -161,12 +161,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //     horse?.scoreObj?.horseBetterThanRaceTheshold?.race_min_timePerFurlong,
     //   name: "Time per furlong is high",
     // },
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
-      name: "Max form beaten averages rpr is low",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
+    //   name: "Max form beaten averages rpr is low",
+    // },
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -483,7 +483,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseRacedWith?.jockey && "text-[rgb(105,255,100)]"
+                        horseRacedWith?.jockey && "text-[#fa9360]"
                       )}
                     >
                       {Array.from(new Set(horse.form?.map((x) => x.jockey)))
@@ -534,7 +534,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
                       {(
