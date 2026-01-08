@@ -132,6 +132,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       value: horse?.scoreObj?.horseRacedWith?.track,
       name: "Hasn't raced with this track",
     },
+    {
+      value: horse?.scoreObj?.horseRacedWith?.jockey,
+      name: "Hasn't raced with this jockey",
+    },
 
     {
       value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
@@ -150,10 +154,6 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     // {
     //   value: horse?.scoreObj?.horseMostRecentForm?.going,
     //   name: "Recent form going",
-    // },
-    // {
-    //   value: horse?.scoreObj?.horseRacedWith?.jockey,
-    //   name: "Hasn't raced with this jockey",
     // },
 
     // {
@@ -483,7 +483,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseRacedWith?.jockey && "text-[#fa9360]"
+                        horseRacedWith?.jockey && "text-[rgb(105,255,100)]"
                       )}
                     >
                       {Array.from(new Set(horse.form?.map((x) => x.jockey)))

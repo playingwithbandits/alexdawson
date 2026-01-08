@@ -26,7 +26,7 @@ import { fetchFormRaceDetails } from "./fetchFormRaceDetails";
 import { fetchPredictions } from "./fetchPredictions";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
 import { lastRaceToLastRaceStats } from "./lastRaceToLastRaceStats";
-import { max, min } from "@/lib/utils";
+import { matchRaceTypeCode, max, min } from "@/lib/utils";
 
 export async function parseRaceDetails(
   html: string,
@@ -121,14 +121,35 @@ export async function parseRaceDetails(
           outcomeCell?.querySelector("a")?.textContent?.trim() || "";
         const raceOutcomeCode = outcomeText.split("/")[0];
 
-        const formRowDate: string =
+        const formRowValidDate =
           x
             ?.querySelector('[data-test-selector="RC-runnerFormLink__results"]')
             ?.getAttribute("href")
-            ?.split("/")?.[4] || "";
+            ?.split("/")?.[4] || undefined;
 
-        const date = new Date(formRowDate || "");
-        return isValidOutcome(raceOutcomeCode) && date > _120DaysAgo;
+        const matchingFormObj = formRowValidDate
+          ? formObj?.form?.find((x) => {
+              const date1 = x.raceDatetime
+                ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
+                : undefined;
+              const date2 = formRowValidDate
+                ? new Date(formRowValidDate || "").toISOString().split("T")[0]
+                : undefined;
+              return date1 === date2;
+            })
+          : undefined;
+
+        const raceCode = matchingFormObj?.raceTypeCode || "";
+
+        const isMatchingRaceCode = matchRaceTypeCode(raceCode, raceOutcomeCode);
+
+        const date = new Date(formRowValidDate || "");
+
+        return (
+          isValidOutcome(raceOutcomeCode) &&
+          date > _120DaysAgo &&
+          isMatchingRaceCode
+        );
       });
 
       const allValidFormRowsStatsData = await Promise.all(
@@ -145,7 +166,7 @@ export async function parseRaceDetails(
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 225) {
+          while (tryCount < 100) {
             tryCount++;
             console.log(
               "🏁 parseRaceDetails - Trying to fetch last race details",
@@ -153,7 +174,7 @@ export async function parseRaceDetails(
               lastRaceLink
             );
             if (lastRaceLink) {
-              await new Promise((resolve) => setTimeout(resolve, 2000));
+              await new Promise((resolve) => setTimeout(resolve, 4000));
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
               retryDoc = retryParser.parseFromString(
@@ -203,7 +224,7 @@ export async function parseRaceDetails(
                   : undefined;
                 return date1 === date2;
               })
-            : formObj?.form?.[0];
+            : undefined;
 
           const lastRaceTypeCode = matchingFormObj?.raceTypeCode || "";
 

@@ -152,23 +152,21 @@ const chaseRaceTypeCodes = ["c", "u"];
 const flatRaceTypeCodes = ["f", "b"];
 const allWeatherRaceTypeCodes = ["w", "x", "a"];
 
-const jumpsRaceTypes = [...hurdlesRaceTypeCodes, ...chaseRaceTypeCodes];
-const flatRaceTypes = [...flatRaceTypeCodes, ...allWeatherRaceTypeCodes];
-
 const raceTypeCodesToSimilarRaceTypeCodes = (
   raceTypeCode: string
 ): string[] => {
   const raceTypeCodeNormalised = raceTypeCode.toLowerCase().trim();
 
   const raceTypeCodesToSimilarRaceTypeCodesMap: Record<string, string[]> = {
-    p: ["p", "h"], //hurdle
-    h: ["p", "h"],
-    c: ["c", "u"], //chase
-    u: ["c", "u"],
-    f: flatRaceTypes, //["f", "b"], //flat
-    b: flatRaceTypes, //["f", "b"],
-    w: flatRaceTypes, //["w", "x"], //aw
-    x: flatRaceTypes, //["w", "x"], //aw
+    p: hurdlesRaceTypeCodes, //hurdle
+    h: hurdlesRaceTypeCodes,
+    c: chaseRaceTypeCodes, //chase
+    u: chaseRaceTypeCodes,
+    f: flatRaceTypeCodes, //["f", "b"], //flat
+    b: flatRaceTypeCodes, //["f", "b"],
+    w: allWeatherRaceTypeCodes, //["w", "x"], //aw
+    x: allWeatherRaceTypeCodes, //["w", "x"], //aw
+    a: allWeatherRaceTypeCodes, //["w", "x"], //aw
   };
   return raceTypeCodesToSimilarRaceTypeCodesMap[raceTypeCodeNormalised] || [];
 };
