@@ -76,6 +76,53 @@ export async function parseRaceDetails(
     });
   }
 
+  const raceTitle =
+    doc
+      .querySelector(`[data-test-selector="RC-header__raceInstanceTitle"]`)
+      ?.textContent?.replace(/\s+/g, " ")
+      .trim() || "";
+
+  const raceGoing = headerBox
+    ?.querySelector(
+      "[data-test-selector='RC-headerBox__going'] > .RC-headerBox__infoRow__content"
+    )
+    ?.textContent?.replace(/Going:\s*/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const raceTitleLower = raceTitle?.toLowerCase();
+
+  // Test examples for chase detection:
+  // ✅ Should match: "Chase Stakes", "Steeplechase", "Chase", "Maiden Chase"
+  // ❌ Should NOT match: "Chasemore Oaks", "Chaseable", "Chaser"
+  // Test examples for hurdle detection:
+  // ✅ Should match: "Hurdle Stakes", "Novice Hurdle", "Hurdle", "Maiden Hurdle"
+  // ❌ Should NOT match: "Hurdlemore Oaks", "Hurdleable", "Hurdler"
+  const isHurdle = /\bhurdle(?:\b|$)/.test(raceTitleLower || "");
+  const isChase = /\bchase(?:\b|$)/.test(raceTitleLower || "");
+  const isAW =
+    raceGoing?.includes("standard") ||
+    raceGoing?.includes("slow") ||
+    raceGoing?.includes("fast") ||
+    meetingDetails.type?.toLowerCase().includes("all-weather") ||
+    meetingDetails.surface?.toLowerCase().includes("polytrack") ||
+    meetingDetails.surface?.toLowerCase().includes("tapeta");
+
+  let raceCode = "F";
+  if (isHurdle) {
+    raceCode = "H";
+  }
+  if (isChase) {
+    raceCode = "C";
+  }
+  if (isAW) {
+    raceCode = "X";
+  }
+
+  console.log("🏁 raceCode", raceCode, isHurdle, isChase, isAW, raceTitleLower);
+
+  const raceTypeCode = raceCode || "";
+
   const raceDistance = parseDistance(
     doc
       .querySelector(`[data-test-selector="RC-header__raceDistanceRound"]`)
@@ -139,10 +186,19 @@ export async function parseRaceDetails(
             })
           : undefined;
 
-        const raceCode = matchingFormObj?.raceTypeCode || "";
+        const isMatchingRaceCode = matchRaceTypeCode(
+          matchingFormObj?.raceTypeCode,
+          raceTypeCode
+        );
 
-        const isMatchingRaceCode = matchRaceTypeCode(raceCode, raceOutcomeCode);
+        console.log(
+          "🏁 parseRaceDetails - isMatchingRaceCode",
 
+          matchingFormObj,
+          raceCode,
+          raceOutcomeCode,
+          isMatchingRaceCode
+        );
         const date = new Date(formRowValidDate || "");
 
         return (
@@ -168,11 +224,7 @@ export async function parseRaceDetails(
           let retryDoc: Document | null = null;
           while (tryCount < 100) {
             tryCount++;
-            console.log(
-              "🏁 parseRaceDetails - Trying to fetch last race details",
-              tryCount,
-              lastRaceLink
-            );
+
             if (lastRaceLink) {
               await new Promise((resolve) => setTimeout(resolve, 4000));
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
@@ -419,11 +471,7 @@ export async function parseRaceDetails(
         ?.textContent?.replace(/\s+/g, " ")
         .trim() || "",
     id: raceUrl.split("/").pop() || "",
-    title:
-      doc
-        .querySelector(`[data-test-selector="RC-header__raceInstanceTitle"]`)
-        ?.textContent?.replace(/\s+/g, " ")
-        .trim() || "",
+    title: raceTitle,
     runners: horses.length,
     distance: raceDistance,
 
@@ -443,13 +491,7 @@ export async function parseRaceDetails(
         .trim() || "",
     tv: doc.querySelector(".RC-courseHeader__tv")?.textContent?.trim() || "",
     url: "", // This will be set by the caller
-    going: headerBox
-      ?.querySelector(
-        "[data-test-selector='RC-headerBox__going'] > .RC-headerBox__infoRow__content"
-      )
-      ?.textContent?.replace(/Going:\s*/i, "")
-      .replace(/\s+/g, " ")
-      .trim(),
+    going: raceGoing,
     // Get track configuration from course header
     trackConfig: getTrackConfiguration(courseName),
     prize: prizeMoney ? `£${prizeMoney.toLocaleString()}` : "",
@@ -490,47 +532,6 @@ export async function parseRaceDetails(
     raceData: baseRaceData,
     horses: horses.filter((h) => h.stats), // Only include horses with stats
   });
-
-  const raceTitleLower = baseRaceData.title?.toLowerCase();
-
-  // Test examples for chase detection:
-  // ✅ Should match: "Chase Stakes", "Steeplechase", "Chase", "Maiden Chase"
-  // ❌ Should NOT match: "Chasemore Oaks", "Chaseable", "Chaser"
-  // Test examples for hurdle detection:
-  // ✅ Should match: "Hurdle Stakes", "Novice Hurdle", "Hurdle", "Maiden Hurdle"
-  // ❌ Should NOT match: "Hurdlemore Oaks", "Hurdleable", "Hurdler"
-  const isHurdle = /\bhurdle(?:\b|$)/.test(raceTitleLower || "");
-  const isChase = /\bchase(?:\b|$)/.test(raceTitleLower || "");
-  const isAW =
-    baseRaceData?.going?.includes("standard") ||
-    baseRaceData?.going?.includes("slow") ||
-    baseRaceData?.going?.includes("fast") ||
-    meetingDetails.type?.toLowerCase().includes("all-weather") ||
-    meetingDetails.surface?.toLowerCase().includes("polytrack") ||
-    meetingDetails.surface?.toLowerCase().includes("tapeta");
-
-  let raceCode = "F";
-  if (isHurdle) {
-    raceCode = "H";
-  }
-  if (isChase) {
-    raceCode = "C";
-  }
-  if (isAW) {
-    raceCode = "X";
-  }
-
-  console.log(
-    "🏁 raceCode",
-    raceCode,
-    isHurdle,
-    isChase,
-    isAW,
-    baseRaceData.title,
-    raceTitleLower
-  );
-
-  const raceTypeCode = raceCode || "";
 
   const result1: Race = {
     ...baseRaceData,

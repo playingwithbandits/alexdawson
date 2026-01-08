@@ -97,20 +97,20 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Horse has less than 2 forms",
     },
 
-    {
-      value: rpPredictionScoreGood,
-      name: "Prediction score is not good",
-    },
+    // {
+    //   value: rpPredictionScoreGood,
+    //   name: "Prediction score is not good",
+    // },
 
     // {
     //   value: isRpMentioned,
     //   name: "Horse is not mentioned in the verdict",
     // },
 
-    // {
-    //   value: lastRaceWasGood,
-    //   name: "Bad comment for last race",
-    // },
+    {
+      value: lastRaceWasGood,
+      name: "Bad comment for last race",
+    },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
@@ -128,10 +128,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    {
-      value: horse?.scoreObj?.horseRacedWith?.track,
-      name: "Hasn't raced with this track",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseRacedWith?.track,
+    //   name: "Hasn't raced with this track",
+    // },
     {
       value: horse?.scoreObj?.horseRacedWith?.jockey,
       name: "Hasn't raced with this jockey",
@@ -161,12 +161,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //     horse?.scoreObj?.horseBetterThanRaceTheshold?.race_min_timePerFurlong,
     //   name: "Time per furlong is high",
     // },
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
-    //   name: "Max form beaten averages rpr is low",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
+      name: "Max form beaten averages rpr is low",
+    },
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -384,8 +384,8 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">Distance</td>
                     <td className="px-2 py-1 w-[100px]">Goings</td>
                     <td className="px-2 py-1 w-[100px]">Going</td>
-                    <td className="px-2 py-1 w-[100px]">Race Types</td>
-                    <td className="px-2 py-1 w-[100px]">Race Type</td>
+                    {/* <td className="px-2 py-1 w-[100px]">Race Types</td>
+                    <td className="px-2 py-1 w-[100px]">Race Type</td> */}
                     <td className="px-2 py-1 w-[100px]">Tracks</td>
                     <td className="px-2 py-1 w-[100px]">Jockeys</td>
                     <td className="px-2 py-1 w-[100px]">Avg_Jockey</td>
@@ -398,7 +398,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">Beaten Max (Avg)</td>
                     <td className="px-2 py-1 w-[100px]">Beaten Max (Max)</td>
 
-                    <td className="px-2 py-1 w-[100px]">RF Type</td>
+                    {/* <td className="px-2 py-1 w-[100px]">RF Type</td> */}
                     <td className="px-2 py-1 w-[100px]">RF Going</td>
                     <td className="px-2 py-1 w-[100px]">RF Distance</td>
                     <td className="px-2 py-1 w-[100px]">RF Avgs</td>
@@ -449,7 +449,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       {formAveragesGoingCode?.join(", ")}
                     </td>
 
-                    <td
+                    {/* <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseRacedWith?.raceTypeCode &&
@@ -468,12 +468,12 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       )}
                     >
                       {formAveragesRaceTypeCode?.join(", ")}
-                    </td>
+                    </td> */}
 
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseRacedWith?.track && "text-[rgb(105,255,100)]"
+                        horseRacedWith?.track && "text-[#fa9360]"
                       )}
                     >
                       {Array.from(
@@ -534,7 +534,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {(
@@ -566,14 +566,14 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                         (horse.handicapBonus || 0)
                       )?.toFixed(2)}
                     </td>
-                    <td
+                    {/* <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseMostRecentForm?.type && "text-[rgb(105,255,100)]"
                       )}
                     >
                       {horse?.mostRecentForm?.raceTypeCode}
-                    </td>
+                    </td> */}
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
