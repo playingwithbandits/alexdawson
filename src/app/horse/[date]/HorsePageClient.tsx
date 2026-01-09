@@ -349,7 +349,7 @@ export function HorsePageClient({ date }: { date: string }) {
             console.log(
               `Course: ${courseName}, UK: ${isUkCourse}, Irish: ${isIrishCourse}`
             );
-            return isUkCourse || isIrishCourse;
+            return isUkCourse; //|| isIrishCourse; // TODO: Uncomment this when we have Irish courses back
           });
           console.log(
             `Filtered to ${ukElements.length} UK courses`,

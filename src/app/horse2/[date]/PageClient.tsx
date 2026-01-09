@@ -108,7 +108,7 @@ export function PageClient({ date }: { date: string }) {
               const isIrishCourse =
                 courseName && irishCourseKeys.includes(courseName);
 
-              return isUkCourse || isIrishCourse;
+              return isUkCourse; //|| isIrishCourse; // TODO: Uncomment this when we have Irish courses back
             }
           );
 

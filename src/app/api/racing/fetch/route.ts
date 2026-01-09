@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       console.log(
         `🏁 Course: ${courseName}, UK: ${isUkCourse}, Irish: ${isIrishCourse}`
       );
-      return isUkCourse || isIrishCourse;
+      return isUkCourse; //|| isIrishCourse; // TODO: Uncomment this when we have Irish courses back
     });
 
     console.log(`✨ Filtered to ${ukElements.length} courses`, ukElements);
