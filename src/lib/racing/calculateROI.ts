@@ -25,7 +25,7 @@ export function calculateROI({
   results,
   picks,
 }: CalculateRoiParams): RoiResult {
-  console.log("Calculating ROI", results, picks, meetings);
+  //console.log("Calculating ROI", results, picks, meetings);
 
   if (!results || !picks)
     return {

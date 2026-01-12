@@ -29,10 +29,10 @@ export function calculateRaceStats({
     .map((h) => h.lastRaceStats)
     .filter((x) => x !== undefined);
 
-  console.log(
-    "🏁 Last Race Stats Arr timePerFurlong",
-    lastRaceStatsArr.map((l) => l.info?.timePerFurlong)
-  );
+  // console.log(
+  //   "🏁 Last Race Stats Arr timePerFurlong",
+  //   lastRaceStatsArr.map((l) => l.info?.timePerFurlong)
+  // );
 
   const lastRaceStatsRaceInfo: LastRaceStatsRaceInfo = {
     avgTimePerFurlong:
