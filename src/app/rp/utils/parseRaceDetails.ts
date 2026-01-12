@@ -138,8 +138,8 @@ export async function parseRaceDetails(
   const rows = Array.from(rowsElements);
   //console.log(`Found ${rows.length} horses to parse`);
 
-  const _120DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 120);
-  const oneYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 1);
+  const oneYearAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 1);
+  const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const horses: Horse[] = await Promise.all(
     rows.map(async (row) => {
       const profileLink = row.querySelector(
@@ -203,7 +203,7 @@ export async function parseRaceDetails(
 
         return (
           isValidOutcome(raceOutcomeCode) &&
-          date > _120DaysAgo &&
+          date > oneYearAgo &&
           isMatchingRaceCode
         );
       });
@@ -376,7 +376,7 @@ export async function parseRaceDetails(
               // x.officialRatingRanOff &&
               // x.officialRatingRanOff > 0 &&
               // x.raceClass !== null &&
-              new Date(x.raceDatetime || "") > oneYearsAgo
+              new Date(x.raceDatetime || "") > twoYearsAgo
           ),
         },
         number:

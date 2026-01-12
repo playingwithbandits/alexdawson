@@ -32,10 +32,10 @@ export const getRaceToShowStats = (race: RaceType) => {
   const maxScore = 90;
   const horsesInRace = race.horses.length;
   const horsesInRaceWithForms = race.horses.filter(
-    (horse) => horse.form.length >= 2
+    (horse) => horse.form.length >= 1
   ).length;
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
-  const ratioWithFormsGood = ratioWithForms > 0.66;
+  const ratioWithFormsGood = ratioWithForms >= 0.75;
 
   const scoreToBeBetterThan = 80;
 
@@ -104,7 +104,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
             ratioWithFormsGood &&
             ratioWithHorsesAbove2YearsOldGood &&
             requiredStatsGood
-        : missingLen <= 2 && gapToAvgScore >= 0;
+        : missingLen <= 1 && gapToAvgScore >= 0;
     });
   }, [
     showAll,
@@ -171,7 +171,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
                           requiredStatsGood
-                      : missingLen <= 2 && gapToAvgScore >= 0;
+                      : missingLen <= 1 && gapToAvgScore >= 0;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =

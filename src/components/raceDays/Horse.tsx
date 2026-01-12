@@ -98,10 +98,15 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    // {
-    //   value: horse?.scoreObj?.horseRacedWith?.track,
-    //   name: "Hasn't raced with this track",
-    // },
+    {
+      value: lastRaceWasGood,
+      name: "Last race wasn't good",
+    },
+
+    {
+      value: horse?.scoreObj?.horseRacedWith?.track,
+      name: "Hasn't raced with this track",
+    },
     // {
     //   value: horse?.scoreObj?.horseRacedWith?.jockey,
     //   name: "Hasn't raced with this jockey",
@@ -443,7 +448,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseRacedWith?.track && "text-[#fa9360]"
+                        horseRacedWith?.track && "text-[rgb(105,255,100)]"
                       )}
                     >
                       {Array.from(
