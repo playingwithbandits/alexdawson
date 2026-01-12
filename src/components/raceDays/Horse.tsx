@@ -57,29 +57,13 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     countCommentSentiment?.score !== undefined &&
     countCommentSentiment?.score >= 0;
 
-  // const isRpMentioned = race.raceExtraInfo?.verdict?.selection
-  //   ? horseNameToKey(race.raceExtraInfo?.verdict?.selection) ===
-  //     horseNameToKey(horse.name)
-  //   : true;
-
-  const hasPredictions =
-    race?.predictions && Object.values(race?.predictions || {}).length > 0;
-  const rpPredictions = Object.values(race?.predictions || {})?.find(
-    (prediction) =>
-      horseNameToKey(prediction.name) === horseNameToKey(horse.name)
-  );
-  const rpPredictionScore = rpPredictions?.score;
-  const rpPredictionScoreGood = hasPredictions
-    ? rpPredictionScore !== undefined && rpPredictionScore >= 50
-    : true;
-
   const requiredStats = [
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.race_averages_racedAgainstMaxes,
-    //   name: "Averages raced against maxes is good",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_averages_racedAgainstMaxes,
+      name: "Averages raced against maxes is good",
+    },
     {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
@@ -97,20 +81,6 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Horse has less than 2 forms",
     },
 
-    {
-      value: rpPredictionScoreGood,
-      name: "Prediction score is not good",
-    },
-
-    // {
-    //   value: isRpMentioned,
-    //   name: "Horse is not mentioned in the verdict",
-    // },
-
-    {
-      value: lastRaceWasGood,
-      name: "Bad comment for last race",
-    },
     {
       value: horse.scoreObj?.horseRacedWith?.lastRan,
       name: "Long time since last ran",
@@ -512,7 +482,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_averages_racedAgainstMaxes &&
-                          "text-[#fa9360]"
+                          "text-[rgb(105,255,100)]"
                       )}
                     >
                       {formAveragesRacedAgainstMaxes.rpr?.toFixed(2)}

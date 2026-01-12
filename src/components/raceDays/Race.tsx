@@ -104,7 +104,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
             ratioWithFormsGood &&
             ratioWithHorsesAbove2YearsOldGood &&
             requiredStatsGood
-        : missingLen <= 1 && gapToAvgScore >= 0;
+        : missingLen <= 2 && gapToAvgScore >= 0;
     });
   }, [
     showAll,
@@ -171,7 +171,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           ratioWithFormsGood &&
                           ratioWithHorsesAbove2YearsOldGood &&
                           requiredStatsGood
-                      : missingLen <= 1 && gapToAvgScore >= 0;
+                      : missingLen <= 2 && gapToAvgScore >= 0;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =
