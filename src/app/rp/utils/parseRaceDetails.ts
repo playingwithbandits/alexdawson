@@ -119,7 +119,7 @@ export async function parseRaceDetails(
     raceCode = "X";
   }
 
-  console.log("🏁 raceCode", raceCode, isHurdle, isChase, isAW, raceTitleLower);
+  //console.log("🏁 raceCode", raceCode, isHurdle, isChase, isAW, raceTitleLower);
 
   const raceTypeCode = raceCode || "";
 
@@ -192,13 +192,12 @@ export async function parseRaceDetails(
         );
 
         console.log(
-          "🏁 parseRaceDetails - isMatchingRaceCode",
-
-          matchingFormObj,
+          `🏁 parseRaceDetails - isMatchingRaceCode for ${name} on ${formRowValidDate}`,
           raceCode,
           raceOutcomeCode,
           isMatchingRaceCode
         );
+
         const date = new Date(formRowValidDate || "");
 
         return (
@@ -239,10 +238,8 @@ export async function parseRaceDetails(
                 break;
               } else {
                 console.log(
-                  "🏁 parseRaceDetails - race element fetcher result",
-                  lastRaceLink,
-                  tryCount,
-                  "no table found"
+                  `🏁 parseRaceDetails -  attempt ${tryCount}`,
+                  lastRaceLink
                 );
               }
             } else {
@@ -252,10 +249,8 @@ export async function parseRaceDetails(
           }
 
           console.log(
-            "🏁 parseRaceDetails - race element fetcher result",
-            lastRaceLink,
-            tryCount,
-            lastRaceEle
+            `🏁 parseRaceDetails - element found after ${tryCount} attempts`,
+            lastRaceLink
           );
 
           const formRowValidDate =

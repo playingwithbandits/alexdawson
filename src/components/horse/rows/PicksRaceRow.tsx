@@ -474,16 +474,16 @@ export function PicksRaceRow({
     (x) => x.commentCount > 0
   );
 
-  console.log(
-    "OLBG Tips for Race:",
-    olbgTips,
-    olbgTipsForRace,
-    olbgTipsWithNap,
-    olbgTipsWithEw,
-    olbgTipsWithWin,
-    olbgTipsWithExpert,
-    olbgTipsWithComment
-  );
+  // console.log(
+  //   "OLBG Tips for Race:",
+  //   olbgTips,
+  //   olbgTipsForRace,
+  //   olbgTipsWithNap,
+  //   olbgTipsWithEw,
+  //   olbgTipsWithWin,
+  //   olbgTipsWithExpert,
+  //   olbgTipsWithComment
+  // );
 
   const topAiPercentage = race?.horses?.sort(
     (a, b) =>
@@ -536,7 +536,7 @@ export function PicksRaceRow({
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
   );
   const gytoTipSelectionIsNap = gytoTipSelectionObj?.isNap;
-  console.log("GYTO Tip Selection:", gytoTipSelectionObj);
+  //console.log("GYTO Tip Selection:", gytoTipSelectionObj);
 
   const napsTableTipSelections = napsTableTips?.filter(
     (r) => normalizeTime(r.time) === normalizeTime(race.time)
@@ -596,29 +596,29 @@ export function PicksRaceRow({
     ...race.horses?.map((x) => x.name),
   ].filter((x) => x !== "" && x !== undefined && x !== "--");
 
-  console.log(
-    "All horse names:",
-    {
-      "1": aiTopPicks?.map((x) => x.name),
-      "2": rpPredictions?.map((x) => x.name),
-      "3": rpVerdictPick ? rpVerdictPick : "",
-      "4": atrTipSelections?.map((x) => x.horse) || [],
-      "5": timeformTipSelections?.map((x) => x.horse) || [],
-      "6": gytoTipSelectionObj ? gytoTipSelectionObj.horse : "",
-      "7": napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || [],
-      "8": rpVerdictAllOthers || [],
-      "9": rtWebTipSelections?.map((x) => x.horseName) || [],
-      "10": olbgTipsWithNap?.map((x) => x.horseName) || [],
-      "11": olbgTipsWithEw?.map((x) => x.horseName) || [],
-      "12": olbgTipsWithWin?.map((x) => x.horseName) || [],
-      "13": olbgTipsWithExpert?.map((x) => x.horseName) || [],
-      "14": olbgTipsWithComment?.map((x) => x.horseName) || [],
-      "15": sharpTipSelections?.map((x) => x.horseName) || [],
-    },
-    race.time,
-    gytoTips,
-    allNames
-  );
+  // console.log(
+  //   "All horse names:",
+  //   {
+  //     "1": aiTopPicks?.map((x) => x.name),
+  //     "2": rpPredictions?.map((x) => x.name),
+  //     "3": rpVerdictPick ? rpVerdictPick : "",
+  //     "4": atrTipSelections?.map((x) => x.horse) || [],
+  //     "5": timeformTipSelections?.map((x) => x.horse) || [],
+  //     "6": gytoTipSelectionObj ? gytoTipSelectionObj.horse : "",
+  //     "7": napsTableTipSelectionsScoreSorted?.map((x) => x.horse) || [],
+  //     "8": rpVerdictAllOthers || [],
+  //     "9": rtWebTipSelections?.map((x) => x.horseName) || [],
+  //     "10": olbgTipsWithNap?.map((x) => x.horseName) || [],
+  //     "11": olbgTipsWithEw?.map((x) => x.horseName) || [],
+  //     "12": olbgTipsWithWin?.map((x) => x.horseName) || [],
+  //     "13": olbgTipsWithExpert?.map((x) => x.horseName) || [],
+  //     "14": olbgTipsWithComment?.map((x) => x.horseName) || [],
+  //     "15": sharpTipSelections?.map((x) => x.horseName) || [],
+  //   },
+  //   race.time,
+  //   gytoTips,
+  //   allNames
+  // );
 
   const picksWithFastTimePerFurlongWeighted =
     race.horses?.map((x) => {
@@ -716,7 +716,7 @@ export function PicksRaceRow({
       return [x.name, 1 * scorePercentage] as [string, number];
     }) || [];
 
-  console.log("AI Predictions Weighted:", aiTopPicksWeighted);
+  //console.log("AI Predictions Weighted:", aiTopPicksWeighted);
 
   // Create weighted scores for each source
   const rpVerdictWeighted: [string, number] = rpVerdictPick
@@ -957,12 +957,12 @@ export function PicksRaceRow({
     ]
   );
 
-  console.log(
-    "Name counts with perc:",
-    nameCountsWithPerc,
-    nameCounts,
-    weightedScores
-  );
+  // console.log(
+  //   "Name counts with perc:",
+  //   nameCountsWithPerc,
+  //   nameCounts,
+  //   weightedScores
+  // );
 
   //const topScorePerc = Math.max(...nameCountsWithPerc?.map((x) => x[2]));
   //const topScorePerc20Perc = topScorePerc * 0.8;

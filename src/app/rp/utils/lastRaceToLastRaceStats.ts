@@ -258,17 +258,17 @@ export async function lastRaceToLastRaceStats(
     console.error("🏁 lastRaceToLastRaceStats - No rows found");
   }
 
-  console.log("🏁 lastRaceToLastRaceStats - Last Race To Last Race Stats", {
-    raceTypeCode: lastRaceTypeCode,
-    runners_all: runners,
-    averages_all: averages,
-    maxes_all: maxes,
-    runners_beaten,
-    averages_beaten,
-    maxes_beaten,
-    info,
-    doc,
-  });
+  // console.log("🏁 lastRaceToLastRaceStats - Last Race To Last Race Stats", {
+  //   raceTypeCode: lastRaceTypeCode,
+  //   runners_all: runners,
+  //   averages_all: averages,
+  //   maxes_all: maxes,
+  //   runners_beaten,
+  //   averages_beaten,
+  //   maxes_beaten,
+  //   info,
+  //   doc,
+  // });
   return {
     raceTypeCode: lastRaceTypeCode,
     runners_all: runners,
