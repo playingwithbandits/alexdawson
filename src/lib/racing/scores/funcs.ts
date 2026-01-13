@@ -158,6 +158,7 @@ export const distanceToWinnerStrToFloat = (code: string) => {
     const evalStr = code
       .replace("snse", "+0.05")
       .replace("nse", "+0.1")
+      .replace("sht", "+0.2")
       .replace("shd", "+0.2")
       .replace("shd", "+0.2")
       .replace("snk", "+0.25")
@@ -473,19 +474,10 @@ export const distanceBeatenLengthsThreshold = (
 ) => {
   if (!raceDistance) return 0;
 
-  // 7 furlong races should be under 3 lengths
-  if (raceDistance <= 7.5) {
-    return 2;
-  }
-  // 10 furlong races should be under 4 lengths
-  if (raceDistance <= 12.5) {
+  if (raceDistance <= 11.5) {
     return 3;
   }
-  // 16 furlong is within 5 lengths
-  if (raceDistance >= 16.5) {
-    return 4;
-  }
-  return 5;
+  return 4;
 };
 
 export const isGoodDistanceToWinner = (

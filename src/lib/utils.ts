@@ -235,21 +235,25 @@ export const distanceOkay = (
   const horseAvgDistanceF = horsesAverageDistanceRanOver || 0;
 
   const maxThresholdAdd =
-    raceDistanceF < 8
+    raceDistanceF < 7
+      ? 1
+      : raceDistanceF < 9
       ? 1.5
-      : raceDistanceF < 20
+      : raceDistanceF < 11
+      ? 2
+      : raceDistanceF < 13
       ? 2.5
-      : raceDistanceF < 27
-      ? 3.5
-      : 10;
+      : 3;
   const minThresholdAdd =
     raceDistanceF < 7
       ? 0.33
-      : raceDistanceF < 8
+      : raceDistanceF < 9
       ? 0.5
-      : raceDistanceF < 13
+      : raceDistanceF < 11
       ? 1
-      : 2;
+      : raceDistanceF < 13
+      ? 2
+      : 2.5;
 
   const maxThreshold = raceDistanceF + maxThresholdAdd;
   const minThreshold = raceDistanceF - minThresholdAdd;
