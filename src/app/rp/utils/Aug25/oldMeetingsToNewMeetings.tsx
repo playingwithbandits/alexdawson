@@ -436,6 +436,11 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           )
           .filter(Boolean) || [];
 
+      const raw_race_maxes_racedAgainstMaxes =
+        horses
+          ?.map((horse) => horse.formInfo?.maxes?.racedAgainst_Maxes?.rpr || 0)
+          .filter(Boolean) || [];
+
       const raw_race_data = {
         raw_race_wgtLbs,
         raw_race_rpr,
@@ -453,6 +458,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         raw_race_mostRecentForm_racedAgainst_Beaten_Maxes,
 
         raw_race_averages_racedAgainstMaxes,
+        raw_race_maxes_racedAgainstMaxes,
       };
 
       const raw_race_data_avg = {
@@ -497,6 +503,9 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
       const raw_race_data_maxes = {
         race_averages_racedAgainstMaxes: max(
           raw_race_data.raw_race_averages_racedAgainstMaxes
+        ),
+        race_maxes_racedAgainstMaxes: max(
+          raw_race_data.raw_race_maxes_racedAgainstMaxes
         ),
         race_wgtLbs: max(raw_race_data.raw_race_wgtLbs),
         race_rpr: max(raw_race_data.raw_race_rpr),

@@ -255,6 +255,9 @@ export function Dashboard({
 
             race_averages_racedAgainstMaxes:
               raceMaxes?.race_averages_racedAgainstMaxes * thresholdValue,
+
+            race_maxes_racedAgainstMaxes:
+              raceMaxes?.race_maxes_racedAgainstMaxes * thresholdValue,
           };
 
           return {
@@ -332,6 +335,8 @@ export function Dashboard({
                   handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: boolean;
 
                   race_averages_racedAgainstMaxes: boolean;
+
+                  race_maxes_racedAgainstMaxes: boolean;
                 } = {
                   race_rpr:
                     Boolean(horseRpr) && horseRpr >= raceThresholds.race_rpr,
@@ -505,6 +510,11 @@ export function Dashboard({
                     Boolean(horseFormAverages?.racedAgainst_Maxes?.rpr) &&
                     horseFormAverages.racedAgainst_Maxes.rpr >=
                       raceThresholds.race_averages_racedAgainstMaxes,
+
+                  race_maxes_racedAgainstMaxes:
+                    Boolean(horseFormMaxes?.racedAgainst_Maxes?.rpr) &&
+                    horseFormMaxes.racedAgainst_Maxes.rpr >=
+                      raceThresholds.race_maxes_racedAgainstMaxes,
                 };
 
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;

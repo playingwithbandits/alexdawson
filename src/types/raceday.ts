@@ -62,6 +62,7 @@ export interface RaceHorsesInfo {
     race_mostRecentForm_racedAgainst_Beaten_Maxes: number;
 
     race_averages_racedAgainstMaxes: number;
+    race_maxes_racedAgainstMaxes: number;
   };
   min: {
     race_min_timePerFurlong: number;
@@ -113,6 +114,7 @@ export interface ScoreObj {
     handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: boolean;
 
     race_averages_racedAgainstMaxes: boolean;
+    race_maxes_racedAgainstMaxes: boolean;
   };
   horseFormAveragesStatsGood: {
     distance: boolean;

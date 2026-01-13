@@ -58,12 +58,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     countCommentSentiment?.score >= 0;
 
   const requiredStats = [
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.race_averages_racedAgainstMaxes,
-      name: "Averages raced against maxes is good",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.race_averages_racedAgainstMaxes,
+    //   name: "Averages raced against maxes is good",
+    // },
     {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
@@ -195,12 +195,13 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
     raceTypeCodes: formAveragesRaceTypeCode,
     racedAgainst_Beaten_Averages: formAveragesRacedAgainstBeatenAverages,
     racedAgainst_Beaten_Maxes: formAveragesRacedAgainstBeatenMaxes,
-    racedAgainst_Maxes: formAveragesRacedAgainstMaxes,
+    racedAgainst_Maxes: formAveragesRacedAgainstMaxes_Avg,
   } = formAverages;
 
   const {
     racedAgainst_Beaten_Maxes: formMaxesRacedAgainstBeatenMaxes,
     racedAgainst_Beaten_Averages: formMaxesRacedAgainstBeatenAverages,
+    racedAgainst_Maxes: formMaxesRacedAgainstMaxes_Max,
   } = formMaxes;
 
   const { timePerFurlong: formMinTimePerFurlong } = formMin;
@@ -355,31 +356,28 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     </td>
                   </tr>
                   <tr className="opacity-50">
-                    <td className="px-2 py-1 w-[100px]">Distances</td>
-                    <td className="px-2 py-1 w-[100px]">Distance</td>
-                    <td className="px-2 py-1 w-[100px]">Goings</td>
-                    <td className="px-2 py-1 w-[100px]">Going</td>
+                    <td className="px-2 py-1 w-[100px]">Dists</td>
+                    <td className="px-2 py-1 w-[100px]">Dist</td>
+                    <td className="px-2 py-1 w-[100px]">Gngs</td>
+                    <td className="px-2 py-1 w-[100px]">Gng</td>
                     {/* <td className="px-2 py-1 w-[100px]">Race Types</td>
                     <td className="px-2 py-1 w-[100px]">Race Type</td> */}
-                    <td className="px-2 py-1 w-[100px]">Tracks</td>
-                    <td className="px-2 py-1 w-[100px]">Jockeys</td>
-                    <td className="px-2 py-1 w-[100px]">Avg_Jockey</td>
+                    <td className="px-2 py-1 w-[100px]">Trks</td>
+                    <td className="px-2 py-1 w-[100px]">Jocks</td>
+                    <td className="px-2 py-1 w-[100px]">A_Jock</td>
                     <td className="px-2 py-1 w-[100px]">TPF</td>
-                    <td className="px-2 py-1 w-[100px]">
-                      Max Raced Against (Avg)
-                    </td>
-                    <td className="px-2 py-1 w-[100px]">Beaten Avg (Avg)</td>
-                    <td className="px-2 py-1 w-[100px]">Beaten Avg (Max)</td>
-                    <td className="px-2 py-1 w-[100px]">Beaten Max (Avg)</td>
-                    <td className="px-2 py-1 w-[100px]">Beaten Max (Max)</td>
-
-                    {/* <td className="px-2 py-1 w-[100px]">RF Type</td> */}
+                    <td className="px-2 py-1 w-[100px]">MRA (Avg)</td>
+                    <td className="px-2 py-1 w-[100px]">MRA (Max)</td>
+                    <td className="px-2 py-1 w-[100px]">Bt Avg (Avg)</td>
+                    <td className="px-2 py-1 w-[100px]">Bt Avg (Max)</td>
+                    <td className="px-2 py-1 w-[100px]">Bt Max (Avg)</td>
+                    <td className="px-2 py-1 w-[100px]">Bt Max (Max)</td>
                     <td className="px-2 py-1 w-[100px]">RF Going</td>
-                    <td className="px-2 py-1 w-[100px]">RF Distance</td>
+                    <td className="px-2 py-1 w-[100px]">RF Dist</td>
                     <td className="px-2 py-1 w-[100px]">RF Avgs</td>
                     <td className="px-2 py-1 w-[100px]">RF Max</td>
-                    <td className="px-2 py-1 w-[100px]">OR|JOK|GAP|OR|BON</td>
-                    <td className="px-2 py-1 min-w-[300px]">Comment</td>
+                    <td className="px-2 py-1 w-[100px]">Bonus</td>
+                    <td className="px-2 py-1 min-w-[300px]">Com</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -487,10 +485,20 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_averages_racedAgainstMaxes &&
-                          "text-[rgb(105,255,100)]"
+                          "text-[#fa9360]"
                       )}
                     >
-                      {formAveragesRacedAgainstMaxes.rpr?.toFixed(2)}
+                      {formAveragesRacedAgainstMaxes_Avg.rpr?.toFixed(2)}
+                    </td>
+
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        horseBetterThanRaceTheshold?.race_maxes_racedAgainstMaxes &&
+                          "text-[#fa9360]"
+                      )}
+                    >
+                      {formMaxesRacedAgainstMaxes_Max.rpr?.toFixed(2)}
                     </td>
 
                     <td
