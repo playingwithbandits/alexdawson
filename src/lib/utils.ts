@@ -152,6 +152,15 @@ const chaseRaceTypeCodes = ["c", "u"];
 const flatRaceTypeCodes = ["f", "b"];
 const allWeatherRaceTypeCodes = ["w", "x", "a"];
 
+export const isJumpsRaceTypeCode = (raceTypeCode: string): boolean => {
+  const raceTypeCodeNormalised = raceTypeCode.toLowerCase().trim();
+
+  return (
+    hurdlesRaceTypeCodes.includes(raceTypeCodeNormalised) ||
+    chaseRaceTypeCodes.includes(raceTypeCodeNormalised)
+  );
+};
+
 const raceTypeCodesToSimilarRaceTypeCodes = (
   raceTypeCode: string
 ): string[] => {

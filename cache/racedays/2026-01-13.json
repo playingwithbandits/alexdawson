@@ -2,4766 +2,6 @@
   {
     "races": [
       {
-        "distanceF": 20.5,
-        "goingCodes": [
-          "hy"
-        ],
-        "horsesInfo": {
-          "averages": {
-            "race_wgtLbs": 156.8,
-            "race_rpr": 114,
-            "race_or": 112.5,
-            "race_min_timePerFurlong": 15.763281201088969,
-            "race_averages_racedAgainst": 85.21844322344323,
-            "race_maxes_racedAgainst": 105.6,
-            "race_averages_racedAgainst_Averages": 85.33928138528138,
-            "race_maxes_racedAgainst_Averages": 89.25333333333333,
-            "race_averages_racedAgainst_Beaten": 83.99955182072829,
-            "race_maxes_racedAgainst_Beaten": 102.4,
-            "race_averages_racedAgainst_Beaten_Averages": 83.37775757575757,
-            "race_maxes_racedAgainst_Beaten_Averages": 89.25333333333333,
-            "race_mostRecentForm_racedAgainst_Beaten_Averages": 84.18666666666667,
-            "race_mostRecentForm_racedAgainst_Beaten_Maxes": 100.2,
-            "race_averages_racedAgainstMaxes": 101.34
-          },
-          "maxes": {
-            "race_averages_racedAgainstMaxes": 110.6,
-            "race_wgtLbs": 161,
-            "race_rpr": 117,
-            "race_or": 118,
-            "race_min_timePerFurlong": 17.641352968294356,
-            "race_averages_racedAgainst": 91.80952380952381,
-            "race_maxes_racedAgainst": 122,
-            "race_averages_racedAgainst_Averages": 92.15095238095238,
-            "race_maxes_racedAgainst_Averages": 103.16666666666667,
-            "race_averages_racedAgainst_Beaten": 91.80952380952381,
-            "race_maxes_racedAgainst_Beaten": 115,
-            "race_averages_racedAgainst_Beaten_Averages": 91.84545454545454,
-            "race_maxes_racedAgainst_Beaten_Averages": 103.16666666666667,
-            "race_mostRecentForm_racedAgainst_Beaten_Averages": 103.16666666666667,
-            "race_mostRecentForm_racedAgainst_Beaten_Maxes": 111
-          },
-          "min": {
-            "race_min_timePerFurlong": 14.948962317383367
-          },
-          "rawData": {
-            "raw_race_wgtLbs": [
-              161,
-              161,
-              154,
-              161,
-              147
-            ],
-            "raw_race_rpr": [
-              113,
-              117,
-              116,
-              110
-            ],
-            "raw_race_or": [
-              113,
-              118,
-              109,
-              110
-            ],
-            "raw_race_min_timePerFurlong": [
-              14.956014956014956,
-              14.948962317383367,
-              15.101570668978507,
-              16.168505094773664,
-              17.641352968294356
-            ],
-            "raw_race_averages_racedAgainst": [
-              90.975,
-              91.80952380952381,
-              91.8076923076923,
-              88,
-              63.5
-            ],
-            "raw_race_maxes_racedAgainst": [
-              119,
-              110,
-              122,
-              103,
-              74
-            ],
-            "raw_race_averages_racedAgainst_Averages": [
-              92.15095238095238,
-              91.84545454545454,
-              91.2,
-              88,
-              63.5
-            ],
-            "raw_race_maxes_racedAgainst_Averages": [
-              103.16666666666667,
-              92.6,
-              99,
-              88,
-              63.5
-            ],
-            "raw_race_averages_racedAgainst_Beaten": [
-              89.08823529411765,
-              91.80952380952381,
-              87.6,
-              88,
-              63.5
-            ],
-            "raw_race_maxes_racedAgainst_Beaten": [
-              115,
-              110,
-              110,
-              103,
-              74
-            ],
-            "raw_race_averages_racedAgainst_Beaten_Averages": [
-              88.9909523809524,
-              91.84545454545454,
-              84.55238095238096,
-              88,
-              63.5
-            ],
-            "raw_race_maxes_racedAgainst_Beaten_Averages": [
-              103.16666666666667,
-              92.6,
-              99,
-              88,
-              63.5
-            ],
-            "raw_race_mostRecentForm_racedAgainst_Beaten_Averages": [
-              103.16666666666667,
-              92.6,
-              73.66666666666667,
-              88,
-              63.5
-            ],
-            "raw_race_mostRecentForm_racedAgainst_Beaten_Maxes": [
-              111,
-              110,
-              103,
-              103,
-              74
-            ],
-            "raw_race_averages_racedAgainstMaxes": [
-              110.6,
-              108.5,
-              110.6,
-              103,
-              74
-            ]
-          }
-        },
-        "id": "910403",
-        "raceClass": 4,
-        "raceTypeCode": "H",
-        "predictions": {
-          "5034786": {
-            "id": 5034786,
-            "name": "Dream Shadow",
-            "diffusion_name": "Dream Shadow",
-            "saddle_cloth_number": 2,
-            "score": 92.10526315789474,
-            "dist_to_horse_in_front": "¾",
-            "dist_to_winner": "1½"
-          },
-          "5746452": {
-            "id": 5746452,
-            "name": "Lets Mingle",
-            "diffusion_name": "Lets Mingle",
-            "saddle_cloth_number": 4,
-            "score": 100,
-            "dist_to_horse_in_front": null,
-            "dist_to_winner": null
-          },
-          "5942400": {
-            "id": 5942400,
-            "name": "Just Her Type",
-            "diffusion_name": "Just Her Type",
-            "saddle_cloth_number": 1,
-            "score": 96.49122807017544,
-            "dist_to_horse_in_front": "¾",
-            "dist_to_winner": null
-          },
-          "7289170": {
-            "id": 7289170,
-            "name": "Just An Artist",
-            "diffusion_name": "Just An Artist",
-            "saddle_cloth_number": 3,
-            "score": 70.17543859649122,
-            "dist_to_horse_in_front": "4½",
-            "dist_to_winner": "6"
-          },
-          "7534598": {
-            "id": 7534598,
-            "name": "Largy Rose",
-            "diffusion_name": "Largy Rose",
-            "saddle_cloth_number": 6,
-            "score": 0,
-            "dist_to_horse_in_front": "14",
-            "dist_to_winner": "20"
-          }
-        },
-        "raceExtraInfo": {
-          "verdict": {
-            "comment": "Useful bumper performer DREAM SHADOW was second to a subsequent Listed winner on her hurdle debut and has won comfortably since.",
-            "allNamed": [
-              "DREAM SHADOW"
-            ],
-            "selection": "dreamshadow",
-            "isNap": false
-          },
-          "comments": {
-            "dreamshadow": "Won comfortably by over 6f at Warwick (2m3f) in November and commands respect",
-            "justanartist": "Shock winner at Perth (2m) in October but pulled up over 2m3f the following month",
-            "justhertype": "Won a handicap last month and is now 2-8 over hurdles; no easy task under 12lb penalty",
-            "largyrose": "Bought for 10,000gns after finishing second on Irish point debut in November; rules debut",
-            "letsmingle": "Below form in 3m handicap last month but has possibilities if back on song here",
-            "parkprincess": "Went close in Listed race last month and was a narrow winner at Fontwell on Sunday",
-            "rosesalltheway": "Safely held in a Listed race last time but probably still has potential; not ruled out"
-          },
-          "trainerStats": [
-            {
-              "name": "N W Alexander",
-              "last14Days": {
-                "wins": 1,
-                "runs": 12,
-                "winRate": 8,
-                "profit": -9.38
-              },
-              "overall": {
-                "wins": 44,
-                "runs": 264,
-                "winRate": 17,
-                "profit": 40.45
-              }
-            },
-            {
-              "name": "R Mike Smith",
-              "last14Days": {
-                "wins": 0,
-                "runs": 7,
-                "winRate": 0,
-                "profit": -7
-              },
-              "overall": {
-                "wins": 9,
-                "runs": 168,
-                "winRate": 5,
-                "profit": -88.75
-              }
-            },
-            {
-              "name": "Donald McCain",
-              "last14Days": {
-                "wins": 3,
-                "runs": 13,
-                "winRate": 23,
-                "profit": 14.33
-              },
-              "overall": {
-                "wins": 8,
-                "runs": 73,
-                "winRate": 11,
-                "profit": -39.88
-              }
-            },
-            {
-              "name": "Fergal O'Brien",
-              "last14Days": {
-                "wins": 2,
-                "runs": 18,
-                "winRate": 11,
-                "profit": -12.5
-              },
-              "overall": {
-                "wins": 5,
-                "runs": 19,
-                "winRate": 26,
-                "profit": 21.25
-              }
-            },
-            {
-              "name": "Lucinda Russell & Michael Scudamore",
-              "last14Days": {
-                "wins": 0,
-                "runs": 19,
-                "winRate": 0,
-                "profit": -19
-              },
-              "overall": {
-                "wins": 3,
-                "runs": 24,
-                "winRate": 13,
-                "profit": -7.5
-              }
-            },
-            {
-              "name": "Anthony Honeyball",
-              "last14Days": {
-                "wins": 5,
-                "runs": 21,
-                "winRate": 24,
-                "profit": -8.13
-              },
-              "overall": {
-                "wins": 1,
-                "runs": 3,
-                "winRate": 33,
-                "profit": -0.13
-              }
-            },
-            {
-              "name": "Max Comley",
-              "last14Days": {
-                "wins": 0,
-                "runs": 1,
-                "winRate": 0,
-                "profit": -1
-              },
-              "overall": {
-                "wins": 0,
-                "runs": 1,
-                "winRate": 0,
-                "profit": -1
-              }
-            }
-          ],
-          "jockeyStats": [
-            {
-              "name": "Bruce Lynn",
-              "last14Days": {
-                "wins": 1,
-                "runs": 7,
-                "winRate": 14,
-                "profit": -4.38
-              },
-              "overall": {
-                "wins": 20,
-                "runs": 146,
-                "winRate": 14,
-                "profit": 8
-              }
-            },
-            {
-              "name": "Ben Smith",
-              "last14Days": {
-                "wins": 0,
-                "runs": 5,
-                "winRate": 0,
-                "profit": -5
-              },
-              "overall": {
-                "wins": 5,
-                "runs": 51,
-                "winRate": 10,
-                "profit": -10.75
-              }
-            },
-            {
-              "name": "Jonathan Burke",
-              "last14Days": {
-                "wins": 4,
-                "runs": 14,
-                "winRate": 29,
-                "profit": 1.33
-              },
-              "overall": {
-                "wins": 3,
-                "runs": 13,
-                "winRate": 23,
-                "profit": 1.5
-              }
-            },
-            {
-              "name": "Conner McCann",
-              "last14Days": {
-                "wins": 0,
-                "runs": 1,
-                "winRate": 0,
-                "profit": -1
-              },
-              "overall": {
-                "wins": 1,
-                "runs": 12,
-                "winRate": 8,
-                "profit": 5
-              }
-            },
-            {
-              "name": "NON-RUNNER",
-              "last14Days": {
-                "wins": 0,
-                "runs": 0,
-                "winRate": 0,
-                "profit": 0
-              },
-              "overall": {
-                "wins": 0,
-                "runs": 0,
-                "winRate": 0,
-                "profit": 0
-              }
-            },
-            {
-              "name": "Tom Broughton",
-              "last14Days": {
-                "wins": 1,
-                "runs": 5,
-                "winRate": 20,
-                "profit": 5
-              },
-              "overall": {
-                "wins": 0,
-                "runs": 1,
-                "winRate": 0,
-                "profit": -1
-              }
-            }
-          ],
-          "horseStats": [
-            {
-              "horse": "Dream Shadow",
-              "going": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "distance": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "course": {
-                "runs": 0,
-                "winRate": 0
-              }
-            },
-            {
-              "horse": "Park Princess",
-              "going": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "distance": {
-                "runs": 1,
-                "winRate": 1
-              },
-              "course": {
-                "runs": 0,
-                "winRate": 0
-              }
-            },
-            {
-              "horse": "Roses All The Way",
-              "going": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "distance": {
-                "runs": 0,
-                "winRate": 1
-              },
-              "course": {
-                "runs": 0,
-                "winRate": 0
-              }
-            },
-            {
-              "horse": "Lets Mingle",
-              "going": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "distance": {
-                "runs": 1,
-                "winRate": 1
-              },
-              "course": {
-                "runs": 0,
-                "winRate": 1
-              }
-            },
-            {
-              "horse": "Just Her Type",
-              "going": {
-                "runs": 0,
-                "winRate": 1
-              },
-              "distance": {
-                "runs": 2,
-                "winRate": 5
-              },
-              "course": {
-                "runs": 0,
-                "winRate": 1
-              }
-            },
-            {
-              "horse": "Just An Artist",
-              "going": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "distance": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "course": {
-                "runs": 0,
-                "winRate": 0
-              }
-            },
-            {
-              "horse": "Largy Rose",
-              "going": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "distance": {
-                "runs": 0,
-                "winRate": 0
-              },
-              "course": {
-                "runs": 0,
-                "winRate": 0
-              }
-            }
-          ]
-        },
-        "time": "1:18",
-        "title": "Wicked Afternoon Tea Last Few Places EBF Mares' 'National Hunt' Novices' Hurdle (EBF Qual') (GBB)",
-        "horses": [
-          {
-            "age": 6,
-            "form": [
-              {
-                "id": "907811",
-                "raceDate": "2025-12-14",
-                "trackId": "southwell",
-                "goingCodes": [
-                  "gs"
-                ],
-                "position": 1,
-                "distanceF": 20.3999796,
-                "jockey": "Tom Broughton",
-                "raceClass": "4",
-                "timePerFurlong": 15.168152423054384,
-                "totalRaceTime": 309.43,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 111,
-                "or": 108,
-                "jockeyAllowance": 5,
-                "racedAgainstRaw": [
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 111
-                  },
-                  {
-                    "id": "goldlink",
-                    "name": "goldlink",
-                    "position": 2,
-                    "distanceToWinner": 1,
-                    "rpr": 108
-                  },
-                  {
-                    "id": "donrafael",
-                    "name": "donrafael",
-                    "position": 3,
-                    "distanceToWinner": 5.5,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "tramuntana",
-                    "name": "tramuntana",
-                    "position": 4,
-                    "distanceToWinner": 7,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "caramelorapido",
-                    "name": "caramelorapido",
-                    "position": 5,
-                    "distanceToWinner": 11.75,
-                    "rpr": 100
-                  },
-                  {
-                    "id": "comanchemagic",
-                    "name": "comanchemagic",
-                    "position": 6,
-                    "distanceToWinner": 21.75,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "imperialjade",
-                    "name": "imperialjade",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      111,
-                      108,
-                      102,
-                      101,
-                      100,
-                      97
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 103.16666666666667
-                  },
-                  "maxes": {
-                    "rpr": 111
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 111
-                  },
-                  {
-                    "id": "goldlink",
-                    "name": "goldlink",
-                    "position": 2,
-                    "distanceToWinner": 1,
-                    "rpr": 108
-                  },
-                  {
-                    "id": "donrafael",
-                    "name": "donrafael",
-                    "position": 3,
-                    "distanceToWinner": 5.5,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "tramuntana",
-                    "name": "tramuntana",
-                    "position": 4,
-                    "distanceToWinner": 7,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "caramelorapido",
-                    "name": "caramelorapido",
-                    "position": 5,
-                    "distanceToWinner": 11.75,
-                    "rpr": 100
-                  },
-                  {
-                    "id": "comanchemagic",
-                    "name": "comanchemagic",
-                    "position": 6,
-                    "distanceToWinner": 21.75,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "imperialjade",
-                    "name": "imperialjade",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      111,
-                      108,
-                      102,
-                      101,
-                      100,
-                      97
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 103.16666666666667
-                  },
-                  "maxes": {
-                    "rpr": 111
-                  }
-                },
-                "comment": "prominent, led before 2 out, ridden approaching last, faced challenge run-in, kept on well",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "well",
-                    "kept on",
-                    "led"
-                  ],
-                  "negative": []
-                }
-              },
-              {
-                "id": "905508",
-                "raceDate": "2025-11-13",
-                "trackId": "market-rasen",
-                "goingCodes": [
-                  "gs"
-                ],
-                "position": 3,
-                "distanceF": 18.636345000000002,
-                "jockey": "Tom Broughton",
-                "raceClass": "4",
-                "timePerFurlong": 16.40869286861501,
-                "totalRaceTime": 293.28,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 105,
-                "or": 108,
-                "jockeyAllowance": 5,
-                "racedAgainstRaw": [
-                  {
-                    "id": "whitenoise",
-                    "name": "whitenoise",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 119
-                  },
-                  {
-                    "id": "lookingasyouare",
-                    "name": "lookingasyouare",
-                    "position": 2,
-                    "distanceToWinner": 6.5,
-                    "rpr": 115
-                  },
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 3,
-                    "distanceToWinner": 8.75,
-                    "rpr": 105
-                  },
-                  {
-                    "id": "lamarquise",
-                    "name": "lamarquise",
-                    "position": 4,
-                    "distanceToWinner": 31.75,
-                    "rpr": 90
-                  },
-                  {
-                    "id": "spotonsoph",
-                    "name": "spotonsoph",
-                    "position": 5,
-                    "distanceToWinner": 38.25,
-                    "rpr": 74
-                  },
-                  {
-                    "id": "ladybabs",
-                    "name": "ladybabs",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      119,
-                      115,
-                      105,
-                      90,
-                      74
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 100.6
-                  },
-                  "maxes": {
-                    "rpr": 119
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "lookingasyouare",
-                    "name": "lookingasyouare",
-                    "position": 2,
-                    "distanceToWinner": 6.5,
-                    "rpr": 115
-                  },
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 3,
-                    "distanceToWinner": 8.75,
-                    "rpr": 105
-                  },
-                  {
-                    "id": "lamarquise",
-                    "name": "lamarquise",
-                    "position": 4,
-                    "distanceToWinner": 31.75,
-                    "rpr": 90
-                  },
-                  {
-                    "id": "spotonsoph",
-                    "name": "spotonsoph",
-                    "position": 5,
-                    "distanceToWinner": 38.25,
-                    "rpr": 74
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      115,
-                      105,
-                      90,
-                      74
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 96
-                  },
-                  "maxes": {
-                    "rpr": 115
-                  }
-                },
-                "comment": "in rear, headway and went third but not fluent 3 out, no impression from last",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "headway",
-                    "fluent"
-                  ],
-                  "negative": [
-                    "no impression"
-                  ]
-                }
-              },
-              {
-                "id": "904404",
-                "raceDate": "2025-10-28",
-                "trackId": "ffos-las",
-                "goingCodes": [
-                  "sft"
-                ],
-                "position": 1,
-                "distanceF": 19.99998,
-                "jockey": "Tom Broughton",
-                "raceClass": "5",
-                "timePerFurlong": 14.956014956014956,
-                "totalRaceTime": 299.12,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 111,
-                "or": 102,
-                "jockeyAllowance": 5,
-                "racedAgainstRaw": [
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 111
-                  },
-                  {
-                    "id": "goldenidentity",
-                    "name": "goldenidentity",
-                    "position": 2,
-                    "distanceToWinner": 4.75,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "bostonjoe",
-                    "name": "bostonjoe",
-                    "position": 3,
-                    "distanceToWinner": 6,
-                    "rpr": 98
-                  },
-                  {
-                    "id": "thegreyman",
-                    "name": "thegreyman",
-                    "position": 4,
-                    "distanceToWinner": 6,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "kalistalove",
-                    "name": "kalistalove",
-                    "position": 5,
-                    "distanceToWinner": 6.5,
-                    "rpr": 104
-                  },
-                  {
-                    "id": "freshspeculation",
-                    "name": "freshspeculation",
-                    "position": 6,
-                    "distanceToWinner": 7.75,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "bankonfrank",
-                    "name": "bankonfrank",
-                    "position": 7,
-                    "distanceToWinner": 13.75,
-                    "rpr": 93
-                  },
-                  {
-                    "id": "atlantabrave",
-                    "name": "atlantabrave",
-                    "position": 8,
-                    "distanceToWinner": 15.75,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "kingstongent",
-                    "name": "kingstongent",
-                    "position": 9,
-                    "distanceToWinner": 16,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "mumbles",
-                    "name": "mumbles",
-                    "position": 10,
-                    "distanceToWinner": 21,
-                    "rpr": 80
-                  },
-                  {
-                    "id": "houseofhabsburg",
-                    "name": "houseofhabsburg",
-                    "position": 11,
-                    "distanceToWinner": 39,
-                    "rpr": 60
-                  },
-                  {
-                    "id": "hellfireprincess",
-                    "name": "hellfireprincess",
-                    "position": 12,
-                    "distanceToWinner": 45.5,
-                    "rpr": 59
-                  },
-                  {
-                    "id": "highgrounds",
-                    "name": "highgrounds",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      111,
-                      103,
-                      98,
-                      102,
-                      104,
-                      103,
-                      93,
-                      92,
-                      92,
-                      80,
-                      60,
-                      59
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 91.41666666666667
-                  },
-                  "maxes": {
-                    "rpr": 111
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 111
-                  },
-                  {
-                    "id": "goldenidentity",
-                    "name": "goldenidentity",
-                    "position": 2,
-                    "distanceToWinner": 4.75,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "bostonjoe",
-                    "name": "bostonjoe",
-                    "position": 3,
-                    "distanceToWinner": 6,
-                    "rpr": 98
-                  },
-                  {
-                    "id": "thegreyman",
-                    "name": "thegreyman",
-                    "position": 4,
-                    "distanceToWinner": 6,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "kalistalove",
-                    "name": "kalistalove",
-                    "position": 5,
-                    "distanceToWinner": 6.5,
-                    "rpr": 104
-                  },
-                  {
-                    "id": "freshspeculation",
-                    "name": "freshspeculation",
-                    "position": 6,
-                    "distanceToWinner": 7.75,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "bankonfrank",
-                    "name": "bankonfrank",
-                    "position": 7,
-                    "distanceToWinner": 13.75,
-                    "rpr": 93
-                  },
-                  {
-                    "id": "atlantabrave",
-                    "name": "atlantabrave",
-                    "position": 8,
-                    "distanceToWinner": 15.75,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "kingstongent",
-                    "name": "kingstongent",
-                    "position": 9,
-                    "distanceToWinner": 16,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "mumbles",
-                    "name": "mumbles",
-                    "position": 10,
-                    "distanceToWinner": 21,
-                    "rpr": 80
-                  },
-                  {
-                    "id": "houseofhabsburg",
-                    "name": "houseofhabsburg",
-                    "position": 11,
-                    "distanceToWinner": 39,
-                    "rpr": 60
-                  },
-                  {
-                    "id": "hellfireprincess",
-                    "name": "hellfireprincess",
-                    "position": 12,
-                    "distanceToWinner": 45.5,
-                    "rpr": 59
-                  },
-                  {
-                    "id": "highgrounds",
-                    "name": "highgrounds",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      111,
-                      103,
-                      98,
-                      102,
-                      104,
-                      103,
-                      93,
-                      92,
-                      92,
-                      80,
-                      60,
-                      59
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 91.41666666666667
-                  },
-                  "maxes": {
-                    "rpr": 111
-                  }
-                },
-                "comment": "in rear, good headway before 3 out, ridden before 2 out, led before last, went clear inside final 110yds, readily",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "went clear",
-                    "headway",
-                    "led",
-                    "readily"
-                  ],
-                  "negative": []
-                }
-              },
-              {
-                "id": "903395",
-                "raceDate": "2025-10-10",
-                "trackId": "chepstow",
-                "goingCodes": [
-                  "gd"
-                ],
-                "position": 6,
-                "distanceF": 16.04998395,
-                "jockey": "Nico de Boinville",
-                "raceClass": "5",
-                "timePerFurlong": 16.447411867650754,
-                "totalRaceTime": 247.18,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 97,
-                "or": 103,
-                "jockeyAllowance": 0,
-                "racedAgainstRaw": [
-                  {
-                    "id": "sweetcaryline",
-                    "name": "sweetcaryline",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 110
-                  },
-                  {
-                    "id": "princesskeri",
-                    "name": "princesskeri",
-                    "position": 2,
-                    "distanceToWinner": 0.3,
-                    "rpr": 84
-                  },
-                  {
-                    "id": "jackeline",
-                    "name": "jackeline",
-                    "position": 3,
-                    "distanceToWinner": 0.5,
-                    "rpr": 100
-                  },
-                  {
-                    "id": "roaringhome",
-                    "name": "roaringhome",
-                    "position": 4,
-                    "distanceToWinner": 2,
-                    "rpr": 107
-                  },
-                  {
-                    "id": "oliviakate",
-                    "name": "oliviakate",
-                    "position": 5,
-                    "distanceToWinner": 5.5,
-                    "rpr": 90
-                  },
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 6,
-                    "distanceToWinner": 12,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "labelleargentee",
-                    "name": "labelleargentee",
-                    "position": 7,
-                    "distanceToWinner": 12,
-                    "rpr": 95
-                  },
-                  {
-                    "id": "conniemak",
-                    "name": "conniemak",
-                    "position": 8,
-                    "distanceToWinner": 13.25,
-                    "rpr": 81
-                  },
-                  {
-                    "id": "chosenbae",
-                    "name": "chosenbae",
-                    "position": 9,
-                    "distanceToWinner": 32.25,
-                    "rpr": 51
-                  },
-                  {
-                    "id": "chelseaannie",
-                    "name": "chelseaannie",
-                    "position": 10,
-                    "distanceToWinner": 47.25,
-                    "rpr": 55
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      110,
-                      84,
-                      100,
-                      107,
-                      90,
-                      97,
-                      95,
-                      81,
-                      51,
-                      55
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 87
-                  },
-                  "maxes": {
-                    "rpr": 110
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 6,
-                    "distanceToWinner": 12,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "labelleargentee",
-                    "name": "labelleargentee",
-                    "position": 7,
-                    "distanceToWinner": 12,
-                    "rpr": 95
-                  },
-                  {
-                    "id": "conniemak",
-                    "name": "conniemak",
-                    "position": 8,
-                    "distanceToWinner": 13.25,
-                    "rpr": 81
-                  },
-                  {
-                    "id": "chosenbae",
-                    "name": "chosenbae",
-                    "position": 9,
-                    "distanceToWinner": 32.25,
-                    "rpr": 51
-                  },
-                  {
-                    "id": "chelseaannie",
-                    "name": "chelseaannie",
-                    "position": 10,
-                    "distanceToWinner": 47.25,
-                    "rpr": 55
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      97,
-                      95,
-                      81,
-                      51,
-                      55
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 75.8
-                  },
-                  "maxes": {
-                    "rpr": 97
-                  }
-                },
-                "comment": "prominent, weakened before last",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [],
-                  "negative": [
-                    "weak"
-                  ]
-                }
-              },
-              {
-                "id": "890606",
-                "raceDate": "2025-04-20",
-                "trackId": "market-rasen",
-                "goingCodes": [
-                  "gd"
-                ],
-                "position": 2,
-                "distanceF": 16.56816525,
-                "jockey": "Tom Broughton",
-                "raceClass": "4",
-                "timePerFurlong": 15.21081078562246,
-                "totalRaceTime": 251.67,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 102,
-                "or": 103,
-                "jockeyAllowance": 5,
-                "racedAgainstRaw": [
-                  {
-                    "id": "thesecretpearl",
-                    "name": "thesecretpearl",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 2,
-                    "distanceToWinner": 0.25,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "ninnacollina",
-                    "name": "ninnacollina",
-                    "position": 3,
-                    "distanceToWinner": 2.5,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "sharona",
-                    "name": "sharona",
-                    "position": 4,
-                    "distanceToWinner": 13.5,
-                    "rpr": 82
-                  },
-                  {
-                    "id": "rightofway",
-                    "name": "rightofway",
-                    "position": 5,
-                    "distanceToWinner": 21.5,
-                    "rpr": 82
-                  },
-                  {
-                    "id": "chevelle",
-                    "name": "chevelle",
-                    "position": 6,
-                    "distanceToWinner": 37.5,
-                    "rpr": 60
-                  },
-                  {
-                    "id": "onecolour",
-                    "name": "onecolour",
-                    "position": 7,
-                    "distanceToWinner": 70.5,
-                    "rpr": 31
-                  },
-                  {
-                    "id": "icecap",
-                    "name": "icecap",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      101,
-                      102,
-                      92,
-                      82,
-                      82,
-                      60,
-                      31
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 78.57142857142857
-                  },
-                  "maxes": {
-                    "rpr": 102
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "thesecretpearl",
-                    "name": "thesecretpearl",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "justhertype",
-                    "name": "justhertype",
-                    "position": 2,
-                    "distanceToWinner": 0.25,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "ninnacollina",
-                    "name": "ninnacollina",
-                    "position": 3,
-                    "distanceToWinner": 2.5,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "sharona",
-                    "name": "sharona",
-                    "position": 4,
-                    "distanceToWinner": 13.5,
-                    "rpr": 82
-                  },
-                  {
-                    "id": "rightofway",
-                    "name": "rightofway",
-                    "position": 5,
-                    "distanceToWinner": 21.5,
-                    "rpr": 82
-                  },
-                  {
-                    "id": "chevelle",
-                    "name": "chevelle",
-                    "position": 6,
-                    "distanceToWinner": 37.5,
-                    "rpr": 60
-                  },
-                  {
-                    "id": "onecolour",
-                    "name": "onecolour",
-                    "position": 7,
-                    "distanceToWinner": 70.5,
-                    "rpr": 31
-                  },
-                  {
-                    "id": "icecap",
-                    "name": "icecap",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      101,
-                      102,
-                      92,
-                      82,
-                      82,
-                      60,
-                      31
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 78.57142857142857
-                  },
-                  "maxes": {
-                    "rpr": 102
-                  }
-                },
-                "comment": "led early, headed 2nd, led again 4th, increased tempo and going best before 2 out, 3 lengths ahead when not fluent last, hung badly left run-in, headed towards finish",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "led",
-                    "going best",
-                    "fluent"
-                  ],
-                  "negative": [
-                    "hung"
-                  ]
-                }
-              }
-            ],
-            "formInfo": {
-              "averages": {
-                "rpr": 105.2,
-                "distanceF": 18.33089076,
-                "trackIds": [
-                  "market-rasen"
-                ],
-                "goingCodes": [
-                  "gs",
-                  "gd"
-                ],
-                "jockeys": [
-                  "Tom Broughton"
-                ],
-                "raceTypeCodes": [
-                  "H"
-                ],
-                "racedAgainst": {
-                  "rpr": 90.975
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 89.08823529411765
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 92.15095238095238
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 88.9909523809524
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 110.6
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 107.2
-                }
-              },
-              "maxes": {
-                "rpr": 111,
-                "racedAgainst": {
-                  "rpr": 119
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 115
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 103.16666666666667
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 103.16666666666667
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 119
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 115
-                }
-              },
-              "min": {
-                "timePerFurlong": 14.956014956014956
-              },
-              "rawData": {
-                "rpr": [
-                  111,
-                  105,
-                  111,
-                  97,
-                  102
-                ],
-                "timePerFurlong": [
-                  15.168152423054384,
-                  16.40869286861501,
-                  14.956014956014956,
-                  16.447411867650754,
-                  15.21081078562246
-                ],
-                "raceTypeCodes": [
-                  "H",
-                  "H",
-                  "H",
-                  "H",
-                  "H"
-                ],
-                "distanceF": [
-                  20.3999796,
-                  18.636345000000002,
-                  19.99998,
-                  16.04998395,
-                  16.56816525
-                ],
-                "trackIds": [
-                  "southwell",
-                  "market-rasen",
-                  "ffos-las",
-                  "chepstow",
-                  "market-rasen"
-                ],
-                "goingCodes": [
-                  "gs",
-                  "gs",
-                  "sft",
-                  "gd",
-                  "gd"
-                ],
-                "jockeys": [
-                  "Tom Broughton",
-                  "Tom Broughton",
-                  "Tom Broughton",
-                  "Nico de Boinville",
-                  "Tom Broughton"
-                ],
-                "racedAgainst": {
-                  "rpr": [
-                    111,
-                    108,
-                    102,
-                    101,
-                    100,
-                    97,
-                    119,
-                    115,
-                    105,
-                    90,
-                    74,
-                    111,
-                    103,
-                    98,
-                    102,
-                    104,
-                    103,
-                    93,
-                    92,
-                    92,
-                    80,
-                    60,
-                    59,
-                    110,
-                    84,
-                    100,
-                    107,
-                    90,
-                    97,
-                    95,
-                    81,
-                    51,
-                    55,
-                    101,
-                    102,
-                    92,
-                    82,
-                    82,
-                    60,
-                    31
-                  ]
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": [
-                    111,
-                    108,
-                    102,
-                    101,
-                    100,
-                    97,
-                    115,
-                    105,
-                    90,
-                    74,
-                    111,
-                    103,
-                    98,
-                    102,
-                    104,
-                    103,
-                    93,
-                    92,
-                    92,
-                    80,
-                    60,
-                    59,
-                    97,
-                    95,
-                    81,
-                    51,
-                    55,
-                    101,
-                    102,
-                    92,
-                    82,
-                    82,
-                    60,
-                    31
-                  ]
-                },
-                "racedAgainst_Averages": {
-                  "rpr": [
-                    103.16666666666667,
-                    100.6,
-                    91.41666666666667,
-                    87,
-                    78.57142857142857
-                  ]
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": [
-                    103.16666666666667,
-                    96,
-                    91.41666666666667,
-                    75.8,
-                    78.57142857142857
-                  ]
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": [
-                    111,
-                    119,
-                    111,
-                    110,
-                    102
-                  ]
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": [
-                    111,
-                    115,
-                    111,
-                    97,
-                    102
-                  ]
-                }
-              }
-            },
-            "id": "5942400",
-            "jockey": "Tom Broughton",
-            "jockeyAllowance": 5,
-            "name": "justhertype",
-            "rpr": 113,
-            "or": 113,
-            "wgtLbs": 161,
-            "mostRecentForm": {
-              "id": "907811",
-              "raceDate": "2025-12-14",
-              "trackId": "southwell",
-              "goingCodes": [
-                "gs"
-              ],
-              "position": 1,
-              "distanceF": 20.3999796,
-              "jockey": "Tom Broughton",
-              "raceClass": "4",
-              "timePerFurlong": 15.168152423054384,
-              "totalRaceTime": 309.43,
-              "raceType": "H",
-              "raceTypeCode": "H",
-              "rpr": 111,
-              "or": 108,
-              "jockeyAllowance": 5,
-              "racedAgainstRaw": [
-                {
-                  "id": "justhertype",
-                  "name": "justhertype",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 111
-                },
-                {
-                  "id": "goldlink",
-                  "name": "goldlink",
-                  "position": 2,
-                  "distanceToWinner": 1,
-                  "rpr": 108
-                },
-                {
-                  "id": "donrafael",
-                  "name": "donrafael",
-                  "position": 3,
-                  "distanceToWinner": 5.5,
-                  "rpr": 102
-                },
-                {
-                  "id": "tramuntana",
-                  "name": "tramuntana",
-                  "position": 4,
-                  "distanceToWinner": 7,
-                  "rpr": 101
-                },
-                {
-                  "id": "caramelorapido",
-                  "name": "caramelorapido",
-                  "position": 5,
-                  "distanceToWinner": 11.75,
-                  "rpr": 100
-                },
-                {
-                  "id": "comanchemagic",
-                  "name": "comanchemagic",
-                  "position": 6,
-                  "distanceToWinner": 21.75,
-                  "rpr": 97
-                },
-                {
-                  "id": "imperialjade",
-                  "name": "imperialjade",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                }
-              ],
-              "racedAgainstInfo": {
-                "rawData": {
-                  "rpr": [
-                    111,
-                    108,
-                    102,
-                    101,
-                    100,
-                    97
-                  ]
-                },
-                "averages": {
-                  "rpr": 103.16666666666667
-                },
-                "maxes": {
-                  "rpr": 111
-                }
-              },
-              "racedAgainst_Beaten": [
-                {
-                  "id": "justhertype",
-                  "name": "justhertype",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 111
-                },
-                {
-                  "id": "goldlink",
-                  "name": "goldlink",
-                  "position": 2,
-                  "distanceToWinner": 1,
-                  "rpr": 108
-                },
-                {
-                  "id": "donrafael",
-                  "name": "donrafael",
-                  "position": 3,
-                  "distanceToWinner": 5.5,
-                  "rpr": 102
-                },
-                {
-                  "id": "tramuntana",
-                  "name": "tramuntana",
-                  "position": 4,
-                  "distanceToWinner": 7,
-                  "rpr": 101
-                },
-                {
-                  "id": "caramelorapido",
-                  "name": "caramelorapido",
-                  "position": 5,
-                  "distanceToWinner": 11.75,
-                  "rpr": 100
-                },
-                {
-                  "id": "comanchemagic",
-                  "name": "comanchemagic",
-                  "position": 6,
-                  "distanceToWinner": 21.75,
-                  "rpr": 97
-                },
-                {
-                  "id": "imperialjade",
-                  "name": "imperialjade",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                }
-              ],
-              "racedAgainst_BeatenInfo": {
-                "rawData": {
-                  "rpr": [
-                    111,
-                    108,
-                    102,
-                    101,
-                    100,
-                    97
-                  ]
-                },
-                "averages": {
-                  "rpr": 103.16666666666667
-                },
-                "maxes": {
-                  "rpr": 111
-                }
-              },
-              "comment": "prominent, led before 2 out, ridden approaching last, faced challenge run-in, kept on well",
-              "commentMatchedTerms": {
-                "hampered": [],
-                "eyecatcher": [],
-                "positive": [
-                  "well",
-                  "kept on",
-                  "led"
-                ],
-                "negative": []
-              }
-            },
-            "oddsDecimal": 4.5,
-            "lastRan": 30,
-            "handicapBonus": -2.5,
-            "handicappedRpr": 110.5,
-            "gapBetweenMaxRaceWgtLbsAndHorseWgtLbs": 0,
-            "gapBetweenLastRaceOrAndCurrentOr": -5
-          },
-          {
-            "age": 7,
-            "form": [
-              {
-                "id": "906445",
-                "raceDate": "2025-11-20",
-                "trackId": "warwick",
-                "goingCodes": [
-                  "gs"
-                ],
-                "position": 1,
-                "distanceF": 18.999981000000002,
-                "jockey": "Jonathan Burke",
-                "raceClass": "4",
-                "timePerFurlong": 14.948962317383367,
-                "totalRaceTime": 284.03,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 110,
-                "or": 0,
-                "jockeyAllowance": 0,
-                "racedAgainstRaw": [
-                  {
-                    "id": "dreamshadow",
-                    "name": "dreamshadow",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 110
-                  },
-                  {
-                    "id": "gaelicsaint",
-                    "name": "gaelicsaint",
-                    "position": 2,
-                    "distanceToWinner": 6.5,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "jemslilly",
-                    "name": "jemslilly",
-                    "position": 3,
-                    "distanceToWinner": 7,
-                    "rpr": 100
-                  },
-                  {
-                    "id": "yeldtocall",
-                    "name": "yeldtocall",
-                    "position": 4,
-                    "distanceToWinner": 11.75,
-                    "rpr": 93
-                  },
-                  {
-                    "id": "twistthenightaway",
-                    "name": "twistthenightaway",
-                    "position": 5,
-                    "distanceToWinner": 14,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "starofhonour",
-                    "name": "starofhonour",
-                    "position": 6,
-                    "distanceToWinner": 19,
-                    "rpr": 89
-                  },
-                  {
-                    "id": "rightofway",
-                    "name": "rightofway",
-                    "position": 7,
-                    "distanceToWinner": 19.25,
-                    "rpr": 90
-                  },
-                  {
-                    "id": "bettysdaisy",
-                    "name": "bettysdaisy",
-                    "position": 8,
-                    "distanceToWinner": 21,
-                    "rpr": 87
-                  },
-                  {
-                    "id": "topsout",
-                    "name": "topsout",
-                    "position": 9,
-                    "distanceToWinner": 21.5,
-                    "rpr": 86
-                  },
-                  {
-                    "id": "noblegrace",
-                    "name": "noblegrace",
-                    "position": 10,
-                    "distanceToWinner": 28.5,
-                    "rpr": 78
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      110,
-                      101,
-                      100,
-                      93,
-                      92,
-                      89,
-                      90,
-                      87,
-                      86,
-                      78
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 92.6
-                  },
-                  "maxes": {
-                    "rpr": 110
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "dreamshadow",
-                    "name": "dreamshadow",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 110
-                  },
-                  {
-                    "id": "gaelicsaint",
-                    "name": "gaelicsaint",
-                    "position": 2,
-                    "distanceToWinner": 6.5,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "jemslilly",
-                    "name": "jemslilly",
-                    "position": 3,
-                    "distanceToWinner": 7,
-                    "rpr": 100
-                  },
-                  {
-                    "id": "yeldtocall",
-                    "name": "yeldtocall",
-                    "position": 4,
-                    "distanceToWinner": 11.75,
-                    "rpr": 93
-                  },
-                  {
-                    "id": "twistthenightaway",
-                    "name": "twistthenightaway",
-                    "position": 5,
-                    "distanceToWinner": 14,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "starofhonour",
-                    "name": "starofhonour",
-                    "position": 6,
-                    "distanceToWinner": 19,
-                    "rpr": 89
-                  },
-                  {
-                    "id": "rightofway",
-                    "name": "rightofway",
-                    "position": 7,
-                    "distanceToWinner": 19.25,
-                    "rpr": 90
-                  },
-                  {
-                    "id": "bettysdaisy",
-                    "name": "bettysdaisy",
-                    "position": 8,
-                    "distanceToWinner": 21,
-                    "rpr": 87
-                  },
-                  {
-                    "id": "topsout",
-                    "name": "topsout",
-                    "position": 9,
-                    "distanceToWinner": 21.5,
-                    "rpr": 86
-                  },
-                  {
-                    "id": "noblegrace",
-                    "name": "noblegrace",
-                    "position": 10,
-                    "distanceToWinner": 28.5,
-                    "rpr": 78
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      110,
-                      101,
-                      100,
-                      93,
-                      92,
-                      89,
-                      90,
-                      87,
-                      86,
-                      78
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 92.6
-                  },
-                  "maxes": {
-                    "rpr": 110
-                  }
-                },
-                "comment": "took keen hold, prominent, led 4 out, went clear before last, comfortably",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "went clear",
-                    "led",
-                    "comfortably"
-                  ],
-                  "negative": []
-                }
-              },
-              {
-                "id": "904437",
-                "raceDate": "2025-10-31",
-                "trackId": "uttoxeter",
-                "goingCodes": [
-                  "gd"
-                ],
-                "position": 2,
-                "distanceF": 15.763620600000001,
-                "jockey": "Jonathan Burke",
-                "raceClass": "4",
-                "timePerFurlong": 15.430946041815432,
-                "totalRaceTime": 242.2,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 103,
-                "or": 0,
-                "jockeyAllowance": 0,
-                "racedAgainstRaw": [
-                  {
-                    "id": "laconquiere",
-                    "name": "laconquiere",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 107
-                  },
-                  {
-                    "id": "dreamshadow",
-                    "name": "dreamshadow",
-                    "position": 2,
-                    "distanceToWinner": 0.75,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "crystaldays",
-                    "name": "crystaldays",
-                    "position": 3,
-                    "distanceToWinner": 6.75,
-                    "rpr": 98
-                  },
-                  {
-                    "id": "volakes",
-                    "name": "volakes",
-                    "position": 4,
-                    "distanceToWinner": 9.25,
-                    "rpr": 95
-                  },
-                  {
-                    "id": "twistthenightaway",
-                    "name": "twistthenightaway",
-                    "position": 5,
-                    "distanceToWinner": 9.5,
-                    "rpr": 95
-                  },
-                  {
-                    "id": "jammyjay",
-                    "name": "jammyjay",
-                    "position": 6,
-                    "distanceToWinner": 11.25,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "topsout",
-                    "name": "topsout",
-                    "position": 7,
-                    "distanceToWinner": 11.5,
-                    "rpr": 91
-                  },
-                  {
-                    "id": "appleshaw",
-                    "name": "appleshaw",
-                    "position": 8,
-                    "distanceToWinner": 16.5,
-                    "rpr": 89
-                  },
-                  {
-                    "id": "smileback",
-                    "name": "smileback",
-                    "position": 9,
-                    "distanceToWinner": 19.5,
-                    "rpr": 84
-                  },
-                  {
-                    "id": "feetontheground",
-                    "name": "feetontheground",
-                    "position": 10,
-                    "distanceToWinner": 24,
-                    "rpr": 80
-                  },
-                  {
-                    "id": "crackerjackqueen",
-                    "name": "crackerjackqueen",
-                    "position": 11,
-                    "distanceToWinner": 47,
-                    "rpr": 68
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      107,
-                      103,
-                      98,
-                      95,
-                      95,
-                      92,
-                      91,
-                      89,
-                      84,
-                      80,
-                      68
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 91.0909090909091
-                  },
-                  "maxes": {
-                    "rpr": 107
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "laconquiere",
-                    "name": "laconquiere",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 107
-                  },
-                  {
-                    "id": "dreamshadow",
-                    "name": "dreamshadow",
-                    "position": 2,
-                    "distanceToWinner": 0.75,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "crystaldays",
-                    "name": "crystaldays",
-                    "position": 3,
-                    "distanceToWinner": 6.75,
-                    "rpr": 98
-                  },
-                  {
-                    "id": "volakes",
-                    "name": "volakes",
-                    "position": 4,
-                    "distanceToWinner": 9.25,
-                    "rpr": 95
-                  },
-                  {
-                    "id": "twistthenightaway",
-                    "name": "twistthenightaway",
-                    "position": 5,
-                    "distanceToWinner": 9.5,
-                    "rpr": 95
-                  },
-                  {
-                    "id": "jammyjay",
-                    "name": "jammyjay",
-                    "position": 6,
-                    "distanceToWinner": 11.25,
-                    "rpr": 92
-                  },
-                  {
-                    "id": "topsout",
-                    "name": "topsout",
-                    "position": 7,
-                    "distanceToWinner": 11.5,
-                    "rpr": 91
-                  },
-                  {
-                    "id": "appleshaw",
-                    "name": "appleshaw",
-                    "position": 8,
-                    "distanceToWinner": 16.5,
-                    "rpr": 89
-                  },
-                  {
-                    "id": "smileback",
-                    "name": "smileback",
-                    "position": 9,
-                    "distanceToWinner": 19.5,
-                    "rpr": 84
-                  },
-                  {
-                    "id": "feetontheground",
-                    "name": "feetontheground",
-                    "position": 10,
-                    "distanceToWinner": 24,
-                    "rpr": 80
-                  },
-                  {
-                    "id": "crackerjackqueen",
-                    "name": "crackerjackqueen",
-                    "position": 11,
-                    "distanceToWinner": 47,
-                    "rpr": 68
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      107,
-                      103,
-                      98,
-                      95,
-                      95,
-                      92,
-                      91,
-                      89,
-                      84,
-                      80,
-                      68
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 91.0909090909091
-                  },
-                  "maxes": {
-                    "rpr": 107
-                  }
-                },
-                "comment": "led, headed and no extra inside final 110yds",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "led"
-                  ],
-                  "negative": [
-                    "no extra"
-                  ]
-                }
-              }
-            ],
-            "formInfo": {
-              "averages": {
-                "rpr": 106.5,
-                "distanceF": 17.3818008,
-                "trackIds": [
-                  "warwick",
-                  "uttoxeter"
-                ],
-                "goingCodes": [
-                  "gs",
-                  "gd"
-                ],
-                "jockeys": [
-                  "Jonathan Burke"
-                ],
-                "raceTypeCodes": [
-                  "H"
-                ],
-                "racedAgainst": {
-                  "rpr": 91.80952380952381
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 91.80952380952381
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 91.84545454545454
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 91.84545454545454
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 108.5
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 108.5
-                }
-              },
-              "maxes": {
-                "rpr": 110,
-                "racedAgainst": {
-                  "rpr": 110
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 110
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 92.6
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 92.6
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 110
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 110
-                }
-              },
-              "min": {
-                "timePerFurlong": 14.948962317383367
-              },
-              "rawData": {
-                "rpr": [
-                  110,
-                  103
-                ],
-                "timePerFurlong": [
-                  14.948962317383367,
-                  15.430946041815432
-                ],
-                "raceTypeCodes": [
-                  "H",
-                  "H"
-                ],
-                "distanceF": [
-                  18.999981000000002,
-                  15.763620600000001
-                ],
-                "trackIds": [
-                  "warwick",
-                  "uttoxeter"
-                ],
-                "goingCodes": [
-                  "gs",
-                  "gd"
-                ],
-                "jockeys": [
-                  "Jonathan Burke",
-                  "Jonathan Burke"
-                ],
-                "racedAgainst": {
-                  "rpr": [
-                    110,
-                    101,
-                    100,
-                    93,
-                    92,
-                    89,
-                    90,
-                    87,
-                    86,
-                    78,
-                    107,
-                    103,
-                    98,
-                    95,
-                    95,
-                    92,
-                    91,
-                    89,
-                    84,
-                    80,
-                    68
-                  ]
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": [
-                    110,
-                    101,
-                    100,
-                    93,
-                    92,
-                    89,
-                    90,
-                    87,
-                    86,
-                    78,
-                    107,
-                    103,
-                    98,
-                    95,
-                    95,
-                    92,
-                    91,
-                    89,
-                    84,
-                    80,
-                    68
-                  ]
-                },
-                "racedAgainst_Averages": {
-                  "rpr": [
-                    92.6,
-                    91.0909090909091
-                  ]
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": [
-                    92.6,
-                    91.0909090909091
-                  ]
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": [
-                    110,
-                    107
-                  ]
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": [
-                    110,
-                    107
-                  ]
-                }
-              }
-            },
-            "id": "5034786",
-            "jockey": "Jonathan Burke",
-            "jockeyAllowance": 0,
-            "name": "dreamshadow",
-            "rpr": 117,
-            "or": 118,
-            "wgtLbs": 161,
-            "mostRecentForm": {
-              "id": "906445",
-              "raceDate": "2025-11-20",
-              "trackId": "warwick",
-              "goingCodes": [
-                "gs"
-              ],
-              "position": 1,
-              "distanceF": 18.999981000000002,
-              "jockey": "Jonathan Burke",
-              "raceClass": "4",
-              "timePerFurlong": 14.948962317383367,
-              "totalRaceTime": 284.03,
-              "raceType": "H",
-              "raceTypeCode": "H",
-              "rpr": 110,
-              "or": 0,
-              "jockeyAllowance": 0,
-              "racedAgainstRaw": [
-                {
-                  "id": "dreamshadow",
-                  "name": "dreamshadow",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 110
-                },
-                {
-                  "id": "gaelicsaint",
-                  "name": "gaelicsaint",
-                  "position": 2,
-                  "distanceToWinner": 6.5,
-                  "rpr": 101
-                },
-                {
-                  "id": "jemslilly",
-                  "name": "jemslilly",
-                  "position": 3,
-                  "distanceToWinner": 7,
-                  "rpr": 100
-                },
-                {
-                  "id": "yeldtocall",
-                  "name": "yeldtocall",
-                  "position": 4,
-                  "distanceToWinner": 11.75,
-                  "rpr": 93
-                },
-                {
-                  "id": "twistthenightaway",
-                  "name": "twistthenightaway",
-                  "position": 5,
-                  "distanceToWinner": 14,
-                  "rpr": 92
-                },
-                {
-                  "id": "starofhonour",
-                  "name": "starofhonour",
-                  "position": 6,
-                  "distanceToWinner": 19,
-                  "rpr": 89
-                },
-                {
-                  "id": "rightofway",
-                  "name": "rightofway",
-                  "position": 7,
-                  "distanceToWinner": 19.25,
-                  "rpr": 90
-                },
-                {
-                  "id": "bettysdaisy",
-                  "name": "bettysdaisy",
-                  "position": 8,
-                  "distanceToWinner": 21,
-                  "rpr": 87
-                },
-                {
-                  "id": "topsout",
-                  "name": "topsout",
-                  "position": 9,
-                  "distanceToWinner": 21.5,
-                  "rpr": 86
-                },
-                {
-                  "id": "noblegrace",
-                  "name": "noblegrace",
-                  "position": 10,
-                  "distanceToWinner": 28.5,
-                  "rpr": 78
-                }
-              ],
-              "racedAgainstInfo": {
-                "rawData": {
-                  "rpr": [
-                    110,
-                    101,
-                    100,
-                    93,
-                    92,
-                    89,
-                    90,
-                    87,
-                    86,
-                    78
-                  ]
-                },
-                "averages": {
-                  "rpr": 92.6
-                },
-                "maxes": {
-                  "rpr": 110
-                }
-              },
-              "racedAgainst_Beaten": [
-                {
-                  "id": "dreamshadow",
-                  "name": "dreamshadow",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 110
-                },
-                {
-                  "id": "gaelicsaint",
-                  "name": "gaelicsaint",
-                  "position": 2,
-                  "distanceToWinner": 6.5,
-                  "rpr": 101
-                },
-                {
-                  "id": "jemslilly",
-                  "name": "jemslilly",
-                  "position": 3,
-                  "distanceToWinner": 7,
-                  "rpr": 100
-                },
-                {
-                  "id": "yeldtocall",
-                  "name": "yeldtocall",
-                  "position": 4,
-                  "distanceToWinner": 11.75,
-                  "rpr": 93
-                },
-                {
-                  "id": "twistthenightaway",
-                  "name": "twistthenightaway",
-                  "position": 5,
-                  "distanceToWinner": 14,
-                  "rpr": 92
-                },
-                {
-                  "id": "starofhonour",
-                  "name": "starofhonour",
-                  "position": 6,
-                  "distanceToWinner": 19,
-                  "rpr": 89
-                },
-                {
-                  "id": "rightofway",
-                  "name": "rightofway",
-                  "position": 7,
-                  "distanceToWinner": 19.25,
-                  "rpr": 90
-                },
-                {
-                  "id": "bettysdaisy",
-                  "name": "bettysdaisy",
-                  "position": 8,
-                  "distanceToWinner": 21,
-                  "rpr": 87
-                },
-                {
-                  "id": "topsout",
-                  "name": "topsout",
-                  "position": 9,
-                  "distanceToWinner": 21.5,
-                  "rpr": 86
-                },
-                {
-                  "id": "noblegrace",
-                  "name": "noblegrace",
-                  "position": 10,
-                  "distanceToWinner": 28.5,
-                  "rpr": 78
-                }
-              ],
-              "racedAgainst_BeatenInfo": {
-                "rawData": {
-                  "rpr": [
-                    110,
-                    101,
-                    100,
-                    93,
-                    92,
-                    89,
-                    90,
-                    87,
-                    86,
-                    78
-                  ]
-                },
-                "averages": {
-                  "rpr": 92.6
-                },
-                "maxes": {
-                  "rpr": 110
-                }
-              },
-              "comment": "took keen hold, prominent, led 4 out, went clear before last, comfortably",
-              "commentMatchedTerms": {
-                "hampered": [],
-                "eyecatcher": [],
-                "positive": [
-                  "went clear",
-                  "led",
-                  "comfortably"
-                ],
-                "negative": []
-              }
-            },
-            "oddsDecimal": 1.33,
-            "lastRan": 54,
-            "handicapBonus": 0,
-            "handicappedRpr": 117,
-            "gapBetweenMaxRaceWgtLbsAndHorseWgtLbs": 0,
-            "gapBetweenLastRaceOrAndCurrentOr": 0
-          },
-          {
-            "age": 6,
-            "form": [
-              {
-                "id": "907605",
-                "raceDate": "2025-12-03",
-                "trackId": "haydock",
-                "goingCodes": [
-                  "gs"
-                ],
-                "position": 4,
-                "distanceF": 24.263612100000003,
-                "jockey": "Jack Power",
-                "raceClass": "4",
-                "timePerFurlong": 16.183150867283153,
-                "totalRaceTime": 368.5,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 103,
-                "or": 109,
-                "jockeyAllowance": 3,
-                "racedAgainstRaw": [
-                  {
-                    "id": "smalltownhero",
-                    "name": "smalltownhero",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 115
-                  },
-                  {
-                    "id": "lahiguera",
-                    "name": "lahiguera",
-                    "position": 2,
-                    "distanceToWinner": 3.75,
-                    "rpr": 98
-                  },
-                  {
-                    "id": "vroomozeile",
-                    "name": "vroomozeile",
-                    "position": 3,
-                    "distanceToWinner": 8.5,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 4,
-                    "distanceToWinner": 17.5,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "themetune",
-                    "name": "themetune",
-                    "position": 5,
-                    "distanceToWinner": 43.5,
-                    "rpr": 75
-                  },
-                  {
-                    "id": "milanac",
-                    "name": "milanac",
-                    "position": 6,
-                    "distanceToWinner": 76.5,
-                    "rpr": 43
-                  },
-                  {
-                    "id": "piaffbubbles",
-                    "name": "piaffbubbles",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      115,
-                      98,
-                      102,
-                      103,
-                      75,
-                      43
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 89.33333333333333
-                  },
-                  "maxes": {
-                    "rpr": 115
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 4,
-                    "distanceToWinner": 17.5,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "themetune",
-                    "name": "themetune",
-                    "position": 5,
-                    "distanceToWinner": 43.5,
-                    "rpr": 75
-                  },
-                  {
-                    "id": "milanac",
-                    "name": "milanac",
-                    "position": 6,
-                    "distanceToWinner": 76.5,
-                    "rpr": 43
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      103,
-                      75,
-                      43
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 73.66666666666667
-                  },
-                  "maxes": {
-                    "rpr": 103
-                  }
-                },
-                "comment": "prominent, not fluent and lost second 3 out, weakened before last",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "fluent"
-                  ],
-                  "negative": [
-                    "weak",
-                    "lost"
-                  ]
-                }
-              },
-              {
-                "id": "904377",
-                "raceDate": "2025-10-25",
-                "trackId": "kelso",
-                "goingCodes": [
-                  "gd"
-                ],
-                "position": 2,
-                "distanceF": 22.68634095,
-                "jockey": "Conner McCann",
-                "raceClass": "4",
-                "timePerFurlong": 15.382308244270922,
-                "totalRaceTime": 342.45,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 109,
-                "or": 107,
-                "jockeyAllowance": 0,
-                "racedAgainstRaw": [
-                  {
-                    "id": "luckymanifest",
-                    "name": "luckymanifest",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 122
-                  },
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 2,
-                    "distanceToWinner": 4.75,
-                    "rpr": 109
-                  },
-                  {
-                    "id": "rememberthename",
-                    "name": "rememberthename",
-                    "position": 3,
-                    "distanceToWinner": 10.25,
-                    "rpr": 100
-                  },
-                  {
-                    "id": "starlyte",
-                    "name": "starlyte",
-                    "position": 4,
-                    "distanceToWinner": 12.5,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "drshirocco",
-                    "name": "drshirocco",
-                    "position": 5,
-                    "distanceToWinner": 13.75,
-                    "rpr": 76
-                  },
-                  {
-                    "id": "anamanda",
-                    "name": "anamanda",
-                    "position": 6,
-                    "distanceToWinner": 13.75,
-                    "rpr": 84
-                  },
-                  {
-                    "id": "swallowssong",
-                    "name": "swallowssong",
-                    "position": 7,
-                    "distanceToWinner": 19.25,
-                    "rpr": 84
-                  },
-                  {
-                    "id": "manofaction",
-                    "name": "manofaction",
-                    "position": 8,
-                    "distanceToWinner": 25.75,
-                    "rpr": 76
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      122,
-                      109,
-                      100,
-                      97,
-                      76,
-                      84,
-                      84,
-                      76
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 93.5
-                  },
-                  "maxes": {
-                    "rpr": 122
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 2,
-                    "distanceToWinner": 4.75,
-                    "rpr": 109
-                  },
-                  {
-                    "id": "rememberthename",
-                    "name": "rememberthename",
-                    "position": 3,
-                    "distanceToWinner": 10.25,
-                    "rpr": 100
-                  },
-                  {
-                    "id": "starlyte",
-                    "name": "starlyte",
-                    "position": 4,
-                    "distanceToWinner": 12.5,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "drshirocco",
-                    "name": "drshirocco",
-                    "position": 5,
-                    "distanceToWinner": 13.75,
-                    "rpr": 76
-                  },
-                  {
-                    "id": "anamanda",
-                    "name": "anamanda",
-                    "position": 6,
-                    "distanceToWinner": 13.75,
-                    "rpr": 84
-                  },
-                  {
-                    "id": "swallowssong",
-                    "name": "swallowssong",
-                    "position": 7,
-                    "distanceToWinner": 19.25,
-                    "rpr": 84
-                  },
-                  {
-                    "id": "manofaction",
-                    "name": "manofaction",
-                    "position": 8,
-                    "distanceToWinner": 25.75,
-                    "rpr": 76
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      109,
-                      100,
-                      97,
-                      76,
-                      84,
-                      84,
-                      76
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 89.42857142857143
-                  },
-                  "maxes": {
-                    "rpr": 109
-                  }
-                },
-                "comment": "led, headed and no extra omitted last",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "led"
-                  ],
-                  "negative": [
-                    "no extra"
-                  ]
-                }
-              },
-              {
-                "id": "892978",
-                "raceDate": "2025-05-14",
-                "trackId": "perth",
-                "goingCodes": [
-                  "gd"
-                ],
-                "position": 1,
-                "distanceF": 20.15907075,
-                "jockey": "Jack Power",
-                "raceClass": "4",
-                "timePerFurlong": 15.415889147568965,
-                "totalRaceTime": 310.77,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 105,
-                "or": 107,
-                "jockeyAllowance": 5,
-                "racedAgainstRaw": [
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 105
-                  },
-                  {
-                    "id": "tamlaghteyes",
-                    "name": "tamlaghteyes",
-                    "position": 2,
-                    "distanceToWinner": 1.75,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "lunarrocks",
-                    "name": "lunarrocks",
-                    "position": 3,
-                    "distanceToWinner": 34.75,
-                    "rpr": 60
-                  },
-                  {
-                    "id": "getawayfrankie",
-                    "name": "getawayfrankie",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      105,
-                      101,
-                      60
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 88.66666666666667
-                  },
-                  "maxes": {
-                    "rpr": 105
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 105
-                  },
-                  {
-                    "id": "tamlaghteyes",
-                    "name": "tamlaghteyes",
-                    "position": 2,
-                    "distanceToWinner": 1.75,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "lunarrocks",
-                    "name": "lunarrocks",
-                    "position": 3,
-                    "distanceToWinner": 34.75,
-                    "rpr": 60
-                  },
-                  {
-                    "id": "getawayfrankie",
-                    "name": "getawayfrankie",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      105,
-                      101,
-                      60
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 88.66666666666667
-                  },
-                  "maxes": {
-                    "rpr": 105
-                  }
-                },
-                "comment": "jumped well, disputed lead, led and ridden 2 out, kept on well towards finish",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "well",
-                    "kept on",
-                    "led"
-                  ],
-                  "negative": []
-                }
-              },
-              {
-                "id": "890500",
-                "raceDate": "2025-04-11",
-                "trackId": "ayr",
-                "goingCodes": [
-                  "gs"
-                ],
-                "position": 3,
-                "distanceF": 15.999984000000001,
-                "jockey": "Jack Power",
-                "raceClass": "3",
-                "timePerFurlong": 15.101570668978507,
-                "totalRaceTime": 238.91,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 105,
-                "or": 0,
-                "jockeyAllowance": 5,
-                "racedAgainstRaw": [
-                  {
-                    "id": "roxanne",
-                    "name": "roxanne",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 110
-                  },
-                  {
-                    "id": "greensky",
-                    "name": "greensky",
-                    "position": 2,
-                    "distanceToWinner": 1,
-                    "rpr": 106
-                  },
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 3,
-                    "distanceToWinner": 2,
-                    "rpr": 105
-                  },
-                  {
-                    "id": "irishchorus",
-                    "name": "irishchorus",
-                    "position": 4,
-                    "distanceToWinner": 8,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "kanitamay",
-                    "name": "kanitamay",
-                    "position": 5,
-                    "distanceToWinner": 36,
-                    "rpr": 72
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      110,
-                      106,
-                      105,
-                      102,
-                      72
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 99
-                  },
-                  "maxes": {
-                    "rpr": 110
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "roxanne",
-                    "name": "roxanne",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 110
-                  },
-                  {
-                    "id": "greensky",
-                    "name": "greensky",
-                    "position": 2,
-                    "distanceToWinner": 1,
-                    "rpr": 106
-                  },
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 3,
-                    "distanceToWinner": 2,
-                    "rpr": 105
-                  },
-                  {
-                    "id": "irishchorus",
-                    "name": "irishchorus",
-                    "position": 4,
-                    "distanceToWinner": 8,
-                    "rpr": 102
-                  },
-                  {
-                    "id": "kanitamay",
-                    "name": "kanitamay",
-                    "position": 5,
-                    "distanceToWinner": 36,
-                    "rpr": 72
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      110,
-                      106,
-                      105,
-                      102,
-                      72
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 99
-                  },
-                  "maxes": {
-                    "rpr": 110
-                  }
-                },
-                "comment": "pressed leader, in touch with leaders after 3rd, headway 3 out, led narrowly 2 out, headed approaching last, no extra final 110yds",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "headway",
-                    "led"
-                  ],
-                  "negative": [
-                    "no extra"
-                  ]
-                }
-              },
-              {
-                "id": "885302",
-                "raceDate": "2025-02-03",
-                "trackId": "carlisle",
-                "goingCodes": [
-                  "sft"
-                ],
-                "position": 3,
-                "distanceF": 19.27725345,
-                "jockey": "Patrick Wadge",
-                "raceClass": "4",
-                "timePerFurlong": 17.82570347711054,
-                "totalRaceTime": 308.04,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 74,
-                "or": 0,
-                "jockeyAllowance": 0,
-                "racedAgainstRaw": [
-                  {
-                    "id": "vroomozeile",
-                    "name": "vroomozeile",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "justcallmelucy",
-                    "name": "justcallmelucy",
-                    "position": 2,
-                    "distanceToWinner": 4.5,
-                    "rpr": 101
-                  },
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 3,
-                    "distanceToWinner": 24.5,
-                    "rpr": 74
-                  },
-                  {
-                    "id": "wendywilldo",
-                    "name": "wendywilldo",
-                    "position": 4,
-                    "distanceToWinner": 30,
-                    "rpr": 70
-                  },
-                  {
-                    "id": "hollybird",
-                    "name": "hollybird",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      97,
-                      101,
-                      74,
-                      70
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 85.5
-                  },
-                  "maxes": {
-                    "rpr": 101
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "letsmingle",
-                    "name": "letsmingle",
-                    "position": 3,
-                    "distanceToWinner": 24.5,
-                    "rpr": 74
-                  },
-                  {
-                    "id": "wendywilldo",
-                    "name": "wendywilldo",
-                    "position": 4,
-                    "distanceToWinner": 30,
-                    "rpr": 70
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      74,
-                      70
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 72
-                  },
-                  "maxes": {
-                    "rpr": 74
-                  }
-                },
-                "comment": "held up in rear, headway 4 out, went third before 2 out, weakened after 2 out",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "headway"
-                  ],
-                  "negative": [
-                    "weak"
-                  ]
-                }
-              }
-            ],
-            "formInfo": {
-              "averages": {
-                "rpr": 99.2,
-                "distanceF": 20.47725225,
-                "trackIds": [
-                  "haydock",
-                  "kelso",
-                  "perth",
-                  "ayr",
-                  "carlisle"
-                ],
-                "goingCodes": [
-                  "gs",
-                  "gd"
-                ],
-                "jockeys": [
-                  "Jack Power"
-                ],
-                "raceTypeCodes": [
-                  "H"
-                ],
-                "racedAgainst": {
-                  "rpr": 91.8076923076923
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 87.6
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 91.2
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 84.55238095238096
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 110.6
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 100.2
-                }
-              },
-              "maxes": {
-                "rpr": 109,
-                "racedAgainst": {
-                  "rpr": 122
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 110
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 99
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 99
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 122
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 110
-                }
-              },
-              "min": {
-                "timePerFurlong": 15.101570668978507
-              },
-              "rawData": {
-                "rpr": [
-                  103,
-                  109,
-                  105,
-                  105,
-                  74
-                ],
-                "timePerFurlong": [
-                  16.183150867283153,
-                  15.382308244270922,
-                  15.415889147568965,
-                  15.101570668978507,
-                  17.82570347711054
-                ],
-                "raceTypeCodes": [
-                  "H",
-                  "H",
-                  "H",
-                  "H",
-                  "H"
-                ],
-                "distanceF": [
-                  24.263612100000003,
-                  22.68634095,
-                  20.15907075,
-                  15.999984000000001,
-                  19.27725345
-                ],
-                "trackIds": [
-                  "haydock",
-                  "kelso",
-                  "perth",
-                  "ayr",
-                  "carlisle"
-                ],
-                "goingCodes": [
-                  "gs",
-                  "gd",
-                  "gd",
-                  "gs",
-                  "sft"
-                ],
-                "jockeys": [
-                  "Jack Power",
-                  "Conner McCann",
-                  "Jack Power",
-                  "Jack Power",
-                  "Patrick Wadge"
-                ],
-                "racedAgainst": {
-                  "rpr": [
-                    115,
-                    98,
-                    102,
-                    103,
-                    75,
-                    43,
-                    122,
-                    109,
-                    100,
-                    97,
-                    76,
-                    84,
-                    84,
-                    76,
-                    105,
-                    101,
-                    60,
-                    110,
-                    106,
-                    105,
-                    102,
-                    72,
-                    97,
-                    101,
-                    74,
-                    70
-                  ]
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": [
-                    103,
-                    75,
-                    43,
-                    109,
-                    100,
-                    97,
-                    76,
-                    84,
-                    84,
-                    76,
-                    105,
-                    101,
-                    60,
-                    110,
-                    106,
-                    105,
-                    102,
-                    72,
-                    74,
-                    70
-                  ]
-                },
-                "racedAgainst_Averages": {
-                  "rpr": [
-                    89.33333333333333,
-                    93.5,
-                    88.66666666666667,
-                    99,
-                    85.5
-                  ]
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": [
-                    73.66666666666667,
-                    89.42857142857143,
-                    88.66666666666667,
-                    99,
-                    72
-                  ]
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": [
-                    115,
-                    122,
-                    105,
-                    110,
-                    101
-                  ]
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": [
-                    103,
-                    109,
-                    105,
-                    110,
-                    74
-                  ]
-                }
-              }
-            },
-            "id": "5746452",
-            "jockey": "Conner McCann",
-            "jockeyAllowance": 7,
-            "name": "letsmingle",
-            "rpr": 116,
-            "or": 109,
-            "wgtLbs": 154,
-            "mostRecentForm": {
-              "id": "907605",
-              "raceDate": "2025-12-03",
-              "trackId": "haydock",
-              "goingCodes": [
-                "gs"
-              ],
-              "position": 4,
-              "distanceF": 24.263612100000003,
-              "jockey": "Jack Power",
-              "raceClass": "4",
-              "timePerFurlong": 16.183150867283153,
-              "totalRaceTime": 368.5,
-              "raceType": "H",
-              "raceTypeCode": "H",
-              "rpr": 103,
-              "or": 109,
-              "jockeyAllowance": 3,
-              "racedAgainstRaw": [
-                {
-                  "id": "smalltownhero",
-                  "name": "smalltownhero",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 115
-                },
-                {
-                  "id": "lahiguera",
-                  "name": "lahiguera",
-                  "position": 2,
-                  "distanceToWinner": 3.75,
-                  "rpr": 98
-                },
-                {
-                  "id": "vroomozeile",
-                  "name": "vroomozeile",
-                  "position": 3,
-                  "distanceToWinner": 8.5,
-                  "rpr": 102
-                },
-                {
-                  "id": "letsmingle",
-                  "name": "letsmingle",
-                  "position": 4,
-                  "distanceToWinner": 17.5,
-                  "rpr": 103
-                },
-                {
-                  "id": "themetune",
-                  "name": "themetune",
-                  "position": 5,
-                  "distanceToWinner": 43.5,
-                  "rpr": 75
-                },
-                {
-                  "id": "milanac",
-                  "name": "milanac",
-                  "position": 6,
-                  "distanceToWinner": 76.5,
-                  "rpr": 43
-                },
-                {
-                  "id": "piaffbubbles",
-                  "name": "piaffbubbles",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                }
-              ],
-              "racedAgainstInfo": {
-                "rawData": {
-                  "rpr": [
-                    115,
-                    98,
-                    102,
-                    103,
-                    75,
-                    43
-                  ]
-                },
-                "averages": {
-                  "rpr": 89.33333333333333
-                },
-                "maxes": {
-                  "rpr": 115
-                }
-              },
-              "racedAgainst_Beaten": [
-                {
-                  "id": "letsmingle",
-                  "name": "letsmingle",
-                  "position": 4,
-                  "distanceToWinner": 17.5,
-                  "rpr": 103
-                },
-                {
-                  "id": "themetune",
-                  "name": "themetune",
-                  "position": 5,
-                  "distanceToWinner": 43.5,
-                  "rpr": 75
-                },
-                {
-                  "id": "milanac",
-                  "name": "milanac",
-                  "position": 6,
-                  "distanceToWinner": 76.5,
-                  "rpr": 43
-                }
-              ],
-              "racedAgainst_BeatenInfo": {
-                "rawData": {
-                  "rpr": [
-                    103,
-                    75,
-                    43
-                  ]
-                },
-                "averages": {
-                  "rpr": 73.66666666666667
-                },
-                "maxes": {
-                  "rpr": 103
-                }
-              },
-              "comment": "prominent, not fluent and lost second 3 out, weakened before last",
-              "commentMatchedTerms": {
-                "hampered": [],
-                "eyecatcher": [],
-                "positive": [
-                  "fluent"
-                ],
-                "negative": [
-                  "weak",
-                  "lost"
-                ]
-              }
-            },
-            "oddsDecimal": 11,
-            "lastRan": 41,
-            "handicapBonus": 3.5,
-            "handicappedRpr": 119.5,
-            "gapBetweenMaxRaceWgtLbsAndHorseWgtLbs": 7,
-            "gapBetweenLastRaceOrAndCurrentOr": 0
-          },
-          {
-            "age": 5,
-            "form": [
-              {
-                "id": "904340",
-                "raceDate": "2025-10-21",
-                "trackId": "perth",
-                "goingCodes": [
-                  "sft"
-                ],
-                "position": 1,
-                "distanceF": 16.21362015,
-                "jockey": "Bruce Lynn",
-                "raceClass": "4",
-                "timePerFurlong": 16.168505094773664,
-                "totalRaceTime": 262.15,
-                "raceType": "H",
-                "raceTypeCode": "H",
-                "rpr": 103,
-                "or": 0,
-                "jockeyAllowance": 0,
-                "racedAgainstRaw": [
-                  {
-                    "id": "justanartist",
-                    "name": "justanartist",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "chanonrypoint",
-                    "name": "chanonrypoint",
-                    "position": 2,
-                    "distanceToWinner": 4.75,
-                    "rpr": 98
-                  },
-                  {
-                    "id": "centurionssister",
-                    "name": "centurionssister",
-                    "position": 3,
-                    "distanceToWinner": 5.25,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "huntersspring",
-                    "name": "huntersspring",
-                    "position": 4,
-                    "distanceToWinner": 5.25,
-                    "rpr": 96
-                  },
-                  {
-                    "id": "tropicaltwist",
-                    "name": "tropicaltwist",
-                    "position": 5,
-                    "distanceToWinner": 13.25,
-                    "rpr": 88
-                  },
-                  {
-                    "id": "rosesdart",
-                    "name": "rosesdart",
-                    "position": 6,
-                    "distanceToWinner": 14.5,
-                    "rpr": 86
-                  },
-                  {
-                    "id": "tigresslilly",
-                    "name": "tigresslilly",
-                    "position": 7,
-                    "distanceToWinner": 18.5,
-                    "rpr": 85
-                  },
-                  {
-                    "id": "solwaystaree",
-                    "name": "solwaystaree",
-                    "position": 8,
-                    "distanceToWinner": 50.5,
-                    "rpr": 51
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      103,
-                      98,
-                      97,
-                      96,
-                      88,
-                      86,
-                      85,
-                      51
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 88
-                  },
-                  "maxes": {
-                    "rpr": 103
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "justanartist",
-                    "name": "justanartist",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 103
-                  },
-                  {
-                    "id": "chanonrypoint",
-                    "name": "chanonrypoint",
-                    "position": 2,
-                    "distanceToWinner": 4.75,
-                    "rpr": 98
-                  },
-                  {
-                    "id": "centurionssister",
-                    "name": "centurionssister",
-                    "position": 3,
-                    "distanceToWinner": 5.25,
-                    "rpr": 97
-                  },
-                  {
-                    "id": "huntersspring",
-                    "name": "huntersspring",
-                    "position": 4,
-                    "distanceToWinner": 5.25,
-                    "rpr": 96
-                  },
-                  {
-                    "id": "tropicaltwist",
-                    "name": "tropicaltwist",
-                    "position": 5,
-                    "distanceToWinner": 13.25,
-                    "rpr": 88
-                  },
-                  {
-                    "id": "rosesdart",
-                    "name": "rosesdart",
-                    "position": 6,
-                    "distanceToWinner": 14.5,
-                    "rpr": 86
-                  },
-                  {
-                    "id": "tigresslilly",
-                    "name": "tigresslilly",
-                    "position": 7,
-                    "distanceToWinner": 18.5,
-                    "rpr": 85
-                  },
-                  {
-                    "id": "solwaystaree",
-                    "name": "solwaystaree",
-                    "position": 8,
-                    "distanceToWinner": 50.5,
-                    "rpr": 51
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      103,
-                      98,
-                      97,
-                      96,
-                      88,
-                      86,
-                      85,
-                      51
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 88
-                  },
-                  "maxes": {
-                    "rpr": 103
-                  }
-                },
-                "comment": "prominent, led before 2nd, ridden before 2 out, went clear run-in, comfortably",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [
-                    "went clear",
-                    "led",
-                    "comfortably"
-                  ],
-                  "negative": []
-                }
-              }
-            ],
-            "formInfo": {
-              "averages": {
-                "rpr": 103,
-                "distanceF": 16.21362015,
-                "trackIds": [
-                  "perth"
-                ],
-                "goingCodes": [
-                  "sft"
-                ],
-                "jockeys": [
-                  "Bruce Lynn"
-                ],
-                "raceTypeCodes": [
-                  "H"
-                ],
-                "racedAgainst": {
-                  "rpr": 88
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 88
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 88
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 88
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 103
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 103
-                }
-              },
-              "maxes": {
-                "rpr": 103,
-                "racedAgainst": {
-                  "rpr": 103
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 103
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 88
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 88
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 103
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 103
-                }
-              },
-              "min": {
-                "timePerFurlong": 16.168505094773664
-              },
-              "rawData": {
-                "rpr": [
-                  103
-                ],
-                "timePerFurlong": [
-                  16.168505094773664
-                ],
-                "raceTypeCodes": [
-                  "H"
-                ],
-                "distanceF": [
-                  16.21362015
-                ],
-                "trackIds": [
-                  "perth"
-                ],
-                "goingCodes": [
-                  "sft"
-                ],
-                "jockeys": [
-                  "Bruce Lynn"
-                ],
-                "racedAgainst": {
-                  "rpr": [
-                    103,
-                    98,
-                    97,
-                    96,
-                    88,
-                    86,
-                    85,
-                    51
-                  ]
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": [
-                    103,
-                    98,
-                    97,
-                    96,
-                    88,
-                    86,
-                    85,
-                    51
-                  ]
-                },
-                "racedAgainst_Averages": {
-                  "rpr": [
-                    88
-                  ]
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": [
-                    88
-                  ]
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": [
-                    103
-                  ]
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": [
-                    103
-                  ]
-                }
-              }
-            },
-            "id": "7289170",
-            "jockey": "Bruce Lynn",
-            "jockeyAllowance": 0,
-            "name": "justanartist",
-            "rpr": 110,
-            "or": 110,
-            "wgtLbs": 161,
-            "mostRecentForm": {
-              "id": "904340",
-              "raceDate": "2025-10-21",
-              "trackId": "perth",
-              "goingCodes": [
-                "sft"
-              ],
-              "position": 1,
-              "distanceF": 16.21362015,
-              "jockey": "Bruce Lynn",
-              "raceClass": "4",
-              "timePerFurlong": 16.168505094773664,
-              "totalRaceTime": 262.15,
-              "raceType": "H",
-              "raceTypeCode": "H",
-              "rpr": 103,
-              "or": 0,
-              "jockeyAllowance": 0,
-              "racedAgainstRaw": [
-                {
-                  "id": "justanartist",
-                  "name": "justanartist",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 103
-                },
-                {
-                  "id": "chanonrypoint",
-                  "name": "chanonrypoint",
-                  "position": 2,
-                  "distanceToWinner": 4.75,
-                  "rpr": 98
-                },
-                {
-                  "id": "centurionssister",
-                  "name": "centurionssister",
-                  "position": 3,
-                  "distanceToWinner": 5.25,
-                  "rpr": 97
-                },
-                {
-                  "id": "huntersspring",
-                  "name": "huntersspring",
-                  "position": 4,
-                  "distanceToWinner": 5.25,
-                  "rpr": 96
-                },
-                {
-                  "id": "tropicaltwist",
-                  "name": "tropicaltwist",
-                  "position": 5,
-                  "distanceToWinner": 13.25,
-                  "rpr": 88
-                },
-                {
-                  "id": "rosesdart",
-                  "name": "rosesdart",
-                  "position": 6,
-                  "distanceToWinner": 14.5,
-                  "rpr": 86
-                },
-                {
-                  "id": "tigresslilly",
-                  "name": "tigresslilly",
-                  "position": 7,
-                  "distanceToWinner": 18.5,
-                  "rpr": 85
-                },
-                {
-                  "id": "solwaystaree",
-                  "name": "solwaystaree",
-                  "position": 8,
-                  "distanceToWinner": 50.5,
-                  "rpr": 51
-                }
-              ],
-              "racedAgainstInfo": {
-                "rawData": {
-                  "rpr": [
-                    103,
-                    98,
-                    97,
-                    96,
-                    88,
-                    86,
-                    85,
-                    51
-                  ]
-                },
-                "averages": {
-                  "rpr": 88
-                },
-                "maxes": {
-                  "rpr": 103
-                }
-              },
-              "racedAgainst_Beaten": [
-                {
-                  "id": "justanartist",
-                  "name": "justanartist",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 103
-                },
-                {
-                  "id": "chanonrypoint",
-                  "name": "chanonrypoint",
-                  "position": 2,
-                  "distanceToWinner": 4.75,
-                  "rpr": 98
-                },
-                {
-                  "id": "centurionssister",
-                  "name": "centurionssister",
-                  "position": 3,
-                  "distanceToWinner": 5.25,
-                  "rpr": 97
-                },
-                {
-                  "id": "huntersspring",
-                  "name": "huntersspring",
-                  "position": 4,
-                  "distanceToWinner": 5.25,
-                  "rpr": 96
-                },
-                {
-                  "id": "tropicaltwist",
-                  "name": "tropicaltwist",
-                  "position": 5,
-                  "distanceToWinner": 13.25,
-                  "rpr": 88
-                },
-                {
-                  "id": "rosesdart",
-                  "name": "rosesdart",
-                  "position": 6,
-                  "distanceToWinner": 14.5,
-                  "rpr": 86
-                },
-                {
-                  "id": "tigresslilly",
-                  "name": "tigresslilly",
-                  "position": 7,
-                  "distanceToWinner": 18.5,
-                  "rpr": 85
-                },
-                {
-                  "id": "solwaystaree",
-                  "name": "solwaystaree",
-                  "position": 8,
-                  "distanceToWinner": 50.5,
-                  "rpr": 51
-                }
-              ],
-              "racedAgainst_BeatenInfo": {
-                "rawData": {
-                  "rpr": [
-                    103,
-                    98,
-                    97,
-                    96,
-                    88,
-                    86,
-                    85,
-                    51
-                  ]
-                },
-                "averages": {
-                  "rpr": 88
-                },
-                "maxes": {
-                  "rpr": 103
-                }
-              },
-              "comment": "prominent, led before 2nd, ridden before 2 out, went clear run-in, comfortably",
-              "commentMatchedTerms": {
-                "hampered": [],
-                "eyecatcher": [],
-                "positive": [
-                  "went clear",
-                  "led",
-                  "comfortably"
-                ],
-                "negative": []
-              }
-            },
-            "oddsDecimal": 17,
-            "lastRan": 84,
-            "handicapBonus": 0,
-            "handicappedRpr": 110,
-            "gapBetweenMaxRaceWgtLbsAndHorseWgtLbs": 0,
-            "gapBetweenLastRaceOrAndCurrentOr": 0
-          },
-          {
-            "age": 6,
-            "form": [
-              {
-                "id": "909132",
-                "raceDate": "2025-11-22",
-                "trackId": "kirkistown",
-                "goingCodes": [
-                  "y",
-                  "sft"
-                ],
-                "position": 2,
-                "distanceF": 23.999976,
-                "jockey": "S Connor",
-                "raceClass": 0,
-                "timePerFurlong": 17.641352968294356,
-                "totalRaceTime": 421,
-                "raceType": "P",
-                "raceTypeCode": "P",
-                "rpr": 72,
-                "or": 0,
-                "jockeyAllowance": 0,
-                "racedAgainstRaw": [
-                  {
-                    "id": "walkthehall",
-                    "name": "walkthehall",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 74
-                  },
-                  {
-                    "id": "largyrose",
-                    "name": "largyrose",
-                    "position": 2,
-                    "distanceToWinner": 1.5,
-                    "rpr": 72
-                  },
-                  {
-                    "id": "godblessyourosie",
-                    "name": "godblessyourosie",
-                    "position": 3,
-                    "distanceToWinner": 15.5,
-                    "rpr": 58
-                  },
-                  {
-                    "id": "letsdothisbuddy",
-                    "name": "letsdothisbuddy",
-                    "position": 4,
-                    "distanceToWinner": 47.5,
-                    "rpr": 50
-                  },
-                  {
-                    "id": "ringcreevydiamond",
-                    "name": "ringcreevydiamond",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  },
-                  {
-                    "id": "wotsitteye",
-                    "name": "wotsitteye",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  },
-                  {
-                    "id": "cherryred",
-                    "name": "cherryred",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainstInfo": {
-                  "rawData": {
-                    "rpr": [
-                      74,
-                      72,
-                      58,
-                      50
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 63.5
-                  },
-                  "maxes": {
-                    "rpr": 74
-                  }
-                },
-                "racedAgainst_Beaten": [
-                  {
-                    "id": "walkthehall",
-                    "name": "walkthehall",
-                    "position": 1,
-                    "distanceToWinner": 0,
-                    "rpr": 74
-                  },
-                  {
-                    "id": "largyrose",
-                    "name": "largyrose",
-                    "position": 2,
-                    "distanceToWinner": 1.5,
-                    "rpr": 72
-                  },
-                  {
-                    "id": "godblessyourosie",
-                    "name": "godblessyourosie",
-                    "position": 3,
-                    "distanceToWinner": 15.5,
-                    "rpr": 58
-                  },
-                  {
-                    "id": "letsdothisbuddy",
-                    "name": "letsdothisbuddy",
-                    "position": 4,
-                    "distanceToWinner": 47.5,
-                    "rpr": 50
-                  },
-                  {
-                    "id": "ringcreevydiamond",
-                    "name": "ringcreevydiamond",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  },
-                  {
-                    "id": "wotsitteye",
-                    "name": "wotsitteye",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  },
-                  {
-                    "id": "cherryred",
-                    "name": "cherryred",
-                    "position": 0,
-                    "distanceToWinner": 0,
-                    "rpr": 0
-                  }
-                ],
-                "racedAgainst_BeatenInfo": {
-                  "rawData": {
-                    "rpr": [
-                      74,
-                      72,
-                      58,
-                      50
-                    ]
-                  },
-                  "averages": {
-                    "rpr": 63.5
-                  },
-                  "maxes": {
-                    "rpr": 74
-                  }
-                },
-                "comment": "tr ldrs, 15l 4th by 2nd, 12l 6th at 5th, prog to 6l 5th 6out, rdn aftr 3out & sn ko to disp 3l 2nd aft 2out, ko onepce",
-                "commentMatchedTerms": {
-                  "hampered": [],
-                  "eyecatcher": [],
-                  "positive": [],
-                  "negative": []
-                }
-              }
-            ],
-            "formInfo": {
-              "averages": {
-                "rpr": 72,
-                "distanceF": 23.999976,
-                "trackIds": [
-                  "kirkistown"
-                ],
-                "goingCodes": [
-                  "y",
-                  "sft"
-                ],
-                "jockeys": [
-                  "S Connor"
-                ],
-                "raceTypeCodes": [
-                  "P"
-                ],
-                "racedAgainst": {
-                  "rpr": 63.5
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 63.5
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 63.5
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 63.5
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 74
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 74
-                }
-              },
-              "maxes": {
-                "rpr": 72,
-                "racedAgainst": {
-                  "rpr": 74
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 74
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 63.5
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 63.5
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 74
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 74
-                }
-              },
-              "min": {
-                "timePerFurlong": 17.641352968294356
-              },
-              "rawData": {
-                "rpr": [
-                  72
-                ],
-                "timePerFurlong": [
-                  17.641352968294356
-                ],
-                "raceTypeCodes": [
-                  "P"
-                ],
-                "distanceF": [
-                  23.999976
-                ],
-                "trackIds": [
-                  "kirkistown"
-                ],
-                "goingCodes": [
-                  "y",
-                  "sft"
-                ],
-                "jockeys": [
-                  "S Connor"
-                ],
-                "racedAgainst": {
-                  "rpr": [
-                    74,
-                    72,
-                    58,
-                    50
-                  ]
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": [
-                    74,
-                    72,
-                    58,
-                    50
-                  ]
-                },
-                "racedAgainst_Averages": {
-                  "rpr": [
-                    63.5
-                  ]
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": [
-                    63.5
-                  ]
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": [
-                    74
-                  ]
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": [
-                    74
-                  ]
-                }
-              }
-            },
-            "id": "7534598",
-            "jockey": "Ben Smith",
-            "jockeyAllowance": 7,
-            "name": "largyrose",
-            "rpr": null,
-            "or": null,
-            "wgtLbs": 147,
-            "mostRecentForm": {
-              "id": "909132",
-              "raceDate": "2025-11-22",
-              "trackId": "kirkistown",
-              "goingCodes": [
-                "y",
-                "sft"
-              ],
-              "position": 2,
-              "distanceF": 23.999976,
-              "jockey": "S Connor",
-              "raceClass": 0,
-              "timePerFurlong": 17.641352968294356,
-              "totalRaceTime": 421,
-              "raceType": "P",
-              "raceTypeCode": "P",
-              "rpr": 72,
-              "or": 0,
-              "jockeyAllowance": 0,
-              "racedAgainstRaw": [
-                {
-                  "id": "walkthehall",
-                  "name": "walkthehall",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 74
-                },
-                {
-                  "id": "largyrose",
-                  "name": "largyrose",
-                  "position": 2,
-                  "distanceToWinner": 1.5,
-                  "rpr": 72
-                },
-                {
-                  "id": "godblessyourosie",
-                  "name": "godblessyourosie",
-                  "position": 3,
-                  "distanceToWinner": 15.5,
-                  "rpr": 58
-                },
-                {
-                  "id": "letsdothisbuddy",
-                  "name": "letsdothisbuddy",
-                  "position": 4,
-                  "distanceToWinner": 47.5,
-                  "rpr": 50
-                },
-                {
-                  "id": "ringcreevydiamond",
-                  "name": "ringcreevydiamond",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                },
-                {
-                  "id": "wotsitteye",
-                  "name": "wotsitteye",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                },
-                {
-                  "id": "cherryred",
-                  "name": "cherryred",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                }
-              ],
-              "racedAgainstInfo": {
-                "rawData": {
-                  "rpr": [
-                    74,
-                    72,
-                    58,
-                    50
-                  ]
-                },
-                "averages": {
-                  "rpr": 63.5
-                },
-                "maxes": {
-                  "rpr": 74
-                }
-              },
-              "racedAgainst_Beaten": [
-                {
-                  "id": "walkthehall",
-                  "name": "walkthehall",
-                  "position": 1,
-                  "distanceToWinner": 0,
-                  "rpr": 74
-                },
-                {
-                  "id": "largyrose",
-                  "name": "largyrose",
-                  "position": 2,
-                  "distanceToWinner": 1.5,
-                  "rpr": 72
-                },
-                {
-                  "id": "godblessyourosie",
-                  "name": "godblessyourosie",
-                  "position": 3,
-                  "distanceToWinner": 15.5,
-                  "rpr": 58
-                },
-                {
-                  "id": "letsdothisbuddy",
-                  "name": "letsdothisbuddy",
-                  "position": 4,
-                  "distanceToWinner": 47.5,
-                  "rpr": 50
-                },
-                {
-                  "id": "ringcreevydiamond",
-                  "name": "ringcreevydiamond",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                },
-                {
-                  "id": "wotsitteye",
-                  "name": "wotsitteye",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                },
-                {
-                  "id": "cherryred",
-                  "name": "cherryred",
-                  "position": 0,
-                  "distanceToWinner": 0,
-                  "rpr": 0
-                }
-              ],
-              "racedAgainst_BeatenInfo": {
-                "rawData": {
-                  "rpr": [
-                    74,
-                    72,
-                    58,
-                    50
-                  ]
-                },
-                "averages": {
-                  "rpr": 63.5
-                },
-                "maxes": {
-                  "rpr": 74
-                }
-              },
-              "comment": "tr ldrs, 15l 4th by 2nd, 12l 6th at 5th, prog to 6l 5th 6out, rdn aftr 3out & sn ko to disp 3l 2nd aft 2out, ko onepce",
-              "commentMatchedTerms": {
-                "hampered": [],
-                "eyecatcher": [],
-                "positive": [],
-                "negative": []
-              }
-            },
-            "oddsDecimal": 26,
-            "lastRan": 52,
-            "handicapBonus": 7,
-            "handicappedRpr": null,
-            "gapBetweenMaxRaceWgtLbsAndHorseWgtLbs": 14,
-            "gapBetweenLastRaceOrAndCurrentOr": 0
-          }
-        ]
-      },
-      {
         "distanceF": 24,
         "goingCodes": [
           "hy"
@@ -4786,6 +26,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 117.5,
+            "race_maxes_racedAgainstMaxes": 128,
             "race_wgtLbs": 168,
             "race_rpr": 108,
             "race_or": 105,
@@ -4984,6 +225,18 @@
               105,
               112.5,
               108
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              128,
+              114,
+              116,
+              122,
+              121,
+              110,
+              113,
+              116,
+              116,
+              115
             ]
           }
         },
@@ -15426,6 +10679,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 145.5,
+            "race_maxes_racedAgainstMaxes": 147,
             "race_wgtLbs": 162,
             "race_rpr": 150,
             "race_or": 139,
@@ -15521,6 +10775,11 @@
             ],
             "raw_race_averages_racedAgainstMaxes": [
               145.5,
+              137,
+              125
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              147,
               137,
               125
             ]
@@ -17285,6 +12544,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 109,
+            "race_maxes_racedAgainstMaxes": 116,
             "race_wgtLbs": 166,
             "race_rpr": 108,
             "race_or": 96,
@@ -17308,8 +12568,8 @@
               142,
               162,
               159,
-              153,
               166,
+              153,
               142,
               149
             ],
@@ -17324,8 +12584,8 @@
               72,
               92,
               89,
-              83,
               96,
+              83,
               72,
               79
             ],
@@ -17412,6 +12672,13 @@
               109,
               96,
               95.8
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              111,
+              104,
+              116,
+              99,
+              99
             ]
           }
         },
@@ -20526,6 +15793,102 @@
             "gapBetweenLastRaceOrAndCurrentOr": 1
           },
           {
+            "age": 7,
+            "form": [],
+            "formInfo": {
+              "averages": {
+                "rpr": 0,
+                "distanceF": 0,
+                "trackIds": [],
+                "goingCodes": [],
+                "jockeys": [],
+                "raceTypeCodes": [],
+                "racedAgainst": {
+                  "rpr": 0
+                },
+                "racedAgainst_Beaten": {
+                  "rpr": 0
+                },
+                "racedAgainst_Averages": {
+                  "rpr": 0
+                },
+                "racedAgainst_Beaten_Averages": {
+                  "rpr": 0
+                },
+                "racedAgainst_Maxes": {
+                  "rpr": 0
+                },
+                "racedAgainst_Beaten_Maxes": {
+                  "rpr": 0
+                }
+              },
+              "maxes": {
+                "rpr": 0,
+                "racedAgainst": {
+                  "rpr": 0
+                },
+                "racedAgainst_Beaten": {
+                  "rpr": 0
+                },
+                "racedAgainst_Averages": {
+                  "rpr": 0
+                },
+                "racedAgainst_Beaten_Averages": {
+                  "rpr": 0
+                },
+                "racedAgainst_Maxes": {
+                  "rpr": 0
+                },
+                "racedAgainst_Beaten_Maxes": {
+                  "rpr": 0
+                }
+              },
+              "min": {
+                "timePerFurlong": 0
+              },
+              "rawData": {
+                "rpr": [],
+                "timePerFurlong": [],
+                "raceTypeCodes": [],
+                "distanceF": [],
+                "trackIds": [],
+                "goingCodes": [],
+                "jockeys": [],
+                "racedAgainst": {
+                  "rpr": []
+                },
+                "racedAgainst_Beaten": {
+                  "rpr": []
+                },
+                "racedAgainst_Averages": {
+                  "rpr": []
+                },
+                "racedAgainst_Beaten_Averages": {
+                  "rpr": []
+                },
+                "racedAgainst_Maxes": {
+                  "rpr": []
+                },
+                "racedAgainst_Beaten_Maxes": {
+                  "rpr": []
+                }
+              }
+            },
+            "id": "5490483",
+            "jockey": "Brian Hughes",
+            "jockeyAllowance": 0,
+            "name": "bigzouk",
+            "rpr": null,
+            "or": 96,
+            "wgtLbs": 166,
+            "oddsDecimal": 2.75,
+            "lastRan": 0,
+            "handicapBonus": 0,
+            "handicappedRpr": null,
+            "gapBetweenMaxRaceWgtLbsAndHorseWgtLbs": 0,
+            "gapBetweenLastRaceOrAndCurrentOr": 0
+          },
+          {
             "age": 8,
             "form": [
               {
@@ -21507,102 +16870,6 @@
             "handicappedRpr": 108,
             "gapBetweenMaxRaceWgtLbsAndHorseWgtLbs": 13,
             "gapBetweenLastRaceOrAndCurrentOr": 1
-          },
-          {
-            "age": 7,
-            "form": [],
-            "formInfo": {
-              "averages": {
-                "rpr": 0,
-                "distanceF": 0,
-                "trackIds": [],
-                "goingCodes": [],
-                "jockeys": [],
-                "raceTypeCodes": [],
-                "racedAgainst": {
-                  "rpr": 0
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 0
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 0
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 0
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 0
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 0
-                }
-              },
-              "maxes": {
-                "rpr": 0,
-                "racedAgainst": {
-                  "rpr": 0
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": 0
-                },
-                "racedAgainst_Averages": {
-                  "rpr": 0
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": 0
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": 0
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": 0
-                }
-              },
-              "min": {
-                "timePerFurlong": 0
-              },
-              "rawData": {
-                "rpr": [],
-                "timePerFurlong": [],
-                "raceTypeCodes": [],
-                "distanceF": [],
-                "trackIds": [],
-                "goingCodes": [],
-                "jockeys": [],
-                "racedAgainst": {
-                  "rpr": []
-                },
-                "racedAgainst_Beaten": {
-                  "rpr": []
-                },
-                "racedAgainst_Averages": {
-                  "rpr": []
-                },
-                "racedAgainst_Beaten_Averages": {
-                  "rpr": []
-                },
-                "racedAgainst_Maxes": {
-                  "rpr": []
-                },
-                "racedAgainst_Beaten_Maxes": {
-                  "rpr": []
-                }
-              }
-            },
-            "id": "5490483",
-            "jockey": "Brian Hughes",
-            "jockeyAllowance": 0,
-            "name": "bigzouk",
-            "rpr": null,
-            "or": 96,
-            "wgtLbs": 166,
-            "oddsDecimal": 2.75,
-            "lastRan": 0,
-            "handicapBonus": 0,
-            "handicappedRpr": null,
-            "gapBetweenMaxRaceWgtLbsAndHorseWgtLbs": 0,
-            "gapBetweenLastRaceOrAndCurrentOr": 0
           },
           {
             "age": 13,
@@ -23046,6 +18313,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 128,
+            "race_maxes_racedAgainstMaxes": 132,
             "race_wgtLbs": 168,
             "race_rpr": 115,
             "race_or": 109,
@@ -23216,6 +18484,16 @@
               120.5,
               107,
               128
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              127,
+              124,
+              125,
+              112,
+              112,
+              132,
+              108,
+              128
             ]
           }
         },
@@ -23237,17 +18515,8 @@
             "name": "Two Auld Pals",
             "diffusion_name": "Two Auld Pals",
             "saddle_cloth_number": 5,
-            "score": 95.0909090909091,
-            "dist_to_horse_in_front": "¼",
-            "dist_to_winner": "1"
-          },
-          "4288004": {
-            "id": 4288004,
-            "name": "Dance Thief",
-            "diffusion_name": "Dance Thief",
-            "saddle_cloth_number": 3,
-            "score": 93.45454545454545,
-            "dist_to_horse_in_front": "¼",
+            "score": 92.72727272727272,
+            "dist_to_horse_in_front": "dht",
             "dist_to_winner": "1¼"
           },
           "4420153": {
@@ -23256,7 +18525,7 @@
             "diffusion_name": "Mr Lincoln",
             "saddle_cloth_number": 6,
             "score": 81.81818181818181,
-            "dist_to_horse_in_front": "¾",
+            "dist_to_horse_in_front": "½",
             "dist_to_winner": "3½"
           },
           "5029056": {
@@ -23273,9 +18542,18 @@
             "name": "He's Bresilian",
             "diffusion_name": "He's Bresilian",
             "saddle_cloth_number": 2,
-            "score": 96.72727272727273,
-            "dist_to_horse_in_front": "½",
+            "score": 93.45454545454545,
+            "dist_to_horse_in_front": "1¼",
             "dist_to_winner": null
+          },
+          "6903328": {
+            "id": 6903328,
+            "name": "Platin Moon",
+            "diffusion_name": "Platin Moon",
+            "saddle_cloth_number": 10,
+            "score": 85.45454545454545,
+            "dist_to_horse_in_front": "head",
+            "dist_to_winner": "3"
           }
         },
         "raceExtraInfo": {
@@ -31526,6 +26804,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 118,
+            "race_maxes_racedAgainstMaxes": 118,
             "race_wgtLbs": 160,
             "race_rpr": 114,
             "race_or": 0,
@@ -31617,6 +26896,11 @@
               99
             ],
             "raw_race_averages_racedAgainstMaxes": [
+              108,
+              108,
+              118
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
               108,
               108,
               118
@@ -34093,6 +29377,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 87,
+            "race_maxes_racedAgainstMaxes": 88,
             "race_wgtLbs": 138,
             "race_rpr": 70,
             "race_or": 60,
@@ -34225,6 +29510,13 @@
               71.5,
               80.66666666666667,
               87
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              81,
+              74,
+              77,
+              88,
+              88
             ]
           }
         },
@@ -40768,6 +36060,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 75.25,
+            "race_maxes_racedAgainstMaxes": 88,
             "race_wgtLbs": 135,
             "race_rpr": 72,
             "race_or": 60,
@@ -40921,6 +36214,15 @@
               75.25,
               67,
               64.2
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              71,
+              77,
+              68,
+              63,
+              88,
+              76,
+              70
             ]
           }
         },
@@ -51552,6 +46854,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 77,
+            "race_maxes_racedAgainstMaxes": 79,
             "race_wgtLbs": 135,
             "race_rpr": 70,
             "race_or": 66,
@@ -51688,6 +46991,14 @@
               64,
               73.5,
               72,
+              71,
+              77
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              79,
+              64,
+              77,
+              77,
               71,
               77
             ]
@@ -57233,6 +52544,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 72,
+            "race_maxes_racedAgainstMaxes": 79,
             "race_wgtLbs": 135,
             "race_rpr": 71,
             "race_or": 59,
@@ -57371,6 +52683,14 @@
               63,
               64.75,
               72
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              74,
+              79,
+              74,
+              68,
+              68,
+              79
             ]
           }
         },
@@ -65180,6 +60500,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 85,
+            "race_maxes_racedAgainstMaxes": 93,
             "race_wgtLbs": 133,
             "race_rpr": 94,
             "race_or": 78,
@@ -65333,6 +60654,15 @@
               78.2,
               81,
               82
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              80,
+              93,
+              91,
+              93,
+              81,
+              81,
+              91
             ]
           }
         },
@@ -74670,6 +70000,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 92,
+            "race_maxes_racedAgainstMaxes": 100,
             "race_wgtLbs": 135,
             "race_rpr": 95,
             "race_or": 84,
@@ -74792,6 +70123,13 @@
               81.5,
               90.6,
               90.8,
+              80
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              96,
+              85,
+              96,
+              100,
               80
             ]
           }
@@ -81280,6 +76618,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 69.5,
+            "race_maxes_racedAgainstMaxes": 79,
             "race_wgtLbs": 132,
             "race_rpr": 72,
             "race_or": 60,
@@ -81418,6 +76757,14 @@
               69.5,
               66,
               63
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              69,
+              79,
+              68,
+              77,
+              69,
+              68
             ]
           }
         },
@@ -90153,6 +85500,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 78.2,
+            "race_maxes_racedAgainstMaxes": 86,
             "race_wgtLbs": 132,
             "race_rpr": 82,
             "race_or": 70,
@@ -90306,6 +85654,15 @@
               72.2,
               69.6,
               77.2
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              71,
+              80,
+              86,
+              78,
+              86,
+              76,
+              81
             ]
           }
         },
@@ -99695,6 +95052,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 73.6,
+            "race_maxes_racedAgainstMaxes": 90,
             "race_wgtLbs": 135,
             "race_rpr": 60,
             "race_or": 50,
@@ -99908,6 +95266,19 @@
               58,
               70.66666666666667,
               73.6
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              63,
+              70,
+              69,
+              63,
+              59,
+              79,
+              65,
+              69,
+              62,
+              78,
+              90
             ]
           }
         },
@@ -111984,6 +107355,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 69.5,
+            "race_maxes_racedAgainstMaxes": 83,
             "race_wgtLbs": 139,
             "race_rpr": 65,
             "race_or": 50,
@@ -112182,6 +107554,18 @@
               62.5,
               69.5,
               66.5
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              63,
+              63,
+              83,
+              69,
+              64,
+              69,
+              64,
+              70,
+              71,
+              73
             ]
           }
         },
@@ -123331,6 +118715,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 97.2,
+            "race_maxes_racedAgainstMaxes": 106,
             "race_wgtLbs": 137,
             "race_rpr": 98,
             "race_or": 87,
@@ -123457,6 +118842,13 @@
               93.75,
               94,
               93.25
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              106,
+              94,
+              97,
+              100,
+              99
             ]
           }
         },
@@ -129912,6 +125304,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 78.33333333333333,
+            "race_maxes_racedAgainstMaxes": 86,
             "race_wgtLbs": 135,
             "race_rpr": 79,
             "race_or": 67,
@@ -130095,6 +125488,17 @@
               78.33333333333333,
               73,
               78.25
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              80,
+              71,
+              74,
+              71,
+              76,
+              71,
+              83,
+              78,
+              86
             ]
           }
         },
@@ -140948,6 +136352,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 81,
+            "race_maxes_racedAgainstMaxes": 81,
             "race_wgtLbs": 142,
             "race_rpr": 71,
             "race_or": 71,
@@ -141098,6 +136503,15 @@
               72,
               75,
               71.5,
+              71,
+              79,
+              81
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              78,
+              72,
+              78,
+              78,
               71,
               79,
               81
@@ -146149,6 +141563,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 98.5,
+            "race_maxes_racedAgainstMaxes": 103,
             "race_wgtLbs": 135,
             "race_rpr": 104,
             "race_or": 92,
@@ -146301,6 +141716,15 @@
               91.6,
               84,
               98.5,
+              81
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              97,
+              101,
+              95,
+              103,
+              85,
+              101,
               81
             ]
           }
@@ -154258,6 +149682,7 @@
           },
           "maxes": {
             "race_averages_racedAgainstMaxes": 95,
+            "race_maxes_racedAgainstMaxes": 104,
             "race_wgtLbs": 140,
             "race_rpr": 94,
             "race_or": 85,
@@ -154396,6 +149821,14 @@
               85,
               87,
               91.75
+            ],
+            "raw_race_maxes_racedAgainstMaxes": [
+              104,
+              96,
+              86,
+              93,
+              90,
+              93
             ]
           }
         },
