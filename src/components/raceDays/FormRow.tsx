@@ -14,7 +14,7 @@ interface FormProps {
   meeting: MeetingType;
 }
 
-export function FormRow({ form, horse }: FormProps) {
+export function FormRow({ form }: FormProps) {
   const {
     distanceF: formDistanceF,
     goingCodes: formGoingCodes,
@@ -50,14 +50,13 @@ export function FormRow({ form, horse }: FormProps) {
       <td className="px-4 py-2 ">{formRaceRaceCode}</td>
       <td className="px-4 py-2 ">{formGoingCodes}</td>
       <td className="px-4 py-2 ">{jockey}</td>
+      <td className="px-4 py-2 ">{jockeyAllowance?.toFixed(2)}</td>
+
+      <td className="px-4 py-2 ">{or?.toFixed(2)}</td>
+      <td className="px-4 py-2 ">{rpr}</td>
 
       <td className="px-4 py-2 ">{formDistanceF?.toFixed(2)}</td>
       <td className="px-4 py-2 ">{timePerFurlong?.toFixed(2)}</td>
-
-      <td className="px-4 py-2 ">{or?.toFixed(2)}</td>
-      <td className="px-4 py-2 ">{jockeyAllowance?.toFixed(2)}</td>
-      <td className="px-4 py-2 ">{rpr}</td>
-
       <td className="px-4 py-2 ">
         {racedAgainstInfo.averages.rpr?.toFixed(2)}
       </td>

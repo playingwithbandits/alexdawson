@@ -19,7 +19,6 @@ import {
   avg,
   countCommentSentimentObj,
   isJumpsRaceTypeCode,
-  matchRaceTypeCode,
 } from "@/lib/utils";
 
 interface HorseProps {
@@ -216,7 +215,6 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
     distanceF: formAveragesDistanceF,
     goingCodes: formAveragesGoingCode,
     jockeys: formAveragesJockey,
-    raceTypeCodes: formAveragesRaceTypeCode,
     racedAgainst_Beaten_Averages: formAveragesRacedAgainstBeatenAverages,
     racedAgainst_Beaten_Maxes: formAveragesRacedAgainstBeatenMaxes,
     racedAgainst_Maxes: formAveragesRacedAgainstMaxes_Avg,
@@ -638,13 +636,13 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                         `Gap Between Last Race Or And Current Or: ${horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(
                           2
                         )}\n\n` +
-                        `Max Race WgtLbs: ${race.horsesInfo.maxes.race_wgtLbs}\n` +
-                        `Horse WgtLbs: ${horse.wgtLbs}\n` +
-                        `Gap Between Max Race WgtLbs And Horse WgtLbs: ${horse.gapBetweenMaxRaceWgtLbsAndHorseWgtLbs?.toFixed(
+                        `Form Averages Or: ${race.horsesInfo.averages.race_or}\n` +
+                        `Current Or: ${horse.or}\n` +
+                        `Gap Between Form Averages Or And Horse Or: ${horse.gapBetweenFormAveragesOrAndHorseOr?.toFixed(
                           2
                         )}\n\n` +
                         `Handicap Bonus:\n\n ` +
-                        `${horse.gapBetweenMaxRaceWgtLbsAndHorseWgtLbs?.toFixed(
+                        `${horse.gapBetweenFormAveragesOrAndHorseOr?.toFixed(
                           2
                         )} + ${horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(
                           2

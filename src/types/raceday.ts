@@ -155,7 +155,7 @@ export interface Horse {
   handicapBonus?: number;
   handicappedRpr?: number;
   gapBetweenLastRaceOrAndCurrentOr?: number;
-  gapBetweenMaxRaceWgtLbsAndHorseWgtLbs?: number;
+  gapBetweenFormAveragesOrAndHorseOr?: number;
 }
 
 export interface FormInfo {
@@ -187,6 +187,7 @@ export interface FormInfo {
     };
   };
   averages: {
+    or: number;
     rpr: number;
     distanceF: number;
     trackIds: string[];
@@ -285,6 +286,7 @@ export interface FormObj {
 
   jockey: string;
   jockeyAllowance: number;
+  weightCarriedLbs: number;
   comment: string;
   commentMatchedTerms: {
     hampered: string[];

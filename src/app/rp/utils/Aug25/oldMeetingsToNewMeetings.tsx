@@ -81,6 +81,8 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             rpCloseUpComment,
             officialRatingRanOff,
             weightAllowanceLbs,
+
+            weightCarriedLbs,
           } = matchingFormObj || {};
 
           const { runners_beaten, runners_all } = lastRaceStatsObj || {};
@@ -141,6 +143,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
 
           return {
             id,
+            weightCarriedLbs: weightCarriedLbs || 0,
             raceDate: formRowValidDate || "-",
             trackId: courseNameToTrackId(courseName || "-"),
             goingCodes:
@@ -219,8 +222,11 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             ?.map((form) => form.racedAgainst_BeatenInfo?.maxes?.rpr)
             .filter(Boolean) || [];
 
+        const rawOrData = form?.map((form) => form.or).filter(Boolean) || [];
+
         const formInfo: FormInfo = {
           averages: {
+            or: avg(rawOrData),
             rpr: avg(rawRprData),
             distanceF: avg(rawDistanceFData),
             trackIds: mostFrequentString(rawTrackIdData),
@@ -564,28 +570,28 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         time,
         title,
         horses: horses.map((horse) => {
-          const { or: horseOr, rpr: horseRpr, wgtLbs: horseWgtLbs } = horse;
+          const { or: horseOr, rpr: horseRpr, formInfo } = horse;
 
-          const maxRaceWgtLbs = horsesInfo.maxes.race_wgtLbs;
+          const { averages } = formInfo || {};
+          const { or: formAveragesOr } = averages || {};
 
           const lastRaceOr = horse.mostRecentForm?.or || 0;
 
           const gapBetweenLastRaceOrAndCurrentOr =
             lastRaceOr && horseOr ? lastRaceOr - horseOr : 0;
 
-          const gapBetweenMaxRaceWgtLbsAndHorseWgtLbs =
-            maxRaceWgtLbs && horseWgtLbs ? maxRaceWgtLbs - horseWgtLbs : 0;
+          const gapBetweenFormAveragesOrAndHorseOr =
+            formAveragesOr && horseOr ? formAveragesOr - horseOr : 0;
 
           const handicapBonus =
-            (gapBetweenMaxRaceWgtLbsAndHorseWgtLbs +
-              gapBetweenLastRaceOrAndCurrentOr) /
-            2;
+            gapBetweenFormAveragesOrAndHorseOr +
+            gapBetweenLastRaceOrAndCurrentOr;
 
           return {
             ...horse,
             handicapBonus,
             handicappedRpr: horseRpr + handicapBonus,
-            gapBetweenMaxRaceWgtLbsAndHorseWgtLbs,
+            gapBetweenFormAveragesOrAndHorseOr,
             gapBetweenLastRaceOrAndCurrentOr,
           };
         }),
