@@ -636,17 +636,19 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                         `Gap Between Last Race Or And Current Or: ${horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(
                           2
                         )}\n\n` +
-                        `Form Averages Or: ${race.horsesInfo.averages.race_or}\n` +
+                        `Form Averages Or: ${horse.formInfo.averages.or.toFixed(
+                          2
+                        )}\n` +
                         `Current Or: ${horse.or}\n` +
                         `Gap Between Form Averages Or And Horse Or: ${horse.gapBetweenFormAveragesOrAndHorseOr?.toFixed(
                           2
                         )}\n\n` +
-                        `Handicap Bonus:\n\n ` +
+                        `Handicap Bonus:\n\n (` +
                         `${horse.gapBetweenFormAveragesOrAndHorseOr?.toFixed(
                           2
                         )} + ${horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(
                           2
-                        )} = ${horse.handicapBonus?.toFixed(2)}`
+                        )} ) / 2 = ${horse.handicapBonus?.toFixed(2)}`
                       }
                     >
                       {horse.handicapBonus?.toFixed(2)}

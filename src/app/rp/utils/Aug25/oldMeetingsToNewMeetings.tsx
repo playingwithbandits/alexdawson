@@ -584,8 +584,9 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
             formAveragesOr && horseOr ? formAveragesOr - horseOr : 0;
 
           const handicapBonus =
-            gapBetweenFormAveragesOrAndHorseOr +
-            gapBetweenLastRaceOrAndCurrentOr;
+            (gapBetweenFormAveragesOrAndHorseOr +
+              gapBetweenLastRaceOrAndCurrentOr) /
+            2;
 
           return {
             ...horse,
