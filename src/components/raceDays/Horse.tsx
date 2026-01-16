@@ -69,7 +69,7 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     mostRecentForm_commentMatchedTerms?.eyecatcher || [];
 
   const commentScore = countCommentSentiment?.score || 0;
-  const lastRaceCommentScoreGood = commentScore > 0;
+  const lastRaceCommentScoreGood = commentScore >= 0;
   const lastRaceHampered =
     mostRecentForm_commentMatchedTerms_hampered.length > 0;
   const lastRaceEyecatcher =
@@ -80,6 +80,19 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
 
   const raceTypeIsJumps = isJumpsRaceTypeCode(race?.raceTypeCode);
 
+  const jockeyStats = race.raceExtraInfo?.jockeyStats?.find(
+    (x) => horseNameToKey(x.name) === horseNameToKey(horse.jockey)
+  );
+  const jockeyStatsLast14DaysWinRate = jockeyStats?.last14Days?.winRate;
+
+  const jockeyStatsOverallWinRate = jockeyStats?.overall?.winRate;
+
+  const jockeyStatsDecent =
+    (jockeyStatsLast14DaysWinRate !== undefined &&
+      jockeyStatsLast14DaysWinRate >= 10) ||
+    (jockeyStatsOverallWinRate !== undefined &&
+      jockeyStatsOverallWinRate >= 10);
+
   const requiredStats = [
     // {
     //   value:
@@ -87,6 +100,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //       ?.race_averages_racedAgainstMaxes,
     //   name: "Averages raced against maxes isn't good",
     // },
+    {
+      value: jockeyStatsDecent,
+      name: "Jockey isnt decent",
+    },
     {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
@@ -96,8 +113,8 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Score is less than 50",
     },
     {
-      value: horse.age > 2,
-      name: "Horse is under 2 years old",
+      value: horse.age > 3,
+      name: "Horse is under 3 years old",
     },
     {
       value: horse.form.length >= 2,
@@ -284,6 +301,19 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
 
   const raceTypeIsJumps = isJumpsRaceTypeCode(race?.raceTypeCode);
 
+  const jockeyStats = race.raceExtraInfo?.jockeyStats?.find(
+    (x) => horseNameToKey(x.name) === horseNameToKey(jockey)
+  );
+  const jockeyStatsLast14DaysWinRate = jockeyStats?.last14Days?.winRate;
+
+  const jockeyStatsOverallWinRate = jockeyStats?.overall?.winRate;
+
+  const jockeyStatsDecent =
+    (jockeyStatsLast14DaysWinRate !== undefined &&
+      jockeyStatsLast14DaysWinRate >= 10) ||
+    (jockeyStatsOverallWinRate !== undefined &&
+      jockeyStatsOverallWinRate >= 10);
+
   return (
     <div className={warningMessage.horseHasRequiredStats ? "" : "opacity-70"}>
       {" "}
@@ -391,6 +421,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">Trks</td>
                     <td className="px-2 py-1 w-[100px]">Jocks</td>
                     <td className="px-2 py-1 w-[100px]">A_Jock</td>
+                    <td className="px-2 py-1 w-[100px]">Jocks%</td>
                     <td className="px-2 py-1 w-[100px]">TPF</td>
                     <td className="px-2 py-1 w-[100px]">MRA (Avg)</td>
                     <td className="px-2 py-1 w-[100px]">MRA (Max)</td>
@@ -499,6 +530,15 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       )}
                     >
                       {formAveragesJockey?.join(", ")}
+                    </td>
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        jockeyStatsDecent && GREEN_TEXT_COLOR
+                      )}
+                    >
+                      {jockeyStatsLast14DaysWinRate} |{" "}
+                      {jockeyStatsOverallWinRate}
                     </td>
                     <td
                       className={twMerge(

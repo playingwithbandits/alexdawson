@@ -197,7 +197,7 @@ export function Dashboard({
           const maxRaceHandicappedMostRecentFormRacedAgainstBeatenMaxesRpr =
             max(raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr);
 
-          const thresholdValue = 0.92;
+          const thresholdValue = 0.95;
 
           const raceThresholds = {
             race_rpr: raceMaxes?.race_rpr * thresholdValue,
@@ -909,7 +909,7 @@ export function Dashboard({
       {dataWithScoreObj
         ?.filter((x) => {
           const hasARaceWithHorseScoreMax = x.races.some((race) => {
-            const { ratioWithFormsGood, ratioWithHorsesAbove2YearsOldGood } =
+            const { ratioWithFormsGood, ratioWithHorsesAbove3YearsOldGood } =
               getRaceToShowStats(race);
 
             const someHorseHasMaxScore = race.horses.some((horse) => {
@@ -925,7 +925,7 @@ export function Dashboard({
 
             return (
               ratioWithFormsGood &&
-              ratioWithHorsesAbove2YearsOldGood &&
+              ratioWithHorsesAbove3YearsOldGood &&
               someHorseHasMaxScore &&
               !raceHasFinsihed
             );

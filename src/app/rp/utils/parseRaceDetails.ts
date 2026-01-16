@@ -138,8 +138,8 @@ export async function parseRaceDetails(
   const rows = Array.from(rowsElements);
   //console.log(`Found ${rows.length} horses to parse`);
 
-  const oneYearAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 1);
-  const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
+  const nintyDaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 90);
+  const fortyFiveDaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 45);
   const horses: Horse[] = await Promise.all(
     rows.map(async (row) => {
       const profileLink = row.querySelector(
@@ -202,7 +202,7 @@ export async function parseRaceDetails(
 
         return (
           isValidOutcome(raceOutcomeCode) &&
-          date > oneYearAgo &&
+          date > fortyFiveDaysAgo &&
           isMatchingRaceCode
         );
       });
@@ -221,11 +221,13 @@ export async function parseRaceDetails(
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 100) {
+          while (tryCount < 150) {
             tryCount++;
 
             if (lastRaceLink) {
-              await new Promise((resolve) => setTimeout(resolve, 4000));
+              await new Promise((resolve) =>
+                setTimeout(resolve, Math.random() * 10000 + 500)
+              );
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
               retryDoc = retryParser.parseFromString(
@@ -371,7 +373,7 @@ export async function parseRaceDetails(
               // x.officialRatingRanOff &&
               // x.officialRatingRanOff > 0 &&
               // x.raceClass !== null &&
-              new Date(x.raceDatetime || "") > twoYearsAgo
+              new Date(x.raceDatetime || "") > nintyDaysAgo
           ),
         },
         number:

@@ -1,6 +1,6 @@
 import { Meeting as MeetingType } from "@/types/raceday";
 
-import { getRaceToShowStats, Race } from "./Race";
+import { Race } from "./Race";
 import { RaceResults } from "@/types/racing";
 import { normalizeTime } from "../horse/DayPredictions";
 import { horseHasRequiredStats } from "./Horse";
@@ -21,8 +21,8 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
       <div className="mt-4 space-y-4">
         {meeting.races
           ?.filter((x) => {
-            const { ratioWithFormsGood, ratioWithHorsesAbove2YearsOldGood } =
-              getRaceToShowStats(x);
+            // const { ratioWithFormsGood, ratioWithHorsesAbove3YearsOldGood } =
+            //   getRaceToShowStats(x);
 
             const raceHasHorseScoreMax = x.horses.some((horse) => {
               const requiredStatsGood = horseHasRequiredStats(horse, x);
@@ -35,12 +35,7 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
                 `${date} ${normalizeTime(x.time).split(":").join(":")}`
               ).getTime() < new Date().getTime();
 
-            return showInfo
-              ? !raceHasFinsihed &&
-                  ratioWithFormsGood &&
-                  ratioWithHorsesAbove2YearsOldGood &&
-                  raceHasHorseScoreMax
-              : true;
+            return showInfo ? !raceHasFinsihed && raceHasHorseScoreMax : true;
           })
           .map((race, index) => (
             <Race

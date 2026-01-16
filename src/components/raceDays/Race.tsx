@@ -39,19 +39,19 @@ export const getRaceToShowStats = (race: RaceType) => {
 
   const scoreToBeBetterThan = 80;
 
-  const horsesInRaceAbove2YearsOld = race.horses.filter(
-    (horse) => horse.age > 2
+  const horsesInRaceAbove3YearsOld = race.horses.filter(
+    (horse) => horse.age > 3
   ).length;
-  const ratioWithHorsesAbove2YearsOld =
-    horsesInRaceAbove2YearsOld / horsesInRace;
-  const ratioWithHorsesAbove2YearsOldGood = ratioWithHorsesAbove2YearsOld > 0.8;
+  const ratioWithHorsesAbove3YearsOld =
+    horsesInRaceAbove3YearsOld / horsesInRace;
+  const ratioWithHorsesAbove3YearsOldGood = ratioWithHorsesAbove3YearsOld > 0.8;
 
   return {
     raceAvgScore,
     maxScore,
     horsesInRace,
     horsesInRaceWithForms,
-    ratioWithHorsesAbove2YearsOldGood,
+    ratioWithHorsesAbove3YearsOldGood,
     ratioWithForms,
     ratioWithFormsGood,
     scoreToBeBetterThan,
@@ -64,7 +64,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
   const {
     raceAvgScore,
     ratioWithFormsGood,
-    ratioWithHorsesAbove2YearsOldGood,
+    ratioWithHorsesAbove3YearsOldGood,
   } = getRaceToShowStats(race);
 
   // const betterThanLowLevel = 7;
@@ -100,21 +100,10 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
       const missingLen = missingStats.length;
 
       return showInfo
-        ? !raceHasFinsihed &&
-            ratioWithFormsGood &&
-            ratioWithHorsesAbove2YearsOldGood &&
-            requiredStatsGood
+        ? !raceHasFinsihed && requiredStatsGood
         : missingLen <= 1 && gapToAvgScore >= 0;
     });
-  }, [
-    showAll,
-    race,
-    raceAvgScore,
-    showInfo,
-    raceHasFinsihed,
-    ratioWithFormsGood,
-    ratioWithHorsesAbove2YearsOldGood,
-  ]);
+  }, [showAll, race, raceAvgScore, showInfo, raceHasFinsihed]);
 
   const placeTerms =
     race.horses.length < 5
@@ -141,6 +130,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                 {raceAvgScore.toFixed(1)}
                 {placeTerms ? ` 👥${placeTerms}` : ""}
                 {raceHasPredictions ? ` rp` : ""}
+                {!ratioWithHorsesAbove3YearsOldGood ? ` !3y` : ""}
+                {!ratioWithFormsGood ? ` !F#` : ""}
               </span>
               <div className="flex flex-wrap gap-2">
                 {race.horses
@@ -167,10 +158,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const missingLen = missingStats.length;
 
                     return showInfo
-                      ? !raceHasFinsihed &&
-                          ratioWithFormsGood &&
-                          ratioWithHorsesAbove2YearsOldGood &&
-                          requiredStatsGood
+                      ? !raceHasFinsihed && requiredStatsGood
                       : missingLen <= 1 && gapToAvgScore >= 0;
                   })
                   ?.map((horse, index) => {
@@ -245,7 +233,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                           className={twMerge(
                             `px-2 py-1 text-sm  rounded-full ${
                               ratioWithFormsGood &&
-                              ratioWithHorsesAbove2YearsOldGood
+                              ratioWithHorsesAbove3YearsOldGood
                                 ? missingNoStats
                                   ? "bg-green-700 text-black"
                                   : missingOnlyFew
