@@ -32,7 +32,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const maxScore = 90;
   const horsesInRace = race.horses.length;
   const horsesInRaceWithForms = race.horses.filter(
-    (horse) => horse.form.length >= 2
+    (horse) => horse.form.length >= 1
   ).length;
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms >= 0.66;

@@ -226,7 +226,7 @@ export async function parseRaceDetails(
 
             if (lastRaceLink) {
               await new Promise((resolve) =>
-                setTimeout(resolve, Math.random() * 10000 + 500)
+                setTimeout(resolve, Math.random() * 10000)
               );
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
