@@ -202,7 +202,7 @@ export async function parseRaceDetails(
 
         return (
           isValidOutcome(raceOutcomeCode) &&
-          date > fortyFiveDaysAgo &&
+          date >= fortyFiveDaysAgo &&
           isMatchingRaceCode
         );
       });
@@ -373,7 +373,7 @@ export async function parseRaceDetails(
               // x.officialRatingRanOff &&
               // x.officialRatingRanOff > 0 &&
               // x.raceClass !== null &&
-              new Date(x.raceDatetime || "") > nintyDaysAgo
+              new Date(x.raceDatetime || "") >= nintyDaysAgo
           ),
         },
         number:
