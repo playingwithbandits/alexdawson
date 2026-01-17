@@ -117,8 +117,8 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Horse is under 3 years old",
     },
     {
-      value: horse.form.length >= 2,
-      name: "Horse has less than 2 forms",
+      value: horse.form.length >= 1,
+      name: "Horse has less than 1 forms",
     },
 
     {
