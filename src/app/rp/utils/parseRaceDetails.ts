@@ -228,12 +228,12 @@ export async function parseRaceDetails(
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 150) {
+          while (tryCount < 100) {
             tryCount++;
 
             if (lastRaceLink) {
               await new Promise((resolve) =>
-                setTimeout(resolve, Math.random() * 10000)
+                setTimeout(resolve, 5000)
               );
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
