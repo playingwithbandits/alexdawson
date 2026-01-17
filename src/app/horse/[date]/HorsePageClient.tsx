@@ -112,7 +112,6 @@ export const UK_COURSES = [
   "great leighs",
   "rothwell",
   "southport",
-  "thurles",
 ];
 
 export const IRISH_COURSES = [

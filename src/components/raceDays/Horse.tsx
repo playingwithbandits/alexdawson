@@ -422,6 +422,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">Jocks</td>
                     <td className="px-2 py-1 w-[100px]">A_Jock</td>
                     <td className="px-2 py-1 w-[100px]">Jocks%</td>
+                    <td className="px-2 py-1 w-[100px]">RPR</td>
                     <td className="px-2 py-1 w-[100px]">TPF</td>
                     <td className="px-2 py-1 w-[100px]">MRA (Avg)</td>
                     <td className="px-2 py-1 w-[100px]">MRA (Max)</td>
@@ -539,6 +540,16 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     >
                       {jockeyStatsLast14DaysWinRate} |{" "}
                       {jockeyStatsOverallWinRate}
+                    </td>
+
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        horseBetterThanRaceTheshold?.race_formAverages_rpr &&
+                          YELLOW_TEXT_COLOR
+                      )}
+                    >
+                      {formAverages?.rpr?.toFixed(2)}
                     </td>
                     <td
                       className={twMerge(

@@ -147,8 +147,17 @@ export async function parseRaceDetails(
   const formValidDateThreshold = nintyDaysAgo;
   const fetchFormDateThreshold = nintyDaysAgo;
 
+  // This is fully async: all fetching is performed before continuing; after Promise.all resolves,
+  // no further awaits or network operations occur relating to horse/form data/stat fetching.
+  // Everything the rest of the process needs (including remote fetches for form and race stats per horse)
+  // is completed within the async map and its inner awaits.
+
   const horses: Horse[] = await Promise.all(
     rows.map(async (row) => {
+      // Fetch all required remote data up front for this horse within the async function.
+      // Nothing outside (after await Promise.all) relies on lazy fetching.
+
+      // Fetch the horse's profile/form data
       const profileLink = row.querySelector(
         ".RC-runnerName.ui-link"
       ) as HTMLAnchorElement;
@@ -167,6 +176,7 @@ export async function parseRaceDetails(
       );
       const formRows = formTableEle?.querySelectorAll("tr");
 
+      // Find valid form rows (all DOM and formObj work, no fetch)
       const formRowsValid = Array.from(formRows || [])?.filter((x) => {
         const outcomeCell = x.querySelector(
           '[data-test-selector="RC-runnerFormRow__outcome"]'
@@ -214,6 +224,8 @@ export async function parseRaceDetails(
         );
       });
 
+      // For each valid form row: fetch the previous race details and parse
+      // All fetching and expensive work for each horse completed right here.
       const allValidFormRowsStatsData = await Promise.all(
         formRowsValid.map(async (latestFormRow) => {
           const outcomeCell = latestFormRow?.querySelector(
@@ -225,6 +237,7 @@ export async function parseRaceDetails(
               new URL(outcomeLink.href).pathname
             : "";
 
+          // Try repeatedly loading last race details up to 100 times if required
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
@@ -308,6 +321,7 @@ export async function parseRaceDetails(
             );
           }
 
+          // All network/DOM/lastRace parsing is done here
           return {
             formRowValidDate,
             lastRaceStatsObj,
@@ -320,6 +334,7 @@ export async function parseRaceDetails(
         })
       );
 
+      // Compute stats on the previously fetched data, no more async work here
       const allFormRowsStatsDataStatsObjs = allValidFormRowsStatsData
         .map((x) => x.lastRaceStatsObj)
         .filter((x) => x !== undefined);
@@ -351,20 +366,7 @@ export async function parseRaceDetails(
           minTimePerFurlong,
         };
 
-      // console.log(
-      //   "🏁 lastRaceToLastRaceStats",
-      //   {
-      //     lastRaceEle,
-      //     name,
-      //     lastFormRowDistanceFurlongAccurate,
-      //     raceDistance,
-      //   },
-      //   outcomeLink?.href,
-      //   lastRaceLink,
-      //   lastRaceEle,
-      //   lastRaceStatsObj,
-      //   lastRaceTypeCode
-      // );
+      // At this point, everything downstream is pure in-memory synchronous computation
 
       return {
         name,
