@@ -1,7 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { placeToPlaceKey } from "./racing/scores/funcs";
-import { analyzeSentiment } from "./racing/analyzeSentiment";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -105,7 +104,7 @@ const aw_slow = ["s", "sl", "slw", "stsl"];
 const turf_fast = ["gf", "fm", "g", "gd"];
 const turf_med = ["g", "gd", "gs", "gy"];
 const turf_slow = ["y", "gs", "gy", "sft", "vsft"];
-const turf_v_slow = ["hy", "hvy"];
+const turf_v_slow = ["sft", "vsft", "hy", "hvy"];
 
 const goingCodeToArrayOfSimilarGoingcodes = (goingCode: string): string[] => {
   const similarCodes = new Set([
@@ -496,6 +495,7 @@ interface AnalyseSentimentFromCommentObj {
   negative: string[];
 }
 
+
 export const analyseSentimentFromComment = (
   comment: string
 ): { matchedTerms: AnalyseSentimentFromCommentObj } => {
@@ -512,21 +512,87 @@ export const analyseSentimentFromComment = (
 
   const loweredComment = comment.toLowerCase();
 
-  const matchedHamperedTerms = HAMPERED_TERMS.filter((term) =>
-    loweredComment.includes(term)
-  );
+  // Update: For positive, collect each occurrence, remove from comment and keep searching.
+  const matchedPositiveTerms: string[] = [];
+  let searchComment = loweredComment;
+  for (const term of POSITIVE_TERMS) {
+    let found = true;
+    const termLower = term.toLowerCase();
+    // keep finding and removing
+    while (found) {
+      const idx = searchComment.indexOf(termLower);
+      if (idx !== -1) {
+        matchedPositiveTerms.push(term);
+        // Remove the first occurrence from searchComment for next search
+        searchComment =
+          searchComment.slice(0, idx) +
+          " ".repeat(termLower.length) +
+          searchComment.slice(idx + termLower.length);
+      } else {
+        found = false;
+      }
+    }
+  }
 
-  const matchedEyecatcherTerms = EYECATCHER_TERMS.filter((term) =>
-    loweredComment.includes(term)
-  );
+  // Process negative terms: for each negative term, find all occurrences by marking removed regions just like positive
+  const matchedNegativeTerms: string[] = [];
+  let searchCommentNeg = loweredComment;
+  for (const term of NEGATIVE_TERMS) {
+    let found = true;
+    const termLower = term.toLowerCase();
+    while (found) {
+      const idx = searchCommentNeg.indexOf(termLower);
+      if (idx !== -1) {
+        matchedNegativeTerms.push(term);
+        // Remove by replacing with spaces to avoid double-matching
+        searchCommentNeg =
+          searchCommentNeg.slice(0, idx) +
+          " ".repeat(termLower.length) +
+          searchCommentNeg.slice(idx + termLower.length);
+      } else {
+        found = false;
+      }
+    }
+  }
 
-  const matchedPositiveTerms = POSITIVE_TERMS.filter((term) =>
-    loweredComment.includes(term)
-  );
+  // Do the same for hampered and eyecatcher for thoroughness
+  const matchedHamperedTerms: string[] = [];
+  let searchCommentHampered = loweredComment;
+  for (const term of HAMPERED_TERMS) {
+    let found = true;
+    const termLower = term.toLowerCase();
+    while (found) {
+      const idx = searchCommentHampered.indexOf(termLower);
+      if (idx !== -1) {
+        matchedHamperedTerms.push(term);
+        searchCommentHampered =
+          searchCommentHampered.slice(0, idx) +
+          " ".repeat(termLower.length) +
+          searchCommentHampered.slice(idx + termLower.length);
+      } else {
+        found = false;
+      }
+    }
+  }
 
-  const matchedNegativeTerms = NEGATIVE_TERMS.filter((term) =>
-    loweredComment.includes(term)
-  );
+  const matchedEyecatcherTerms: string[] = [];
+  let searchCommentEyecatcher = loweredComment;
+  for (const term of EYECATCHER_TERMS) {
+    let found = true;
+    const termLower = term.toLowerCase();
+    while (found) {
+      const idx = searchCommentEyecatcher.indexOf(termLower);
+      if (idx !== -1) {
+        matchedEyecatcherTerms.push(term);
+        searchCommentEyecatcher =
+          searchCommentEyecatcher.slice(0, idx) +
+          " ".repeat(termLower.length) +
+          searchCommentEyecatcher.slice(idx + termLower.length);
+      } else {
+        found = false;
+      }
+    }
+  }
 
   const matchedTerms = {
     hampered: matchedHamperedTerms,

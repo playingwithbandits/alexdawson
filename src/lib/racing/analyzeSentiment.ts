@@ -113,6 +113,7 @@ const NEGATIVE_TERMS = [
   "eased",
   "stopped",
   "pulled up",
+  "pulled hard",
   "no extra",
   "no impression",
   "no match",
