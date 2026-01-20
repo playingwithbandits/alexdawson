@@ -114,10 +114,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       value: horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
       name: "Form averages rpr is low",
     },
-    // {
-    //   value: jockeyStatsDecent,
-    //   name: "Jockey isnt decent",
-    // },
+    {
+      value: jockeyStatsDecent,
+      name: "Jockey isnt decent",
+    },
     {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
@@ -554,7 +554,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        jockeyStatsDecent && YELLOW_TEXT_COLOR
+                        jockeyStatsDecent && GREEN_TEXT_COLOR
                       )}
                     >
                       {jockeyStatsLast14DaysWinRate} |{" "}

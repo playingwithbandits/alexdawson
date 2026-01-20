@@ -562,7 +562,7 @@ export function Dashboard({
                       compareTwoGoingCodeArrays(goingCodes, f.goingCodes)
                     )
                     .some((x) => x),
-                  lastRan: Boolean(horse.lastRan) && horse.lastRan <= 45,
+                  lastRan: Boolean(horse.lastRan) && horse.lastRan <= 60,
                   distance: form
                     ?.map((f) => distanceOkay(f.distanceF, distanceF))
                     .some((x) => x),
