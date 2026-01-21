@@ -63,7 +63,7 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
 
 
   const commentScore = countCommentSentiment?.score || 0;
-  const lastRaceCommentScoreGood = commentScore > 0;
+  const lastRaceCommentScoreGood = commentScore >= 0;
 
   const lastRaceWasGood =
     lastRaceCommentScoreGood;
@@ -91,20 +91,20 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       value: horse?.mostRecentForm?.rpr && horse?.mostRecentForm?.rpr >= horse.formInfo?.maxes?.rpr * 0.85,
       name: "Most recent form rpr is less than form maxes rpr",
     },
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.race_averages_racedAgainstMaxes,
-      name: "Averages raced against maxes isn't good",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.race_averages_racedAgainstMaxes,
+    //   name: "Averages raced against maxes isn't good",
+    // },
 
 
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_averages_racedAgainst_Beaten_Averages_rpr,
-      name: "Averages raced against beaten averages isn't good",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_averages_racedAgainst_Beaten_Averages_rpr,
+    //   name: "Averages raced against beaten averages isn't good",
+    // },
 
     {
       value: lastRaceWasGood,
@@ -162,10 +162,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Hasn't raced with this jockey",
     // },
 
-    // {
-    //   value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
-    //   name: "Hasn't averaged distance",
-    // },
+    {
+      value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
+      name: "Hasn't averaged distance",
+    },
 
     // {
     //   value: horse?.scoreObj?.horseMostRecentForm?.type,
@@ -465,7 +465,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseFormAveragesStatsGood?.distance && YELLOW_TEXT_COLOR
+                        horseFormAveragesStatsGood?.distance && GREEN_TEXT_COLOR
                       )}
                     >
                       {formAveragesDistanceF?.toFixed(1)}
@@ -590,7 +590,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_averages_racedAgainstMaxes &&
-                          GREEN_TEXT_COLOR
+                          YELLOW_TEXT_COLOR
                       )}
                     >
                       {formAveragesRacedAgainstMaxes_Avg.rpr?.toFixed(2)}
@@ -611,7 +611,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_averages_racedAgainst_Beaten_Averages_rpr &&
-                          GREEN_TEXT_COLOR
+                        YELLOW_TEXT_COLOR
                       )}
                         title={`${horse.scoreObj?.raw_data?.raw_handicapped_averages_racedAgainst_Beaten_Averages_rpr.join(", ")}`}
                     >
@@ -744,7 +744,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
     \n
     
     `}
-                      className={twMerge("px-2 py-1 w-[100px]", lastCommentScore !== undefined && lastCommentScore > 0 ? GREEN_TEXT_COLOR : "text-red-500")}>{lastCommentScore !== undefined ? lastCommentScore : "-"}</td>
+                      className={twMerge("px-2 py-1 w-[100px]", lastCommentScore !== undefined && lastCommentScore >= 0 ? GREEN_TEXT_COLOR : "text-red-500")}>{lastCommentScore !== undefined ? lastCommentScore : "-"}</td>
                     <td className="px-2 py-1">
                       {mostRecentForm_commentMatchedTerms_hampered?.length >
                         0 && (
