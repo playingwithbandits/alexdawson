@@ -92,6 +92,17 @@ export interface RaceHorsesInfo {
 
 export interface ScoreObj {
   total: number;
+  raw_data: {
+    raw_handicapped_rpr: number[];
+    raw_handicapped_maxes_racedAgainst_Beaten_rpr: number[];
+    raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr: number[];
+    raw_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: number[];
+    raw_handicapped_averages_racedAgainst_Beaten_rpr: number[];
+    raw_handicapped_averages_racedAgainst_Beaten_Averages_rpr: number[];
+    raw_handicapped_averages_racedAgainst_Beaten_Maxes_rpr: number[];
+    raw_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr: number[];
+    raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr: number[];
+  };
   horseBetterThanRaceTheshold: {
     race_rpr: boolean;
     race_averages_racedAgainst: boolean;
