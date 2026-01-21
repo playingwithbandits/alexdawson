@@ -1,3 +1,5 @@
+import { analyseSentimentFromComment, countCommentSentimentObj } from "../utils";
+
 const POSITIVE_TERMS = [
   // Strong performance
   "impressive",
@@ -68,7 +70,6 @@ const POSITIVE_TERMS = [
   "travelled",
   "moved",
   "balanced",
-  "fluent",
   "rhythm",
   "flowing",
   "nimble",
@@ -193,24 +194,17 @@ const NEGATIVE_TERMS = [
   "not reach leaders",
   "not near to challenge",
   "not pace to challenge",
+
+  "not fluent",
 ];
 
 export function analyzeSentiment(comment: string): {
   score: number;
   isPositive: boolean;
 } {
-  const lowerComment = comment.toLowerCase();
 
-  let score = 0;
+  const { score } = countCommentSentimentObj(analyseSentimentFromComment(comment).matchedTerms);
 
-  // Count positive and negative terms
-  POSITIVE_TERMS.forEach((term) => {
-    if (lowerComment.includes(term)) score += 1;
-  });
-
-  NEGATIVE_TERMS.forEach((term) => {
-    if (lowerComment.includes(term)) score -= 1;
-  });
 
   return {
     score,

@@ -702,6 +702,21 @@ export function Dashboard({
                   horseBetterThanRaceTheshold,
                   horseFormAveragesStatsGood,
                   horseMostRecentForm,
+
+                  raw_data:{
+
+                    raw_handicapped_rpr,
+                    raw_handicapped_maxes_racedAgainst_Beaten_rpr,
+                    raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
+                    raw_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr,
+                    raw_handicapped_averages_racedAgainst_Beaten_rpr,
+                    raw_handicapped_averages_racedAgainst_Beaten_Averages_rpr,
+                    raw_handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
+                    raw_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
+                    raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+
+
+                  }
                 };
 
                 // console.log(

@@ -386,7 +386,6 @@ const POSITIVE_TERMS = [
   // Movement quality
   "travelled",
   "balanced",
-  "fluent",
   "rhythm",
   "flowing",
   "nimble",
@@ -486,6 +485,7 @@ const NEGATIVE_TERMS = [
   "not reach leaders",
   "not near to challenge",
   "not pace to challenge",
+  "not fluent",
 ];
 
 interface AnalyseSentimentFromCommentObj {
@@ -513,21 +513,31 @@ export const analyseSentimentFromComment = (
   const loweredComment = comment.toLowerCase();
 
   // Update: For positive, collect each occurrence, remove from comment and keep searching.
+  // Use regex to ensure term is not immediately preceded or followed by a word char (so it is delimited by space, start/end, or punctuation)
   const matchedPositiveTerms: string[] = [];
   let searchComment = loweredComment;
   for (const term of POSITIVE_TERMS) {
     let found = true;
     const termLower = term.toLowerCase();
-    // keep finding and removing
+
+    // Build regex: must not have a word character before or after (using \b for word boundary but also consider beginning/end/punctuation)
+    // Escape special regex characters in term
+    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Regex: match with word boundaries, allow spaces or punctuation around
+    const regex = new RegExp(`(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`, "g");
+
     while (found) {
-      const idx = searchComment.indexOf(termLower);
-      if (idx !== -1) {
+      const match = regex.exec(searchComment);
+      if (match) {
         matchedPositiveTerms.push(term);
-        // Remove the first occurrence from searchComment for next search
+        // Remove matched substring (replace with same length spaces so other indices remain valid)
+        const startIdx = match.index + match[1].length; // match.index includes any prefix char that's not consumed in the real match
         searchComment =
-          searchComment.slice(0, idx) +
-          " ".repeat(termLower.length) +
-          searchComment.slice(idx + termLower.length);
+          searchComment.slice(0, startIdx) +
+          " ".repeat(match[2].length) +
+          searchComment.slice(startIdx + match[2].length);
+        // Reset regex.lastIndex for global match after string edit
+        regex.lastIndex = 0;
       } else {
         found = false;
       }
@@ -540,15 +550,24 @@ export const analyseSentimentFromComment = (
   for (const term of NEGATIVE_TERMS) {
     let found = true;
     const termLower = term.toLowerCase();
+    // Build regex: must not have a word character before or after (using \b for word boundary but also consider beginning/end/punctuation)
+    // Escape special regex characters in term
+    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Regex: match with word boundaries, allow spaces or punctuation around
+    const regex = new RegExp(`(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`, "g");
+
     while (found) {
-      const idx = searchCommentNeg.indexOf(termLower);
-      if (idx !== -1) {
+      const match = regex.exec(searchCommentNeg);
+      if (match) {
         matchedNegativeTerms.push(term);
-        // Remove by replacing with spaces to avoid double-matching
+        // Remove matched substring (replace with same length spaces so other indices remain valid)
+        const startIdx = match.index + match[1].length; // match.index includes any prefix char that's not consumed in the real match
         searchCommentNeg =
-          searchCommentNeg.slice(0, idx) +
-          " ".repeat(termLower.length) +
-          searchCommentNeg.slice(idx + termLower.length);
+          searchCommentNeg.slice(0, startIdx) +
+          " ".repeat(match[2].length) +
+          searchCommentNeg.slice(startIdx + match[2].length);
+        // Reset regex.lastIndex for global match after string edit
+        regex.lastIndex = 0;
       } else {
         found = false;
       }
@@ -561,14 +580,24 @@ export const analyseSentimentFromComment = (
   for (const term of HAMPERED_TERMS) {
     let found = true;
     const termLower = term.toLowerCase();
+    // Build regex: must not have a word character before or after (using \b for word boundary but also consider beginning/end/punctuation)
+    // Escape special regex characters in term
+    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Regex: match with word boundaries, allow spaces or punctuation around
+    const regex = new RegExp(`(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`, "g");
+
     while (found) {
-      const idx = searchCommentHampered.indexOf(termLower);
-      if (idx !== -1) {
+      const match = regex.exec(searchCommentHampered);
+      if (match) {
         matchedHamperedTerms.push(term);
+        // Remove matched substring (replace with same length spaces so other indices remain valid)
+        const startIdx = match.index + match[1].length; // match.index includes any prefix char that's not consumed in the real match
         searchCommentHampered =
-          searchCommentHampered.slice(0, idx) +
-          " ".repeat(termLower.length) +
-          searchCommentHampered.slice(idx + termLower.length);
+          searchCommentHampered.slice(0, startIdx) +
+          " ".repeat(match[2].length) +
+          searchCommentHampered.slice(startIdx + match[2].length);
+        // Reset regex.lastIndex for global match after string edit
+        regex.lastIndex = 0;
       } else {
         found = false;
       }
@@ -580,14 +609,24 @@ export const analyseSentimentFromComment = (
   for (const term of EYECATCHER_TERMS) {
     let found = true;
     const termLower = term.toLowerCase();
-    while (found) {
-      const idx = searchCommentEyecatcher.indexOf(termLower);
-      if (idx !== -1) {
+    // Build regex: must not have a word character before or after (using \b for word boundary but also consider beginning/end/punctuation)
+    // Escape special regex characters in term
+    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Regex: match with word boundaries, allow spaces or punctuation around
+    const regex = new RegExp(`(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`, "g");
+
+    while (found) { 
+      const match = regex.exec(searchCommentEyecatcher);
+      if (match) {
         matchedEyecatcherTerms.push(term);
+        // Remove matched substring (replace with same length spaces so other indices remain valid)
+        const startIdx = match.index + match[1].length; // match.index includes any prefix char that's not consumed in the real match
         searchCommentEyecatcher =
-          searchCommentEyecatcher.slice(0, idx) +
-          " ".repeat(termLower.length) +
-          searchCommentEyecatcher.slice(idx + termLower.length);
+          searchCommentEyecatcher.slice(0, startIdx) +
+          " ".repeat(match[2].length) +
+          searchCommentEyecatcher.slice(startIdx + match[2].length);
+        // Reset regex.lastIndex for global match after string edit
+        regex.lastIndex = 0;
       } else {
         found = false;
       }
@@ -625,8 +664,10 @@ export const countCommentSentimentObj = (
     .filter(([_, count]) => count === maxCount)
     .map(([key]) => key);
 
+    const commentScore = (positive.length || 0)  + (negative.length || 0) * -1  + (hampered.length || 0) * 0.5 + (eyecatcher.length || 0) * 3
+
   return {
-    score: goodCount - badCount,
+    score: commentScore,
     goodCount,
     badCount,
     mostCommonSentiment: winners,

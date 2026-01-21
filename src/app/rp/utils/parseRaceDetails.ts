@@ -142,8 +142,8 @@ export async function parseRaceDetails(
     Date.now() - 1000 * 60 * 60 * 24 * 365
   );
 
-  const formValidDateThreshold = twoYearsAgo;
-  const fetchFormDateThreshold = twoYearsAgo;
+  const formValidDateThreshold = oneYearAgo;
+  const fetchFormDateThreshold = oneYearAgo;
 
   // This is fully async: all fetching is performed before continuing; after Promise.all resolves,
   // no further awaits or network operations occur relating to horse/form data/stat fetching.
