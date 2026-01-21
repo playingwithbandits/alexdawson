@@ -323,10 +323,19 @@ const HAMPERED_TERMS = [
 
   "unsuited",
   "unsuitable",
+
+  "dropped whip",
+  "dropped rein",
+  "saddle",
+  "shoe",
+  
+  "eased",
+  "suffered"
 ];
 
 const POSITIVE_TERMS = [
   // Strong performance
+  "won going away",
   "impressive",
   "strong",
   "well",
@@ -399,6 +408,7 @@ const POSITIVE_TERMS = [
   "ran on",
   "always doing enough",
   "recovered",
+  "clear inside final"
 ];
 
 const NEGATIVE_TERMS = [
@@ -437,9 +447,6 @@ const NEGATIVE_TERMS = [
   "refused",
 
   // Movement issues
-  "stumbled",
-  "bumped",
-  "interfered",
   "unbalanced",
   "hanging",
   "wandered",
@@ -486,6 +493,8 @@ const NEGATIVE_TERMS = [
   "not near to challenge",
   "not pace to challenge",
   "not fluent",
+"towards rear throughout",
+  "weakened"
 ];
 
 interface AnalyseSentimentFromCommentObj {
