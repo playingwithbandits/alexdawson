@@ -119,14 +119,14 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       value: jockeyStatsDecent,
       name: "Jockey isnt decent",
     },
-    {
-      value: gapToAvgScoreGood,
-      name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
-    },
-    {
-      value: horse.scoreObj?.total && horse.scoreObj?.total > 70,
-      name: "Score is less than 70",
-    },
+    // {
+    //   value: gapToAvgScoreGood,
+    //   name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
+    // },
+    // {
+    //   value: horse.scoreObj?.total && horse.scoreObj?.total > 50,
+    //   name: "Score is less than 50",
+    // },
     {
       value: horse.age > 3,
       name: "Horse is under 3 years old",
@@ -153,10 +153,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    // {
-    //   value: raceTypeIsJumps || horse?.scoreObj?.horseRacedWith?.track,
-    //   name: "Hasn't raced with this track",
-    // },
+    {
+      value: raceTypeIsJumps || horse?.scoreObj?.horseRacedWith?.track,
+      name: "Hasn't raced with this track",
+    },
     // {
     //   value: horse?.scoreObj?.horseRacedWith?.jockey,
     //   name: "Hasn't raced with this jockey",
@@ -515,11 +515,8 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        horseRacedWith?.track
-                          ? raceTypeIsJumps
-                            ? YELLOW_TEXT_COLOR
-                            : YELLOW_TEXT_COLOR
-                          : ""
+
+                        raceTypeIsJumps ? GREEN_TEXT_COLOR : horseRacedWith?.track ? GREEN_TEXT_COLOR : "",
                       )}
                     >
                       {Array.from(
@@ -725,12 +722,13 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                         `Gap Between Form Averages Or And Horse Or: ${horse.gapBetweenFormAveragesOrAndHorseOr?.toFixed(
                           2
                         )}\n\n` +
+                        `Last Comment Score: ${lastCommentScore}\n\n` +
                         `Handicap Bonus:\n\n (` +
                         `${horse.gapBetweenFormAveragesOrAndHorseOr?.toFixed(
                           2
                         )} + ${horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(
                           2
-                        )} ) / 2 = ${horse.handicapBonus?.toFixed(2)}`
+                        )} ) / 2 + ${lastCommentScore} = ${horse.handicapBonus?.toFixed(2)}`
                       }
                     >
                       {horse.handicapBonus?.toFixed(2)}

@@ -101,7 +101,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
 
       return showInfo
         ? !raceHasFinsihed && requiredStatsGood
-        : missingLen <= 1 && gapToAvgScore >= 0;
+        : missingLen <= 1;// && gapToAvgScore >= 0;
     });
   }, [showAll, race, raceAvgScore, showInfo, raceHasFinsihed]);
 
@@ -159,7 +159,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
 
                     return showInfo
                       ? !raceHasFinsihed && requiredStatsGood
-                      : missingLen <= 1 && gapToAvgScore >= 0;
+                      : missingLen <= 1;// && gapToAvgScore >= 0;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =

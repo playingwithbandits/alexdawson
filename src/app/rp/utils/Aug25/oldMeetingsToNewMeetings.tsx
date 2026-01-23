@@ -12,6 +12,7 @@ import {
 import {
   analyseSentimentFromComment,
   avg,
+  countCommentSentimentObj,
   courseNameToTrackId,
   matchRaceTypeCode,
   max,
@@ -593,10 +594,12 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           const gapBetweenFormAveragesOrAndHorseOr =
             formAveragesOr && horseOr ? formAveragesOr - horseOr : 0;
 
+            const commentScore = horse.mostRecentForm?.commentMatchedTerms ? countCommentSentimentObj(horse.mostRecentForm?.commentMatchedTerms).score || 0 : 0;
+
           const handicapBonus =
-            (gapBetweenFormAveragesOrAndHorseOr +
+            ((gapBetweenFormAveragesOrAndHorseOr +
               gapBetweenLastRaceOrAndCurrentOr) /
-            2;
+            2) + commentScore;
 
           return {
             ...horse,
