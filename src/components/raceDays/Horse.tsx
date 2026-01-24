@@ -119,14 +119,14 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       value: jockeyStatsDecent,
       name: "Jockey isnt decent",
     },
-    // {
-    //   value: gapToAvgScoreGood,
-    //   name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
-    // },
-    // {
-    //   value: horse.scoreObj?.total && horse.scoreObj?.total > 50,
-    //   name: "Score is less than 50",
-    // },
+    {
+      value: gapToAvgScoreGood,
+      name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
+    },
+    {
+      value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
+      name: "Score is less than 60",
+    },
     {
       value: horse.age > 3,
       name: "Horse is under 3 years old",
