@@ -58,16 +58,26 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
   //   gapToAvgScore,
   //   gapToAvgScoreGood
   // );
-  const countCommentSentiment =
+  const lastRaceCommentScore =
     horse?.mostRecentForm &&
-    countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms);
+    countCommentSentimentObj(horse?.mostRecentForm?.commentMatchedTerms)?.score || 0;
 
 
-  const commentScore = countCommentSentiment?.score || 0;
-  const lastRaceCommentScoreGood = commentScore >= 0;
-
-  const lastRaceWasGood =
-    lastRaceCommentScoreGood;
+  const averageCommentScore =
+    horse?.form
+      ?.map((form) => form.commentMatchedTerms)
+      .map((commentMatchedTerms) =>
+        countCommentSentimentObj(commentMatchedTerms)
+      )
+      .reduce((acc, curr) => acc + curr.score, 0) / horse?.form?.length;
+  const averageCommentScoreLast3 =
+    horse?.form
+      ?.slice(0, 3)
+      .map((form) => form.commentMatchedTerms)
+      .map((commentMatchedTerms) =>
+        countCommentSentimentObj(commentMatchedTerms)
+      )
+      .reduce((acc, curr) => acc + curr.score, 0) / 3;
 
   const raceTypeIsJumps = isJumpsRaceTypeCode(race?.raceTypeCode);
 
@@ -77,25 +87,18 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
   const trainerStats = race.raceExtraInfo?.trainerStats?.find(
     (x) => horse.trainer && horseNameToKey(x.name) === horseNameToKey(horse.trainer)
   );
-  const trainerStatsLast14DaysWinRate = trainerStats?.last14Days?.winRate;
-  const trainerStatsOverallWinRate = trainerStats?.overall?.winRate;
-  const trainerStatsDecent =
-    (trainerStatsLast14DaysWinRate !== undefined &&
-      trainerStatsLast14DaysWinRate >= 5) ||
-    (trainerStatsOverallWinRate !== undefined &&
-      trainerStatsOverallWinRate >= 5);
-  const jockeyStatsLast14DaysWinRate = jockeyStats?.last14Days?.winRate;
+  const trainerStatsLast14DaysWins = trainerStats?.last14Days?.wins || 0;
+  const trainerStatsOverallWinRate = trainerStats?.overall?.winRate || 0;
 
-  const jockeyStatsOverallWinRate = jockeyStats?.overall?.winRate;
-
-  const jockeyStatsDecent =
-    (jockeyStatsLast14DaysWinRate !== undefined &&
-      jockeyStatsLast14DaysWinRate >= 5) ||
-    (jockeyStatsOverallWinRate !== undefined &&
-      jockeyStatsOverallWinRate >= 5);
+  const jockeyStatsLast14DaysRides = jockeyStats?.last14Days?.runs || 0;
+  const jockeyStatsOverallWinRate = jockeyStats?.overall?.winRate || 0;
 
 
-      //const drawBiasIsGood = drawBiasIsOkay(race.drawBias || "No Clear Bias", horse.draw || 0, race.horses?.length || 0);
+  const jockeyStatsLast14DaysRidesGood = jockeyStatsLast14DaysRides >= 1;
+  const jockeyStatsOverallWinRateGood = jockeyStatsOverallWinRate >= 5;
+  const trainerStatsLast14DaysWinsGood = trainerStatsLast14DaysWins >= 1;
+  const trainerStatsOverallWinRateGood = trainerStatsOverallWinRate >= 5;
+
 
   const requiredStats = [
 
@@ -124,22 +127,49 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     // },
 
     {
-      value: lastRaceWasGood,
+      value: lastRaceCommentScore >= 0,
       name: "Last race wasn't good",
+    },
+    {
+      value: averageCommentScore >= 0,
+      name: "Average comment score is less than 0",
+    },
+    {
+      value: averageCommentScoreLast3 >= 0,
+      name: "Average comment score last 3 is less than 0",
     },
 
     {
       value: horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
       name: "Form averages rpr is low",
     },
+
+
+    {
+      value: jockeyStatsLast14DaysRidesGood,
+      name: "Jockey hasn't ridden in last 14 days",
+    },
+    {
+      value: jockeyStatsOverallWinRateGood,
+      name: "Jockey hasn't won at 5% rate overall",
+    },
+    {
+      value: trainerStatsLast14DaysWinsGood,
+      name: "Trainer hasn't won in last 14 days",
+    },
+    {
+      value: trainerStatsOverallWinRateGood,
+      name: "Trainer hasn't won at 5% rate overall",
+    },
+
     // {
     //   value: jockeyStatsDecent,
     //   name: "Jockey isnt decent",
     // },
-    {
-      value: trainerStatsDecent,
-      name: "Trainer isnt decent",
-    },
+    // {
+    //   value: trainerStatsDecent,
+    //   name: "Trainer isnt decent",
+    // },
     {
       value: gapToAvgScoreGood,
       name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
@@ -149,8 +179,8 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Score is less than 60",
     },
     {
-      value: horse.age > 3,
-      name: "Horse is under 3 years old",
+      value: horse.age > 2,
+      name: "Horse is under 2 years old",
     },
     {
       value: horse.form.length >= 1,
@@ -213,12 +243,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //       ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
     //   name: "Max form beaten averages rpr is low",
     // },
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.handicapped_maxes_racedAgainst_Beaten_rpr,
-    //   name: "Max form beaten rpr is low",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.handicapped_maxes_racedAgainst_Beaten_rpr,
+      name: "Max form beaten rpr is low",
+    },
 
     // {
     //   value:
@@ -335,26 +365,24 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
   const trainerStats = race.raceExtraInfo?.trainerStats?.find(
     (x) => horse.trainer && horseNameToKey(x.name) === horseNameToKey(horse.trainer)
   );
-  const trainerStatsLast14DaysWinRate = trainerStats?.last14Days?.winRate;
-  const trainerStatsOverallWinRate = trainerStats?.overall?.winRate;
   const jockeyStats = race.raceExtraInfo?.jockeyStats?.find(
     (x) => horseNameToKey(x.name) === horseNameToKey(jockey)
   );
+  const trainerStatsLast14DaysWins = trainerStats?.last14Days?.wins || 0;
+  const trainerStatsOverallWinRate = trainerStats?.overall?.winRate || 0;
 
-  const jockeyStatsLast14DaysWinRate = jockeyStats?.last14Days?.winRate;
+  const jockeyStatsLast14DaysRides = jockeyStats?.last14Days?.runs || 0;
+  const jockeyStatsOverallWinRate = jockeyStats?.overall?.winRate || 0;
 
-  const jockeyStatsOverallWinRate = jockeyStats?.overall?.winRate;
 
-  const jockeyStatsDecent =
-    (jockeyStatsLast14DaysWinRate !== undefined &&
-      jockeyStatsLast14DaysWinRate >= 5) ||
-    (jockeyStatsOverallWinRate !== undefined &&
-      jockeyStatsOverallWinRate >= 5);
-  const trainerStatsDecent =
-    (trainerStatsLast14DaysWinRate !== undefined &&
-      trainerStatsLast14DaysWinRate >= 5) ||
-    (trainerStatsOverallWinRate !== undefined &&
-      trainerStatsOverallWinRate >= 5);
+  const jockeyStatsLast14DaysRidesGood = jockeyStatsLast14DaysRides >= 1;
+  const jockeyStatsOverallWinRateGood = jockeyStatsOverallWinRate >= 5;
+  const trainerStatsLast14DaysWinsGood = trainerStatsLast14DaysWins >= 1;
+  const trainerStatsOverallWinRateGood = trainerStatsOverallWinRate >= 5;
+
+
+
+
 
   return (
     <div className={warningMessage.horseHasRequiredStats ? "" : "opacity-70"}>
@@ -375,12 +403,12 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     horseRacedWith?.lastRan && GREEN_TEXT_COLOR
                   )}
                 >
-                  ({lastRan > 0 ? `${lastRan}d` : "0d"})
+                  (LR:{lastRan > 0 ? `${lastRan}d` : "0d"})
                 </span>
-                <span className="text-gray-400">
-                  ({horse.oddsDecimal > 0 ? horse.oddsDecimal : ""})
+                <span className={twMerge("text-gray-400", horse.oddsDecimal > 20 ? GREEN_TEXT_COLOR : "")}>
+                  (Odds:{horse.oddsDecimal > 0 ? horse.oddsDecimal : ""})
                 </span>
-                <span className="text-gray-400">{totalScore?.toFixed(2)}</span>
+                <span className="text-gray-400">S#:{totalScore?.toFixed(2)}</span>
 
                 <span
                   className={twMerge(
@@ -390,7 +418,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       : "text-red-500"
                   )}
                 >
-                  {lastCommentScore !== undefined
+                  Lc:{lastCommentScore !== undefined
                     ? lastCommentScore
                       ? lastCommentScore?.toFixed(2)
                       : 0
@@ -400,11 +428,11 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   className={twMerge(
                     "text-gray-400",
                     averageCommentScore >= 0
-                      ? YELLOW_TEXT_COLOR
+                      ? GREEN_TEXT_COLOR
                       : "text-red-500"
                   )}
                 >
-                  {averageCommentScore !== undefined
+                  Av:{averageCommentScore !== undefined
                     ? averageCommentScore
                       ? averageCommentScore?.toFixed(2)
                       : 0
@@ -414,11 +442,11 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   className={twMerge(
                     "text-gray-400",
                     averageCommentScoreLast3 >= 0
-                      ? YELLOW_TEXT_COLOR
+                      ? GREEN_TEXT_COLOR
                       : "text-red-500"
                   )}
                 >
-                  {averageCommentScoreLast3 !== undefined
+                  L3:{averageCommentScoreLast3 !== undefined
                     ? averageCommentScoreLast3
                       ? averageCommentScoreLast3?.toFixed(2)
                       : 0
@@ -464,8 +492,13 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">Trks</td>
                     <td className="px-2 py-1 w-[100px]">Jocks</td>
                     <td className="px-2 py-1 w-[100px]">A_Jock</td>
-                    <td className="px-2 py-1 w-[100px]">Jocks%</td>
-                    <td className="px-2 py-1 w-[100px]">Train%</td>
+
+                    <td className="px-2 py-1 w-[100px]">J14</td>
+                    <td className="px-2 py-1 w-[100px]">JOv</td>
+                    <td className="px-2 py-1 w-[100px]">T14</td>
+                    <td className="px-2 py-1 w-[100px]">TOv</td>
+
+                   
                     <td className="px-2 py-1 w-[100px]">RPR</td>
                     <td className="px-2 py-1 w-[100px]">APR-FPR</td>
                     <td className="px-2 py-1 w-[100px]">TPF</td>
@@ -584,7 +617,50 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     >
                       {formAveragesJockey?.join(", ")}
                     </td>
+
+
+
+
+
                     <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                      )}
+                      title={`${jockeyStats?.last14Days?.wins} / ${jockeyStats?.last14Days?.runs} (${jockeyStats?.last14Days?.winRate}%) \n ${horse.jockey}`}
+                    >
+                      {jockeyStats?.last14Days?.wins} / <span className={twMerge(jockeyStatsLast14DaysRidesGood && GREEN_TEXT_COLOR)}>{jockeyStats?.last14Days?.runs}</span>
+                    </td>
+                    
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        jockeyStatsOverallWinRateGood && GREEN_TEXT_COLOR
+                      )}
+                      title={`${jockeyStats?.overall?.wins} / ${jockeyStats?.overall?.runs} (${jockeyStats?.overall?.winRate}%) \n ${horse.jockey}`}
+                    >
+                      {jockeyStats?.overall?.winRate}%
+                    </td>
+
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]"
+                      )}
+                      title={`${trainerStats?.last14Days?.wins} / ${trainerStats?.last14Days?.runs} (${trainerStats?.last14Days?.winRate}%) \n ${horse.trainer}`}
+                    >
+                      <span className={twMerge(trainerStatsLast14DaysWinsGood && GREEN_TEXT_COLOR)}>{trainerStats?.last14Days?.wins}</span> / {trainerStats?.last14Days?.runs} 
+                    </td>
+                    
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        trainerStatsOverallWinRateGood && GREEN_TEXT_COLOR
+                      )}
+                      title={`${trainerStats?.overall?.wins} / ${trainerStats?.overall?.runs} (${trainerStats?.overall?.winRate}%) \n ${horse.trainer}`}
+                    >
+                      {trainerStats?.overall?.winRate}%
+                    </td>
+                    
+                    {/* <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         jockeyStatsDecent && YELLOW_TEXT_COLOR
@@ -605,7 +681,17 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     >
                       {trainerStatsLast14DaysWinRate} |{" "}
                       {trainerStatsOverallWinRate}
-                    </td>
+                    </td> */}
+
+
+
+
+
+
+
+
+
+
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
@@ -702,7 +788,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_rpr &&
-                          YELLOW_TEXT_COLOR
+                          GREEN_TEXT_COLOR
                       )}
 
                       title={`${horse.scoreObj?.raw_data?.raw_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr.join(", ")}`}
