@@ -139,10 +139,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Average comment score last 3 is less than 0",
     },
 
-    {
-      value: horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
-      name: "Form averages rpr is low",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
+    //   name: "Form averages rpr is low",
+    // },
 
 
     {
@@ -264,12 +264,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Last race had bad averages rpr",
     // },
 
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-      name: "Last race had bad max rpr",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+    //   name: "Last race had bad max rpr",
+    // },
   ];
 
   const missingStats = requiredStats
@@ -696,7 +696,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_formAverages_rpr &&
-                        GREEN_TEXT_COLOR
+                        YELLOW_TEXT_COLOR
                       )}
                     >
                       {formAverages?.rpr?.toFixed(2)}
@@ -839,7 +839,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr &&
-                          GREEN_TEXT_COLOR
+                          YELLOW_TEXT_COLOR
                       )}
                     >
                       {(
