@@ -27,6 +27,7 @@ async function processWords() {
     // Create results arrays
     const realWords: string[] = [];
     const notRealWords: string[] = [];
+    const allWords: string[] = [];
 
     // Process each word
     console.log("Processing words against dictionary...");
@@ -37,6 +38,7 @@ async function processWords() {
       } else {
         notRealWords.push(word);
       }
+      allWords.push(word);
     });
 
     // Write results to files
@@ -54,13 +56,20 @@ async function processWords() {
       notRealWords.join("\n")
     );
 
+    fs.writeFileSync(
+      path.join(outputDir, "all_words.txt"),
+      allWords.join("\n")
+    );
+
     console.log("\nResults:");
     console.log(`Total words processed: ${words.length}`);
     console.log(`Real words: ${realWords.length}`);
     console.log(`Not real words: ${notRealWords.length}`);
+    console.log(`All words: ${allWords.length}`);
     console.log("\nResults have been written to:");
     console.log(`- ${path.join(outputDir, "real_words.txt")}`);
     console.log(`- ${path.join(outputDir, "not_real_words.txt")}`);
+    console.log(`- ${path.join(outputDir, "all_words.txt")}`);
   } catch (error) {
     console.error("Error processing words:", error);
   }
