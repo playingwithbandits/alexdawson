@@ -7,6 +7,24 @@ export interface DrawBiasResult {
 
 export type TrackConfiguration = "left-handed" | "right-handed" | "straight";
 
+
+export const drawBiasIsOkay = (bias: DrawBiasType, drawNumber: number, totalRunners: number) => {
+
+  if(bias === "No Clear Bias") return true;
+  if(drawNumber === 0 || totalRunners === 0) return true;
+  
+  if (bias === "Low") {
+    return drawNumber <= totalRunners * 0.66;
+  }
+  if (bias === "Middle") {
+    return drawNumber >= totalRunners * 0.25 && drawNumber <= totalRunners * 0.75;
+  }
+  if (bias === "High") {
+    return drawNumber >= totalRunners * 0.33;
+  }
+  return true;
+};
+
 export function calculateDrawBias(
   trackConfig: TrackConfiguration | undefined,
   distance: number,

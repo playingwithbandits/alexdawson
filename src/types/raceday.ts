@@ -1,5 +1,6 @@
 import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
 import { PredictionRunner } from "./racing";
+import { DrawBiasType } from "@/lib/racing/calculateDrawBias";
 
 export interface Meeting {
   trackId: string;
@@ -13,6 +14,7 @@ export interface Bet {
 }
 
 export interface Race {
+  drawBias?: DrawBiasType;
   id: string;
   time: string;
   title: string;
@@ -171,6 +173,8 @@ export interface Horse {
   handicappedRpr?: number;
   gapBetweenLastRaceOrAndCurrentOr?: number;
   gapBetweenFormAveragesOrAndHorseOr?: number;
+  draw?: number;
+  trainer?: string;
 }
 
 export interface FormInfo {

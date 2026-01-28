@@ -21,6 +21,7 @@ import {
   normaliseGoingToGoingCode,
 } from "@/lib/utils";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
+import { DrawBiasType } from "@/lib/racing/calculateDrawBias";
 
 export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
   const meetingData: Meeting[] = oldMeetings.map((oldMeeting) => {
@@ -44,6 +45,8 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const id = idStr.split("horse/")[1].split("/")[0] || "-";
         const name = oldHorse?.name || "-";
         const jockey = oldHorse?.jockey?.name || "-";
+        const trainer = oldHorse?.trainer?.name || "-";
+        const draw = parseInt(oldHorse?.draw || "0", 10);
         const jockeyAllowance = parseInt(
           oldHorse?.jockey?.allowance || "0",
           10
@@ -341,6 +344,8 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           id,
           jockey,
           jockeyAllowance,
+            draw,
+            trainer,
           name,
           rpr,
           or,
@@ -569,6 +574,9 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         rawData: raw_race_data,
       };
 
+      const drawBias = oldRace.drawBias || "No Clear Bias" as DrawBiasType ;
+
+
       const race: Race = {
         distanceF,
         goingCodes,
@@ -578,6 +586,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         raceTypeCode,
         predictions: oldRace.predictions || [],
         raceExtraInfo: oldRace?.raceExtraInfo || undefined,
+        drawBias,
         time,
         title,
         horses: horses.map((horse) => {

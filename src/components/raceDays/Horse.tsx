@@ -20,6 +20,7 @@ import {
   countCommentSentimentObj,
   isJumpsRaceTypeCode,
 } from "@/lib/utils";
+import { drawBiasIsOkay } from "@/lib/racing/calculateDrawBias";
 
 interface HorseProps {
   horse: HorseType;
@@ -73,6 +74,16 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
   const jockeyStats = race.raceExtraInfo?.jockeyStats?.find(
     (x) => horseNameToKey(x.name) === horseNameToKey(horse.jockey)
   );
+  const trainerStats = race.raceExtraInfo?.trainerStats?.find(
+    (x) => horse.trainer && horseNameToKey(x.name) === horseNameToKey(horse.trainer)
+  );
+  const trainerStatsLast14DaysWinRate = trainerStats?.last14Days?.winRate;
+  const trainerStatsOverallWinRate = trainerStats?.overall?.winRate;
+  const trainerStatsDecent =
+    (trainerStatsLast14DaysWinRate !== undefined &&
+      trainerStatsLast14DaysWinRate >= 5) ||
+    (trainerStatsOverallWinRate !== undefined &&
+      trainerStatsOverallWinRate >= 5);
   const jockeyStatsLast14DaysWinRate = jockeyStats?.last14Days?.winRate;
 
   const jockeyStatsOverallWinRate = jockeyStats?.overall?.winRate;
@@ -84,6 +95,8 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       jockeyStatsOverallWinRate >= 5);
 
 
+      //const drawBiasIsGood = drawBiasIsOkay(race.drawBias || "No Clear Bias", horse.draw || 0, race.horses?.length || 0);
+
   const requiredStats = [
 
 
@@ -91,6 +104,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       value: horse?.mostRecentForm?.rpr && horse?.mostRecentForm?.rpr >= horse.formInfo?.maxes?.rpr * 0.85,
       name: "Most recent form rpr is less than form maxes rpr",
     },
+    // {
+    //   value: drawBiasIsGood,
+    //   name: "Draw bias is not good",
+    // },
     // {
     //   value:
     //     horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -115,9 +132,13 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       value: horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
       name: "Form averages rpr is low",
     },
+    // {
+    //   value: jockeyStatsDecent,
+    //   name: "Jockey isnt decent",
+    // },
     {
-      value: jockeyStatsDecent,
-      name: "Jockey isnt decent",
+      value: trainerStatsDecent,
+      name: "Trainer isnt decent",
     },
     {
       value: gapToAvgScoreGood,
@@ -153,10 +174,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    {
-      value: raceTypeIsJumps || horse?.scoreObj?.horseRacedWith?.track,
-      name: "Hasn't raced with this track",
-    },
+    // {
+    //   value: raceTypeIsJumps || horse?.scoreObj?.horseRacedWith?.track,
+    //   name: "Hasn't raced with this track",
+    // },
     // {
     //   value: horse?.scoreObj?.horseRacedWith?.jockey,
     //   name: "Hasn't raced with this jockey",
@@ -311,9 +332,15 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
 
   const raceTypeIsJumps = isJumpsRaceTypeCode(race?.raceTypeCode);
 
+  const trainerStats = race.raceExtraInfo?.trainerStats?.find(
+    (x) => horse.trainer && horseNameToKey(x.name) === horseNameToKey(horse.trainer)
+  );
+  const trainerStatsLast14DaysWinRate = trainerStats?.last14Days?.winRate;
+  const trainerStatsOverallWinRate = trainerStats?.overall?.winRate;
   const jockeyStats = race.raceExtraInfo?.jockeyStats?.find(
     (x) => horseNameToKey(x.name) === horseNameToKey(jockey)
   );
+
   const jockeyStatsLast14DaysWinRate = jockeyStats?.last14Days?.winRate;
 
   const jockeyStatsOverallWinRate = jockeyStats?.overall?.winRate;
@@ -323,6 +350,11 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
       jockeyStatsLast14DaysWinRate >= 5) ||
     (jockeyStatsOverallWinRate !== undefined &&
       jockeyStatsOverallWinRate >= 5);
+  const trainerStatsDecent =
+    (trainerStatsLast14DaysWinRate !== undefined &&
+      trainerStatsLast14DaysWinRate >= 5) ||
+    (trainerStatsOverallWinRate !== undefined &&
+      trainerStatsOverallWinRate >= 5);
 
   return (
     <div className={warningMessage.horseHasRequiredStats ? "" : "opacity-70"}>
@@ -422,6 +454,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     </td>
                   </tr>
                   <tr className="opacity-50">
+                    <td className="px-2 py-1 w-[100px]">Draw</td>
                     <td className="px-2 py-1 w-[100px]">Dists</td>
                     <td className="px-2 py-1 w-[100px]">Dist</td>
                     <td className="px-2 py-1 w-[100px]">Gngs</td>
@@ -432,6 +465,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">Jocks</td>
                     <td className="px-2 py-1 w-[100px]">A_Jock</td>
                     <td className="px-2 py-1 w-[100px]">Jocks%</td>
+                    <td className="px-2 py-1 w-[100px]">Train%</td>
                     <td className="px-2 py-1 w-[100px]">RPR</td>
                     <td className="px-2 py-1 w-[100px]">APR-FPR</td>
                     <td className="px-2 py-1 w-[100px]">TPF</td>
@@ -452,6 +486,15 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                 </thead>
                 <tbody>
                   <tr className="">
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        drawBiasIsOkay(race.drawBias || "No Clear Bias", horse.draw || 0, race.horses?.length || 0) && YELLOW_TEXT_COLOR
+                      )}
+                      title={`${race.drawBias} | ${horse.draw} | ${race.horses?.length}`}
+                    >
+                      {horse.draw}
+                    </td>
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
@@ -516,7 +559,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
 
-                        raceTypeIsJumps ? GREEN_TEXT_COLOR : horseRacedWith?.track ? GREEN_TEXT_COLOR : "",
+                        raceTypeIsJumps ? YELLOW_TEXT_COLOR : horseRacedWith?.track ? YELLOW_TEXT_COLOR : "",
                       )}
                     >
                       {Array.from(
@@ -544,13 +587,25 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
-                        jockeyStatsDecent && GREEN_TEXT_COLOR
+                        jockeyStatsDecent && YELLOW_TEXT_COLOR
                       )}
+                      title={`${jockeyStats?.last14Days?.wins}/${jockeyStats?.last14Days?.runs} (${jockeyStats?.last14Days?.winRate}%) \n\n ${jockeyStats?.overall?.wins}/${jockeyStats?.overall?.runs} (${jockeyStats?.overall?.winRate}%)`}
+
                     >
                       {jockeyStatsLast14DaysWinRate} |{" "}
                       {jockeyStatsOverallWinRate}
                     </td>
-
+                    
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        trainerStatsDecent && GREEN_TEXT_COLOR
+                      )}
+                      title={`${trainerStats?.last14Days?.wins}/${trainerStats?.last14Days?.runs} (${trainerStats?.last14Days?.winRate}%) \n\n ${trainerStats?.overall?.wins}/${trainerStats?.overall?.runs} (${trainerStats?.overall?.winRate}%)`}
+                    >
+                      {trainerStatsLast14DaysWinRate} |{" "}
+                      {trainerStatsOverallWinRate}
+                    </td>
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
