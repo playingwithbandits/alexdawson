@@ -673,7 +673,7 @@ export const countCommentSentimentObj = (
     .filter(([_, count]) => count === maxCount)
     .map(([key]) => key);
 
-    const commentScore = (positive.length || 0)  + (negative.length || 0) * -1  + (hampered.length || 0) * 1 + (eyecatcher.length || 0) * 3
+    const commentScore = (positive.length || 0)  + (negative.length || 0) * -1  + (hampered.length || 0) * 3 + (eyecatcher.length || 0) * 10
 
   return {
     score: commentScore,

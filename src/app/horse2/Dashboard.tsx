@@ -95,6 +95,7 @@ export function Dashboard({
 }) {
   console.log("Dashboard", data, results);
   const [showInfo, setShowInfo] = useState(true);
+  const [thresholdValue, setThresholdValue] = useState(0.8);
 
   if (!data || data.length === 0) {
     return (
@@ -196,8 +197,6 @@ export function Dashboard({
             );
           const maxRaceHandicappedMostRecentFormRacedAgainstBeatenMaxesRpr =
             max(raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr);
-
-          const thresholdValue = 0.875;
 
           const raceThresholds = {
             race_rpr: raceMaxes?.race_rpr * thresholdValue,
@@ -929,6 +928,24 @@ export function Dashboard({
         >
           {showInfo ? "Hide" : "Show"}
         </button>
+      </div>
+      <div className="mb-4 p-4 bg-gray-800 rounded-lg">
+        <label className="block text-white mb-2">
+          Threshold Value: {thresholdValue.toFixed(2)}
+        </label>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value={thresholdValue}
+          onChange={(e) => setThresholdValue(parseFloat(e.target.value))}
+          className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+        />
+        <div className="flex justify-between text-xs text-gray-400 mt-1">
+          <span>0</span>
+          <span>1</span>
+        </div>
       </div>
       {dataWithScoreObj
         ?.filter((x) => {
