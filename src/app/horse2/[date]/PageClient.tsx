@@ -7,6 +7,7 @@ import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
 import { IRISH_COURSES, UK_COURSES } from "@/types/courses";
 import { Meeting } from "@/types/raceday";
 import { Loader2 } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Dashboard } from "../Dashboard";
 
@@ -16,6 +17,9 @@ function getPageUrl(date: string) {
 
 export function PageClient({ date }: { date: string }) {
   console.log("🏇 Rendering PageClient with date:", date);
+  const searchParams = useSearchParams();
+  const courseFilter = searchParams.get("c");
+  console.log("🏁 Course name from query string:", courseFilter);
   const [meetings, setMeetings] = useState<Meeting[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -107,6 +111,11 @@ export function PageClient({ date }: { date: string }) {
                 courseName && ukCourseKeys.includes(courseName);
               const isIrishCourse =
                 courseName && irishCourseKeys.includes(courseName);
+
+
+              if (courseFilter) {
+                return placeToPlaceKey(courseName) === placeToPlaceKey(courseFilter);
+              }
 
               return isUkCourse; //|| isIrishCourse; // TODO: Uncomment this when we have Irish courses back
             }
