@@ -158,7 +158,7 @@ export function PageClient({ date }: { date: string }) {
           );
 
           const parsedMeetingsOld = await parseMeetings(
-            Array.from(meetingElementsArr).slice(0, 1),
+            Array.from(meetingElementsArr),//.slice(0, 1),
             date
           );
 

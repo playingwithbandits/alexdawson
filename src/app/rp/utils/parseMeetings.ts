@@ -34,7 +34,7 @@ export async function parseMeetings(
         '[data-test-selector="RC-courseCards__raceRow"]'
       );
 
-      const raceElements = Array.from(raceElementsAll).slice(0, 1)
+      const raceElements = Array.from(raceElementsAll);//.slice(0, 1)
 
       //console.log("Venue:", venueElement?.textContent);
       //console.log("Races found:", raceElements);
