@@ -170,7 +170,7 @@ export async function parseRaceDetails(
       let formObj = undefined;
       let fetchTryCount = 0;
       // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
-      while (fetchTryCount < 20) {
+      while (fetchTryCount < 50) {
         fetchTryCount++;
         try {
           const res = await fetchHorseForm(profileUrl);
@@ -179,7 +179,7 @@ export async function parseRaceDetails(
             break;
           } else {
             // Optionally wait a bit before retrying (as in PageClient)
-            await new Promise((resolve) => setTimeout(resolve, 3000));
+            await new Promise((resolve) => setTimeout(resolve, 5000));
             console.log(
               `fetchHorseForm: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
               { profileUrl, res }
@@ -191,7 +191,7 @@ export async function parseRaceDetails(
             err,
             profileUrl
           );
-          await new Promise((resolve) => setTimeout(resolve, 1000));
+          await new Promise((resolve) => setTimeout(resolve, 5000));
         }
       }
 
@@ -358,7 +358,7 @@ export async function parseRaceDetails(
             let beatenHorseForm = undefined;
             let fetchTryCount = 0;
             // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
-            while (fetchTryCount < 20) {
+            while (fetchTryCount < 50) {
               fetchTryCount++;
               try {
                 const res = await fetchHorseForm(profileUrl);
@@ -367,7 +367,7 @@ export async function parseRaceDetails(
                   break;
                 } else {
                   // Optionally wait a bit before retrying (as in PageClient)
-                  await new Promise((resolve) => setTimeout(resolve, 3000));
+                  await new Promise((resolve) => setTimeout(resolve, 5000));
                   console.log(
                     `fetchHorseForm beatenHorse: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
                     { profileUrl, res }
@@ -379,7 +379,7 @@ export async function parseRaceDetails(
                   err,
                   profileUrl
                 );
-                await new Promise((resolve) => setTimeout(resolve, 3000));
+                await new Promise((resolve) => setTimeout(resolve, 5000));
               }
             }
 
@@ -397,7 +397,7 @@ export async function parseRaceDetails(
               const date2 = formRowValidDate
                 ? new Date(formRowValidDate || "").toISOString().split("T")[0]
                 : undefined;
-              return date1 && date2 && date1 > date2;
+              return date1 && date2 && date1 >= date2;
             });
 
             const stats ={
