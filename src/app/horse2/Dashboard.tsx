@@ -95,7 +95,7 @@ export function Dashboard({
 }) {
   console.log("Dashboard", data, results);
   const [showInfo, setShowInfo] = useState(true);
-  const [thresholdValue, setThresholdValue] = useState(0.8);
+  const [thresholdValue, setThresholdValue] = useState(0.95);
 
   if (!data || data.length === 0) {
     return (
@@ -114,86 +114,86 @@ export function Dashboard({
           const { maxes: raceMaxes, min: raceMin } = horsesInfo;
 
           const raw_handicapped_rpr = race.horses.map(
-            (horse) => horse.handicappedRpr || 0
+            (horse) => horse.handicappedRpr || 0,
           );
 
           const raw_handicapped_maxes_racedAgainst_Beaten_rpr = race.horses.map(
             (horse) =>
               (horse.formInfo?.maxes?.racedAgainst_Beaten?.rpr || 0) +
-              (horse.handicapBonus || 0)
+              (horse.handicapBonus || 0),
           );
           const raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr =
             race.horses.map(
               (horse) =>
                 (horse.formInfo?.maxes?.racedAgainst_Beaten_Averages?.rpr ||
-                  0) + (horse.handicapBonus || 0)
+                  0) + (horse.handicapBonus || 0),
             );
 
           const raw_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr =
             race.horses.map(
               (horse) =>
                 (horse.formInfo?.maxes?.racedAgainst_Beaten_Maxes?.rpr || 0) +
-                (horse.handicapBonus || 0)
+                (horse.handicapBonus || 0),
             );
 
           const raw_handicapped_averages_racedAgainst_Beaten_rpr =
             race.horses.map(
               (horse) =>
                 (horse.formInfo?.averages?.racedAgainst_Beaten?.rpr || 0) +
-                (horse.handicapBonus || 0)
+                (horse.handicapBonus || 0),
             );
 
           const raw_handicapped_averages_racedAgainst_Beaten_Averages_rpr =
             race.horses.map(
               (horse) =>
                 (horse.formInfo?.averages?.racedAgainst_Beaten_Averages?.rpr ||
-                  0) + (horse.handicapBonus || 0)
+                  0) + (horse.handicapBonus || 0),
             );
 
           const raw_handicapped_averages_racedAgainst_Beaten_Maxes_rpr =
             race.horses.map(
               (horse) =>
                 (horse.formInfo?.averages?.racedAgainst_Beaten_Maxes?.rpr ||
-                  0) + (horse.handicapBonus || 0)
+                  0) + (horse.handicapBonus || 0),
             );
 
           const raw_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr =
             race.horses.map(
               (horse) =>
                 (horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages?.rpr ||
-                  0) + (horse.handicapBonus || 0)
+                  0) + (horse.handicapBonus || 0),
             );
 
           const raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr =
             race.horses.map(
               (horse) =>
                 (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr ||
-                  0) + (horse.handicapBonus || 0)
+                  0) + (horse.handicapBonus || 0),
             );
 
           const maxRaceHandicappedRpr = max(raw_handicapped_rpr);
           const maxRaceHandicappedMaxesRacedAgainstBeatenRpr = max(
-            raw_handicapped_maxes_racedAgainst_Beaten_rpr
+            raw_handicapped_maxes_racedAgainst_Beaten_rpr,
           );
           const maxRaceHandicappedMaxesRacedAgainstBeatenAveragesRpr = max(
-            raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr
+            raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
           );
           const maxRaceHandicappedMaxesRacedAgainstBeatenMaxesRpr = max(
-            raw_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr
+            raw_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr,
           );
           const maxRaceHandicappedAveragesRacedAgainstBeatenRpr = max(
-            raw_handicapped_averages_racedAgainst_Beaten_rpr
+            raw_handicapped_averages_racedAgainst_Beaten_rpr,
           );
           const maxRaceHandicappedAveragesRacedAgainstBeatenAveragesRpr = max(
-            raw_handicapped_averages_racedAgainst_Beaten_Averages_rpr
+            raw_handicapped_averages_racedAgainst_Beaten_Averages_rpr,
           );
           const maxRaceHandicappedAveragesRacedAgainstBeatenMaxesRpr = max(
-            raw_handicapped_averages_racedAgainst_Beaten_Maxes_rpr
+            raw_handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
           );
 
           const maxRaceHandicappedMostRecentFormRacedAgainstBeatenAveragesRpr =
             max(
-              raw_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr
+              raw_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
             );
           const maxRaceHandicappedMostRecentFormRacedAgainstBeatenMaxesRpr =
             max(raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr);
@@ -262,9 +262,18 @@ export function Dashboard({
               raceMaxes?.race_formAverages_rpr * thresholdValue,
 
             race_allBeatenHorsesNowGoneOntoStats_maxes_rpr:
-              raceMaxes?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr * thresholdValue,
+              raceMaxes?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr *
+              thresholdValue,
             race_allBeatenHorsesNowGoneOntoStats_maxes_or:
-              raceMaxes?.race_allBeatenHorsesNowGoneOntoStats_maxes_or * thresholdValue,
+              raceMaxes?.race_allBeatenHorsesNowGoneOntoStats_maxes_or *
+              thresholdValue,
+
+            race_allBeatenHorsesNowGoneOntoStats_avgs_rpr:
+              raceMaxes?.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr *
+              thresholdValue,
+            race_allBeatenHorsesNowGoneOntoStats_avgs_or:
+              raceMaxes?.race_allBeatenHorsesNowGoneOntoStats_avgs_or *
+              thresholdValue,
           };
 
           return {
@@ -348,6 +357,8 @@ export function Dashboard({
 
                   race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: boolean;
                   race_allBeatenHorsesNowGoneOntoStats_maxes_or: boolean;
+                  race_allBeatenHorsesNowGoneOntoStats_avgs_rpr: boolean;
+                  race_allBeatenHorsesNowGoneOntoStats_avgs_or: boolean;
                 } = {
                   race_rpr:
                     Boolean(horseRpr) && horseRpr >= raceThresholds.race_rpr,
@@ -384,14 +395,14 @@ export function Dashboard({
 
                   race_averages_racedAgainst_Beaten_Averages:
                     Boolean(
-                      horseFormAverages?.racedAgainst_Beaten_Averages?.rpr
+                      horseFormAverages?.racedAgainst_Beaten_Averages?.rpr,
                     ) &&
                     horseFormAverages.racedAgainst_Beaten_Averages.rpr >=
                       raceThresholds.race_averages_racedAgainst_Beaten_Averages,
 
                   race_maxes_racedAgainst_Beaten_Averages:
                     Boolean(
-                      horseFormMaxes?.racedAgainst_Beaten_Averages?.rpr
+                      horseFormMaxes?.racedAgainst_Beaten_Averages?.rpr,
                     ) &&
                     horseFormMaxes.racedAgainst_Beaten_Averages.rpr >=
                       raceThresholds.race_maxes_racedAgainst_Beaten_Averages,
@@ -399,7 +410,7 @@ export function Dashboard({
                   race_mostRecentForm_racedAgainst_Beaten_Averages:
                     Boolean(
                       horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages
-                        ?.rpr
+                        ?.rpr,
                     ) &&
                     (horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages
                       ?.rpr || 0) >=
@@ -407,7 +418,7 @@ export function Dashboard({
 
                   race_mostRecentForm_racedAgainst_Beaten_Maxes:
                     Boolean(
-                      horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr
+                      horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr,
                     ) &&
                     (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes
                       ?.rpr || 0) >=
@@ -419,7 +430,7 @@ export function Dashboard({
                       raceThresholds.race_min_timePerFurlong,
 
                   race_handicapped_rpr: !Boolean(
-                    raceThresholds.race_handicapped_rpr
+                    raceThresholds.race_handicapped_rpr,
                   )
                     ? true
                     : Boolean(handicappedRpr) &&
@@ -427,44 +438,44 @@ export function Dashboard({
                         raceThresholds.race_handicapped_rpr,
 
                   handicapped_maxes_racedAgainst_Beaten_rpr: !Boolean(
-                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_rpr
+                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_rpr,
                   )
                     ? true
                     : Boolean(
-                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_rpr
+                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_rpr,
                       ) &&
                       (handicappedStats.handicapped_maxes_racedAgainst_Beaten_rpr ||
                         0) >=
                         raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_rpr,
 
                   handicapped_maxes_racedAgainst_Beaten_Averages_rpr: !Boolean(
-                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Averages_rpr
+                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
                   )
                     ? true
                     : Boolean(
-                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_Averages_rpr
+                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
                       ) &&
                       (handicappedStats.handicapped_maxes_racedAgainst_Beaten_Averages_rpr ||
                         0) >=
                         raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
 
                   handicapped_maxes_racedAgainst_Beaten_Maxes_rpr: !Boolean(
-                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr
+                    raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr,
                   )
                     ? true
                     : Boolean(
-                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_Maxes_rpr
+                        handicappedStats.handicapped_maxes_racedAgainst_Beaten_Maxes_rpr,
                       ) &&
                       (handicappedStats.handicapped_maxes_racedAgainst_Beaten_Maxes_rpr ||
                         0) >=
                         raceThresholds.race_handicapped_maxes_racedAgainst_Beaten_Maxes_rpr,
 
                   handicapped_averages_racedAgainst_Beaten_rpr: !Boolean(
-                    raceThresholds.race_handicapped_averages_racedAgainst_Beaten_rpr
+                    raceThresholds.race_handicapped_averages_racedAgainst_Beaten_rpr,
                   )
                     ? true
                     : Boolean(
-                        handicappedStats.handicapped_averages_racedAgainst_Beaten_rpr
+                        handicappedStats.handicapped_averages_racedAgainst_Beaten_rpr,
                       ) &&
                       (handicappedStats.handicapped_averages_racedAgainst_Beaten_rpr ||
                         0) >=
@@ -472,22 +483,22 @@ export function Dashboard({
 
                   handicapped_averages_racedAgainst_Beaten_Averages_rpr:
                     !Boolean(
-                      raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Averages_rpr
+                      raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Averages_rpr,
                     )
                       ? true
                       : Boolean(
-                          handicappedStats.handicapped_averages_racedAgainst_Beaten_Averages_rpr
+                          handicappedStats.handicapped_averages_racedAgainst_Beaten_Averages_rpr,
                         ) &&
                         (handicappedStats.handicapped_averages_racedAgainst_Beaten_Averages_rpr ||
                           0) >=
                           raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Averages_rpr,
 
                   handicapped_averages_racedAgainst_Beaten_Maxes_rpr: !Boolean(
-                    raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Maxes_rpr
+                    raceThresholds.race_handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
                   )
                     ? true
                     : Boolean(
-                        handicappedStats.handicapped_averages_racedAgainst_Beaten_Maxes_rpr
+                        handicappedStats.handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
                       ) &&
                       (handicappedStats.handicapped_averages_racedAgainst_Beaten_Maxes_rpr ||
                         0) >=
@@ -495,11 +506,11 @@ export function Dashboard({
 
                   handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr:
                     !Boolean(
-                      raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr
+                      raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
                     )
                       ? true
                       : Boolean(
-                          handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr
+                          handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
                         ) &&
                         (handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr ||
                           0) >=
@@ -507,11 +518,11 @@ export function Dashboard({
 
                   handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr:
                     !Boolean(
-                      raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr
+                      raceThresholds.race_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
                     )
                       ? true
                       : Boolean(
-                          handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr
+                          handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
                         ) &&
                         (handicappedStats.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr ||
                           0) >=
@@ -527,13 +538,15 @@ export function Dashboard({
                     horseFormMaxes.racedAgainst_Maxes.rpr >=
                       raceThresholds.race_maxes_racedAgainstMaxes,
 
-
                   race_formAverages_rpr:
                     Boolean(horseFormAverages?.rpr) &&
-                    horseFormAverages.rpr >= raceThresholds.race_formAverages_rpr,
+                    horseFormAverages.rpr >=
+                      raceThresholds.race_formAverages_rpr,
 
                   race_allBeatenHorsesNowGoneOntoStats_maxes_rpr:
-                    Boolean(horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr) &&
+                    Boolean(
+                      horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr,
+                    ) &&
                     (horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr || 0) >=
                       raceThresholds.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
 
@@ -541,6 +554,16 @@ export function Dashboard({
                     Boolean(horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or) &&
                     (horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or || 0) >=
                       raceThresholds.race_allBeatenHorsesNowGoneOntoStats_maxes_or,
+
+                  race_allBeatenHorsesNowGoneOntoStats_avgs_rpr:
+                    Boolean(horse.allBeatenHorsesNowGoneOntoStats?.avgs?.rpr) &&
+                    (horse.allBeatenHorsesNowGoneOntoStats?.avgs?.rpr || 0) >=
+                      raceThresholds.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr,
+
+                  race_allBeatenHorsesNowGoneOntoStats_avgs_or:
+                    Boolean(horse.allBeatenHorsesNowGoneOntoStats?.avgs?.or) &&
+                    (horse.allBeatenHorsesNowGoneOntoStats?.avgs?.or || 0) >=
+                      raceThresholds.race_allBeatenHorsesNowGoneOntoStats_avgs_or,
                 };
 
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;
@@ -557,13 +580,13 @@ export function Dashboard({
                   jockey:
                     Boolean(avgJockeys) &&
                     avgJockeys?.some(
-                      (x) => horseNameToKey(x) === horseNameToKey(jockey)
+                      (x) => horseNameToKey(x) === horseNameToKey(jockey),
                     ),
 
                   raceTypeCode:
                     Boolean(avgRaceTypeCodes) &&
                     avgRaceTypeCodes?.some((x) =>
-                      matchRaceTypeCode(x, raceTypeCode)
+                      matchRaceTypeCode(x, raceTypeCode),
                     ),
                 };
 
@@ -576,7 +599,7 @@ export function Dashboard({
                     .includes(horseNameToKey(jockey)),
                   goingCode: form
                     ?.map((f) =>
-                      compareTwoGoingCodeArrays(goingCodes, f.goingCodes)
+                      compareTwoGoingCodeArrays(goingCodes, f.goingCodes),
                     )
                     .some((x) => x),
                   lastRan: Boolean(horse.lastRan) && horse.lastRan <= 60,
@@ -585,7 +608,7 @@ export function Dashboard({
                     .some((x) => x),
                   raceTypeCode: form
                     ?.map((f) =>
-                      matchRaceTypeCode(f.raceTypeCode, raceTypeCode)
+                      matchRaceTypeCode(f.raceTypeCode, raceTypeCode),
                     )
                     .some((x) => x),
                 };
@@ -593,15 +616,15 @@ export function Dashboard({
                 const horseMostRecentForm = {
                   type: matchRaceTypeCode(
                     horse.mostRecentForm?.raceTypeCode,
-                    raceTypeCode
+                    raceTypeCode,
                   ),
                   distance: distanceOkay(
                     horse.mostRecentForm?.distanceF,
-                    distanceF
+                    distanceF,
                   ),
                   going: compareTwoGoingCodeArrays(
                     horse.mostRecentForm?.goingCodes || [],
-                    goingCodes
+                    goingCodes,
                   ),
                 };
 
@@ -710,7 +733,7 @@ export function Dashboard({
 
                 const totalScorePossible = Object.values(weights).reduce(
                   (a, b) => a + b,
-                  0
+                  0,
                 );
 
                 const scoreObj: ScoreObj = {
@@ -720,8 +743,7 @@ export function Dashboard({
                   horseFormAveragesStatsGood,
                   horseMostRecentForm,
 
-                  raw_data:{
-
+                  raw_data: {
                     raw_handicapped_rpr,
                     raw_handicapped_maxes_racedAgainst_Beaten_rpr,
                     raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
@@ -731,9 +753,7 @@ export function Dashboard({
                     raw_handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
                     raw_handicapped_mostRecentForm_racedAgainst_Beaten_Averages_rpr,
                     raw_handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-
-
-                  }
+                  },
                 };
 
                 // console.log(
@@ -767,8 +787,8 @@ export function Dashboard({
         .flatMap(
           (meeting) =>
             meeting.races.find(
-              (race) => normalizeTime(race.time) === normalizeTime(result.time)
-            )?.horses
+              (race) => normalizeTime(race.time) === normalizeTime(result.time),
+            )?.horses,
         )
         .filter((x) => x);
 
@@ -777,7 +797,7 @@ export function Dashboard({
         matchingRaceHorses?.find(
           (horse) =>
             horse &&
-            horseNameToKey(horse.name) === horseNameToKey(result.winner.name)
+            horseNameToKey(horse.name) === horseNameToKey(result.winner.name),
         );
 
       const matchingPlacedHorses =
@@ -787,8 +807,8 @@ export function Dashboard({
             horse &&
             result.placedHorses.find(
               (placedHorse) =>
-                horseNameToKey(placedHorse.name) === horseNameToKey(horse.name)
-            )
+                horseNameToKey(placedHorse.name) === horseNameToKey(horse.name),
+            ),
         );
 
       const matchingWinnerScoreObj = matchingWinner?.scoreObj;
@@ -802,7 +822,7 @@ export function Dashboard({
       // Add winner scores with 5x weight
       if (matchingWinnerScoreObj) {
         Object.entries(
-          matchingWinnerScoreObj.horseBetterThanRaceTheshold
+          matchingWinnerScoreObj.horseBetterThanRaceTheshold,
         ).forEach(([key, value]) => {
           const newKey = key;
           if (value === true) {
@@ -810,7 +830,7 @@ export function Dashboard({
           }
         });
         Object.entries(
-          matchingWinnerScoreObj.horseFormAveragesStatsGood
+          matchingWinnerScoreObj.horseFormAveragesStatsGood,
         ).forEach(([key, value]) => {
           const newKey = `hfa_${key}`;
           if (value === true) {
@@ -823,7 +843,7 @@ export function Dashboard({
             if (value === true) {
               combinedScoreObj[newKey] = (combinedScoreObj[newKey] || 0) + 5;
             }
-          }
+          },
         );
 
         Object.entries(matchingWinnerScoreObj.horseMostRecentForm).forEach(
@@ -832,7 +852,7 @@ export function Dashboard({
             if (value === true) {
               combinedScoreObj[newKey] = (combinedScoreObj[newKey] || 0) + 5;
             }
-          }
+          },
         );
       }
 
@@ -848,7 +868,7 @@ export function Dashboard({
                   combinedScoreObj[newKey] =
                     (combinedScoreObj[newKey] || 0) + 1;
                 }
-              }
+              },
             );
             Object.entries(scoreObj.horseFormAveragesStatsGood).forEach(
               ([key, value]) => {
@@ -857,7 +877,7 @@ export function Dashboard({
                   combinedScoreObj[newKey] =
                     (combinedScoreObj[newKey] || 0) + 1;
                 }
-              }
+              },
             );
             Object.entries(scoreObj.horseRacedWith).forEach(([key, value]) => {
               const newKey = `hrw_${key}`;
@@ -872,7 +892,7 @@ export function Dashboard({
                   combinedScoreObj[newKey] =
                     (combinedScoreObj[newKey] || 0) + 1;
                 }
-              }
+              },
             );
           }
         });
@@ -891,16 +911,19 @@ export function Dashboard({
 
     resultsArrScoreObjs?.push(weights);
 
-    const combinedResults = resultsArrScoreObjs.reduce((acc, scoreObj) => {
-      Object.entries(scoreObj).forEach(([key, value]) => {
-        acc[key] = (acc[key] || 0) + value;
-      });
-      return acc;
-    }, {} as Record<string, number>);
+    const combinedResults = resultsArrScoreObjs.reduce(
+      (acc, scoreObj) => {
+        Object.entries(scoreObj).forEach(([key, value]) => {
+          acc[key] = (acc[key] || 0) + value;
+        });
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
     const highestScore = Object.values(combinedResults).reduce(
       (a, b) => (a > b ? a : b),
-      0
+      0,
     );
 
     const combinedResultsPercentage = Object.entries(combinedResults).map(
@@ -908,21 +931,21 @@ export function Dashboard({
         return {
           [key]: (value / highestScore) * 100,
         };
-      }
+      },
     );
 
     const combinedResultsPercentageGroups = {
       low: combinedResultsPercentage.filter(
-        (item) => Object.values(item)[0] < 25
+        (item) => Object.values(item)[0] < 25,
       ),
       midLow: combinedResultsPercentage.filter(
-        (item) => Object.values(item)[0] >= 25 && Object.values(item)[0] < 50
+        (item) => Object.values(item)[0] >= 25 && Object.values(item)[0] < 50,
       ),
       medium: combinedResultsPercentage.filter(
-        (item) => Object.values(item)[0] >= 50 && Object.values(item)[0] < 75
+        (item) => Object.values(item)[0] >= 50 && Object.values(item)[0] < 75,
       ),
       high: combinedResultsPercentage.filter(
-        (item) => Object.values(item)[0] >= 75
+        (item) => Object.values(item)[0] >= 75,
       ),
     };
 
@@ -979,7 +1002,7 @@ export function Dashboard({
             const raceHasFinsihed =
               date === new Date().toISOString().split("T")[0] &&
               new Date(
-                `${date} ${normalizeTime(race.time).split(":").join(":")}`
+                `${date} ${normalizeTime(race.time).split(":").join(":")}`,
               ).getTime() < new Date().getTime();
 
             return (

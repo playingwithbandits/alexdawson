@@ -58,6 +58,10 @@ export interface AllBeatenHorsesNowGoneOntoStats {
     rpr: number;
     or: number;
   };
+  avgs: {
+    rpr: number;
+    or: number;
+  };
 }
 
 export interface BeatenHorseFormObjsStats {

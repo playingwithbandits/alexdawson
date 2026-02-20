@@ -70,6 +70,8 @@ export interface RaceHorsesInfo {
     race_formAverages_rpr: number;
     race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: number;
     race_allBeatenHorsesNowGoneOntoStats_maxes_or: number;
+    race_allBeatenHorsesNowGoneOntoStats_avgs_rpr: number;
+    race_allBeatenHorsesNowGoneOntoStats_avgs_or: number;
   };
   min: {
     race_min_timePerFurlong: number;
@@ -94,6 +96,8 @@ export interface RaceHorsesInfo {
     raw_race_formAverages_rpr: number[];
     raw_race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: number[];
     raw_race_allBeatenHorsesNowGoneOntoStats_maxes_or: number[];
+    raw_race_allBeatenHorsesNowGoneOntoStats_avgs_rpr: number[];
+    raw_race_allBeatenHorsesNowGoneOntoStats_avgs_or: number[];
   };
 }
 
@@ -139,6 +143,8 @@ export interface ScoreObj {
     race_formAverages_rpr: boolean;
     race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: boolean;
     race_allBeatenHorsesNowGoneOntoStats_maxes_or: boolean;
+    race_allBeatenHorsesNowGoneOntoStats_avgs_rpr: boolean;
+    race_allBeatenHorsesNowGoneOntoStats_avgs_or: boolean;
   };
   horseFormAveragesStatsGood: {
     distance: boolean;

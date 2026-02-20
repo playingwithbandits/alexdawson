@@ -41,8 +41,6 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
       const bettingForecast = oldRace.bettingForecast || [];
 
       const horses: Horse[] = oldRace.horses.map((oldHorse) => {
-
-
         const idStr = oldHorse?.profileUrl;
         const id = idStr.split("horse/")[1].split("/")[0] || "-";
         const name = oldHorse?.name || "-";
@@ -51,7 +49,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const draw = parseInt(oldHorse?.draw || "0", 10);
         const jockeyAllowance = parseInt(
           oldHorse?.jockey?.allowance || "0",
-          10
+          10,
         );
         const rpr = parseInt(oldHorse?.rating || "0", 10);
         const or = parseInt(oldHorse?.officialRating || "0", 10);
@@ -62,7 +60,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const removedWrongRaceTypes = (
           oldHorse.allValidFormRowsStatsDataStats?.raw || []
         )?.filter((x) =>
-          matchRaceTypeCode(x.matchingFormObj?.raceTypeCode, raceTypeCode)
+          matchRaceTypeCode(x.matchingFormObj?.raceTypeCode, raceTypeCode),
         );
 
         const form: FormObj[] = removedWrongRaceTypes?.map((oldForm) => {
@@ -102,7 +100,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
               position: runner?.position || 0,
               distanceToWinner: runner?.distanceBeaten || 0,
               rpr: runner?.rpr || 0,
-            })
+            }),
           );
 
           const rawRprData =
@@ -335,21 +333,23 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         const lastRan = lastRanDate
           ? Math.floor(
               (new Date().getTime() - new Date(lastRanDate).getTime()) /
-                (1000 * 60 * 60 * 24)
+                (1000 * 60 * 60 * 24),
             )
           : 0;
 
         const horse: Horse = {
-          allBeatenHorsesNowGoneOntoStats: oldHorse?.allBeatenHorsesNowGoneOntoStats,
-          allValidFormRowsStatsDataStats: oldHorse?.allValidFormRowsStatsDataStats,
+          allBeatenHorsesNowGoneOntoStats:
+            oldHorse?.allBeatenHorsesNowGoneOntoStats,
+          allValidFormRowsStatsDataStats:
+            oldHorse?.allValidFormRowsStatsDataStats,
           age,
           form,
           formInfo,
           id,
           jockey,
           jockeyAllowance,
-            draw,
-            trainer,
+          draw,
+          trainer,
           name,
           rpr,
           or,
@@ -357,22 +357,37 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           mostRecentForm,
           oddsDecimal:
             bettingForecast?.find(
-              (bet) => horseNameToKey(bet.horseName) === horseNameToKey(name)
+              (bet) => horseNameToKey(bet.horseName) === horseNameToKey(name),
             )?.decimalOdds || 0,
           lastRan,
         };
         return horse;
       });
 
-
       const raw_race_allBeatenHorsesNowGoneOntoStats_maxes_rpr =
         horses
-          ?.map((horse) => horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr || 0)
+          ?.map(
+            (horse) => horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr || 0,
+          )
           .filter(Boolean) || [];
 
       const raw_race_allBeatenHorsesNowGoneOntoStats_maxes_or =
         horses
-          ?.map((horse) => horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or || 0)
+          ?.map(
+            (horse) => horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or || 0,
+          )
+          .filter(Boolean) || [];
+
+      const raw_race_allBeatenHorsesNowGoneOntoStats_avgs_rpr =
+        horses
+          ?.map(
+            (horse) => horse.allBeatenHorsesNowGoneOntoStats?.avgs?.rpr || 0,
+          )
+          .filter(Boolean) || [];
+
+      const raw_race_allBeatenHorsesNowGoneOntoStats_avgs_or =
+        horses
+          ?.map((horse) => horse.allBeatenHorsesNowGoneOntoStats?.avgs?.or || 0)
           .filter(Boolean) || [];
 
       const raw_race_rpr =
@@ -396,21 +411,22 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
       const raw_race_averages_racedAgainst_Averages =
         horses
           ?.map(
-            (horse) => horse.formInfo?.averages?.racedAgainst_Averages?.rpr || 0
+            (horse) =>
+              horse.formInfo?.averages?.racedAgainst_Averages?.rpr || 0,
           )
           .filter(Boolean) || [];
 
       const raw_race_maxes_racedAgainst_Averages =
         horses
           ?.map(
-            (horse) => horse.formInfo?.maxes?.racedAgainst_Averages?.rpr || 0
+            (horse) => horse.formInfo?.maxes?.racedAgainst_Averages?.rpr || 0,
           )
           .filter(Boolean) || [];
 
       const raw_race_averages_racedAgainst_Beaten =
         horses
           ?.map(
-            (horse) => horse.formInfo?.averages?.racedAgainst_Beaten?.rpr || 0
+            (horse) => horse.formInfo?.averages?.racedAgainst_Beaten?.rpr || 0,
           )
           .filter(Boolean) || [];
 
@@ -423,7 +439,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         horses
           ?.map(
             (horse) =>
-              horse.formInfo?.averages?.racedAgainst_Beaten_Averages?.rpr || 0
+              horse.formInfo?.averages?.racedAgainst_Beaten_Averages?.rpr || 0,
           )
           .filter(Boolean) || [];
 
@@ -431,7 +447,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         horses
           ?.map(
             (horse) =>
-              horse.formInfo?.maxes?.racedAgainst_Beaten_Averages?.rpr || 0
+              horse.formInfo?.maxes?.racedAgainst_Beaten_Averages?.rpr || 0,
           )
           .filter(Boolean) || [];
 
@@ -439,7 +455,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         horses
           ?.map(
             (horse) =>
-              horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages?.rpr || 0
+              horse.mostRecentForm?.racedAgainst_BeatenInfo?.averages?.rpr || 0,
           )
           .filter(Boolean) || [];
 
@@ -447,7 +463,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         horses
           ?.map(
             (horse) =>
-              horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr || 0
+              horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes?.rpr || 0,
           )
           .filter(Boolean) || [];
 
@@ -459,7 +475,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
       const raw_race_averages_racedAgainstMaxes =
         horses
           ?.map(
-            (horse) => horse.formInfo?.averages?.racedAgainst_Maxes?.rpr || 0
+            (horse) => horse.formInfo?.averages?.racedAgainst_Maxes?.rpr || 0,
           )
           .filter(Boolean) || [];
 
@@ -468,12 +484,10 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           ?.map((horse) => horse.formInfo?.maxes?.racedAgainst_Maxes?.rpr || 0)
           .filter(Boolean) || [];
 
-
-
-          const raw_race_formAverages_rpr =
-            horses
-              ?.map((horse) => horse.formInfo?.averages?.rpr || 0)
-              .filter(Boolean) || [];
+      const raw_race_formAverages_rpr =
+        horses
+          ?.map((horse) => horse.formInfo?.averages?.rpr || 0)
+          .filter(Boolean) || [];
 
       const raw_race_data = {
         raw_race_wgtLbs,
@@ -496,6 +510,8 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         raw_race_formAverages_rpr,
         raw_race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
         raw_race_allBeatenHorsesNowGoneOntoStats_maxes_or,
+        raw_race_allBeatenHorsesNowGoneOntoStats_avgs_rpr,
+        raw_race_allBeatenHorsesNowGoneOntoStats_avgs_or,
       };
 
       const raw_race_data_avg = {
@@ -504,82 +520,92 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         race_or: avg(raw_race_data.raw_race_or),
         race_min_timePerFurlong: avg(raw_race_data.raw_race_min_timePerFurlong),
         race_averages_racedAgainst: avg(
-          raw_race_data.raw_race_averages_racedAgainst
+          raw_race_data.raw_race_averages_racedAgainst,
         ),
         race_maxes_racedAgainst: avg(raw_race_data.raw_race_maxes_racedAgainst),
         race_averages_racedAgainst_Averages: avg(
-          raw_race_data.raw_race_averages_racedAgainst_Averages
+          raw_race_data.raw_race_averages_racedAgainst_Averages,
         ),
         race_maxes_racedAgainst_Averages: avg(
-          raw_race_data.raw_race_maxes_racedAgainst_Averages
+          raw_race_data.raw_race_maxes_racedAgainst_Averages,
         ),
         race_averages_racedAgainst_Beaten: avg(
-          raw_race_data.raw_race_averages_racedAgainst_Beaten
+          raw_race_data.raw_race_averages_racedAgainst_Beaten,
         ),
         race_maxes_racedAgainst_Beaten: avg(
-          raw_race_data.raw_race_maxes_racedAgainst_Beaten
+          raw_race_data.raw_race_maxes_racedAgainst_Beaten,
         ),
         race_averages_racedAgainst_Beaten_Averages: avg(
-          raw_race_data.raw_race_averages_racedAgainst_Beaten_Averages
+          raw_race_data.raw_race_averages_racedAgainst_Beaten_Averages,
         ),
         race_maxes_racedAgainst_Beaten_Averages: avg(
-          raw_race_data.raw_race_maxes_racedAgainst_Beaten_Averages
+          raw_race_data.raw_race_maxes_racedAgainst_Beaten_Averages,
         ),
         race_mostRecentForm_racedAgainst_Beaten_Averages: avg(
-          raw_race_data.raw_race_mostRecentForm_racedAgainst_Beaten_Averages
+          raw_race_data.raw_race_mostRecentForm_racedAgainst_Beaten_Averages,
         ),
         race_mostRecentForm_racedAgainst_Beaten_Maxes: avg(
-          raw_race_data.raw_race_mostRecentForm_racedAgainst_Beaten_Maxes
+          raw_race_data.raw_race_mostRecentForm_racedAgainst_Beaten_Maxes,
         ),
 
         race_averages_racedAgainstMaxes: avg(
-          raw_race_data.raw_race_averages_racedAgainstMaxes
+          raw_race_data.raw_race_averages_racedAgainstMaxes,
         ),
         race_formAverages_rpr: avg(raw_race_data.raw_race_formAverages_rpr),
       };
 
       const raw_race_data_maxes = {
         race_averages_racedAgainstMaxes: max(
-          raw_race_data.raw_race_averages_racedAgainstMaxes
+          raw_race_data.raw_race_averages_racedAgainstMaxes,
         ),
         race_maxes_racedAgainstMaxes: max(
-          raw_race_data.raw_race_maxes_racedAgainstMaxes
+          raw_race_data.raw_race_maxes_racedAgainstMaxes,
         ),
         race_wgtLbs: max(raw_race_data.raw_race_wgtLbs),
         race_rpr: max(raw_race_data.raw_race_rpr),
         race_or: max(raw_race_data.raw_race_or),
         race_min_timePerFurlong: max(raw_race_data.raw_race_min_timePerFurlong),
         race_averages_racedAgainst: max(
-          raw_race_data.raw_race_averages_racedAgainst
+          raw_race_data.raw_race_averages_racedAgainst,
         ),
         race_maxes_racedAgainst: max(raw_race_data.raw_race_maxes_racedAgainst),
         race_averages_racedAgainst_Averages: max(
-          raw_race_data.raw_race_averages_racedAgainst_Averages
+          raw_race_data.raw_race_averages_racedAgainst_Averages,
         ),
         race_maxes_racedAgainst_Averages: max(
-          raw_race_data.raw_race_maxes_racedAgainst_Averages
+          raw_race_data.raw_race_maxes_racedAgainst_Averages,
         ),
         race_averages_racedAgainst_Beaten: max(
-          raw_race_data.raw_race_averages_racedAgainst_Beaten
+          raw_race_data.raw_race_averages_racedAgainst_Beaten,
         ),
         race_maxes_racedAgainst_Beaten: max(
-          raw_race_data.raw_race_maxes_racedAgainst_Beaten
+          raw_race_data.raw_race_maxes_racedAgainst_Beaten,
         ),
         race_averages_racedAgainst_Beaten_Averages: max(
-          raw_race_data.raw_race_averages_racedAgainst_Beaten_Averages
+          raw_race_data.raw_race_averages_racedAgainst_Beaten_Averages,
         ),
         race_maxes_racedAgainst_Beaten_Averages: max(
-          raw_race_data.raw_race_maxes_racedAgainst_Beaten_Averages
+          raw_race_data.raw_race_maxes_racedAgainst_Beaten_Averages,
         ),
         race_mostRecentForm_racedAgainst_Beaten_Averages: max(
-          raw_race_data.raw_race_mostRecentForm_racedAgainst_Beaten_Averages
+          raw_race_data.raw_race_mostRecentForm_racedAgainst_Beaten_Averages,
         ),
         race_mostRecentForm_racedAgainst_Beaten_Maxes: max(
-          raw_race_data.raw_race_mostRecentForm_racedAgainst_Beaten_Maxes
+          raw_race_data.raw_race_mostRecentForm_racedAgainst_Beaten_Maxes,
         ),
         race_formAverages_rpr: max(raw_race_data.raw_race_formAverages_rpr),
-        race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: max(raw_race_data.raw_race_allBeatenHorsesNowGoneOntoStats_maxes_rpr),
-        race_allBeatenHorsesNowGoneOntoStats_maxes_or: max(raw_race_data.raw_race_allBeatenHorsesNowGoneOntoStats_maxes_or),
+        race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: max(
+          raw_race_data.raw_race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
+        ),
+        race_allBeatenHorsesNowGoneOntoStats_maxes_or: max(
+          raw_race_data.raw_race_allBeatenHorsesNowGoneOntoStats_maxes_or,
+        ),
+        race_allBeatenHorsesNowGoneOntoStats_avgs_rpr: max(
+          raw_race_data.raw_race_allBeatenHorsesNowGoneOntoStats_avgs_rpr,
+        ),
+        race_allBeatenHorsesNowGoneOntoStats_avgs_or: max(
+          raw_race_data.raw_race_allBeatenHorsesNowGoneOntoStats_avgs_or,
+        ),
       };
 
       const raw_race_data_min = {
@@ -593,8 +619,7 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
         rawData: raw_race_data,
       };
 
-      const drawBias = oldRace.drawBias || "No Clear Bias" as DrawBiasType ;
-
+      const drawBias = oldRace.drawBias || ("No Clear Bias" as DrawBiasType);
 
       const race: Race = {
         distanceF,
@@ -622,12 +647,17 @@ export function oldMeetingsToNewMeetings(oldMeetings: OldMeeting[]): Meeting[] {
           const gapBetweenFormAveragesOrAndHorseOr =
             formAveragesOr && horseOr ? formAveragesOr - horseOr : 0;
 
-            const commentScore = horse.mostRecentForm?.commentMatchedTerms ? countCommentSentimentObj(horse.mostRecentForm?.commentMatchedTerms).score || 0 : 0;
+          const commentScore = horse.mostRecentForm?.commentMatchedTerms
+            ? countCommentSentimentObj(
+                horse.mostRecentForm?.commentMatchedTerms,
+              ).score || 0
+            : 0;
 
           const handicapBonus =
-            ((gapBetweenFormAveragesOrAndHorseOr +
+            (gapBetweenFormAveragesOrAndHorseOr +
               gapBetweenLastRaceOrAndCurrentOr) /
-            2) + commentScore;
+              2 +
+            commentScore;
 
           return {
             ...horse,

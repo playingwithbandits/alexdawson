@@ -54,7 +54,7 @@ export function PageClient({ date }: { date: string }) {
         const data = await response.json();
         console.log(
           "📦 Received data from API:",
-          data ? "Cache hit" : "Cache miss"
+          data ? "Cache hit" : "Cache miss",
         );
 
         if (!data) {
@@ -67,46 +67,41 @@ export function PageClient({ date }: { date: string }) {
             return;
           }
 
-
           let html = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 100) {
+          while (tryCount < 10) {
             tryCount++;
 
             if (pageUrl) {
               await new Promise((resolve) =>
-                setTimeout(resolve, 5000)
+                setTimeout(resolve, Math.floor(Math.random() * 10000) + 20000),
               );
               const response = await fetch(
                 `/api/racedays/proxy?url=${encodeURIComponent(
                   `https://alexdawson.co.uk/getP.php?q=${encodeURIComponent(
-                    pageUrl
-                  )}`
-                )}`
+                    pageUrl,
+                  )}`,
+                )}`,
               );
               const html_res = await response.text();
               const retryParser = new DOMParser();
               retryDoc = retryParser.parseFromString(
                 html_res || "",
-                "text/html"
+                "text/html",
               );
               if (retryDoc.querySelector(".ui-accordion__row")) {
                 // Successfully loaded the correct page
                 html = html_res;
                 break;
               } else {
-                console.log(
-                  `🏁 PageClient -  attempt ${tryCount}`,
-                  pageUrl
-                );
+                console.log(`🏁 PageClient -  attempt ${tryCount}`, pageUrl);
               }
             } else {
               // No link to retry
               break;
             }
           }
-
 
           if (!response.ok) {
             console.error("❌ Proxy request failed:", response.status);
@@ -118,7 +113,7 @@ export function PageClient({ date }: { date: string }) {
           const doc = parser.parseFromString(html, "text/html");
 
           const meetingElements = doc.querySelectorAll(
-            ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))"
+            ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))",
           );
           console.log("🏁 Found meeting elements:", meetingElements.length);
 
@@ -129,37 +124,38 @@ export function PageClient({ date }: { date: string }) {
                   .querySelector(".RC-accordion__courseName")
                   ?.textContent?.toLowerCase()
                   .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
-                  .trim() || ""
+                  .trim() || "",
               );
 
               const ukCourseKeys = UK_COURSES.map((course) =>
-                placeToPlaceKey(course)
+                placeToPlaceKey(course),
               );
               const irishCourseKeys = IRISH_COURSES.map((course) =>
-                placeToPlaceKey(course)
+                placeToPlaceKey(course),
               );
               const isUkCourse =
                 courseName && ukCourseKeys.includes(courseName);
               const isIrishCourse =
                 courseName && irishCourseKeys.includes(courseName);
 
-
               if (courseFilter) {
-                return placeToPlaceKey(courseName) === placeToPlaceKey(courseFilter);
+                return (
+                  placeToPlaceKey(courseName) === placeToPlaceKey(courseFilter)
+                );
               }
 
               return isUkCourse; //|| isIrishCourse; // TODO: Uncomment this when we have Irish courses back
-            }
+            },
           );
 
           console.log(
             "🎯 Filtered meeting elements:",
-            meetingElementsArr.length
+            meetingElementsArr.length,
           );
 
           const parsedMeetingsOld = await parseMeetings(
-            Array.from(meetingElementsArr),//.slice(0, 1),
-            date
+            Array.from(meetingElementsArr), //.slice(0, 1),
+            date,
           );
 
           const parsedMeetings: Meeting[] =

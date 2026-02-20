@@ -126,10 +126,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Averages raced against beaten averages isn't good",
     // },
 
-    {
-      value: lastRaceCommentScore >= 0,
-      name: "Last race wasn't good",
-    },
+    // {
+    //   value: lastRaceCommentScore >= 0,
+    //   name: "Last race wasn't good",
+    // },
     // {
     //   value: averageCommentScore >= 0,
     //   name: "Average comment score is less than 0",
@@ -282,6 +282,13 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
         horse?.scoreObj?.horseBetterThanRaceTheshold
           ?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
       name: "All beaten horses now gone onto stats had bad max rpr",
+    },
+
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr,
+      name: "All beaten horses now gone onto stats had bad averages rpr",
     },
     // {
     //   value: horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -452,7 +459,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   (Odds:{horse.oddsDecimal > 0 ? horse.oddsDecimal : ""})
                 </span>
                 <span className="text-gray-400">
-                  S#:{totalScore?.toFixed(2)}
+                  S#:{totalScore?.toFixed(1)}
                 </span>
 
                 <span
@@ -466,7 +473,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   Lc:
                   {lastCommentScore !== undefined
                     ? lastCommentScore
-                      ? lastCommentScore?.toFixed(2)
+                      ? lastCommentScore?.toFixed(1)
                       : 0
                     : "--"}
                 </span>
@@ -481,7 +488,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   Av:
                   {averageCommentScore !== undefined
                     ? averageCommentScore
-                      ? averageCommentScore?.toFixed(2)
+                      ? averageCommentScore?.toFixed(1)
                       : 0
                     : "--"}
                 </span>
@@ -496,7 +503,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                   L3:
                   {averageCommentScoreLast3 !== undefined
                     ? averageCommentScoreLast3
-                      ? averageCommentScoreLast3?.toFixed(2)
+                      ? averageCommentScoreLast3?.toFixed(1)
                       : 0
                     : "--"}
                 </span>
@@ -561,7 +568,9 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">RF Max</td>
 
                     <td className="px-2 py-1 w-[100px]">F_RPR</td>
+                    <td className="px-2 py-1 w-[100px]">F_AvRPR</td>
                     <td className="px-2 py-1 w-[100px]">F_OR</td>
+                    <td className="px-2 py-1 w-[100px]">F_AvOR</td>
                     <td className="px-2 py-1 w-[100px]">Bonus</td>
                     <td className="px-2 py-1 w-[100px]">Com</td>
                     <td className="px-2 py-1 min-w-[300px]">Com</td>
@@ -759,7 +768,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                           YELLOW_TEXT_COLOR,
                       )}
                     >
-                      {formAverages?.rpr?.toFixed(2)}
+                      {formAverages?.rpr?.toFixed(1)}
                     </td>
 
                     <td
@@ -784,7 +793,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                           YELLOW_TEXT_COLOR,
                       )}
                     >
-                      {formMinTimePerFurlong.toFixed(2)}
+                      {formMinTimePerFurlong.toFixed(1)}
                     </td>
 
                     <td
@@ -794,7 +803,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                           YELLOW_TEXT_COLOR,
                       )}
                     >
-                      {formAveragesRacedAgainstMaxes_Avg.rpr?.toFixed(2)}
+                      {formAveragesRacedAgainstMaxes_Avg.rpr?.toFixed(1)}
                     </td>
 
                     <td
@@ -804,7 +813,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                           YELLOW_TEXT_COLOR,
                       )}
                     >
-                      {formMaxesRacedAgainstMaxes_Max.rpr?.toFixed(2)}
+                      {formMaxesRacedAgainstMaxes_Max.rpr?.toFixed(1)}
                     </td>
 
                     <td
@@ -818,7 +827,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       {(
                         formAveragesRacedAgainstBeatenAverages.rpr +
                         (horse.handicapBonus || 0)
-                      )?.toFixed(2)}
+                      )?.toFixed(1)}
                     </td>
                     <td
                       className={twMerge(
@@ -831,7 +840,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       {(
                         formMaxesRacedAgainstBeatenAverages.rpr +
                         (horse.handicapBonus || 0)
-                      )?.toFixed(2)}
+                      )?.toFixed(1)}
                     </td>
                     <td
                       className={twMerge(
@@ -844,7 +853,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       {(
                         formAveragesRacedAgainstBeatenMaxes.rpr +
                         (horse.handicapBonus || 0)
-                      )?.toFixed(2)}
+                      )?.toFixed(1)}
                     </td>
                     <td
                       className={twMerge(
@@ -857,7 +866,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       {(
                         formMaxesRacedAgainstBeatenMaxes.rpr +
                         (horse.handicapBonus || 0)
-                      )?.toFixed(2)}
+                      )?.toFixed(1)}
                     </td>
                     {/* <td
                       className={twMerge(
@@ -893,7 +902,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       {(
                         (horse?.mostRecentForm?.racedAgainst_BeatenInfo
                           ?.averages?.rpr || 0) + (horse.handicapBonus || 0)
-                      )?.toFixed(2)}
+                      )?.toFixed(1)}
                     </td>
 
                     <td
@@ -906,7 +915,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       {(
                         (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes
                           ?.rpr || 0) + (horse.handicapBonus || 0)
-                      )?.toFixed(2)}
+                      )?.toFixed(1)}
                     </td>
 
                     <td
@@ -916,12 +925,29 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                           GREEN_TEXT_COLOR,
                       )}
                       title={
-                        `Best RPR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.rpr) || [])?.toFixed(2)}\n\n` +
+                        `Best RPR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.rpr) || [])?.toFixed(1)}\n\n` +
                         `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.rpr}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxRpr}`).join(", ")}\n`).join(`\n\n`)}`
                       }
                     >
                       {horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr || 0}
                     </td>
+
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr &&
+                          GREEN_TEXT_COLOR,
+                      )}
+                      title={
+                        `Best RPR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.rpr) || [])?.toFixed(1)}\n\n` +
+                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.rpr}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxRpr}`).join(", ")}\n`).join(`\n\n`)}`
+                      }
+                    >
+                      {horse.allBeatenHorsesNowGoneOntoStats?.avgs?.rpr?.toFixed(
+                        1,
+                      ) || 0}
+                    </td>
+
                     <td
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
@@ -929,11 +955,27 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                           YELLOW_TEXT_COLOR,
                       )}
                       title={
-                        `Best OR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.or} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.or) || [])?.toFixed(2)}\n\n` +
+                        `Best OR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.or} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.or) || [])?.toFixed(1)}\n\n` +
                         `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.or}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxOr}`).join(", ")}\n`).join(`\n\n`)}`
                       }
                     >
                       {horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or || 0}
+                    </td>
+
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_avgs_or &&
+                          YELLOW_TEXT_COLOR,
+                      )}
+                      title={
+                        `Best OR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.or} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.or) || [])?.toFixed(1)}\n\n` +
+                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.or}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxOr}`).join(", ")}\n`).join(`\n\n`)}`
+                      }
+                    >
+                      {horse.allBeatenHorsesNowGoneOntoStats?.avgs?.or?.toFixed(
+                        1,
+                      ) || 0}
                     </td>
 
                     <td
@@ -957,10 +999,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                           2,
                         )} + ${horse.gapBetweenLastRaceOrAndCurrentOr?.toFixed(
                           2,
-                        )} ) / 2 + ${lastCommentScore} = ${horse.handicapBonus?.toFixed(2)}`
+                        )} ) / 2 + ${lastCommentScore} = ${horse.handicapBonus?.toFixed(1)}`
                       }
                     >
-                      {horse.handicapBonus?.toFixed(2)}
+                      {horse.handicapBonus?.toFixed(1)}
                     </td>
 
                     <td

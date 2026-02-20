@@ -26,13 +26,17 @@ import { fetchFormRaceDetails } from "./fetchFormRaceDetails";
 import { fetchPredictions } from "./fetchPredictions";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
 import { lastRaceToLastRaceStats } from "./lastRaceToLastRaceStats";
-import { matchRaceTypeCode, max, min } from "@/lib/utils";
-import { AllBeatenHorsesNowGoneOntoStats, BeatenHorseFormObj, BeatenHorseFormObjsStats } from "@/lib/racing/scores/types";
+import { avg, matchRaceTypeCode, max, min } from "@/lib/utils";
+import {
+  AllBeatenHorsesNowGoneOntoStats,
+  BeatenHorseFormObj,
+  BeatenHorseFormObjsStats,
+} from "@/lib/racing/scores/types";
 
 export async function parseRaceDetails(
   html: string,
   raceUrl: string,
-  meetingDetails: Partial<Meeting>
+  meetingDetails: Partial<Meeting>,
 ): Promise<Partial<Race>> {
   //console.log("🔄 Starting parseRaceDetails...");
   const parser = new DOMParser();
@@ -44,13 +48,13 @@ export async function parseRaceDetails(
   // Parse betting forecast
   const bettingForecast: Bet[] = [];
   const forecastElement = doc.querySelector(
-    `[data-test-selector="RC-bettingForecast_container"]`
+    `[data-test-selector="RC-bettingForecast_container"]`,
   );
 
   if (forecastElement) {
     // Get all forecast groups
     const forecastGroups = forecastElement.querySelectorAll(
-      '[data-test-selector="RC-bettingForecast_group"]'
+      '[data-test-selector="RC-bettingForecast_group"]',
     );
 
     forecastGroups.forEach((group) => {
@@ -59,7 +63,9 @@ export async function parseRaceDetails(
 
       // Get all horses in this odds group
       const horses = Array.from(
-        group.querySelectorAll('[data-test-selector="RC-bettingForecast_link"]')
+        group.querySelectorAll(
+          '[data-test-selector="RC-bettingForecast_link"]',
+        ),
       );
 
       // Convert fractional odds to decimal
@@ -85,7 +91,7 @@ export async function parseRaceDetails(
 
   const raceGoing = headerBox
     ?.querySelector(
-      "[data-test-selector='RC-headerBox__going'] > .RC-headerBox__infoRow__content"
+      "[data-test-selector='RC-headerBox__going'] > .RC-headerBox__infoRow__content",
     )
     ?.textContent?.replace(/Going:\s*/i, "")
     .replace(/\s+/g, " ")
@@ -128,23 +134,19 @@ export async function parseRaceDetails(
     doc
       .querySelector(`[data-test-selector="RC-header__raceDistanceRound"]`)
       ?.textContent?.replace(/\s+/g, " ")
-      .trim() || ""
+      .trim() || "",
   );
 
   //console.log("🐎 Parsing horses...");
   // Parse horses from runner rows
   const rowsElements = doc.querySelectorAll(
-    ".RC-runnerRow:not(.RC-runnerRow_disabled)"
+    ".RC-runnerRow:not(.RC-runnerRow_disabled)",
   );
-  const rows = Array.from(rowsElements);//?.slice(0, 2);
+  const rows = Array.from(rowsElements); //?.slice(0, 2);
   //console.log(`Found ${rows.length} horses to parse`);
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
-  const oneYearAgo = new Date(
-    Date.now() - 1000 * 60 * 60 * 24 * 365
-  );
-  const _120DaysAgo = new Date(
-    Date.now() - 1000 * 60 * 60 * 24 * 120
-  );
+  const oneYearAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365);
+  const _120DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 120);
 
   const formValidDateThreshold = _120DaysAgo;
   const fetchFormDateThreshold = _120DaysAgo;
@@ -161,7 +163,7 @@ export async function parseRaceDetails(
 
       // Fetch the horse's profile/form data
       const profileLink = row.querySelector(
-        ".RC-runnerName.ui-link"
+        ".RC-runnerName.ui-link",
       ) as HTMLAnchorElement;
       const profileUrl = profileLink?.href
         ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
@@ -170,7 +172,7 @@ export async function parseRaceDetails(
       let formObj = undefined;
       let fetchTryCount = 0;
       // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
-      while (fetchTryCount < 50) {
+      while (fetchTryCount < 10) {
         fetchTryCount++;
         try {
           const res = await fetchHorseForm(profileUrl);
@@ -179,35 +181,39 @@ export async function parseRaceDetails(
             break;
           } else {
             // Optionally wait a bit before retrying (as in PageClient)
-            await new Promise((resolve) => setTimeout(resolve, 5000));
+            await new Promise((resolve) =>
+              setTimeout(resolve, Math.floor(Math.random() * 10000) + 30000),
+            );
             console.log(
               `fetchHorseForm: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
-              { profileUrl, res }
+              { profileUrl, res },
             );
           }
         } catch (err) {
           console.error(
             `fetchHorseForm: Error on attempt ${fetchTryCount}`,
             err,
-            profileUrl
+            profileUrl,
           );
-          await new Promise((resolve) => setTimeout(resolve, 5000));
+          await new Promise((resolve) =>
+            setTimeout(resolve, Math.floor(Math.random() * 10000) + 30000),
+          );
         }
       }
 
       const name = horseNameToKey(
-        row.querySelector(".RC-runnerName")?.textContent?.trim() || ""
+        row.querySelector(".RC-runnerName")?.textContent?.trim() || "",
       );
 
       const formTableEle = row.querySelector(
-        `[data-test-selector="RC-runnerFormBody"]`
+        `[data-test-selector="RC-runnerFormBody"]`,
       );
       const formRows = formTableEle?.querySelectorAll("tr");
 
       // Find valid form rows (all DOM and formObj work, no fetch)
       const formRowsValid = Array.from(formRows || [])?.filter((x) => {
         const outcomeCell = x.querySelector(
-          '[data-test-selector="RC-runnerFormRow__outcome"]'
+          '[data-test-selector="RC-runnerFormRow__outcome"]',
         );
         const outcomeText =
           outcomeCell?.querySelector("a")?.textContent?.trim() || "";
@@ -233,7 +239,7 @@ export async function parseRaceDetails(
 
         const isMatchingRaceCode = matchRaceTypeCode(
           matchingFormObj?.raceTypeCode,
-          raceTypeCode
+          raceTypeCode,
         );
 
         // console.log(
@@ -257,7 +263,7 @@ export async function parseRaceDetails(
       const allValidFormRowsStatsData = await Promise.all(
         formRowsValid.map(async (latestFormRow) => {
           const outcomeCell = latestFormRow?.querySelector(
-            '[data-test-selector="RC-runnerFormRow__outcome"]'
+            '[data-test-selector="RC-runnerFormRow__outcome"]',
           );
           const outcomeLink = outcomeCell?.querySelector("a");
           const lastRaceLink = outcomeLink?.href
@@ -269,18 +275,18 @@ export async function parseRaceDetails(
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 100) {
+          while (tryCount < 10) {
             tryCount++;
 
             if (lastRaceLink) {
               await new Promise((resolve) =>
-                setTimeout(resolve, 5000)
+                setTimeout(resolve, Math.floor(Math.random() * 10000) + 20000),
               );
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
               retryDoc = retryParser.parseFromString(
                 retryRaceEle || "",
-                "text/html"
+                "text/html",
               );
               if (retryDoc.querySelector(".rp-horseTable__table")) {
                 // Successfully loaded the correct page
@@ -289,7 +295,7 @@ export async function parseRaceDetails(
               } else {
                 console.log(
                   `🏁 parseRaceDetails -  attempt ${tryCount}`,
-                  lastRaceLink
+                  lastRaceLink,
                 );
               }
             } else {
@@ -300,13 +306,13 @@ export async function parseRaceDetails(
 
           console.log(
             `🏁 parseRaceDetails - element found after ${tryCount} attempts`,
-            lastRaceLink
+            lastRaceLink,
           );
 
           const formRowValidDate =
             latestFormRow
               ?.querySelector(
-                '[data-test-selector="RC-runnerFormLink__results"]'
+                '[data-test-selector="RC-runnerFormLink__results"]',
               )
               ?.getAttribute("href")
               ?.split("/")?.[4] || undefined;
@@ -335,7 +341,7 @@ export async function parseRaceDetails(
                 lastRaceEle,
                 name,
                 lastFormRowDistanceFurlongAccurate || raceDistance,
-                lastRaceTypeCode
+                lastRaceTypeCode,
               )
             : undefined;
 
@@ -345,93 +351,115 @@ export async function parseRaceDetails(
           ) {
             console.error(
               "🏁 lastRaceToLastRaceStats - No last race stats object found",
-              lastRaceLink
+              lastRaceLink,
             );
           }
 
           console.log("🏁 lastRaceStatsObj", lastRaceStatsObj);
 
-          const beatenHorses = lastRaceStatsObj?.runners_beaten?.filter((x) => horseNameToKey(x.name) !== horseNameToKey(name))?.slice(0, 4) || [];
+          const beatenHorses =
+            lastRaceStatsObj?.runners_beaten
+              ?.filter((x) => horseNameToKey(x.name) !== horseNameToKey(name))
+              ?.slice(0, 4) || [];
 
-          const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(beatenHorses?.map(async (beatenHorse) => {
-            const { profileUrl, name,  } = beatenHorse || {};
-            let beatenHorseForm = undefined;
-            let fetchTryCount = 0;
-            // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
-            while (fetchTryCount < 50) {
-              fetchTryCount++;
-              try {
-                const res = await fetchHorseForm(profileUrl);
-                if (res) {
-                  beatenHorseForm = res;
-                  break;
-                } else {
-                  // Optionally wait a bit before retrying (as in PageClient)
-                  await new Promise((resolve) => setTimeout(resolve, 5000));
-                  console.log(
-                    `fetchHorseForm beatenHorse: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
-                    { profileUrl, res }
+          const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(
+            beatenHorses?.map(async (beatenHorse) => {
+              const { profileUrl, name } = beatenHorse || {};
+              let beatenHorseForm = undefined;
+              let fetchTryCount = 0;
+              // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
+              while (fetchTryCount < 10) {
+                fetchTryCount++;
+                try {
+                  const res = await fetchHorseForm(profileUrl);
+                  if (res) {
+                    beatenHorseForm = res;
+                    break;
+                  } else {
+                    // Optionally wait a bit before retrying (as in PageClient)
+                    await new Promise((resolve) =>
+                      setTimeout(
+                        resolve,
+                        Math.floor(Math.random() * 10000) + 30000,
+                      ),
+                    );
+                    console.log(
+                      `fetchHorseForm beatenHorse: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
+                      { profileUrl, res },
+                    );
+                  }
+                } catch (err) {
+                  console.error(
+                    `fetchHorseForm beatenHorse: Error on attempt ${fetchTryCount}`,
+                    err,
+                    profileUrl,
+                  );
+                  await new Promise((resolve) =>
+                    setTimeout(
+                      resolve,
+                      Math.floor(Math.random() * 10000) + 30000,
+                    ),
                   );
                 }
-              } catch (err) {
-                console.error(
-                  `fetchHorseForm beatenHorse: Error on attempt ${fetchTryCount}`,
-                  err,
-                  profileUrl
-                );
-                await new Promise((resolve) => setTimeout(resolve, 5000));
               }
-            }
 
+              const beatenHorseFormsRacesThatCameAfterThisRace =
+                beatenHorseForm?.form?.filter((x) => {
+                  const date1 = x.raceDatetime
+                    ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
+                    : undefined;
+                  const date2 = formRowValidDate
+                    ? new Date(formRowValidDate || "")
+                        .toISOString()
+                        .split("T")[0]
+                    : undefined;
+                  return date1 && date2 && date1 >= date2;
+                });
 
+              const stats = {
+                rpr:
+                  beatenHorseFormsRacesThatCameAfterThisRace?.map(
+                    (x) => x.rpPostmark || 0,
+                  ) || [],
+                or:
+                  beatenHorseFormsRacesThatCameAfterThisRace?.map(
+                    (x) => x.officialRatingRanOff || 0,
+                  ) || [],
+              };
 
+              const stats_max = {
+                maxRpr: max(stats.rpr || []),
+                maxOr: max(stats.or || []),
+              };
 
+              return {
+                allForms: beatenHorseForm?.form || [],
+                greaterThanDate: formRowValidDate || "",
+                name,
+                validForms: beatenHorseFormsRacesThatCameAfterThisRace || [],
+                stats: stats,
+                stats_max: stats_max,
+                profileUrl,
+              };
+            }),
+          );
 
-
-            const beatenHorseFormsRacesThatCameAfterThisRace = beatenHorseForm?.form?.filter((x) => {
-
-              
-              const date1 = x.raceDatetime
-                ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
-                : undefined;
-              const date2 = formRowValidDate
-                ? new Date(formRowValidDate || "").toISOString().split("T")[0]
-                : undefined;
-              return date1 && date2 && date1 >= date2;
-            });
-
-            const stats ={
-              rpr: beatenHorseFormsRacesThatCameAfterThisRace?.map((x) => x.rpPostmark || 0) || [],
-              or: beatenHorseFormsRacesThatCameAfterThisRace?.map((x) => x.officialRatingRanOff || 0) || []
-            }
-
-
-            const stats_max = {
-              maxRpr: max(stats.rpr || []),
-              maxOr: max(stats.or || []),
-            }
-  
-
-            return {
-              allForms: beatenHorseForm?.form || [],
-              greaterThanDate: formRowValidDate || "",
-              name,
-              validForms: beatenHorseFormsRacesThatCameAfterThisRace || [],
-              stats: stats,
-              stats_max: stats_max,
-              profileUrl,
-            };
-          }));
-
-
-          const beatenHorsesFormObjsStats: BeatenHorseFormObjsStats ={
+          const beatenHorsesFormObjsStats: BeatenHorseFormObjsStats = {
             raw: beatenHorsesFormObjs,
-            maxes:{
-              rpr: max(beatenHorsesFormObjs?.map((x) => x.stats_max?.maxRpr || 0) || []),
-              or: max(beatenHorsesFormObjs?.map((x) => x.stats_max?.maxOr || 0) || []),
-            }
-          }
-          console.log("🏁 beatenHorsesFormObjsStats", beatenHorsesFormObjsStats);
+            maxes: {
+              rpr: max(
+                beatenHorsesFormObjs?.map((x) => x.stats_max?.maxRpr || 0) ||
+                  [],
+              ),
+              or: max(
+                beatenHorsesFormObjs?.map((x) => x.stats_max?.maxOr || 0) || [],
+              ),
+            },
+          };
+          console.log(
+            "🏁 beatenHorsesFormObjsStats",
+            beatenHorsesFormObjsStats,
+          );
 
           // All network/DOM/lastRace parsing is done here
           return {
@@ -444,23 +472,37 @@ export async function parseRaceDetails(
               lastFormRowDistanceFurlongAccurate || raceDistance,
             lastRaceTypeCode,
           };
-        })
+        }),
       );
 
-      const allBeatenHorsesNowGoneOntoData = allValidFormRowsStatsData?.map((x) => x.beatenHorsesFormObjsStats) || [];
+      const allBeatenHorsesNowGoneOntoData =
+        allValidFormRowsStatsData?.map((x) => x.beatenHorsesFormObjsStats) ||
+        [];
 
-      const allBeatenHorsesNowGoneOntoStats: AllBeatenHorsesNowGoneOntoStats ={
+      const allBeatenHorsesNowGoneOntoStats: AllBeatenHorsesNowGoneOntoStats = {
         raw: allBeatenHorsesNowGoneOntoData,
-        maxes:
-        {
-          rpr: max(allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.rpr) || []),
-          or: max(allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.or) || []),
-        } 
-      }
+        maxes: {
+          rpr: max(
+            allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.rpr) || [],
+          ),
+          or: max(
+            allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.or) || [],
+          ),
+        },
+        avgs: {
+          rpr: avg(
+            allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.rpr) || [],
+          ),
+          or: avg(
+            allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.or) || [],
+          ),
+        },
+      };
 
-      console.log("🏁 allBeatenHorsesNowGoneOntoStats", allBeatenHorsesNowGoneOntoStats);
-
-
+      console.log(
+        "🏁 allBeatenHorsesNowGoneOntoStats",
+        allBeatenHorsesNowGoneOntoStats,
+      );
 
       // const allBeatenHorsesNowGoneOntoStatsStats ={
       //   allStats: allBeatenHorsesNowGoneOntoStats?.map((x) => x.stats) || [],
@@ -476,19 +518,19 @@ export async function parseRaceDetails(
         min(
           allFormRowsStatsDataStatsObjs
             .map((x) => x.info?.timePerFurlong || 0)
-            ?.filter(Boolean)
+            ?.filter(Boolean),
         ) || 0;
       const maxBeatenAvgsRpr =
         max(
           allFormRowsStatsDataStatsObjs
             .map((x) => x.averages_beaten?.rpr || 0)
-            ?.filter(Boolean)
+            ?.filter(Boolean),
         ) || 0;
       const maxBeatenMaxesRpr =
         max(
           allFormRowsStatsDataStatsObjs
             .map((x) => x.maxes_beaten?.rpr || 0)
-            ?.filter(Boolean)
+            ?.filter(Boolean),
         ) || 0;
 
       const allValidFormRowsStatsDataStats: AllValidFormRowsStatsDataStatsType =
@@ -516,7 +558,7 @@ export async function parseRaceDetails(
               // x.officialRatingRanOff &&
               // x.officialRatingRanOff > 0 &&
               // x.raceClass !== null &&
-              new Date(x.raceDatetime || "") >= fetchFormDateThreshold
+              new Date(x.raceDatetime || "") >= fetchFormDateThreshold,
           ),
         },
         number:
@@ -540,7 +582,7 @@ export async function parseRaceDetails(
         weight: (() => {
           const wgtElement = row.querySelector(".RC-runnerWgt__carried");
           const pounds = Number(
-            wgtElement?.getAttribute("data-order-wgt") || 0
+            wgtElement?.getAttribute("data-order-wgt") || 0,
           );
           const stone = Math.floor(pounds / 14);
           const remainingPounds = pounds % 14;
@@ -582,7 +624,7 @@ export async function parseRaceDetails(
           ?.textContent?.trim(),
         stats: calculateHorseStats(formObj),
       };
-    })
+    }),
   );
 
   //console.log("🐎 horses", horses);
@@ -591,7 +633,7 @@ export async function parseRaceDetails(
   // Extract prize money from title or other elements
   const prizeMatch = doc
     .querySelector(
-      `[data-test-selector="RC-headerBox__winner"] > .RC-headerBox__infoRow__content`
+      `[data-test-selector="RC-headerBox__winner"] > .RC-headerBox__infoRow__content`,
     )
     ?.textContent?.match(/£([\d,]+)/);
   const prizeMoney = prizeMatch ? parseInt(prizeMatch[1].replace(/,/g, "")) : 0;
@@ -600,7 +642,7 @@ export async function parseRaceDetails(
     doc
       .querySelector(`[data-test-selector="RC-courseHeader__name"]`)
       ?.textContent?.toLowerCase()
-      .trim() || ""
+      .trim() || "",
   );
 
   // First calculate base race data
@@ -622,7 +664,7 @@ export async function parseRaceDetails(
           ?.textContent?.replace(/[()]/g, "")
           .replace(/\s+/g, " ")
           ?.replace("Class", "")
-          .trim() || ""
+          .trim() || "",
       ) || 0,
     ageRestriction:
       doc
@@ -638,7 +680,7 @@ export async function parseRaceDetails(
     stalls:
       headerBox
         ?.querySelector(
-          "[data-test-selector='RC-headerBox__stalls'] > .RC-headerBox__infoRow__content"
+          "[data-test-selector='RC-headerBox__stalls'] > .RC-headerBox__infoRow__content",
         )
         ?.textContent?.replace(/Stalls:\s*/i, "")
         .replace(/\s+/g, " ")
@@ -646,7 +688,7 @@ export async function parseRaceDetails(
     ewTerms:
       headerBox
         ?.querySelector(
-          "[data-test-selector='RC-headerBox__terms'] > .RC-headerBox__infoRow__content"
+          "[data-test-selector='RC-headerBox__terms'] > .RC-headerBox__infoRow__content",
         )
         ?.textContent?.replace(/Terms:\s*/i, "")
         .replace(/\s+/g, " ")
@@ -661,7 +703,7 @@ export async function parseRaceDetails(
     baseRaceData.trackConfig as TrackConfiguration,
     baseRaceData.distance || 0,
     baseRaceData.going,
-    meetingDetails.venue
+    meetingDetails.venue,
   );
 
   baseRaceData.drawBias = drawBiasInfo.bias;
@@ -715,11 +757,11 @@ export async function parseRaceDetails(
     raceComment: generateRaceComment(
       result2.horses.sort(
         (a, b) =>
-          (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0)
+          (b.score?.total?.percentage || 0) - (a.score?.total?.percentage || 0),
       )[0],
       result2,
       raceStats,
-      meetingDetails
+      meetingDetails,
     ),
   };
 
