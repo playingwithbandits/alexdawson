@@ -128,7 +128,7 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     // },
 
     {
-      value: lastRaceCommentScore >= 0.1,
+      value: lastRaceCommentScore >= 0,
       name: "Last race wasn't good",
     },
     // {
@@ -140,10 +140,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Average comment score last 3 is less than 0",
     // },
 
-    {
-      value: horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
-      name: "Form averages rpr is low",
-    },
+    // {
+    //   value: horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
+    //   name: "Form averages rpr is low",
+    // },
 
 
     {
@@ -171,14 +171,14 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   value: trainerStatsDecent,
     //   name: "Trainer isnt decent",
     // },
-    {
-      value: gapToAvgScoreGood,
-      name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
-    },
-    {
-      value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
-      name: "Score is less than 60",
-    },
+    // {
+    //   value: gapToAvgScoreGood,
+    //   name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
+    // },
+    // {
+    //   value: horse.scoreObj?.total && horse.scoreObj?.total > 60,
+    //   name: "Score is less than 60",
+    // },
     {
       value: horse.age > 2,
       name: "Horse is under 2 years old",
@@ -258,12 +258,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Last race had bad averages rpr",
     // },
 
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
-      name: "Last race had bad maxes averages rpr",
-    },
+    // {
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold
+    //       ?.handicapped_averages_racedAgainst_Beaten_Maxes_rpr,
+    //   name: "Last race had bad maxes averages rpr",
+    // },
 
     // {
     //   value:
@@ -272,12 +272,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Last race had bad averages rpr",
     // },
 
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
-    //   name: "Last race had bad max rpr",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr,
+      name: "Last race had bad max rpr",
+    },
   ];
 
   const totalStats = requiredStats.length;
@@ -713,7 +713,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_formAverages_rpr &&
-                        GREEN_TEXT_COLOR
+                        YELLOW_TEXT_COLOR
                       )}
                     >
                       {formAverages?.rpr?.toFixed(2)}
@@ -792,7 +792,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_averages_racedAgainst_Beaten_Maxes_rpr &&
-                          GREEN_TEXT_COLOR
+                        YELLOW_TEXT_COLOR
                       )}
                       title={`${horse.formInfo?.rawData?.racedAgainst_Beaten_Maxes?.rpr?.join(", ")}`}
                     >
@@ -858,7 +858,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_mostRecentForm_racedAgainst_Beaten_Maxes_rpr &&
-                          YELLOW_TEXT_COLOR
+                          GREEN_TEXT_COLOR
                       )}
                     >
                       {(
@@ -892,6 +892,11 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                         horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_maxes_or &&
                           YELLOW_TEXT_COLOR
                       )}
+                      title={
+                        `Best OR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.or}\n\n` + 
+                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.or}\n`+`${x.raw.map((y) => `${y.name}: ${y.stats_max.maxOr}`).join(", ")}\n`).join(`\n\n`)}` 
+                       
+                      }
                     >
                       {
                         (horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or || 0)}
