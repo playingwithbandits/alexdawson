@@ -24,7 +24,7 @@ export async function fetchHorseForm(
     //console.log("Parsed form data:", formData);
     return formData;
   } catch (error) {
-    console.error("Error fetching horse form:", error);
+    //console.error("Error fetching horse form:", error);
     return undefined;
   }
 }

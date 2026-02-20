@@ -526,6 +526,9 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                     <td className="px-2 py-1 w-[100px]">RF Dist</td>
                     <td className="px-2 py-1 w-[100px]">RF Avgs</td>
                     <td className="px-2 py-1 w-[100px]">RF Max</td>
+                    
+                    <td className="px-2 py-1 w-[100px]">F_RPR</td>
+                    <td className="px-2 py-1 w-[100px]">F_OR</td>
                     <td className="px-2 py-1 w-[100px]">Bonus</td>
                     <td className="px-2 py-1 w-[100px]">Com</td>
                     <td className="px-2 py-1 min-w-[300px]">Com</td>
@@ -862,6 +865,36 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                         (horse.mostRecentForm?.racedAgainst_BeatenInfo?.maxes
                           ?.rpr || 0) + (horse.handicapBonus || 0)
                       )?.toFixed(2)}
+                    </td>
+
+
+                    
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr &&
+                          YELLOW_TEXT_COLOR
+                      )}
+
+                      title={
+
+                        `Best RPR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr}\n\n` + 
+                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.rpr}\n`+`${x.raw.map((y) => `${y.name}: ${y.stats_max.maxRpr}`).join(", ")}\n`).join(`\n\n`)}` 
+                       
+                      }
+                    >
+                      {
+                        (horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr || 0)}
+                    </td>
+                    <td
+                      className={twMerge(
+                        "px-2 py-1 w-[100px]",
+                        horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_maxes_or &&
+                          YELLOW_TEXT_COLOR
+                      )}
+                    >
+                      {
+                        (horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or || 0)}
                     </td>
 
                     <td

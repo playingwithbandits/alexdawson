@@ -260,6 +260,11 @@ export function Dashboard({
 
             race_formAverages_rpr:
               raceMaxes?.race_formAverages_rpr * thresholdValue,
+
+            race_allBeatenHorsesNowGoneOntoStats_maxes_rpr:
+              raceMaxes?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr * thresholdValue,
+            race_allBeatenHorsesNowGoneOntoStats_maxes_or:
+              raceMaxes?.race_allBeatenHorsesNowGoneOntoStats_maxes_or * thresholdValue,
           };
 
           return {
@@ -340,6 +345,9 @@ export function Dashboard({
 
                   race_maxes_racedAgainstMaxes: boolean;
                   race_formAverages_rpr: boolean;
+
+                  race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: boolean;
+                  race_allBeatenHorsesNowGoneOntoStats_maxes_or: boolean;
                 } = {
                   race_rpr:
                     Boolean(horseRpr) && horseRpr >= raceThresholds.race_rpr,
@@ -523,6 +531,16 @@ export function Dashboard({
                   race_formAverages_rpr:
                     Boolean(horseFormAverages?.rpr) &&
                     horseFormAverages.rpr >= raceThresholds.race_formAverages_rpr,
+
+                  race_allBeatenHorsesNowGoneOntoStats_maxes_rpr:
+                    Boolean(horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr) &&
+                    (horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr || 0) >=
+                      raceThresholds.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
+
+                  race_allBeatenHorsesNowGoneOntoStats_maxes_or:
+                    Boolean(horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or) &&
+                    (horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or || 0) >=
+                      raceThresholds.race_allBeatenHorsesNowGoneOntoStats_maxes_or,
                 };
 
                 const avgGoingCodes = horseFormInfo?.averages?.goingCodes;

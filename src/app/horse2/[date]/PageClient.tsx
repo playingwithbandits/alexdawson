@@ -67,21 +67,52 @@ export function PageClient({ date }: { date: string }) {
             return;
           }
 
-          console.log("🔄 Fetching from proxy");
-          const response = await fetch(
-            `/api/racedays/proxy?url=${encodeURIComponent(
-              `https://alexdawson.co.uk/getP.php?q=${encodeURIComponent(
-                pageUrl
-              )}`
-            )}`
-          );
+
+          let html = "";
+          let tryCount = 0;
+          let retryDoc: Document | null = null;
+          while (tryCount < 100) {
+            tryCount++;
+
+            if (pageUrl) {
+              await new Promise((resolve) =>
+                setTimeout(resolve, 5000)
+              );
+              const response = await fetch(
+                `/api/racedays/proxy?url=${encodeURIComponent(
+                  `https://alexdawson.co.uk/getP.php?q=${encodeURIComponent(
+                    pageUrl
+                  )}`
+                )}`
+              );
+              const html_res = await response.text();
+              const retryParser = new DOMParser();
+              retryDoc = retryParser.parseFromString(
+                html_res || "",
+                "text/html"
+              );
+              if (retryDoc.querySelector(".ui-accordion__row")) {
+                // Successfully loaded the correct page
+                html = html_res;
+                break;
+              } else {
+                console.log(
+                  `🏁 PageClient -  attempt ${tryCount}`,
+                  pageUrl
+                );
+              }
+            } else {
+              // No link to retry
+              break;
+            }
+          }
+
 
           if (!response.ok) {
             console.error("❌ Proxy request failed:", response.status);
             throw new Error(`HTTP error! status: ${response.status}`);
           }
 
-          const html = await response.text();
           console.log("📄 Received HTML response");
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, "text/html");

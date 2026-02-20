@@ -1,6 +1,7 @@
 import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
-import { PredictionRunner } from "./racing";
+import { AllValidFormRowsStatsDataStatsType, PredictionRunner } from "./racing";
 import { DrawBiasType } from "@/lib/racing/calculateDrawBias";
+import { AllBeatenHorsesNowGoneOntoStats } from "@/lib/racing/scores/types";
 
 export interface Meeting {
   trackId: string;
@@ -67,6 +68,8 @@ export interface RaceHorsesInfo {
     race_averages_racedAgainstMaxes: number;
     race_maxes_racedAgainstMaxes: number;
     race_formAverages_rpr: number;
+    race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: number;
+    race_allBeatenHorsesNowGoneOntoStats_maxes_or: number;
   };
   min: {
     race_min_timePerFurlong: number;
@@ -89,6 +92,8 @@ export interface RaceHorsesInfo {
 
     raw_race_averages_racedAgainstMaxes: number[];
     raw_race_formAverages_rpr: number[];
+    raw_race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: number[];
+    raw_race_allBeatenHorsesNowGoneOntoStats_maxes_or: number[];
   };
 }
 
@@ -132,6 +137,8 @@ export interface ScoreObj {
     race_averages_racedAgainstMaxes: boolean;
     race_maxes_racedAgainstMaxes: boolean;
     race_formAverages_rpr: boolean;
+    race_allBeatenHorsesNowGoneOntoStats_maxes_rpr: boolean;
+    race_allBeatenHorsesNowGoneOntoStats_maxes_or: boolean;
   };
   horseFormAveragesStatsGood: {
     distance: boolean;
@@ -175,6 +182,8 @@ export interface Horse {
   gapBetweenFormAveragesOrAndHorseOr?: number;
   draw?: number;
   trainer?: string;
+  allBeatenHorsesNowGoneOntoStats?: AllBeatenHorsesNowGoneOntoStats;
+  allValidFormRowsStatsDataStats?: AllValidFormRowsStatsDataStatsType;
 }
 
 export interface FormInfo {

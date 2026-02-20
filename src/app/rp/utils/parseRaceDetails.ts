@@ -136,15 +136,18 @@ export async function parseRaceDetails(
   const rowsElements = doc.querySelectorAll(
     ".RC-runnerRow:not(.RC-runnerRow_disabled)"
   );
-  const rows = Array.from(rowsElements)?.slice( 0, 1);
+  const rows = Array.from(rowsElements);//?.slice(0, 2);
   //console.log(`Found ${rows.length} horses to parse`);
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const oneYearAgo = new Date(
     Date.now() - 1000 * 60 * 60 * 24 * 365
   );
+  const _120DaysAgo = new Date(
+    Date.now() - 1000 * 60 * 60 * 24 * 120
+  );
 
-  const formValidDateThreshold = oneYearAgo;
-  const fetchFormDateThreshold = oneYearAgo;
+  const formValidDateThreshold = _120DaysAgo;
+  const fetchFormDateThreshold = _120DaysAgo;
 
   // This is fully async: all fetching is performed before continuing; after Promise.all resolves,
   // no further awaits or network operations occur relating to horse/form data/stat fetching.
@@ -164,7 +167,33 @@ export async function parseRaceDetails(
         ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
           new URL(profileLink.href).pathname
         : "";
-      const formObj = await fetchHorseForm(profileUrl);
+      let formObj = undefined;
+      let fetchTryCount = 0;
+      // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
+      while (fetchTryCount < 20) {
+        fetchTryCount++;
+        try {
+          const res = await fetchHorseForm(profileUrl);
+          if (res) {
+            formObj = res;
+            break;
+          } else {
+            // Optionally wait a bit before retrying (as in PageClient)
+            await new Promise((resolve) => setTimeout(resolve, 3000));
+            console.log(
+              `fetchHorseForm: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
+              { profileUrl, res }
+            );
+          }
+        } catch (err) {
+          console.error(
+            `fetchHorseForm: Error on attempt ${fetchTryCount}`,
+            err,
+            profileUrl
+          );
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+        }
+      }
 
       const name = horseNameToKey(
         row.querySelector(".RC-runnerName")?.textContent?.trim() || ""
@@ -322,12 +351,37 @@ export async function parseRaceDetails(
 
           console.log("🏁 lastRaceStatsObj", lastRaceStatsObj);
 
-          const beatenHorses = lastRaceStatsObj?.runners_beaten || [];
+          const beatenHorses = lastRaceStatsObj?.runners_beaten?.filter((x) => horseNameToKey(x.name) !== horseNameToKey(name))?.slice(0, 4) || [];
 
           const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(beatenHorses?.map(async (beatenHorse) => {
             const { profileUrl, name,  } = beatenHorse || {};
-            const beatenHorseForm = await fetchHorseForm(profileUrl);
-
+            let beatenHorseForm = undefined;
+            let fetchTryCount = 0;
+            // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
+            while (fetchTryCount < 20) {
+              fetchTryCount++;
+              try {
+                const res = await fetchHorseForm(profileUrl);
+                if (res) {
+                  beatenHorseForm = res;
+                  break;
+                } else {
+                  // Optionally wait a bit before retrying (as in PageClient)
+                  await new Promise((resolve) => setTimeout(resolve, 3000));
+                  console.log(
+                    `fetchHorseForm beatenHorse: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
+                    { profileUrl, res }
+                  );
+                }
+              } catch (err) {
+                console.error(
+                  `fetchHorseForm beatenHorse: Error on attempt ${fetchTryCount}`,
+                  err,
+                  profileUrl
+                );
+                await new Promise((resolve) => setTimeout(resolve, 3000));
+              }
+            }
 
 
 
@@ -343,7 +397,7 @@ export async function parseRaceDetails(
               const date2 = formRowValidDate
                 ? new Date(formRowValidDate || "").toISOString().split("T")[0]
                 : undefined;
-              return date1 && date2 && date1 >= date2;
+              return date1 && date2 && date1 > date2;
             });
 
             const stats ={
