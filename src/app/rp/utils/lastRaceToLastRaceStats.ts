@@ -94,8 +94,11 @@ export async function lastRaceToLastRaceStats(
         .replace(/[\[\]]/g, "") || "";
     const distanceBeaten = distanceToWinnerStrToFloat(distanceText) || 0;
 
+
+    const profileUrl_grab =  row.querySelector(".rp-horseTable__horse__name")?.getAttribute("href") || "";
+const profileUrl = profileUrl_grab ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" + profileUrl_grab : "";
     runners.push({
-      name,
+      name,profileUrl,
       position,
       or,
       rpr,

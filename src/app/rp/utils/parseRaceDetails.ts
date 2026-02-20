@@ -27,6 +27,7 @@ import { fetchPredictions } from "./fetchPredictions";
 import { fetchRaceAccordion } from "./fetchRaceAccordion";
 import { lastRaceToLastRaceStats } from "./lastRaceToLastRaceStats";
 import { matchRaceTypeCode, max, min } from "@/lib/utils";
+import { AllBeatenHorsesNowGoneOntoStats, BeatenHorseFormObj, BeatenHorseFormObjsStats } from "@/lib/racing/scores/types";
 
 export async function parseRaceDetails(
   html: string,
@@ -135,7 +136,7 @@ export async function parseRaceDetails(
   const rowsElements = doc.querySelectorAll(
     ".RC-runnerRow:not(.RC-runnerRow_disabled)"
   );
-  const rows = Array.from(rowsElements);
+  const rows = Array.from(rowsElements)?.slice( 0, 1);
   //console.log(`Found ${rows.length} horses to parse`);
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const oneYearAgo = new Date(
@@ -206,12 +207,12 @@ export async function parseRaceDetails(
           raceTypeCode
         );
 
-        console.log(
-          `🏁 parseRaceDetails - isMatchingRaceCode for ${name} on ${formRowValidDate}`,
-          raceCode,
-          raceOutcomeCode,
-          isMatchingRaceCode
-        );
+        // console.log(
+        //   `🏁 parseRaceDetails - isMatchingRaceCode for ${name} on ${formRowValidDate}`,
+        //   raceCode,
+        //   raceOutcomeCode,
+        //   isMatchingRaceCode
+        // );
 
         const date = new Date(formRowValidDate || "");
 
@@ -319,11 +320,71 @@ export async function parseRaceDetails(
             );
           }
 
+          console.log("🏁 lastRaceStatsObj", lastRaceStatsObj);
+
+          const beatenHorses = lastRaceStatsObj?.runners_beaten || [];
+
+          const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(beatenHorses?.map(async (beatenHorse) => {
+            const { profileUrl, name,  } = beatenHorse || {};
+            const beatenHorseForm = await fetchHorseForm(profileUrl);
+
+
+
+
+
+
+
+            const beatenHorseFormsRacesThatCameAfterThisRace = beatenHorseForm?.form?.filter((x) => {
+
+              
+              const date1 = x.raceDatetime
+                ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
+                : undefined;
+              const date2 = formRowValidDate
+                ? new Date(formRowValidDate || "").toISOString().split("T")[0]
+                : undefined;
+              return date1 && date2 && date1 >= date2;
+            });
+
+            const stats ={
+              rpr: beatenHorseFormsRacesThatCameAfterThisRace?.map((x) => x.rpPostmark || 0) || [],
+              or: beatenHorseFormsRacesThatCameAfterThisRace?.map((x) => x.officialRatingRanOff || 0) || []
+            }
+
+
+            const stats_max = {
+              maxRpr: max(stats.rpr || []),
+              maxOr: max(stats.or || []),
+            }
+  
+
+            return {
+              allForms: beatenHorseForm?.form || [],
+              greaterThanDate: formRowValidDate || "",
+              name,
+              validForms: beatenHorseFormsRacesThatCameAfterThisRace || [],
+              stats: stats,
+              stats_max: stats_max,
+              profileUrl,
+            };
+          }));
+
+
+          const beatenHorsesFormObjsStats: BeatenHorseFormObjsStats ={
+            raw: beatenHorsesFormObjs,
+            maxes:{
+              rpr: max(beatenHorsesFormObjs?.map((x) => x.stats_max?.maxRpr || 0) || []),
+              or: max(beatenHorsesFormObjs?.map((x) => x.stats_max?.maxOr || 0) || []),
+            }
+          }
+          console.log("🏁 beatenHorsesFormObjsStats", beatenHorsesFormObjsStats);
+
           // All network/DOM/lastRace parsing is done here
           return {
             formRowValidDate,
             lastRaceStatsObj,
             matchingFormObj,
+            beatenHorsesFormObjsStats,
             name,
             lastFormRowDistanceFurlongAccurate:
               lastFormRowDistanceFurlongAccurate || raceDistance,
@@ -331,6 +392,26 @@ export async function parseRaceDetails(
           };
         })
       );
+
+      const allBeatenHorsesNowGoneOntoData = allValidFormRowsStatsData?.map((x) => x.beatenHorsesFormObjsStats) || [];
+
+      const allBeatenHorsesNowGoneOntoStats: AllBeatenHorsesNowGoneOntoStats ={
+        raw: allBeatenHorsesNowGoneOntoData,
+        maxes:
+        {
+          rpr: max(allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.rpr) || []),
+          or: max(allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.or) || []),
+        } 
+      }
+
+      console.log("🏁 allBeatenHorsesNowGoneOntoStats", allBeatenHorsesNowGoneOntoStats);
+
+
+
+      // const allBeatenHorsesNowGoneOntoStatsStats ={
+      //   allStats: allBeatenHorsesNowGoneOntoStats?.map((x) => x.stats) || [],
+      //   allStats_max: allBeatenHorsesNowGoneOntoStats?.map((x) => x.stats_max) || [],
+      // }
 
       // Compute stats on the previously fetched data, no more async work here
       const allFormRowsStatsDataStatsObjs = allValidFormRowsStatsData
@@ -372,6 +453,7 @@ export async function parseRaceDetails(
         lastRaceStats:
           allValidFormRowsStatsDataStats?.raw?.[0]?.lastRaceStatsObj,
         allValidFormRowsStatsDataStats,
+        allBeatenHorsesNowGoneOntoStats,
         formObj: {
           ...formObj,
           form: formObj?.form?.filter(

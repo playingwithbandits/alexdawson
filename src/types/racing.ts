@@ -1,12 +1,13 @@
 import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
 import { DrawBiasResult } from "@/lib/racing/calculateDrawBias";
-import { HorseScore, LastRaceStats } from "@/lib/racing/scores/types";
+import { AllBeatenHorsesNowGoneOntoStats, BeatenHorseFormObjsStats, HorseScore, LastRaceStats } from "@/lib/racing/scores/types";
 
 export interface Horse {
   name: string;
   profileUrl: string;
   lastRaceStats?: LastRaceStats | undefined;
   allValidFormRowsStatsDataStats?: AllValidFormRowsStatsDataStatsType;
+  allBeatenHorsesNowGoneOntoStats?: AllBeatenHorsesNowGoneOntoStats;
   formObj?: FormObj;
   number: string;
   draw?: string;
@@ -151,6 +152,7 @@ export interface AllValidFormRowsStatsDataStatsType {
     name: string;
     lastFormRowDistanceFurlongAccurate: number;
     lastRaceTypeCode: string;
+    beatenHorsesFormObjsStats: BeatenHorseFormObjsStats;
   }[];
   maxBeatenAvgsRpr: number;
   maxBeatenMaxesRpr: number;

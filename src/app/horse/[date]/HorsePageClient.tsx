@@ -358,7 +358,7 @@ export function HorsePageClient({ date }: { date: string }) {
           console.log("🔍 Meeting elements:", ukElements);
 
           const parsedMeetings = await parseMeetings(
-            Array.from(ukElements), //.slice(0, 1)
+            Array.from(ukElements).slice(0, 1),
             date
           );
           console.log("✨ Successfully parsed meetings data");

@@ -94,7 +94,7 @@ async function fetchAndParseTips(
     }
   });
 
-  const limitedRacesOptions = allRacesOptions; //.slice(0, 1);
+  const limitedRacesOptions = allRacesOptions.slice(0, 1);
 
   console.log("📊 Found race options:", allRacesOptions);
 
@@ -167,7 +167,7 @@ async function fetchAndParseTips(
   );
   console.log("🔍 filteredUrls", filteredUrls);
   //console.log("🔗 Filtered URLs:", filteredUrls);
-  const limitedFilteredUrls = filteredUrls; //.slice(0, 1);
+  const limitedFilteredUrls = filteredUrls.slice(0, 1);
   console.log("🔗 Race URLs:", limitedFilteredUrls);
 
   // Fetch content from each URL and parse tips

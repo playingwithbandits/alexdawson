@@ -1,4 +1,4 @@
-import { Horse, Race, RaceStats, Meeting } from "@/types/racing";
+import { FormEntry, Horse, Meeting, Race, RaceStats } from "@/types/racing";
 
 export interface HorseScore {
   total: ScoreComponent;
@@ -52,8 +52,40 @@ export interface ScoreParams {
   meetingDetails: Partial<Meeting>;
 }
 
+export interface AllBeatenHorsesNowGoneOntoStats {
+  raw: BeatenHorseFormObjsStats[];
+  maxes: {
+    rpr: number;
+    or: number;
+  };
+}
+
+export interface BeatenHorseFormObjsStats {
+  raw: BeatenHorseFormObj[];
+  maxes: {
+    rpr: number;
+    or: number;
+  };
+}
+export interface BeatenHorseFormObj {
+  name: string;
+  allForms: FormEntry[];
+  greaterThanDate: string;
+  validForms: FormEntry[];
+  stats: {
+    rpr: number[];
+    or: number[];
+  };
+  stats_max: {
+    maxRpr: number;
+    maxOr: number;
+  };
+  profileUrl: string;
+}
+
 export interface LastRaceRunner {
   name: string;
+  profileUrl: string;
   position: number;
   or: number;
   rpr: number;
