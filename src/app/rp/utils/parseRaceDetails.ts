@@ -146,10 +146,10 @@ export async function parseRaceDetails(
   //console.log(`Found ${rows.length} horses to parse`);
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const oneYearAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365);
-  const _120DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 120);
+  const _60DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
 
-  const formValidDateThreshold = _120DaysAgo;
-  const fetchFormDateThreshold = _120DaysAgo;
+  const formValidDateThreshold = _60DaysAgo;
+  const fetchFormDateThreshold = _60DaysAgo;
 
   // This is fully async: all fetching is performed before continuing; after Promise.all resolves,
   // no further awaits or network operations occur relating to horse/form data/stat fetching.
@@ -204,6 +204,9 @@ export async function parseRaceDetails(
       const name = horseNameToKey(
         row.querySelector(".RC-runnerName")?.textContent?.trim() || "",
       );
+
+      const officialRating =
+        row.querySelector(".RC-runnerOr")?.textContent?.trim() || "";
 
       const formTableEle = row.querySelector(
         `[data-test-selector="RC-runnerFormBody"]`,
@@ -362,6 +365,10 @@ export async function parseRaceDetails(
               ?.filter((x) => horseNameToKey(x.name) !== horseNameToKey(name))
               ?.slice(0, lastRaceStatsObj.runners_all?.length / 2) || [];
 
+          const formRowOr = matchingFormObj?.officialRatingRanOff || 0;
+          const currentHorseOr = parseInt(officialRating || "0") || 0;
+          const orBonus = formRowOr - currentHorseOr || 0;
+
           const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(
             beatenHorses?.map(async (beatenHorse) => {
               const { profileUrl, name } = beatenHorse || {};
@@ -426,11 +433,11 @@ export async function parseRaceDetails(
               const stats = {
                 rpr:
                   beatenHorseFormsRacesThatCameAfterThisRace?.map(
-                    (x) => x.rpPostmark || 0,
+                    (x) => (x.rpPostmark || 0) + (orBonus || 0),
                   ) || [],
                 or:
                   beatenHorseFormsRacesThatCameAfterThisRace?.map(
-                    (x) => x.officialRatingRanOff || 0,
+                    (x) => (x.officialRatingRanOff || 0) + (orBonus || 0),
                   ) || [],
               };
 
@@ -452,6 +459,9 @@ export async function parseRaceDetails(
           );
 
           const beatenHorsesFormObjsStats: BeatenHorseFormObjsStats = {
+            formRowOr,
+            currentHorseOr,
+            orBonus,
             raw: beatenHorsesFormObjs,
             maxes: {
               rpr: max(
@@ -488,6 +498,7 @@ export async function parseRaceDetails(
 
       const allBeatenHorsesNowGoneOntoStats: AllBeatenHorsesNowGoneOntoStats = {
         raw: allBeatenHorsesNowGoneOntoData,
+
         maxes: {
           rpr: max(
             allBeatenHorsesNowGoneOntoData?.map((x) => x.maxes?.rpr) || [],
@@ -622,8 +633,7 @@ export async function parseRaceDetails(
             .querySelector(".RC-runnerInfo_owner .RC-runnerInfo__name")
             ?.textContent?.trim() || "",
         rating: row.querySelector(".RC-runnerRpr")?.textContent?.trim() || "",
-        officialRating:
-          row.querySelector(".RC-runnerOr")?.textContent?.trim() || "",
+        officialRating,
         topSpeed: row.querySelector(".RC-runnerTs")?.textContent?.trim() || "",
         form: row.querySelector(".RC-runnerInfo__form")?.textContent?.trim(),
         lastRun: row

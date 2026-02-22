@@ -1,6 +1,11 @@
 import { RaceAccordionStats } from "@/app/rp/utils/fetchRaceAccordion";
 import { DrawBiasResult } from "@/lib/racing/calculateDrawBias";
-import { AllBeatenHorsesNowGoneOntoStats, BeatenHorseFormObjsStats, HorseScore, LastRaceStats } from "@/lib/racing/scores/types";
+import {
+  AllBeatenHorsesNowGoneOntoStats,
+  BeatenHorseFormObjsStats,
+  HorseScore,
+  LastRaceStats,
+} from "@/lib/racing/scores/types";
 
 export interface Horse {
   name: string;

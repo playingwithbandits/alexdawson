@@ -95,7 +95,7 @@ export function Dashboard({
 }) {
   console.log("Dashboard", data, results);
   const [showInfo, setShowInfo] = useState(true);
-  const [thresholdValue, setThresholdValue] = useState(0.95);
+  const [thresholdValue, setThresholdValue] = useState(0.85);
 
   if (!data || data.length === 0) {
     return (

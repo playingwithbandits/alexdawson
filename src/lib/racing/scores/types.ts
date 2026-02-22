@@ -70,6 +70,10 @@ export interface BeatenHorseFormObjsStats {
     rpr: number;
     or: number;
   };
+
+  formRowOr: number;
+  currentHorseOr: number;
+  orBonus: number;
 }
 export interface BeatenHorseFormObj {
   name: string;

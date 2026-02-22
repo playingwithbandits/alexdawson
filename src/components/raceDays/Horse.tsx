@@ -126,10 +126,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Averages raced against beaten averages isn't good",
     // },
 
-    // {
-    //   value: lastRaceCommentScore >= 0,
-    //   name: "Last race wasn't good",
-    // },
+    {
+      value: lastRaceCommentScore >= 0,
+      name: "Last race wasn't good",
+    },
     // {
     //   value: averageCommentScore >= 0,
     //   name: "Average comment score is less than 0",
@@ -140,7 +140,8 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     // },
 
     // {
-    //   value: horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
+    //   value:
+    //     horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
     //   name: "Form averages rpr is low",
     // },
 
@@ -203,10 +204,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Hasn't raced with this race type",
     },
 
-    // {
-    //   value: raceTypeIsJumps || horse?.scoreObj?.horseRacedWith?.track,
-    //   name: "Hasn't raced with this track",
-    // },
+    {
+      value: raceTypeIsJumps || horse?.scoreObj?.horseRacedWith?.track,
+      name: "Hasn't raced with this track",
+    },
     // {
     //   value: horse?.scoreObj?.horseRacedWith?.jockey,
     //   name: "Hasn't raced with this jockey",
@@ -277,12 +278,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Last race had bad max rpr",
     },
 
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
-    //   name: "All beaten horses now gone onto stats had bad max rpr",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
+      name: "All beaten horses now gone onto stats had bad max rpr",
+    },
 
     {
       value:
@@ -291,12 +292,12 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "All beaten horses now gone onto stats had bad averages rpr",
     },
 
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.race_allBeatenHorsesNowGoneOntoStats_maxes_or,
-    //   name: "All beaten horses now gone onto stats had bad max or",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_allBeatenHorsesNowGoneOntoStats_maxes_or,
+      name: "All beaten horses now gone onto stats had bad max or",
+    },
 
     {
       value:
@@ -684,10 +685,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
 
                         raceTypeIsJumps
                           ? horseRacedWith?.track
-                            ? YELLOW_TEXT_COLOR
+                            ? GREEN_TEXT_COLOR
                             : ""
                           : horseRacedWith?.track
-                            ? YELLOW_TEXT_COLOR
+                            ? GREEN_TEXT_COLOR
                             : "",
                       )}
                     >
@@ -946,11 +947,11 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr &&
-                          YELLOW_TEXT_COLOR,
+                          GREEN_TEXT_COLOR,
                       )}
                       title={
                         `Best RPR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.rpr) || [])?.toFixed(1)}\n\n` +
-                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.rpr}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxRpr}`).join(", ")}\n`).join(`\n\n`)}`
+                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.rpr}\n` + `${x ? ` OR Bonus:  ${x.formRowOr} RO - ${x.currentHorseOr} Cur = ${x.orBonus}` : ""}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxRpr}`).join(", ")}\n`).join(`\n\n`)}`
                       }
                     >
                       {horse.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr || 0}
@@ -964,7 +965,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       )}
                       title={
                         `Best RPR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.rpr) || [])?.toFixed(1)}\n\n` +
-                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.rpr}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxRpr}`).join(", ")}\n`).join(`\n\n`)}`
+                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.rpr}\n` + `${x ? ` OR Bonus:  ${x.formRowOr} RO - ${x.currentHorseOr} Cur = ${x.orBonus}` : ""}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxRpr}`).join(", ")}\n`).join(`\n\n`)}`
                       }
                     >
                       {horse.allBeatenHorsesNowGoneOntoStats?.avgs?.rpr?.toFixed(
@@ -976,11 +977,11 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_maxes_or &&
-                          YELLOW_TEXT_COLOR,
+                          GREEN_TEXT_COLOR,
                       )}
                       title={
                         `Best OR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.or} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.or) || [])?.toFixed(1)}\n\n` +
-                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.or}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxOr}`).join(", ")}\n`).join(`\n\n`)}`
+                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.or}\n` + `${x ? ` OR Bonus:  ${x.formRowOr} RO - ${x.currentHorseOr} Cur = ${x.orBonus}` : ""}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxOr}`).join(", ")}\n`).join(`\n\n`)}`
                       }
                     >
                       {horse.allBeatenHorsesNowGoneOntoStats?.maxes?.or || 0}
@@ -994,7 +995,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       )}
                       title={
                         `Best OR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.or} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.or) || [])?.toFixed(1)}\n\n` +
-                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.or}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxOr}`).join(", ")}\n`).join(`\n\n`)}`
+                        `${horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x, _i) => `Race ${_i + 1}: Max ${x.maxes.or}\n` + `${x ? ` OR Bonus:  ${x.formRowOr} RO - ${x.currentHorseOr} Cur = ${x.orBonus}` : ""}\n` + `${x.raw.map((y) => `${y.name}: ${y.stats_max.maxOr}`).join(", ")}\n`).join(`\n\n`)}`
                       }
                     >
                       {horse.allBeatenHorsesNowGoneOntoStats?.avgs?.or?.toFixed(
