@@ -357,7 +357,10 @@ export async function parseRaceDetails(
 
           console.log("🏁 lastRaceStatsObj", lastRaceStatsObj);
 
-          const beatenHorses = lastRaceStatsObj?.runners_beaten || [];
+          const beatenHorses =
+            lastRaceStatsObj?.runners_beaten
+              ?.filter((x) => horseNameToKey(x.name) !== horseNameToKey(name))
+              ?.slice(0, lastRaceStatsObj.runners_all?.length / 2) || [];
 
           const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(
             beatenHorses?.map(async (beatenHorse) => {
