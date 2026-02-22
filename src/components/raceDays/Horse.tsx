@@ -126,10 +126,10 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Averages raced against beaten averages isn't good",
     // },
 
-    {
-      value: lastRaceCommentScore >= 0,
-      name: "Last race wasn't good",
-    },
+    // {
+    //   value: lastRaceCommentScore >= 0,
+    //   name: "Last race wasn't good",
+    // },
     // {
     //   value: averageCommentScore >= 0,
     //   name: "Average comment score is less than 0",
@@ -377,6 +377,16 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
   const lastRaceWasExcellent =
     countCommentSentiment?.score !== undefined &&
     countCommentSentiment?.score >= 3;
+
+  const lastRaceHasJockey = horse?.mostRecentForm?.comment
+    ?.toLowerCase()
+    .includes("jockey");
+  const lastRaceHasTrainer = horse?.mostRecentForm?.comment
+    ?.toLowerCase()
+    .includes("trainer");
+  const lastRaceHasVetSaid = horse?.mostRecentForm?.comment
+    ?.toLowerCase()
+    .includes("vet");
 
   const anyFormsHaveEyecatcher = horse.form?.some(
     (form) => form.commentMatchedTerms?.eyecatcher?.length > 0,
@@ -1054,6 +1064,22 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       {lastRaceWasExcellent && (
                         <span style={{ color: "#10b981", marginRight: "4px" }}>
                           👑
+                        </span>
+                      )}
+
+                      {lastRaceHasJockey && (
+                        <span style={{ color: "#10b981", marginRight: "4px" }}>
+                          🐎
+                        </span>
+                      )}
+                      {lastRaceHasTrainer && (
+                        <span style={{ color: "#10b981", marginRight: "4px" }}>
+                          👨‍🏫
+                        </span>
+                      )}
+                      {lastRaceHasVetSaid && (
+                        <span style={{ color: "#10b981", marginRight: "4px" }}>
+                          👨‍⚕️
                         </span>
                       )}
 

@@ -10,7 +10,7 @@ export async function lastRaceToLastRaceStats(
   lastRaceEle: string,
   input_name: string,
   distanceF: number,
-  lastRaceTypeCode: string
+  lastRaceTypeCode: string,
 ): Promise<LastRaceStats> {
   const parser = new DOMParser();
   const doc = parser.parseFromString(lastRaceEle, "text/html");
@@ -54,15 +54,15 @@ export async function lastRaceToLastRaceStats(
     // Get ratings
     const or =
       parseInt(
-        row.querySelector('td[data-ending="OR"]')?.textContent?.trim() || "0"
+        row.querySelector('td[data-ending="OR"]')?.textContent?.trim() || "0",
       ) || 0;
     const rpr =
       parseInt(
-        row.querySelector('td[data-ending="RPR"]')?.textContent?.trim() || "0"
+        row.querySelector('td[data-ending="RPR"]')?.textContent?.trim() || "0",
       ) || 0;
     const ts =
       parseInt(
-        row.querySelector('td[data-ending="TS"]')?.textContent?.trim() || "0"
+        row.querySelector('td[data-ending="TS"]')?.textContent?.trim() || "0",
       ) || 0;
 
     // Get age
@@ -70,7 +70,7 @@ export async function lastRaceToLastRaceStats(
       parseInt(
         row
           .querySelector(".rp-horseTable__spanNarrow_age")
-          ?.textContent?.trim() || "0"
+          ?.textContent?.trim() || "0",
       ) || 0;
 
     // Get trainer
@@ -94,11 +94,16 @@ export async function lastRaceToLastRaceStats(
         .replace(/[\[\]]/g, "") || "";
     const distanceBeaten = distanceToWinnerStrToFloat(distanceText) || 0;
 
-
-    const profileUrl_grab =  row.querySelector(".rp-horseTable__horse__name")?.getAttribute("href") || "";
-const profileUrl = profileUrl_grab ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" + profileUrl_grab : "";
+    const profileUrl_grab =
+      row.querySelector(".rp-horseTable__horse__name")?.getAttribute("href") ||
+      "";
+    const profileUrl = profileUrl_grab
+      ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+        profileUrl_grab
+      : "";
     runners.push({
-      name,profileUrl,
+      name,
+      profileUrl,
       position,
       or,
       rpr,
@@ -128,6 +133,8 @@ const profileUrl = profileUrl_grab ? "https://alexdawson.co.uk/getP.php?q=https:
       runners_beaten.push(r);
     }
   });
+
+  //if all runners are grouped up then all - if there's a big gap then closest 3
 
   // Calculate averages
   const averages = {

@@ -90,7 +90,7 @@ export function getSeasonFromDate(dateStr?: string): string {
 }
 
 export function calculateDistancePreference(
-  avgDistance: number
+  avgDistance: number,
 ): "sprinter" | "middle" | "stayer" {
   if (avgDistance <= 7) return "sprinter";
   if (avgDistance <= 12) return "middle";
@@ -186,7 +186,7 @@ export const distanceToWinnerStrToFloat = (code: string) => {
         "Input:",
         code,
         "Evaluated:",
-        evalStr
+        evalStr,
       );
     }
     result = parseFloat(evaled) || 0;
@@ -198,7 +198,7 @@ export function isBadDraw(
   draw: number,
   totalRunners: number,
   distance: number,
-  trackConfig: string
+  trackConfig: string,
 ): boolean {
   if (!draw || !totalRunners) return false;
 
@@ -214,7 +214,7 @@ export function isBadDraw(
       !trackConfig?.toLowerCase().includes("left")
     ) {
       console.log(
-        `ERROR: Unable to determine draw bias for track config: ${trackConfig}`
+        `ERROR: Unable to determine draw bias for track config: ${trackConfig}`,
       );
       return false;
     }
@@ -228,11 +228,11 @@ export function isBadDraw(
 }
 
 export function determineRunStyle(
-  form: FormObj["form"]
+  form: FormObj["form"],
 ): HorseStats["runStyle"] {
   const recentRaces = form?.slice(0, 12) || [];
   const comments = recentRaces.map(
-    (r) => r.rpCloseUpComment?.toLowerCase() || ""
+    (r) => r.rpCloseUpComment?.toLowerCase() || "",
   );
 
   // Enhanced running style indicators with weights
@@ -463,14 +463,14 @@ export function determineRunStyle(
 
 export function isWithinTenPercent(
   distance: number,
-  targetDistance: number
+  targetDistance: number,
 ): boolean {
   const tenPercent = targetDistance * 0.1;
   return Math.abs(distance - targetDistance) <= tenPercent;
 }
 
 export const distanceBeatenLengthsThreshold = (
-  raceDistance: number | undefined
+  raceDistance: number | undefined,
 ) => {
   if (!raceDistance) return 0;
 
@@ -485,7 +485,7 @@ export const distanceBeatenLengthsThreshold = (
 
 export const isGoodDistanceToWinner = (
   raceDistance: number | undefined,
-  distanceCode: string | undefined
+  distanceCode: string | undefined,
 ) => {
   if (!raceDistance || !distanceCode) return false;
 

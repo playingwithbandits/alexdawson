@@ -70,7 +70,7 @@ export function courseNameToTrackId(courseName: string): string {
 }
 
 export const normaliseGoingToGoingCode = (
-  goingCodeOrString: string
+  goingCodeOrString: string,
 ): string => {
   const goingMap: Record<string, string> = {
     fast: "f", //done
@@ -121,14 +121,14 @@ const goingCodeToArrayOfSimilarGoingcodes = (goingCode: string): string[] => {
 
 export const compareTwoGoingCodeArrays = (
   goingCodes1: string[],
-  goingCodes2: string[]
+  goingCodes2: string[],
 ): boolean => {
   const goingCodes1Remapped = goingCodes1.map(
-    goingCodeToArrayOfSimilarGoingcodes
+    goingCodeToArrayOfSimilarGoingcodes,
   );
 
   const goingCodes1Set = Array.from(
-    new Set(goingCodes1Remapped.flatMap((x) => x))
+    new Set(goingCodes1Remapped.flatMap((x) => x)),
   );
   const goingCodes2Set = Array.from(new Set(goingCodes2.flatMap((x) => x)));
 
@@ -161,7 +161,7 @@ export const isJumpsRaceTypeCode = (raceTypeCode: string): boolean => {
 };
 
 const raceTypeCodesToSimilarRaceTypeCodes = (
-  raceTypeCode: string
+  raceTypeCode: string,
 ): string[] => {
   const raceTypeCodeNormalised = raceTypeCode.toLowerCase().trim();
 
@@ -193,7 +193,7 @@ const raceTypeCodesToSimilarRaceTypeCodes = (
  */
 export const matchRaceTypeCode = (
   raceTypeCode1: string | undefined,
-  raceTypeCode2: string | undefined
+  raceTypeCode2: string | undefined,
 ): boolean => {
   if (!raceTypeCode1 || !raceTypeCode2) return false;
 
@@ -201,10 +201,10 @@ export const matchRaceTypeCode = (
   const raceTypeCode2Normalised = raceTypeCode2.toLowerCase().trim();
 
   const raceTypeCode1Similar = raceTypeCodesToSimilarRaceTypeCodes(
-    raceTypeCode1Normalised
+    raceTypeCode1Normalised,
   );
   const raceTypeCode2Similar = raceTypeCodesToSimilarRaceTypeCodes(
-    raceTypeCode2Normalised
+    raceTypeCode2Normalised,
   );
 
   return raceTypeCode1Similar?.some((x) => raceTypeCode2Similar.includes(x));
@@ -234,7 +234,7 @@ export const matchRaceTypeCode = (
  */
 export const distanceOkay = (
   horsesAverageDistanceRanOver: number | undefined,
-  raceDistance: number | undefined
+  raceDistance: number | undefined,
 ): boolean => {
   if (!Boolean(raceDistance) || !Boolean(horsesAverageDistanceRanOver))
     return false;
@@ -246,22 +246,22 @@ export const distanceOkay = (
     raceDistanceF < 7
       ? 1
       : raceDistanceF < 9
-      ? 1.5
-      : raceDistanceF < 11
-      ? 2
-      : raceDistanceF < 13
-      ? 2.5
-      : 3;
+        ? 1.5
+        : raceDistanceF < 11
+          ? 2
+          : raceDistanceF < 13
+            ? 2.5
+            : 3;
   const minThresholdAdd =
     raceDistanceF < 7
       ? 0.33
       : raceDistanceF < 9
-      ? 0.5
-      : raceDistanceF < 11
-      ? 1
-      : raceDistanceF < 13
-      ? 2
-      : 2.5;
+        ? 0.5
+        : raceDistanceF < 11
+          ? 1
+          : raceDistanceF < 13
+            ? 2
+            : 2.5;
 
   const maxThreshold = raceDistanceF + maxThresholdAdd;
   const minThreshold = raceDistanceF - minThresholdAdd;
@@ -324,16 +324,24 @@ const HAMPERED_TERMS = [
   "unsuited",
   "unsuitable",
 
+  "whip",
   "dropped whip",
   "dropped rein",
   "saddle",
   "shoe",
-  
+
   "eased",
-  "suffered"
+  "suffered",
+  "short of room",
+  "clipped heel",
+  "hit on nose",
 ];
 
 const POSITIVE_TERMS = [
+  "kept on strongly",
+  "prominent",
+  "challenging",
+  "in touch with leaders",
   // Strong performance
   "won going away",
   "impressive",
@@ -408,10 +416,17 @@ const POSITIVE_TERMS = [
   "ran on",
   "always doing enough",
   "recovered",
-  "clear inside final"
+  "clear inside final",
+  "kept on well",
+  "well clear",
+  "rallying",
 ];
 
 const NEGATIVE_TERMS = [
+  "lost ground",
+  "boiled over",
+  "rear throughout",
+  "always behind",
   "no extra",
   "never better",
   "never dangerous",
@@ -493,8 +508,8 @@ const NEGATIVE_TERMS = [
   "not near to challenge",
   "not pace to challenge",
   "not fluent",
-"towards rear throughout",
-  "weakened"
+  "towards rear throughout",
+  "weakened",
 ];
 
 interface AnalyseSentimentFromCommentObj {
@@ -504,9 +519,8 @@ interface AnalyseSentimentFromCommentObj {
   negative: string[];
 }
 
-
 export const analyseSentimentFromComment = (
-  comment: string
+  comment: string,
 ): { matchedTerms: AnalyseSentimentFromCommentObj } => {
   if (!comment || comment?.length < 2 || comment === "-") {
     return {
@@ -531,9 +545,12 @@ export const analyseSentimentFromComment = (
 
     // Build regex: must not have a word character before or after (using \b for word boundary but also consider beginning/end/punctuation)
     // Escape special regex characters in term
-    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     // Regex: match with word boundaries, allow spaces or punctuation around
-    const regex = new RegExp(`(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`, "g");
+    const regex = new RegExp(
+      `(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`,
+      "g",
+    );
 
     while (found) {
       const match = regex.exec(searchComment);
@@ -561,9 +578,12 @@ export const analyseSentimentFromComment = (
     const termLower = term.toLowerCase();
     // Build regex: must not have a word character before or after (using \b for word boundary but also consider beginning/end/punctuation)
     // Escape special regex characters in term
-    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     // Regex: match with word boundaries, allow spaces or punctuation around
-    const regex = new RegExp(`(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`, "g");
+    const regex = new RegExp(
+      `(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`,
+      "g",
+    );
 
     while (found) {
       const match = regex.exec(searchCommentNeg);
@@ -591,9 +611,12 @@ export const analyseSentimentFromComment = (
     const termLower = term.toLowerCase();
     // Build regex: must not have a word character before or after (using \b for word boundary but also consider beginning/end/punctuation)
     // Escape special regex characters in term
-    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     // Regex: match with word boundaries, allow spaces or punctuation around
-    const regex = new RegExp(`(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`, "g");
+    const regex = new RegExp(
+      `(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`,
+      "g",
+    );
 
     while (found) {
       const match = regex.exec(searchCommentHampered);
@@ -620,11 +643,14 @@ export const analyseSentimentFromComment = (
     const termLower = term.toLowerCase();
     // Build regex: must not have a word character before or after (using \b for word boundary but also consider beginning/end/punctuation)
     // Escape special regex characters in term
-    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escapedTerm = termLower.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     // Regex: match with word boundaries, allow spaces or punctuation around
-    const regex = new RegExp(`(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`, "g");
+    const regex = new RegExp(
+      `(^|[\\s.,!?;:"'()\\-\\[\\]{}])(${escapedTerm})(?=($|[\\s.,!?;:"'()\\-\\[\\]{}]))`,
+      "g",
+    );
 
-    while (found) { 
+    while (found) {
       const match = regex.exec(searchCommentEyecatcher);
       if (match) {
         matchedEyecatcherTerms.push(term);
@@ -653,7 +679,7 @@ export const analyseSentimentFromComment = (
 };
 
 export const countCommentSentimentObj = (
-  matchedTerms: AnalyseSentimentFromCommentObj
+  matchedTerms: AnalyseSentimentFromCommentObj,
 ) => {
   const { hampered, eyecatcher, positive, negative } = matchedTerms;
 
@@ -673,7 +699,11 @@ export const countCommentSentimentObj = (
     .filter(([_, count]) => count === maxCount)
     .map(([key]) => key);
 
-    const commentScore = (positive.length || 0)  + (negative.length || 0) * -1  + (hampered.length || 0) * 3 + (eyecatcher.length || 0) * 10
+  const commentScore =
+    (positive.length || 0) +
+    (negative.length || 0) * -1 +
+    (hampered.length || 0) * 3 +
+    (eyecatcher.length || 0) * 10;
 
   return {
     score: commentScore,
