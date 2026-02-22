@@ -357,10 +357,7 @@ export async function parseRaceDetails(
 
           console.log("🏁 lastRaceStatsObj", lastRaceStatsObj);
 
-          const beatenHorses =
-            lastRaceStatsObj?.runners_beaten
-              ?.filter((x) => horseNameToKey(x.name) !== horseNameToKey(name))
-              ?.slice(0, 4) || [];
+          const beatenHorses = lastRaceStatsObj?.runners_beaten || [];
 
           const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(
             beatenHorses?.map(async (beatenHorse) => {
@@ -440,10 +437,10 @@ export async function parseRaceDetails(
               };
 
               return {
-                allForms: beatenHorseForm?.form || [],
+                //allForms: beatenHorseForm?.form || [],
                 greaterThanDate: formRowValidDate || "",
                 name,
-                validForms: beatenHorseFormsRacesThatCameAfterThisRace || [],
+                //validForms: beatenHorseFormsRacesThatCameAfterThisRace || [],
                 stats: stats,
                 stats_max: stats_max,
                 profileUrl,

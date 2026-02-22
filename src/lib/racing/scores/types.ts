@@ -73,9 +73,9 @@ export interface BeatenHorseFormObjsStats {
 }
 export interface BeatenHorseFormObj {
   name: string;
-  allForms: FormEntry[];
+  //allForms: FormEntry[];
   greaterThanDate: string;
-  validForms: FormEntry[];
+  //validForms: FormEntry[];
   stats: {
     rpr: number[];
     or: number[];

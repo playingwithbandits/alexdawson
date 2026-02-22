@@ -126,10 +126,15 @@ export async function lastRaceToLastRaceStats(
       ? 0
       : distanceBeaten - distanceBeatenLengthsThreshold(distanceF);
 
+  const distanceBeatenThreshold2 = distanceBeaten + 20;
+
   const runners_beaten: LastRaceRunner[] = [];
 
   runners.forEach((r) => {
-    if (r.distanceBeaten >= distanceBeatenThreshold) {
+    if (
+      r.distanceBeaten <= distanceBeatenThreshold2 &&
+      r.distanceBeaten >= distanceBeatenThreshold
+    ) {
       runners_beaten.push(r);
     }
   });
