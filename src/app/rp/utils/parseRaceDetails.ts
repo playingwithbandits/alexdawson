@@ -367,7 +367,10 @@ export async function parseRaceDetails(
 
           const formRowOr = matchingFormObj?.officialRatingRanOff || 0;
           const currentHorseOr = parseInt(officialRating || "0") || 0;
-          const orBonus = formRowOr - currentHorseOr || 0;
+          const orBonus =
+            Boolean(formRowOr) && Boolean(currentHorseOr)
+              ? formRowOr - currentHorseOr
+              : 0;
 
           const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(
             beatenHorses?.map(async (beatenHorse) => {
