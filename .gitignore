@@ -24,8 +24,7 @@
 .DS_Store
 *.pem
 
-# local cache (large data, do not commit)
-/cache
+
 
 # debug
 npm-debug.log*
