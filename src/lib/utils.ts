@@ -276,17 +276,16 @@ const EYECATCHER_TERMS = [
   "cosily",
   "readily",
   "going best",
-  "going easily",
+  "easily",
   "comfortably",
   "eyecatcher",
-  "well clear",
   "unchallenged",
   "cruised",
   "powered",
   "stormed",
   "commanded",
   "comfortable",
-  "easily",
+  "well clear",
   "went clear",
   "dominated",
   "won going away",
@@ -707,8 +706,8 @@ export const countCommentSentimentObj = (
   const commentScore =
     (positive.length || 0) +
     (negative.length || 0) * -1 +
-    (hampered.length || 0) * 3 +
-    (eyecatcher.length || 0) * 10;
+    (hampered.length || 0) * 2 +
+    (eyecatcher.length || 0) * 4;
 
   return {
     score: commentScore,
