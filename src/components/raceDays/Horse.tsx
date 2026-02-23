@@ -139,11 +139,11 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Average comment score last 3 is less than 0",
     // },
 
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
-    //   name: "Form averages rpr is low",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold?.race_formAverages_rpr,
+      name: "Form averages rpr is low",
+    },
 
     {
       value: jockeyStatsLast14DayRunsGood,
@@ -790,7 +790,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_formAverages_rpr &&
-                          YELLOW_TEXT_COLOR,
+                          GREEN_TEXT_COLOR,
                       )}
                     >
                       {formAverages?.rpr?.toFixed(1)}
