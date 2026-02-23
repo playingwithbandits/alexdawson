@@ -26,17 +26,17 @@ export const normalizeTime = (time: string) => {
 };
 
 async function fetchAndParseTips(
-  date: string
+  date: string,
 ): Promise<{ tips: OLBGTip[]; olbgRaceInfoArr: OLBGRaceInfo[] }> {
   const olbgRaceInfoArr: OLBGRaceInfo[] = [];
 
   console.log("🔍 Fetching OLBG tips...");
   const response = await fetch(
-    "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/UK/2"
+    "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/UK/2",
   );
 
   const responseIre = await fetch(
-    "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/IE/2"
+    "https://alexdawson.co.uk/getP.php?q=https://www.olbg.com/betting-tips/Horse_Racing/IE/2",
   );
 
   console.log("✅ Fetched OLBG page");
@@ -94,7 +94,7 @@ async function fetchAndParseTips(
     }
   });
 
-  const limitedRacesOptions = allRacesOptions;//.slice(0, 1);
+  const limitedRacesOptions = allRacesOptions; //.slice(0, 1);
 
   console.log("📊 Found race options:", allRacesOptions);
 
@@ -155,19 +155,19 @@ async function fetchAndParseTips(
       raceLinks.map((link) =>
         link.href?.replace(
           "https://www.olbg.comhttps://www.olbg.com/",
-          "https://www.olbg.com/"
-        )
-      )
+          "https://www.olbg.com/",
+        ),
+      ),
     ),
   ];
   console.log("🔍 uniqueUrls", uniqueUrls);
   //console.log("🔗 Unique URLs:", uniqueUrls);
   const filteredUrls = uniqueUrls.filter(
-    (url) => !url.includes("https://www.olbg.comhttps://www.olbg.com/")
+    (url) => !url.includes("https://www.olbg.comhttps://www.olbg.com/"),
   );
   console.log("🔍 filteredUrls", filteredUrls);
   //console.log("🔗 Filtered URLs:", filteredUrls);
-  const limitedFilteredUrls = filteredUrls;//.slice(0, 1);
+  const limitedFilteredUrls = filteredUrls; //.slice(0, 1);
   console.log("🔗 Race URLs:", limitedFilteredUrls);
 
   // Fetch content from each URL and parse tips
@@ -175,7 +175,7 @@ async function fetchAndParseTips(
     console.log("🔍 Fetching content from:", url);
     try {
       await new Promise((resolve) =>
-        setTimeout(resolve, 2000 + Math.floor(Math.random() * 2000))
+        setTimeout(resolve, 20000 + Math.floor(Math.random() * 5000)),
       );
       const lilNameArr: string[] = [];
       const response = await fetch(url);
@@ -256,7 +256,7 @@ async function fetchAndParseTips(
             .find(".rw.win .i-ui-crown")
             .parent()
             .text()
-            .match(/(\d+)/)?.[1] || "0"
+            .match(/(\d+)/)?.[1] || "0",
         );
         horseEntry.expertCount = expertCount;
 
@@ -266,7 +266,7 @@ async function fetchAndParseTips(
             .find(".rw.win .i-ui-comments")
             .parent()
             .text()
-            .match(/(\d+)/)?.[1] || "0"
+            .match(/(\d+)/)?.[1] || "0",
         );
         horseEntry.commentCount = commentCount;
 
@@ -343,7 +343,7 @@ async function fetchAndParseTips(
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { date: string } }
+  { params }: { params: { date: string } },
 ) {
   const date = await Promise.resolve(params.date);
   console.log("🔍 Processing date:", date);
@@ -403,7 +403,7 @@ export async function GET(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { date: string } }
+  { params }: { params: { date: string } },
 ) {
   const date = await Promise.resolve(params.date);
   console.log("🗑️ Attempting to delete cache for date:", date);
@@ -419,7 +419,7 @@ export async function DELETE(
     console.error("❌ Error deleting OLBG data:", error);
     return NextResponse.json(
       { error: "Failed to delete OLBG data" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

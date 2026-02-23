@@ -70,12 +70,12 @@ export function PageClient({ date }: { date: string }) {
           let html = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 10) {
+          while (tryCount < 20) {
             tryCount++;
 
             if (pageUrl) {
               await new Promise((resolve) =>
-                setTimeout(resolve, Math.floor(Math.random() * 10000) + 20000),
+                setTimeout(resolve, Math.floor(Math.random() * 5000) + 60000),
               );
               const response = await fetch(
                 `/api/racedays/proxy?url=${encodeURIComponent(
