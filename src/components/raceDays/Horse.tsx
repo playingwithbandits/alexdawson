@@ -232,11 +232,11 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Recent form going",
     // },
 
-    // {
-    //   value:
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold?.race_min_timePerFurlong,
-    //   name: "Time per furlong is high",
-    // },
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold?.race_min_timePerFurlong,
+      name: "Time per furlong is high",
+    },
     // {
     //   value:
     //     horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -278,33 +278,33 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       name: "Last race had bad max rpr",
     },
 
-    {
-      value:
-        horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
-      name: "All beaten horses now gone onto stats had bad max rpr",
-    },
-
     // {
     //   value:
     //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr,
-    //   name: "All beaten horses now gone onto stats had bad averages rpr",
+    //       ?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr,
+    //   name: "All beaten horses now gone onto stats had bad max rpr",
     // },
 
     {
       value:
         horse?.scoreObj?.horseBetterThanRaceTheshold
-          ?.race_allBeatenHorsesNowGoneOntoStats_maxes_or,
-      name: "All beaten horses now gone onto stats had bad max or",
+          ?.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr,
+      name: "All beaten horses now gone onto stats had bad averages rpr",
     },
 
     // {
     //   value:
     //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.race_allBeatenHorsesNowGoneOntoStats_avgs_or,
-    //   name: "All beaten horses now gone onto stats had bad averages or",
+    //       ?.race_allBeatenHorsesNowGoneOntoStats_maxes_or,
+    //   name: "All beaten horses now gone onto stats had bad max or",
     // },
+
+    {
+      value:
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_allBeatenHorsesNowGoneOntoStats_avgs_or,
+      name: "All beaten horses now gone onto stats had bad averages or",
+    },
     // {
     //   value: horse?.scoreObj?.horseBetterThanRaceTheshold
     //     ?.race_allBeatenHorsesNowGoneOntoStats_maxes_or,
@@ -815,7 +815,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_min_timePerFurlong &&
-                          YELLOW_TEXT_COLOR,
+                          GREEN_TEXT_COLOR,
                       )}
                     >
                       {formMinTimePerFurlong.toFixed(1)}
@@ -947,7 +947,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_maxes_rpr &&
-                          GREEN_TEXT_COLOR,
+                          YELLOW_TEXT_COLOR,
                       )}
                       title={
                         `Best RPR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.rpr) || [])?.toFixed(1)}\n\n` +
@@ -961,7 +961,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr &&
-                          YELLOW_TEXT_COLOR,
+                          GREEN_TEXT_COLOR,
                       )}
                       title={
                         `Best RPR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.rpr} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.rpr) || [])?.toFixed(1)}\n\n` +
@@ -977,7 +977,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_maxes_or &&
-                          GREEN_TEXT_COLOR,
+                          YELLOW_TEXT_COLOR,
                       )}
                       title={
                         `Best OR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.or} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.or) || [])?.toFixed(1)}\n\n` +
@@ -991,7 +991,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_allBeatenHorsesNowGoneOntoStats_avgs_or &&
-                          YELLOW_TEXT_COLOR,
+                          GREEN_TEXT_COLOR,
                       )}
                       title={
                         `Best OR: ${horse?.allBeatenHorsesNowGoneOntoStats?.maxes?.or} | AVG: ${avg(horse?.allBeatenHorsesNowGoneOntoStats?.raw?.map((x) => x.maxes.or) || [])?.toFixed(1)}\n\n` +

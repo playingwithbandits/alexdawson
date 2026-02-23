@@ -225,7 +225,7 @@ export function Dashboard({
               raceMaxes?.race_mostRecentForm_racedAgainst_Beaten_Maxes *
               thresholdValue,
 
-            race_min_timePerFurlong: raceMin?.race_min_timePerFurlong * 1.1,
+            race_min_timePerFurlong: raceMin?.race_min_timePerFurlong + 0.5,
 
             race_handicapped_rpr: maxRaceHandicappedRpr * thresholdValue,
             race_handicapped_maxes_racedAgainst_Beaten_rpr:
