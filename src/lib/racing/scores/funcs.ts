@@ -474,19 +474,16 @@ export const distanceBeatenLengthsThreshold = (
 ) => {
   if (!raceDistance) return 0;
 
-  if (raceDistance <= 6.5) {
+  if (raceDistance <= 8.5) {
     return 2.5;
   }
-  if (raceDistance <= 8.5) {
+  if (raceDistance <= 11.5) {
     return 3.5;
   }
-  if (raceDistance <= 11.5) {
+  if (raceDistance <= 19.5) {
     return 4.5;
   }
-  if (raceDistance <= 19.5) {
-    return 5.5;
-  }
-  return 6.5;
+  return 6;
 };
 
 export const isGoodDistanceToWinner = (

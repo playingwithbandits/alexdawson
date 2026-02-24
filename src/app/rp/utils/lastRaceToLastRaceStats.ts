@@ -125,7 +125,7 @@ export async function lastRaceToLastRaceStats(
       ? 0
       : distanceBeaten - distanceBeatenLengthsThreshold(distanceF);
 
-  const distanceBeatenThreshold2 = distanceBeaten + 30;
+  const distanceBeatenThreshold2 = distanceBeaten + 15;
 
   const runners_beaten: LastRaceRunner[] = [];
 
