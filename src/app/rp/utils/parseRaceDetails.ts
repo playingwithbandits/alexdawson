@@ -169,13 +169,17 @@ export async function parseRaceDetails(
         ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
           new URL(profileLink.href).pathname
         : "";
+
+      const name = horseNameToKey(
+        row.querySelector(".RC-runnerName")?.textContent?.trim() || "",
+      );
       let formObj = undefined;
       let fetchTryCount = 0;
       // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
       while (fetchTryCount < 20) {
         fetchTryCount++;
         try {
-          const res = await fetchHorseForm(profileUrl);
+          const res = await fetchHorseForm(name, profileUrl);
           if (res) {
             formObj = res;
             break;
@@ -200,10 +204,6 @@ export async function parseRaceDetails(
           );
         }
       }
-
-      const name = horseNameToKey(
-        row.querySelector(".RC-runnerName")?.textContent?.trim() || "",
-      );
 
       const officialRating =
         row.querySelector(".RC-runnerOr")?.textContent?.trim() || "";
@@ -381,7 +381,7 @@ export async function parseRaceDetails(
               while (fetchTryCount < 10) {
                 fetchTryCount++;
                 try {
-                  const res = await fetchHorseForm(profileUrl);
+                  const res = await fetchHorseForm(name, profileUrl);
                   if (res) {
                     beatenHorseForm = res;
                     break;
