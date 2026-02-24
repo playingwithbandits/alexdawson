@@ -6,7 +6,8 @@ import { normalizeTime } from "@/components/horse/DayPredictions";
 
 export async function parseMeetings(
   elements: Element[],
-  date: string
+  date: string,
+  timeFilter?: string,
 ): Promise<Meeting[]> {
   return Promise.all(
     elements.map(async (element) => {
@@ -14,27 +15,27 @@ export async function parseMeetings(
       const venueElement = element.querySelector(".RC-accordion__courseName");
       const surfaceElement = element.querySelector(".RC-accordion__surface");
       const firstRaceElement = element.querySelector(
-        '[data-test-selector="RC-accordion__firstRaceTime"]'
+        '[data-test-selector="RC-accordion__firstRaceTime"]',
       );
       const lastRaceElement = element.querySelector(
-        '[data-test-selector="RC-accordion__lastRaceTime"]'
+        '[data-test-selector="RC-accordion__lastRaceTime"]',
       );
       const typeElement = element.querySelector(
-        '[data-test-selector="RC-accordion__meetingType"]'
+        '[data-test-selector="RC-accordion__meetingType"]',
       );
       const raceCountElement = element.querySelector(
-        '[data-test-selector="RC-accordion__raceCount"]'
+        '[data-test-selector="RC-accordion__raceCount"]',
       );
       const goingElement = element.querySelector(
-        '[data-test-selector="RC-courseDescription__info"]'
+        '[data-test-selector="RC-courseDescription__info"]',
       );
 
       // Get all races for this meeting
       const raceElementsAll = element.querySelectorAll(
-        '[data-test-selector="RC-courseCards__raceRow"]'
+        '[data-test-selector="RC-courseCards__raceRow"]',
       );
 
-      const raceElements = Array.from(raceElementsAll);//.slice(0, 1)
+      const raceElements = Array.from(raceElementsAll); //.slice(0, 1)
 
       //console.log("Venue:", venueElement?.textContent);
       //console.log("Races found:", raceElements);
@@ -55,7 +56,7 @@ export async function parseMeetings(
         Array.from(raceElements)
           .filter((raceElement) => {
             const timeElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__time"]'
+              '[data-test-selector="RC-courseCards__time"]',
             );
 
             if (!timeElement) {
@@ -67,8 +68,23 @@ export async function parseMeetings(
             }
 
             const raceTime = normalizeTime(
-              timeElement?.textContent?.trim() || ""
+              timeElement?.textContent?.trim() || "",
             );
+
+            if (timeFilter) {
+              console.log("🏁 Time filter:", timeFilter);
+              console.log("🏁 Race time:", raceTime);
+              console.log("🏁 Normalized time:", normalizeTime(raceTime));
+              console.log(
+                "🏁 Normalized time filter:",
+                normalizeTime(timeFilter),
+              );
+              console.log(
+                "🏁 Match:",
+                normalizeTime(raceTime) === normalizeTime(timeFilter),
+              );
+              return normalizeTime(raceTime) === normalizeTime(timeFilter);
+            }
             //console.log("⏰ Evaluating race with time:", raceTime);
 
             const today = new Date().toISOString().split("T")[0];
@@ -84,22 +100,22 @@ export async function parseMeetings(
           })
           .map(async (raceElement): Promise<Race> => {
             const linkElement = raceElement.querySelector(
-              ".RC-meetingItem__link"
+              ".RC-meetingItem__link",
             ) as HTMLAnchorElement;
             const timeElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__time"]'
+              '[data-test-selector="RC-courseCards__time"]',
             );
             const titleElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__info"]'
+              '[data-test-selector="RC-courseCards__info"]',
             );
             const runnersElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__runners"]'
+              '[data-test-selector="RC-courseCards__runners"]',
             );
             const goingDataElement = raceElement.querySelector(
-              '[data-test-selector="RC-courseCards__going"]'
+              '[data-test-selector="RC-courseCards__going"]',
             );
             const tvElement = raceElement.querySelector(
-              '[data-test-selector="RC-meetingItem__tv"]'
+              '[data-test-selector="RC-meetingItem__tv"]',
             );
 
             // Parse going data text which contains class, age restriction and distance
@@ -128,13 +144,13 @@ export async function parseMeetings(
                 additionalDetails = await parseRaceDetails(
                   details,
                   raceUrl,
-                  meetingDetails
+                  meetingDetails,
                 );
               }
             } catch (error) {
               console.error(
                 `Failed to fetch/parse details for race at ${raceUrl}:`,
-                error
+                error,
               );
             }
 
@@ -143,7 +159,7 @@ export async function parseMeetings(
               title: titleElement?.textContent?.trim() || "",
               runners: parseInt(
                 runnersElement?.textContent?.trim().split(" ")[0] || "0",
-                10
+                10,
               ),
               distance: parseDistance(distance || ""),
               class:
@@ -155,13 +171,13 @@ export async function parseMeetings(
               horses: [],
               ...additionalDetails,
             };
-          })
+          }),
       );
 
       return {
         ...meetingDetails,
         races,
       };
-    })
+    }),
   );
 }

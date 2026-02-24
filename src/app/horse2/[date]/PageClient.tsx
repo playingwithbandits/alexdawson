@@ -19,7 +19,9 @@ export function PageClient({ date }: { date: string }) {
   console.log("🏇 Rendering PageClient with date:", date);
   const searchParams = useSearchParams();
   const courseFilter = searchParams.get("c");
+  const timeFilter = searchParams.get("t");
   console.log("🏁 Course name from query string:", courseFilter);
+  console.log("🏁 Time from query string:", timeFilter);
   const [meetings, setMeetings] = useState<Meeting[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -156,6 +158,7 @@ export function PageClient({ date }: { date: string }) {
           const parsedMeetingsOld = await parseMeetings(
             Array.from(meetingElementsArr), //.slice(0, 1),
             date,
+            timeFilter ? timeFilter : undefined,
           );
 
           const parsedMeetings: Meeting[] =

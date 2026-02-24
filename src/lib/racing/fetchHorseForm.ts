@@ -5,30 +5,23 @@ const CACHE_KEY_PREFIX = "horse-form:";
 const memoryCache = new Map<string, FormObj>();
 
 function getCached(name: string): FormObj | undefined {
+  console.log("fetchHorseForm: getCached called for:", name);
   const key = CACHE_KEY_PREFIX + name;
   const fromMemory = memoryCache.get(key);
-  if (fromMemory) return fromMemory;
-  if (typeof window === "undefined") return undefined;
-  try {
-    const stored = localStorage.getItem(key);
-    if (!stored) return undefined;
-    const parsed = JSON.parse(stored) as FormObj;
-    memoryCache.set(key, parsed);
-    return parsed;
-  } catch {
-    return undefined;
-  }
+  console.log("fetchHorseForm: checking memory cache for key:", {
+    key,
+    memoryCache,
+    fromMemory,
+  });
+  return fromMemory;
 }
 
 function setCached(name: string, data: FormObj): void {
   const key = CACHE_KEY_PREFIX + name;
   memoryCache.set(key, data);
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.setItem(key, JSON.stringify(data));
-  } catch {
-    // quota exceeded or private mode
-  }
+  console.log("fetchHorseForm: Successfully set cached horse form:", {
+    key,
+  });
 }
 
 export async function fetchHorseForm(
@@ -49,7 +42,9 @@ export async function fetchHorseForm(
     //console.log("Converted to form URL:", formUrl);
 
     const cached = getCached(key);
-    if (cached !== undefined) return cached;
+    if (cached !== undefined) {
+      return cached;
+    }
 
     const response = await fetch(`/getP.php?q=${encodeURIComponent(formUrl)}`);
 
@@ -58,15 +53,13 @@ export async function fetchHorseForm(
     }
 
     const formData = await response.json();
-    //console.log("Parsed form data:", formData);
 
-    if (Array.isArray(formData) && formData.length > 0) {
+    if (formData && formData?.form?.length > 0) {
       setCached(key, formData as unknown as FormObj);
     }
 
     return formData;
   } catch {
-    //console.error("Error fetching horse form:", error);
     return undefined;
   }
 }
