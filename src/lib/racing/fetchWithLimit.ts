@@ -38,6 +38,13 @@ export function fetchFormWithLimit(
 
   return new Promise<FormObj | undefined>((resolve) => {
     const task = () => {
+      const cachedNow = formResponseCache.get(key);
+      if (cachedNow !== undefined) {
+        activeCount--;
+        runNext();
+        resolve(cachedNow as unknown as FormObj);
+        return;
+      }
       console.log(
         "fetchWithLimits: Fetching URL:",
         inputUrl,

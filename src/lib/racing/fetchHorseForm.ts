@@ -1,5 +1,5 @@
 import { FormObj } from "@/types/racing";
-import { fetchFormWithLimit, fetchWithLimit } from "./fetchWithLimit";
+import { fetchFormWithLimit } from "./fetchWithLimit";
 import { horseNameToKey } from "./scores/funcs";
 
 const CACHE_KEY_PREFIX = "horse-form:";

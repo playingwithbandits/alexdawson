@@ -176,7 +176,7 @@ export async function parseRaceDetails(
       );
       const formObj = await fetchHorseForm(name, profileUrl);
       if (!formObj) {
-        console.error("🏁 fetchHorseForm not found", name, profileUrl);
+        console.warn("🏁 fetchHorseForm not found", name, profileUrl);
       }
 
       const officialRating =
@@ -352,7 +352,9 @@ export async function parseRaceDetails(
               const beatenHorseForm = await fetchHorseForm(name, profileUrl);
 
               if (!beatenHorseForm) {
-                console.error(
+                // Missing form is expected (rate limit, 404, etc). Use warn to avoid
+                // Next.js dev overlay treating each as an error and spamming __nextjs_original-stack-frame.
+                console.warn(
                   "🏁 beatenHorseForm not found",
                   beatenHorse,
                   profileUrl,
