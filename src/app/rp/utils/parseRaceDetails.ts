@@ -166,7 +166,8 @@ export async function parseRaceDetails(
         ".RC-runnerName.ui-link",
       ) as HTMLAnchorElement;
       const profileUrl = profileLink?.href
-        ? "https://www.racingpost.com" + new URL(profileLink.href).pathname
+        ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+          new URL(profileLink.href).pathname
         : "";
 
       const name = horseNameToKey(
@@ -269,7 +270,8 @@ export async function parseRaceDetails(
           );
           const outcomeLink = outcomeCell?.querySelector("a");
           const lastRaceLink = outcomeLink?.href
-            ? "https://www.racingpost.com" + new URL(outcomeLink.href).pathname
+            ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
+              new URL(outcomeLink.href).pathname
             : "";
 
           // Try repeatedly loading last race details up to 100 times if required
