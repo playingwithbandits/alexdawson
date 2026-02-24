@@ -98,8 +98,7 @@ export async function lastRaceToLastRaceStats(
       row.querySelector(".rp-horseTable__horse__name")?.getAttribute("href") ||
       "";
     const profileUrl = profileUrl_grab
-      ? "https://alexdawson.co.uk/getP.php?q=https://www.racingpost.com" +
-        profileUrl_grab
+      ? "https://www.racingpost.com" + profileUrl_grab
       : "";
     runners.push({
       name,

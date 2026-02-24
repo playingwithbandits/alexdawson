@@ -155,7 +155,7 @@ export function HorsePageClient({ date }: { date: string }) {
   const [tips, setTips] = useState<DayTips | null>(null);
   const [gytoTips, setGytoTips] = useState<GytoTips | undefined>(undefined);
   const [napsTableTips, setNapsTableTips] = useState<NapsTableTips | undefined>(
-    undefined
+    undefined,
   );
   const [nonRunners, setNonRunners] = useState<NonRunnerMeeting[]>([]);
   const [liveOdds] = useState<LiveOdds[]>([]);
@@ -226,7 +226,7 @@ export function HorsePageClient({ date }: { date: string }) {
 
         // Fetch non-runners data
         const nonRunnersResponse = await fetch(
-          `/api/racing/nonrunners/fetch?date=${date}`
+          `/api/racing/nonrunners/fetch?date=${date}`,
         );
         const nonRunnersData = await nonRunnersResponse.json();
         setNonRunners(nonRunnersData);
@@ -299,9 +299,9 @@ export function HorsePageClient({ date }: { date: string }) {
           const response = await fetch(
             `/api/racing/proxy?url=${encodeURIComponent(
               `https://alexdawson.co.uk/getP.php?q=${encodeURIComponent(
-                getPageUrl(date)
-              )}`
-            )}`
+                getPageUrl(date),
+              )}`,
+            )}`,
           );
 
           console.log("🔍 Fetching from URL:", getPageUrl(date));
@@ -317,12 +317,12 @@ export function HorsePageClient({ date }: { date: string }) {
 
           console.log("🔍 Parsed HTML data", response, doc, html);
           const meetingElements = doc.querySelectorAll(
-            ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))"
+            ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))",
           );
 
           console.log(
             `Found ${meetingElements.length} total courses`,
-            meetingElements
+            meetingElements,
           );
           const ukElements = Array.from(meetingElements).filter((element) => {
             const courseName = placeToPlaceKey(
@@ -330,15 +330,15 @@ export function HorsePageClient({ date }: { date: string }) {
                 .querySelector(".RC-accordion__courseName")
                 ?.textContent?.toLowerCase()
                 .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
-                .trim() || ""
+                .trim() || "",
             );
 
             console.log(`Processing course: ${courseName}`);
             const ukCourseKeys = UK_COURSES.map((course) =>
-              placeToPlaceKey(course)
+              placeToPlaceKey(course),
             );
             const irishCourseKeys = IRISH_COURSES.map((course) =>
-              placeToPlaceKey(course)
+              placeToPlaceKey(course),
             );
             const isUkCourse = courseName && ukCourseKeys.includes(courseName);
             const isIrishCourse =
@@ -346,20 +346,20 @@ export function HorsePageClient({ date }: { date: string }) {
             console.log(`Is UK course: ${isUkCourse}`);
             console.log(`Is Irish course: ${isIrishCourse}`);
             console.log(
-              `Course: ${courseName}, UK: ${isUkCourse}, Irish: ${isIrishCourse}`
+              `Course: ${courseName}, UK: ${isUkCourse}, Irish: ${isIrishCourse}`,
             );
             return isUkCourse; //|| isIrishCourse; // TODO: Uncomment this when we have Irish courses back
           });
           console.log(
             `Filtered to ${ukElements.length} UK courses`,
-            ukElements
+            ukElements,
           );
 
           console.log("🔍 Meeting elements:", ukElements);
 
           const parsedMeetings = await parseMeetings(
-            Array.from(ukElements),//.slice(0, 1),
-            date
+            Array.from(ukElements), //.slice(0, 1),
+            date,
           );
           console.log("✨ Successfully parsed meetings data");
           console.log("📝 Saving to cache for date:", date);

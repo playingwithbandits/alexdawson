@@ -51,6 +51,7 @@ async function waitForPendingResult(
   console.warn(
     `waitForPendingResult: Max attempts (${maxAttempts}) reached for "${name}". Returning undefined.`,
   );
+  pendingResults.delete(name);
   return undefined;
 }
 
@@ -100,8 +101,5 @@ export async function fetchHorseForm(
     return formData;
   } catch {
     return undefined;
-  } finally {
-    const cacheKey = horseNameToKey(name);
-    pendingResults.delete(cacheKey);
   }
 }
