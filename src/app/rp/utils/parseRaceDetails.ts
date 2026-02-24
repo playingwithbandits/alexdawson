@@ -362,16 +362,30 @@ export async function parseRaceDetails(
               }
 
               const beatenHorseFormsRacesThatCameAfterThisRace =
-                beatenHorseForm?.form?.filter((x) => {
-                  const date1 = x.raceDatetime
-                    ? new Date(x.raceDatetime || "").toISOString().split("T")[0]
+                beatenHorseForm?.form?.filter((form_x) => {
+                  const isMatchingRaceCode = matchRaceTypeCode(
+                    form_x?.raceTypeCode,
+                    raceTypeCode,
+                  );
+
+                  const date1 = form_x.raceDatetime
+                    ? new Date(form_x.raceDatetime || "")
+                        .toISOString()
+                        .split("T")[0]
                     : undefined;
                   const date2 = formRowValidDate
                     ? new Date(formRowValidDate || "")
                         .toISOString()
                         .split("T")[0]
                     : undefined;
-                  return date1 && date2 && date1 >= date2;
+
+                  const dateCheck = date1 && date2 && date1 >= date2;
+
+                  return (
+                    isValidOutcome(form_x.raceOutcomeCode) &&
+                    dateCheck &&
+                    isMatchingRaceCode
+                  );
                 });
 
               const stats = {
