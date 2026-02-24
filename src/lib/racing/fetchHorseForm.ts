@@ -13,10 +13,13 @@ function getCached(name: string): FormObj | undefined {
 
 function setCached(name: string, data: FormObj): void {
   const key = CACHE_KEY_PREFIX + name;
-  memoryCache.set(key, data);
-  console.log("fetchHorseForm: Successfully set cached horse form:", {
-    key,
-  });
+  const cached = getCached(name);
+  if (cached === undefined) {
+    memoryCache.set(key, data);
+    console.log("fetchHorseForm: Successfully set cached horse form:", {
+      key,
+    });
+  }
 }
 
 function sleep(ms: number): Promise<void> {
@@ -32,16 +35,23 @@ async function waitForPendingResult(
   while (attempts < maxAttempts) {
     const cached = getCached(name);
     if (cached !== undefined) {
+      console.log(
+        `waitForPendingResult: Cached result found for "${name}" after ${attempts} attempt(s)`,
+      );
       pendingResults.delete(name);
       return cached;
     }
 
     attempts += 1;
+    console.log(
+      `waitForPendingResult: No result for "${name}" on attempt ${attempts}, waiting 60s...`,
+    );
     await sleep(60_000);
   }
-
-  pendingResults.delete(name);
-  return getCached(name);
+  console.warn(
+    `waitForPendingResult: Max attempts (${maxAttempts}) reached for "${name}". Returning undefined.`,
+  );
+  return undefined;
 }
 
 export async function fetchHorseForm(
@@ -67,10 +77,13 @@ export async function fetchHorseForm(
     }
 
     if (pendingResults.has(cacheKey)) {
-      return await waitForPendingResult(cacheKey);
+      const pendingCheck = await waitForPendingResult(cacheKey);
+      if (pendingCheck !== undefined) {
+        return pendingCheck;
+      }
+    } else {
+      pendingResults.add(cacheKey);
     }
-
-    pendingResults.add(cacheKey);
 
     const response = await fetch(`/getP.php?q=${encodeURIComponent(formUrl)}`);
 
