@@ -176,7 +176,7 @@ export async function parseRaceDetails(
       let formObj = undefined;
       let fetchTryCount = 0;
       // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
-      while (fetchTryCount < 5) {
+      while (fetchTryCount < 10) {
         fetchTryCount++;
         try {
           const res = await fetchHorseForm(name, profileUrl);
@@ -186,7 +186,7 @@ export async function parseRaceDetails(
           } else {
             // Optionally wait a bit before retrying (as in PageClient)
             await new Promise((resolve) =>
-              setTimeout(resolve, Math.floor(Math.random() * 5000) + 120000),
+              setTimeout(resolve, Math.floor(Math.random() * 5000) + 60000),
             );
             console.log(
               `fetchHorseForm: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
@@ -200,7 +200,7 @@ export async function parseRaceDetails(
             profileUrl,
           );
           await new Promise((resolve) =>
-            setTimeout(resolve, Math.floor(Math.random() * 5000) + 120000),
+            setTimeout(resolve, Math.floor(Math.random() * 5000) + 60000),
           );
         }
       }
@@ -278,12 +278,12 @@ export async function parseRaceDetails(
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 5) {
+          while (tryCount < 10) {
             tryCount++;
 
             if (lastRaceLink) {
               await new Promise((resolve) =>
-                setTimeout(resolve, Math.floor(Math.random() * 5000) + 120000),
+                setTimeout(resolve, Math.floor(Math.random() * 5000) + 60000),
               );
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
@@ -390,7 +390,7 @@ export async function parseRaceDetails(
                     await new Promise((resolve) =>
                       setTimeout(
                         resolve,
-                        Math.floor(Math.random() * 5000) + 120000,
+                        Math.floor(Math.random() * 5000) + 60000,
                       ),
                     );
                     console.log(
@@ -407,7 +407,7 @@ export async function parseRaceDetails(
                   await new Promise((resolve) =>
                     setTimeout(
                       resolve,
-                      Math.floor(Math.random() * 5000) + 120000,
+                      Math.floor(Math.random() * 5000) + 60000,
                     ),
                   );
                 }
