@@ -32,6 +32,7 @@ import {
   BeatenHorseFormObj,
   BeatenHorseFormObjsStats,
 } from "@/lib/racing/scores/types";
+import { X } from "lucide-react";
 
 export async function parseRaceDetails(
   html: string,
@@ -173,36 +174,9 @@ export async function parseRaceDetails(
       const name = horseNameToKey(
         row.querySelector(".RC-runnerName")?.textContent?.trim() || "",
       );
-      let formObj = undefined;
-      let fetchTryCount = 0;
-      // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
-      while (fetchTryCount < 10) {
-        fetchTryCount++;
-        try {
-          const res = await fetchHorseForm(name, profileUrl);
-          if (res) {
-            formObj = res;
-            break;
-          } else {
-            // Optionally wait a bit before retrying (as in PageClient)
-            await new Promise((resolve) =>
-              setTimeout(resolve, Math.floor(Math.random() * 5000) + 60000),
-            );
-            console.log(
-              `fetchHorseForm: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
-              { profileUrl, res },
-            );
-          }
-        } catch (err) {
-          console.error(
-            `fetchHorseForm: Error on attempt ${fetchTryCount}`,
-            err,
-            profileUrl,
-          );
-          await new Promise((resolve) =>
-            setTimeout(resolve, Math.floor(Math.random() * 5000) + 60000),
-          );
-        }
+      const formObj = await fetchHorseForm(name, profileUrl);
+      if (!formObj) {
+        console.error("🏁 fetchHorseForm not found", name, profileUrl);
       }
 
       const officialRating =
@@ -278,12 +252,12 @@ export async function parseRaceDetails(
           let lastRaceEle = "";
           let tryCount = 0;
           let retryDoc: Document | null = null;
-          while (tryCount < 10) {
+          while (tryCount < 20) {
             tryCount++;
 
             if (lastRaceLink) {
               await new Promise((resolve) =>
-                setTimeout(resolve, Math.floor(Math.random() * 5000) + 60000),
+                setTimeout(resolve, Math.floor(Math.random() * 5000)),
               );
               const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
               const retryParser = new DOMParser();
@@ -375,43 +349,8 @@ export async function parseRaceDetails(
           const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(
             beatenHorses?.map(async (beatenHorse) => {
               const { profileUrl, name } = beatenHorse || {};
-              let beatenHorseForm = undefined;
-              let fetchTryCount = 0;
-              // Try up to 100 times to fetch a valid JSON object from fetchHorseForm
-              while (fetchTryCount < 10) {
-                fetchTryCount++;
-                try {
-                  const res = await fetchHorseForm(name, profileUrl);
-                  if (res) {
-                    beatenHorseForm = res;
-                    break;
-                  } else {
-                    // Optionally wait a bit before retrying (as in PageClient)
-                    await new Promise((resolve) =>
-                      setTimeout(
-                        resolve,
-                        Math.floor(Math.random() * 5000) + 60000,
-                      ),
-                    );
-                    console.log(
-                      `fetchHorseForm beatenHorse: Attempt ${fetchTryCount} returned non-JSON, retrying...`,
-                      { profileUrl, res },
-                    );
-                  }
-                } catch (err) {
-                  console.error(
-                    `fetchHorseForm beatenHorse: Error on attempt ${fetchTryCount}`,
-                    err,
-                    profileUrl,
-                  );
-                  await new Promise((resolve) =>
-                    setTimeout(
-                      resolve,
-                      Math.floor(Math.random() * 5000) + 60000,
-                    ),
-                  );
-                }
-              }
+              const beatenHorseForm = await fetchHorseForm(name, profileUrl);
+
               if (!beatenHorseForm) {
                 console.error(
                   "🏁 beatenHorseForm not found",

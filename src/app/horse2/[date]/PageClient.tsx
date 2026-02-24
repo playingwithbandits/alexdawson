@@ -77,7 +77,7 @@ export function PageClient({ date }: { date: string }) {
 
             if (pageUrl) {
               await new Promise((resolve) =>
-                setTimeout(resolve, Math.floor(Math.random() * 5000) + 60000),
+                setTimeout(resolve, Math.floor(Math.random() * 5000)),
               );
               const response = await fetch(
                 `/api/racedays/proxy?url=${encodeURIComponent(
