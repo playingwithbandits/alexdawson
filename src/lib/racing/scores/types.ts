@@ -66,6 +66,7 @@ export interface AllBeatenHorsesNowGoneOntoStats {
 
 export interface BeatenHorseFormObjsStats {
   formDate: string;
+  disableBeatenHorseStats: boolean;
   raw: BeatenHorseFormObj[];
   maxes: {
     rpr: number;

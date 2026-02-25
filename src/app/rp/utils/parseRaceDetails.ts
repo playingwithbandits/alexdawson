@@ -148,12 +148,12 @@ export async function parseRaceDetails(
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const oneYearAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365);
   const _120DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 120);
-  const _60DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
+  const _90DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 90);
 
-  const formValidDateThreshold = _120DaysAgo;
-  const fetchFormDateThreshold = _120DaysAgo;
+  const formValidDateThreshold = oneYearAgo;
+  const fetchFormDateThreshold = oneYearAgo;
 
-  const formShouldGetBeatenHorseStatsDateThreshold = _60DaysAgo;
+  const formShouldGetBeatenHorseStatsDateThreshold = _90DaysAgo;
 
   // This is fully async: all fetching is performed before continuing; after Promise.all resolves,
   // no further awaits or network operations occur relating to horse/form data/stat fetching.
@@ -349,13 +349,13 @@ export async function parseRaceDetails(
               ? formRowOr - currentHorseOr
               : 0;
 
-          const formShouldGetBeatenHorseStats =
-            formRowValidDate &&
-            new Date(formRowValidDate || "") <=
+          const disableBeatenHorseStats =
+            !!formRowValidDate &&
+            new Date(formRowValidDate) <=
               formShouldGetBeatenHorseStatsDateThreshold;
 
           const beatenHorsesFormObjs: BeatenHorseFormObj[] =
-            !formShouldGetBeatenHorseStats
+            disableBeatenHorseStats
               ? []
               : await Promise.all(
                   beatenHorses?.map(async (beatenHorse) => {
@@ -433,6 +433,7 @@ export async function parseRaceDetails(
 
           const beatenHorsesFormObjsStats: BeatenHorseFormObjsStats = {
             formDate: formRowValidDate || "",
+            disableBeatenHorseStats,
             formRowOr,
             currentHorseOr,
             orBonus,
