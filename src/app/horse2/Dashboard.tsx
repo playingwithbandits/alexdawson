@@ -12,7 +12,10 @@ import { RaceResults } from "@/types/racing";
 import { useState } from "react";
 import { getRaceToShowStats } from "@/components/raceDays/Race";
 import { normalizeTime } from "@/components/horse/DayPredictions";
-import { horseHasRequiredStats } from "@/components/raceDays/Horse";
+import {
+  getWarningMessage,
+  horseHasRequiredStats,
+} from "@/components/raceDays/Horse";
 
 // race_rpr: 184,
 // race_maxes_racedAgainst: 114,
@@ -95,7 +98,7 @@ export function Dashboard({
 }) {
   console.log("Dashboard", data, results);
   const [showInfo, setShowInfo] = useState(true);
-  const [thresholdValue, setThresholdValue] = useState(0.85);
+  const [thresholdValue, setThresholdValue] = useState(0.9);
 
   if (!data || data.length === 0) {
     return (
@@ -995,8 +998,10 @@ export function Dashboard({
               getRaceToShowStats(race);
 
             const someHorseHasMaxScore = race.horses.some((horse) => {
-              const requiredStatsGood = horseHasRequiredStats(horse, race);
-              return requiredStatsGood;
+              const missingStats = getWarningMessage(horse, race).missingStats;
+              const missingLen = missingStats.length;
+
+              return missingLen <= 2;
             });
 
             const raceHasFinsihed =

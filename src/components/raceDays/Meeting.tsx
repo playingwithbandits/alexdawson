@@ -3,7 +3,7 @@ import { Meeting as MeetingType } from "@/types/raceday";
 import { Race } from "./Race";
 import { RaceResults } from "@/types/racing";
 import { normalizeTime } from "../horse/DayPredictions";
-import { horseHasRequiredStats } from "./Horse";
+import { getWarningMessage, horseHasRequiredStats } from "./Horse";
 
 interface MeetingProps {
   meeting: MeetingType;
@@ -25,14 +25,16 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
             //   getRaceToShowStats(x);
 
             const raceHasHorseScoreMax = x.horses.some((horse) => {
-              const requiredStatsGood = horseHasRequiredStats(horse, x);
-              return requiredStatsGood;
+              const missingStats = getWarningMessage(horse, x).missingStats;
+
+              const missingLen = missingStats.length;
+              return missingLen <= 2;
             });
 
             const raceHasFinsihed =
               date === new Date().toISOString().split("T")[0] &&
               new Date(
-                `${date} ${normalizeTime(x.time).split(":").join(":")}`
+                `${date} ${normalizeTime(x.time).split(":").join(":")}`,
               ).getTime() < new Date().getTime();
 
             return showInfo ? !raceHasFinsihed && raceHasHorseScoreMax : true;

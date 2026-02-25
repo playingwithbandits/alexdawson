@@ -148,9 +148,12 @@ export async function parseRaceDetails(
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
   const oneYearAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365);
   const _120DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 120);
+  const _60DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
 
   const formValidDateThreshold = _120DaysAgo;
   const fetchFormDateThreshold = _120DaysAgo;
+
+  const formShouldGetBeatenHorseStatsDateThreshold = _60DaysAgo;
 
   // This is fully async: all fetching is performed before continuing; after Promise.all resolves,
   // no further awaits or network operations occur relating to horse/form data/stat fetching.
@@ -346,77 +349,90 @@ export async function parseRaceDetails(
               ? formRowOr - currentHorseOr
               : 0;
 
-          const beatenHorsesFormObjs: BeatenHorseFormObj[] = await Promise.all(
-            beatenHorses?.map(async (beatenHorse) => {
-              const { profileUrl, name } = beatenHorse || {};
-              const beatenHorseForm = await fetchHorseForm(name, profileUrl);
+          const formShouldGetBeatenHorseStats =
+            formRowValidDate &&
+            new Date(formRowValidDate || "") <=
+              formShouldGetBeatenHorseStatsDateThreshold;
 
-              if (!beatenHorseForm) {
-                // Missing form is expected (rate limit, 404, etc). Use warn to avoid
-                // Next.js dev overlay treating each as an error and spamming __nextjs_original-stack-frame.
-                console.warn(
-                  "🏁 beatenHorseForm not found",
-                  beatenHorse,
-                  profileUrl,
+          const beatenHorsesFormObjs: BeatenHorseFormObj[] =
+            !formShouldGetBeatenHorseStats
+              ? []
+              : await Promise.all(
+                  beatenHorses?.map(async (beatenHorse) => {
+                    const { profileUrl, name } = beatenHorse || {};
+
+                    const beatenHorseForm = await fetchHorseForm(
+                      name,
+                      profileUrl,
+                    );
+
+                    if (!beatenHorseForm) {
+                      // Missing form is expected (rate limit, 404, etc). Use warn to avoid
+                      // Next.js dev overlay treating each as an error and spamming __nextjs_original-stack-frame.
+                      console.warn(
+                        "🏁 beatenHorseForm not found",
+                        beatenHorse,
+                        profileUrl,
+                      );
+                    }
+
+                    const beatenHorseFormsRacesThatCameAfterThisRace =
+                      beatenHorseForm?.form?.filter((form_x) => {
+                        const isMatchingRaceCode = matchRaceTypeCode(
+                          form_x?.raceTypeCode,
+                          raceTypeCode,
+                        );
+
+                        const date1 = form_x.raceDatetime
+                          ? new Date(form_x.raceDatetime || "")
+                              .toISOString()
+                              .split("T")[0]
+                          : undefined;
+                        const date2 = formRowValidDate
+                          ? new Date(formRowValidDate || "")
+                              .toISOString()
+                              .split("T")[0]
+                          : undefined;
+
+                        const dateCheck = date1 && date2 && date1 >= date2;
+
+                        return (
+                          isValidOutcome(form_x.raceOutcomeCode) &&
+                          dateCheck &&
+                          isMatchingRaceCode
+                        );
+                      });
+
+                    const stats = {
+                      rpr:
+                        beatenHorseFormsRacesThatCameAfterThisRace?.map(
+                          (x) => (x.rpPostmark || 0) + (orBonus || 0),
+                        ) || [],
+                      or:
+                        beatenHorseFormsRacesThatCameAfterThisRace?.map(
+                          (x) => (x.officialRatingRanOff || 0) + (orBonus || 0),
+                        ) || [],
+                    };
+
+                    const stats_max = {
+                      maxRpr: max(stats.rpr || []),
+                      maxOr: max(stats.or || []),
+                    };
+
+                    return {
+                      //allForms: beatenHorseForm?.form || [],
+                      greaterThanDate: formRowValidDate || "",
+                      name,
+                      //validForms: beatenHorseFormsRacesThatCameAfterThisRace || [],
+                      stats: stats,
+                      stats_max: stats_max,
+                      profileUrl,
+                    };
+                  }),
                 );
-              }
-
-              const beatenHorseFormsRacesThatCameAfterThisRace =
-                beatenHorseForm?.form?.filter((form_x) => {
-                  const isMatchingRaceCode = matchRaceTypeCode(
-                    form_x?.raceTypeCode,
-                    raceTypeCode,
-                  );
-
-                  const date1 = form_x.raceDatetime
-                    ? new Date(form_x.raceDatetime || "")
-                        .toISOString()
-                        .split("T")[0]
-                    : undefined;
-                  const date2 = formRowValidDate
-                    ? new Date(formRowValidDate || "")
-                        .toISOString()
-                        .split("T")[0]
-                    : undefined;
-
-                  const dateCheck = date1 && date2 && date1 >= date2;
-
-                  return (
-                    isValidOutcome(form_x.raceOutcomeCode) &&
-                    dateCheck &&
-                    isMatchingRaceCode
-                  );
-                });
-
-              const stats = {
-                rpr:
-                  beatenHorseFormsRacesThatCameAfterThisRace?.map(
-                    (x) => (x.rpPostmark || 0) + (orBonus || 0),
-                  ) || [],
-                or:
-                  beatenHorseFormsRacesThatCameAfterThisRace?.map(
-                    (x) => (x.officialRatingRanOff || 0) + (orBonus || 0),
-                  ) || [],
-              };
-
-              const stats_max = {
-                maxRpr: max(stats.rpr || []),
-                maxOr: max(stats.or || []),
-              };
-
-              return {
-                //allForms: beatenHorseForm?.form || [],
-                greaterThanDate: formRowValidDate || "",
-                name,
-                //validForms: beatenHorseFormsRacesThatCameAfterThisRace || [],
-                stats: stats,
-                stats_max: stats_max,
-                profileUrl,
-              };
-            }),
-          );
 
           const beatenHorsesFormObjsStats: BeatenHorseFormObjsStats = {
+            formDate: formRowValidDate || "",
             formRowOr,
             currentHorseOr,
             orBonus,

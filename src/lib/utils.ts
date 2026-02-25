@@ -6,6 +6,21 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export function daysAgo(date: Date | string | number): number {
+  const inputDate = date instanceof Date ? date : new Date(date);
+  if (isNaN(inputDate.getTime())) return 0;
+  const now = new Date();
+  // Ignore time portions
+  const utc1 = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const utc2 = Date.UTC(
+    inputDate.getFullYear(),
+    inputDate.getMonth(),
+    inputDate.getDate(),
+  );
+  const diffDays = Math.floor((utc1 - utc2) / (1000 * 60 * 60 * 24));
+  return diffDays >= 0 ? diffDays : 0;
+}
+
 export function min(nums: number[]): number {
   const filteredNums = nums?.filter(Boolean) || [];
   return filteredNums.length

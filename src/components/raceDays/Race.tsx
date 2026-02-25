@@ -26,13 +26,15 @@ export const getRaceToShowStats = (race: RaceType) => {
   const raceAvgScore = avg(
     race.horses
       ?.map((horse) => horse.scoreObj?.total || 0)
-      .sort((a, b) => b - a)
+      .sort((a, b) => b - a),
   );
 
   const maxScore = 90;
   const horsesInRace = race.horses.length;
   const horsesInRaceWithForms = race.horses.filter(
-    (horse) => Boolean(horse.or) && Boolean(horse.form?.map(x => x.or).some(x => Boolean(x)))
+    (horse) =>
+      Boolean(horse.or) &&
+      Boolean(horse.form?.map((x) => x.or).some((x) => Boolean(x))),
   ).length;
   const ratioWithForms = horsesInRaceWithForms / horsesInRace;
   const ratioWithFormsGood = ratioWithForms >= 0.66;
@@ -40,7 +42,7 @@ export const getRaceToShowStats = (race: RaceType) => {
   const scoreToBeBetterThan = 80;
 
   const horsesInRaceAbove3YearsOld = race.horses.filter(
-    (horse) => horse.age > 3
+    (horse) => horse.age > 3,
   ).length;
   const ratioWithHorsesAbove3YearsOld =
     horsesInRaceAbove3YearsOld / horsesInRace;
@@ -79,7 +81,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
   const raceHasFinsihed =
     date === new Date().toISOString().split("T")[0] &&
     new Date(
-      `${date} ${normalizeTime(race.time).split(":").join(":")}`
+      `${date} ${normalizeTime(race.time).split(":").join(":")}`,
     ).getTime() < new Date().getTime();
 
   const [showAll, setShowAll] = useState(false);
@@ -99,9 +101,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
 
       const missingLen = missingStats.length;
 
-      return showInfo
-        ? !raceHasFinsihed && requiredStatsGood
-        : missingLen <= 1;// && gapToAvgScore >= 0;
+      return showInfo ? !raceHasFinsihed && missingLen <= 2 : missingLen <= 2; // && gapToAvgScore >= 0;
     });
   }, [showAll, race, raceAvgScore, showInfo, raceHasFinsihed]);
 
@@ -109,12 +109,12 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
     race.horses.length < 5
       ? 1
       : race.horses.length < 8
-      ? 2
-      : race.horses.length < 12
-      ? 3
-      : race.horses.length < 20
-      ? 4
-      : 5;
+        ? 2
+        : race.horses.length < 12
+          ? 3
+          : race.horses.length < 20
+            ? 4
+            : 5;
 
   const raceHasPredictions =
     race?.predictions && Object.values(race?.predictions || {}).length > 0;
@@ -149,7 +149,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                       (horse.scoreObj?.total || 0) - raceAvgScore;
                     const requiredStatsGood = horseHasRequiredStats(
                       horse,
-                      race
+                      race,
                     );
                     const missingStats = !requiredStatsGood
                       ? getWarningMessage(horse, race).missingStats
@@ -158,8 +158,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const missingLen = missingStats.length;
 
                     return showInfo
-                      ? !raceHasFinsihed && requiredStatsGood
-                      : missingLen <= 1;// && gapToAvgScore >= 0;
+                      ? !raceHasFinsihed && missingLen <= 2
+                      : missingLen <= 2; // && gapToAvgScore >= 0;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =
@@ -168,12 +168,13 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const horsePos = getHorsePosition(
                       horse.name,
                       results,
-                      race.time
+                      race.time,
                     );
                     const horseTrophy = getTrophy(horsePos);
 
                     const anyFormsHaveEyecatcher = horse.form?.some(
-                      (form) => form.commentMatchedTerms?.eyecatcher?.length > 0
+                      (form) =>
+                        form.commentMatchedTerms?.eyecatcher?.length > 0,
                     );
 
                     const lastRaceWasHampered =
@@ -184,7 +185,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const lastRaceScore =
                       horse?.mostRecentForm &&
                       countCommentSentimentObj(
-                        horse?.mostRecentForm?.commentMatchedTerms
+                        horse?.mostRecentForm?.commentMatchedTerms,
                       ).score;
 
                     const lastRaceWasExcellent =
@@ -206,21 +207,21 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     //);
                     const horseHasRequiredStatsGood = horseHasRequiredStats(
                       horse,
-                      race
+                      race,
                     );
 
                     const missingStats = !horseHasRequiredStatsGood
                       ? getWarningMessage(horse, race).missingStats
                       : [];
-                    const missingOnlyFew = missingStats.length <= 1;
+                    const missingOnlyFew = missingStats.length <= 2;
                     const missingNoStats = missingStats.length === 0;
 
                     const rpPredictions = Object.values(
-                      race?.predictions || {}
+                      race?.predictions || {},
                     )?.find(
                       (prediction) =>
                         horseNameToKey(prediction.name) ===
-                        horseNameToKey(horse.name)
+                        horseNameToKey(horse.name),
                     );
                     const rpPredictionScore = rpPredictions?.score;
 
@@ -237,18 +238,18 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                                 ? missingNoStats
                                   ? "bg-green-700 text-black"
                                   : missingOnlyFew
-                                  ? "bg-[#ae7100] text-black"
-                                  : "bg-blue-900"
+                                    ? "bg-[#ae7100] text-black"
+                                    : "bg-blue-900"
                                 : missingNoStats
-                                ? "bg-red-900"
-                                : "bg-red-900 opacity-40"
+                                  ? "bg-red-900"
+                                  : "bg-red-900 opacity-40"
                             } ${
                               horse.oddsDecimal >= 20
                                 ? "border-4 border-yellow-300"
                                 : horse.oddsDecimal >= 10
-                                ? "border-4 border-gray-300"
-                                : ""
-                            }`
+                                  ? "border-4 border-gray-300"
+                                  : ""
+                            }`,
                           )}
                           title={`${horse.name} ${horse.scoreObj?.total}`}
                         >
@@ -260,7 +261,7 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                             className={twMerge(
                               lastRaceScore !== undefined && lastRaceScore >= 0
                                 ? "text-[rgb(105,255,100)]"
-                                : "text-red-400"
+                                : "text-red-400",
                             )}
                           >
                             {lastRaceScore !== undefined
@@ -331,46 +332,46 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                   </td>
                   <td className="px-4 py-2 ">
                     {race.horsesInfo.averages.race_averages_racedAgainst_Beaten_Averages.toFixed(
-                      2
+                      2,
                     )}
                   </td>
                   <td className="px-4 py-2 ">
                     {race.horsesInfo.maxes.race_averages_racedAgainst_Beaten_Averages.toFixed(
-                      2
+                      2,
                     )}
                   </td>
 
                   <td className="px-4 py-2 ">
                     {race.horsesInfo.averages.race_maxes_racedAgainst_Beaten_Averages.toFixed(
-                      2
+                      2,
                     )}
                   </td>
 
                   <td className="px-4 py-2 ">
                     {race.horsesInfo.maxes.race_maxes_racedAgainst_Beaten_Averages.toFixed(
-                      2
+                      2,
                     )}
                   </td>
 
                   <td className="px-4 py-2 ">
                     {race.horsesInfo.averages.race_mostRecentForm_racedAgainst_Beaten_Averages.toFixed(
-                      2
+                      2,
                     )}
                   </td>
                   <td className="px-4 py-2 ">
                     {race.horsesInfo.maxes.race_mostRecentForm_racedAgainst_Beaten_Averages.toFixed(
-                      2
+                      2,
                     )}
                   </td>
 
                   <td className="px-4 py-2 ">
                     {race.horsesInfo.averages.race_mostRecentForm_racedAgainst_Beaten_Maxes.toFixed(
-                      2
+                      2,
                     )}
                   </td>
                   <td className="px-4 py-2 ">
                     {race.horsesInfo.maxes.race_mostRecentForm_racedAgainst_Beaten_Maxes.toFixed(
-                      2
+                      2,
                     )}
                   </td>
                 </tr>
