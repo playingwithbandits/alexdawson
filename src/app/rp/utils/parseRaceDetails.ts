@@ -33,6 +33,7 @@ import {
   BeatenHorseFormObjsStats,
 } from "@/lib/racing/scores/types";
 import { X } from "lucide-react";
+import { fetchFormRaceDetailsWithLimit } from "@/lib/racing/fetchFormRaceDetailsWithLimit";
 
 export async function parseRaceDetails(
   html: string,
@@ -251,42 +252,9 @@ export async function parseRaceDetails(
               new URL(outcomeLink.href).pathname
             : "";
 
-          // Try repeatedly loading last race details up to 100 times if required
-          let lastRaceEle = "";
-          let tryCount = 0;
-          let retryDoc: Document | null = null;
-          while (tryCount < 20) {
-            tryCount++;
-
-            if (lastRaceLink) {
-              await new Promise((resolve) =>
-                setTimeout(resolve, Math.floor(Math.random() * 5000)),
-              );
-              const retryRaceEle = await fetchFormRaceDetails(lastRaceLink);
-              const retryParser = new DOMParser();
-              retryDoc = retryParser.parseFromString(
-                retryRaceEle || "",
-                "text/html",
-              );
-              if (retryDoc.querySelector(".rp-horseTable__table")) {
-                // Successfully loaded the correct page
-                lastRaceEle = retryRaceEle;
-                break;
-              } else {
-                console.log(
-                  `🏁 parseRaceDetails -  attempt ${tryCount}`,
-                  lastRaceLink,
-                );
-              }
-            } else {
-              // No link to retry
-              break;
-            }
-          }
-
-          console.log(
-            `🏁 parseRaceDetails - element found after ${tryCount} attempts`,
+          const lastRaceEle = await fetchFormRaceDetailsWithLimit(
             lastRaceLink,
+            name,
           );
 
           const formRowValidDate =
@@ -329,7 +297,7 @@ export async function parseRaceDetails(
             !lastRaceStatsObj?.runners_all ||
             lastRaceStatsObj?.runners_all?.length === 0
           ) {
-            console.error(
+            console.log(
               "🏁 lastRaceToLastRaceStats - No last race stats object found",
               lastRaceLink,
             );

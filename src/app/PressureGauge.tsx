@@ -5,12 +5,14 @@ type PressureGaugeProps = {
   queueLength: number;
   size?: number; // px
   strokeWidth?: number; // px
+  title?: string;
 };
 
 export const PressureGauge: React.FC<PressureGaugeProps> = ({
   queueLength,
   size = 140,
   strokeWidth = 14,
+  title,
 }) => {
   const [maxQueue, setMaxQueue] = useState(0);
 
@@ -35,8 +37,31 @@ export const PressureGauge: React.FC<PressureGaugeProps> = ({
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
+        flexDirection: "column",
       }}
     >
+      {/* Title above the gauge if provided */}
+      {title && (
+        <div
+          style={{
+            position: "absolute",
+            top: -26,
+            left: 0,
+            width: "100%",
+            textAlign: "center",
+            fontSize: 14,
+            fontWeight: 600,
+            letterSpacing: 0.5,
+            color: "#222",
+            opacity: 0.9,
+            fontFamily: "system-ui, sans-serif",
+            pointerEvents: "none",
+          }}
+        >
+          {title}
+        </div>
+      )}
+
       <svg width={size} height={size}>
         {/* Background circle */}
         <circle

@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { Dashboard } from "../Dashboard";
 import { getFormFetchQueueLength } from "@/lib/racing/fetchWithLimit";
 import { PressureGauge } from "@/app/PressureGauge";
+import { getFormRaceDetailsFetchQueueLength } from "@/lib/racing/fetchFormRaceDetailsWithLimit";
 
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
@@ -28,7 +29,9 @@ export function PageClient({ date }: { date: string }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { data: results, isLoading: resultsLoading } = useResults(date);
-  const [queueLength, setQueueLength] = useState(0);
+  const [formObjQueueLength, setFormObjQueueLength] = useState(0);
+  const [formRaceDetailsQueueLength, setFormRaceDetailsQueueLength] =
+    useState(0);
 
   useEffect(() => {
     console.log("🔄 Effect triggered with date:", date);
@@ -198,12 +201,14 @@ export function PageClient({ date }: { date: string }) {
 
   useEffect(() => {
     if (!loading) {
-      setQueueLength(0);
+      setFormObjQueueLength(0);
+      setFormRaceDetailsQueueLength(0);
       return;
     }
 
     const interval = setInterval(() => {
-      setQueueLength(getFormFetchQueueLength());
+      setFormObjQueueLength(getFormFetchQueueLength());
+      setFormRaceDetailsQueueLength(getFormRaceDetailsFetchQueueLength());
     }, 500);
 
     return () => clearInterval(interval);
@@ -215,9 +220,14 @@ export function PageClient({ date }: { date: string }) {
       <div className="flex items-center justify-center h-screen flex-col gap-4">
         <Loader2 className="h-8 w-8 animate-spin" />
 
-        <div className="text-sm text-gray-300">Queue Length: {queueLength}</div>
-
-        <PressureGauge queueLength={queueLength} />
+        <PressureGauge
+          queueLength={formObjQueueLength}
+          title="Form Obj Queue Length"
+        />
+        <PressureGauge
+          queueLength={formRaceDetailsQueueLength}
+          title="Form Race Details Queue Length"
+        />
       </div>
     );
   }
