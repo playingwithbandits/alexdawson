@@ -1,6 +1,6 @@
 import { FormObj } from "@/types/raceday";
 
-const MAX_CONCURRENT = 5;
+const MAX_CONCURRENT = 10;
 let activeCount = 0;
 const queue: Array<() => void> = [];
 
@@ -76,7 +76,7 @@ export function fetchFormWithLimit(
           })
           .catch(() => {
             // Fetch error or invalid JSON: re-queue up to 10 times
-            if (attempt < 5) {
+            if (attempt < 10) {
               queue.push(createTask(attempt + 1));
             } else {
               console.log(
