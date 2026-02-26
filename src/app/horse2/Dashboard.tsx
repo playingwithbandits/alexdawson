@@ -5,6 +5,7 @@ import {
   compareTwoGoingCodeArrays,
   courseNameToTrackId,
   distanceOkay,
+  isJumpsRaceTypeCode,
   matchRaceTypeCode,
   max,
 } from "@/lib/utils";
@@ -228,7 +229,9 @@ export function Dashboard({
               raceMaxes?.race_mostRecentForm_racedAgainst_Beaten_Maxes *
               thresholdValue,
 
-            race_min_timePerFurlong: raceMin?.race_min_timePerFurlong + 0.5,
+            race_min_timePerFurlong:
+              raceMin?.race_min_timePerFurlong +
+              (isJumpsRaceTypeCode(race?.raceTypeCode) ? 1 : 0.5),
 
             race_handicapped_rpr: maxRaceHandicappedRpr * thresholdValue,
             race_handicapped_maxes_racedAgainst_Beaten_rpr:
@@ -1011,10 +1014,9 @@ export function Dashboard({
               ).getTime() < new Date().getTime();
 
             return (
-              ratioWithFormsGood &&
-              ratioWithHorsesAbove3YearsOldGood &&
-              someHorseHasMaxScore &&
-              !raceHasFinsihed
+              // ratioWithFormsGood &&
+              // ratioWithHorsesAbove3YearsOldGood &&
+              someHorseHasMaxScore && !raceHasFinsihed
             );
           });
 

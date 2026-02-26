@@ -28,7 +28,7 @@ export async function fetchHorseForm(
 ): Promise<FormObj | undefined> {
   try {
     if (!profileUrl) {
-      console.log("fetchHorseForm func: No profileUrl provided for", name);
+      //console.log("fetchHorseForm func: No profileUrl provided for", name);
       return undefined;
     }
 
@@ -43,12 +43,13 @@ export async function fetchHorseForm(
 
     const cachedCheck1 = getCachedForm(cacheKey);
     if (cachedCheck1 !== undefined) {
-      console.log("fetchHorseForm func: Cache hit (first check) for", cacheKey);
+      // console.log("fetchHorseForm func: Cache hit (first check) for", cacheKey);
       return cachedCheck1;
     }
 
     const formData = await fetchFormWithLimit(
       `/getP.php?q=${encodeURIComponent(formUrl)}`,
+      name,
     );
 
     if (formData) {
@@ -58,7 +59,7 @@ export async function fetchHorseForm(
     }
     return undefined;
   } catch (err) {
-    console.log("fetchHorseForm func: Error fetching data for", name, "-", err);
+    //console.log("fetchHorseForm func: Error fetching data for", name, "-", err);
     return undefined;
   }
 }

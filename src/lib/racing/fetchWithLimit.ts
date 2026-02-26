@@ -1,6 +1,6 @@
 import { FormObj } from "@/types/raceday";
 
-const MAX_CONCURRENT = 2;
+const MAX_CONCURRENT = 5;
 let activeCount = 0;
 const queue: Array<() => void> = [];
 
@@ -22,91 +22,78 @@ function runNext(): void {
 
 export function fetchFormWithLimit(
   inputUrl: string,
+  name: string,
 ): Promise<FormObj | undefined> {
   const key = cacheKey(inputUrl);
 
   const cached = formResponseCache.get(key);
   if (cached !== undefined) {
-    console.log(
-      "fetchWithLimits: Cache hit for key:",
-      key,
-      "| inputUrl:",
-      inputUrl,
-    );
     return Promise.resolve(cached as unknown as FormObj);
   }
 
   return new Promise<FormObj | undefined>((resolve) => {
-    const task = () => {
-      const cachedNow = formResponseCache.get(key);
-      if (cachedNow !== undefined) {
-        activeCount--;
-        runNext();
-        resolve(cachedNow as unknown as FormObj);
-        return;
-      }
-      console.log(
-        "fetchWithLimits: Fetching URL:",
-        inputUrl,
-        "| Running tasks:",
-        activeCount + 1,
-        "| Queue length:",
-        queue.length,
-      );
-      fetch(inputUrl)
-        .then(async (res) => {
-          if (res.ok) {
-            const jsonData = await res.json();
-            const formData =
-              jsonData && jsonData?.form?.length > 0 ? jsonData : undefined;
-            if (formData) {
-              formResponseCache.set(key, formData);
-              console.log(
-                "fetchWithLimits: Fetched and cached form data for key:",
-                key,
-                "| URL:",
-                inputUrl,
-                "| Entries:",
-                jsonData?.form?.length,
-              );
-            } else {
-              console.log(
-                "fetchWithLimits: No valid form data returned for key:",
-                key,
-                "| URL:",
-                inputUrl,
-              );
-            }
-            resolve(formData as unknown as FormObj);
-          } else {
-            console.log(
-              "fetchWithLimits: Failed to fetch (HTTP not ok) for key:",
-              key,
-              "| URL:",
-              inputUrl,
-              "| Status:",
-              res.status,
-            );
-            resolve(undefined);
-          }
-        })
-        .catch((err) => {
-          console.log(
-            "fetchWithLimits: Fetch error for key:",
-            key,
-            "| URL:",
-            inputUrl,
-            "| Error:",
-            err,
-          );
-          resolve(undefined);
-        })
-        .finally(() => {
+    const createTask = (attempt: number): (() => void) => {
+      return () => {
+        const cachedNow = formResponseCache.get(key);
+        if (cachedNow !== undefined) {
           activeCount--;
           runNext();
-        });
+          console.log(`fetchFormWithLimit resolved: From cache for ${name}`);
+          resolve(cachedNow as unknown as FormObj);
+          return;
+        }
+
+        fetch(inputUrl)
+          .then(async (res) => {
+            if (!res.ok) {
+              resolve(undefined);
+              return;
+            }
+
+            let jsonData: unknown;
+            try {
+              jsonData = await res.json(); // if this throws, we retry below
+            } catch (_err) {
+              // JSON parsing failed – propagate to catch for retry
+              throw _err;
+            }
+
+            const formData =
+              jsonData &&
+              typeof jsonData === "object" &&
+              (jsonData as any)?.form?.length > 0
+                ? (jsonData as FormObj)
+                : undefined;
+
+            if (formData) {
+              formResponseCache.set(key, formData);
+            }
+
+            console.log(
+              `fetchFormWithLimit resolved: Attempt ${attempt + 1} for ${name}`,
+            );
+            resolve(formData as unknown as FormObj);
+          })
+          .catch(() => {
+            // Fetch error or invalid JSON: re-queue up to 10 times
+            if (attempt < 50) {
+              queue.push(createTask(attempt + 1));
+            } else {
+              console.log(
+                `fetchFormWithLimit resolved: UNSUCCESSFUL for ${name}`,
+              );
+              resolve(undefined);
+            }
+          })
+          .finally(() => {
+            activeCount--;
+            runNext();
+          });
+      };
     };
-    queue.push(task);
+
+    const initialTask = createTask(0);
+    queue.push(initialTask);
     runNext();
   });
 }
