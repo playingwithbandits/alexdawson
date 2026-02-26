@@ -1,6 +1,6 @@
 import { FormObj } from "@/types/raceday";
 
-const MAX_CONCURRENT = 10;
+const MAX_CONCURRENT = 3;
 let activeCount = 0;
 const queue: Array<() => void> = [];
 
