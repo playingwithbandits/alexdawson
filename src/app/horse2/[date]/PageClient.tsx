@@ -228,7 +228,7 @@ export function PageClient({ date }: { date: string }) {
   }
   if (meetings.length === 0) {
     console.log("⚠️ No meetings found");
-    return <div>Loading...</div>;
+    return <div>⚠️ No meetings found</div>;
   }
 
   console.log("🎉 Rendering dashboard with", meetings.length, "meetings");
