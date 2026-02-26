@@ -76,7 +76,7 @@ export function fetchFormWithLimit(
           })
           .catch(() => {
             // Fetch error or invalid JSON: re-queue up to 10 times
-            if (attempt < 50) {
+            if (attempt < 5) {
               queue.push(createTask(attempt + 1));
             } else {
               console.log(
