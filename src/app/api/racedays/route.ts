@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
     console.log("❌ No date parameter provided");
     return NextResponse.json(
       { error: "Date parameter required" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -51,11 +51,18 @@ export async function POST(request: NextRequest) {
     console.log("❌ No date parameter provided");
     return NextResponse.json(
       { error: "Date parameter required" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
   const meetings: Meeting[] = await request.json();
+  if (meetings.length === 0) {
+    console.log("❌ No meetings provided");
+    return NextResponse.json(
+      { error: "No meetings provided" },
+      { status: 400 },
+    );
+  }
   console.log(`📊 Received ${meetings.length} meetings to cache`);
 
   await ensureDirectoryExists(CACHE_DIR);

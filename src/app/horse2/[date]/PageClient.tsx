@@ -10,6 +10,8 @@ import { Loader2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Dashboard } from "../Dashboard";
+import { getFormFetchQueueLength } from "@/lib/racing/fetchWithLimit";
+import { PressureGauge } from "@/app/PressureGauge";
 
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
@@ -26,6 +28,7 @@ export function PageClient({ date }: { date: string }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { data: results, isLoading: resultsLoading } = useResults(date);
+  const [queueLength, setQueueLength] = useState(0);
 
   useEffect(() => {
     console.log("🔄 Effect triggered with date:", date);
@@ -193,11 +196,28 @@ export function PageClient({ date }: { date: string }) {
     loadData();
   }, [date]);
 
+  useEffect(() => {
+    if (!loading) {
+      setQueueLength(0);
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setQueueLength(getFormFetchQueueLength());
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, [loading]);
+
   if (loading || resultsLoading) {
     console.log("⌛ Rendering loading state");
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-screen flex-col gap-4">
         <Loader2 className="h-8 w-8 animate-spin" />
+
+        <div className="text-sm text-gray-300">Queue Length: {queueLength}</div>
+
+        <PressureGauge queueLength={queueLength} />
       </div>
     );
   }

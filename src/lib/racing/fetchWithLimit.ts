@@ -97,3 +97,11 @@ export function fetchFormWithLimit(
     runNext();
   });
 }
+
+export function getFormFetchQueueLength(): number {
+  return queue.length;
+}
+
+export function getFormFetchActiveCount(): number {
+  return activeCount;
+}
