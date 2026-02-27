@@ -52,7 +52,7 @@ export const PressureGauge: React.FC<PressureGaugeProps> = ({
             fontSize: 14,
             fontWeight: 600,
             letterSpacing: 0.5,
-            color: "#222",
+            color: "white",
             opacity: 0.9,
             fontFamily: "system-ui, sans-serif",
             pointerEvents: "none",
