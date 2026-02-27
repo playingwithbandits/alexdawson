@@ -147,12 +147,12 @@ export async function parseRaceDetails(
   const rows = Array.from(rowsElements); //?.slice(0, 2);
   //console.log(`Found ${rows.length} horses to parse`);
   const twoYearsAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365 * 2);
-  const oneYearAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365);
+  const _oneYearAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 365);
   const _180DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 180);
-  const _90DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
+  const _90DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 90);
 
-  const formValidDateThreshold = _180DaysAgo;
-  const fetchFormDateThreshold = _180DaysAgo;
+  const formValidDateThreshold = _oneYearAgo;
+  const fetchFormDateThreshold = _oneYearAgo;
 
   const formShouldGetBeatenHorseStatsDateThreshold = _90DaysAgo;
 
@@ -242,7 +242,7 @@ export async function parseRaceDetails(
       // For each valid form row: fetch the previous race details and parse
       // All fetching and expensive work for each horse completed right here.
       const allValidFormRowsStatsData = await Promise.all(
-        formRowsValid.map(async (latestFormRow) => {
+        formRowsValid.map(async (latestFormRow, latestFormRow_index) => {
           const outcomeCell = latestFormRow?.querySelector(
             '[data-test-selector="RC-runnerFormRow__outcome"]',
           );
@@ -317,10 +317,7 @@ export async function parseRaceDetails(
               ? formRowOr - currentHorseOr
               : 0;
 
-          const disableBeatenHorseStats =
-            !!formRowValidDate &&
-            new Date(formRowValidDate) <=
-              formShouldGetBeatenHorseStatsDateThreshold;
+          const disableBeatenHorseStats = latestFormRow_index >= 2;
 
           const beatenHorsesFormObjs: BeatenHorseFormObj[] =
             disableBeatenHorseStats
