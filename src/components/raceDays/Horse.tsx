@@ -55,7 +55,8 @@ type RequiredStatsKey =
   | "horseHasntRacedWithThisJockey"
   | "horseHasntRacedWithThisTrack"
   | "timePerFurlongIsHigh"
-  | "maxFormBeatenRprIsLow";
+  | "maxFormBeatenRprIsLow"
+  | "maxFormBeatenAveragesRprIsLow";
 
 export const horseHasRequiredStats = (horse: HorseType, race: RaceType) => {
   //("horseHasRequiredStats", horse, race);
@@ -251,16 +252,16 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       key: "horseHasntRacedWithThisRaceType",
     },
 
-    {
-      value: Boolean(horse?.scoreObj?.horseRacedWith?.track),
-      name: "Hasn't raced with this track",
-      key: "horseHasntRacedWithThisTrack",
-    },
-    {
-      value: Boolean(horse?.scoreObj?.horseRacedWith?.jockey),
-      name: "Hasn't raced with this jockey",
-      key: "horseHasntRacedWithThisJockey",
-    },
+    // {
+    //   value: Boolean(horse?.scoreObj?.horseRacedWith?.track),
+    //   name: "Hasn't raced with this track",
+    //   key: "horseHasntRacedWithThisTrack",
+    // },
+    // {
+    //   value: Boolean(horse?.scoreObj?.horseRacedWith?.jockey),
+    //   name: "Hasn't raced with this jockey",
+    //   key: "horseHasntRacedWithThisJockey",
+    // },
 
     // {
     //   value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
@@ -294,6 +295,15 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //       ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
     //   name: "Max form beaten averages rpr is low",
     // },
+
+    {
+      value: Boolean(
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr,
+      ),
+      name: "Max form beaten averages rpr is low",
+      key: "maxFormBeatenAveragesRprIsLow",
+    },
     {
       value: Boolean(
         horse?.scoreObj?.horseBetterThanRaceTheshold
@@ -959,7 +969,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.handicapped_maxes_racedAgainst_Beaten_Averages_rpr &&
-                          statColor(requiredKeyList, ""),
+                          statColor(
+                            requiredKeyList,
+                            "maxFormBeatenAveragesRprIsLow",
+                          ),
                       )}
                       title={`${horse.scoreObj?.raw_data?.raw_handicapped_maxes_racedAgainst_Beaten_Averages_rpr.join(", ")}`}
                     >
