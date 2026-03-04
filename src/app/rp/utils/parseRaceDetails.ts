@@ -152,8 +152,8 @@ export async function parseRaceDetails(
   const _90DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 90);
   const _60DaysAgo = new Date(Date.now() - 1000 * 60 * 60 * 24 * 60);
 
-  const formValidDateThreshold = _60DaysAgo;
-  const fetchFormDateThreshold = _60DaysAgo;
+  const formValidDateThreshold = _90DaysAgo;
+  const fetchFormDateThreshold = _90DaysAgo;
 
   const formShouldGetBeatenHorseStatsDateThreshold = _60DaysAgo;
 

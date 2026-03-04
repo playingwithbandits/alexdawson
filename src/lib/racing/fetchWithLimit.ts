@@ -27,6 +27,7 @@ export function fetchFormWithLimit(
 
   const cached = formResponseCache.get(key);
   if (cached !== undefined) {
+    console.log(`fetchFormWithLimit resolved: From cache for ${name}`);
     return Promise.resolve(cached as unknown as FormObj);
   }
 
