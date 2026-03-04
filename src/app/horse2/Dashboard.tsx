@@ -19,9 +19,7 @@ import { RaceResults } from "@/types/racing";
 import { useState } from "react";
 import { getRaceToShowStats } from "@/components/raceDays/Race";
 import { normalizeTime } from "@/components/horse/DayPredictions";
-import {
-  getWarningMessage,
-} from "@/components/raceDays/Horse";
+import { getWarningMessage } from "@/components/raceDays/Horse";
 
 // race_rpr: 184,
 // race_maxes_racedAgainst: 114,
@@ -122,13 +120,15 @@ export function Dashboard({
       });
 
       if (!response.ok) {
-        console.error("Failed to delete racedays cache:", await response.text());
+        console.error(
+          "Failed to delete racedays cache:",
+          await response.text(),
+        );
         window.alert("Failed to delete cache file.");
         return;
       }
 
-      window.alert("Cache deleted. The page will now reload.");
-      window.location.reload();
+      window.alert("Cache deleted.");
     } catch (error) {
       console.error("Error deleting racedays cache:", error);
       window.alert("An error occurred while deleting the cache file.");
