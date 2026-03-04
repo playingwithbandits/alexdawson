@@ -1,6 +1,6 @@
-import { string } from "@/types/raceday";
-
 const MAX_CONCURRENT = 3;
+const BASE_RETRY_DELAY_MS = 500;
+
 let activeCount = 0;
 const queue: Array<() => void> = [];
 
@@ -28,6 +28,9 @@ export function fetchFormRaceDetailsWithLimit(
 
   const cached = formRaceDetailsResponseCache.get(key);
   if (cached !== undefined) {
+    console.log(
+      `fetchFormRaceDetailsWithLimit resolved: From cache for ${name}`,
+    );
     return Promise.resolve(cached as unknown as string);
   }
 
@@ -36,12 +39,12 @@ export function fetchFormRaceDetailsWithLimit(
       return () => {
         const cachedNow = formRaceDetailsResponseCache.get(key);
         if (cachedNow !== undefined) {
-          activeCount--;
-          runNext();
           console.log(
             `fetchFormRaceDetailsWithLimit resolved: From cache for ${name}`,
           );
           resolve(cachedNow as unknown as string);
+          activeCount--;
+          runNext();
           return;
         }
 
@@ -74,8 +77,12 @@ export function fetchFormRaceDetailsWithLimit(
           })
           .catch(() => {
             // Fetch error or invalid JSON: re-queue up to 10 times
-            if (attempt < 10) {
-              queue.push(createTask(attempt + 1));
+            if (attempt < 5) {
+              const delay = BASE_RETRY_DELAY_MS * attempt;
+              setTimeout(() => {
+                queue.push(createTask(attempt + 1));
+                runNext();
+              }, delay);
             } else {
               console.log(
                 `fetchFormRaceDetailsWithLimit resolved: UNSUCCESSFUL for ${name}`,
@@ -102,4 +109,93 @@ export function getFormRaceDetailsFetchQueueLength(): number {
 
 export function getFormRaceDetailsFetchActiveCount(): number {
   return activeCount;
+}
+
+export function getFormRaceDetailsResponseCacheSnapshot(): Record<
+  string,
+  string
+> {
+  return Object.fromEntries(formRaceDetailsResponseCache.entries());
+}
+
+export function hydrateFormRaceDetailsResponseCache(
+  data: Record<string, string> | null | undefined,
+): void {
+  if (!data || typeof data !== "object") return;
+  for (const [key, value] of Object.entries(data)) {
+    formRaceDetailsResponseCache.set(key, value);
+  }
+}
+
+/**
+ * Load a previously saved Form Race Details cache for a given date
+ * and hydrate the in–memory `formRaceDetailsResponseCache`, similar
+ * to how `loadFormCache` in `PageClient` works for `FormObj`.
+ */
+export async function loadFormRaceDetailsCache(date: string): Promise<void> {
+  try {
+    console.log("🔍 Loading form race details cache for date:", date);
+    const res = await fetch(`/api/formRaceDetails?date=${date}`);
+
+    if (!res.ok) {
+      console.log(
+        "❌ Failed to load form race details cache:",
+        res.status,
+        res.statusText,
+      );
+      return;
+    }
+
+    const data = (await res.json()) as Record<string, string> | null;
+
+    if (data) {
+      console.log(
+        "✅ Hydrating formRaceDetailsResponseCache from dated cache",
+        Object.keys(data).length,
+      );
+      console.log(
+        "✅ FORM RACE DETAILS CACHE PREVIOUS LENGTH",
+        Object.keys(data).length,
+      );
+      hydrateFormRaceDetailsResponseCache(data);
+    } else {
+      console.log(
+        "ℹ️ No existing form race details cache file for date:",
+        date,
+      );
+    }
+  } catch (err) {
+    console.error("❌ Error loading form race details cache:", err);
+  }
+}
+
+export async function saveFormRaceDetailsCache(date: string): Promise<void> {
+  try {
+    const cacheSnapshot = getFormRaceDetailsResponseCacheSnapshot();
+    const keys = Object.keys(cacheSnapshot || {});
+
+    if (!keys.length) {
+      console.log("ℹ️ No form race details cache to save for date:", date);
+      return;
+    }
+
+    console.log(
+      `💾 Saving formRaceDetailsResponseCache with ${keys.length} entries for date: ${date}`,
+    );
+
+    console.log(
+      "✅ FORM RACE DETAILS CACHE POST SAVE LENGTH",
+      Object.keys(cacheSnapshot).length,
+    );
+
+    await fetch(`/api/formRaceDetails?date=${date}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cacheSnapshot),
+    });
+  } catch (err) {
+    console.error("❌ Failed to save form race details cache:", err);
+  }
 }

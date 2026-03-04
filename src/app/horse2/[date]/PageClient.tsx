@@ -12,11 +12,15 @@ import { useEffect, useState } from "react";
 import { Dashboard } from "../Dashboard";
 import {
   getFormFetchQueueLength,
-  getFormResponseCacheSnapshot,
-  hydrateFormResponseCache,
+  loadFormCache,
+  saveFormCache,
 } from "@/lib/racing/fetchWithLimit";
 import { PressureGauge } from "@/app/PressureGauge";
-import { getFormRaceDetailsFetchQueueLength } from "@/lib/racing/fetchFormRaceDetailsWithLimit";
+import {
+  getFormRaceDetailsFetchQueueLength,
+  loadFormRaceDetailsCache,
+  saveFormRaceDetailsCache,
+} from "@/lib/racing/fetchFormRaceDetailsWithLimit";
 
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
@@ -38,31 +42,8 @@ export function PageClient({ date }: { date: string }) {
     useState(0);
 
   useEffect(() => {
-    async function loadFormCache() {
-      try {
-        console.log("🔍 Loading form cache for date:", date);
-        const res = await fetch(`/api/forms?date=${date}`);
-        if (!res.ok) {
-          console.log("❌ Failed to load form cache:", res.status);
-          return;
-        }
-        const data = await res.json();
-        if (data) {
-          console.log("✅ Hydrating formResponseCache from dated cache", data);
-          console.log(
-            "✅ FORM CACHE PREVIOUS LENGTH",
-            Object.keys(data).length,
-          );
-          hydrateFormResponseCache(data);
-        } else {
-          console.log("ℹ️ No existing form cache file for date:", date);
-        }
-      } catch (err) {
-        console.error("❌ Error loading form cache:", err);
-      }
-    }
-
-    loadFormCache();
+    loadFormCache(date);
+    loadFormRaceDetailsCache(date);
   }, [date]);
 
   useEffect(() => {
@@ -251,37 +232,8 @@ export function PageClient({ date }: { date: string }) {
       return;
     }
 
-    async function saveFormCache() {
-      try {
-        const cacheSnapshot = getFormResponseCacheSnapshot();
-        const keys = Object.keys(cacheSnapshot || {});
-
-        if (!keys.length) {
-          console.log("ℹ️ No form cache to save for date:", date);
-          return;
-        }
-
-        console.log(
-          `💾 Saving formResponseCache with ${keys.length} entries for date: ${date}`,
-        );
-
-        console.log(
-          "✅ FORM CACHE POST SAVE LENGTH",
-          Object.keys(cacheSnapshot).length,
-        );
-        await fetch(`/api/forms?date=${date}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(cacheSnapshot),
-        });
-      } catch (err) {
-        console.error("❌ Failed to save form cache:", err);
-      }
-    }
-
-    saveFormCache();
+    saveFormCache(date);
+    saveFormRaceDetailsCache(date);
   }, [loading, resultsLoading, date, meetings.length]);
 
   if (loading || resultsLoading) {

@@ -124,3 +124,54 @@ export function hydrateFormResponseCache(
     formResponseCache.set(key, value);
   }
 }
+
+export async function loadFormCache(date: string): Promise<void> {
+  try {
+    console.log("🔍 Loading form cache for date:", date);
+    const res = await fetch(`/api/forms?date=${date}`);
+    if (!res.ok) {
+      console.log("❌ Failed to load form cache:", res.status);
+      return;
+    }
+    const data = await res.json();
+    if (data) {
+      console.log("✅ Hydrating formResponseCache from dated cache", data);
+      console.log("✅ FORM CACHE PREVIOUS LENGTH", Object.keys(data).length);
+      hydrateFormResponseCache(data);
+    } else {
+      console.log("ℹ️ No existing form cache file for date:", date);
+    }
+  } catch (err) {
+    console.error("❌ Error loading form cache:", err);
+  }
+}
+
+export async function saveFormCache(date: string): Promise<void> {
+  try {
+    const cacheSnapshot = getFormResponseCacheSnapshot();
+    const keys = Object.keys(cacheSnapshot || {});
+
+    if (!keys.length) {
+      console.log("ℹ️ No form cache to save for date:", date);
+      return;
+    }
+
+    console.log(
+      `💾 Saving formResponseCache with ${keys.length} entries for date: ${date}`,
+    );
+
+    console.log(
+      "✅ FORM CACHE POST SAVE LENGTH",
+      Object.keys(cacheSnapshot).length,
+    );
+    await fetch(`/api/forms?date=${date}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cacheSnapshot),
+    });
+  } catch (err) {
+    console.error("❌ Failed to save form cache:", err);
+  }
+}
