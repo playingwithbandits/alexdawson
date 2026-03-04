@@ -1,0 +1,1587 @@
+<div class="rp-raceCourse ui-accordion" data-directive-accordion="" data-diffusion-racedate="2026-03-03" data-test-selector="results-items-container" data-directive-fast-result-trigger="" data-blabla="d18fed97fe41227909f4369cea48132d" data-date="2026-03-03" data-tab="">
+                <section class="rp-raceCourse__meetingContainer ui-accordion__row" data-directive-meeting-staff="" data-diffusion-coursename="Leopardstown" data-course-id="187" data-empty-selector="rp-emptyResult" data-test-selector="course-container" data-test-view="list-results">
+            <div class="rp-raceCourse__row ui-accordion__header
+                                                                                                " data-ng-class="{ 'ui-accordion__header_active': isPaneSelected(187)}" id="187" data-ng-click="selectPane(187)" data-ng-init="                                    collapsePane(187)                                " data-test-selector="link-arrowArea">
+                <img src="https://www.rp-assets.com/pdfs/RP1_187-137x48.jpg" class="rp-raceCourse__row__image" alt="Leopardstown Racecourse" data-test-selector="img-courseImg">                <h2 class="rp-raceCourse__row__name" data-test-selector="course-name" data-test-view="list-results">
+                        LEOPARDSTOWN                                                    (IRE)
+                                                                </h2>
+                                    <div class="rp-raceCourse__row__arrow" data-test-selector="accordion-link" data-test-view="list-results">
+                        <div class="rp-raceCourse__row__arrow__img ui-accordion__arrow" data-test-selector="block-arrowItself">
+                            <svg class="ui-icon
+                                        ui-icon_sizeMedium
+                                        accordionPlus" data-test-selector="RC-accordion__arrow">
+                                <use xlink:href="img/icons.svg#icon-plus"></use>
+                            </svg>
+                            <svg class="ui-icon
+                                        ui-icon_sizeMedium
+                                        accordionMinus" data-test-selector="RC-accordion__arrow">
+                                <use xlink:href="img/icons.svg#icon-minus"></use>
+                            </svg>
+                        </div>
+                    </div>
+                            </div>
+                            <div class="rp-raceCourse__panel ui-accordion__content hidden" data-ng-class="{'hidden': !isPaneSelected(187)}">
+                                            <div class="rp-raceCourse__panel__detailsWrapper">
+                                                        <dl class="rp-raceCourse__panel__detailsNarrow">
+                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title">
+                                        Going:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        Chase - YIELDING (Soft in places); Hurdle - SOFT (Heavy in places)                                    </dd>
+                                                                                                                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title
+                                               rp-raceCourse__panel__detailsNarrow__title_conditions">
+                                        Total Non-Runners:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        0                                    </dd>
+                                                            </dl>
+                                                        <div class="rp-raceCourse__panel__details" data-test-selector="block-resultPanel">
+                                <div class="rp-raceCourse__panel__race
+                                        rp-raceCourse__panel__race">
+                                    <div class="rp-raceCourse__panel__details__content">
+                                                                                    <div class="rp-raceCourse__panel__details__content__info">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Going:
+                                        </span>
+                                                <span class="rp-raceCourse__panel__details__content__info__text">
+                                            Chase - YIELDING (Soft in places); Hurdle - SOFT (Heavy in places)                                        </span>
+                                            </div>
+                                                                                                                                                                                                             <div class="rp-raceCourse__panel__details__content__info" data-test-selector="courseMeetingDetailsNonRunners">
+                                             <span class="rp-raceCourse__panel__details__content__info__title">
+                                                  Total Non-Runners:
+                                             </span>
+                                             <span class="rp-raceCourse__panel__details__content__info__text">
+                                                  0                                             </span>
+                                             </div>
+                                                                                                                                                                
+                                        <div class="rp-raceCourse__panel__details__content__info" data-test-selector="block-meetingDetails__dividends">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Dividends and spread make-ups
+                                        </span>
+                                            <ul class="rp-raceCourse__panel__details__content__info__dividends">
+                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Jackpot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Placepot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Quadpot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                                                                                                                                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rp-raceCourse__panel__race__timePanel
+                                        rp-raceCourse__panel__race__detailsHeader">
+                                    <span>Meeting details</span>
+                                </div>
+
+                                <div class="rp-raceCourse__panel__race__info__buttons">
+                                    <div class="rp-raceCourse__panel__details__analysis">
+                                        <a class=" ui-link rp-raceCourse__panel__details__analysis__link
+                                              js-popupLink" href="/results/187/leopardstown/2026-03-03/winning-times">
+
+                                            <div class="rp-raceCourse__panel__race__info__buttons__watch
+                                                    rp-raceCourse__panel__race__info__buttons__analysis
+                                                    ui-btn ui-btn_secondary" data-test-selector="link-analysisOfWinningTimes">
+                                                <span>Analysis of winning times</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                                        <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914613" data-empty-selector="rp-emptyResult" data-crs-id="187" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="LEOPARDSTOWN" data-diffusion-racetime="13:55" data-diffusion-race-id="914613" data-test-selector="race-panel-187-1:55">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Golf, Padel, Range At Leopardstown Launching Spring 2026 Maiden Hurdle                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-187-1:55">2m5f</span>,
+                                                <span data-test-selector="text-prizeMoney1">€7,068</span>
+                    </span>
+                                            <div>Going: Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914613"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">1:55</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914614" data-empty-selector="rp-emptyResult" data-crs-id="187" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="LEOPARDSTOWN" data-diffusion-racetime="14:25" data-diffusion-race-id="914614" data-test-selector="race-panel-187-2:25">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        1888 Restaurant Mares Maiden Hurdle                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-187-2:25">2m5f</span>,
+                                                <span data-test-selector="text-prizeMoney2">€7,068</span>
+                    </span>
+                                            <div>Going: Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914614"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">2:25</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914615" data-empty-selector="rp-emptyResult" data-crs-id="187" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="LEOPARDSTOWN" data-diffusion-racetime="14:55" data-diffusion-race-id="914615" data-test-selector="race-panel-187-2:55">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        QuinnBet Mares Handicap Hurdle                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-187-2:55">2m2½f</span>,
+                                                <span data-test-selector="text-prizeMoney3">€8,835</span>
+                    </span>
+                                            <div>Going: Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914615"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">2:55</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914616" data-empty-selector="rp-emptyResult" data-crs-id="187" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="LEOPARDSTOWN" data-diffusion-racetime="15:25" data-diffusion-race-id="914616" data-test-selector="race-panel-187-3:25">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        QuinnBet Handicap Hurdle                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-187-3:25">3m</span>,
+                                                <span data-test-selector="text-prizeMoney4">€8,835</span>
+                    </span>
+                                            <div>Going: Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914616"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">3:25</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914617" data-empty-selector="rp-emptyResult" data-crs-id="187" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="LEOPARDSTOWN" data-diffusion-racetime="15:55" data-diffusion-race-id="914617" data-test-selector="race-panel-187-3:55">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Irish Stallion Farms EBF Beginners Chase                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-187-3:55">2m1f</span>,
+                                                <span data-test-selector="text-prizeMoney5">€8,246</span>
+                    </span>
+                                            <div>Going: Yielding</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914617"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">3:55</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914618" data-empty-selector="rp-emptyResult" data-crs-id="187" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="LEOPARDSTOWN" data-diffusion-racetime="16:25" data-diffusion-race-id="914618" data-test-selector="race-panel-187-4:25">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Leopardstown Racecourse Beginners Chase                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-187-4:25">2m5½f</span>,
+                                                <span data-test-selector="text-prizeMoney6">€7,362.50</span>
+                    </span>
+                                            <div>Going: Yielding</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914618"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">4:25</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914619" data-empty-selector="rp-emptyResult" data-crs-id="187" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="LEOPARDSTOWN" data-diffusion-racetime="16:55" data-diffusion-race-id="914619" data-test-selector="race-panel-187-4:55">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        John Thomas McNamara Series (Q.R.) Handicap Chase                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-187-4:55">2m5½f</span>,
+                                                <span data-test-selector="text-prizeMoney7">€8,835</span>
+                    </span>
+                                            <div>Going: Yielding</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914619"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">4:55</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914620" data-empty-selector="rp-emptyResult" data-crs-id="187" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="LEOPARDSTOWN" data-diffusion-racetime="17:30" data-diffusion-race-id="914620" data-test-selector="race-panel-187-5:30">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Irish Stallion Farms EBF Mares INH Flat Race                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-187-5:30">2m</span>,
+                                                <span data-test-selector="text-prizeMoney8">€6,479</span>
+                    </span>
+                                            <div>Going: Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914620"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">5:30</span>
+        </div>
+            </div>
+    </div>
+                                                                <div class="rp-raceCourse__panel__analysisButton">
+                            <a class="ui-link
+                                      ui-link_primary
+                                      js-popupLink" href="/results/187/leopardstown/2026-03-03/winning-times">
+                                <span class="rp-raceCourse__panel__analysisButton__label">Analysis of winning times</span>
+                                <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                            </a>
+                        </div>
+                                    </div>
+                    </section>
+            <section class="rp-raceCourse__meetingContainer ui-accordion__row" data-directive-meeting-staff="" data-diffusion-coursename="Newcastle" data-course-id="37" data-empty-selector="rp-emptyResult" data-test-selector="course-container" data-test-view="list-results">
+            <div class="rp-raceCourse__row ui-accordion__header
+                                                                                                " data-ng-class="{ 'ui-accordion__header_active': isPaneSelected(37)}" id="37" data-ng-click="selectPane(37)" data-ng-init="                                    collapsePane(37)                                " data-test-selector="link-arrowArea">
+                <img src="https://www.rp-assets.com/pdfs/RP1-37-136x48-c.jpg" class="rp-raceCourse__row__image" alt="Newcastle Racecourse" data-test-selector="img-courseImg">                <h2 class="rp-raceCourse__row__name" data-test-selector="course-name" data-test-view="list-results">
+                        NEWCASTLE                                                                </h2>
+                                    <div class="rp-raceCourse__row__arrow" data-test-selector="accordion-link" data-test-view="list-results">
+                        <div class="rp-raceCourse__row__arrow__img ui-accordion__arrow" data-test-selector="block-arrowItself">
+                            <svg class="ui-icon
+                                        ui-icon_sizeMedium
+                                        accordionPlus" data-test-selector="RC-accordion__arrow">
+                                <use xlink:href="img/icons.svg#icon-plus"></use>
+                            </svg>
+                            <svg class="ui-icon
+                                        ui-icon_sizeMedium
+                                        accordionMinus" data-test-selector="RC-accordion__arrow">
+                                <use xlink:href="img/icons.svg#icon-minus"></use>
+                            </svg>
+                        </div>
+                    </div>
+                            </div>
+                            <div class="rp-raceCourse__panel ui-accordion__content hidden" data-ng-class="{'hidden': !isPaneSelected(37)}">
+                                            <div class="rp-raceCourse__panel__detailsWrapper">
+                                                        <dl class="rp-raceCourse__panel__detailsNarrow">
+                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title">
+                                        Going:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        GOOD TO SOFT (5.4)                                    </dd>
+                                                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title
+                                               rp-raceCourse__panel__detailsNarrow__title_conditions">
+                                        Weather conditions:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        sunny                                    </dd>
+                                                                                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title
+                                               rp-raceCourse__panel__detailsNarrow__title_conditions">
+                                        Total Non-Runners:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        0                                    </dd>
+                                                            </dl>
+                                                        <div class="rp-raceCourse__panel__details" data-test-selector="block-resultPanel">
+                                <div class="rp-raceCourse__panel__race
+                                        rp-raceCourse__panel__race">
+                                    <div class="rp-raceCourse__panel__details__content">
+                                                                                    <div class="rp-raceCourse__panel__details__content__info">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Going:
+                                        </span>
+                                                <span class="rp-raceCourse__panel__details__content__info__text">
+                                            GOOD TO SOFT (5.4)                                        </span>
+                                            </div>
+                                                                                                                            <div class="rp-raceCourse__panel__details__content__info">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Weather conditions:
+                                        </span>
+                                                <span class="rp-raceCourse__panel__details__content__info__text">
+                                            sunny                                        </span>
+                                            </div>
+                                                                                                                            <div class="rp-raceCourse__panel__details__content__info" data-test-selector="courseMeetingDetailsWind">
+                                            <span class="rp-raceCourse__panel__details__content__info__title">
+                                                Wind:
+                                            </span>
+                                                <span class="rp-raceCourse__panel__details__content__info__text">
+                                                slight, half behind                                            </span>
+                                            </div>
+                                                                                                                             <div class="rp-raceCourse__panel__details__content__info" data-test-selector="courseMeetingDetailsNonRunners">
+                                             <span class="rp-raceCourse__panel__details__content__info__title">
+                                                  Total Non-Runners:
+                                             </span>
+                                             <span class="rp-raceCourse__panel__details__content__info__text">
+                                                  0                                             </span>
+                                             </div>
+                                                                                                                                                                
+                                        <div class="rp-raceCourse__panel__details__content__info" data-test-selector="block-meetingDetails__dividends">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Dividends and spread make-ups
+                                        </span>
+                                            <ul class="rp-raceCourse__panel__details__content__info__dividends">
+                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Jackpot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Placepot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Quadpot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                                                                                                                                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rp-raceCourse__panel__race__timePanel
+                                        rp-raceCourse__panel__race__detailsHeader">
+                                    <span>Meeting details</span>
+                                </div>
+
+                                <div class="rp-raceCourse__panel__race__info__buttons">
+                                    <div class="rp-raceCourse__panel__details__analysis">
+                                        <a class=" ui-link rp-raceCourse__panel__details__analysis__link
+                                              js-popupLink" href="/results/37/newcastle/2026-03-03/winning-times">
+
+                                            <div class="rp-raceCourse__panel__race__info__buttons__watch
+                                                    rp-raceCourse__panel__race__info__buttons__analysis
+                                                    ui-btn ui-btn_secondary" data-test-selector="link-analysisOfWinningTimes">
+                                                <span>Analysis of winning times</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                                        <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912439" data-empty-selector="rp-emptyResult" data-crs-id="37" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="NEWCASTLE" data-diffusion-racetime="14:05" data-diffusion-race-id="912439" data-test-selector="race-panel-37-2:05">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Border Minstrel Sunday Lunch Novices' Limited Handicap Hurdle                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-37-2:05">2m4½f</span>,
+                                                    Class 5,
+                                                <span data-test-selector="text-prizeMoney1">£3,247.81</span>
+                    </span>
+                                            <div>Going: Good To Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912439"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                            <span class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-raceComment"><!--
+                                 --> <!--
+                         --></span>
+                                            </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">2:05</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912438" data-empty-selector="rp-emptyResult" data-crs-id="37" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="NEWCASTLE" data-diffusion-racetime="14:35" data-diffusion-race-id="912438" data-test-selector="race-panel-37-2:35">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Mini Golf At High Gosforth Park Novices' Handicap Chase (Go North Forgive 'N Forget Series Qual')                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-37-2:35">2m4f</span>,
+                                                    Class 5,
+                                                <span data-test-selector="text-prizeMoney2">£3,247.81</span>
+                    </span>
+                                            <div>Going: Good To Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912438"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">2:35</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912435" data-empty-selector="rp-emptyResult" data-crs-id="37" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="NEWCASTLE" data-diffusion-racetime="15:05" data-diffusion-race-id="912435" data-test-selector="race-panel-37-3:05">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Virgin Bet Supports Safe Gambling Novices' Hurdle (Go North Night Nurse Hurdle Series Qual') (GBB)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-37-3:05">2m4½f</span>,
+                                                    Class 4,
+                                                <span data-test-selector="text-prizeMoney3">£5,446</span>
+                    </span>
+                                            <div>Going: Good To Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912435"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                            <span class="rp-raceCourse__panel__race__info__postRaceInfo__more_light" data-test-selector="text-raceComment"><!--
+                                 --> <!--
+                         --></span>
+                                            </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">3:05</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912437" data-empty-selector="rp-emptyResult" data-crs-id="37" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="NEWCASTLE" data-diffusion-racetime="15:35" data-diffusion-race-id="912437" data-test-selector="race-panel-37-3:35">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Get Raceday Ready Handicap Hurdle (Go North Brindisi Breeze Series Qualifier)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-37-3:35">2m7½f</span>,
+                                                    Class 4,
+                                                <span data-test-selector="text-prizeMoney4">£4,066.37</span>
+                    </span>
+                                            <div>Going: Good To Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912437"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">3:35</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912436" data-empty-selector="rp-emptyResult" data-crs-id="37" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="NEWCASTLE" data-diffusion-racetime="16:05" data-diffusion-race-id="912436" data-test-selector="race-panel-37-4:05">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Virgin Bet A Good Bet Handicap Chase (GBB Race)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-37-4:05">2m7½f</span>,
+                                                    Class 4,
+                                                <span data-test-selector="text-prizeMoney5">£4,700.09</span>
+                    </span>
+                                            <div>Going: Good To Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912436"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">4:05</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912440" data-empty-selector="rp-emptyResult" data-crs-id="37" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="NEWCASTLE" data-diffusion-racetime="16:35" data-diffusion-race-id="912440" data-test-selector="race-panel-37-4:35">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        High Gosforth Park Golf Club Mares' National Hunt Flat Race (Conditional &amp; Amateur Jockeys') (GBB)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-37-4:35">2m1f</span>,
+                                                    Class 5,
+                                                <span data-test-selector="text-prizeMoney6">£2,450.70</span>
+                    </span>
+                                            <div>Going: Good To Soft</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912440"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">4:35</span>
+        </div>
+            </div>
+    </div>
+                                                                <div class="rp-raceCourse__panel__analysisButton">
+                            <a class="ui-link
+                                      ui-link_primary
+                                      js-popupLink" href="/results/37/newcastle/2026-03-03/winning-times">
+                                <span class="rp-raceCourse__panel__analysisButton__label">Analysis of winning times</span>
+                                <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                            </a>
+                        </div>
+                                    </div>
+                    </section>
+            <section class="rp-raceCourse__meetingContainer ui-accordion__row" data-directive-meeting-staff="" data-diffusion-coursename="Wolverhampton (AW)" data-course-id="513" data-empty-selector="rp-emptyResult" data-test-selector="course-container" data-test-view="list-results">
+            <div class="rp-raceCourse__row ui-accordion__header
+                                                                                                " data-ng-class="{ 'ui-accordion__header_active': isPaneSelected(513)}" id="513" data-ng-click="selectPane(513)" data-ng-init="                                    collapsePane(513)                                " data-test-selector="link-arrowArea">
+                <img src="https://www.rp-assets.com/pdfs/RP1-513-136x48-x.jpg" class="rp-raceCourse__row__image" alt="Wolverhampton (AW) Racecourse" data-test-selector="img-courseImg">                <h2 class="rp-raceCourse__row__name" data-test-selector="course-name" data-test-view="list-results">
+                        WOLVERHAMPTON (AW)                                                                </h2>
+                                    <div class="rp-raceCourse__row__arrow" data-test-selector="accordion-link" data-test-view="list-results">
+                        <div class="rp-raceCourse__row__arrow__img ui-accordion__arrow" data-test-selector="block-arrowItself">
+                            <svg class="ui-icon
+                                        ui-icon_sizeMedium
+                                        accordionPlus" data-test-selector="RC-accordion__arrow">
+                                <use xlink:href="img/icons.svg#icon-plus"></use>
+                            </svg>
+                            <svg class="ui-icon
+                                        ui-icon_sizeMedium
+                                        accordionMinus" data-test-selector="RC-accordion__arrow">
+                                <use xlink:href="img/icons.svg#icon-minus"></use>
+                            </svg>
+                        </div>
+                    </div>
+                            </div>
+                            <div class="rp-raceCourse__panel ui-accordion__content hidden" data-ng-class="{'hidden': !isPaneSelected(513)}">
+                                            <div class="rp-raceCourse__panel__detailsWrapper">
+                                                        <dl class="rp-raceCourse__panel__detailsNarrow">
+                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title">
+                                        Going:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        TAPETA: STANDARD                                    </dd>
+                                                                                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title">
+                                        Stalls:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        7f - Outside; Remainder - Inside                                    </dd>
+                                                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title
+                                               rp-raceCourse__panel__detailsNarrow__title_conditions">
+                                        Total Non-Runners:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        0                                    </dd>
+                                                            </dl>
+                                                        <div class="rp-raceCourse__panel__details" data-test-selector="block-resultPanel">
+                                <div class="rp-raceCourse__panel__race
+                                        rp-raceCourse__panel__race">
+                                    <div class="rp-raceCourse__panel__details__content">
+                                                                                    <div class="rp-raceCourse__panel__details__content__info">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Going:
+                                        </span>
+                                                <span class="rp-raceCourse__panel__details__content__info__text">
+                                            TAPETA: STANDARD                                        </span>
+                                            </div>
+                                                                                                                                                                                                             <div class="rp-raceCourse__panel__details__content__info" data-test-selector="courseMeetingDetailsNonRunners">
+                                             <span class="rp-raceCourse__panel__details__content__info__title">
+                                                  Total Non-Runners:
+                                             </span>
+                                             <span class="rp-raceCourse__panel__details__content__info__text">
+                                                  0                                             </span>
+                                             </div>
+                                                                                                                            <div class="rp-raceCourse__panel__details__content__info" data-test-selector="courseMeetingDetailsStalls">
+                                            <span class="rp-raceCourse__panel__details__content__info__title">
+                                                Stalls:
+                                            </span>
+                                                <span class="rp-raceCourse__panel__details__content__info__text">
+                                                7f - Outside; Remainder - Inside                                            </span>
+                                            </div>
+                                                                                                                        
+                                        <div class="rp-raceCourse__panel__details__content__info" data-test-selector="block-meetingDetails__dividends">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Dividends and spread make-ups
+                                        </span>
+                                            <ul class="rp-raceCourse__panel__details__content__info__dividends">
+                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Jackpot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Placepot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                    <li>
+                                                    <span class="rp-raceCourse__panel__details__content__info__dividendsTitle">
+                                                        Quadpot
+                                                    </span>
+                                                        <span class="rp-raceCourse__panel__details__content__info__dividendsText">
+                                                                                                             </span>
+                                                    </li>
+                                                                                                                                                                                                                                                                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rp-raceCourse__panel__race__timePanel
+                                        rp-raceCourse__panel__race__detailsHeader">
+                                    <span>Meeting details</span>
+                                </div>
+
+                                <div class="rp-raceCourse__panel__race__info__buttons">
+                                    <div class="rp-raceCourse__panel__details__analysis">
+                                        <a class=" ui-link rp-raceCourse__panel__details__analysis__link
+                                              js-popupLink" href="/results/513/wolverhampton-aw/2026-03-03/winning-times">
+
+                                            <div class="rp-raceCourse__panel__race__info__buttons__watch
+                                                    rp-raceCourse__panel__race__info__buttons__analysis
+                                                    ui-btn ui-btn_secondary" data-test-selector="link-analysisOfWinningTimes">
+                                                <span>Analysis of winning times</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                                        <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912617" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="17:25" data-diffusion-race-id="912617" data-test-selector="race-panel-513-5:25">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Midnite Are Upping The Betting Game Handicap (GBBPlus Race)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-513-5:25">1m6f</span>,
+                                                    Class 4,
+                                                <span data-test-selector="text-prizeMoney1">£4,972.30</span>
+                    </span>
+                                            <div>Going: Standard</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912617"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">5:25</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912616" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="18:00" data-diffusion-race-id="912616" data-test-selector="race-panel-513-6:00">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Midnite A Next Generation Betting App Maiden Stakes (GBB Race)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-513-6:00">6f</span>,
+                                                    Class 4,
+                                                <span data-test-selector="text-prizeMoney2">£5,400</span>
+                    </span>
+                                            <div>Going: Standard</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912616"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">6:00</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912619" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="18:30" data-diffusion-race-id="912619" data-test-selector="race-panel-513-6:30">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Make The Move To Midnite Handicap                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-513-6:30">6f</span>,
+                                                    Class 5,
+                                                <span data-test-selector="text-prizeMoney3">£3,716.14</span>
+                    </span>
+                                            <div>Going: Standard</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912619"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">6:30</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912615" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="19:00" data-diffusion-race-id="912615" data-test-selector="race-panel-513-7:00">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Bet £10 Get £40 With BetMGM Restricted Maiden Fillies' Stakes (Bands C And D) (GBB Race)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-513-7:00">7f</span>,
+                                                    Class 4,
+                                                <span data-test-selector="text-prizeMoney4">£5,400</span>
+                    </span>
+                                            <div>Going: Standard</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912615"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">7:00</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912618" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="19:30" data-diffusion-race-id="912618" data-test-selector="race-panel-513-7:30">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Daily Profit Boosts At betmgm.co.uk Handicap                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-513-7:30">7f</span>,
+                                                    Class 6,
+                                                <span data-test-selector="text-prizeMoney5">£4,710.60</span>
+                    </span>
+                                            <div>Going: Standard</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912618"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">7:30</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912620" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="20:00" data-diffusion-race-id="912620" data-test-selector="race-panel-513-8:00">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Read Meg Nicholls' Blog At betmgm.co.uk Handicap                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-513-8:00">1m½f</span>,
+                                                    Class 5,
+                                                <span data-test-selector="text-prizeMoney6">£3,716.14</span>
+                    </span>
+                                            <div>Going: Standard</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912620"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">8:00</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="912621" data-empty-selector="rp-emptyResult" data-crs-id="513" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="WOLVERHAMPTON" data-diffusion-racetime="20:30" data-diffusion-race-id="912621" data-test-selector="race-panel-513-8:30">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Midnite: Built For 2026 Not 2006 Handicap                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-513-8:30">1m1½f</span>,
+                                                    Class 6,
+                                                <span data-test-selector="text-prizeMoney7">£3,140.40</span>
+                    </span>
+                                            <div>Going: Standard</div>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="912621"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                                                                                </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                                                                                                                                                    
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">8:30</span>
+        </div>
+            </div>
+    </div>
+                                                                <div class="rp-raceCourse__panel__analysisButton">
+                            <a class="ui-link
+                                      ui-link_primary
+                                      js-popupLink" href="/results/513/wolverhampton-aw/2026-03-03/winning-times">
+                                <span class="rp-raceCourse__panel__analysisButton__label">Analysis of winning times</span>
+                                <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                            </a>
+                        </div>
+                                    </div>
+                    </section>
+            <section class="rp-raceCourse__meetingContainer ui-accordion__row" data-directive-meeting-staff="" data-diffusion-coursename="Chantilly" data-course-id="204" data-empty-selector="rp-emptyResult" data-test-selector="course-container" data-test-view="list-results">
+            <div class="rp-raceCourse__row ui-accordion__header
+                                                                                                " data-ng-class="{ 'ui-accordion__header_active': isPaneSelected(204)}" id="204" data-ng-click="selectPane(204)" data-ng-init="                                    collapsePane(204)                                " data-test-selector="link-arrowArea">
+                <img src="https://www.rp-assets.com/pdfs/RP1-136x48-fr.jpg" class="rp-raceCourse__row__image" alt="Chantilly Racecourse" data-test-selector="img-courseImg">                <h2 class="rp-raceCourse__row__name" data-test-selector="course-name" data-test-view="list-results">
+                        CHANTILLY                                                    (FR)
+                                                                </h2>
+                                    <div class="rp-raceCourse__row__arrow" data-test-selector="accordion-link" data-test-view="list-results">
+                        <div class="rp-raceCourse__row__arrow__img ui-accordion__arrow" data-test-selector="block-arrowItself">
+                            <svg class="ui-icon
+                                        ui-icon_sizeMedium
+                                        accordionPlus" data-test-selector="RC-accordion__arrow">
+                                <use xlink:href="img/icons.svg#icon-plus"></use>
+                            </svg>
+                            <svg class="ui-icon
+                                        ui-icon_sizeMedium
+                                        accordionMinus" data-test-selector="RC-accordion__arrow">
+                                <use xlink:href="img/icons.svg#icon-minus"></use>
+                            </svg>
+                        </div>
+                    </div>
+                            </div>
+                            <div class="rp-raceCourse__panel ui-accordion__content hidden" data-ng-class="{'hidden': !isPaneSelected(204)}">
+                                            <div class="rp-raceCourse__panel__detailsWrapper">
+                                                        <dl class="rp-raceCourse__panel__detailsNarrow">
+                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title">
+                                        Going:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        POLYTRACK: STANDARD                                    </dd>
+                                                                                                                                                                    <dt class="rp-raceCourse__panel__detailsNarrow__title
+                                               rp-raceCourse__panel__detailsNarrow__title_conditions">
+                                        Total Non-Runners:
+                                    </dt>
+                                    <dd class="rp-raceCourse__panel__detailsNarrow__text">
+                                        0                                    </dd>
+                                                            </dl>
+                                                        <div class="rp-raceCourse__panel__details" data-test-selector="block-resultPanel">
+                                <div class="rp-raceCourse__panel__race
+                                        rp-raceCourse__panel__race">
+                                    <div class="rp-raceCourse__panel__details__content">
+                                                                                    <div class="rp-raceCourse__panel__details__content__info">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Going:
+                                        </span>
+                                                <span class="rp-raceCourse__panel__details__content__info__text">
+                                            POLYTRACK: STANDARD                                        </span>
+                                            </div>
+                                                                                                                                                                                                             <div class="rp-raceCourse__panel__details__content__info" data-test-selector="courseMeetingDetailsNonRunners">
+                                             <span class="rp-raceCourse__panel__details__content__info__title">
+                                                  Total Non-Runners:
+                                             </span>
+                                             <span class="rp-raceCourse__panel__details__content__info__text">
+                                                  0                                             </span>
+                                             </div>
+                                                                                                                                                                
+                                        <div class="rp-raceCourse__panel__details__content__info" data-test-selector="block-meetingDetails__dividends">
+                                        <span class="rp-raceCourse__panel__details__content__info__title">
+                                            Dividends and spread make-ups
+                                        </span>
+                                            <ul class="rp-raceCourse__panel__details__content__info__dividends">
+                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rp-raceCourse__panel__race__timePanel
+                                        rp-raceCourse__panel__race__detailsHeader">
+                                    <span>Meeting details</span>
+                                </div>
+
+                                <div class="rp-raceCourse__panel__race__info__buttons">
+                                    <div class="rp-raceCourse__panel__details__analysis">
+                                        <a class=" ui-link rp-raceCourse__panel__details__analysis__link
+                                              js-popupLink" href="/results/204/chantilly/2026-03-03/winning-times">
+
+                                            <div class="rp-raceCourse__panel__race__info__buttons__watch
+                                                    rp-raceCourse__panel__race__info__buttons__analysis
+                                                    ui-btn ui-btn_secondary" data-test-selector="link-analysisOfWinningTimes">
+                                                <span>Analysis of winning times</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                                        <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914712" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="12:11" data-diffusion-race-id="914712" data-test-selector="race-panel-204-12:11">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix le Sancy (Conditions) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-12:11">6½f</span>,
+                                                <span data-test-selector="text-prizeMoney1">£11,130.43</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914712"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                7 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">12:11</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914713" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="12:55" data-diffusion-race-id="914713" data-test-selector="race-panel-204-12:55">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix du Centre d'Entrainement (Handicap) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-12:55">1m1½f</span>,
+                                                <span data-test-selector="text-prizeMoney2">£22,130.43</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914713"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                16 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">12:55</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914714" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="13:30" data-diffusion-race-id="914714" data-test-selector="race-panel-204-1:30">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix de la Traversiere (Newcomers) (Colts &amp; Geldings) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-1:30">1m1½f</span>,
+                                                <span data-test-selector="text-prizeMoney3">£10,739.13</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914714"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                10 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">1:30</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914715" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="14:05" data-diffusion-race-id="914715" data-test-selector="race-panel-204-2:05">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix de la Serpentine (Newcomers) (Fillies &amp; Mares) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-2:05">1m1½f</span>,
+                                                <span data-test-selector="text-prizeMoney4">£10,739.13</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914715"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                9 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">2:05</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914716" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="14:40" data-diffusion-race-id="914716" data-test-selector="race-panel-204-2:40">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix de la Fu Madame (Claimer) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-2:40">7f</span>,
+                                                <span data-test-selector="text-prizeMoney5">£7,913.04</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914716"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                10 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">2:40</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914717" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="15:15" data-diffusion-race-id="914717" data-test-selector="race-panel-204-3:15">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix des Allees Cavalieres (Handicap) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-3:15">1m1½f</span>,
+                                                <span data-test-selector="text-prizeMoney6">£7,521.74</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914717"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                13 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">3:15</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914718" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="15:50" data-diffusion-race-id="914718" data-test-selector="race-panel-204-3:50">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix des Ecuries Cantiliennes (Handicap) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-3:50">1m1½f</span>,
+                                                <span data-test-selector="text-prizeMoney7">£9,173.91</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914718"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                14 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">3:50</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914719" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="16:25" data-diffusion-race-id="914719" data-test-selector="race-panel-204-4:25">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix des Ronds de Marche (Handicap) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-4:25">1m1½f</span>,
+                                                <span data-test-selector="text-prizeMoney8">£8,347.83</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914719"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                14 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">4:25</span>
+        </div>
+            </div>
+    </div>
+                                                                    <div class="rp-raceCourse__panel__container" data-directive-fast-result="" data-race-id="914720" data-empty-selector="rp-emptyResult" data-crs-id="204" data-test-selector="raceCourse-container" data-test-view="list-results">
+    <div class="rp-raceCourse__panel__race" data-diffusion-coursename="CHANTILLY" data-diffusion-racetime="17:00" data-diffusion-race-id="914720" data-test-selector="race-panel-204-5:00">
+        <div class="rp-raceCourse__panel__race__info">
+                        <div class="rp-raceCourse__panel__race__info__title">
+                                    <span class="rp-raceCourse__panel__race__info__title__link">
+                        Prix des Pistes (Handicap) (All Weather) (Polytrack)                    </span>
+                                            </div>
+                            <div class="rp-raceCourse__panel__race__info__smallDetails" data-test-selector="block-raceSmallDescriptionCourse">
+                    <span>
+                        <span class="rp-raceCourse__panel__race__info__distance" data-test-selector="text-race-distance-204-5:00">1m1½f</span>,
+                                                <span data-test-selector="text-prizeMoney9">£11,260.87</span>
+                    </span>
+                                    </div>
+                <div class="rp-raceCourse__panel__race__info__lineThin"></div>
+                                                            <ol class="rp-raceResult" data-directive-apply-fast-result="" data-race-id="914720"></ol>
+                                    </div>
+
+                                <div class="rp-raceCourse__panel__race__info__postRaceInfo
+                " data-test-selector="text-postRaceInfo">
+                <dl class="rp-raceCourse__panel__race__info__postRaceInfo__main" data-test-selector="text-postRaceInfoMain">
+                                                                        <dt class="rp-raceCourse__panel__race__info__postRaceInfo__main_dark
+                                       rp-raceCourse__panel__race__info__postRaceInfo_semicolon">
+                                14 ran<!--
+                         --></dt>
+                                                                                                            </dl>
+                                    <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                                                                                                                    </div>
+                                                            <div class="rp-raceCourse__panel__race__info__postRaceInfo__more">
+                        
+                                                                    </div>
+                            </div>
+            </div>
+    <div class="rp-raceCourse__panel__race__timePanel">
+        <div class="rp-raceCourse__panel__race__time">
+            <span data-test-selector="text-raceTime">5:00</span>
+        </div>
+            </div>
+    </div>
+                                                                <div class="rp-raceCourse__panel__analysisButton">
+                            <a class="ui-link
+                                      ui-link_primary
+                                      js-popupLink" href="/results/204/chantilly/2026-03-03/winning-times">
+                                <span class="rp-raceCourse__panel__analysisButton__label">Analysis of winning times</span>
+                                <svg class="ui-icon
+                                        ui-icon_sizeXSmall            ">
+    <use xlink:href="img/icons.svg#icon-right"></use>
+</svg>                            </a>
+                        </div>
+                                    </div>
+                    </section>
+            <section class="rp-raceCourse__meetingContainer ui-accordion__row" data-directive-meeting-staff="" data-diffusion-coursename="Market Rasen" data-course-id="35" data-empty-selector="rp-emptyResult" data-test-selector="course-container" data-test-view="list-results">
+            <div class="rp-raceCourse__row ui-accordion__header
+                                                                                                                            rp-raceCourse__row_abandoned
+                        " data-ng-class="{ 'ui-accordion__header_active': isPaneSelected(35)}" id="35" data-ng-click="selectPane(35)" data-ng-init="                                    collapsePane(35)                                " data-test-selector="link-arrowArea">
+                <img src="https://www.rp-assets.com/pdfs/RP1-35-136x48-c.jpg" class="rp-raceCourse__row__image" alt="Market Rasen Racecourse" data-test-selector="img-courseImg">                <h2 class="rp-raceCourse__row__name" data-test-selector="course-name" data-test-view="list-results">
+                        MARKET RASEN                                                                            - ABANDONED                                        </h2>
+                            </div>
+                    </section>
+    </div>

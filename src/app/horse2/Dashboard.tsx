@@ -1,5 +1,11 @@
 import { Meeting, ScoreObj } from "@/types/raceday";
 import { Meeting as MeetingComponent } from "@/components/raceDays/Meeting";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { horseNameToKey } from "@/lib/racing/scores/funcs";
 import {
   compareTwoGoingCodeArrays,
@@ -100,7 +106,8 @@ export function Dashboard({
 }) {
   console.log("Dashboard", data, results);
   const [showInfo, setShowInfo] = useState(true);
-  const [thresholdValue, setThresholdValue] = useState(0.9);
+  const [thresholdValue, setThresholdValue] = useState(0.85);
+  const [missingLenThreshold, setMissingLenThreshold] = useState(3);
 
   if (!data || data.length === 0) {
     return (
@@ -978,22 +985,57 @@ export function Dashboard({
         </button>
       </div>
       <div className="mb-4 p-4 bg-gray-800 rounded-lg">
-        <label className="block text-white mb-2">
-          Threshold Value: {thresholdValue.toFixed(2)}
-        </label>
-        <input
-          type="range"
-          min="0"
-          max="1"
-          step="0.01"
-          value={thresholdValue}
-          onChange={(e) => setThresholdValue(parseFloat(e.target.value))}
-          className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
-        />
-        <div className="flex justify-between text-xs text-gray-400 mt-1">
-          <span>0</span>
-          <span>1</span>
-        </div>
+        <Accordion type="single" collapsible>
+          <AccordionItem value="settings">
+            <AccordionTrigger className="text-white hover:no-underline hover:text-gray-200 py-0">
+              Settings
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="pt-4 space-y-4">
+                <div>
+                  <label className="block text-white mb-2">
+                    Threshold Value: {thresholdValue.toFixed(2)}
+                  </label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value={thresholdValue}
+                    onChange={(e) =>
+                      setThresholdValue(parseFloat(e.target.value))
+                    }
+                    className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  />
+                  <div className="flex justify-between text-xs text-gray-400 mt-1">
+                    <span>0</span>
+                    <span>1</span>
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-white mb-2">
+                    Missing Stats Threshold: {missingLenThreshold}
+                  </label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="10"
+                    step="1"
+                    value={missingLenThreshold}
+                    onChange={(e) =>
+                      setMissingLenThreshold(parseInt(e.target.value, 10))
+                    }
+                    className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                  />
+                  <div className="flex justify-between text-xs text-gray-400 mt-1">
+                    <span>0</span>
+                    <span>10</span>
+                  </div>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
       {dataWithScoreObj
         ?.filter((x) => {
@@ -1005,7 +1047,7 @@ export function Dashboard({
               const missingStats = getWarningMessage(horse, race).missingStats;
               const missingLen = missingStats.length;
 
-              return missingLen <= 2;
+              return missingLen <= missingLenThreshold;
             });
 
             const raceHasFinsihed =
@@ -1030,6 +1072,7 @@ export function Dashboard({
             results={results}
             showInfo={showInfo}
             date={date}
+            missingLenThreshold={missingLenThreshold}
           />
         ))}
     </div>

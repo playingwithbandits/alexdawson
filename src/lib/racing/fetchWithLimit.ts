@@ -36,10 +36,10 @@ export function fetchFormWithLimit(
       return () => {
         const cachedNow = formResponseCache.get(key);
         if (cachedNow !== undefined) {
-          activeCount--;
-          runNext();
           console.log(`fetchFormWithLimit resolved: From cache for ${name}`);
           resolve(cachedNow as unknown as FormObj);
+          activeCount--;
+          runNext();
           return;
         }
 

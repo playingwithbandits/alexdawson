@@ -20,6 +20,7 @@ interface RaceProps {
   results: RaceResults | undefined;
   showInfo: boolean;
   date: string;
+  missingLenThreshold: number;
 }
 
 export const getRaceToShowStats = (race: RaceType) => {
@@ -60,7 +61,14 @@ export const getRaceToShowStats = (race: RaceType) => {
   };
 };
 
-export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
+export function Race({
+  race,
+  meeting,
+  results,
+  showInfo,
+  date,
+  missingLenThreshold,
+}: RaceProps) {
   // Calculate
 
   const {
@@ -101,9 +109,18 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
 
       const missingLen = missingStats.length;
 
-      return showInfo ? !raceHasFinsihed && missingLen <= 2 : missingLen <= 2; // && gapToAvgScore >= 0;
+      return showInfo
+        ? !raceHasFinsihed && missingLen <= missingLenThreshold
+        : missingLen <= missingLenThreshold; // && gapToAvgScore >= 0;
     });
-  }, [showAll, race, raceAvgScore, showInfo, raceHasFinsihed]);
+  }, [
+    showAll,
+    race,
+    raceAvgScore,
+    showInfo,
+    raceHasFinsihed,
+    missingLenThreshold,
+  ]);
 
   const placeTerms =
     race.horses.length < 5
@@ -158,8 +175,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const missingLen = missingStats.length;
 
                     return showInfo
-                      ? !raceHasFinsihed && missingLen <= 2
-                      : missingLen <= 2; // && gapToAvgScore >= 0;
+                      ? !raceHasFinsihed && missingLen <= missingLenThreshold
+                      : missingLen <= missingLenThreshold; // && gapToAvgScore >= 0;
                   })
                   ?.map((horse, index) => {
                     const gapToAvgScore =
@@ -213,7 +230,8 @@ export function Race({ race, meeting, results, showInfo, date }: RaceProps) {
                     const missingStats = !horseHasRequiredStatsGood
                       ? getWarningMessage(horse, race).missingStats
                       : [];
-                    const missingOnlyFew = missingStats.length <= 2;
+                    const missingOnlyFew =
+                      missingStats.length <= missingLenThreshold;
                     const missingNoStats = missingStats.length === 0;
 
                     const rpPredictions = Object.values(

@@ -10,9 +10,16 @@ interface MeetingProps {
   results: RaceResults | undefined;
   showInfo: boolean;
   date: string;
+  missingLenThreshold: number;
 }
 
-export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
+export function Meeting({
+  meeting,
+  results,
+  showInfo,
+  date,
+  missingLenThreshold,
+}: MeetingProps) {
   return (
     <div className="meeting">
       <span className="font-semibold text-lg text-white">
@@ -28,7 +35,7 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
               const missingStats = getWarningMessage(horse, x).missingStats;
 
               const missingLen = missingStats.length;
-              return missingLen <= 2;
+              return missingLen <= missingLenThreshold;
             });
 
             const raceHasFinsihed =
@@ -47,6 +54,7 @@ export function Meeting({ meeting, results, showInfo, date }: MeetingProps) {
               results={results}
               showInfo={showInfo}
               date={date}
+              missingLenThreshold={missingLenThreshold}
             />
           ))}
       </div>
