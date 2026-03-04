@@ -223,16 +223,6 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Trainer isnt decent",
     // },
     {
-      value: gapToAvgScoreGood,
-      name: `Gap to avg score is less than ${gapToAvgScoreThreshold}`,
-      key: "gapToAvgScoreIsLessThanThreshold",
-    },
-    {
-      value: Boolean(horse.scoreObj?.total && horse.scoreObj?.total > 60),
-      name: "Score is less than 60",
-      key: "scoreIsLessThan",
-    },
-    {
       value: horse.age > 2,
       name: "Horse is under 2 years old",
       key: "horseIsUnder2YearsOld",
@@ -275,9 +265,11 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       key: "horseHasntRacedWithThisJockey",
     },
 
-
     {
-      value: Boolean(horse?.scoreObj?.horseBetterThanRaceTheshold?.race_maxes_racedAgainstMaxes),
+      value: Boolean(
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_maxes_racedAgainstMaxes,
+      ),
       name: "Maxes raced against maxes is low",
       key: "race_maxes_racedAgainstMaxes",
     },
@@ -371,14 +363,14 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       key: "race_allBeatenHorsesNowGoneOntoStats_maxes_rpr",
     },
 
-    // {
-    //   value: Boolean(
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr,
-    //   ),
-    //   name: "All beaten horses now gone onto stats had bad averages rpr",
-    //   key: "race_allBeatenHorsesNowGoneOntoStats_avgs_rpr",
-    // },
+    {
+      value: Boolean(
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_allBeatenHorsesNowGoneOntoStats_avgs_rpr,
+      ),
+      name: "All beaten horses now gone onto stats had bad averages rpr",
+      key: "race_allBeatenHorsesNowGoneOntoStats_avgs_rpr",
+    },
 
     {
       value: Boolean(
@@ -389,14 +381,14 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       key: "race_allBeatenHorsesNowGoneOntoStats_maxes_or",
     },
 
-    // {
-    //   value: Boolean(
-    //     horse?.scoreObj?.horseBetterThanRaceTheshold
-    //       ?.race_allBeatenHorsesNowGoneOntoStats_avgs_or,
-    //   ),
-    //   name: "All beaten horses now gone onto stats had bad averages or",
-    //   key: "race_allBeatenHorsesNowGoneOntoStats_avgs_or",
-    // },
+    {
+      value: Boolean(
+        horse?.scoreObj?.horseBetterThanRaceTheshold
+          ?.race_allBeatenHorsesNowGoneOntoStats_avgs_or,
+      ),
+      name: "All beaten horses now gone onto stats had bad averages or",
+      key: "race_allBeatenHorsesNowGoneOntoStats_avgs_or",
+    },
     // // {
     //   value: horse?.scoreObj?.horseBetterThanRaceTheshold
     //     ?.race_allBeatenHorsesNowGoneOntoStats_maxes_or,
@@ -973,7 +965,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseBetterThanRaceTheshold?.race_maxes_racedAgainstMaxes &&
-                          statColor(requiredKeyList, "race_maxes_racedAgainstMaxes"),
+                          statColor(
+                            requiredKeyList,
+                            "race_maxes_racedAgainstMaxes",
+                          ),
                       )}
                     >
                       {formMaxesRacedAgainstMaxes_Max.rpr?.toFixed(1)}
