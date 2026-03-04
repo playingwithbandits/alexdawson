@@ -78,8 +78,8 @@ export function fetchFormWithLimit(
           })
           .catch(() => {
             // Fetch error or invalid JSON: re-queue up to 10 times with exponential backoff
-            if (attempt < 10) {
-              const delay = BASE_RETRY_DELAY_MS * 2 ** attempt;
+            if (attempt < 5) {
+              const delay = BASE_RETRY_DELAY_MS * attempt;
               setTimeout(() => {
                 queue.push(createTask(attempt + 1));
                 runNext();
