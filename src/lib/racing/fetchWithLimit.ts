@@ -2,6 +2,7 @@ import { FormObj } from "@/types/raceday";
 import { horseNameToKey } from "./scores/funcs";
 
 const MAX_CONCURRENT = 3;
+const BASE_RETRY_DELAY_MS = 500;
 let activeCount = 0;
 const queue: Array<() => void> = [];
 
@@ -58,12 +59,13 @@ export function fetchFormWithLimit(
               throw _err;
             }
 
-            const formData =
+            const hasFormData =
               jsonData &&
               typeof jsonData === "object" &&
-              (jsonData as any)?.form?.length > 0
-                ? (jsonData as FormObj)
-                : undefined;
+              Array.isArray((jsonData as { form?: unknown[] }).form) &&
+              (jsonData as { form?: unknown[] }).form!.length > 0;
+
+            const formData = hasFormData ? (jsonData as FormObj) : undefined;
 
             if (formData) {
               formResponseCache.set(key, formData);
@@ -75,9 +77,13 @@ export function fetchFormWithLimit(
             resolve(formData as unknown as FormObj);
           })
           .catch(() => {
-            // Fetch error or invalid JSON: re-queue up to 10 times
+            // Fetch error or invalid JSON: re-queue up to 10 times with exponential backoff
             if (attempt < 10) {
-              queue.push(createTask(attempt + 1));
+              const delay = BASE_RETRY_DELAY_MS * 2 ** attempt;
+              setTimeout(() => {
+                queue.push(createTask(attempt + 1));
+                runNext();
+              }, delay);
             } else {
               console.log(
                 `fetchFormWithLimit resolved: UNSUCCESSFUL for ${name}`,

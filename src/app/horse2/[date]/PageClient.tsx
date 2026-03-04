@@ -247,7 +247,7 @@ export function PageClient({ date }: { date: string }) {
   }, [loading]);
 
   useEffect(() => {
-    if (loading || resultsLoading) {
+    if (loading || resultsLoading || meetings.length === 0) {
       return;
     }
 
@@ -282,7 +282,7 @@ export function PageClient({ date }: { date: string }) {
     }
 
     saveFormCache();
-  }, [loading, resultsLoading, date]);
+  }, [loading, resultsLoading, date, meetings.length]);
 
   if (loading || resultsLoading) {
     console.log("⌛ Rendering loading state");
