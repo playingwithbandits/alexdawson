@@ -1,4 +1,5 @@
 import { FormObj } from "@/types/raceday";
+import { horseNameToKey } from "./scores/funcs";
 
 const MAX_CONCURRENT = 3;
 let activeCount = 0;
@@ -6,10 +7,8 @@ const queue: Array<() => void> = [];
 
 const formResponseCache = new Map<string, FormObj>();
 
-function cacheKey(input: RequestInfo | URL): string {
-  if (typeof input === "string") return input;
-  if (input instanceof URL) return input.href;
-  return input.url;
+function cacheKey(name: string): string {
+  return horseNameToKey(name);
 }
 
 function runNext(): void {
@@ -24,7 +23,7 @@ export function fetchFormWithLimit(
   inputUrl: string,
   name: string,
 ): Promise<FormObj | undefined> {
-  const key = cacheKey(inputUrl);
+  const key = cacheKey(name);
 
   const cached = formResponseCache.get(key);
   if (cached !== undefined) {
@@ -104,4 +103,17 @@ export function getFormFetchQueueLength(): number {
 
 export function getFormFetchActiveCount(): number {
   return activeCount;
+}
+
+export function getFormResponseCacheSnapshot(): Record<string, FormObj> {
+  return Object.fromEntries(formResponseCache.entries());
+}
+
+export function hydrateFormResponseCache(
+  data: Record<string, FormObj> | null | undefined,
+): void {
+  if (!data || typeof data !== "object") return;
+  for (const [key, value] of Object.entries(data)) {
+    formResponseCache.set(key, value);
+  }
 }
