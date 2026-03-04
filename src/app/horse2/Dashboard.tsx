@@ -16,14 +16,12 @@ import {
   max,
 } from "@/lib/utils";
 import { RaceResults } from "@/types/racing";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getRaceToShowStats } from "@/components/raceDays/Race";
 import { normalizeTime } from "@/components/horse/DayPredictions";
 import {
   getWarningMessage,
-  horseHasRequiredStats,
 } from "@/components/raceDays/Horse";
-import { getFormFetchQueueLength } from "@/lib/racing/fetchWithLimit";
 
 // race_rpr: 184,
 // race_maxes_racedAgainst: 114,
@@ -108,6 +106,34 @@ export function Dashboard({
   const [showInfo, setShowInfo] = useState(true);
   const [thresholdValue, setThresholdValue] = useState(0.85);
   const [missingLenThreshold, setMissingLenThreshold] = useState(3);
+
+  const handleDeleteCache = async () => {
+    if (typeof window === "undefined") return;
+
+    const confirmed = window.confirm(
+      `Delete cached racedays data for ${date}? This cannot be undone.`,
+    );
+
+    if (!confirmed) return;
+
+    try {
+      const response = await fetch(`/api/racedays?date=${date}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        console.error("Failed to delete racedays cache:", await response.text());
+        window.alert("Failed to delete cache file.");
+        return;
+      }
+
+      window.alert("Cache deleted. The page will now reload.");
+      window.location.reload();
+    } catch (error) {
+      console.error("Error deleting racedays cache:", error);
+      window.alert("An error occurred while deleting the cache file.");
+    }
+  };
 
   if (!data || data.length === 0) {
     return (
@@ -977,12 +1003,20 @@ export function Dashboard({
     <div className="space-y-4 p-4 bg-gray-900 min-h-screen">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-white">Race Day Dashboard</h1>
-        <button
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-          onClick={() => setShowInfo(!showInfo)}
-        >
-          {showInfo ? "Hide" : "Show"}
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+            onClick={() => setShowInfo(!showInfo)}
+          >
+            {showInfo ? "Hide" : "Show"}
+          </button>
+          <button
+            className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
+            onClick={handleDeleteCache}
+          >
+            Delete Cache
+          </button>
+        </div>
       </div>
       <div className="mb-4 p-4 bg-gray-800 rounded-lg">
         <Accordion type="single" collapsible>
@@ -1040,8 +1074,7 @@ export function Dashboard({
       {dataWithScoreObj
         ?.filter((x) => {
           const hasARaceWithHorseScoreMax = x.races.some((race) => {
-            const { ratioWithFormsGood, ratioWithHorsesAbove3YearsOldGood } =
-              getRaceToShowStats(race);
+            getRaceToShowStats(race);
 
             const someHorseHasMaxScore = race.horses.some((horse) => {
               const missingStats = getWarningMessage(horse, race).missingStats;
