@@ -1,4 +1,4 @@
-import { countCommentSentimentObj } from "@/lib/utils";
+import { countCommentSentimentObj, daysAgo } from "@/lib/utils";
 import {
   FormObj,
   Horse as HorseType,
@@ -32,6 +32,7 @@ export function FormRow({ form }: FormProps) {
     comment,
     commentMatchedTerms,
     or,
+    racedAgainst_Beaten,
   } = form;
 
   //console.log(horse.name, { commentMatchedTerms });
@@ -40,9 +41,21 @@ export function FormRow({ form }: FormProps) {
   const lastRaceWasExcellent =
     countCommentSentiment?.score !== undefined &&
     countCommentSentiment?.score >= 3;
+
+  const issueWithForm = !Boolean(racedAgainst_Beaten?.length);
   return (
     <tr className="">
-      <td className="px-4 py-2 ">{raceDate}</td>
+      <td className="px-4 py-2 w-[110px]">
+        {new Date(raceDate)
+          .toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "short",
+            year: "2-digit",
+          })
+          .replace(/ /, " ")}
+        {issueWithForm && <span style={{ color: "#fb923c" }}>⚠️</span>}
+      </td>
+      <td className="px-4 py-2 ">{daysAgo(raceDate)}d</td>
       <td className={"px-4 py-2"}>{formTrackId}</td>
       <td className="px-4 py-2 ">
         {position} | {racedAgainstRaw?.length}
@@ -92,7 +105,7 @@ export function renderCommentWithHighlights(
         positive: string[];
         negative: string[];
       }
-    | undefined
+    | undefined,
 ) {
   if (!comment) return "-";
   if (!matchedTerms) return comment;
@@ -139,7 +152,9 @@ export function renderCommentWithHighlights(
     // Add non-matching text before this match
     if (match.start > lastEnd) {
       result.push(
-        <span key={`text-${i}`}>{comment.substring(lastEnd, match.start)}</span>
+        <span key={`text-${i}`}>
+          {comment.substring(lastEnd, match.start)}
+        </span>,
       );
     }
 
@@ -148,17 +163,17 @@ export function renderCommentWithHighlights(
       match.type === "positive"
         ? "#4ade80"
         : match.type === "negative" || match.type === "bad"
-        ? "#ef4444"
-        : match.type === "hampered"
-        ? "#fb923c"
-        : match.type === "eyecatcher"
-        ? "#facc15"
-        : undefined;
+          ? "#ef4444"
+          : match.type === "hampered"
+            ? "#fb923c"
+            : match.type === "eyecatcher"
+              ? "#facc15"
+              : undefined;
 
     result.push(
       <span key={`match-${i}`} style={{ color }}>
         {comment.substring(match.start, match.end)}
-      </span>
+      </span>,
     );
 
     lastEnd = match.end;

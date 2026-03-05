@@ -30,7 +30,8 @@ export function Forms({ forms, horse, race, meeting }: FormProps) {
             </td>
           </tr>
           <tr>
-            <td className="px-4 py-2 ">Date</td>
+            <td className="px-4 py-2 w-[110px]">Date</td>
+            <td className="px-4 py-2 ">Days</td>
             <td className="px-4 py-2 ">Track</td>
             <td className="px-4 py-2 ">Position</td>
             <td className="px-4 py-2 ">Type</td>

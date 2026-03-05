@@ -102,7 +102,7 @@ export function Dashboard({
 }) {
   console.log("Dashboard", data, results);
   const [showInfo, setShowInfo] = useState(true);
-  const [thresholdValue, setThresholdValue] = useState(0.85);
+  const [thresholdValue, setThresholdValue] = useState(0.9);
   const [missingLenThreshold, setMissingLenThreshold] = useState(3);
 
   const handleDeleteCache = async () => {

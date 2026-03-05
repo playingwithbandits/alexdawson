@@ -136,6 +136,10 @@ export function Race({
   const raceHasPredictions =
     race?.predictions && Object.values(race?.predictions || {}).length > 0;
 
+  const anyHorsesHaveIssue = race.horses.some(
+    (horse) => getWarningMessage(horse, race).anyFormsHaveIssue,
+  );
+
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value={race.id}>
@@ -144,11 +148,11 @@ export function Race({
             <div className="flex items-center space-x-4">
               <span className="font-medium text-blue-400">
                 {raceHasFinsihed ? "🏁" : ""} {race.time}{" "}
-                {raceAvgScore.toFixed(1)}
                 {placeTerms ? ` 👥${placeTerms}` : ""}
-                {raceHasPredictions ? ` rp` : ""}
+                {!raceHasPredictions ? ` !rp` : ""}
                 {!ratioWithHorsesAbove3YearsOldGood ? ` !3y` : ""}
                 {!ratioWithFormsGood ? ` !F#` : ""}
+                {anyHorsesHaveIssue ? ` ⚠️` : ""}
               </span>
               <div className="flex flex-wrap gap-2">
                 {race.horses

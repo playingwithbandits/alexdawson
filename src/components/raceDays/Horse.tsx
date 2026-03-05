@@ -73,6 +73,10 @@ export const horseHasRequiredStats = (horse: HorseType, race: RaceType) => {
 
 export const getWarningMessage = (horse: HorseType, race: RaceType) => {
   //console.log("getWarningMessage", horse, race);
+
+  const anyFormsHaveIssue = horse.form?.some(
+    (form) => !Boolean(form.racedAgainst_Beaten?.length),
+  );
   const raceAvgScore =
     race?.horses?.length > 0
       ? avg(race?.horses?.map((horse) => horse.scoreObj?.total || 0))
@@ -417,6 +421,7 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     goodStatsPercentage,
     missingStatsLength,
     requiredKeyList: requiredStats.map((stat) => stat.key),
+    anyFormsHaveIssue,
   };
 };
 
@@ -538,6 +543,7 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
   const trainerStatsOverallWinRateGood = trainerStatsOverallWinRate >= 5;
 
   const requiredKeyList = warningMessage.requiredKeyList;
+  const anyFormsHaveIssue = warningMessage.anyFormsHaveIssue;
 
   return (
     <div className={warningMessage.horseHasRequiredStats ? "" : "opacity-70"}>
@@ -547,6 +553,11 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
           <AccordionTrigger className="">
             <div className="flex items-center justify-between w-full">
               <div className="flex items-center space-x-4">
+                {anyFormsHaveIssue && (
+                  <span style={{ color: "#fb923c", marginRight: "4px" }}>
+                    ⚠️
+                  </span>
+                )}
                 <span
                   className={twMerge(
                     warningMessage.goodStatsPercentage > 0.8
