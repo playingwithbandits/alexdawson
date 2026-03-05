@@ -55,20 +55,114 @@ export interface RaceAccordionStats {
   comments: Record<string, string>;
 }
 
+const raceAccordionCache = new Map<string, RaceAccordionStats>();
+
+function cacheKey(raceId: string): string {
+  return raceId;
+}
+
+export function getRaceAccordionCacheSnapshot(): Record<
+  string,
+  RaceAccordionStats
+> {
+  return Object.fromEntries(raceAccordionCache.entries());
+}
+
+export function hydrateRaceAccordionCache(
+  data: Record<string, RaceAccordionStats> | null | undefined,
+): void {
+  if (!data || typeof data !== "object") return;
+  for (const [key, value] of Object.entries(data)) {
+    raceAccordionCache.set(key, value);
+  }
+}
+
+export async function loadRaceAccordionCache(
+  date: string,
+): Promise<void> {
+  try {
+    console.log("🔍 Loading race accordion cache for date:", date);
+    const res = await fetch(`/api/raceExtraInfo?date=${date}`);
+
+    if (!res.ok) {
+      console.log(
+        "❌ Failed to load race accordion cache:",
+        res.status,
+        res.statusText,
+      );
+      return;
+    }
+
+    const data = (await res.json()) as
+      | Record<string, RaceAccordionStats>
+      | null;
+
+    if (data) {
+      console.log(
+        "✅ Hydrating raceAccordionCache from dated cache",
+        Object.keys(data).length,
+      );
+      hydrateRaceAccordionCache(data);
+    } else {
+      console.log(
+        "ℹ️ No existing race accordion cache file for date:",
+        date,
+      );
+    }
+  } catch (err) {
+    console.error("❌ Error loading race accordion cache:", err);
+  }
+}
+
+export async function saveRaceAccordionCache(
+  date: string,
+): Promise<void> {
+  try {
+    const cacheSnapshot = getRaceAccordionCacheSnapshot();
+    const keys = Object.keys(cacheSnapshot || {});
+
+    if (!keys.length) {
+      console.log("ℹ️ No race accordion cache to save for date:", date);
+      return;
+    }
+
+    console.log(
+      `💾 Saving raceAccordionCache with ${keys.length} entries for date: ${date}`,
+    );
+
+    await fetch(`/api/raceExtraInfo?date=${date}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cacheSnapshot),
+    });
+  } catch (err) {
+    console.error("❌ Failed to save race accordion cache:", err);
+  }
+}
+
 export async function fetchRaceAccordion(
-  raceId: string
+  raceId: string,
 ): Promise<RaceAccordionStats | undefined> {
+  const key = cacheKey(raceId);
+  const cached = raceAccordionCache.get(key);
+  if (cached) {
+    console.log(`✅ fetchRaceAccordion resolved from cache for raceId=${raceId}`);
+    return cached;
+  }
+
   try {
     const response = await fetch(
       `/getP.php?q=${encodeURIComponent(
-        `https://www.racingpost.com/racecards/data/accordion/${raceId}`
-      )}`
+        `https://www.racingpost.com/racecards/data/accordion/${raceId}`,
+      )}`,
     );
 
     if (!response.ok) {
       console.error(
         "Failed to fetch race accordion data:",
-        response.statusText
+        response.statusText,
       );
       return undefined;
     }
@@ -96,8 +190,8 @@ export async function fetchRaceAccordion(
             nameWithoutParens === nameWithoutParens.toUpperCase() &&
             nameWithoutParens.length > 1
           );
-        }) || ""
-      )
+        }) || "",
+      ),
     );
 
     const isNap = verdictText.toLowerCase().includes("(nap)");
@@ -115,10 +209,9 @@ export async function fetchRaceAccordion(
       const horseName = horseNameToKey(
         item
           .querySelector(".RC-spotlightComments__itemTitle")
-          ?.textContent?.trim() || ""
+          ?.textContent?.trim() || "",
       );
       const comment = item
-
         .querySelector(".RC-spotlightComments__itemSpotlight")
         ?.textContent?.trim();
       if (horseName && comment) {
@@ -144,13 +237,13 @@ export async function fetchRaceAccordion(
         parseFloat(
           row
             .querySelector('[data-test-selector="RC-lastPercent__row"]')
-            ?.textContent?.trim() || "0"
+            ?.textContent?.trim() || "0",
         ) || 0;
       const lastProfit =
         parseFloat(
           row
             .querySelector('[data-test-selector="RC-lastProfit__row"]')
-            ?.textContent?.trim() || "0"
+            ?.textContent?.trim() || "0",
         ) || 0;
 
       // Parse overall stats
@@ -165,13 +258,13 @@ export async function fetchRaceAccordion(
         parseFloat(
           row
             .querySelector('[data-test-selector="RC-overallPercent__row"]')
-            ?.textContent?.trim() || "0"
+            ?.textContent?.trim() || "0",
         ) || 0;
       const overallProfit =
         parseFloat(
           row
             .querySelector('[data-test-selector="RC-overallProfit__row"]')
-            ?.textContent?.trim() || "0"
+            ?.textContent?.trim() || "0",
         ) || 0;
 
       return {
@@ -192,20 +285,20 @@ export async function fetchRaceAccordion(
     }
 
     const trainerStats = Array.from(
-      doc.querySelectorAll('[data-test-selector="RC-trainerName__row"]')
+      doc.querySelectorAll('[data-test-selector="RC-trainerName__row"]'),
     )
       .map((el) => el.closest("tr"))
       .map((row) => parseStats(row as Element));
 
     const jockeyStats = Array.from(
-      doc.querySelectorAll('[data-test-selector="RC-jockeyName__row"]')
+      doc.querySelectorAll('[data-test-selector="RC-jockeyName__row"]'),
     )
       .map((el) => el.closest("tr"))
       .map((row) => parseStats(row as Element));
 
     // Parse horse stats
     const horseStats = Array.from(
-      doc.querySelectorAll(".RC-stats__table:nth-of-type(3) tbody tr")
+      doc.querySelectorAll(".RC-stats__table:nth-of-type(3) tbody tr"),
     ).map((row) => {
       const cells = Array.from(row.querySelectorAll("td"));
       const [goingRuns, goingWinRate] = cells[1]
@@ -235,13 +328,17 @@ export async function fetchRaceAccordion(
       };
     });
 
-    return {
+    const result: RaceAccordionStats = {
       verdict,
       comments,
       trainerStats,
       jockeyStats,
       horseStats,
     };
+
+    raceAccordionCache.set(key, result);
+
+    return result;
   } catch (error) {
     console.error("Error fetching race accordion data:", error);
     return undefined;
@@ -253,6 +350,6 @@ export function cleanName(name: string) {
     name
       ?.toLowerCase()
       .replace(/\s*\(nap\)\s*/i, "")
-      .trim()
+      .trim(),
   );
 }

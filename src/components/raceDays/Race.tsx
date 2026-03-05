@@ -136,9 +136,12 @@ export function Race({
   const raceHasPredictions =
     race?.predictions && Object.values(race?.predictions || {}).length > 0;
 
-  const anyHorsesHaveIssue = race.horses.some(
+  const raceIssueCount = race.horses.filter(
     (horse) => getWarningMessage(horse, race).anyFormsHaveIssue,
-  );
+  ).length;
+
+  const raceIssueRatio = raceIssueCount / (race.horses.length || 1);
+  const raceIssueRatioBad = raceIssueRatio >= 0.2;
 
   return (
     <Accordion type="single" collapsible>
@@ -152,8 +155,18 @@ export function Race({
                 {!raceHasPredictions ? ` !rp` : ""}
                 {!ratioWithHorsesAbove3YearsOldGood ? ` !3y` : ""}
                 {!ratioWithFormsGood ? ` !F#` : ""}
-                {anyHorsesHaveIssue ? ` ⚠️` : ""}
               </span>
+
+              <span
+                className={twMerge(
+                  "font-medium",
+                  raceIssueRatioBad ? "text-red-500" : "text-green-500",
+                )}
+              >
+                {race.horses.length - raceIssueCount}/{race.horses.length}
+                ⚠️{raceIssueRatio.toFixed(2)}
+              </span>
+
               <div className="flex flex-wrap gap-2">
                 {race.horses
                   // ?.filter(

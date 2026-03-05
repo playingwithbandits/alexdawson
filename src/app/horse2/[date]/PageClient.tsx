@@ -21,6 +21,14 @@ import {
   loadFormRaceDetailsCache,
   saveFormRaceDetailsCache,
 } from "@/lib/racing/fetchFormRaceDetailsWithLimit";
+import {
+  loadRaceAccordionCache,
+  saveRaceAccordionCache,
+} from "@/app/rp/utils/fetchRaceAccordion";
+import {
+  loadPredictionsCache,
+  savePredictionsCache,
+} from "@/app/rp/utils/fetchPredictions";
 
 function getPageUrl(date: string) {
   return `https://www.racingpost.com/racecards/${date}/`;
@@ -44,6 +52,8 @@ export function PageClient({ date }: { date: string }) {
   useEffect(() => {
     loadFormCache(date);
     loadFormRaceDetailsCache(date);
+    loadRaceAccordionCache(date);
+    loadPredictionsCache(date);
   }, [date]);
 
   useEffect(() => {
@@ -99,11 +109,7 @@ export function PageClient({ date }: { date: string }) {
                 setTimeout(resolve, Math.floor(Math.random() * 5000)),
               );
               const response = await fetch(
-                `/api/racedays/proxy?url=${encodeURIComponent(
-                  `https://alexdawson.co.uk/getP.php?q=${encodeURIComponent(
-                    pageUrl,
-                  )}`,
-                )}`,
+                `/getP.php?q=${encodeURIComponent(`https://alexdawson.co.uk/getP.php?q=${pageUrl}`)}`,
               );
               const html_res = await response.text();
               const retryParser = new DOMParser();
@@ -234,6 +240,8 @@ export function PageClient({ date }: { date: string }) {
 
     saveFormCache(date);
     saveFormRaceDetailsCache(date);
+    saveRaceAccordionCache(date);
+    savePredictionsCache(date);
   }, [loading, resultsLoading, date, meetings.length]);
 
   if (loading || resultsLoading) {
