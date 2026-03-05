@@ -63,7 +63,9 @@ type RequiredStatsKey =
   | "scoreIsLessThan"
   | "formAveragesRprIsLow"
   | "race_maxes_racedAgainstMaxes"
-  | "horseFormAveragesStatsGoodDistance";
+  | "horseFormAveragesStatsGoodDistance"
+  | "horseMostRecentFormDistance"
+  | "horseMostRecentFormGoing";
 
 export const horseHasRequiredStats = (horse: HorseType, race: RaceType) => {
   //("horseHasRequiredStats", horse, race);
@@ -174,11 +176,11 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
     //   name: "Averages raced against beaten averages isn't good",
     // },
 
-    {
-      value: lastRaceCommentScore >= 0,
-      name: "Last race wasn't good",
-      key: "lastRaceCommentScoreIsLessThan0",
-    },
+    // {
+    //   value: lastRaceCommentScore >= 0,
+    //   name: "Last race wasn't good",
+    //   key: "lastRaceCommentScoreIsLessThan0",
+    // },
     // {
     //   value: averageCommentScore >= 0,
     //   name: "Average comment score is less than 0",
@@ -283,19 +285,17 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       key: "horseFormAveragesStatsGoodDistance",
     },
 
-    // {
-    //   value: horse?.scoreObj?.horseMostRecentForm?.type,
-    //   name: "Recent form type",
-    // },
-    // {
-    //   value: horse?.scoreObj?.horseMostRecentForm?.distance,
-    //   name: "Recent form distance",
-    // },
+    {
+      value: Boolean(horse?.scoreObj?.horseMostRecentForm?.distance),
+      name: "Recent form distance",
+      key: "horseMostRecentFormDistance",
+    },
 
-    // {
-    //   value: horse?.scoreObj?.horseMostRecentForm?.going,
-    //   name: "Recent form going",
-    // },
+    {
+      value: Boolean(horse?.scoreObj?.horseMostRecentForm?.going),
+      name: "Recent form going",
+      key: "horseMostRecentFormGoing",
+    },
 
     {
       value: Boolean(
@@ -1061,7 +1061,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseMostRecentForm?.going &&
-                          statColor(requiredKeyList, ""),
+                          statColor(
+                            requiredKeyList,
+                            "horseMostRecentFormGoing",
+                          ),
                       )}
                     >
                       {horse?.mostRecentForm?.goingCodes?.join(", ")}
@@ -1070,7 +1073,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseMostRecentForm?.distance &&
-                          statColor(requiredKeyList, ""),
+                          statColor(
+                            requiredKeyList,
+                            "horseMostRecentFormDistance",
+                          ),
                       )}
                     >
                       {horse?.mostRecentForm?.distanceF?.toFixed(1)}
