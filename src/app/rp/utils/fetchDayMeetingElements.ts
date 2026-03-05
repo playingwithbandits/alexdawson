@@ -223,7 +223,7 @@ export async function fetchDayMeetingElements(
               return;
             }
 
-            if (attempt < 5) {
+            if (attempt < 25) {
               const delay = DAY_MEETING_BASE_RETRY_DELAY_MS * attempt;
               setTimeout(() => {
                 dayMeetingQueue.push(createTask(attempt + 1));
