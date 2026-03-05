@@ -77,9 +77,7 @@ export function hydrateRaceAccordionCache(
   }
 }
 
-export async function loadRaceAccordionCache(
-  date: string,
-): Promise<void> {
+export async function loadRaceAccordionCache(date: string): Promise<void> {
   try {
     console.log("🔍 Loading race accordion cache for date:", date);
     const res = await fetch(`/api/raceExtraInfo?date=${date}`);
@@ -93,30 +91,31 @@ export async function loadRaceAccordionCache(
       return;
     }
 
-    const data = (await res.json()) as
-      | Record<string, RaceAccordionStats>
-      | null;
+    const data = (await res.json()) as Record<
+      string,
+      RaceAccordionStats
+    > | null;
 
     if (data) {
       console.log(
         "✅ Hydrating raceAccordionCache from dated cache",
         Object.keys(data).length,
       );
+
+      console.log(
+        "✅ RACE ACCORDION CACHE PREVIOUS LENGTH",
+        Object.keys(data).length,
+      );
       hydrateRaceAccordionCache(data);
     } else {
-      console.log(
-        "ℹ️ No existing race accordion cache file for date:",
-        date,
-      );
+      console.log("ℹ️ No existing race accordion cache file for date:", date);
     }
   } catch (err) {
     console.error("❌ Error loading race accordion cache:", err);
   }
 }
 
-export async function saveRaceAccordionCache(
-  date: string,
-): Promise<void> {
+export async function saveRaceAccordionCache(date: string): Promise<void> {
   try {
     const cacheSnapshot = getRaceAccordionCacheSnapshot();
     const keys = Object.keys(cacheSnapshot || {});
@@ -128,6 +127,11 @@ export async function saveRaceAccordionCache(
 
     console.log(
       `💾 Saving raceAccordionCache with ${keys.length} entries for date: ${date}`,
+    );
+
+    console.log(
+      "✅ RACE ACCORDION CACHE POST SAVE LENGTH",
+      Object.keys(cacheSnapshot).length,
     );
 
     await fetch(`/api/raceExtraInfo?date=${date}`, {
@@ -148,7 +152,9 @@ export async function fetchRaceAccordion(
   const key = cacheKey(raceId);
   const cached = raceAccordionCache.get(key);
   if (cached) {
-    console.log(`✅ fetchRaceAccordion resolved from cache for raceId=${raceId}`);
+    console.log(
+      `✅ fetchRaceAccordion resolved from cache for raceId=${raceId}`,
+    );
     return cached;
   }
 

@@ -1,0 +1,1462 @@
+{
+  "912447": {
+    "3461249": {
+      "id": 3461249,
+      "name": "Iron Bridge",
+      "diffusion_name": "Iron Bridge",
+      "saddle_cloth_number": 1,
+      "score": 80.95238095238095,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "3¾"
+    },
+    "3906194": {
+      "id": 3906194,
+      "name": "Maximilian",
+      "diffusion_name": "Maximilian",
+      "saddle_cloth_number": 2,
+      "score": 85.71428571428571,
+      "dist_to_horse_in_front": "2¾",
+      "dist_to_winner": null
+    },
+    "4117792": {
+      "id": 4117792,
+      "name": "Safe Destination",
+      "diffusion_name": "Safe Destination",
+      "saddle_cloth_number": 5,
+      "score": 66.66666666666667,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "6½"
+    },
+    "4893314": {
+      "id": 4893314,
+      "name": "Wal Buck's",
+      "diffusion_name": "Wal Buck's",
+      "saddle_cloth_number": 4,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "5613804": {
+      "id": 5613804,
+      "name": "Ki Woo",
+      "diffusion_name": "Ki Woo",
+      "saddle_cloth_number": 3,
+      "score": 70.47619047619048,
+      "dist_to_horse_in_front": "2¼",
+      "dist_to_winner": "6"
+    }
+  },
+  "912448": {
+    "4129083": {
+      "id": 4129083,
+      "name": "Ruby Island",
+      "diffusion_name": "Ruby Island",
+      "saddle_cloth_number": 2,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "5401017": {
+      "id": 5401017,
+      "name": "Gamesters Guy",
+      "diffusion_name": "Gamesters Guy",
+      "saddle_cloth_number": 1,
+      "score": 96.3302752293578,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": null
+    }
+  },
+  "912449": {
+    "4363057": {
+      "id": 4363057,
+      "name": "Spit Spot",
+      "diffusion_name": "Spit Spot",
+      "saddle_cloth_number": 3,
+      "score": 76.36363636363636,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": "4¾"
+    },
+    "4965700": {
+      "id": 4965700,
+      "name": "Heard That",
+      "diffusion_name": "Heard That",
+      "saddle_cloth_number": 6,
+      "score": 81.81818181818181,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "3½"
+    },
+    "5574417": {
+      "id": 5574417,
+      "name": "Heather Honey",
+      "diffusion_name": "Heather Honey",
+      "saddle_cloth_number": 4,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "5864654": {
+      "id": 5864654,
+      "name": "Hard Dealt",
+      "diffusion_name": "Hard Dealt",
+      "saddle_cloth_number": 8,
+      "score": 77.27272727272727,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "4½"
+    },
+    "6833874": {
+      "id": 6833874,
+      "name": "Daly Boy",
+      "diffusion_name": "Daly Boy",
+      "saddle_cloth_number": 7,
+      "score": 85.45454545454545,
+      "dist_to_horse_in_front": "3",
+      "dist_to_winner": null
+    },
+    "7303421": {
+      "id": 7303421,
+      "name": "Freshers Week",
+      "diffusion_name": "Freshers Week",
+      "saddle_cloth_number": 1,
+      "score": 72.72727272727273,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "5¼"
+    }
+  },
+  "912450": {
+    "5418916": {
+      "id": 5418916,
+      "name": "Shuile Warrior",
+      "diffusion_name": "Shuile Warrior",
+      "saddle_cloth_number": 6,
+      "score": 9.523809523809524,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "18"
+    },
+    "5793365": {
+      "id": 5793365,
+      "name": "Jonzac",
+      "diffusion_name": "Jonzac",
+      "saddle_cloth_number": 4,
+      "score": 13.333333333333334,
+      "dist_to_horse_in_front": "3¼",
+      "dist_to_winner": "17¼"
+    },
+    "5884272": {
+      "id": 5884272,
+      "name": "Coumeenoole",
+      "diffusion_name": "Coumeenoole",
+      "saddle_cloth_number": 3,
+      "score": 85.71428571428571,
+      "dist_to_horse_in_front": "2¾",
+      "dist_to_winner": null
+    },
+    "6898530": {
+      "id": 6898530,
+      "name": "Ballyeaston",
+      "diffusion_name": "Ballyeaston",
+      "saddle_cloth_number": 1,
+      "score": 66.66666666666667,
+      "dist_to_horse_in_front": "3¾",
+      "dist_to_winner": "6½"
+    },
+    "7499326": {
+      "id": 7499326,
+      "name": "Solid Performer",
+      "diffusion_name": "Solid Performer",
+      "saddle_cloth_number": 7,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "8450093": {
+      "id": 8450093,
+      "name": "Chemoulin",
+      "diffusion_name": "Chemoulin",
+      "saddle_cloth_number": 2,
+      "score": 28.571428571428573,
+      "dist_to_horse_in_front": "7½",
+      "dist_to_winner": "14"
+    }
+  },
+  "912451": {
+    "3891097": {
+      "id": 3891097,
+      "name": "Notnowlinda",
+      "diffusion_name": "Notnowlinda",
+      "saddle_cloth_number": 7,
+      "score": 80,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": "4"
+    },
+    "5713795": {
+      "id": 5713795,
+      "name": "Marlacoo",
+      "diffusion_name": "Marlacoo",
+      "saddle_cloth_number": 9,
+      "score": 90,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "2"
+    },
+    "5826581": {
+      "id": 5826581,
+      "name": "Is This For Real",
+      "diffusion_name": "Is This For Real",
+      "saddle_cloth_number": 3,
+      "score": 99,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": null
+    },
+    "5894801": {
+      "id": 5894801,
+      "name": "Static",
+      "diffusion_name": "Static",
+      "saddle_cloth_number": 4,
+      "score": 95,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": "1"
+    },
+    "6891772": {
+      "id": 6891772,
+      "name": "The Egyptian Ginge",
+      "diffusion_name": "The Egyptian Ginge",
+      "saddle_cloth_number": 10,
+      "score": 84,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "3¼"
+    },
+    "7583024": {
+      "id": 7583024,
+      "name": "The Cistercian",
+      "diffusion_name": "The Cistercian",
+      "saddle_cloth_number": 2,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    }
+  },
+  "912452": {
+    "5633125": {
+      "id": 5633125,
+      "name": "Idaho Valley",
+      "diffusion_name": "Idaho Valley",
+      "saddle_cloth_number": 3,
+      "score": 84.21052631578948,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "3¼"
+    },
+    "5713806": {
+      "id": 5713806,
+      "name": "The Great Escape",
+      "diffusion_name": "The Great Escape",
+      "saddle_cloth_number": 4,
+      "score": 73.6842105263158,
+      "dist_to_horse_in_front": "2",
+      "dist_to_winner": "5¼"
+    },
+    "6425003": {
+      "id": 6425003,
+      "name": "Fast Work",
+      "diffusion_name": "Fast Work",
+      "saddle_cloth_number": 5,
+      "score": 91.57894736842104,
+      "dist_to_horse_in_front": "dht",
+      "dist_to_winner": "1½"
+    },
+    "7231770": {
+      "id": 7231770,
+      "name": "Land Of Punt",
+      "diffusion_name": "Land Of Punt",
+      "saddle_cloth_number": 7,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "7530061": {
+      "id": 7530061,
+      "name": "Stung By Tariffs",
+      "diffusion_name": "Stung By Tariffs",
+      "saddle_cloth_number": 6,
+      "score": 89.47368421052632,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "2¼"
+    },
+    "8344595": {
+      "id": 8344595,
+      "name": "Lheur De Gloire",
+      "diffusion_name": "Lheur De Gloire",
+      "saddle_cloth_number": 9,
+      "score": 92.42105263157896,
+      "dist_to_horse_in_front": "1½",
+      "dist_to_winner": null
+    }
+  },
+  "912453": {
+    "7365459": {
+      "id": 7365459,
+      "name": "Locker Boum",
+      "diffusion_name": "Locker Boum",
+      "saddle_cloth_number": 5,
+      "score": 94.73684210526316,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": null
+    },
+    "8313794": {
+      "id": 8313794,
+      "name": "Turbocharged",
+      "diffusion_name": "Turbocharged",
+      "saddle_cloth_number": 8,
+      "score": 73.6842105263158,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": "5¼"
+    },
+    "8387896": {
+      "id": 8387896,
+      "name": "Old Clayesmorian",
+      "diffusion_name": "Old Clayesmorian",
+      "saddle_cloth_number": 1,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "8498835": {
+      "id": 8498835,
+      "name": "Oykel Bridge",
+      "diffusion_name": "Oykel Bridge",
+      "saddle_cloth_number": 7,
+      "score": 77.89473684210526,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "4½"
+    },
+    "8627857": {
+      "id": 8627857,
+      "name": "Nightflyer",
+      "diffusion_name": "Nightflyer",
+      "saddle_cloth_number": 9,
+      "score": 84.21052631578948,
+      "dist_to_horse_in_front": "2¼",
+      "dist_to_winner": "3¼"
+    },
+    "8890824": {
+      "id": 8890824,
+      "name": "Order Driven",
+      "diffusion_name": "Order Driven",
+      "saddle_cloth_number": 10,
+      "score": 94.73684210526316,
+      "dist_to_horse_in_front": "dht",
+      "dist_to_winner": "1"
+    }
+  },
+  "912454": {
+    "6635681": {
+      "id": 6635681,
+      "name": "Kapability",
+      "diffusion_name": "Kapability",
+      "saddle_cloth_number": 7,
+      "score": 89.28571428571428,
+      "dist_to_horse_in_front": "1½",
+      "dist_to_winner": "2¼"
+    },
+    "6868951": {
+      "id": 6868951,
+      "name": "Chatty Girl",
+      "diffusion_name": "Chatty Girl",
+      "saddle_cloth_number": 4,
+      "score": 79.88721804511277,
+      "dist_to_horse_in_front": "1¾",
+      "dist_to_winner": "4"
+    },
+    "7583069": {
+      "id": 7583069,
+      "name": "Sevarana",
+      "diffusion_name": "Sevarana",
+      "saddle_cloth_number": 3,
+      "score": 98.30827067669172,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": null
+    },
+    "8268308": {
+      "id": 8268308,
+      "name": "Our Peggy",
+      "diffusion_name": "Our Peggy",
+      "saddle_cloth_number": 10,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "8485657": {
+      "id": 8485657,
+      "name": "Miss Carbo",
+      "diffusion_name": "Miss Carbo",
+      "saddle_cloth_number": 13,
+      "score": 65.78947368421052,
+      "dist_to_horse_in_front": "2¾",
+      "dist_to_winner": "6¾"
+    },
+    "8494419": {
+      "id": 8494419,
+      "name": "Lady Magic",
+      "diffusion_name": "Lady Magic",
+      "saddle_cloth_number": 2,
+      "score": 96.61654135338345,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": "½"
+    }
+  },
+  "912455": {
+    "3234567": {
+      "id": 3234567,
+      "name": "Gyenyame",
+      "diffusion_name": "Gyenyame",
+      "saddle_cloth_number": 5,
+      "score": 85,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": "3"
+    },
+    "3434295": {
+      "id": 3434295,
+      "name": "Stans The Man",
+      "diffusion_name": "Stans The Man",
+      "saddle_cloth_number": 4,
+      "score": 75,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "5"
+    },
+    "4144685": {
+      "id": 4144685,
+      "name": "Get Up Mush",
+      "diffusion_name": "Get Up Mush",
+      "saddle_cloth_number": 6,
+      "score": 87.80000000000001,
+      "dist_to_horse_in_front": "2¼",
+      "dist_to_winner": null
+    },
+    "4682889": {
+      "id": 4682889,
+      "name": "Kilbarry Hill",
+      "diffusion_name": "Kilbarry Hill",
+      "saddle_cloth_number": 3,
+      "score": 86.99999999999999,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": "2½"
+    },
+    "5451410": {
+      "id": 5451410,
+      "name": "Bataillon",
+      "diffusion_name": "Bataillon",
+      "saddle_cloth_number": 9,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "5864635": {
+      "id": 5864635,
+      "name": "Ignore The Door",
+      "diffusion_name": "Ignore The Door",
+      "saddle_cloth_number": 8,
+      "score": 80,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "4"
+    }
+  },
+  "912456": {
+    "3499121": {
+      "id": 3499121,
+      "name": "Haas Boy",
+      "diffusion_name": "Haas Boy",
+      "saddle_cloth_number": 3,
+      "score": 78.94736842105263,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "4¼"
+    },
+    "5426851": {
+      "id": 5426851,
+      "name": "Touquet",
+      "diffusion_name": "Touquet",
+      "saddle_cloth_number": 1,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "5784859": {
+      "id": 5784859,
+      "name": "A Great Excuse",
+      "diffusion_name": "A Great Excuse",
+      "saddle_cloth_number": 4,
+      "score": 84.21052631578948,
+      "dist_to_horse_in_front": "3¼",
+      "dist_to_winner": null
+    },
+    "5884357": {
+      "id": 5884357,
+      "name": "Sage Green",
+      "diffusion_name": "Sage Green",
+      "saddle_cloth_number": 2,
+      "score": 31.57894736842105,
+      "dist_to_horse_in_front": "9½",
+      "dist_to_winner": "13½"
+    }
+  },
+  "912457": {
+    "4199220": {
+      "id": 4199220,
+      "name": "Jack Sprat",
+      "diffusion_name": "Jack Sprat",
+      "saddle_cloth_number": 6,
+      "score": 77.27272727272727,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": "4½"
+    },
+    "4522961": {
+      "id": 4522961,
+      "name": "Teorie",
+      "diffusion_name": "Teorie",
+      "saddle_cloth_number": 7,
+      "score": 98,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": null
+    },
+    "5424979": {
+      "id": 5424979,
+      "name": "It's A Breeze",
+      "diffusion_name": "It's A Breeze",
+      "saddle_cloth_number": 8,
+      "score": 90.9090909090909,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "1¾"
+    },
+    "5671296": {
+      "id": 5671296,
+      "name": "Crossgales King",
+      "diffusion_name": "Crossgales King",
+      "saddle_cloth_number": 2,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "5906614": {
+      "id": 5906614,
+      "name": "Springtime Legend",
+      "diffusion_name": "Springtime Legend",
+      "saddle_cloth_number": 4,
+      "score": 97.27272727272727,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": "½"
+    },
+    "6898518": {
+      "id": 6898518,
+      "name": "October Hill",
+      "diffusion_name": "October Hill",
+      "saddle_cloth_number": 5,
+      "score": 80.9090909090909,
+      "dist_to_horse_in_front": "2",
+      "dist_to_winner": "3¾"
+    }
+  },
+  "912458": {
+    "5340126": {
+      "id": 5340126,
+      "name": "Raffles Nobu",
+      "diffusion_name": "Raffles Nobu",
+      "saddle_cloth_number": 2,
+      "score": 98.07692307692307,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": "¼"
+    },
+    "5554908": {
+      "id": 5554908,
+      "name": "Ugo Bingo",
+      "diffusion_name": "Ugo Bingo",
+      "saddle_cloth_number": 3,
+      "score": 96.15384615384615,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": "¾"
+    },
+    "5784839": {
+      "id": 5784839,
+      "name": "Tyson",
+      "diffusion_name": "Tyson",
+      "saddle_cloth_number": 6,
+      "score": 76.92307692307692,
+      "dist_to_horse_in_front": "2¾",
+      "dist_to_winner": "4½"
+    },
+    "5845728": {
+      "id": 5845728,
+      "name": "Thankyouandplease",
+      "diffusion_name": "Thankyouandplease",
+      "saddle_cloth_number": 1,
+      "score": 98.84615384615384,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": null
+    },
+    "6855101": {
+      "id": 6855101,
+      "name": "Frank Stamper",
+      "diffusion_name": "Frank Stamper",
+      "saddle_cloth_number": 8,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "8507334": {
+      "id": 8507334,
+      "name": "Dream's Ka",
+      "diffusion_name": "Dream's Ka",
+      "saddle_cloth_number": 9,
+      "score": 91.34615384615384,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "1¾"
+    }
+  },
+  "912459": {
+    "7082575": {
+      "id": 7082575,
+      "name": "Saint Invictus",
+      "diffusion_name": "Saint Invictus",
+      "saddle_cloth_number": 9,
+      "score": 26.31578947368421,
+      "dist_to_horse_in_front": "5½",
+      "dist_to_winner": "14¾"
+    },
+    "7583079": {
+      "id": 7583079,
+      "name": "The Lightmaker",
+      "diffusion_name": "The Lightmaker",
+      "saddle_cloth_number": 11,
+      "score": 78.94736842105263,
+      "dist_to_horse_in_front": "3¼",
+      "dist_to_winner": "4¼"
+    },
+    "8313784": {
+      "id": 8313784,
+      "name": "Le Cold Grey",
+      "diffusion_name": "Le Cold Grey",
+      "saddle_cloth_number": 3,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "8834575": {
+      "id": 8834575,
+      "name": "Sixfourgold",
+      "diffusion_name": "Sixfourgold",
+      "saddle_cloth_number": 10,
+      "score": 94.73684210526316,
+      "dist_to_horse_in_front": "dht",
+      "dist_to_winner": "1"
+    },
+    "8890825": {
+      "id": 8890825,
+      "name": "Nevada Samba",
+      "diffusion_name": "Nevada Samba",
+      "saddle_cloth_number": 5,
+      "score": 94.73684210526316,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": null
+    },
+    "8890832": {
+      "id": 8890832,
+      "name": "Triple Edge",
+      "diffusion_name": "Triple Edge",
+      "saddle_cloth_number": 14,
+      "score": 52.63157894736842,
+      "dist_to_horse_in_front": "5¼",
+      "dist_to_winner": "9½"
+    }
+  },
+  "912460": {
+    "2654574": {
+      "id": 2654574,
+      "name": "Pilsdon Pen",
+      "diffusion_name": "Pilsdon Pen",
+      "saddle_cloth_number": 5,
+      "score": 83.33333333333333,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": "3½"
+    },
+    "4201358": {
+      "id": 4201358,
+      "name": "Duhallow Tommy",
+      "diffusion_name": "Duhallow Tommy",
+      "saddle_cloth_number": 4,
+      "score": 86.84210526315789,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "2½"
+    },
+    "4217505": {
+      "id": 4217505,
+      "name": "Ballymackie",
+      "diffusion_name": "Ballymackie",
+      "saddle_cloth_number": 2,
+      "score": 92.10526315789474,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": "1½"
+    },
+    "4497048": {
+      "id": 4497048,
+      "name": "Palamon",
+      "diffusion_name": "Palamon",
+      "saddle_cloth_number": 3,
+      "score": 78.94736842105263,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": "4¼"
+    },
+    "4566465": {
+      "id": 4566465,
+      "name": "Royal Mer",
+      "diffusion_name": "Royal Mer",
+      "saddle_cloth_number": 1,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "4936818": {
+      "id": 4936818,
+      "name": "Another Folly",
+      "diffusion_name": "Another Folly",
+      "saddle_cloth_number": 6,
+      "score": 96.49122807017544,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": null
+    }
+  },
+  "912636": {
+    "2578012": {
+      "id": 2578012,
+      "name": "Lequinto",
+      "diffusion_name": "Lequinto",
+      "saddle_cloth_number": 4,
+      "score": 86.33093525179856,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "1½"
+    },
+    "3687267": {
+      "id": 3687267,
+      "name": "Level Up",
+      "diffusion_name": "Level Up",
+      "saddle_cloth_number": 5,
+      "score": 75.53956834532374,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "2¼"
+    },
+    "4076318": {
+      "id": 4076318,
+      "name": "The Thames Boatman",
+      "diffusion_name": "The Thames Boatman",
+      "saddle_cloth_number": 2,
+      "score": 97.12230215827338,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": null
+    },
+    "5237783": {
+      "id": 5237783,
+      "name": "Fidelius",
+      "diffusion_name": "Fidelius",
+      "saddle_cloth_number": 1,
+      "score": 79.13669064748201,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "2"
+    },
+    "5884206": {
+      "id": 5884206,
+      "name": "Toolatetonegotiate",
+      "diffusion_name": "Toolatetonegotiate",
+      "saddle_cloth_number": 3,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    }
+  },
+  "912637": {
+    "7780577": {
+      "id": 7780577,
+      "name": "Folk Pageant",
+      "diffusion_name": "Folk Pageant",
+      "saddle_cloth_number": 7,
+      "score": 31.57894736842105,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "6¾"
+    },
+    "8240994": {
+      "id": 8240994,
+      "name": "Pureis King",
+      "diffusion_name": "Pureis King",
+      "saddle_cloth_number": 1,
+      "score": 10.526315789473685,
+      "dist_to_horse_in_front": "2",
+      "dist_to_winner": "8¾"
+    },
+    "8656401": {
+      "id": 8656401,
+      "name": "Lakota Chief",
+      "diffusion_name": "Lakota Chief",
+      "saddle_cloth_number": 4,
+      "score": 42.10526315789474,
+      "dist_to_horse_in_front": "2",
+      "dist_to_winner": "5¾"
+    },
+    "8890827": {
+      "id": 8890827,
+      "name": "Thunder Goddess",
+      "diffusion_name": "Thunder Goddess",
+      "saddle_cloth_number": 8,
+      "score": 100,
+      "dist_to_horse_in_front": "dht",
+      "dist_to_winner": null
+    },
+    "8890828": {
+      "id": 8890828,
+      "name": "Floating Market",
+      "diffusion_name": "Floating Market",
+      "saddle_cloth_number": 6,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "8890829": {
+      "id": 8890829,
+      "name": "Constant Star",
+      "diffusion_name": "Constant Star",
+      "saddle_cloth_number": 5,
+      "score": 63.1578947368421,
+      "dist_to_horse_in_front": "3½",
+      "dist_to_winner": "3½"
+    }
+  },
+  "912638": {
+    "3147782": {
+      "id": 3147782,
+      "name": "Mick's Spirit",
+      "diffusion_name": "Mick's Spirit",
+      "saddle_cloth_number": 3,
+      "score": 97.6923076923077,
+      "dist_to_horse_in_front": "dht",
+      "dist_to_winner": "head"
+    },
+    "4249769": {
+      "id": 4249769,
+      "name": "Beaumadier",
+      "diffusion_name": "Beaumadier",
+      "saddle_cloth_number": 1,
+      "score": 98.3076923076923,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": null
+    },
+    "4601463": {
+      "id": 4601463,
+      "name": "Diamond Dreamer",
+      "diffusion_name": "Diamond Dreamer",
+      "saddle_cloth_number": 4,
+      "score": 92.3076923076923,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "¾"
+    },
+    "5154274": {
+      "id": 5154274,
+      "name": "Gogo Yubari",
+      "diffusion_name": "Gogo Yubari",
+      "saddle_cloth_number": 2,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "6807884": {
+      "id": 6807884,
+      "name": "Hello Luna",
+      "diffusion_name": "Hello Luna",
+      "saddle_cloth_number": 5,
+      "score": 84.61538461538461,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "1½"
+    }
+  },
+  "912639": {
+    "3273553": {
+      "id": 3273553,
+      "name": "Secret Road",
+      "diffusion_name": "Secret Road",
+      "saddle_cloth_number": 3,
+      "score": 92.85714285714286,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": null
+    },
+    "3735106": {
+      "id": 3735106,
+      "name": "Pink Socks",
+      "diffusion_name": "Pink Socks",
+      "saddle_cloth_number": 2,
+      "score": 80,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": "2"
+    },
+    "3785507": {
+      "id": 3785507,
+      "name": "Villalobos",
+      "diffusion_name": "Villalobos",
+      "saddle_cloth_number": 6,
+      "score": 85.71428571428571,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "1¼"
+    },
+    "4369888": {
+      "id": 4369888,
+      "name": "So Chic",
+      "diffusion_name": "So Chic",
+      "saddle_cloth_number": 7,
+      "score": 80.57142857142857,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "1¾"
+    },
+    "5207729": {
+      "id": 5207729,
+      "name": "Danehill Star",
+      "diffusion_name": "Danehill Star",
+      "saddle_cloth_number": 4,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "7183163": {
+      "id": 7183163,
+      "name": "Daddy Chill",
+      "diffusion_name": "Daddy Chill",
+      "saddle_cloth_number": 1,
+      "score": 75,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "2½"
+    }
+  },
+  "912640": {
+    "1028267": {
+      "id": 1028267,
+      "name": "Poetic Force",
+      "diffusion_name": "Poetic Force",
+      "saddle_cloth_number": 2,
+      "score": 94.33962264150942,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "½"
+    },
+    "3826086": {
+      "id": 3826086,
+      "name": "Dakota Power",
+      "diffusion_name": "Dakota Power",
+      "saddle_cloth_number": 3,
+      "score": 68.94049346879535,
+      "dist_to_horse_in_front": "1¼",
+      "dist_to_winner": "3"
+    },
+    "5237794": {
+      "id": 5237794,
+      "name": "Age Of Time",
+      "diffusion_name": "Age Of Time",
+      "saddle_cloth_number": 5,
+      "score": 83.4542815674891,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "1½"
+    },
+    "5248380": {
+      "id": 5248380,
+      "name": "Profit Street",
+      "diffusion_name": "Profit Street",
+      "saddle_cloth_number": 4,
+      "score": 99.99999999999999,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "5325057": {
+      "id": 5325057,
+      "name": "Francisco",
+      "diffusion_name": "Francisco",
+      "saddle_cloth_number": 6,
+      "score": 61.68359941944847,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "3¾"
+    },
+    "5951634": {
+      "id": 5951634,
+      "name": "Dandy Khan",
+      "diffusion_name": "Dandy Khan",
+      "saddle_cloth_number": 1,
+      "score": 99.41944847605224,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": null
+    }
+  },
+  "912641": {
+    "7205012": {
+      "id": 7205012,
+      "name": "Chilliconcarneigh",
+      "diffusion_name": "Chilliconcarneigh",
+      "saddle_cloth_number": 3,
+      "score": 95.65217391304348,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": "¼"
+    },
+    "7816045": {
+      "id": 7816045,
+      "name": "Akrivos",
+      "diffusion_name": "Akrivos",
+      "saddle_cloth_number": 5,
+      "score": 91.30434782608695,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "¾"
+    },
+    "7865986": {
+      "id": 7865986,
+      "name": "Sunday Sinatra",
+      "diffusion_name": "Sunday Sinatra",
+      "saddle_cloth_number": 7,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "7970720": {
+      "id": 7970720,
+      "name": "Bergamo Gold",
+      "diffusion_name": "Bergamo Gold",
+      "saddle_cloth_number": 2,
+      "score": 97.3913043478261,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": "neck"
+    },
+    "7978775": {
+      "id": 7978775,
+      "name": "Bradbury",
+      "diffusion_name": "Bradbury",
+      "saddle_cloth_number": 1,
+      "score": 60.869565217391305,
+      "dist_to_horse_in_front": "3",
+      "dist_to_winner": "3¾"
+    },
+    "8362107": {
+      "id": 8362107,
+      "name": "Montu",
+      "diffusion_name": "Montu",
+      "saddle_cloth_number": 6,
+      "score": 98.08695652173913,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": null
+    }
+  },
+  "912642": {
+    "3048708": {
+      "id": 3048708,
+      "name": "Masqool",
+      "diffusion_name": "Masqool",
+      "saddle_cloth_number": 2,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "3605505": {
+      "id": 3605505,
+      "name": "Crafter",
+      "diffusion_name": "Crafter",
+      "saddle_cloth_number": 3,
+      "score": 92.3076923076923,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "¾"
+    },
+    "6107035": {
+      "id": 6107035,
+      "name": "Eutropia",
+      "diffusion_name": "Eutropia",
+      "saddle_cloth_number": 4,
+      "score": 95.38461538461539,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": null
+    },
+    "6737337": {
+      "id": 6737337,
+      "name": "Keeper Of Secrets",
+      "diffusion_name": "Keeper Of Secrets",
+      "saddle_cloth_number": 5,
+      "score": 30.76923076923077,
+      "dist_to_horse_in_front": "5½",
+      "dist_to_winner": "6¾"
+    },
+    "7134165": {
+      "id": 7134165,
+      "name": "Galaxy Wonder",
+      "diffusion_name": "Galaxy Wonder",
+      "saddle_cloth_number": 1,
+      "score": 88.46153846153847,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": "1¼"
+    }
+  },
+  "912643": {
+    "3577231": {
+      "id": 3577231,
+      "name": "Eldrickjones",
+      "diffusion_name": "Eldrickjones",
+      "saddle_cloth_number": 5,
+      "score": 88.57142857142857,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": "1"
+    },
+    "3787105": {
+      "id": 3787105,
+      "name": "Doctor Khan Junior",
+      "diffusion_name": "Doctor Khan Junior",
+      "saddle_cloth_number": 1,
+      "score": 95.71428571428571,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": null
+    },
+    "4175583": {
+      "id": 4175583,
+      "name": "Talis Evolvere",
+      "diffusion_name": "Talis Evolvere",
+      "saddle_cloth_number": 4,
+      "score": 92.85714285714286,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "½"
+    },
+    "4247896": {
+      "id": 4247896,
+      "name": "Nikovo",
+      "diffusion_name": "Nikovo",
+      "saddle_cloth_number": 3,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "4952292": {
+      "id": 4952292,
+      "name": "Grand Traverse",
+      "diffusion_name": "Grand Traverse",
+      "saddle_cloth_number": 2,
+      "score": 78.57142857142857,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "2"
+    },
+    "5176370": {
+      "id": 5176370,
+      "name": "Aisling Oscar",
+      "diffusion_name": "Aisling Oscar",
+      "saddle_cloth_number": 8,
+      "score": 85.71428571428571,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "1½"
+    }
+  },
+  "912644": {
+    "7793641": {
+      "id": 7793641,
+      "name": "Shimmering Spirit",
+      "diffusion_name": "Shimmering Spirit",
+      "saddle_cloth_number": 2,
+      "score": 0,
+      "dist_to_horse_in_front": "6½",
+      "dist_to_winner": "10"
+    },
+    "7801970": {
+      "id": 7801970,
+      "name": "Billecart",
+      "diffusion_name": "Billecart",
+      "saddle_cloth_number": 1,
+      "score": 83.33333333333333,
+      "dist_to_horse_in_front": "1½",
+      "dist_to_winner": null
+    },
+    "8890830": {
+      "id": 8890830,
+      "name": "Too Darn Spicy",
+      "diffusion_name": "Too Darn Spicy",
+      "saddle_cloth_number": 4,
+      "score": 66.66666666666667,
+      "dist_to_horse_in_front": "1½",
+      "dist_to_winner": "3¼"
+    },
+    "8890831": {
+      "id": 8890831,
+      "name": "Wuood",
+      "diffusion_name": "Wuood",
+      "saddle_cloth_number": 3,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    }
+  },
+  "912645": {
+    "3142213": {
+      "id": 3142213,
+      "name": "Sir Maxi",
+      "diffusion_name": "Sir Maxi",
+      "saddle_cloth_number": 5,
+      "score": 96.15384615384616,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": null
+    },
+    "4057129": {
+      "id": 4057129,
+      "name": "Wheres The Crumpet",
+      "diffusion_name": "Wheres The Crumpet",
+      "saddle_cloth_number": 8,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "4465605": {
+      "id": 4465605,
+      "name": "Starshot",
+      "diffusion_name": "Starshot",
+      "saddle_cloth_number": 6,
+      "score": 80.76923076923077,
+      "dist_to_horse_in_front": "1",
+      "dist_to_winner": "1¾"
+    },
+    "4628805": {
+      "id": 4628805,
+      "name": "Lady Delila",
+      "diffusion_name": "Lady Delila",
+      "saddle_cloth_number": 3,
+      "score": 50,
+      "dist_to_horse_in_front": "3",
+      "dist_to_winner": "5"
+    },
+    "6256639": {
+      "id": 6256639,
+      "name": "Esque Elegance",
+      "diffusion_name": "Esque Elegance",
+      "saddle_cloth_number": 1,
+      "score": 95.38461538461539,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": "½"
+    },
+    "7129576": {
+      "id": 7129576,
+      "name": "Woodrafff",
+      "diffusion_name": "Woodrafff",
+      "saddle_cloth_number": 9,
+      "score": 92.3076923076923,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "¾"
+    }
+  },
+  "912646": {
+    "3193516": {
+      "id": 3193516,
+      "name": "Haveyoumissedme",
+      "diffusion_name": "Haveyoumissedme",
+      "saddle_cloth_number": 2,
+      "score": 94.33962264150942,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "½"
+    },
+    "3488573": {
+      "id": 3488573,
+      "name": "Bearwith",
+      "diffusion_name": "Bearwith",
+      "saddle_cloth_number": 7,
+      "score": 92.74310595065312,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": "½"
+    },
+    "4532164": {
+      "id": 4532164,
+      "name": "Ana Emaraaty",
+      "diffusion_name": "Ana Emaraaty",
+      "saddle_cloth_number": 11,
+      "score": 99.41944847605224,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": null
+    },
+    "5390057": {
+      "id": 5390057,
+      "name": "Monty Beau",
+      "diffusion_name": "Monty Beau",
+      "saddle_cloth_number": 1,
+      "score": 99.99999999999999,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "5845635": {
+      "id": 5845635,
+      "name": "Imperial Trooper",
+      "diffusion_name": "Imperial Trooper",
+      "saddle_cloth_number": 4,
+      "score": 87.08272859216255,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "1¼"
+    },
+    "7324765": {
+      "id": 7324765,
+      "name": "Mao Shang Wong",
+      "diffusion_name": "Mao Shang Wong",
+      "saddle_cloth_number": 8,
+      "score": 92.16255442670536,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": "¾"
+    }
+  },
+  "912647": {
+    "2828194": {
+      "id": 2828194,
+      "name": "Juan Les Pins",
+      "diffusion_name": "Juan Les Pins",
+      "saddle_cloth_number": 3,
+      "score": 93.37016574585635,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "½"
+    },
+    "2996828": {
+      "id": 2996828,
+      "name": "Our Absent Friends",
+      "diffusion_name": "Our Absent Friends",
+      "saddle_cloth_number": 10,
+      "score": 93.23204419889503,
+      "dist_to_horse_in_front": "dht",
+      "dist_to_winner": "½"
+    },
+    "4274030": {
+      "id": 4274030,
+      "name": "Castan",
+      "diffusion_name": "Castan",
+      "saddle_cloth_number": 1,
+      "score": 97.79005524861878,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": null
+    },
+    "4498965": {
+      "id": 4498965,
+      "name": "Dark Kestrel",
+      "diffusion_name": "Dark Kestrel",
+      "saddle_cloth_number": 6,
+      "score": 95.58011049723757,
+      "dist_to_horse_in_front": "head",
+      "dist_to_winner": "¼"
+    },
+    "4924550": {
+      "id": 4924550,
+      "name": "Moonstone Boy",
+      "diffusion_name": "Moonstone Boy",
+      "saddle_cloth_number": 2,
+      "score": 89.77900552486187,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "1"
+    },
+    "5172514": {
+      "id": 5172514,
+      "name": "Lion's House",
+      "diffusion_name": "Lion's House",
+      "saddle_cloth_number": 5,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    }
+  },
+  "912648": {
+    "7204880": {
+      "id": 7204880,
+      "name": "Tactical Blitz",
+      "diffusion_name": "Tactical Blitz",
+      "saddle_cloth_number": 4,
+      "score": 92.5925925925926,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "½"
+    },
+    "7324734": {
+      "id": 7324734,
+      "name": "Mighty Vega",
+      "diffusion_name": "Mighty Vega",
+      "saddle_cloth_number": 2,
+      "score": 95.55555555555556,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": null
+    },
+    "7471061": {
+      "id": 7471061,
+      "name": "Espona Bay",
+      "diffusion_name": "Espona Bay",
+      "saddle_cloth_number": 5,
+      "score": 84.44444444444444,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": "1½"
+    },
+    "7661866": {
+      "id": 7661866,
+      "name": "Marra Donna",
+      "diffusion_name": "Marra Donna",
+      "saddle_cloth_number": 9,
+      "score": 100,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "7727255": {
+      "id": 7727255,
+      "name": "Elizabetty",
+      "diffusion_name": "Elizabetty",
+      "saddle_cloth_number": 3,
+      "score": 81.48148148148148,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "1¾"
+    },
+    "8313817": {
+      "id": 8313817,
+      "name": "Arishka's Dream",
+      "diffusion_name": "Arishka's Dream",
+      "saddle_cloth_number": 1,
+      "score": 85.18518518518519,
+      "dist_to_horse_in_front": "¾",
+      "dist_to_winner": "1½"
+    }
+  },
+  "912649": {
+    "7556695": {
+      "id": 7556695,
+      "name": "Dream Forever",
+      "diffusion_name": "Dream Forever",
+      "saddle_cloth_number": 12,
+      "score": 84.88964346349745,
+      "dist_to_horse_in_front": "neck",
+      "dist_to_winner": "1½"
+    },
+    "7588052": {
+      "id": 7588052,
+      "name": "Popty Ping",
+      "diffusion_name": "Popty Ping",
+      "saddle_cloth_number": 5,
+      "score": 99.99999999999999,
+      "dist_to_horse_in_front": null,
+      "dist_to_winner": null
+    },
+    "7882523": {
+      "id": 7882523,
+      "name": "Laser Luck",
+      "diffusion_name": "Laser Luck",
+      "saddle_cloth_number": 4,
+      "score": 89.13412563667232,
+      "dist_to_horse_in_front": "¼",
+      "dist_to_winner": "1"
+    },
+    "8079883": {
+      "id": 8079883,
+      "name": "Archangel Josepi",
+      "diffusion_name": "Archangel Josepi",
+      "saddle_cloth_number": 6,
+      "score": 93.3786078098472,
+      "dist_to_horse_in_front": "½",
+      "dist_to_winner": "½"
+    },
+    "8106626": {
+      "id": 8106626,
+      "name": "Mereside Princess",
+      "diffusion_name": "Mereside Princess",
+      "saddle_cloth_number": 11,
+      "score": 88.28522920203734,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": "1¼"
+    },
+    "8245405": {
+      "id": 8245405,
+      "name": "South Coast Star",
+      "diffusion_name": "South Coast Star",
+      "saddle_cloth_number": 8,
+      "score": 99.32088285229202,
+      "dist_to_horse_in_front": "nose",
+      "dist_to_winner": null
+    }
+  }
+}

@@ -36,21 +36,23 @@ export async function loadPredictionsCache(date: string): Promise<void> {
       return;
     }
 
-    const data = (await res.json()) as
-      | Record<string, PredictionRunner[]>
-      | null;
+    const data = (await res.json()) as Record<
+      string,
+      PredictionRunner[]
+    > | null;
 
     if (data) {
       console.log(
         "✅ Hydrating predictionsCache from dated cache",
         Object.keys(data).length,
       );
+      console.log(
+        "✅ PREDICTIONS CACHE PREVIOUS LENGTH",
+        Object.keys(data).length,
+      );
       hydratePredictionsCache(data);
     } else {
-      console.log(
-        "ℹ️ No existing predictions cache file for date:",
-        date,
-      );
+      console.log("ℹ️ No existing predictions cache file for date:", date);
     }
   } catch (error) {
     console.error("❌ Error loading predictions cache:", error);
@@ -71,6 +73,11 @@ export async function savePredictionsCache(date: string): Promise<void> {
       `💾 Saving predictionsCache with ${keys.length} entries for date: ${date}`,
     );
 
+    console.log(
+      "✅ PREDICTIONS CACHE POST SAVE LENGTH",
+      Object.keys(cacheSnapshot).length,
+    );
+
     await fetch(`/api/predictions?date=${date}`, {
       method: "POST",
       headers: {
@@ -89,9 +96,7 @@ export async function fetchPredictions(
   const key = cacheKey(raceId);
   const cached = predictionsCache.get(key);
   if (cached) {
-    console.log(
-      `✅ fetchPredictions resolved from cache for raceId=${raceId}`,
-    );
+    console.log(`✅ fetchPredictions resolved from cache for raceId=${raceId}`);
     return cached;
   }
 

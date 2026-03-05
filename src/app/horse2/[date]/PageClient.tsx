@@ -3,8 +3,6 @@
 import { oldMeetingsToNewMeetings } from "@/app/rp/utils/Aug25/oldMeetingsToNewMeetings";
 import { parseMeetings } from "@/app/rp/utils/parseMeetings";
 import { useResults } from "@/hooks/useResults";
-import { placeToPlaceKey } from "@/lib/racing/scores/funcs";
-import { IRISH_COURSES, UK_COURSES } from "@/types/courses";
 import { Meeting } from "@/types/raceday";
 import { Loader2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
@@ -29,10 +27,11 @@ import {
   loadPredictionsCache,
   savePredictionsCache,
 } from "@/app/rp/utils/fetchPredictions";
-
-function getPageUrl(date: string) {
-  return `https://www.racingpost.com/racecards/${date}/`;
-}
+import {
+  fetchDayMeetingElements,
+  loadDayMeetingElementsCache,
+  saveDayMeetingElementsCache,
+} from "@/app/rp/utils/fetchDayMeetingElements";
 
 export function PageClient({ date }: { date: string }) {
   console.log("🏇 Rendering PageClient with date:", date);
@@ -54,6 +53,7 @@ export function PageClient({ date }: { date: string }) {
     loadFormRaceDetailsCache(date);
     loadRaceAccordionCache(date);
     loadPredictionsCache(date);
+    loadDayMeetingElementsCache(date);
   }, [date]);
 
   useEffect(() => {
@@ -89,90 +89,9 @@ export function PageClient({ date }: { date: string }) {
         );
 
         if (!data) {
-          const pageUrl = getPageUrl(date);
-          console.log("🌐 Generated page URL:", pageUrl);
-
-          if (!pageUrl || pageUrl.trim() === "") {
-            console.error("❌ No URL provided");
-            setError("No URL provided");
-            return;
-          }
-
-          let html = "";
-          let tryCount = 0;
-          let retryDoc: Document | null = null;
-          while (tryCount < 20) {
-            tryCount++;
-
-            if (pageUrl) {
-              await new Promise((resolve) =>
-                setTimeout(resolve, Math.floor(Math.random() * 5000)),
-              );
-              const response = await fetch(
-                `/getP.php?q=${encodeURIComponent(`https://alexdawson.co.uk/getP.php?q=${pageUrl}`)}`,
-              );
-              const html_res = await response.text();
-              const retryParser = new DOMParser();
-              retryDoc = retryParser.parseFromString(
-                html_res || "",
-                "text/html",
-              );
-              if (retryDoc.querySelector(".ui-accordion__row")) {
-                // Successfully loaded the correct page
-                html = html_res;
-                break;
-              } else {
-                console.log(`🏁 PageClient -  attempt ${tryCount}`, pageUrl);
-              }
-            } else {
-              // No link to retry
-              break;
-            }
-          }
-
-          if (!response.ok) {
-            console.error("❌ Proxy request failed:", response.status);
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-
-          console.log("📄 Received HTML response");
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-
-          const meetingElements = doc.querySelectorAll(
-            ".ui-accordion__row:not(:has(.ui-accordion__header.RC-accordion__header_abandoned))",
-          );
-          console.log("🏁 Found meeting elements:", meetingElements.length);
-
-          const meetingElementsArr = Array.from(meetingElements).filter(
-            (element) => {
-              const courseName = placeToPlaceKey(
-                element
-                  .querySelector(".RC-accordion__courseName")
-                  ?.textContent?.toLowerCase()
-                  .replace(/\s*\([^)]*\)\s*/g, "") // Remove anything in parentheses
-                  .trim() || "",
-              );
-
-              const ukCourseKeys = UK_COURSES.map((course) =>
-                placeToPlaceKey(course),
-              );
-              const irishCourseKeys = IRISH_COURSES.map((course) =>
-                placeToPlaceKey(course),
-              );
-              const isUkCourse =
-                courseName && ukCourseKeys.includes(courseName);
-              const isIrishCourse =
-                courseName && irishCourseKeys.includes(courseName);
-
-              if (courseFilter) {
-                return (
-                  placeToPlaceKey(courseName) === placeToPlaceKey(courseFilter)
-                );
-              }
-
-              return isUkCourse; //|| isIrishCourse; // TODO: Uncomment this when we have Irish courses back
-            },
+          const meetingElementsArr = await fetchDayMeetingElements(
+            date,
+            courseFilter || undefined,
           );
 
           console.log(
@@ -216,7 +135,7 @@ export function PageClient({ date }: { date: string }) {
     }
 
     loadData();
-  }, [date]);
+  }, [courseFilter, date, timeFilter]);
 
   useEffect(() => {
     if (!loading) {
@@ -242,6 +161,7 @@ export function PageClient({ date }: { date: string }) {
     saveFormRaceDetailsCache(date);
     saveRaceAccordionCache(date);
     savePredictionsCache(date);
+    saveDayMeetingElementsCache(date);
   }, [loading, resultsLoading, date, meetings.length]);
 
   if (loading || resultsLoading) {
