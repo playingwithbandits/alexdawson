@@ -109,7 +109,7 @@ export function Dashboard({
     if (typeof window === "undefined") return;
 
     const confirmed = window.confirm(
-      `Delete cached racedays data for ${date}? This cannot be undone.`,
+      `Delete day data for ${date}? This cannot be undone.`,
     );
 
     if (!confirmed) return;
@@ -118,20 +118,23 @@ export function Dashboard({
       const response = await fetch(`/api/racedays?date=${date}`, {
         method: "DELETE",
       });
+      const response2 = await fetch(`/api/dayMeetingElements?date=${date}`, {
+        method: "DELETE",
+      });
 
       if (!response.ok) {
-        console.error(
-          "Failed to delete racedays cache:",
-          await response.text(),
-        );
-        window.alert("Failed to delete cache file.");
+        window.alert("Failed to delete day data.");
         return;
       }
 
-      window.alert("Cache deleted.");
+      if (!response2.ok) {
+        window.alert("Failed to delete day meeting elements.");
+        return;
+      }
+
+      window.alert("Day data deleted.");
     } catch (error) {
-      console.error("Error deleting racedays cache:", error);
-      window.alert("An error occurred while deleting the cache file.");
+      window.alert("An error occurred while deleting the day data.");
     }
   };
 
@@ -1014,7 +1017,7 @@ export function Dashboard({
             className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
             onClick={handleDeleteCache}
           >
-            Delete Cache
+            Delete Day
           </button>
         </div>
       </div>

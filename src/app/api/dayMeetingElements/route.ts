@@ -75,3 +75,43 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({ success: true });
 }
 
+export async function DELETE(request: NextRequest) {
+  const date = request.nextUrl.searchParams.get("date");
+  console.log("🗑️ DELETE request received for date:", date);
+
+  if (!date) {
+    console.log("❌ No date parameter provided");
+    return NextResponse.json(
+      { error: "Date parameter required" },
+      { status: 400 },
+    );
+  }
+
+  const cacheFile = path.join(CACHE_DIR, `${date}.json`);
+  console.log("🗂️ Attempting to delete cache file:", cacheFile);
+
+  try {
+    await fs.unlink(cacheFile);
+    console.log("✅ Cache file deleted successfully for:", date);
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    if (
+      typeof error === "object" &&
+      error !== null &&
+      "code" in error &&
+      (error as { code?: string }).code === "ENOENT"
+    ) {
+      console.log("ℹ️ Cache file not found for deletion:", date);
+      return NextResponse.json(
+        { success: false, error: "Cache file not found" },
+        { status: 404 },
+      );
+    }
+
+    console.error("❌ Failed to delete cache file:", error);
+    return NextResponse.json(
+      { error: "Failed to delete cache file" },
+      { status: 500 },
+    );
+  }
+}
