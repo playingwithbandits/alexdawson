@@ -38,8 +38,6 @@ const BLUE_TEXT_COLOR = "text-[#007bff]";
 type RequiredStatsKey =
   | "drawBiasIsGood"
   | "lastRaceHadBadMaxRpr"
-  | "horseRacedWithDistance"
-  | "horseRacedWithGoingCode"
   | "mostRecentFormRprIsLessThanFormMaxesRpr"
   | "lastRaceCommentScoreIsLessThan0"
   | "jockeyStatsLast14DaysRunsGood"
@@ -64,7 +62,8 @@ type RequiredStatsKey =
   | "gapToAvgScoreIsLessThanThreshold"
   | "scoreIsLessThan"
   | "formAveragesRprIsLow"
-  | "race_maxes_racedAgainstMaxes";
+  | "race_maxes_racedAgainstMaxes"
+  | "horseFormAveragesStatsGoodDistance";
 
 export const horseHasRequiredStats = (horse: HorseType, race: RaceType) => {
   //("horseHasRequiredStats", horse, race);
@@ -278,10 +277,11 @@ export const getWarningMessage = (horse: HorseType, race: RaceType) => {
       key: "race_maxes_racedAgainstMaxes",
     },
 
-    // {
-    //   value: horse?.scoreObj?.horseFormAveragesStatsGood?.distance,
-    //   name: "Hasn't averaged distance",
-    // },
+    {
+      value: Boolean(horse?.scoreObj?.horseFormAveragesStatsGood?.distance),
+      name: "Hasn't averaged distance",
+      key: "horseFormAveragesStatsGoodDistance",
+    },
 
     // {
     //   value: horse?.scoreObj?.horseMostRecentForm?.type,
@@ -737,7 +737,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseRacedWith?.distance &&
-                          statColor(requiredKeyList, "horseRacedWithDistance"),
+                          statColor(
+                            requiredKeyList,
+                            "horseHasntRacedAtThisDistance",
+                          ),
                       )}
                     >
                       {Array.from(
@@ -750,7 +753,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseFormAveragesStatsGood?.distance &&
-                          statColor(requiredKeyList, ""),
+                          statColor(
+                            requiredKeyList,
+                            "horseFormAveragesStatsGoodDistance",
+                          ),
                       )}
                     >
                       {formAveragesDistanceF?.toFixed(1)}
@@ -760,7 +766,10 @@ export function Horse({ horse, race, meeting, results }: HorseProps) {
                       className={twMerge(
                         "px-2 py-1 w-[100px]",
                         horseRacedWith?.goingCode &&
-                          statColor(requiredKeyList, "horseRacedWithGoingCode"),
+                          statColor(
+                            requiredKeyList,
+                            "horseHasntRacedWithThisGoing",
+                          ),
                       )}
                     >
                       {Array.from(

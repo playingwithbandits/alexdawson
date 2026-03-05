@@ -94,9 +94,26 @@ export function Race({
 
   const [showAll, setShowAll] = useState(false);
 
+  const sortedHorses = useMemo(() => {
+    return [...race.horses].sort((a, b) => {
+      const a_missingStats = getWarningMessage(a, race).missingStats;
+      const a_score = a.scoreObj?.total || 0;
+      const a_missingLen = a_missingStats.length;
+      const b_missingStats = getWarningMessage(b, race).missingStats;
+      const b_score = b.scoreObj?.total || 0;
+      const b_missingLen = b_missingStats.length;
+
+      if (a_missingLen === b_missingLen) {
+        // If missing length is the same, sort by score (descending)
+        return b_score - a_score;
+      }
+      return a_missingLen - b_missingLen;
+    });
+  }, [race]);
+
   const filteredHorses = useMemo(() => {
-    if (showAll) return race.horses;
-    return race.horses.filter((horse) => {
+    if (showAll) return sortedHorses;
+    return sortedHorses.filter((horse) => {
       // console.log(
       //   "filteredHorses horseHasRequiredStats log 1",
       //   race
@@ -115,8 +132,9 @@ export function Race({
     });
   }, [
     showAll,
-    race,
+    sortedHorses,
     raceAvgScore,
+    race,
     showInfo,
     raceHasFinsihed,
     missingLenThreshold,
@@ -168,7 +186,7 @@ export function Race({
               </span>
 
               <div className="flex flex-wrap gap-2">
-                {race.horses
+                {sortedHorses
                   // ?.filter(
                   //   (horse) =>
                   //     horse.oddsDecimal >= 20 &&
